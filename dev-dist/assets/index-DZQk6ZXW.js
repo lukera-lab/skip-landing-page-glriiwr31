@@ -23796,12 +23796,44 @@ function Index() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-100/40 rounded-full blur-[100px] -z-10 pointer-events-none" }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex items-center justify-center mb-8 animate-fade-in-down",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-						src: "https://img.usecurling.com/i?q=colorful%203d%20cube&shape=fill",
-						alt: "Skip Brand",
-						className: "w-12 h-12 object-contain drop-shadow-sm"
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+						width: "48",
+						height: "48",
+						viewBox: "0 0 48 48",
+						fill: "none",
+						xmlns: "http://www.w3.org/2000/svg",
+						className: "w-12 h-12 drop-shadow-sm",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+								width: "48",
+								height: "48",
+								rx: "12",
+								fill: "url(#skip-logo-gradient)"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+								d: "M13 32L25 24L13 16V32Z",
+								fill: "white"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+								d: "M23 32L35 24L23 16V32Z",
+								fill: "white",
+								fillOpacity: "0.8"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("defs", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("linearGradient", {
+								id: "skip-logo-gradient",
+								x1: "0",
+								y1: "0",
+								x2: "48",
+								y2: "48",
+								gradientUnits: "userSpaceOnUse",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", { stopColor: "#8B5CF6" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+									offset: "1",
+									stopColor: "#3B82F6"
+								})]
+							}) })
+						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-3xl font-extrabold tracking-tight text-slate-900 ml-2",
+						className: "text-3xl font-extrabold tracking-tight text-slate-900 ml-3",
 						children: "Skip"
 					})]
 				}),
@@ -23923,10 +23955,42 @@ function Header() {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 				to: "/",
 				className: "flex items-center gap-2 transition-opacity hover:opacity-90",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-					src: "https://img.usecurling.com/i?q=colorful%203d%20cube&shape=fill",
-					alt: "Skip Logo",
-					className: "h-8 w-8 object-contain"
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+					width: "32",
+					height: "32",
+					viewBox: "0 0 48 48",
+					fill: "none",
+					xmlns: "http://www.w3.org/2000/svg",
+					className: "h-8 w-8 drop-shadow-sm",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+							width: "48",
+							height: "48",
+							rx: "12",
+							fill: "url(#skip-logo-gradient-header)"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+							d: "M13 32L25 24L13 16V32Z",
+							fill: "white"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+							d: "M23 32L35 24L23 16V32Z",
+							fill: "white",
+							fillOpacity: "0.8"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("defs", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("linearGradient", {
+							id: "skip-logo-gradient-header",
+							x1: "0",
+							y1: "0",
+							x2: "48",
+							y2: "48",
+							gradientUnits: "userSpaceOnUse",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", { stopColor: "#8B5CF6" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+								offset: "1",
+								stopColor: "#3B82F6"
+							})]
+						}) })
+					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "text-xl font-bold tracking-tight text-slate-900",
 					children: "Skip"
@@ -24038,4 +24102,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-Ck3LSnGz.js.map
+//# sourceMappingURL=index-DZQk6ZXW.js.map
