@@ -40,7 +40,7 @@ export default function Index() {
 
         {/* Subheadline */}
         <p
-          className="font-body text-body-xl text-skip-neutral-800 mb-6 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed"
+          className="font-body text-body-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed"
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
         >
           Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a

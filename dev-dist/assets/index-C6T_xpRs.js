@@ -23829,7 +23829,7 @@ function Index() {
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-body text-body-xl text-skip-neutral-800 mb-6 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed",
+					className: "font-body text-body-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed",
 					style: {
 						animationDelay: "100ms",
 						animationFillMode: "both"
@@ -24041,4 +24041,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DRkJ65Wa.js.map
+//# sourceMappingURL=index-C6T_xpRs.js.map
