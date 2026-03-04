@@ -12,7 +12,7 @@ const LOGOS = [
 
 export default function Index() {
   return (
-    <div className="flex-1 flex flex-col items-center pt-20 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="flex-1 flex flex-col items-center pt-20 md:pt-32 pb-16 px-5 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-[1100px] w-full flex flex-col items-center text-center mx-auto relative z-10">
         {/* Decorative Background Blob */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-100/40 rounded-full blur-[100px] -z-10 pointer-events-none" />
@@ -24,7 +24,7 @@ export default function Index() {
 
         {/* Main Headline */}
         <h1
-          className="font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-4 animate-fade-in-up w-full sm:min-h-[141px]"
+          className="font-display text-[40px] leading-[1.1] font-bold sm:text-h1 tracking-tight text-skip-neutral-100 mb-4 animate-fade-in-up w-full sm:min-h-[141px]"
           style={{ animationFillMode: 'both' }}
         >
           <span className="inline-block">O criador de Sistemas Internos</span>{' '}
@@ -40,7 +40,7 @@ export default function Index() {
 
         {/* Subheadline */}
         <p
-          className="font-body text-body-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed"
+          className="font-body text-[18px] sm:text-body-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed"
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
         >
           Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a
@@ -52,7 +52,7 @@ export default function Index() {
           className="mb-8 mt-4 animate-fade-in-up"
           style={{ animationDelay: '200ms', animationFillMode: 'both' }}
         >
-          <span className="font-mono text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase font-semibold">
+          <span className="font-mono text-[11px] sm:text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase font-semibold">
             [Sem o custo de contratar desenvolvedores]
           </span>
         </div>

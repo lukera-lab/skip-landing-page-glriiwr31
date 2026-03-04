@@ -23734,7 +23734,7 @@ function getElementRef(element) {
 var buttonVariants = cva("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium font-display ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0", {
 	variants: {
 		variant: {
-			default: "flex bg-gradient-primary-btn text-white shadow-primary-btn-inner border-[1.5px] border-[rgba(29,68,63,0.10)] rounded-[90px] hover:opacity-90",
+			default: "flex bg-gradient-primary-btn text-white shadow-primary-btn-inner border border-white/20 rounded-[90px] hover:opacity-90",
 			destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
 			outline: "border border-input bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground",
 			secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
@@ -23790,7 +23790,7 @@ var LOGOS = [
 ];
 function Index() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "flex-1 flex flex-col items-center pt-20 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden",
+		className: "flex-1 flex flex-col items-center pt-20 md:pt-32 pb-16 px-5 sm:px-6 lg:px-8 overflow-hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] w-full flex flex-col items-center text-center mx-auto relative z-10",
 			children: [
@@ -23804,7 +23804,7 @@ function Index() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-					className: "font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-4 animate-fade-in-up w-full sm:min-h-[141px]",
+					className: "font-display text-[40px] leading-[1.1] font-bold sm:text-h1 tracking-tight text-skip-neutral-100 mb-4 animate-fade-in-up w-full sm:min-h-[141px]",
 					style: { animationFillMode: "both" },
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -23829,7 +23829,7 @@ function Index() {
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-body text-body-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed",
+					className: "font-body text-[18px] sm:text-body-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed",
 					style: {
 						animationDelay: "100ms",
 						animationFillMode: "both"
@@ -23843,7 +23843,7 @@ function Index() {
 						animationFillMode: "both"
 					},
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-mono text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase font-semibold",
+						className: "font-mono text-[11px] sm:text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase font-semibold",
 						children: "[Sem o custo de contratar desenvolvedores]"
 					})
 				}),
@@ -24041,4 +24041,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-h4_9kpn7.js.map
+//# sourceMappingURL=index-CB-SsZm1.js.map
