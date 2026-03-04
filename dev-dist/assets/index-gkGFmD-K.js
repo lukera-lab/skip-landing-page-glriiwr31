@@ -23804,7 +23804,7 @@ function Index() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-					className: "font-heading font-semibold text-heading-xxxl sm:text-heading-display tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up",
+					className: "font-display font-semibold text-heading-xl sm:text-heading-xxxl tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up",
 					style: { animationFillMode: "both" },
 					children: [
 						"O criador de Sistemas Internos ",
@@ -23847,7 +23847,7 @@ function Index() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "relative group w-full sm:w-auto",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-full blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-							className: "relative w-full sm:w-auto h-14 px-8 rounded-full bg-blue-violet-600 hover:bg-blue-violet-700 text-white font-heading font-medium text-body-m shadow-elevation transition-all duration-300 group-hover:-translate-y-0.5 border-0",
+							className: "relative w-full sm:w-auto h-14 px-8 rounded-full bg-blue-violet-600 hover:bg-blue-violet-700 text-white font-display font-medium text-body-m shadow-elevation transition-all duration-300 group-hover:-translate-y-0.5 border-0",
 							children: [
 								"Explorar Soluções",
 								" ",
@@ -23856,7 +23856,7 @@ function Index() {
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 						variant: "outline",
-						className: "w-full sm:w-auto h-14 px-8 rounded-full font-heading font-medium text-body-m bg-skip-neutral-1450 hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300",
+						className: "w-full sm:w-auto h-14 px-8 rounded-full font-display font-medium text-body-m bg-skip-neutral-1450 hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300",
 						children: ["Agendar Demonstração ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "ml-2 w-4 h-4 text-skip-neutral-900" })]
 					})]
 				}),
@@ -24036,4 +24036,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CqsWNM8B.js.map
+//# sourceMappingURL=index-gkGFmD-K.js.map

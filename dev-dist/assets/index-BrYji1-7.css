@@ -1711,8 +1711,8 @@ section[aria-label='Notifications alt+T'] {
   font-size: 14px;
   line-height: 1.4;
 }
-.text-heading-xxxl{
-  font-size: 64px;
+.text-heading-xl{
+  font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
 }
@@ -3110,8 +3110,8 @@ section[aria-label='Notifications alt+T'] {
   .sm\:text-left{
     text-align: left;
   }
-  .sm\:text-heading-display{
-    font-size: 80px;
+  .sm\:text-heading-xxxl{
+    font-size: 64px;
     line-height: 1.1;
     font-weight: 600;
   }

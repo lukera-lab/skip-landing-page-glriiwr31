@@ -24,7 +24,7 @@ export default function Index() {
 
         {/* Main Headline */}
         <h1
-          className="font-heading font-semibold text-heading-xxxl sm:text-heading-display tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up"
+          className="font-display font-semibold text-heading-xl sm:text-heading-xxxl tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up"
           style={{ animationFillMode: 'both' }}
         >
           O criador de Sistemas Internos <br className="hidden md:block" />
@@ -61,14 +61,14 @@ export default function Index() {
         >
           <div className="relative group w-full sm:w-auto">
             <div className="absolute -inset-1 bg-gradient-brand rounded-full blur opacity-25 group-hover:opacity-40 transition duration-500" />
-            <Button className="relative w-full sm:w-auto h-14 px-8 rounded-full bg-blue-violet-600 hover:bg-blue-violet-700 text-white font-heading font-medium text-body-m shadow-elevation transition-all duration-300 group-hover:-translate-y-0.5 border-0">
+            <Button className="relative w-full sm:w-auto h-14 px-8 rounded-full bg-blue-violet-600 hover:bg-blue-violet-700 text-white font-display font-medium text-body-m shadow-elevation transition-all duration-300 group-hover:-translate-y-0.5 border-0">
               Explorar Soluções{' '}
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
           <Button
             variant="outline"
-            className="w-full sm:w-auto h-14 px-8 rounded-full font-heading font-medium text-body-m bg-skip-neutral-1450 hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300"
+            className="w-full sm:w-auto h-14 px-8 rounded-full font-display font-medium text-body-m bg-skip-neutral-1450 hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300"
           >
             Agendar Demonstração <ArrowRight className="ml-2 w-4 h-4 text-skip-neutral-900" />
           </Button>
