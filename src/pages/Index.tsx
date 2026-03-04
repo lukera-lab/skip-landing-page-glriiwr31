@@ -24,12 +24,12 @@ export default function Index() {
 
         {/* Main Headline */}
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-display font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 animate-fade-in-up"
+          className="font-heading font-medium text-heading-xxxl sm:text-heading-display tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up"
           style={{ animationFillMode: 'both' }}
         >
           O criador de Sistemas Internos <br className="hidden md:block" />
           mais{' '}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-500">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600">
             fácil e intuitivo
           </span>{' '}
           do mundo
@@ -37,7 +37,7 @@ export default function Index() {
 
         {/* Subheadline */}
         <p
-          className="text-lg md:text-xl text-slate-600 mb-6 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed"
+          className="font-body text-body-xl text-skip-neutral-800 mb-6 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed"
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
         >
           Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a
@@ -49,7 +49,7 @@ export default function Index() {
           className="mb-10 animate-fade-in-up"
           style={{ animationDelay: '200ms', animationFillMode: 'both' }}
         >
-          <span className="font-mono text-xs sm:text-sm font-bold tracking-[0.15em] text-blue-600/90 uppercase">
+          <span className="font-mono text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase">
             [Sem o custo de contratar desenvolvedores]
           </span>
         </div>
@@ -60,17 +60,17 @@ export default function Index() {
           style={{ animationDelay: '300ms', animationFillMode: 'both' }}
         >
           <div className="relative group w-full sm:w-auto">
-            <div className="absolute -inset-1 bg-gradient-to-r from-violet-600 to-blue-600 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
-            <Button className="relative w-full sm:w-auto h-14 px-8 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-medium text-base shadow-lg transition-all duration-300 transform group-hover:-translate-y-0.5 border-0">
+            <div className="absolute -inset-1 bg-gradient-brand rounded-full blur opacity-25 group-hover:opacity-40 transition duration-500" />
+            <Button className="relative w-full sm:w-auto h-14 px-8 rounded-full bg-blue-violet-600 hover:bg-blue-violet-700 text-white font-heading font-medium text-body-m shadow-elevation transition-all duration-300 group-hover:-translate-y-0.5 border-0">
               Explorar Soluções{' '}
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
           <Button
             variant="outline"
-            className="w-full sm:w-auto h-14 px-8 rounded-full font-medium text-base bg-slate-100 hover:bg-slate-200 border-slate-200 text-slate-800 transition-all duration-300"
+            className="w-full sm:w-auto h-14 px-8 rounded-full font-heading font-medium text-body-m bg-skip-neutral-1450 hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300"
           >
-            Agendar Demonstração <ArrowRight className="ml-2 w-4 h-4 text-slate-400" />
+            Agendar Demonstração <ArrowRight className="ml-2 w-4 h-4 text-skip-neutral-900" />
           </Button>
         </div>
 
@@ -80,8 +80,8 @@ export default function Index() {
           style={{ animationDelay: '500ms', animationFillMode: 'both' }}
         >
           <div className="flex items-center justify-center gap-2 mb-8 text-center px-4">
-            <Sparkles className="w-4 h-4 text-violet-500 shrink-0" />
-            <p className="text-sm text-slate-500 font-medium">
+            <Sparkles className="w-4 h-4 text-blue-violet-500 shrink-0" />
+            <p className="font-body text-body-xs text-skip-neutral-900">
               Skip é uma solução da Adapta, maior empresa de IA do Brasil, confiada por empresas
               como:
             </p>
