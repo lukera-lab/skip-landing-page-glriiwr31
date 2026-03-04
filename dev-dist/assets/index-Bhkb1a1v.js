@@ -23792,7 +23792,7 @@ function Index() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 		className: "flex-1 flex flex-col items-center pt-20 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "max-w-[900px] w-full flex flex-col items-center text-center mx-auto relative z-10",
+			className: "max-w-[1100px] w-full flex flex-col items-center text-center mx-auto relative z-10",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-100/40 rounded-full blur-[100px] -z-10 pointer-events-none" }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -23804,19 +23804,28 @@ function Index() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-					className: "font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up",
+					className: "font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up w-full sm:min-h-[141px]",
 					style: { animationFillMode: "both" },
 					children: [
-						"O criador de Sistemas Internos ",
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", { className: "hidden md:block" }),
-						"mais",
-						" ",
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600",
-							children: "fácil e intuitivo"
+							className: "inline-block",
+							children: "O criador de Sistemas Internos"
 						}),
 						" ",
-						"do mundo"
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", { className: "hidden md:block" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+							className: "inline-block",
+							children: [
+								"mais",
+								" ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600",
+									children: "fácil e intuitivo"
+								}),
+								" ",
+								"do mundo"
+							]
+						})
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -24036,4 +24045,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-leuuqzFa.js.map
+//# sourceMappingURL=index-Bhkb1a1v.js.map

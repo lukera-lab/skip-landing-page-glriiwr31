@@ -13,7 +13,7 @@ const LOGOS = [
 export default function Index() {
   return (
     <div className="flex-1 flex flex-col items-center pt-20 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="max-w-[900px] w-full flex flex-col items-center text-center mx-auto relative z-10">
+      <div className="max-w-[1100px] w-full flex flex-col items-center text-center mx-auto relative z-10">
         {/* Decorative Background Blob */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-100/40 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
@@ -24,15 +24,18 @@ export default function Index() {
 
         {/* Main Headline */}
         <h1
-          className="font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up"
+          className="font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up w-full sm:min-h-[141px]"
           style={{ animationFillMode: 'both' }}
         >
-          O criador de Sistemas Internos <br className="hidden md:block" />
-          mais{' '}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600">
-            fácil e intuitivo
-          </span>{' '}
-          do mundo
+          <span className="inline-block">O criador de Sistemas Internos</span>{' '}
+          <br className="hidden md:block" />
+          <span className="inline-block">
+            mais{' '}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600">
+              fácil e intuitivo
+            </span>{' '}
+            do mundo
+          </span>
         </h1>
 
         {/* Subheadline */}
