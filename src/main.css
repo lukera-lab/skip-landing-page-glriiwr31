@@ -193,7 +193,7 @@
 }
 
 @layer base {
-  /* ─── Heading font variation settings (Booster Sans Variable: wdth 90) ───── */
+  /* ─── Heading font variation settings (Booster Sans Variable: wdth 90) and Line Height ───── */
   .font-heading,
   h1,
   h2,
@@ -202,6 +202,7 @@
   h5,
   h6 {
     font-variation-settings: 'wdth' 90;
+    line-height: 1.1;
   }
 }
 

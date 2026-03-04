@@ -618,7 +618,7 @@ section[aria-label='Notifications alt+T'] {
     padding: 0 !important;
     margin: 0 !important;
   }
-/* ─── Heading font variation settings (Booster Sans Variable: wdth 90) ───── */
+/* ─── Heading font variation settings (Booster Sans Variable: wdth 90) and Line Height ───── */
 .font-heading,
   h1,
   h2,
@@ -627,6 +627,7 @@ section[aria-label='Notifications alt+T'] {
   h5,
   h6 {
     font-variation-settings: 'wdth' 90;
+    line-height: 1.1;
   }
 .container{
   width: 100%;
