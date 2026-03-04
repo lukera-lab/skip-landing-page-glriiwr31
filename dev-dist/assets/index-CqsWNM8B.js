@@ -23804,7 +23804,7 @@ function Index() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-					className: "font-heading font-medium text-heading-xxxl sm:text-heading-display tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up",
+					className: "font-heading font-semibold text-heading-xxxl sm:text-heading-display tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up",
 					style: { animationFillMode: "both" },
 					children: [
 						"O criador de Sistemas Internos ",
@@ -24036,4 +24036,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BonulxOE.js.map
+//# sourceMappingURL=index-CqsWNM8B.js.map
