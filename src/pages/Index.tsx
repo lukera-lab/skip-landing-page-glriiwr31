@@ -63,17 +63,17 @@ export default function Index() {
           style={{ animationDelay: '300ms', animationFillMode: 'both' }}
         >
           <div className="relative group w-full sm:w-auto">
-            <div className="absolute -inset-1 bg-gradient-brand rounded-full blur opacity-25 group-hover:opacity-40 transition duration-500" />
-            <Button className="relative w-full sm:w-auto h-14 px-8 rounded-full bg-blue-violet-600 hover:bg-blue-violet-700 text-white font-display font-medium text-body-m shadow-elevation transition-all duration-300 group-hover:-translate-y-0.5 border-0">
-              Explorar Soluções{' '}
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <div className="absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" />
+            <Button className="relative w-full sm:w-auto font-display font-medium text-body-m transition-all duration-300 group-hover:-translate-y-0.5">
+              Explorar Soluções
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
           <Button
             variant="outline"
             className="w-full sm:w-auto h-14 px-8 rounded-full font-display font-medium text-body-m bg-skip-neutral-1450 hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300"
           >
-            Agendar Demonstração <ArrowRight className="ml-2 w-4 h-4 text-skip-neutral-900" />
+            Agendar Demonstração <ArrowRight className="w-4 h-4 text-skip-neutral-900" />
           </Button>
         </div>
 

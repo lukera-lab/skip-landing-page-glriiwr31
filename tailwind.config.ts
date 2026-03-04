@@ -229,6 +229,7 @@ export default {
         elevation: '0 4px 20px rgba(0, 0, 0, 0.05)',
         'btn-inner':
           'inset 0px 6px 16px 0px rgba(255,255,255,0.10), inset 0px 2px 2px 0px rgba(255,255,255,0.05), inset 0px -2px 2px 0px rgba(0,0,0,0.05)',
+        'primary-btn-inner': 'inset 0 -6px 16px 0 rgba(255, 255, 255, 0.10)',
       },
 
       /* ─── Background Images ──────────────────────────────────────────────── */
@@ -237,6 +238,8 @@ export default {
         'gradient-fuchsia': 'linear-gradient(to right, #fdf2ff, #d503fc)',
         'gradient-brand': 'linear-gradient(135deg, #4f46e5 0%, #d503fc 100%)',
         'gradient-brand-soft': 'linear-gradient(135deg, #aaa5fc 0%, #f79bff 100%)',
+        'gradient-primary-btn':
+          'radial-gradient(119.47% 191.07% at 49.75% 178.57%, #FCE3FF 8.19%, #F8C7FF 24.63%, #F79BFF 41.85%, #6B63F1 58.21%, #4038CA 75.1%, #332E81 92.65%)',
       },
 
       /* ─── Transitions ────────────────────────────────────────────────────── */

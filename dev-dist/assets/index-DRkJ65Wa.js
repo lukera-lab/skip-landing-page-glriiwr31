@@ -23734,7 +23734,7 @@ function getElementRef(element) {
 var buttonVariants = cva("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium font-display ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0", {
 	variants: {
 		variant: {
-			default: "bg-primary text-primary-foreground hover:bg-primary/90",
+			default: "flex bg-gradient-primary-btn text-white shadow-primary-btn-inner border-[1.5px] border-[rgba(29,68,63,0.10)] rounded-[90px] hover:opacity-90",
 			destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
 			outline: "border border-input bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground",
 			secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
@@ -23742,7 +23742,7 @@ var buttonVariants = cva("inline-flex items-center justify-center gap-2 whitespa
 			link: "text-foreground underline-offset-4 hover:underline"
 		},
 		size: {
-			default: "h-10 px-4 py-2",
+			default: "h-auto py-4 px-8",
 			sm: "h-9 rounded-md px-3",
 			lg: "h-11 rounded-md px-8",
 			icon: "h-10 w-10"
@@ -23855,18 +23855,14 @@ function Index() {
 					},
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "relative group w-full sm:w-auto",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-full blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-							className: "relative w-full sm:w-auto h-14 px-8 rounded-full bg-blue-violet-600 hover:bg-blue-violet-700 text-white font-display font-medium text-body-m shadow-elevation transition-all duration-300 group-hover:-translate-y-0.5 border-0",
-							children: [
-								"Explorar Soluções",
-								" ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" })
-							]
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+							className: "relative w-full sm:w-auto font-display font-medium text-body-m transition-all duration-300 group-hover:-translate-y-0.5",
+							children: ["Explorar Soluções", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 transition-transform group-hover:translate-x-1" })]
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 						variant: "outline",
 						className: "w-full sm:w-auto h-14 px-8 rounded-full font-display font-medium text-body-m bg-skip-neutral-1450 hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300",
-						children: ["Agendar Demonstração ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "ml-2 w-4 h-4 text-skip-neutral-900" })]
+						children: ["Agendar Demonstração ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-skip-neutral-900" })]
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -24045,4 +24041,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-Bhkb1a1v.js.map
+//# sourceMappingURL=index-DRkJ65Wa.js.map
