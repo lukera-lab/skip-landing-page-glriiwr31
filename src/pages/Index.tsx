@@ -20,7 +20,6 @@ export default function Index() {
         {/* Logo Icon */}
         <div className="flex items-center justify-center mb-8 animate-fade-in-down">
           <img src={logoUrl} alt="Skip Logo" className="h-12 w-auto drop-shadow-sm" />
-          <span className="text-3xl font-extrabold tracking-tight text-slate-900 ml-3">Skip</span>
         </div>
 
         {/* Main Headline */}

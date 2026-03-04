@@ -764,9 +764,6 @@ section[aria-label='Notifications alt+T'] {
 .ml-2{
   margin-left: 0.5rem;
 }
-.ml-3{
-  margin-left: 0.75rem;
-}
 .ml-auto{
   margin-left: auto;
 }
@@ -1591,10 +1588,6 @@ section[aria-label='Notifications alt+T'] {
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
-}
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 .text-4xl{
   font-size: 2.25rem;

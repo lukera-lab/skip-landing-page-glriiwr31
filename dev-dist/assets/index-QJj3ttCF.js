@@ -23795,16 +23795,13 @@ function Index() {
 			className: "max-w-[900px] w-full flex flex-col items-center text-center mx-auto relative z-10",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-100/40 rounded-full blur-[100px] -z-10 pointer-events-none" }),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "flex items-center justify-center mb-8 animate-fade-in-down",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: logo_skip_black_85aeb_default,
 						alt: "Skip Logo",
 						className: "h-12 w-auto drop-shadow-sm"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-3xl font-extrabold tracking-tight text-slate-900 ml-3",
-						children: "Skip"
-					})]
+					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
 					className: "text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 animate-fade-in-up",
@@ -24039,4 +24036,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-D2Cg-prF.js.map
+//# sourceMappingURL=index-QJj3ttCF.js.map
