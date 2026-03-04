@@ -23804,7 +23804,7 @@ function Index() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-					className: "font-display font-semibold text-heading-xl sm:text-heading-xxxl tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up",
+					className: "font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up",
 					style: { animationFillMode: "both" },
 					children: [
 						"O criador de Sistemas Internos ",
@@ -23834,7 +23834,7 @@ function Index() {
 						animationFillMode: "both"
 					},
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-mono text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase",
+						className: "font-mono text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase font-semibold",
 						children: "[Sem o custo de contratar desenvolvedores]"
 					})
 				}),
@@ -23868,8 +23868,8 @@ function Index() {
 					},
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex items-center justify-center gap-2 mb-8 text-center px-4",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-blue-violet-500 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-body-xs text-skip-neutral-900",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-fuchsia-500 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "font-body text-body-xs text-skip-neutral-800",
 							children: "Skip é uma solução da Adapta, maior empresa de IA do Brasil, confiada por empresas como:"
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -24036,4 +24036,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-qkVUO5mc.js.map
+//# sourceMappingURL=index-leuuqzFa.js.map

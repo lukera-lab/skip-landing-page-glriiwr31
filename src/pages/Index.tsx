@@ -24,7 +24,7 @@ export default function Index() {
 
         {/* Main Headline */}
         <h1
-          className="font-display font-semibold text-heading-xl sm:text-heading-xxxl tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up"
+          className="font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up"
           style={{ animationFillMode: 'both' }}
         >
           O criador de Sistemas Internos <br className="hidden md:block" />
@@ -49,7 +49,7 @@ export default function Index() {
           className="mb-10 animate-fade-in-up"
           style={{ animationDelay: '200ms', animationFillMode: 'both' }}
         >
-          <span className="font-mono text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase">
+          <span className="font-mono text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase font-semibold">
             [Sem o custo de contratar desenvolvedores]
           </span>
         </div>
@@ -80,8 +80,8 @@ export default function Index() {
           style={{ animationDelay: '500ms', animationFillMode: 'both' }}
         >
           <div className="flex items-center justify-center gap-2 mb-8 text-center px-4">
-            <Sparkles className="w-4 h-4 text-blue-violet-500 shrink-0" />
-            <p className="font-body text-body-xs text-skip-neutral-900">
+            <Sparkles className="w-4 h-4 text-fuchsia-500 shrink-0" />
+            <p className="font-body text-body-xs text-skip-neutral-800">
               Skip é uma solução da Adapta, maior empresa de IA do Brasil, confiada por empresas
               como:
             </p>

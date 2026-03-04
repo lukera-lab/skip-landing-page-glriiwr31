@@ -629,6 +629,36 @@ section[aria-label='Notifications alt+T'] {
     font-variation-settings: 'wdth' 90;
     line-height: 1.1;
   }
+h1{
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+h2{
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+h3{
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+h4{
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+h5{
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+h6{
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 500;
+}
 .container{
   width: 100%;
   margin-right: auto;
@@ -1712,10 +1742,10 @@ section[aria-label='Notifications alt+T'] {
   font-size: 14px;
   line-height: 1.4;
 }
-.text-heading-xl{
+.text-h2{
   font-size: 48px;
   line-height: 1.1;
-  font-weight: 600;
+  font-weight: 700;
 }
 .text-lg{
   font-size: 1.125rem;
@@ -1779,10 +1809,6 @@ section[aria-label='Notifications alt+T'] {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
-.text-blue-violet-500{
-  --tw-text-opacity: 1;
-  color: rgb(107 99 241 / var(--tw-text-opacity, 1));
-}
 .text-blue-violet-600{
   --tw-text-opacity: 1;
   color: rgb(79 70 229 / var(--tw-text-opacity, 1));
@@ -1804,6 +1830,10 @@ section[aria-label='Notifications alt+T'] {
 }
 .text-foreground\/50{
   color: hsl(var(--foreground) / 0.5);
+}
+.text-fuchsia-500{
+  --tw-text-opacity: 1;
+  color: rgb(232 36 255 / var(--tw-text-opacity, 1));
 }
 .text-gray-600{
   --tw-text-opacity: 1;
@@ -3111,10 +3141,10 @@ section[aria-label='Notifications alt+T'] {
   .sm\:text-left{
     text-align: left;
   }
-  .sm\:text-heading-xxxl{
+  .sm\:text-h1{
     font-size: 64px;
     line-height: 1.1;
-    font-weight: 600;
+    font-weight: 700;
   }
   .data-\[state\=open\]\:sm\:slide-in-from-bottom-full[data-state="open"]{
     --tw-enter-translate-y: 100%;
