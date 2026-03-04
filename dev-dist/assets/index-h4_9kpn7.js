@@ -23804,7 +23804,7 @@ function Index() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-					className: "font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up w-full sm:min-h-[141px]",
+					className: "font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-4 animate-fade-in-up w-full sm:min-h-[141px]",
 					style: { animationFillMode: "both" },
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -23837,7 +23837,7 @@ function Index() {
 					children: "Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a eficiência dos processos da sua empresa"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mb-10 animate-fade-in-up",
+					className: "mb-8 mt-4 animate-fade-in-up",
 					style: {
 						animationDelay: "200ms",
 						animationFillMode: "both"
@@ -23856,8 +23856,8 @@ function Index() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "relative group w-full sm:w-auto",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-							className: "relative w-full sm:w-auto font-display font-medium text-body-m transition-all duration-300 group-hover:-translate-y-0.5",
-							children: ["Explorar Soluções", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 transition-transform group-hover:translate-x-1" })]
+							className: "relative w-full sm:w-auto font-display font-medium text-body-m text-white transition-all duration-300 group-hover:-translate-y-0.5",
+							children: ["Explorar Soluções", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 						variant: "outline",
@@ -24041,4 +24041,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-C6T_xpRs.js.map
+//# sourceMappingURL=index-h4_9kpn7.js.map

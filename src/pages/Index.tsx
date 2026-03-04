@@ -24,7 +24,7 @@ export default function Index() {
 
         {/* Main Headline */}
         <h1
-          className="font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up w-full sm:min-h-[141px]"
+          className="font-display text-h2 sm:text-h1 tracking-tight text-skip-neutral-100 mb-4 animate-fade-in-up w-full sm:min-h-[141px]"
           style={{ animationFillMode: 'both' }}
         >
           <span className="inline-block">O criador de Sistemas Internos</span>{' '}
@@ -49,7 +49,7 @@ export default function Index() {
 
         {/* Disclaimer */}
         <div
-          className="mb-10 animate-fade-in-up"
+          className="mb-8 mt-4 animate-fade-in-up"
           style={{ animationDelay: '200ms', animationFillMode: 'both' }}
         >
           <span className="font-mono text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase font-semibold">
@@ -64,9 +64,9 @@ export default function Index() {
         >
           <div className="relative group w-full sm:w-auto">
             <div className="absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" />
-            <Button className="relative w-full sm:w-auto font-display font-medium text-body-m transition-all duration-300 group-hover:-translate-y-0.5">
+            <Button className="relative w-full sm:w-auto font-display font-medium text-body-m text-white transition-all duration-300 group-hover:-translate-y-0.5">
               Explorar Soluções
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
           <Button
