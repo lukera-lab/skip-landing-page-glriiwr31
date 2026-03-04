@@ -6,8 +6,7 @@
 /* ─── Custom Fonts ──────────────────────────────────────────────────────────── */
 @font-face {
   font-family: 'Booster Sans Variable';
-  src:
-    url('/fonts/BoosterSans-Variable.ttf') format('truetype');
+  src: url('/fonts/BoosterSans-Variable.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -22,26 +21,26 @@
     /* ─── Skip Design System Tokens ──────────────────────────────────────────── */
 
     /* Skip Neutral (Accent) — near-neutral with subtle blue-violet influence */
-    --skip-accent-0:    #000000;
-    --skip-accent-50:   #050505;
-    --skip-accent-100:  #09090a;
-    --skip-accent-150:  #0c0c0f;
-    --skip-accent-200:  #111115;
-    --skip-accent-250:  #151519;
-    --skip-accent-300:  #1a191f;
-    --skip-accent-350:  #1e1e24;
-    --skip-accent-400:  #222229;
-    --skip-accent-450:  #26262e;
-    --skip-accent-500:  #2a2a33;
-    --skip-accent-550:  #2e2e38;
-    --skip-accent-600:  #373642;
-    --skip-accent-650:  #3c3c47;
-    --skip-accent-700:  #40404c;
-    --skip-accent-750:  #464652;
-    --skip-accent-800:  #525261;
-    --skip-accent-850:  #69697a;
-    --skip-accent-900:  #7e7e8f;
-    --skip-accent-950:  #8e8e9e;
+    --skip-accent-0: #000000;
+    --skip-accent-50: #050505;
+    --skip-accent-100: #09090a;
+    --skip-accent-150: #0c0c0f;
+    --skip-accent-200: #111115;
+    --skip-accent-250: #151519;
+    --skip-accent-300: #1a191f;
+    --skip-accent-350: #1e1e24;
+    --skip-accent-400: #222229;
+    --skip-accent-450: #26262e;
+    --skip-accent-500: #2a2a33;
+    --skip-accent-550: #2e2e38;
+    --skip-accent-600: #373642;
+    --skip-accent-650: #3c3c47;
+    --skip-accent-700: #40404c;
+    --skip-accent-750: #464652;
+    --skip-accent-800: #525261;
+    --skip-accent-850: #69697a;
+    --skip-accent-900: #7e7e8f;
+    --skip-accent-950: #8e8e9e;
     --skip-accent-1000: #9f9fad;
     --skip-accent-1050: #ababb8;
     --skip-accent-1100: #b6b6c2;
@@ -56,52 +55,52 @@
     --skip-accent-1550: #ffffff;
 
     /* Blue Violet */
-    --blue-violet-50:   #efeeff;
-    --blue-violet-100:  #e2e0ff;
-    --blue-violet-200:  #cac7fe;
-    --blue-violet-300:  #aaa5fc;
-    --blue-violet-400:  #8881f8;
-    --blue-violet-500:  #6b63f1;
-    --blue-violet-600:  #4f46e5;
-    --blue-violet-700:  #4038ca;
-    --blue-violet-800:  #3730a3;
-    --blue-violet-900:  #332e81;
-    --blue-violet-950:  #1e1b4b;
+    --blue-violet-50: #efeeff;
+    --blue-violet-100: #e2e0ff;
+    --blue-violet-200: #cac7fe;
+    --blue-violet-300: #aaa5fc;
+    --blue-violet-400: #8881f8;
+    --blue-violet-500: #6b63f1;
+    --blue-violet-600: #4f46e5;
+    --blue-violet-700: #4038ca;
+    --blue-violet-800: #3730a3;
+    --blue-violet-900: #332e81;
+    --blue-violet-950: #1e1b4b;
 
     /* Fuchsia */
-    --fuchsia-50:   #fdf2ff;
-    --fuchsia-100:  #fce3ff;
-    --fuchsia-200:  #f8c7ff;
-    --fuchsia-300:  #f79bff;
-    --fuchsia-400:  #f45fff;
-    --fuchsia-500:  #e824ff;
-    --fuchsia-600:  #d503fc;
-    --fuchsia-700:  #b100cd;
-    --fuchsia-800:  #9201a7;
-    --fuchsia-900:  #7a0887;
-    --fuchsia-950:  #53005d;
+    --fuchsia-50: #fdf2ff;
+    --fuchsia-100: #fce3ff;
+    --fuchsia-200: #f8c7ff;
+    --fuchsia-300: #f79bff;
+    --fuchsia-400: #f45fff;
+    --fuchsia-500: #e824ff;
+    --fuchsia-600: #d503fc;
+    --fuchsia-700: #b100cd;
+    --fuchsia-800: #9201a7;
+    --fuchsia-900: #7a0887;
+    --fuchsia-950: #53005d;
 
     /* Error */
-    --coral-error-0:  #fce7e3;
-    --coral-error-1:  #fdd2ca;
-    --coral-error-2:  #ff9c94;
-    --coral-error-3:  #ff7d73;
-    --coral-error-4:  #ff584a;
-    --coral-error-5:  #ff2a00;
-    --coral-error-6:  #d32300;
-    --coral-error-7:  #c52100;
-    --coral-error-8:  #8e1800;
-    --coral-error-9:  #6e1200;
+    --coral-error-0: #fce7e3;
+    --coral-error-1: #fdd2ca;
+    --coral-error-2: #ff9c94;
+    --coral-error-3: #ff7d73;
+    --coral-error-4: #ff584a;
+    --coral-error-5: #ff2a00;
+    --coral-error-6: #d32300;
+    --coral-error-7: #c52100;
+    --coral-error-8: #8e1800;
+    --coral-error-9: #6e1200;
     --coral-error-10: #4a1005;
 
     /* Effect Tokens */
-    --btn-inner-shadow: inset 0px 6px 16px 0px rgba(255, 255, 255, 0.10),
-                        inset 0px 2px 2px 0px rgba(255, 255, 255, 0.05),
-                        inset 0px -2px 2px 0px rgba(0, 0, 0, 0.05);
+    --btn-inner-shadow:
+      inset 0px 6px 16px 0px rgba(255, 255, 255, 0.1),
+      inset 0px 2px 2px 0px rgba(255, 255, 255, 0.05), inset 0px -2px 2px 0px rgba(0, 0, 0, 0.05);
 
     /* ─── Shadcn / Radix UI semantic tokens (light theme by default) ─────────── */
     --background: 0 0% 100%;
-    --foreground: 240 7% 4%;          /* skip-neutral-100 */
+    --foreground: 240 7% 4%; /* skip-neutral-100 */
 
     --card: 0 0% 100%;
     --card-foreground: 240 7% 4%;
@@ -109,24 +108,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 7% 4%;
 
-    --primary: 245 83% 60%;           /* blue-violet-500 */
+    --primary: 245 83% 60%; /* blue-violet-500 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 7% 93%;          /* skip-neutral-1450 */
+    --secondary: 240 7% 93%; /* skip-neutral-1450 */
     --secondary-foreground: 240 7% 4%;
 
     --muted: 240 7% 95%;
-    --muted-foreground: 240 7% 45%;   /* skip-neutral-850 */
+    --muted-foreground: 240 7% 45%; /* skip-neutral-850 */
 
-    --accent: 290 100% 49%;           /* fuchsia-600 */
+    --accent: 290 100% 49%; /* fuchsia-600 */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 11 100% 50%;       /* coral-error-5 */
+    --destructive: 11 100% 50%; /* coral-error-5 */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 7% 88%;             /* skip-neutral-1350 */
+    --border: 240 7% 88%; /* skip-neutral-1350 */
     --input: 240 7% 88%;
-    --ring: 245 83% 60%;              /* blue-violet-500 */
+    --ring: 245 83% 60%; /* blue-violet-500 */
 
     --radius: 0.5rem;
 
@@ -209,75 +208,162 @@
 
   /* ─── Animations ─────────────────────────────────────────────────────────── */
   @keyframes accordion-down {
-    from { height: 0; }
-    to   { height: var(--radix-accordion-content-height); }
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
   }
 
   @keyframes accordion-up {
-    from { height: var(--radix-accordion-content-height); }
-    to   { height: 0; }
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
   }
 
   @keyframes fade-in {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes fade-out {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 
   @keyframes fade-in-up {
-    from { transform: translateY(10px); opacity: 0; }
-    to   { transform: translateY(0);    opacity: 1; }
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   @keyframes fade-in-down {
-    from { transform: translateY(-10px); opacity: 0; }
-    to   { transform: translateY(0);     opacity: 1; }
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   @keyframes fade-out-up {
-    from { transform: translateY(0);    opacity: 1; }
-    to   { transform: translateY(-10px); opacity: 0; }
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
   }
 
   @keyframes fade-out-down {
-    from { transform: translateY(0);   opacity: 1; }
-    to   { transform: translateY(10px); opacity: 0; }
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(10px);
+      opacity: 0;
+    }
   }
 
   @keyframes slide-up {
-    from { transform: translateY(10px); opacity: 0; }
-    to   { transform: translateY(0);    opacity: 1; }
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   @keyframes slide-down {
-    from { transform: translateY(-10px); opacity: 0; }
-    to   { transform: translateY(0);     opacity: 1; }
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0);     }
-    50%       { transform: translateY(-10px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 
   @keyframes spotlight {
-    from { opacity: 0; transform: translate(-72%, -62%) scale(0.5); }
-    to   { opacity: 1; transform: translate(-50%, -40%) scale(1);   }
+    from {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -40%) scale(1);
+    }
   }
 
-  .animate-accordion-down  { animation: accordion-down  0.2s ease-out; }
-  .animate-accordion-up    { animation: accordion-up    0.2s ease-out; }
-  .animate-fade-in         { animation: fade-in         0.5s ease-out; }
-  .animate-fade-out        { animation: fade-out        0.5s ease-out; }
-  .animate-fade-in-up      { animation: fade-in-up      0.6s ease-out; }
-  .animate-fade-in-down    { animation: fade-in-down    0.6s ease-out; }
-  .animate-fade-out-up     { animation: fade-out-up     0.6s ease-out; }
-  .animate-fade-out-down   { animation: fade-out-down   0.6s ease-out; }
-  .animate-slide-up        { animation: slide-up        0.6s ease-out; }
-  .animate-slide-down      { animation: slide-down      0.6s ease-out; }
-  .animate-float           { animation: float           6s ease-in-out infinite; }
-  .animate-spotlight       { animation: spotlight       2s ease forwards; }
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+  .animate-fade-out {
+    animation: fade-out 0.5s ease-out;
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+  }
+  .animate-fade-in-down {
+    animation: fade-in-down 0.6s ease-out;
+  }
+  .animate-fade-out-up {
+    animation: fade-out-up 0.6s ease-out;
+  }
+  .animate-fade-out-down {
+    animation: fade-out-down 0.6s ease-out;
+  }
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+  .animate-slide-down {
+    animation: slide-down 0.6s ease-out;
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-spotlight {
+    animation: spotlight 2s ease forwards;
+  }
 }

@@ -8,7 +8,9 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 transition-opacity hover:opacity-90">
           <img src={logoUrl} alt="Skip Logo" className="h-8 w-auto drop-shadow-sm" />
-          <span className="font-heading font-medium text-body-l tracking-tight text-skip-neutral-100">Skip</span>
+          <span className="font-heading font-medium text-body-l tracking-tight text-skip-neutral-100">
+            Skip
+          </span>
         </Link>
         <nav className="flex items-center gap-4">
           <Link
@@ -29,7 +31,11 @@ export function Header() {
           >
             Suporte
           </Link>
-          <Button variant="ghost" size="sm" className="hidden sm:inline-flex font-heading font-medium text-skip-neutral-600 hover:text-skip-neutral-200">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="hidden sm:inline-flex font-heading font-medium text-skip-neutral-600 hover:text-skip-neutral-200"
+          >
             Entrar
           </Button>
         </nav>

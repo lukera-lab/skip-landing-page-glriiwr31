@@ -15,13 +15,22 @@ export function Footer() {
           </p>
         </div>
         <div className="flex items-center justify-center gap-6">
-          <Link to="/" className="font-body text-body-xs text-skip-neutral-900 hover:text-skip-neutral-400 transition-colors">
+          <Link
+            to="/"
+            className="font-body text-body-xs text-skip-neutral-900 hover:text-skip-neutral-400 transition-colors"
+          >
             Termos
           </Link>
-          <Link to="/" className="font-body text-body-xs text-skip-neutral-900 hover:text-skip-neutral-400 transition-colors">
+          <Link
+            to="/"
+            className="font-body text-body-xs text-skip-neutral-900 hover:text-skip-neutral-400 transition-colors"
+          >
             Privacidade
           </Link>
-          <Link to="/" className="font-body text-body-xs text-skip-neutral-900 hover:text-skip-neutral-400 transition-colors">
+          <Link
+            to="/"
+            className="font-body text-body-xs text-skip-neutral-900 hover:text-skip-neutral-400 transition-colors"
+          >
             Contato
           </Link>
         </div>
