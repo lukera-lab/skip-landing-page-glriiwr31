@@ -24,7 +24,7 @@ export default function Index() {
 
         {/* Main Headline */}
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 animate-fade-in-up"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-display font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 animate-fade-in-up"
           style={{ animationFillMode: 'both' }}
         >
           O criador de Sistemas Internos <br className="hidden md:block" />

@@ -23731,7 +23731,7 @@ function getElementRef(element) {
 	if (mayWarn) return element.props.ref;
 	return element.props.ref || element.ref;
 }
-var buttonVariants = cva("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0", {
+var buttonVariants = cva("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium font-display ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0", {
 	variants: {
 		variant: {
 			default: "bg-primary text-primary-foreground hover:bg-primary/90",
@@ -23804,7 +23804,7 @@ function Index() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-					className: "text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 animate-fade-in-up",
+					className: "text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-display font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 animate-fade-in-up",
 					style: { animationFillMode: "both" },
 					children: [
 						"O criador de Sistemas Internos ",
@@ -23926,7 +23926,7 @@ function Header() {
 					alt: "Skip Logo",
 					className: "h-8 w-auto drop-shadow-sm"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "text-xl font-bold tracking-tight text-slate-900",
+					className: "text-xl font-bold tracking-tight text-slate-900 font-display",
 					children: "Skip"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
@@ -24036,4 +24036,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-Bl01WHdM.js.map
+//# sourceMappingURL=index-DW2WPe5z.js.map

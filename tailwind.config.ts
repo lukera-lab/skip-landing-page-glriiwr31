@@ -28,8 +28,9 @@ export default {
     extend: {
       /* ─── Font Families ──────────────────────────────────────────────────── */
       fontFamily: {
-        // Primary — headings, uppercase, UI labels
-        sans: ['"Booster Sans Variable"', '"Instrument Sans"', 'system-ui', 'sans-serif'],
+        // Primary — Body text, standard UI
+        sans: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
+        // Secondary — Display, headings, buttons
         display: ['"Booster Sans Variable"', 'system-ui', 'sans-serif'],
         heading: ['"Booster Sans Variable"', 'system-ui', 'sans-serif'],
         // Body — paragraphs, descriptions

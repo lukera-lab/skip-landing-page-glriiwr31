@@ -8,7 +8,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 transition-opacity hover:opacity-90">
           <img src={logoUrl} alt="Skip Logo" className="h-8 w-auto drop-shadow-sm" />
-          <span className="text-xl font-bold tracking-tight text-slate-900">Skip</span>
+          <span className="text-xl font-bold tracking-tight text-slate-900 font-display">Skip</span>
         </Link>
         <nav className="flex items-center gap-4">
           <Link
