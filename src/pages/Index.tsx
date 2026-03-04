@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Sparkles } from 'lucide-react'
+import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
 
 const LOGOS = [
   { name: 'microsoft', width: 'w-24' },
@@ -18,31 +19,7 @@ export default function Index() {
 
         {/* Logo Icon */}
         <div className="flex items-center justify-center mb-8 animate-fade-in-down">
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 48 48"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-12 h-12 drop-shadow-sm"
-          >
-            <rect width="48" height="48" rx="12" fill="url(#skip-logo-gradient)" />
-            <path d="M13 32L25 24L13 16V32Z" fill="white" />
-            <path d="M23 32L35 24L23 16V32Z" fill="white" fillOpacity="0.8" />
-            <defs>
-              <linearGradient
-                id="skip-logo-gradient"
-                x1="0"
-                y1="0"
-                x2="48"
-                y2="48"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#8B5CF6" />
-                <stop offset="1" stopColor="#3B82F6" />
-              </linearGradient>
-            </defs>
-          </svg>
+          <img src={logoUrl} alt="Skip Logo" className="h-12 w-auto drop-shadow-sm" />
           <span className="text-3xl font-extrabold tracking-tight text-slate-900 ml-3">Skip</span>
         </div>
 
