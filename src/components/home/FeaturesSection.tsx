@@ -1,62 +1,25 @@
 import { useEffect, useRef, useState } from 'react'
-import { Database, Lock, Zap, Link, MessageSquare, MousePointer2 } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
+import {
+  AgentsMockup,
+  DatabaseMockup,
+  AuthMockup,
+  AIMockup,
+  DeployMockup,
+  CodeMockup,
+  ChatMockup,
+} from './FeatureMockups'
 
-// Graphic Components
-const AgentsGraphic = () => (
-  <div className="w-16 h-16 relative opacity-70 group-hover:opacity-100 transition-opacity duration-500">
-    <svg className="absolute inset-0 w-full h-full text-skip-neutral-1350" viewBox="0 0 64 64">
-      <path
-        d="M14 14 L32 32 L50 32 M14 50 L32 32"
-        stroke="currentColor"
-        strokeWidth="2"
-        fill="none"
-      />
-    </svg>
-    <div className="absolute top-2 left-2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-white z-10" />
-    <div className="absolute bottom-2 left-2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-white z-10" />
-    <div className="absolute top-1/2 right-2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-white z-10" />
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-blue-violet-100 z-10 shadow-[0_0_10px_rgba(79,70,229,0.5)]" />
-  </div>
-)
-
-const TechBadges = () => (
-  <div className="flex flex-wrap gap-2 justify-end max-w-[150px]">
-    <Badge
-      variant="outline"
-      className="bg-sky-50/50 text-sky-700 hover:bg-sky-50 border-sky-200 shadow-none font-body"
-    >
-      React
-    </Badge>
-    <Badge
-      variant="outline"
-      className="bg-blue-50/50 text-blue-700 hover:bg-blue-50 border-blue-200 shadow-none font-body"
-    >
-      TypeScript
-    </Badge>
-    <Badge
-      variant="outline"
-      className="bg-teal-50/50 text-teal-700 hover:bg-teal-50 border-teal-200 shadow-none font-body"
-    >
-      Tailwind
-    </Badge>
-  </div>
-)
-
-// Card Component
 function BentoCard({
   className,
   title,
   description,
-  icon,
-  topRight,
+  mockup,
 }: {
   className?: string
   title: string
   description: string
-  icon?: React.ReactNode
-  topRight?: React.ReactNode
+  mockup: React.ReactNode
 }) {
   return (
     <div
@@ -65,12 +28,9 @@ function BentoCard({
         className,
       )}
     >
-      {icon && (
-        <div className="w-12 h-12 rounded-[14px] bg-blue-violet-50 flex items-center justify-center mb-6 text-blue-violet-600 transition-transform duration-500 group-hover:scale-110 group-hover:bg-blue-violet-100">
-          {icon}
-        </div>
-      )}
-      {topRight && <div className="absolute top-7 right-7">{topRight}</div>}
+      <div className="w-full flex-1 min-h-[160px] bg-slate-50 bg-skip-neutral-1450 rounded-[12px] overflow-hidden border border-slate-100 mb-6 relative group-hover:bg-slate-100/50 transition-colors duration-500 flex items-center justify-center">
+        {mockup}
+      </div>
       <div className="mt-auto relative z-10">
         <h3 className="font-heading text-xl md:text-2xl font-semibold text-skip-neutral-900 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors">
           {title}
@@ -123,72 +83,64 @@ export function FeaturesSection() {
         {/* Grid */}
         <div
           className={cn(
-            'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full auto-rows-[minmax(220px,auto)] transition-all duration-700 delay-200',
+            'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full auto-rows-[minmax(340px,auto)] transition-all duration-700 delay-200',
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
           )}
         >
           {/* 1. Agentes - Large, 2 cols */}
           <BentoCard
-            className="md:col-span-2 lg:col-span-2 min-h-[280px]"
+            className="md:col-span-2 lg:col-span-2 min-h-[380px]"
             title="Agentes de Desenvolvimento"
             description="Uma equipe de agentes inteligentes trabalhando em paralelo para arquitetar, escrever e testar sua aplicação em tempo real, sem intervenção humana."
-            topRight={<AgentsGraphic />}
+            mockup={<AgentsMockup />}
           />
 
           {/* 2. Banco de Dados - Medium, 1 col */}
           <BentoCard
-            className="md:col-span-1 lg:col-span-1 min-h-[280px]"
+            className="md:col-span-1 lg:col-span-1 min-h-[380px]"
             title="Banco de Dados Profissional"
             description="Esquemas relacionais estruturados automaticamente com PostgreSQL, garantindo integridade e alta performance."
-            icon={<Database className="w-6 h-6" />}
+            mockup={<DatabaseMockup />}
           />
 
           {/* 3. Autenticação - Small */}
           <BentoCard
-            className="col-span-1 min-h-[240px]"
+            className="col-span-1 min-h-[340px]"
             title="Autenticação Pronta"
             description="Sistemas de login seguros com múltiplos provedores e controle de acesso integrado."
-            icon={<Lock className="w-6 h-6" />}
+            mockup={<AuthMockup />}
           />
 
           {/* 4. IA Conectada - Small */}
           <BentoCard
-            className="col-span-1 min-h-[240px]"
+            className="col-span-1 min-h-[340px]"
             title="IA Conectada ao Seu Sistema"
             description="Integre capacidades de inteligência artificial diretamente nas regras de negócio da sua aplicação."
-            icon={<Zap className="w-6 h-6" />}
+            mockup={<AIMockup />}
           />
 
           {/* 5. Publicação - Small */}
           <BentoCard
-            className="col-span-1 min-h-[240px]"
+            className="col-span-1 min-h-[340px]"
             title="Publicação com Um Clique"
             description="Deploy instantâneo da sua aplicação com URLs personalizadas, certificados SSL e infraestrutura escalável."
-            icon={<Link className="w-6 h-6" />}
+            mockup={<DeployMockup />}
           />
 
           {/* 6. Código - Large, 2 cols */}
           <BentoCard
-            className="md:col-span-2 lg:col-span-2 min-h-[280px]"
+            className="md:col-span-2 lg:col-span-2 min-h-[380px]"
             title="Código Limpo e Escalável"
             description="O Skip não cria 'caixas pretas'. Você recebe código-fonte moderno, tipado e otimizado, pronto para qualquer time de engenharia assumir."
-            topRight={<TechBadges />}
+            mockup={<CodeMockup />}
           />
 
           {/* 7. Modo Consultor - Medium, 1 col */}
           <BentoCard
-            className="md:col-span-1 lg:col-span-1 min-h-[280px]"
+            className="md:col-span-1 lg:col-span-1 min-h-[380px]"
             title="Modo Consultor"
             description="Um assistente que entende o contexto do seu negócio e sugere melhorias contínuas para o seu sistema."
-            icon={
-              <div className="relative">
-                <MessageSquare className="w-6 h-6" />
-                <MousePointer2
-                  className="w-4 h-4 text-fuchsia-500 absolute -bottom-1 -right-1"
-                  fill="currentColor"
-                />
-              </div>
-            }
+            mockup={<ChatMockup />}
           />
         </div>
       </div>

@@ -18963,6 +18963,10 @@ var Check = createLucideIcon("check", [["path", {
 	d: "M20 6 9 17l-5-5",
 	key: "1gmf2c"
 }]]);
+var ChevronDown = createLucideIcon("chevron-down", [["path", {
+	d: "m6 9 6 6 6-6",
+	key: "qrunsl"
+}]]);
 var CircleAlert = createLucideIcon("circle-alert", [
 	["circle", {
 		cx: "12",
@@ -19119,13 +19123,6 @@ var LayoutTemplate = createLucideIcon("layout-template", [
 		key: "q5h2i8"
 	}]
 ]);
-var Link$1 = createLucideIcon("link", [["path", {
-	d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71",
-	key: "1cjeqo"
-}], ["path", {
-	d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71",
-	key: "19qd67"
-}]]);
 var List = createLucideIcon("list", [
 	["path", {
 		d: "M3 5h.01",
@@ -19167,14 +19164,6 @@ var Lock = createLucideIcon("lock", [["rect", {
 }], ["path", {
 	d: "M7 11V7a5 5 0 0 1 10 0v4",
 	key: "fwvmzm"
-}]]);
-var MessageSquare = createLucideIcon("message-square", [["path", {
-	d: "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z",
-	key: "18887p"
-}]]);
-var MousePointer2 = createLucideIcon("mouse-pointer-2", [["path", {
-	d: "M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z",
-	key: "edeuup"
 }]]);
 var Send = createLucideIcon("send", [["path", {
 	d: "M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z",
@@ -19265,10 +19254,6 @@ var X = createLucideIcon("x", [["path", {
 }], ["path", {
 	d: "m6 6 12 12",
 	key: "d8bk6v"
-}]]);
-var Zap = createLucideIcon("zap", [["path", {
-	d: "M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z",
-	key: "1xq2db"
 }]]);
 var CLASS_PART_SEPARATOR = "-";
 var createClassGroupUtils = (config) => {
@@ -26478,68 +26463,353 @@ function PlatformSection() {
 		})
 	});
 }
-var AgentsGraphic = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-	className: "w-16 h-16 relative opacity-70 group-hover:opacity-100 transition-opacity duration-500",
-	children: [
-		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
-			className: "absolute inset-0 w-full h-full text-skip-neutral-1350",
-			viewBox: "0 0 64 64",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
-				d: "M14 14 L32 32 L50 32 M14 50 L32 32",
-				stroke: "currentColor",
-				strokeWidth: "2",
-				fill: "none"
-			})
-		}),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-2 left-2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-white z-10" }),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute bottom-2 left-2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-white z-10" }),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 right-2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-white z-10" }),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-blue-violet-100 z-10 shadow-[0_0_10px_rgba(79,70,229,0.5)]" })
-	]
-});
-var TechBadges = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-	className: "flex flex-wrap gap-2 justify-end max-w-[150px]",
-	children: [
-		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
-			variant: "outline",
-			className: "bg-sky-50/50 text-sky-700 hover:bg-sky-50 border-sky-200 shadow-none font-body",
-			children: "React"
-		}),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
-			variant: "outline",
-			className: "bg-blue-50/50 text-blue-700 hover:bg-blue-50 border-blue-200 shadow-none font-body",
-			children: "TypeScript"
-		}),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
-			variant: "outline",
-			className: "bg-teal-50/50 text-teal-700 hover:bg-teal-50 border-teal-200 shadow-none font-body",
-			children: "Tailwind"
-		})
-	]
-});
-function BentoCard({ className, title, description, icon, topRight }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: cn("rounded-[20px] border border-skip-neutral-1350 p-7 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500", className),
-		children: [
-			icon && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "w-12 h-12 rounded-[14px] bg-blue-violet-50 flex items-center justify-center mb-6 text-blue-violet-600 transition-transform duration-500 group-hover:scale-110 group-hover:bg-blue-violet-100",
-				children: icon
-			}),
-			topRight && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "absolute top-7 right-7",
-				children: topRight
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mt-auto relative z-10",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "font-heading text-xl md:text-2xl font-semibold text-skip-neutral-900 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
-					children: title
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-body text-skip-neutral-800 leading-relaxed text-sm md:text-base",
-					children: description
+const AgentsMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: "w-full h-full flex items-center justify-center p-4 min-h-[160px]",
+	children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "relative w-full max-w-[400px] flex items-center justify-between px-4",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-8 right-8 h-px bg-slate-200 -translate-y-1/2" }), [
+			{ role: "PM" },
+			{ role: "Lead" },
+			{ role: "Dev" },
+			{ role: "QA" }
+		].map((node, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "relative z-10 flex flex-col items-center",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "w-12 h-12 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center text-[10px] font-bold text-slate-700 relative",
+				children: [node.role, /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "absolute -bottom-1 -right-1 w-3 h-3 rounded-full border-2 border-white bg-blue-violet-600 animate-pulse",
+					style: { animationDelay: `${i * 300}ms` }
 				})]
 			})
+		}, node.role))]
+	})
+});
+const DatabaseMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: "w-full h-full p-4 flex flex-col min-h-[160px] items-center justify-center",
+	children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden w-full max-w-[280px]",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex border-b border-slate-100 bg-slate-50 px-3 py-2 text-[10px] font-medium text-slate-500",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex-[0.8]",
+						children: ["id ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-slate-400 font-normal ml-1",
+							children: "uuid"
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex-1",
+						children: ["name ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-slate-400 font-normal ml-1",
+							children: "text"
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex-1",
+						children: ["role ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-slate-400 font-normal ml-1",
+							children: "enum"
+						})]
+					})
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex border-b border-slate-50 px-3 py-2 text-[10px] text-slate-600 items-center",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex-[0.8] font-mono text-slate-400",
+						children: "a1b2..."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex-1 truncate pr-2",
+						children: "Alice S."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex-1",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded font-medium",
+							children: "admin"
+						})
+					})
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex px-3 py-2 text-[10px] text-slate-600 items-center",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex-[0.8] font-mono text-slate-400",
+						children: "c3d4..."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex-1 truncate pr-2",
+						children: "Bob C."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex-1",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded font-medium",
+							children: "user"
+						})
+					})
+				]
+			})
 		]
+	})
+});
+const AuthMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: "w-full h-full flex items-center justify-center p-4 min-h-[160px]",
+	children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "bg-white p-4 rounded-xl border border-slate-200 shadow-sm w-full max-w-[200px]",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "h-8 w-full border border-slate-200 rounded-md px-2.5 flex items-center text-[10px] text-slate-400 mb-2.5",
+				children: "name@company.com"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "h-8 w-full bg-slate-900 rounded-md flex items-center justify-center text-[10px] text-white font-medium mb-3 shadow-sm",
+				children: "Continue with Email"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex items-center gap-2 mb-3",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-px bg-slate-100 flex-1" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-[9px] text-slate-400 font-medium",
+						children: "OR"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-px bg-slate-100 flex-1" })
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "h-8 w-full border border-slate-200 rounded-md flex items-center justify-center gap-2 text-[10px] text-slate-600 font-medium bg-white shadow-sm",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+					className: "w-3.5 h-3.5",
+					viewBox: "0 0 24 24",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+							fill: "currentColor",
+							d: "M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+							fill: "currentColor",
+							d: "M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+							fill: "currentColor",
+							d: "M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+							fill: "currentColor",
+							d: "M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+						})
+					]
+				}), "Google"]
+			})
+		]
+	})
+});
+const AIMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: "w-full h-full flex items-center justify-center p-4 min-h-[160px]",
+	children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "w-full max-w-[200px] flex flex-col gap-3",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "bg-white border border-slate-200 rounded-lg p-2.5 flex items-center justify-between shadow-sm",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex items-center gap-2",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "w-5 h-5 rounded bg-blue-violet-50 flex items-center justify-center text-blue-violet-600",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3 h-3" })
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "text-[11px] font-medium text-slate-700",
+					children: "Claude 3.5 Sonnet"
+				})]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: "w-3.5 h-3.5 text-slate-400" })]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "bg-white border border-slate-200 rounded-lg p-2.5 shadow-sm flex flex-col gap-2",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "text-[9px] text-slate-400 font-semibold uppercase tracking-wider",
+				children: "API Key"
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex items-center gap-1.5 bg-slate-50 p-1.5 rounded border border-slate-100",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "flex gap-0.5 ml-1",
+					children: [...Array(12)].map((_$1, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1 h-1 rounded-full bg-slate-300" }, i))
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "text-[10px] text-slate-500 font-mono ml-auto mr-1",
+					children: "a9f2"
+				})]
+			})]
+		})]
+	})
+});
+const DeployMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+	className: "w-full h-full flex flex-col items-center justify-center p-4 gap-4 min-h-[160px]",
+	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "w-full max-w-[220px] bg-white border border-slate-200 rounded-lg shadow-sm p-2 flex items-center gap-2",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "flex items-center justify-center w-5 h-5 rounded bg-green-50",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Lock, { className: "w-3 h-3 text-green-600" })
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			className: "text-[11px] text-slate-700 font-medium tracking-tight flex-1",
+			children: "suaempresa.skip.app"
+		})]
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex items-center gap-1.5 bg-green-50 border border-green-200 text-green-700 px-3 py-1.5 rounded-full text-[10px] font-semibold tracking-wide shadow-sm",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" }), "ONLINE"]
+	})]
+});
+const CodeMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: "w-full h-full p-4 flex items-center justify-center min-h-[160px]",
+	children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "w-full max-w-[360px] bg-white rounded-xl shadow-sm overflow-hidden border border-slate-200",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex items-center gap-1.5 px-3 py-2.5 bg-slate-50 border-b border-slate-200",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2.5 h-2.5 rounded-full bg-[#FF5F56]" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2.5 h-2.5 rounded-full bg-[#27C93F]" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "ml-2 text-[10px] text-slate-500 font-mono font-medium",
+					children: "Dashboard.tsx"
+				})
+			]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "p-4 text-[11px] font-mono leading-relaxed overflow-x-auto text-slate-600",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-blue-violet-600 font-medium",
+						children: "import"
+					}),
+					" ",
+					"{",
+					" useState ",
+					"}",
+					" ",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-blue-violet-600 font-medium",
+						children: "from"
+					}),
+					" ",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-emerald-600",
+						children: "'react'"
+					}),
+					";"
+				] }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mt-1.5",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-blue-violet-600 font-medium",
+							children: "export function"
+						}),
+						" ",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-blue-600 font-medium",
+							children: "UserDashboard"
+						}),
+						"() ",
+						"{"
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "ml-4 mt-0.5",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-blue-violet-600 font-medium",
+							children: "const"
+						}),
+						" ",
+						"{",
+						" data, isLoading",
+						" ",
+						"}",
+						" = ",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-blue-500",
+							children: "useQuery"
+						}),
+						"(",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-emerald-600",
+							children: "'users'"
+						}),
+						");"
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "ml-4 mt-1.5",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-blue-violet-600 font-medium",
+							children: "if"
+						}),
+						" (isLoading)",
+						" ",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-blue-violet-600 font-medium",
+							children: "return"
+						}),
+						" ",
+						"<",
+						" ",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-blue-600 font-medium",
+							children: "Loader"
+						}),
+						" /",
+						">",
+						";"
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-1.5",
+					children: "}"
+				})
+			]
+		})]
+	})
+});
+const ChatMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: "w-full h-full p-4 flex items-center justify-center min-h-[160px]",
+	children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "w-full max-w-[260px] flex flex-col gap-3",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "bg-white border border-slate-200 rounded-2xl rounded-tl-sm p-3 text-[10px] text-slate-600 shadow-sm self-start max-w-[85%] leading-relaxed",
+			children: "Como posso otimizar a query de listagem de usuários?"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "bg-blue-violet-50 border border-blue-violet-100 rounded-2xl rounded-tr-sm p-3 text-[10px] text-blue-violet-900 shadow-sm self-end max-w-[85%] leading-relaxed",
+			children: [
+				"Sugiro adicionar um índice na coluna",
+				" ",
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", {
+					className: "bg-white/60 px-1 py-0.5 rounded text-[9px] font-mono",
+					children: "email"
+				}),
+				" e implementar paginação."
+			]
+		})]
+	})
+});
+function BentoCard({ className, title, description, mockup }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: cn("rounded-[20px] border border-skip-neutral-1350 p-7 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500", className),
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "w-full flex-1 min-h-[160px] bg-slate-50 bg-skip-neutral-1450 rounded-[12px] overflow-hidden border border-slate-100 mb-6 relative group-hover:bg-slate-100/50 transition-colors duration-500 flex items-center justify-center",
+			children: mockup
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "mt-auto relative z-10",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+				className: "font-heading text-xl md:text-2xl font-semibold text-skip-neutral-900 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
+				children: title
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "font-body text-skip-neutral-800 leading-relaxed text-sm md:text-base",
+				children: description
+			})]
+		})]
 	});
 }
 function FeaturesSection() {
@@ -26577,55 +26847,49 @@ function FeaturesSection() {
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full auto-rows-[minmax(220px,auto)] transition-all duration-700 delay-200", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
+				className: cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full auto-rows-[minmax(340px,auto)] transition-all duration-700 delay-200", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "md:col-span-2 lg:col-span-2 min-h-[280px]",
+						className: "md:col-span-2 lg:col-span-2 min-h-[380px]",
 						title: "Agentes de Desenvolvimento",
 						description: "Uma equipe de agentes inteligentes trabalhando em paralelo para arquitetar, escrever e testar sua aplicação em tempo real, sem intervenção humana.",
-						topRight: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AgentsGraphic, {})
+						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AgentsMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "md:col-span-1 lg:col-span-1 min-h-[280px]",
+						className: "md:col-span-1 lg:col-span-1 min-h-[380px]",
 						title: "Banco de Dados Profissional",
 						description: "Esquemas relacionais estruturados automaticamente com PostgreSQL, garantindo integridade e alta performance.",
-						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Database, { className: "w-6 h-6" })
+						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DatabaseMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "col-span-1 min-h-[240px]",
+						className: "col-span-1 min-h-[340px]",
 						title: "Autenticação Pronta",
 						description: "Sistemas de login seguros com múltiplos provedores e controle de acesso integrado.",
-						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Lock, { className: "w-6 h-6" })
+						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuthMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "col-span-1 min-h-[240px]",
+						className: "col-span-1 min-h-[340px]",
 						title: "IA Conectada ao Seu Sistema",
 						description: "Integre capacidades de inteligência artificial diretamente nas regras de negócio da sua aplicação.",
-						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Zap, { className: "w-6 h-6" })
+						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AIMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "col-span-1 min-h-[240px]",
+						className: "col-span-1 min-h-[340px]",
 						title: "Publicação com Um Clique",
 						description: "Deploy instantâneo da sua aplicação com URLs personalizadas, certificados SSL e infraestrutura escalável.",
-						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, { className: "w-6 h-6" })
+						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DeployMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "md:col-span-2 lg:col-span-2 min-h-[280px]",
+						className: "md:col-span-2 lg:col-span-2 min-h-[380px]",
 						title: "Código Limpo e Escalável",
 						description: "O Skip não cria 'caixas pretas'. Você recebe código-fonte moderno, tipado e otimizado, pronto para qualquer time de engenharia assumir.",
-						topRight: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TechBadges, {})
+						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CodeMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "md:col-span-1 lg:col-span-1 min-h-[280px]",
+						className: "md:col-span-1 lg:col-span-1 min-h-[380px]",
 						title: "Modo Consultor",
 						description: "Um assistente que entende o contexto do seu negócio e sugere melhorias contínuas para o seu sistema.",
-						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "relative",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageSquare, { className: "w-6 h-6" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MousePointer2, {
-								className: "w-4 h-4 text-fuchsia-500 absolute -bottom-1 -right-1",
-								fill: "currentColor"
-							})]
-						})
+						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChatMockup, {})
 					})
 				]
 			})]
@@ -26896,4 +27160,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-D6czxQhZ.js.map
+//# sourceMappingURL=index-C_LrpqJS.js.map
