@@ -2550,6 +2550,18 @@ h6{
   --tw-text-opacity: 1;
   color: rgb(9 9 10 / var(--tw-text-opacity, 1));
 }
+.text-skip-neutral-1000{
+  --tw-text-opacity: 1;
+  color: rgb(159 159 173 / var(--tw-text-opacity, 1));
+}
+.text-skip-neutral-1200{
+  --tw-text-opacity: 1;
+  color: rgb(205 205 214 / var(--tw-text-opacity, 1));
+}
+.text-skip-neutral-1300{
+  --tw-text-opacity: 1;
+  color: rgb(217 218 226 / var(--tw-text-opacity, 1));
+}
 .text-skip-neutral-300{
   --tw-text-opacity: 1;
   color: rgb(26 25 31 / var(--tw-text-opacity, 1));

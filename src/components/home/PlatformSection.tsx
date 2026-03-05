@@ -111,6 +111,7 @@ export function PlatformSection() {
             description="Skip analisa sua ideia e cria a primeira versão funcional do seu sistema."
             layout="text-right"
             mockup={<Step2Mockup />}
+            hasFrame={false}
           />
           <WorkflowStep
             step="03"

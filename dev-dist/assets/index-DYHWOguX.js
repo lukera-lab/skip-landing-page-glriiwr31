@@ -25748,25 +25748,25 @@ function Step2Mockup() {
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex-1 flex flex-col gap-3 font-mono text-[10px] sm:text-xs text-skip-neutral-800",
+					className: "flex-1 flex flex-col gap-3 font-mono text-[10px] sm:text-xs text-skip-neutral-1300",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-2 text-green-400/80",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "flex items-center gap-2",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0 text-green-400/80" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "truncate",
 								children: "Requisitos analisados"
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-2 text-green-400/80",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "flex items-center gap-2",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0 text-green-400/80" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "truncate",
 								children: "Banco de dados criado"
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-2 text-blue-violet-400",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "flex items-center gap-2",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0 text-blue-violet-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "truncate",
 								children: "Gerando interface..."
 							})]
@@ -25776,7 +25776,7 @@ function Step2Mockup() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mt-auto pt-4 border-t border-skip-neutral-600/50",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex justify-between text-[10px] sm:text-xs font-mono text-skip-neutral-800 mb-2",
+						className: "flex justify-between text-[10px] sm:text-xs font-mono text-skip-neutral-1300 mb-2",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Progresso" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "text-blue-violet-400",
 							children: "80%"
@@ -25797,15 +25797,15 @@ function Step2Mockup() {
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutTemplate, { className: "w-3 h-3 sm:w-4 sm:h-4 text-white" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-skip-neutral-100",
+						className: "w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-white",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-3 h-3 sm:w-4 sm:h-4" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-skip-neutral-100",
+						className: "w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-white",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChartColumn, { className: "w-3 h-3 sm:w-4 sm:h-4" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-skip-neutral-100 mt-auto",
+						className: "w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-white mt-auto",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Database, { className: "w-3 h-3 sm:w-4 sm:h-4" })
 					})
 				]
@@ -25831,11 +25831,11 @@ function Step2Mockup() {
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "flex items-center gap-1.5 mb-1.5 sm:mb-2",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChartColumn, { className: "w-3 h-3 text-blue-violet-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "text-[8px] sm:text-[10px] text-skip-neutral-800 truncate font-medium",
+										className: "text-[8px] sm:text-[10px] text-skip-neutral-1000 truncate font-medium",
 										children: "Entradas Hoje"
 									})]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-sm sm:text-lg font-semibold text-skip-neutral-100",
+									className: "text-sm sm:text-lg font-bold text-white",
 									children: "142"
 								})]
 							}),
@@ -25844,11 +25844,11 @@ function Step2Mockup() {
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "flex items-center gap-1.5 mb-1.5 sm:mb-2",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-3 h-3 text-green-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "text-[8px] sm:text-[10px] text-skip-neutral-800 truncate font-medium",
+										className: "text-[8px] sm:text-[10px] text-skip-neutral-1000 truncate font-medium",
 										children: "Presentes"
 									})]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-sm sm:text-lg font-semibold text-skip-neutral-100",
+									className: "text-sm sm:text-lg font-bold text-white",
 									children: "138"
 								})]
 							}),
@@ -25857,11 +25857,11 @@ function Step2Mockup() {
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "flex items-center gap-1.5 mb-1.5 sm:mb-2",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-3 h-3 text-red-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "text-[8px] sm:text-[10px] text-skip-neutral-800 truncate font-medium",
+										className: "text-[8px] sm:text-[10px] text-skip-neutral-1000 truncate font-medium",
 										children: "Atrasos"
 									})]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-sm sm:text-lg font-semibold text-red-400",
+									className: "text-sm sm:text-lg font-bold text-white",
 									children: "4"
 								})]
 							})
@@ -25872,15 +25872,15 @@ function Step2Mockup() {
 							className: "grid grid-cols-[1fr_auto_auto] gap-2 p-2 sm:p-3 border-b border-skip-neutral-500 bg-skip-neutral-500/20",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-[8px] sm:text-[10px] text-skip-neutral-800 font-medium uppercase tracking-wider",
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-1200 font-medium uppercase tracking-wider",
 									children: "Nome"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-[8px] sm:text-[10px] text-skip-neutral-800 font-medium w-12 text-center uppercase tracking-wider",
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-1200 font-medium w-12 text-center uppercase tracking-wider",
 									children: "Horário"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-[8px] sm:text-[10px] text-skip-neutral-800 font-medium w-16 text-center uppercase tracking-wider",
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-1200 font-medium w-16 text-center uppercase tracking-wider",
 									children: "Status"
 								})
 							]
@@ -25924,12 +25924,12 @@ function Step2Mockup() {
 												className: "w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity"
 											})
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "h-2 bg-skip-neutral-500 rounded",
+											className: "h-2 bg-white rounded",
 											style: { width: row.nameW }
 										})]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "text-[8px] sm:text-[10px] text-skip-neutral-700 font-mono w-12 text-center",
+										className: "text-[8px] sm:text-[10px] text-white font-mono w-12 text-center",
 										children: row.time
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -26135,7 +26135,8 @@ function PlatformSection() {
 							title: "Receba seu Sistema",
 							description: "Skip analisa sua ideia e cria a primeira versão funcional do seu sistema.",
 							layout: "text-right",
-							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Step2Mockup, {})
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Step2Mockup, {}),
+							hasFrame: false
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(WorkflowStep, {
 							step: "03",
@@ -26420,4 +26421,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-vPUAZ3_q.js.map
+//# sourceMappingURL=index-DYHWOguX.js.map

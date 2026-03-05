@@ -78,23 +78,23 @@ export function Step2Mockup() {
           <div className="w-2.5 h-2.5 rounded-full bg-green-500/80 shadow-[0_0_8px_rgba(34,197,94,0.4)]" />
         </div>
 
-        <div className="flex-1 flex flex-col gap-3 font-mono text-[10px] sm:text-xs text-skip-neutral-800">
-          <div className="flex items-center gap-2 text-green-400/80">
-            <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
+        <div className="flex-1 flex flex-col gap-3 font-mono text-[10px] sm:text-xs text-skip-neutral-1300">
+          <div className="flex items-center gap-2">
+            <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0 text-green-400/80" />
             <span className="truncate">Requisitos analisados</span>
           </div>
-          <div className="flex items-center gap-2 text-green-400/80">
-            <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
+          <div className="flex items-center gap-2">
+            <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0 text-green-400/80" />
             <span className="truncate">Banco de dados criado</span>
           </div>
-          <div className="flex items-center gap-2 text-blue-violet-400">
-            <Loader2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0" />
+          <div className="flex items-center gap-2">
+            <Loader2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0 text-blue-violet-400" />
             <span className="truncate">Gerando interface...</span>
           </div>
         </div>
 
         <div className="mt-auto pt-4 border-t border-skip-neutral-600/50">
-          <div className="flex justify-between text-[10px] sm:text-xs font-mono text-skip-neutral-800 mb-2">
+          <div className="flex justify-between text-[10px] sm:text-xs font-mono text-skip-neutral-1300 mb-2">
             <span>Progresso</span>
             <span className="text-blue-violet-400">80%</span>
           </div>
@@ -112,13 +112,13 @@ export function Step2Mockup() {
           <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-blue-violet-600 flex items-center justify-center mb-2 shadow-sm">
             <LayoutTemplate className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
           </div>
-          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-skip-neutral-100">
+          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-white">
             <Users className="w-3 h-3 sm:w-4 sm:h-4" />
           </div>
-          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-skip-neutral-100">
+          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-white">
             <BarChart3 className="w-3 h-3 sm:w-4 sm:h-4" />
           </div>
-          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-skip-neutral-100 mt-auto">
+          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-white mt-auto">
             <Database className="w-3 h-3 sm:w-4 sm:h-4" />
           </div>
         </div>
@@ -143,42 +143,42 @@ export function Step2Mockup() {
               <div className="bg-skip-neutral-400 rounded-lg p-2.5 sm:p-3 border border-skip-neutral-500 flex flex-col shadow-sm">
                 <div className="flex items-center gap-1.5 mb-1.5 sm:mb-2">
                   <BarChart3 className="w-3 h-3 text-blue-violet-400" />
-                  <span className="text-[8px] sm:text-[10px] text-skip-neutral-800 truncate font-medium">
+                  <span className="text-[8px] sm:text-[10px] text-skip-neutral-1000 truncate font-medium">
                     Entradas Hoje
                   </span>
                 </div>
-                <div className="text-sm sm:text-lg font-semibold text-skip-neutral-100">142</div>
+                <div className="text-sm sm:text-lg font-bold text-white">142</div>
               </div>
               <div className="bg-skip-neutral-400 rounded-lg p-2.5 sm:p-3 border border-skip-neutral-500 flex flex-col shadow-sm">
                 <div className="flex items-center gap-1.5 mb-1.5 sm:mb-2">
                   <Users className="w-3 h-3 text-green-400" />
-                  <span className="text-[8px] sm:text-[10px] text-skip-neutral-800 truncate font-medium">
+                  <span className="text-[8px] sm:text-[10px] text-skip-neutral-1000 truncate font-medium">
                     Presentes
                   </span>
                 </div>
-                <div className="text-sm sm:text-lg font-semibold text-skip-neutral-100">138</div>
+                <div className="text-sm sm:text-lg font-bold text-white">138</div>
               </div>
               <div className="bg-skip-neutral-400 rounded-lg p-2.5 sm:p-3 border border-skip-neutral-500 flex flex-col shadow-sm">
                 <div className="flex items-center gap-1.5 mb-1.5 sm:mb-2">
                   <Clock className="w-3 h-3 text-red-400" />
-                  <span className="text-[8px] sm:text-[10px] text-skip-neutral-800 truncate font-medium">
+                  <span className="text-[8px] sm:text-[10px] text-skip-neutral-1000 truncate font-medium">
                     Atrasos
                   </span>
                 </div>
-                <div className="text-sm sm:text-lg font-semibold text-red-400">4</div>
+                <div className="text-sm sm:text-lg font-bold text-white">4</div>
               </div>
             </div>
 
             {/* Table Area */}
             <div className="flex-1 bg-skip-neutral-400 rounded-lg border border-skip-neutral-500 overflow-hidden flex flex-col shadow-sm min-h-[120px]">
               <div className="grid grid-cols-[1fr_auto_auto] gap-2 p-2 sm:p-3 border-b border-skip-neutral-500 bg-skip-neutral-500/20">
-                <div className="text-[8px] sm:text-[10px] text-skip-neutral-800 font-medium uppercase tracking-wider">
+                <div className="text-[8px] sm:text-[10px] text-skip-neutral-1200 font-medium uppercase tracking-wider">
                   Nome
                 </div>
-                <div className="text-[8px] sm:text-[10px] text-skip-neutral-800 font-medium w-12 text-center uppercase tracking-wider">
+                <div className="text-[8px] sm:text-[10px] text-skip-neutral-1200 font-medium w-12 text-center uppercase tracking-wider">
                   Horário
                 </div>
-                <div className="text-[8px] sm:text-[10px] text-skip-neutral-800 font-medium w-16 text-center uppercase tracking-wider">
+                <div className="text-[8px] sm:text-[10px] text-skip-neutral-1200 font-medium w-16 text-center uppercase tracking-wider">
                   Status
                 </div>
               </div>
@@ -198,12 +198,9 @@ export function Step2Mockup() {
                           className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity"
                         />
                       </div>
-                      <div
-                        className="h-2 bg-skip-neutral-500 rounded"
-                        style={{ width: row.nameW }}
-                      />
+                      <div className="h-2 bg-white rounded" style={{ width: row.nameW }} />
                     </div>
-                    <div className="text-[8px] sm:text-[10px] text-skip-neutral-700 font-mono w-12 text-center">
+                    <div className="text-[8px] sm:text-[10px] text-white font-mono w-12 text-center">
                       {row.time}
                     </div>
                     <div className="w-16 flex justify-center">
