@@ -27556,8 +27556,8 @@ function Index() {
 								className: "h-10 sm:h-12 w-auto drop-shadow-sm"
 							})
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-							className: "font-display text-[28px] sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full max-w-[360px] sm:max-w-none mx-auto",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+							className: "font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full sm:max-w-none mx-auto",
 							style: { animationFillMode: "both" },
 							children: [
 								"O criador de Sistemas Internos ",
@@ -27763,4 +27763,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-v4KeAQis.js.map
+//# sourceMappingURL=index-C2XdsJs1.js.map

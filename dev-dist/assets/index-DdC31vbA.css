@@ -2752,9 +2752,6 @@ h6{
   --tw-numeric-spacing: tabular-nums;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
-.leading-\[1\.1\]{
-  line-height: 1.1;
-}
 .leading-\[1\.1em\]{
   line-height: 1.1em;
 }
@@ -4711,6 +4708,9 @@ h6{
   .sm\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+  .sm\:leading-\[1\.1\]{
+    line-height: 1.1;
   }
   .sm\:blur-\[120px\]{
     --tw-blur: blur(120px);

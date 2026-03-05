@@ -40,8 +40,8 @@ export default function Index() {
           </div>
 
           {/* Main Headline */}
-          <h1
-            className="font-display text-[28px] sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full max-w-[360px] sm:max-w-none mx-auto"
+          <h2
+            className="font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full sm:max-w-none mx-auto"
             style={{ animationFillMode: 'both' }}
           >
             O criador de Sistemas Internos <br className="hidden md:block" />
@@ -50,7 +50,7 @@ export default function Index() {
               fácil e intuitivo
             </span>{' '}
             do mundo
-          </h1>
+          </h2>
 
           {/* Subheadline */}
           <p
