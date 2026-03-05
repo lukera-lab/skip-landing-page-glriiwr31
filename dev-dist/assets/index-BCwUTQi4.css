@@ -1691,9 +1691,6 @@ h6{
 .border{
   border-width: 1px;
 }
-.border-0{
-  border-width: 0px;
-}
 .border-2{
   border-width: 2px;
 }
@@ -2578,6 +2575,10 @@ h6{
 .text-skip-neutral-1000{
   --tw-text-opacity: 1;
   color: rgb(159 159 173 / var(--tw-text-opacity, 1));
+}
+.text-skip-neutral-1100{
+  --tw-text-opacity: 1;
+  color: rgb(182 182 194 / var(--tw-text-opacity, 1));
 }
 .text-skip-neutral-1200{
   --tw-text-opacity: 1;

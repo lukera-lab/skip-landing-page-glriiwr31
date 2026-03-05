@@ -228,7 +228,7 @@ export function Step2Mockup() {
 
 export function Step3Mockup() {
   return (
-    <div className="w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] flex relative overflow-hidden shadow-2xl border-0">
+    <div className="w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] flex relative overflow-hidden shadow-2xl border border-skip-neutral-600">
       {/* Left Pane: Chat Interface */}
       <div className="w-[45%] sm:w-[45%] border-r border-skip-neutral-600 flex flex-col bg-skip-neutral-400 relative z-10 shrink-0">
         <div className="flex-1 p-4 sm:p-5 flex flex-col justify-end gap-3 sm:gap-4 overflow-hidden relative">
@@ -260,7 +260,7 @@ export function Step3Mockup() {
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center border border-skip-neutral-600 overflow-hidden shadow-sm">
               <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-violet-400" />
             </div>
-            <div className="bg-skip-neutral-500/40 p-3 sm:px-4 sm:py-3 rounded-2xl rounded-tl-sm flex items-center gap-2 border border-skip-neutral-500/20 shadow-sm font-body text-[11px] sm:text-xs text-skip-neutral-800">
+            <div className="bg-skip-neutral-500/40 p-3 sm:px-4 sm:py-3 rounded-2xl rounded-tl-sm flex items-center gap-2 border border-skip-neutral-500/20 shadow-sm font-body text-[11px] sm:text-xs text-skip-neutral-1000">
               Campo adicionado <Check className="w-3.5 h-3.5 text-green-400" />
             </div>
           </div>
@@ -268,7 +268,7 @@ export function Step3Mockup() {
 
         {/* Chat Input */}
         <div className="p-3 sm:p-4 border-t border-skip-neutral-600/50 bg-skip-neutral-400">
-          <div className="w-full h-10 sm:h-11 bg-skip-neutral-500/50 rounded-xl border border-skip-neutral-600 flex items-center px-3 sm:px-4 justify-between text-skip-neutral-800 shrink-0">
+          <div className="w-full h-10 sm:h-11 bg-skip-neutral-500/50 rounded-xl border border-skip-neutral-600 flex items-center px-3 sm:px-4 justify-between text-skip-neutral-900 shrink-0">
             <span className="text-[11px] sm:text-xs font-body">Mensagem...</span>
             <div className="w-6 h-6 sm:w-7 sm:h-7 bg-skip-neutral-500 rounded-full flex items-center justify-center shrink-0">
               <Send className="w-3 h-3 text-skip-neutral-800 -ml-0.5" />
@@ -287,32 +287,32 @@ export function Step3Mockup() {
           <div className="space-y-3 sm:space-y-3.5">
             {/* Field 1 */}
             <div className="space-y-1.5">
-              <label className="text-[10px] sm:text-xs font-medium text-skip-neutral-800 block">
+              <label className="text-[10px] sm:text-xs font-medium text-skip-neutral-1100 block">
                 Nome do Funcionário
               </label>
               <div className="h-8 sm:h-9 bg-skip-neutral-500/30 rounded-md w-full border border-skip-neutral-600 flex items-center px-3">
-                <span className="text-[10px] sm:text-xs text-skip-neutral-700">Ex: João Silva</span>
+                <span className="text-[10px] sm:text-xs text-skip-neutral-900">Ex: João Silva</span>
               </div>
             </div>
 
             <div className="flex gap-2 sm:gap-3">
               {/* Field 2 */}
               <div className="space-y-1.5 flex-1">
-                <label className="text-[10px] sm:text-xs font-medium text-skip-neutral-800 block">
+                <label className="text-[10px] sm:text-xs font-medium text-skip-neutral-1100 block">
                   Data de Entrada
                 </label>
                 <div className="h-8 sm:h-9 bg-skip-neutral-500/30 rounded-md w-full border border-skip-neutral-600 flex items-center px-3">
-                  <span className="text-[10px] sm:text-xs text-skip-neutral-700">DD/MM/AAAA</span>
+                  <span className="text-[10px] sm:text-xs text-skip-neutral-900">DD/MM/AAAA</span>
                 </div>
               </div>
 
               {/* Field 3 */}
               <div className="space-y-1.5 flex-1">
-                <label className="text-[10px] sm:text-xs font-medium text-skip-neutral-800 block">
+                <label className="text-[10px] sm:text-xs font-medium text-skip-neutral-1100 block">
                   Departamento
                 </label>
                 <div className="h-8 sm:h-9 bg-skip-neutral-500/30 rounded-md w-full border border-skip-neutral-600 flex items-center px-3">
-                  <span className="text-[10px] sm:text-xs text-skip-neutral-700">Selecione...</span>
+                  <span className="text-[10px] sm:text-xs text-skip-neutral-900">Selecione...</span>
                 </div>
               </div>
             </div>
@@ -321,7 +321,7 @@ export function Step3Mockup() {
             <div className="relative mt-2 pt-1">
               <div className="space-y-1.5 relative z-10">
                 <div className="flex items-center gap-2">
-                  <label className="text-[10px] sm:text-xs font-medium text-white block">
+                  <label className="text-[10px] sm:text-xs font-medium text-skip-neutral-1100 block">
                     Aprovação do Gestor
                   </label>
                   <span className="bg-green-500/20 text-green-400 border border-green-500/30 px-1.5 py-[2px] rounded-full text-[8px] font-bold tracking-wider animate-pulse">
@@ -330,7 +330,7 @@ export function Step3Mockup() {
                 </div>
                 <div className="h-8 sm:h-9 bg-skip-neutral-500/50 rounded-md w-full border border-blue-violet-600 shadow-[0_0_12px_rgba(124,58,237,0.35)] flex items-center px-3 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-violet-500/10 to-transparent animate-pulse" />
-                  <span className="text-[10px] sm:text-xs text-skip-neutral-700 relative z-10">
+                  <span className="text-[10px] sm:text-xs text-skip-neutral-900 relative z-10">
                     Selecione o gestor
                   </span>
                 </div>
