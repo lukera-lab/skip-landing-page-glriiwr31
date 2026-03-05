@@ -26178,7 +26178,7 @@ function Step4Mockup() {
 									className: "text-[8px] sm:text-[10px] text-skip-neutral-1000 font-medium truncate",
 									children: "Presentes"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-sm sm:text-xl font-bold text-green-400 tracking-tight",
+									className: "text-sm sm:text-xl font-bold text-white tracking-tight",
 									children: "138"
 								})]
 							}),
@@ -26188,7 +26188,7 @@ function Step4Mockup() {
 									className: "text-[8px] sm:text-[10px] text-skip-neutral-1000 font-medium truncate",
 									children: "Atrasos"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-sm sm:text-xl font-bold text-red-400 tracking-tight",
+									className: "text-sm sm:text-xl font-bold text-white tracking-tight",
 									children: "4"
 								})]
 							})
@@ -26199,15 +26199,15 @@ function Step4Mockup() {
 							className: "grid grid-cols-[1fr_auto_auto] gap-2 px-3 py-2 border-b border-skip-neutral-500 bg-skip-neutral-500/20",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider",
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider",
 									children: "Nome"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider w-12 sm:w-16 text-center",
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider w-12 sm:w-16 text-center",
 									children: "Horário"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider w-16 sm:w-20 text-center",
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider w-16 sm:w-20 text-center",
 									children: "Status"
 								})
 							]
@@ -26256,13 +26256,13 @@ function Step4Mockup() {
 										})]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "text-[9px] sm:text-[11px] text-skip-neutral-900 font-mono w-12 sm:w-16 text-center",
+										className: "text-[9px] sm:text-[11px] text-skip-neutral-1000 font-mono w-12 sm:w-16 text-center",
 										children: row.time
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										className: "w-16 sm:w-20 flex justify-center",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: cn("text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md border font-semibold tracking-wide", row.statusColor === "green" ? "bg-green-500/10 text-green-400 border-green-500/20" : "bg-red-500/10 text-red-400 border-red-500/20"),
+											className: cn("text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md border font-semibold tracking-wide", row.statusColor === "green" ? "bg-green-500/15 text-green-400 border-green-500/20" : "bg-red-500/15 text-red-400 border-red-500/20"),
 											children: row.status
 										})
 									})
@@ -26681,4 +26681,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CNrnty00.js.map
+//# sourceMappingURL=index-DMOxRyZD.js.map

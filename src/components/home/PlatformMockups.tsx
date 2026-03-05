@@ -415,28 +415,26 @@ export function Step4Mockup() {
               <span className="text-[8px] sm:text-[10px] text-skip-neutral-1000 font-medium truncate">
                 Presentes
               </span>
-              <span className="text-sm sm:text-xl font-bold text-green-400 tracking-tight">
-                138
-              </span>
+              <span className="text-sm sm:text-xl font-bold text-white tracking-tight">138</span>
             </div>
             <div className="bg-skip-neutral-400 border border-skip-neutral-500 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-sm flex flex-col gap-1">
               <span className="text-[8px] sm:text-[10px] text-skip-neutral-1000 font-medium truncate">
                 Atrasos
               </span>
-              <span className="text-sm sm:text-xl font-bold text-red-400 tracking-tight">4</span>
+              <span className="text-sm sm:text-xl font-bold text-white tracking-tight">4</span>
             </div>
           </div>
 
           {/* Table Area */}
           <div className="flex-1 bg-skip-neutral-400 border border-skip-neutral-500 rounded-lg sm:rounded-xl overflow-hidden flex flex-col shadow-sm min-h-[100px]">
             <div className="grid grid-cols-[1fr_auto_auto] gap-2 px-3 py-2 border-b border-skip-neutral-500 bg-skip-neutral-500/20">
-              <div className="text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider">
+              <div className="text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider">
                 Nome
               </div>
-              <div className="text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider w-12 sm:w-16 text-center">
+              <div className="text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider w-12 sm:w-16 text-center">
                 Horário
               </div>
-              <div className="text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider w-16 sm:w-20 text-center">
+              <div className="text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider w-16 sm:w-20 text-center">
                 Status
               </div>
             </div>
@@ -463,7 +461,7 @@ export function Step4Mockup() {
                       {row.name}
                     </div>
                   </div>
-                  <div className="text-[9px] sm:text-[11px] text-skip-neutral-900 font-mono w-12 sm:w-16 text-center">
+                  <div className="text-[9px] sm:text-[11px] text-skip-neutral-1000 font-mono w-12 sm:w-16 text-center">
                     {row.time}
                   </div>
                   <div className="w-16 sm:w-20 flex justify-center">
@@ -471,8 +469,8 @@ export function Step4Mockup() {
                       className={cn(
                         'text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md border font-semibold tracking-wide',
                         row.statusColor === 'green'
-                          ? 'bg-green-500/10 text-green-400 border-green-500/20'
-                          : 'bg-red-500/10 text-red-400 border-red-500/20',
+                          ? 'bg-green-500/15 text-green-400 border-green-500/20'
+                          : 'bg-red-500/15 text-red-400 border-red-500/20',
                       )}
                     >
                       {row.status}
