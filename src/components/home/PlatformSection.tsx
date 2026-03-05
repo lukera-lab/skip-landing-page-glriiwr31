@@ -22,11 +22,11 @@ function WorkflowStep({ step, title, description, layout, mockup }: WorkflowStep
     >
       {/* Text Content */}
       <div className="flex-1 w-full flex flex-col animate-fade-in-up">
-        <span className="font-mono text-mono-xl text-white mb-4">{step}</span>
+        <span className="font-mono text-mono-xl text-blue-violet-600 mb-4">{step}</span>
         <h3 className="font-heading text-4xl md:text-5xl font-semibold text-white mb-4 tracking-tight">
           {title}
         </h3>
-        <p className="font-body text-body-l text-skip-neutral-700">{description}</p>
+        <p className="font-body text-body-l text-skip-neutral-900">{description}</p>
       </div>
 
       {/* Mockup Container */}
@@ -41,14 +41,14 @@ function WorkflowStep({ step, title, description, layout, mockup }: WorkflowStep
 
 export function PlatformSection() {
   return (
-    <section className="w-full py-24 px-5 relative z-10 bg-skip-neutral-1500 overflow-hidden">
+    <section className="w-full py-24 px-5 relative z-10 bg-skip-neutral-300 overflow-hidden">
       <div className="max-w-[1100px] mx-auto flex flex-col items-center">
         {/* Headline */}
         <div className="text-center mb-12 flex flex-col items-center animate-fade-in-up relative z-20">
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
             COMO FUNCIONA
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-white mb-8 max-w-4xl leading-tight tracking-tight">
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-blue-violet-600 mb-8 max-w-4xl leading-tight tracking-tight">
             Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos
           </h2>
         </div>

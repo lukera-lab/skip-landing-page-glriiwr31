@@ -25829,7 +25829,7 @@ function WorkflowStep({ step, title, description, layout, mockup }) {
 			className: "flex-1 w-full flex flex-col animate-fade-in-up",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "font-mono text-mono-xl text-white mb-4",
+					className: "font-mono text-mono-xl text-blue-violet-600 mb-4",
 					children: step
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
@@ -25837,7 +25837,7 @@ function WorkflowStep({ step, title, description, layout, mockup }) {
 					children: title
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-body text-body-l text-skip-neutral-700",
+					className: "font-body text-body-l text-skip-neutral-900",
 					children: description
 				})
 			]
@@ -25853,7 +25853,7 @@ function WorkflowStep({ step, title, description, layout, mockup }) {
 }
 function PlatformSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "w-full py-24 px-5 relative z-10 bg-skip-neutral-1500 overflow-hidden",
+		className: "w-full py-24 px-5 relative z-10 bg-skip-neutral-300 overflow-hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] mx-auto flex flex-col items-center",
 			children: [
@@ -25863,7 +25863,7 @@ function PlatformSection() {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
 						children: "COMO FUNCIONA"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-white mb-8 max-w-4xl leading-tight tracking-tight",
+						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-blue-violet-600 mb-8 max-w-4xl leading-tight tracking-tight",
 						children: "Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos"
 					})]
 				}),
@@ -26179,4 +26179,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-42UHscKZ.js.map
+//# sourceMappingURL=index-BEeJ7h88.js.map
