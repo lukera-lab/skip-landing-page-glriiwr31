@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils'
+import { SectionTitle } from '@/components/ui/section-title'
 
 const TEMPLATES = [
   {
@@ -41,9 +42,9 @@ export function TemplatesSection() {
           className="max-w-[600px] mx-auto text-center mb-16 animate-fade-in-up"
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
         >
-          <h2 className="font-heading text-[28px] md:text-[40px] font-semibold text-white mb-6 tracking-tight leading-[1.1em]">
+          <SectionTitle className="font-heading font-semibold text-white mb-6 tracking-tight">
             Tenha sistemas internos prontos <br /> para implementar hoje
-          </h2>
+          </SectionTitle>
           <p className="font-body text-body-m text-skip-neutral-900">
             Explore nossa biblioteca de templates e personalize o que mais fizer sentido para a sua
             operação

@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils'
+import { SectionTitle } from '@/components/ui/section-title'
 import { Step1Mockup, Step2Mockup, Step3Mockup, Step4Mockup } from './PlatformMockups'
 import mockskipUrl from '@/assets/mockskip-97ef9.webp'
 import { useEffect, useRef, useState } from 'react'
@@ -131,10 +132,10 @@ export function PlatformSection() {
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
             PLATAFORMA
           </span>
-          <h2 className="font-display text-[28px] md:text-[40px] font-semibold text-white mb-8 max-w-[680px] mx-auto text-center leading-[1.1em] tracking-tight">
+          <SectionTitle className="font-display font-semibold text-white mb-8 max-w-[680px] mx-auto text-center tracking-tight">
             Skip é a primeira plataforma de IA agêntica para criação de{' '}
             <br className="hidden md:block" /> Sistemas Internos
-          </h2>
+          </SectionTitle>
         </div>
 
         {/* Platform Mockup */}
@@ -159,9 +160,9 @@ export function PlatformSection() {
           className="w-full mt-[80px] mb-20 flex justify-center animate-fade-in-up"
           style={{ animationDelay: '300ms' }}
         >
-          <h2 className="font-heading text-[28px] md:text-[40px] font-semibold text-white text-center leading-[1.1em] tracking-tight">
+          <SectionTitle className="font-heading font-semibold text-white text-center tracking-tight">
             Como funciona?
-          </h2>
+          </SectionTitle>
         </div>
 
         {/* Workflow Steps with Timeline */}

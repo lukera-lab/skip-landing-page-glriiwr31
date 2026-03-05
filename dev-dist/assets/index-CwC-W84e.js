@@ -25521,6 +25521,12 @@ function Placeholder({ tabId, type }) {
 		})]
 	});
 }
+function SectionTitle({ className, ...props }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+		className: cn("text-[28px] md:text-[40px] leading-[1.1em]", className),
+		...props
+	});
+}
 function createContextScope(scopeName, createContextScopeDeps = []) {
 	let defaultContexts = [];
 	function createContext3(rootComponentName, defaultContext) {
@@ -26386,8 +26392,8 @@ function PlatformSection() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
 						children: "PLATAFORMA"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						className: "font-display text-[28px] md:text-[40px] font-semibold text-white mb-8 max-w-[680px] mx-auto text-center leading-[1.1em] tracking-tight",
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SectionTitle, {
+						className: "font-display font-semibold text-white mb-8 max-w-[680px] mx-auto text-center tracking-tight",
 						children: [
 							"Skip é a primeira plataforma de IA agêntica para criação de",
 							" ",
@@ -26411,8 +26417,8 @@ function PlatformSection() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "w-full mt-[80px] mb-20 flex justify-center animate-fade-in-up",
 					style: { animationDelay: "300ms" },
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-[28px] md:text-[40px] font-semibold text-white text-center leading-[1.1em] tracking-tight",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
+						className: "font-heading font-semibold text-white text-center tracking-tight",
 						children: "Como funciona?"
 					})
 				}),
@@ -26837,8 +26843,8 @@ function FeaturesSection() {
 						className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
 						children: "FUNCIONALIDADES"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-[28px] md:text-[40px] font-bold text-skip-neutral-300 mb-6 max-w-3xl leading-[1.1em] tracking-tight",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
+						className: "font-heading font-bold text-skip-neutral-300 mb-6 max-w-3xl tracking-tight",
 						children: "Skip não apenas gera código"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -26955,8 +26961,8 @@ function TemplatesSection() {
 						animationDelay: "100ms",
 						animationFillMode: "both"
 					},
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						className: "font-heading text-[28px] md:text-[40px] font-semibold text-white mb-6 tracking-tight leading-[1.1em]",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SectionTitle, {
+						className: "font-heading font-semibold text-white mb-6 tracking-tight",
 						children: [
 							"Tenha sistemas internos prontos ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
@@ -27256,4 +27262,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CAvrQm3b.js.map
+//# sourceMappingURL=index-CwC-W84e.js.map

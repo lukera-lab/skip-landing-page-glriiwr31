@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
+import { SectionTitle } from '@/components/ui/section-title'
 import {
   AgentsMockup,
   DatabaseMockup,
@@ -69,9 +70,9 @@ export function FeaturesSection() {
           <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
             FUNCIONALIDADES
           </span>
-          <h2 className="font-heading text-[28px] md:text-[40px] font-bold text-skip-neutral-300 mb-6 max-w-3xl leading-[1.1em] tracking-tight">
+          <SectionTitle className="font-heading font-bold text-skip-neutral-300 mb-6 max-w-3xl tracking-tight">
             Skip não apenas gera código
-          </h2>
+          </SectionTitle>
           <p className="font-body text-lg md:text-xl text-skip-neutral-800 max-w-2xl mx-auto">
             Ele gerencia todo o ciclo de vida de uma aplicação robusta, desde o banco de dados até a
             interface
