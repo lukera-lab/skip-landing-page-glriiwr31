@@ -12,13 +12,10 @@ import { Progress } from '@/components/ui/progress'
 
 export function Step1Mockup() {
   return (
-    <div className="w-full h-[280px] bg-skip-neutral-400 rounded-[20px] border border-white/8 p-2 flex flex-col relative overflow-hidden shadow-2xl">
-      <div className="flex-1 bg-skip-neutral-350 rounded-xl p-4 flex flex-col justify-end relative overflow-hidden">
+    <div className="w-full h-[280px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col relative overflow-hidden shadow-2xl">
+      <div className="flex-1 bg-skip-neutral-350 p-4 flex flex-col justify-end relative overflow-hidden">
         {/* Top fade out for scroll effect */}
-        <div
-          className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-skip-neutral-350 to-transparent z-10"
-          pointer-events="none"
-        />
+        <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-skip-neutral-350 to-transparent z-10 pointer-events-none" />
 
         {/* Chat History Placeholders */}
         <div className="flex flex-col gap-3 mb-5 w-full relative z-0 opacity-80">
@@ -54,10 +51,12 @@ export function Step1Mockup() {
       </div>
 
       {/* Footer Input Field */}
-      <div className="mt-2 w-full h-12 bg-skip-neutral-400 rounded-xl border border-skip-neutral-600 flex items-center px-4 justify-between text-skip-neutral-800 shrink-0">
-        <span className="text-sm font-body">Descreva o que deseja criar...</span>
-        <div className="w-8 h-8 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0 shadow-sm">
-          <Send className="w-4 h-4 text-white -ml-0.5" />
+      <div className="p-3 shrink-0 bg-skip-neutral-400">
+        <div className="w-full h-12 bg-skip-neutral-400 rounded-xl border border-skip-neutral-600 flex items-center px-4 justify-between text-skip-neutral-800 shrink-0">
+          <span className="text-sm font-body">Descreva o que deseja criar...</span>
+          <div className="w-8 h-8 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0 shadow-sm">
+            <Send className="w-4 h-4 text-white -ml-0.5" />
+          </div>
         </div>
       </div>
     </div>
