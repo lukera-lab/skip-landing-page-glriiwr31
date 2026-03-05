@@ -51,7 +51,7 @@ export default function Index() {
 
           {/* Subheadline */}
           <p
-            className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed mt-4"
+            className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[600px] mx-auto animate-fade-in-up leading-relaxed mt-4"
             style={{ animationDelay: '100ms', animationFillMode: 'both' }}
           >
             Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a
