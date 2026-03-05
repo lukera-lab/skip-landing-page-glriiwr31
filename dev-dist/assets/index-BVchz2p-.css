@@ -779,8 +779,8 @@ h6{
 .left-8{
   left: 2rem;
 }
-.left-\[26px\]{
-  left: 26px;
+.left-\[2px\]{
+  left: 2px;
 }
 .left-\[50\%\]{
   left: 50%;
@@ -944,8 +944,8 @@ h6{
 .ml-1{
   margin-left: 0.25rem;
 }
-.ml-16{
-  margin-left: 4rem;
+.ml-6{
+  margin-left: 1.5rem;
 }
 .ml-auto{
   margin-left: auto;
@@ -1263,6 +1263,9 @@ h6{
 }
 .w-\[75\%\]{
   width: 75%;
+}
+.w-\[calc\(100\%-24px\)\]{
+  width: calc(100% - 24px);
 }
 .w-auto{
   width: auto;
@@ -4368,8 +4371,15 @@ h6{
   .md\:w-auto{
     width: auto;
   }
+  .md\:w-full{
+    width: 100%;
+  }
   .md\:max-w-\[420px\]{
     max-width: 420px;
+  }
+  .md\:-translate-x-1\/2{
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
   .md\:-translate-x-16{
     --tw-translate-x: -4rem;

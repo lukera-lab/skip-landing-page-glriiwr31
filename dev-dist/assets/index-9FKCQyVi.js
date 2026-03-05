@@ -26324,11 +26324,11 @@ function WorkflowStep({ step, title, description, layout, mockup, hasFrame = tru
 		className: "relative flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-0 items-center w-full group",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: cn("absolute left-[26px] md:left-1/2 top-[16px] md:top-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full border-[3px] md:border-[4px] border-skip-neutral-300 z-20 -translate-x-1/2 md:-translate-y-1/2 transition-all duration-500", isVisible ? "bg-blue-violet-600 scale-110 shadow-[0_0_20px_rgba(79,70,229,0.6)]" : "bg-skip-neutral-600 scale-100"),
+				className: cn("absolute left-[2px] md:left-1/2 top-[16px] md:top-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full border-[3px] md:border-[4px] border-skip-neutral-300 z-20 -translate-x-1/2 md:-translate-y-1/2 transition-all duration-500", isVisible ? "bg-blue-violet-600 scale-110 shadow-[0_0_20px_rgba(79,70,229,0.6)]" : "bg-skip-neutral-600 scale-100"),
 				children: isVisible && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 rounded-full bg-blue-violet-400 animate-ping opacity-50" })
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: cn("w-full ml-16 md:ml-0 transition-all duration-1000 ease-out z-10 flex flex-col", isVisible ? "opacity-100 translate-x-0 translate-y-0" : cn("opacity-0 translate-y-8 md:translate-y-0", isTextLeft ? "md:-translate-x-16" : "md:translate-x-16"), isTextLeft ? "md:col-start-1 md:pr-12 lg:pr-20" : "md:col-start-2 md:pl-12 lg:pl-20"),
+				className: cn("w-[calc(100%-24px)] ml-6 md:w-full md:ml-0 transition-all duration-1000 ease-out z-10 flex flex-col", isVisible ? "opacity-100 translate-x-0 translate-y-0" : cn("opacity-0 translate-y-8 md:translate-y-0", isTextLeft ? "md:-translate-x-16" : "md:translate-x-16"), isTextLeft ? "md:col-start-1 md:pr-12 lg:pr-20" : "md:col-start-2 md:pl-12 lg:pl-20"),
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-4",
@@ -26345,7 +26345,7 @@ function WorkflowStep({ step, title, description, layout, mockup, hasFrame = tru
 				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: cn("w-full ml-16 md:ml-0 mt-8 md:mt-0 transition-all duration-1000 ease-out z-10 md:delay-150", isVisible ? "opacity-100 translate-x-0 translate-y-0" : cn("opacity-0 translate-y-8 md:translate-y-0", isTextLeft ? "md:translate-x-16" : "md:-translate-x-16"), isTextLeft ? "md:col-start-2 md:pl-12 lg:pl-20 md:row-start-1" : "md:col-start-1 md:pr-12 lg:pr-20 md:row-start-1"),
+				className: cn("w-[calc(100%-24px)] ml-6 md:w-full md:ml-0 mt-8 md:mt-0 transition-all duration-1000 ease-out z-10 md:delay-150", isVisible ? "opacity-100 translate-x-0 translate-y-0" : cn("opacity-0 translate-y-8 md:translate-y-0", isTextLeft ? "md:translate-x-16" : "md:-translate-x-16"), isTextLeft ? "md:col-start-2 md:pl-12 lg:pl-20 md:row-start-1" : "md:col-start-1 md:pr-12 lg:pr-20 md:row-start-1"),
 				children: hasFrame ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "bg-skip-neutral-1450 rounded-[24px] p-4 md:p-8 border border-skip-neutral-1350/50 relative shadow-sm",
 					children: mockup
@@ -26416,9 +26416,9 @@ function PlatformSection() {
 					ref: containerRef,
 					className: "w-full flex flex-col gap-24 md:gap-32 relative z-20 pt-4 pb-12",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-[26px] md:left-1/2 top-4 bottom-0 w-1 bg-skip-neutral-600/50 -translate-x-1/2 rounded-full [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)]" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-0 md:left-1/2 top-4 bottom-0 w-1 bg-skip-neutral-600/50 md:-translate-x-1/2 rounded-full [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)]" }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "absolute left-[26px] md:left-1/2 top-4 w-1 bg-blue-violet-600 -translate-x-1/2 transition-all duration-200 ease-out rounded-full",
+							className: "absolute left-0 md:left-1/2 top-4 w-1 bg-blue-violet-600 md:-translate-x-1/2 transition-all duration-200 ease-out rounded-full",
 							style: { height: `calc((100% - 16px) * ${progress})` }
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(WorkflowStep, {
@@ -26722,4 +26722,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-D9y30yeh.js.map
+//# sourceMappingURL=index-9FKCQyVi.js.map

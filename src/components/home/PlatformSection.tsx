@@ -43,7 +43,7 @@ function WorkflowStep({
       {/* Checkpoint Marker */}
       <div
         className={cn(
-          'absolute left-[26px] md:left-1/2 top-[16px] md:top-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full border-[3px] md:border-[4px] border-skip-neutral-300 z-20 -translate-x-1/2 md:-translate-y-1/2 transition-all duration-500',
+          'absolute left-[2px] md:left-1/2 top-[16px] md:top-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full border-[3px] md:border-[4px] border-skip-neutral-300 z-20 -translate-x-1/2 md:-translate-y-1/2 transition-all duration-500',
           isVisible
             ? 'bg-blue-violet-600 scale-110 shadow-[0_0_20px_rgba(79,70,229,0.6)]'
             : 'bg-skip-neutral-600 scale-100',
@@ -57,7 +57,7 @@ function WorkflowStep({
       {/* Text Container - Always first in DOM for mobile stack order */}
       <div
         className={cn(
-          'w-full ml-16 md:ml-0 transition-all duration-1000 ease-out z-10 flex flex-col',
+          'w-[calc(100%-24px)] ml-6 md:w-full md:ml-0 transition-all duration-1000 ease-out z-10 flex flex-col',
           isVisible
             ? 'opacity-100 translate-x-0 translate-y-0'
             : cn(
@@ -79,7 +79,7 @@ function WorkflowStep({
       {/* Mockup Container - Always second in DOM */}
       <div
         className={cn(
-          'w-full ml-16 md:ml-0 mt-8 md:mt-0 transition-all duration-1000 ease-out z-10 md:delay-150',
+          'w-[calc(100%-24px)] ml-6 md:w-full md:ml-0 mt-8 md:mt-0 transition-all duration-1000 ease-out z-10 md:delay-150',
           isVisible
             ? 'opacity-100 translate-x-0 translate-y-0'
             : cn(
@@ -170,11 +170,11 @@ export function PlatformSection() {
           className="w-full flex flex-col gap-24 md:gap-32 relative z-20 pt-4 pb-12"
         >
           {/* Background Timeline Line */}
-          <div className="absolute left-[26px] md:left-1/2 top-4 bottom-0 w-1 bg-skip-neutral-600/50 -translate-x-1/2 rounded-full [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)]" />
+          <div className="absolute left-0 md:left-1/2 top-4 bottom-0 w-1 bg-skip-neutral-600/50 md:-translate-x-1/2 rounded-full [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)]" />
 
           {/* Active Progress Line */}
           <div
-            className="absolute left-[26px] md:left-1/2 top-4 w-1 bg-blue-violet-600 -translate-x-1/2 transition-all duration-200 ease-out rounded-full"
+            className="absolute left-0 md:left-1/2 top-4 w-1 bg-blue-violet-600 md:-translate-x-1/2 transition-all duration-200 ease-out rounded-full"
             style={{ height: `calc((100% - 16px) * ${progress})` }}
           />
 
