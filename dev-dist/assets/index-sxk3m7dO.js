@@ -24200,12 +24200,12 @@ function InventoryAntes() {
 		className: "flex flex-col flex-1 w-full h-full animate-fade-in",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mb-6 shrink-0",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-lg font-semibold text-skip-neutral-400",
+				className: "mb-6 shrink-0 flex flex-col gap-1.5",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "text-mono-xs uppercase text-blue-violet-600",
 					children: "Processo Padrão"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-base text-skip-neutral-800",
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "text-xl font-heading font-semibold text-skip-neutral-100",
 					children: "Controle de Inventário em Planilhas"
 				})]
 			}),
@@ -24395,12 +24395,12 @@ function InventoryDepois() {
 		className: "flex flex-col flex-1 w-full h-full animate-fade-in",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mb-6 shrink-0",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-lg font-semibold text-skip-neutral-400",
+				className: "mb-6 shrink-0 flex flex-col gap-1.5",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "text-mono-xs uppercase text-blue-violet-600",
 					children: "Sistema Skip"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-base text-blue-violet-500",
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "text-xl font-heading font-semibold text-skip-neutral-100",
 					children: "Inventory OS"
 				})]
 			}),
@@ -24893,4 +24893,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CugijI3j.js.map
+//# sourceMappingURL=index-sxk3m7dO.js.map

@@ -60,9 +60,11 @@ export function InventoryAntes() {
 
   return (
     <div className="flex flex-col flex-1 w-full h-full animate-fade-in">
-      <div className="mb-6 shrink-0">
-        <h3 className="text-lg font-semibold text-skip-neutral-400">Processo Padrão</h3>
-        <p className="text-base text-skip-neutral-800">Controle de Inventário em Planilhas</p>
+      <div className="mb-6 shrink-0 flex flex-col gap-1.5">
+        <span className="text-mono-xs uppercase text-blue-violet-600">Processo Padrão</span>
+        <h3 className="text-xl font-heading font-semibold text-skip-neutral-100">
+          Controle de Inventário em Planilhas
+        </h3>
       </div>
       <ul className="space-y-3 mb-8 shrink-0">
         {points.map((item, i) => (
@@ -210,9 +212,9 @@ export function InventoryDepois() {
 
   return (
     <div className="flex flex-col flex-1 w-full h-full animate-fade-in">
-      <div className="mb-6 shrink-0">
-        <h3 className="text-lg font-semibold text-skip-neutral-400">Sistema Skip</h3>
-        <p className="text-base text-blue-violet-500">Inventory OS</p>
+      <div className="mb-6 shrink-0 flex flex-col gap-1.5">
+        <span className="text-mono-xs uppercase text-blue-violet-600">Sistema Skip</span>
+        <h3 className="text-xl font-heading font-semibold text-skip-neutral-100">Inventory OS</h3>
       </div>
       <ul className="space-y-3 mb-8 shrink-0">
         {points.map((item, i) => (
