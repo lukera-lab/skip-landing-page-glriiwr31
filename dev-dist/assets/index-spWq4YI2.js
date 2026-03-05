@@ -24422,9 +24422,9 @@ function InventoryDepois() {
 				}, i))
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "flex-1 relative rounded-xl p-[1px] bg-gradient-to-br from-blue-violet-400 to-fuchsia-400 shadow-lg shadow-blue-violet-500/20 flex flex-col min-h-0",
+				className: "flex-1 rounded-xl border border-blue-violet-100 shadow-sm flex flex-col min-h-0 overflow-hidden",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex-1 bg-gradient-to-b from-white to-blue-violet-50 rounded-[11px] p-3 sm:p-4 flex flex-col gap-4 overflow-hidden",
+					className: "flex-1 bg-gradient-to-b from-white to-blue-violet-50 p-3 sm:p-4 flex flex-col gap-4 overflow-hidden",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "grid grid-cols-3 gap-2 shrink-0",
 						children: [
@@ -24544,7 +24544,7 @@ var TAB_ITEMS = [
 ];
 function DemonstrationTabs() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "w-full mt-12 animate-fade-in-up",
+		className: "w-full mt-16 animate-fade-in-up",
 		style: {
 			animationDelay: "200ms",
 			animationFillMode: "both"
@@ -24553,10 +24553,10 @@ function DemonstrationTabs() {
 			defaultValue: "inventario",
 			className: "w-full flex flex-col items-center",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TabsList, {
-				className: "bg-transparent h-auto p-0 border-b border-skip-neutral-1350 rounded-none w-full max-w-[600px] justify-between sm:justify-center sm:gap-12 mb-10 overflow-x-auto flex-nowrap",
+				className: "bg-transparent h-auto p-0 border-b border-skip-neutral-1350/60 rounded-none w-full max-w-[800px] justify-between sm:justify-center sm:gap-16 mb-16 overflow-x-auto flex-nowrap",
 				children: TAB_ITEMS.map((tab) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TabsTrigger, {
 					value: tab.id,
-					className: "rounded-none px-2 sm:px-4 py-4 font-display font-medium text-base sm:text-lg text-skip-neutral-800 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:text-blue-violet-600 data-[state=active]:border-b-2 data-[state=active]:border-blue-violet-600 hover:text-skip-neutral-400 transition-colors whitespace-nowrap",
+					className: "rounded-none px-4 py-4 font-display font-medium text-base sm:text-lg text-skip-neutral-800 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:text-blue-violet-600 data-[state=active]:border-b-2 data-[state=active]:border-blue-violet-600 hover:text-skip-neutral-500 transition-colors whitespace-nowrap opacity-70 hover:opacity-100 data-[state=active]:opacity-100",
 					children: tab.label
 				}, tab.id))
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -24572,30 +24572,33 @@ function DemonstrationTabs() {
 }
 function ComparisonLayout({ tabId }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "grid grid-cols-1 md:grid-cols-2 gap-6 w-full",
+		className: "grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-stretch",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "rounded-2xl border border-skip-neutral-1350 bg-white p-6 sm:p-8 flex flex-col min-h-[350px] sm:min-h-[450px] transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden",
+			className: "flex flex-col gap-4 h-full",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mb-6",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "inline-flex items-center rounded-full bg-red-50 px-3 py-1 text-[11px] sm:text-xs font-bold tracking-[0.1em] text-red-500 uppercase",
-					children: "Antes"
+				className: "text-center font-body text-body-s text-skip-neutral-800 font-medium",
+				children: "Antes"
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "rounded-2xl border border-skip-neutral-1350 bg-white p-8 sm:p-10 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]",
+				children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryAntes, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
+					tabId,
+					type: "antes"
 				})
-			}), tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryAntes, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
-				tabId,
-				type: "antes"
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "rounded-2xl border border-skip-neutral-1350 bg-white p-6 sm:p-8 flex flex-col min-h-[350px] sm:min-h-[450px] shadow-sm transition-all duration-500 hover:shadow-md overflow-hidden",
+			className: "flex flex-col gap-4 h-full",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mb-6",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "inline-flex items-center rounded-full bg-blue-violet-50 px-3 py-1 text-[11px] sm:text-xs font-bold tracking-[0.1em] text-blue-violet-500 uppercase",
-					children: "Depois"
+				className: "text-center font-body text-body-s text-skip-neutral-800 font-medium",
+				children: "Depois"
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "rounded-2xl p-[1px] bg-gradient-to-br from-blue-violet-400 to-fuchsia-400 shadow-lg shadow-blue-violet-500/20 flex flex-col flex-1 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-blue-violet-500/30 min-h-[400px]",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "bg-white rounded-[15px] p-8 sm:p-10 flex flex-col flex-1 w-full overflow-hidden",
+					children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryDepois, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
+						tabId,
+						type: "depois"
+					})
 				})
-			}), tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryDepois, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
-				tabId,
-				type: "depois"
 			})]
 		})]
 	});
@@ -24603,7 +24606,7 @@ function ComparisonLayout({ tabId }) {
 function Placeholder({ tabId, type }) {
 	const isAntes = type === "antes";
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "flex-1 w-full border border-dashed rounded-xl flex flex-col items-center justify-center p-6 text-center border-skip-neutral-1300 bg-skip-neutral-1500",
+		className: "flex-1 w-full border border-dashed rounded-xl flex flex-col items-center justify-center p-6 text-center border-skip-neutral-1300 bg-skip-neutral-1500 min-h-[300px]",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: `w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 ${isAntes ? "bg-red-50" : "bg-blue-violet-50"}`,
 			children: isAntes ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-5 h-5 sm:w-6 sm:h-6 text-red-400" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 sm:w-6 sm:h-6 text-blue-violet-400" })
@@ -24764,15 +24767,15 @@ function Index() {
 					className: "max-w-[1100px] mx-auto flex flex-col items-center text-center",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "font-mono text-sm tracking-[0.15em] text-blue-violet-600 uppercase font-semibold mb-4",
+							className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
 							children: "DEMONSTRAÇÃO"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "font-display text-4xl md:text-5xl font-semibold text-skip-neutral-900 mb-6 max-w-3xl leading-tight",
+							className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-100 mb-8 max-w-4xl leading-tight tracking-tight",
 							children: "Veja na prática como o Skip transforma seus processos"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-lg text-skip-neutral-600 max-w-2xl",
+							className: "font-body text-body-m text-skip-neutral-800 max-w-2xl",
 							children: "Escolha um processo abaixo e compare como era antes e como fica com o Skip"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DemonstrationTabs, {})
@@ -24884,4 +24887,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CR0lcxEv.js.map
+//# sourceMappingURL=index-spWq4YI2.js.map

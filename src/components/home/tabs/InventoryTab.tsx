@@ -224,8 +224,8 @@ export function InventoryDepois() {
           </li>
         ))}
       </ul>
-      <div className="flex-1 relative rounded-xl p-[1px] bg-gradient-to-br from-blue-violet-400 to-fuchsia-400 shadow-lg shadow-blue-violet-500/20 flex flex-col min-h-0">
-        <div className="flex-1 bg-gradient-to-b from-white to-blue-violet-50 rounded-[11px] p-3 sm:p-4 flex flex-col gap-4 overflow-hidden">
+      <div className="flex-1 rounded-xl border border-blue-violet-100 shadow-sm flex flex-col min-h-0 overflow-hidden">
+        <div className="flex-1 bg-gradient-to-b from-white to-blue-violet-50 p-3 sm:p-4 flex flex-col gap-4 overflow-hidden">
           <div className="grid grid-cols-3 gap-2 shrink-0">
             <div className="bg-white/80 backdrop-blur-sm rounded-lg p-2.5 flex flex-col border border-skip-neutral-1350 shadow-sm">
               <span className="text-[10px] text-skip-neutral-800 uppercase tracking-wider font-medium">
