@@ -15,9 +15,9 @@ export default function Index() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full">
+      <section className="relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full h-[800px]">
         {/* Background wrapper with fade-out mask */}
-        <div className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden">
           {/* Hero Background Image */}
           <img
             src={heroBgUrl}
@@ -91,7 +91,7 @@ export default function Index() {
       </section>
 
       {/* Social Proof */}
-      <section className="w-full px-5 pb-20 -mt-10 relative z-10">
+      <section className="w-full px-5 pb-20 relative z-10">
         <div
           className="max-w-[1100px] mx-auto animate-fade-in"
           style={{ animationDelay: '500ms', animationFillMode: 'both' }}

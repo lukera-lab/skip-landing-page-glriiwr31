@@ -809,8 +809,8 @@ h6{
 .top-full{
   top: 100%;
 }
-.-z-10{
-  z-index: -10;
+.z-0{
+  z-index: 0;
 }
 .z-10{
   z-index: 10;
@@ -853,9 +853,6 @@ h6{
 }
 .-ml-4{
   margin-left: -1rem;
-}
-.-mt-10{
-  margin-top: -2.5rem;
 }
 .-mt-4{
   margin-top: -1rem;
@@ -978,6 +975,9 @@ h6{
 }
 .h-\[1px\]{
   height: 1px;
+}
+.h-\[800px\]{
+  height: 800px;
 }
 .h-\[var\(--radix-navigation-menu-viewport-height\)\]{
   height: var(--radix-navigation-menu-viewport-height);

@@ -23793,9 +23793,9 @@ function Index() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex flex-col min-h-screen",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full",
+			className: "relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full h-[800px]",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden",
+				className: "absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					src: bg_hero_skip_8319b_default,
 					alt: "Hero Background",
@@ -23878,7 +23878,7 @@ function Index() {
 				]
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-			className: "w-full px-5 pb-20 -mt-10 relative z-10",
+			className: "w-full px-5 pb-20 relative z-10",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-[1100px] mx-auto animate-fade-in",
 				style: {
@@ -24005,4 +24005,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-Y5OsGAjC.js.map
+//# sourceMappingURL=index-DfJClvah.js.map
