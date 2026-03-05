@@ -27273,9 +27273,9 @@ Separator.displayName = Root.displayName;
 function OfferSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		className: "w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] mx-auto",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 md:p-8 flex flex-col transition-all duration-300 hover:shadow-lg",
@@ -27426,7 +27426,32 @@ function OfferSection() {
 						children: "[ mockup ]"
 					})
 				})]
-			})
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mt-8 md:mt-12 bg-skip-neutral-1450 border border-skip-neutral-1350 rounded-[20px] p-[40px] flex flex-col md:flex-row gap-8 items-stretch w-full",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "w-full md:w-[60%] flex flex-col justify-center",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-6",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "relative flex h-2 w-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-red-500" })]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "font-mono text-mono-xs tracking-[0.2em] text-red-500 uppercase font-semibold",
+								children: "Exclusivo da Live"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-heading text-[20px] md:text-[24px] font-semibold text-skip-neutral-300",
+							children: "2 Consultorias Individuais Gratuitas"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-2 font-body text-body-s text-skip-neutral-800",
+							children: "Sessões individuais com foco total no seu projeto — para sair com clareza, próximos passos definidos e resultados reais mais rápido."
+						})
+					]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-full md:w-[40%] bg-skip-neutral-1350 rounded-[12px] min-h-[200px] md:min-h-0" })]
+			})]
 		})
 	});
 }
@@ -27696,4 +27721,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DfCKTU2h.js.map
+//# sourceMappingURL=index-DhFgPawV.js.map

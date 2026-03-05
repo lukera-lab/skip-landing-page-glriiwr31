@@ -139,6 +139,34 @@ export function OfferSection() {
             <span className="font-body text-body-s text-skip-neutral-900">[ mockup ]</span>
           </div>
         </div>
+
+        {/* Exclusivo da Live Banner */}
+        <div className="mt-8 md:mt-12 bg-skip-neutral-1450 border border-skip-neutral-1350 rounded-[20px] p-[40px] flex flex-col md:flex-row gap-8 items-stretch w-full">
+          {/* Left Content (60%) */}
+          <div className="w-full md:w-[60%] flex flex-col justify-center">
+            <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-6">
+              <div className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
+              </div>
+              <span className="font-mono text-mono-xs tracking-[0.2em] text-red-500 uppercase font-semibold">
+                Exclusivo da Live
+              </span>
+            </div>
+
+            <h3 className="font-heading text-[20px] md:text-[24px] font-semibold text-skip-neutral-300">
+              2 Consultorias Individuais Gratuitas
+            </h3>
+
+            <p className="mt-2 font-body text-body-s text-skip-neutral-800">
+              Sessões individuais com foco total no seu projeto — para sair com clareza, próximos
+              passos definidos e resultados reais mais rápido.
+            </p>
+          </div>
+
+          {/* Right Image Placeholder (40%) */}
+          <div className="w-full md:w-[40%] bg-skip-neutral-1350 rounded-[12px] min-h-[200px] md:min-h-0" />
+        </div>
       </div>
     </section>
   )
