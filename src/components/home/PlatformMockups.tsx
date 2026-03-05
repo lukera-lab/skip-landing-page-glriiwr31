@@ -4,7 +4,6 @@ import {
   Loader2,
   Sparkles,
   Send,
-  FileCode2,
   Database,
   LayoutTemplate,
 } from 'lucide-react'
@@ -12,23 +11,23 @@ import { Progress } from '@/components/ui/progress'
 
 export function Step1Mockup() {
   return (
-    <div className="w-full h-[280px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col relative overflow-hidden shadow-2xl">
-      <div className="flex-1 p-4 flex flex-col justify-end relative overflow-hidden bg-transparent">
+    <div className="w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col relative overflow-hidden shadow-2xl">
+      <div className="flex-1 p-5 sm:p-6 flex flex-col justify-end relative overflow-hidden bg-transparent">
         {/* Top fade out for scroll effect */}
-        <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-skip-neutral-400 to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-skip-neutral-400 to-transparent z-10 pointer-events-none" />
 
         {/* Chat History Placeholders */}
-        <div className="flex flex-col gap-3 mb-5 w-full relative z-0 opacity-80">
-          <div className="w-[65%] h-9 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" />
-          <div className="w-[45%] h-9 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" />
+        <div className="flex flex-col gap-4 mb-6 w-full relative z-0 opacity-80">
+          <div className="w-[65%] h-10 sm:h-12 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" />
+          <div className="w-[45%] h-10 sm:h-12 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" />
         </div>
 
         {/* User Primary Bubble */}
-        <div className="flex gap-3 items-end w-full max-w-[90%] ml-auto mb-4 relative z-10">
-          <div className="bg-blue-violet-600 text-white p-3 sm:px-4 sm:py-3 rounded-2xl rounded-tr-sm font-body text-xs sm:text-sm shadow-md leading-relaxed">
+        <div className="flex gap-3 sm:gap-4 items-end w-full max-w-[90%] ml-auto mb-5 relative z-10">
+          <div className="bg-blue-violet-600 text-white p-3 sm:px-5 sm:py-3.5 rounded-2xl rounded-tr-sm font-body text-xs sm:text-sm shadow-md leading-relaxed">
             Crie um sistema de controle de ponto para minha equipe
           </div>
-          <div className="w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center overflow-hidden ring-2 ring-skip-neutral-400">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center overflow-hidden ring-2 ring-skip-neutral-400">
             <img
               src="https://img.usecurling.com/ppl/thumbnail?gender=male&seed=1"
               alt="User"
@@ -38,24 +37,24 @@ export function Step1Mockup() {
         </div>
 
         {/* AI Typing Indicator */}
-        <div className="flex gap-3 items-end w-full max-w-[80%] relative z-10">
-          <div className="w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center border border-skip-neutral-600 overflow-hidden shadow-sm">
-            <Sparkles className="w-4 h-4 text-blue-violet-400" />
+        <div className="flex gap-3 sm:gap-4 items-end w-full max-w-[80%] relative z-10">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center border border-skip-neutral-600 overflow-hidden shadow-sm">
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-blue-violet-400" />
           </div>
-          <div className="bg-skip-neutral-500/40 px-3 py-2.5 rounded-2xl rounded-tl-sm flex items-center gap-1.5 h-9 border border-skip-neutral-500/20 shadow-sm">
-            <div className="w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse" />
-            <div className="w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:200ms]" />
-            <div className="w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:400ms]" />
+          <div className="bg-skip-neutral-500/40 px-4 py-3 sm:px-5 sm:py-3.5 rounded-2xl rounded-tl-sm flex items-center gap-1.5 h-10 sm:h-12 border border-skip-neutral-500/20 shadow-sm">
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-violet-400 animate-pulse" />
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:200ms]" />
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:400ms]" />
           </div>
         </div>
       </div>
 
       {/* Footer Input Field */}
-      <div className="p-3 shrink-0 bg-transparent">
-        <div className="w-full h-12 bg-skip-neutral-500/50 rounded-xl border border-skip-neutral-600 flex items-center px-4 justify-between text-skip-neutral-800 shrink-0">
+      <div className="p-4 sm:p-6 shrink-0 bg-transparent pt-2 sm:pt-2">
+        <div className="w-full h-12 sm:h-14 bg-skip-neutral-500/50 rounded-xl border border-skip-neutral-600 flex items-center px-4 sm:px-5 justify-between text-skip-neutral-800 shrink-0">
           <span className="text-sm font-body">Descreva o que deseja criar...</span>
-          <div className="w-8 h-8 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0 shadow-sm">
-            <Send className="w-4 h-4 text-white -ml-0.5" />
+          <div className="w-8 h-8 sm:w-9 sm:h-9 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105">
+            <Send className="w-4 h-4 sm:w-4 sm:h-4 text-white -ml-0.5" />
           </div>
         </div>
       </div>

@@ -8,9 +8,17 @@ interface WorkflowStepProps {
   description: string
   layout: 'text-left' | 'text-right'
   mockup: React.ReactNode
+  hasFrame?: boolean
 }
 
-function WorkflowStep({ step, title, description, layout, mockup }: WorkflowStepProps) {
+function WorkflowStep({
+  step,
+  title,
+  description,
+  layout,
+  mockup,
+  hasFrame = true,
+}: WorkflowStepProps) {
   const isTextLeft = layout === 'text-left'
 
   return (
@@ -33,9 +41,13 @@ function WorkflowStep({ step, title, description, layout, mockup }: WorkflowStep
 
       {/* Mockup Container */}
       <div className="flex-[1.5] w-full animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-        <div className="bg-skip-neutral-1450 rounded-[24px] p-4 md:p-8 border border-skip-neutral-1350/50 relative shadow-sm">
-          {mockup}
-        </div>
+        {hasFrame ? (
+          <div className="bg-skip-neutral-1450 rounded-[24px] p-4 md:p-8 border border-skip-neutral-1350/50 relative shadow-sm">
+            {mockup}
+          </div>
+        ) : (
+          <div className="relative w-full">{mockup}</div>
+        )}
       </div>
     </div>
   )
@@ -91,6 +103,7 @@ export function PlatformSection() {
             description="Conte para o Skip qual sistema você deseja construir para sua empresa."
             layout="text-left"
             mockup={<Step1Mockup />}
+            hasFrame={false}
           />
           <WorkflowStep
             step="02"

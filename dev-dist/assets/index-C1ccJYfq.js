@@ -25653,22 +25653,22 @@ var Progress = import_react.forwardRef(({ className, value, ...props }, ref) => 
 Progress.displayName = Root.displayName;
 function Step1Mockup() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "w-full h-[280px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col relative overflow-hidden shadow-2xl",
+		className: "w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col relative overflow-hidden shadow-2xl",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "flex-1 p-4 flex flex-col justify-end relative overflow-hidden bg-transparent",
+			className: "flex-1 p-5 sm:p-6 flex flex-col justify-end relative overflow-hidden bg-transparent",
 			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-skip-neutral-400 to-transparent z-10 pointer-events-none" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-skip-neutral-400 to-transparent z-10 pointer-events-none" }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex flex-col gap-3 mb-5 w-full relative z-0 opacity-80",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-[65%] h-9 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-[45%] h-9 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" })]
+					className: "flex flex-col gap-4 mb-6 w-full relative z-0 opacity-80",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-[65%] h-10 sm:h-12 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-[45%] h-10 sm:h-12 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" })]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex gap-3 items-end w-full max-w-[90%] ml-auto mb-4 relative z-10",
+					className: "flex gap-3 sm:gap-4 items-end w-full max-w-[90%] ml-auto mb-5 relative z-10",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "bg-blue-violet-600 text-white p-3 sm:px-4 sm:py-3 rounded-2xl rounded-tr-sm font-body text-xs sm:text-sm shadow-md leading-relaxed",
+						className: "bg-blue-violet-600 text-white p-3 sm:px-5 sm:py-3.5 rounded-2xl rounded-tr-sm font-body text-xs sm:text-sm shadow-md leading-relaxed",
 						children: "Crie um sistema de controle de ponto para minha equipe"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center overflow-hidden ring-2 ring-skip-neutral-400",
+						className: "w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center overflow-hidden ring-2 ring-skip-neutral-400",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 							src: "https://img.usecurling.com/ppl/thumbnail?gender=male&seed=1",
 							alt: "User",
@@ -25677,30 +25677,30 @@ function Step1Mockup() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex gap-3 items-end w-full max-w-[80%] relative z-10",
+					className: "flex gap-3 sm:gap-4 items-end w-full max-w-[80%] relative z-10",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center border border-skip-neutral-600 overflow-hidden shadow-sm",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-blue-violet-400" })
+						className: "w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center border border-skip-neutral-600 overflow-hidden shadow-sm",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 sm:w-5 sm:h-5 text-blue-violet-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "bg-skip-neutral-500/40 px-3 py-2.5 rounded-2xl rounded-tl-sm flex items-center gap-1.5 h-9 border border-skip-neutral-500/20 shadow-sm",
+						className: "bg-skip-neutral-500/40 px-4 py-3 sm:px-5 sm:py-3.5 rounded-2xl rounded-tl-sm flex items-center gap-1.5 h-10 sm:h-12 border border-skip-neutral-500/20 shadow-sm",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse" }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:200ms]" }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:400ms]" })
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-violet-400 animate-pulse" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:200ms]" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:400ms]" })
 						]
 					})]
 				})
 			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "p-3 shrink-0 bg-transparent",
+			className: "p-4 sm:p-6 shrink-0 bg-transparent pt-2 sm:pt-2",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "w-full h-12 bg-skip-neutral-500/50 rounded-xl border border-skip-neutral-600 flex items-center px-4 justify-between text-skip-neutral-800 shrink-0",
+				className: "w-full h-12 sm:h-14 bg-skip-neutral-500/50 rounded-xl border border-skip-neutral-600 flex items-center px-4 sm:px-5 justify-between text-skip-neutral-800 shrink-0",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "text-sm font-body",
 					children: "Descreva o que deseja criar..."
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "w-8 h-8 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0 shadow-sm",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, { className: "w-4 h-4 text-white -ml-0.5" })
+					className: "w-8 h-8 sm:w-9 sm:h-9 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, { className: "w-4 h-4 sm:w-4 sm:h-4 text-white -ml-0.5" })
 				})]
 			})
 		})]
@@ -25849,7 +25849,7 @@ function Step4Mockup() {
 	});
 }
 var mockskip_97ef9_default = "/assets/mockskip-97ef9-CocZIMDm.webp";
-function WorkflowStep({ step, title, description, layout, mockup }) {
+function WorkflowStep({ step, title, description, layout, mockup, hasFrame = true }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: cn("flex flex-col gap-10 md:gap-16 items-center", layout === "text-left" ? "md:flex-row" : "md:flex-row-reverse"),
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -25871,8 +25871,11 @@ function WorkflowStep({ step, title, description, layout, mockup }) {
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "flex-[1.5] w-full animate-fade-in-up",
 			style: { animationDelay: "100ms" },
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			children: hasFrame ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "bg-skip-neutral-1450 rounded-[24px] p-4 md:p-8 border border-skip-neutral-1350/50 relative shadow-sm",
+				children: mockup
+			}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "relative w-full",
 				children: mockup
 			})
 		})]
@@ -25927,7 +25930,8 @@ function PlatformSection() {
 							title: "Descreva sua ideia",
 							description: "Conte para o Skip qual sistema você deseja construir para sua empresa.",
 							layout: "text-left",
-							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Step1Mockup, {})
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Step1Mockup, {}),
+							hasFrame: false
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(WorkflowStep, {
 							step: "02",
@@ -26219,4 +26223,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B_h3kpeQ.js.map
+//# sourceMappingURL=index-C1ccJYfq.js.map

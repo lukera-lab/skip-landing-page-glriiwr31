@@ -1072,6 +1072,9 @@ h6{
 .h-\[300px\]{
   height: 300px;
 }
+.h-\[320px\]{
+  height: 320px;
+}
 .h-\[800px\]{
   height: 800px;
 }
@@ -2153,10 +2156,6 @@ h6{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-2\.5{
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-}
 .py-24{
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -2218,6 +2217,9 @@ h6{
 }
 .pt-0{
   padding-top: 0px;
+}
+.pt-2{
+  padding-top: 0.5rem;
 }
 .pt-24{
   padding-top: 6rem;
@@ -3860,14 +3862,35 @@ h6{
   .sm\:flex{
     display: flex;
   }
+  .sm\:h-10{
+    height: 2.5rem;
+  }
   .sm\:h-12{
     height: 3rem;
+  }
+  .sm\:h-14{
+    height: 3.5rem;
   }
   .sm\:h-16{
     height: 4rem;
   }
+  .sm\:h-2{
+    height: 0.5rem;
+  }
+  .sm\:h-4{
+    height: 1rem;
+  }
+  .sm\:h-5{
+    height: 1.25rem;
+  }
   .sm\:h-6{
     height: 1.5rem;
+  }
+  .sm\:h-9{
+    height: 2.25rem;
+  }
+  .sm\:h-\[360px\]{
+    height: 360px;
   }
   .sm\:h-\[600px\]{
     height: 600px;
@@ -3875,11 +3898,26 @@ h6{
   .sm\:h-auto{
     height: auto;
   }
+  .sm\:w-10{
+    width: 2.5rem;
+  }
   .sm\:w-16{
     width: 4rem;
   }
+  .sm\:w-2{
+    width: 0.5rem;
+  }
+  .sm\:w-4{
+    width: 1rem;
+  }
+  .sm\:w-5{
+    width: 1.25rem;
+  }
   .sm\:w-6{
     width: 1.5rem;
+  }
+  .sm\:w-9{
+    width: 2.25rem;
   }
   .sm\:w-\[600px\]{
     width: 600px;
@@ -3908,6 +3946,9 @@ h6{
   .sm\:gap-2\.5{
     gap: 0.625rem;
   }
+  .sm\:gap-4{
+    gap: 1rem;
+  }
   .sm\:gap-8{
     gap: 2rem;
   }
@@ -3922,17 +3963,23 @@ h6{
   .sm\:p-4{
     padding: 1rem;
   }
-  .sm\:px-4{
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .sm\:p-6{
+    padding: 1.5rem;
+  }
+  .sm\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   .sm\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  .sm\:py-3{
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+  .sm\:py-3\.5{
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+  }
+  .sm\:pt-2{
+    padding-top: 0.5rem;
   }
   .sm\:text-left{
     text-align: left;
