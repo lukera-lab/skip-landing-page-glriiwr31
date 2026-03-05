@@ -26902,6 +26902,191 @@ function FeaturesSection() {
 		})
 	});
 }
+var GestaoComercialMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+	className: "flex flex-col p-3 w-full h-full justify-between",
+	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: "grid grid-cols-3 gap-2 px-2 pb-1.5 border-b border-skip-neutral-600/40",
+		children: [
+			"Lead",
+			"Empresa",
+			"Status"
+		].map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			className: "text-[9px] text-skip-neutral-900 font-medium uppercase tracking-wider",
+			children: l
+		}, l))
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: "flex flex-col gap-1.5",
+		children: [
+			{
+				n: "João Silva",
+				c: "Acme Corp",
+				s: "Proposta",
+				b: "bg-[#F2C94C]/10 text-[#F2C94C] border-[#F2C94C]/20"
+			},
+			{
+				n: "Maria Costa",
+				c: "TechNova",
+				s: "Negociando",
+				b: "bg-[#56CCF2]/10 text-[#56CCF2] border-[#56CCF2]/20"
+			},
+			{
+				n: "Pedro Alves",
+				c: "Global Ind",
+				s: "Fechado",
+				b: "bg-[#6FCF97]/10 text-[#6FCF97] border-[#6FCF97]/20"
+			}
+		].map((r$1, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "grid grid-cols-3 gap-2 items-center px-2 py-1.5 bg-skip-neutral-400/40 rounded-md",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "text-[10px] text-skip-neutral-1100 font-medium truncate",
+					children: r$1.n
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "text-[10px] text-skip-neutral-900 truncate",
+					children: r$1.c
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: cn("text-[8px] px-1.5 py-0.5 rounded-sm font-semibold border", r$1.b),
+					children: r$1.s
+				}) })
+			]
+		}, i))
+	})]
+});
+var OperacoesProcessosMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: "flex gap-2 p-3 w-full h-full",
+	children: [
+		{
+			t: "A Fazer",
+			c: 2
+		},
+		{
+			t: "Em Andamento",
+			c: 3
+		},
+		{
+			t: "Concluído",
+			c: 2
+		}
+	].map((col, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex-1 flex flex-col gap-1.5 bg-skip-neutral-400/20 rounded-lg p-1.5 border border-skip-neutral-600/20",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			className: "text-[8px] text-skip-neutral-900 font-medium uppercase tracking-wider px-1",
+			children: col.t
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "flex flex-col gap-1.5",
+			children: Array.from({ length: col.c }).map((_$1, j) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "bg-skip-neutral-400/80 h-4 rounded border border-skip-neutral-600/30 shadow-sm" }, j))
+		})]
+	}, i))
+});
+var PessoasCulturaMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: "flex flex-col justify-center gap-1.5 p-3 w-full h-full",
+	children: [
+		{
+			n: "Ana Clara",
+			t: "Product Manager",
+			g: "female",
+			s: 1
+		},
+		{
+			n: "Carlos Eduardo",
+			t: "Software Engineer",
+			g: "male",
+			s: 2
+		},
+		{
+			n: "Beatriz Lima",
+			t: "UX Designer",
+			g: "female",
+			s: 3
+		}
+	].map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex items-center gap-2.5 p-1.5 px-2 bg-skip-neutral-400/30 rounded-lg border border-skip-neutral-600/20",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+			src: `https://img.usecurling.com/ppl/thumbnail?gender=${p.g}&seed=${p.s}`,
+			alt: p.n,
+			className: "w-5 h-5 rounded-full object-cover ring-1 ring-skip-neutral-600/40"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex flex-col",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "text-[10px] text-skip-neutral-1100 font-medium leading-tight",
+				children: p.n
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "text-[8px] text-skip-neutral-900 leading-tight mt-0.5",
+				children: p.t
+			})]
+		})]
+	}, i))
+});
+var DadosInteligenciaMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+	className: "flex flex-col p-3 w-full h-full gap-2",
+	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: "grid grid-cols-2 gap-2",
+		children: [{
+			l: "Receita",
+			v: "R$ 45.2k"
+		}, {
+			l: "Usuários",
+			v: "1.240"
+		}].map((kpi, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "bg-skip-neutral-400/40 rounded-lg p-1.5 px-2 flex flex-col border border-skip-neutral-600/30",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "text-[8px] text-skip-neutral-900 font-medium uppercase tracking-wider",
+				children: kpi.l
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "text-[11px] text-blue-violet-400 font-semibold mt-0.5",
+				children: kpi.v
+			})]
+		}, i))
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: "flex-1 bg-skip-neutral-400/20 rounded-lg border border-skip-neutral-600/20 relative overflow-hidden",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			viewBox: "0 0 100 40",
+			preserveAspectRatio: "none",
+			className: "w-full h-full absolute inset-0 text-blue-violet-500",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M0,35 C10,35 15,25 25,25 C35,25 40,32 50,32 C60,32 65,15 75,15 C85,15 90,20 100,10 L100,40 L0,40 Z",
+					fill: "currentColor",
+					fillOpacity: "0.1"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+					d: "M0,35 C10,35 15,25 25,25 C35,25 40,32 50,32 C60,32 65,15 75,15 C85,15 90,20 100,10",
+					fill: "none",
+					stroke: "currentColor",
+					strokeWidth: "1.5",
+					strokeLinecap: "round",
+					strokeLinejoin: "round"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "25",
+					cy: "25",
+					r: "1.5",
+					fill: "currentColor"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "50",
+					cy: "32",
+					r: "1.5",
+					fill: "currentColor"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "75",
+					cy: "15",
+					r: "1.5",
+					fill: "currentColor"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "100",
+					cy: "10",
+					r: "1.5",
+					fill: "currentColor"
+				})
+			]
+		})
+	})]
+});
 var TEMPLATES = [
 	{
 		label: "Gestão Comercial",
@@ -26909,7 +27094,8 @@ var TEMPLATES = [
 			"CRM B2B",
 			"Sistema de Cotação",
 			"Portal do Cliente"
-		]
+		],
+		Mockup: GestaoComercialMockup
 	},
 	{
 		label: "Operações & Processos",
@@ -26917,7 +27103,8 @@ var TEMPLATES = [
 			"Checklist Operacional",
 			"Gestão de Projetos",
 			"Timesheet"
-		]
+		],
+		Mockup: OperacoesProcessosMockup
 	},
 	{
 		label: "Pessoas & Cultura",
@@ -26925,7 +27112,8 @@ var TEMPLATES = [
 			"Controle de RH",
 			"Universidade Corporativa",
 			"Intranet"
-		]
+		],
+		Mockup: PessoasCulturaMockup
 	},
 	{
 		label: "Dados & Inteligência",
@@ -26933,7 +27121,8 @@ var TEMPLATES = [
 			"Central de Indicadores",
 			"Formulário de Diagnóstico",
 			"Sistema de Feedback"
-		]
+		],
+		Mockup: DadosInteligenciaMockup
 	}
 ];
 function TemplatesSection() {
@@ -26981,16 +27170,23 @@ function TemplatesSection() {
 					},
 					children: TEMPLATES.map((template) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "bg-skip-neutral-400 rounded-[20px] p-[28px] border border-skip-neutral-600 flex flex-col gap-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-skip-neutral-700",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-mono text-mono-xs tracking-[0.15em] text-blue-violet-500 uppercase font-semibold",
-							children: template.label
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "flex flex-wrap gap-2 mt-auto",
-							children: template.chips.map((chip) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "px-3.5 py-1.5 rounded-full bg-skip-neutral-500 text-skip-neutral-1100 font-body text-[13px] sm:text-sm font-medium",
-								children: chip
-							}, chip))
-						})]
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-full h-[120px] bg-skip-neutral-500 rounded-[12px] overflow-hidden relative flex-shrink-0 border border-skip-neutral-600/30 shadow-inner",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(template.Mockup, {})
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "font-mono text-mono-xs tracking-[0.15em] text-blue-violet-500 uppercase font-semibold",
+								children: template.label
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "flex flex-wrap gap-2 mt-auto",
+								children: template.chips.map((chip) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "px-3.5 py-1.5 rounded-full bg-skip-neutral-500 text-skip-neutral-1100 font-body text-[13px] sm:text-sm font-medium",
+									children: chip
+								}, chip))
+							})
+						]
 					}, template.label))
 				})
 			]
@@ -27262,4 +27458,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BB2uICui.js.map
+//# sourceMappingURL=index-C8zrJn96.js.map
