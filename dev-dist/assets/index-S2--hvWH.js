@@ -19210,6 +19210,13 @@ var Send = createLucideIcon("send", [["path", {
 	d: "m21.854 2.147-10.94 10.939",
 	key: "12cjpa"
 }]]);
+var ShieldCheck = createLucideIcon("shield-check", [["path", {
+	d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
+	key: "oel41y"
+}], ["path", {
+	d: "m9 12 2 2 4-4",
+	key: "dzmm74"
+}]]);
 var Shield = createLucideIcon("shield", [["path", {
 	d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
 	key: "oel41y"
@@ -27465,6 +27472,39 @@ function OfferSection() {
 		})
 	});
 }
+function GuaranteeSection() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "w-full py-24 md:py-32 px-5 bg-skip-neutral-300 relative z-10 flex flex-col items-center justify-center text-center overflow-hidden",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.06)_0%,transparent_60%)] pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "max-w-[600px] w-full flex flex-col items-center relative z-20 animate-fade-in-up",
+			style: { animationFillMode: "both" },
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "relative flex items-center justify-center w-24 h-24 mb-8 group",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-violet-600/30 blur-[40px] rounded-full transition-all duration-700 group-hover:w-36 group-hover:h-36 group-hover:opacity-60 group-hover:bg-blue-violet-500/40" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative z-10 w-20 h-20 rounded-[20px] bg-gradient-to-b from-[#ffffff] to-[#e5e7eb] shadow-[0_20px_40px_rgba(0,0,0,0.5),inset_0_2px_4px_rgba(255,255,255,1),inset_0_-2px_4px_rgba(0,0,0,0.05)] flex items-center justify-center border border-white/50 transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-1",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 rounded-[20px] bg-gradient-to-tr from-blue-violet-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, {
+							className: "w-10 h-10 text-blue-violet-600 drop-shadow-[0_2px_6px_rgba(79,70,229,0.4)] relative z-20 transition-transform duration-500 group-hover:scale-110",
+							strokeWidth: 1.5
+						})]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-6",
+					children: "Garantia"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					className: "font-heading text-3xl md:text-4xl lg:text-[40px] leading-[1.2] font-semibold text-white mb-6 tracking-tight",
+					children: "Teste o Skip por 30 dias sem compromisso"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "font-body text-sm md:text-base text-skip-neutral-800 leading-relaxed max-w-[520px]",
+					children: "Se você não ficar satisfeito com o resultado, devolvemos 100% do valor investido — sem perguntas, sem burocracia."
+				})
+			]
+		})]
+	});
+}
 var LOGOS = [
 	{
 		name: "microsoft",
@@ -27625,7 +27665,8 @@ function Index() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PlatformSection, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FeaturesSection, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TemplatesSection, {}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OfferSection, {})
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OfferSection, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GuaranteeSection, {})
 		]
 	});
 }
@@ -27731,4 +27772,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-N0Xw97P0.js.map
+//# sourceMappingURL=index-S2--hvWH.js.map

@@ -7,6 +7,7 @@ import { PlatformSection } from '@/components/home/PlatformSection'
 import { FeaturesSection } from '@/components/home/FeaturesSection'
 import { TemplatesSection } from '@/components/home/TemplatesSection'
 import { OfferSection } from '@/components/home/OfferSection'
+import { GuaranteeSection } from '@/components/home/GuaranteeSection'
 
 const LOGOS = [
   { name: 'microsoft', width: 'w-24' },
@@ -149,6 +150,9 @@ export default function Index() {
 
       {/* Offer Section */}
       <OfferSection />
+
+      {/* Guarantee Section */}
+      <GuaranteeSection />
     </div>
   )
 }
