@@ -48,8 +48,9 @@ export function PlatformSection() {
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
             PLATAFORMA
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-8 max-w-[700px] mx-auto text-center leading-tight tracking-tight">
-            Skip é a primeira plataforma de IA agêntica para criação de Sistemas&nbsp;Internos
+          <h2 className="font-display text-4xl md:text-[48px] font-semibold text-white mb-8 max-w-[680px] mx-auto text-center leading-tight tracking-tight">
+            Skip é a primeira plataforma de IA agêntica para criação de{' '}
+            <br className="hidden md:block" /> Sistemas Internos
           </h2>
         </div>
 
@@ -72,12 +73,12 @@ export function PlatformSection() {
 
         {/* How it works Title */}
         <div
-          className="w-full mt-24 md:mt-32 mb-16 md:mb-24 flex justify-start animate-fade-in-up"
+          className="w-full mt-[80px] mb-[48px] flex justify-center animate-fade-in-up"
           style={{ animationDelay: '300ms' }}
         >
-          <h2 className="font-heading text-4xl md:text-5xl font-semibold text-white text-left tracking-tight">
+          <h3 className="font-display text-3xl md:text-[36px] font-semibold text-white text-center tracking-tight">
             Como funciona?
-          </h2>
+          </h3>
         </div>
 
         {/* Workflow Steps */}
