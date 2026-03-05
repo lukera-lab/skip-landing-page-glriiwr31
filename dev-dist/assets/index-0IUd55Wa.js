@@ -26109,7 +26109,7 @@ function Step3Mockup() {
 }
 function Step4Mockup() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden",
+		className: "w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden shadow-2xl",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "w-[120px] sm:w-[140px] border-r border-skip-neutral-600 flex flex-col bg-skip-neutral-400 z-10 shrink-0",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -26410,7 +26410,8 @@ function PlatformSection() {
 							title: "Compartilhe com seu time",
 							description: "Com um clique, sua aplicação fica online com URL personalizada, SSL e hosting otimizado.",
 							layout: "text-right",
-							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Step4Mockup, {})
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Step4Mockup, {}),
+							hasFrame: false
 						})
 					]
 				})
@@ -26681,4 +26682,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B6AP2c1R.js.map
+//# sourceMappingURL=index-0IUd55Wa.js.map

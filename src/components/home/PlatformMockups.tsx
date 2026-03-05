@@ -357,7 +357,7 @@ export function Step3Mockup() {
 
 export function Step4Mockup() {
   return (
-    <div className="w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden">
+    <div className="w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden shadow-2xl">
       {/* Sidebar */}
       <div className="w-[120px] sm:w-[140px] border-r border-skip-neutral-600 flex flex-col bg-skip-neutral-400 z-10 shrink-0">
         <div className="p-4 sm:p-5 flex items-center gap-2 mb-2">

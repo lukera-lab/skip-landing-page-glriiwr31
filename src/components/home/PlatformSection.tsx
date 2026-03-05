@@ -127,6 +127,7 @@ export function PlatformSection() {
             description="Com um clique, sua aplicação fica online com URL personalizada, SSL e hosting otimizado."
             layout="text-right"
             mockup={<Step4Mockup />}
+            hasFrame={false}
           />
         </div>
       </div>
