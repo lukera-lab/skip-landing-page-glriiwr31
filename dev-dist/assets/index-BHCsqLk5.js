@@ -24216,9 +24216,9 @@ function InventoryAntes() {
 					"Complexidade (múltiplas abas, arquivos, gambiarras)",
 					"Ruptura por falta de previsão (planilha mostra saldo, não tendência)"
 				].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-					className: "flex items-start gap-3",
+					className: "flex items-center gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-0.5 rounded-full bg-red-50 p-1 shrink-0",
+						className: "rounded-full bg-red-50 p-1 shrink-0",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "text-sm text-skip-neutral-600 leading-tight",
@@ -24411,9 +24411,9 @@ function InventoryDepois() {
 					"Rastreabilidade Completa: quem fez o quê e quando",
 					"Alertas e relatórios em Tempo Real"
 				].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-					className: "flex items-start gap-3",
+					className: "flex items-center gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-0.5 rounded-full bg-blue-violet-50 p-1 shrink-0",
+						className: "rounded-full bg-blue-violet-50 p-1 shrink-0",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "text-sm text-skip-neutral-600 leading-tight",
@@ -24576,10 +24576,13 @@ function ComparisonLayout({ tabId }) {
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "flex flex-col gap-4 h-full",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "text-center font-body text-body-s text-skip-neutral-800 font-medium",
-				children: "Antes"
+				className: "flex justify-start",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
+					className: "bg-red-50 text-red-800 hover:bg-red-50 border-red-100 shadow-none font-semibold px-3 py-1 text-xs rounded-full font-body",
+					children: "Antes"
+				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "rounded-2xl border border-skip-neutral-1350 bg-white p-8 sm:p-10 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]",
+				className: "rounded-2xl border border-skip-neutral-1350 bg-white p-6 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]",
 				children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryAntes, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
 					tabId,
 					type: "antes"
@@ -24588,12 +24591,15 @@ function ComparisonLayout({ tabId }) {
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "flex flex-col gap-4 h-full",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "text-center font-body text-body-s text-skip-neutral-800 font-medium",
-				children: "Depois"
+				className: "flex justify-start",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
+					className: "bg-blue-violet-50 text-blue-violet-800 hover:bg-blue-violet-50 border-blue-violet-100 shadow-none font-semibold px-3 py-1 text-xs rounded-full font-body",
+					children: "Depois"
+				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "rounded-2xl p-[1px] bg-gradient-to-br from-blue-violet-400 to-fuchsia-400 shadow-lg shadow-blue-violet-500/20 flex flex-col flex-1 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-blue-violet-500/30 min-h-[400px]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "bg-white rounded-[15px] p-8 sm:p-10 flex flex-col flex-1 w-full overflow-hidden",
+					className: "bg-white rounded-[15px] p-6 flex flex-col flex-1 w-full overflow-hidden",
 					children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryDepois, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
 						tabId,
 						type: "depois"
@@ -24887,4 +24893,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-spWq4YI2.js.map
+//# sourceMappingURL=index-BHCsqLk5.js.map

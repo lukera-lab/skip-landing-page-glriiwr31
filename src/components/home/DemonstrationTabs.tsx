@@ -1,5 +1,6 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import { Check, X } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
 import { InventoryAntes, InventoryDepois } from './tabs/InventoryTab'
 
 const TAB_ITEMS = [
@@ -48,21 +49,25 @@ function ComparisonLayout({ tabId }: { tabId: string }) {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-stretch">
       {/* Antes Card Container */}
       <div className="flex flex-col gap-4 h-full">
-        <div className="text-center font-body text-body-s text-skip-neutral-800 font-medium">
-          Antes
+        <div className="flex justify-start">
+          <Badge className="bg-red-50 text-red-800 hover:bg-red-50 border-red-100 shadow-none font-semibold px-3 py-1 text-xs rounded-full font-body">
+            Antes
+          </Badge>
         </div>
-        <div className="rounded-2xl border border-skip-neutral-1350 bg-white p-8 sm:p-10 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]">
+        <div className="rounded-2xl border border-skip-neutral-1350 bg-white p-6 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]">
           {tabId === 'inventario' ? <InventoryAntes /> : <Placeholder tabId={tabId} type="antes" />}
         </div>
       </div>
 
       {/* Depois Card Container */}
       <div className="flex flex-col gap-4 h-full">
-        <div className="text-center font-body text-body-s text-skip-neutral-800 font-medium">
-          Depois
+        <div className="flex justify-start">
+          <Badge className="bg-blue-violet-50 text-blue-violet-800 hover:bg-blue-violet-50 border-blue-violet-100 shadow-none font-semibold px-3 py-1 text-xs rounded-full font-body">
+            Depois
+          </Badge>
         </div>
         <div className="rounded-2xl p-[1px] bg-gradient-to-br from-blue-violet-400 to-fuchsia-400 shadow-lg shadow-blue-violet-500/20 flex flex-col flex-1 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-blue-violet-500/30 min-h-[400px]">
-          <div className="bg-white rounded-[15px] p-8 sm:p-10 flex flex-col flex-1 w-full overflow-hidden">
+          <div className="bg-white rounded-[15px] p-6 flex flex-col flex-1 w-full overflow-hidden">
             {tabId === 'inventario' ? (
               <InventoryDepois />
             ) : (

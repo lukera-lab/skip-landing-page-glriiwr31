@@ -66,8 +66,8 @@ export function InventoryAntes() {
       </div>
       <ul className="space-y-3 mb-8 shrink-0">
         {points.map((item, i) => (
-          <li key={i} className="flex items-start gap-3">
-            <div className="mt-0.5 rounded-full bg-red-50 p-1 shrink-0">
+          <li key={i} className="flex items-center gap-3">
+            <div className="rounded-full bg-red-50 p-1 shrink-0">
               <X className="w-3 h-3 text-red-400" />
             </div>
             <span className="text-sm text-skip-neutral-600 leading-tight">{item}</span>
@@ -216,8 +216,8 @@ export function InventoryDepois() {
       </div>
       <ul className="space-y-3 mb-8 shrink-0">
         {points.map((item, i) => (
-          <li key={i} className="flex items-start gap-3">
-            <div className="mt-0.5 rounded-full bg-blue-violet-50 p-1 shrink-0">
+          <li key={i} className="flex items-center gap-3">
+            <div className="rounded-full bg-blue-violet-50 p-1 shrink-0">
               <Check className="w-3 h-3 text-blue-violet-400" />
             </div>
             <span className="text-sm text-skip-neutral-600 leading-tight">{item}</span>
