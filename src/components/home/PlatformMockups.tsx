@@ -12,23 +12,52 @@ import { Progress } from '@/components/ui/progress'
 
 export function Step1Mockup() {
   return (
-    <div className="w-full h-[280px] bg-white rounded-xl border border-skip-neutral-1350 shadow-sm p-4 flex flex-col justify-end relative overflow-hidden">
-      <div className="flex gap-3 items-end w-full max-w-[90%] ml-auto mb-4">
-        <div className="bg-blue-violet-600 text-white p-4 rounded-2xl rounded-tr-sm font-body text-sm shadow-sm">
-          Crie um sistema de controle de ponto para minha equipe
+    <div className="w-full h-[280px] bg-skip-neutral-400 rounded-[20px] border border-white/8 p-2 flex flex-col relative overflow-hidden shadow-2xl">
+      <div className="flex-1 bg-skip-neutral-350 rounded-xl p-4 flex flex-col justify-end relative overflow-hidden">
+        {/* Top fade out for scroll effect */}
+        <div
+          className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-skip-neutral-350 to-transparent z-10"
+          pointer-events="none"
+        />
+
+        {/* Chat History Placeholders */}
+        <div className="flex flex-col gap-3 mb-5 w-full relative z-0 opacity-80">
+          <div className="w-[65%] h-9 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" />
+          <div className="w-[45%] h-9 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" />
         </div>
-        <div className="w-8 h-8 rounded-full bg-skip-neutral-1350 shrink-0 flex items-center justify-center overflow-hidden">
-          <img
-            src="https://img.usecurling.com/ppl/thumbnail?gender=male&seed=1"
-            alt="User"
-            className="w-full h-full object-cover"
-          />
+
+        {/* User Primary Bubble */}
+        <div className="flex gap-3 items-end w-full max-w-[90%] ml-auto mb-4 relative z-10">
+          <div className="bg-blue-violet-600 text-white p-3 sm:px-4 sm:py-3 rounded-2xl rounded-tr-sm font-body text-xs sm:text-sm shadow-md leading-relaxed">
+            Crie um sistema de controle de ponto para minha equipe
+          </div>
+          <div className="w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center overflow-hidden ring-2 ring-skip-neutral-350">
+            <img
+              src="https://img.usecurling.com/ppl/thumbnail?gender=male&seed=1"
+              alt="User"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* AI Typing Indicator */}
+        <div className="flex gap-3 items-end w-full max-w-[80%] relative z-10">
+          <div className="w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center border border-skip-neutral-600 overflow-hidden shadow-sm">
+            <Sparkles className="w-4 h-4 text-blue-violet-400" />
+          </div>
+          <div className="bg-skip-neutral-500/40 px-3 py-2.5 rounded-2xl rounded-tl-sm flex items-center gap-1.5 h-9 border border-skip-neutral-500/20 shadow-sm">
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse" />
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:200ms]" />
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:400ms]" />
+          </div>
         </div>
       </div>
-      <div className="w-full h-12 bg-skip-neutral-1450 rounded-full border border-skip-neutral-1300 flex items-center px-4 justify-between text-skip-neutral-900">
+
+      {/* Footer Input Field */}
+      <div className="mt-2 w-full h-12 bg-skip-neutral-400 rounded-xl border border-skip-neutral-600 flex items-center px-4 justify-between text-skip-neutral-800 shrink-0">
         <span className="text-sm font-body">Descreva o que deseja criar...</span>
-        <div className="w-8 h-8 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0">
-          <Send className="w-4 h-4 text-white" />
+        <div className="w-8 h-8 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0 shadow-sm">
+          <Send className="w-4 h-4 text-white -ml-0.5" />
         </div>
       </div>
     </div>

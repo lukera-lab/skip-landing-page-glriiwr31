@@ -25653,28 +25653,55 @@ var Progress = import_react.forwardRef(({ className, value, ...props }, ref) => 
 Progress.displayName = Root.displayName;
 function Step1Mockup() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "w-full h-[280px] bg-white rounded-xl border border-skip-neutral-1350 shadow-sm p-4 flex flex-col justify-end relative overflow-hidden",
+		className: "w-full h-[280px] bg-skip-neutral-400 rounded-[20px] border border-white/8 p-2 flex flex-col relative overflow-hidden shadow-2xl",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "flex gap-3 items-end w-full max-w-[90%] ml-auto mb-4",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-blue-violet-600 text-white p-4 rounded-2xl rounded-tr-sm font-body text-sm shadow-sm",
-				children: "Crie um sistema de controle de ponto para minha equipe"
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "w-8 h-8 rounded-full bg-skip-neutral-1350 shrink-0 flex items-center justify-center overflow-hidden",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-					src: "https://img.usecurling.com/ppl/thumbnail?gender=male&seed=1",
-					alt: "User",
-					className: "w-full h-full object-cover"
+			className: "flex-1 bg-skip-neutral-350 rounded-xl p-4 flex flex-col justify-end relative overflow-hidden",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-skip-neutral-350 to-transparent z-10",
+					"pointer-events": "none"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex flex-col gap-3 mb-5 w-full relative z-0 opacity-80",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-[65%] h-9 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-[45%] h-9 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex gap-3 items-end w-full max-w-[90%] ml-auto mb-4 relative z-10",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "bg-blue-violet-600 text-white p-3 sm:px-4 sm:py-3 rounded-2xl rounded-tr-sm font-body text-xs sm:text-sm shadow-md leading-relaxed",
+						children: "Crie um sistema de controle de ponto para minha equipe"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center overflow-hidden ring-2 ring-skip-neutral-350",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: "https://img.usecurling.com/ppl/thumbnail?gender=male&seed=1",
+							alt: "User",
+							className: "w-full h-full object-cover"
+						})
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex gap-3 items-end w-full max-w-[80%] relative z-10",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center border border-skip-neutral-600 overflow-hidden shadow-sm",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-blue-violet-400" })
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "bg-skip-neutral-500/40 px-3 py-2.5 rounded-2xl rounded-tl-sm flex items-center gap-1.5 h-9 border border-skip-neutral-500/20 shadow-sm",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:200ms]" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-blue-violet-400 animate-pulse [animation-delay:400ms]" })
+						]
+					})]
 				})
-			})]
+			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "w-full h-12 bg-skip-neutral-1450 rounded-full border border-skip-neutral-1300 flex items-center px-4 justify-between text-skip-neutral-900",
+			className: "mt-2 w-full h-12 bg-skip-neutral-400 rounded-xl border border-skip-neutral-600 flex items-center px-4 justify-between text-skip-neutral-800 shrink-0",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 				className: "text-sm font-body",
 				children: "Descreva o que deseja criar..."
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "w-8 h-8 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, { className: "w-4 h-4 text-white" })
+				className: "w-8 h-8 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0 shadow-sm",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, { className: "w-4 h-4 text-white -ml-0.5" })
 			})]
 		})]
 	});
@@ -26192,4 +26219,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CL3HUupv.js.map
+//# sourceMappingURL=index-D56wLPVO.js.map
