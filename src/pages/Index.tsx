@@ -6,6 +6,7 @@ import { DemonstrationTabs } from '@/components/home/DemonstrationTabs'
 import { PlatformSection } from '@/components/home/PlatformSection'
 import { FeaturesSection } from '@/components/home/FeaturesSection'
 import { TemplatesSection } from '@/components/home/TemplatesSection'
+import { OfferSection } from '@/components/home/OfferSection'
 
 const LOGOS = [
   { name: 'microsoft', width: 'w-24' },
@@ -145,6 +146,9 @@ export default function Index() {
 
       {/* Templates Section */}
       <TemplatesSection />
+
+      {/* Offer Section */}
+      <OfferSection />
     </div>
   )
 }
