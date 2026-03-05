@@ -17,12 +17,12 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full">
         {/* Background wrapper with fade-out mask */}
-        <div className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_60%,transparent_100%)] pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden">
           {/* Hero Background Image */}
           <img
             src={heroBgUrl}
             alt="Hero Background"
-            className="absolute inset-0 w-full h-full object-cover object-top opacity-90"
+            className="absolute inset-0 w-full h-full object-cover object-top"
             aria-hidden="true"
           />
         </div>

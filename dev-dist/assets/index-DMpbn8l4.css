@@ -2189,9 +2189,9 @@ h6{
 .\[--cell-size\:2rem\]{
   --cell-size: 2rem;
 }
-.\[mask-image\:linear-gradient\(to_bottom\2c white_60\%\2c transparent_100\%\)\]{
-  -webkit-mask-image: linear-gradient(to bottom,white 60%,transparent 100%);
-          mask-image: linear-gradient(to bottom,white 60%,transparent 100%);
+.\[mask-image\:linear-gradient\(to_bottom\2c white_80\%\2c transparent_100\%\)\]{
+  -webkit-mask-image: linear-gradient(to bottom,white 80%,transparent 100%);
+          mask-image: linear-gradient(to bottom,white 80%,transparent 100%);
 }
 .selection\:bg-violet-100 *::-moz-selection{
   --tw-bg-opacity: 1;

@@ -23795,11 +23795,11 @@ function Index() {
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 			className: "relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_60%,transparent_100%)] pointer-events-none overflow-hidden",
+				className: "absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					src: bg_hero_skip_8319b_default,
 					alt: "Hero Background",
-					className: "absolute inset-0 w-full h-full object-cover object-top opacity-90",
+					className: "absolute inset-0 w-full h-full object-cover object-top",
 					"aria-hidden": "true"
 				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -24005,4 +24005,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B3YYh9jn.js.map
+//# sourceMappingURL=index-Y5OsGAjC.js.map
