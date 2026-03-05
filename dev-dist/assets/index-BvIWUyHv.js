@@ -25858,17 +25858,17 @@ function PlatformSection() {
 			className: "max-w-[1100px] mx-auto flex flex-col items-center",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "text-center mb-12 flex flex-col items-center animate-fade-in-up relative z-20",
+					className: "text-center mb-12 flex flex-col items-center animate-fade-in-up relative z-20 w-full",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
-						children: "COMO FUNCIONA"
+						children: "PLATAFORMA"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-8 max-w-4xl leading-tight tracking-tight",
-						children: "Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos"
+						className: "font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-8 max-w-[700px] mx-auto text-center leading-tight tracking-tight",
+						children: "Skip é a primeira plataforma de IA agêntica para criação de Sistemas\xA0Internos"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "w-full max-w-4xl mb-32 md:mb-40 relative animate-fade-in-up flex justify-center items-center z-10",
+					className: "w-full max-w-4xl relative animate-fade-in-up flex justify-center items-center z-10",
 					style: { animationDelay: "200ms" },
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] bg-gradient-to-r from-blue-violet-600 to-fuchsia-600 opacity-35 blur-[80px] sm:blur-[120px] rounded-full pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "relative w-full drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]",
@@ -25878,6 +25878,14 @@ function PlatformSection() {
 							className: "w-full h-auto relative z-10 object-contain"
 						})
 					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "w-full mt-24 md:mt-32 mb-16 md:mb-24 flex justify-start animate-fade-in-up",
+					style: { animationDelay: "300ms" },
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "font-heading text-4xl md:text-5xl font-semibold text-white text-left tracking-tight",
+						children: "Como funciona?"
+					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "w-full flex flex-col gap-24 md:gap-32 relative z-20",
@@ -26179,4 +26187,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-C6i3hYWA.js.map
+//# sourceMappingURL=index-BvIWUyHv.js.map
