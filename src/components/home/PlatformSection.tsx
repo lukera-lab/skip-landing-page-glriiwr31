@@ -22,11 +22,13 @@ function WorkflowStep({ step, title, description, layout, mockup }: WorkflowStep
     >
       {/* Text Content */}
       <div className="flex-1 w-full flex flex-col animate-fade-in-up">
-        <span className="font-mono text-mono-xl text-blue-violet-600 mb-4">{step}</span>
-        <h3 className="font-heading text-4xl md:text-5xl font-semibold text-white mb-4 tracking-tight">
+        <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-4">
+          {step}
+        </span>
+        <h3 className="font-heading text-3xl md:text-[36px] font-semibold text-white mb-4 tracking-tight">
           {title}
         </h3>
-        <p className="font-body text-body-l text-skip-neutral-900">{description}</p>
+        <p className="font-body text-body-m text-skip-neutral-900">{description}</p>
       </div>
 
       {/* Mockup Container */}
@@ -73,12 +75,12 @@ export function PlatformSection() {
 
         {/* How it works Title */}
         <div
-          className="w-full mt-[80px] mb-[48px] flex justify-center animate-fade-in-up"
+          className="w-full mt-[80px] mb-20 flex justify-center animate-fade-in-up"
           style={{ animationDelay: '300ms' }}
         >
-          <h3 className="font-display text-3xl md:text-[36px] font-semibold text-white text-center tracking-tight">
+          <h2 className="font-heading text-4xl md:text-[48px] font-semibold text-white text-center tracking-tight">
             Como funciona?
-          </h3>
+          </h2>
         </div>
 
         {/* Workflow Steps */}

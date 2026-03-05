@@ -25829,15 +25829,15 @@ function WorkflowStep({ step, title, description, layout, mockup }) {
 			className: "flex-1 w-full flex flex-col animate-fade-in-up",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "font-mono text-mono-xl text-blue-violet-600 mb-4",
+					className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-4",
 					children: step
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "font-heading text-4xl md:text-5xl font-semibold text-white mb-4 tracking-tight",
+					className: "font-heading text-3xl md:text-[36px] font-semibold text-white mb-4 tracking-tight",
 					children: title
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-body text-body-l text-skip-neutral-900",
+					className: "font-body text-body-m text-skip-neutral-900",
 					children: description
 				})
 			]
@@ -25885,10 +25885,10 @@ function PlatformSection() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "w-full mt-[80px] mb-[48px] flex justify-center animate-fade-in-up",
+					className: "w-full mt-[80px] mb-20 flex justify-center animate-fade-in-up",
 					style: { animationDelay: "300ms" },
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-						className: "font-display text-3xl md:text-[36px] font-semibold text-white text-center tracking-tight",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "font-heading text-4xl md:text-[48px] font-semibold text-white text-center tracking-tight",
 						children: "Como funciona?"
 					})
 				}),
@@ -26192,4 +26192,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-C1zqTjtB.js.map
+//# sourceMappingURL=index-CL3HUupv.js.map
