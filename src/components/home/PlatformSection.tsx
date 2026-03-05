@@ -119,6 +119,7 @@ export function PlatformSection() {
             description="Continue a interação melhorando tudo o que quiser do projeto."
             layout="text-left"
             mockup={<Step3Mockup />}
+            hasFrame={false}
           />
           <WorkflowStep
             step="04"

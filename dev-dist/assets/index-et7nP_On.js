@@ -25998,49 +25998,84 @@ function Step3Mockup() {
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "flex-1 bg-skip-neutral-300 relative flex flex-col p-4 sm:p-6 overflow-hidden items-center justify-center",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "w-full max-w-[280px] bg-skip-neutral-400 border border-skip-neutral-500 rounded-xl p-4 sm:p-5 shadow-lg relative z-10",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "flex items-center justify-between mb-5",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-xs sm:text-sm font-medium text-white",
-						children: "Registro de Ponto"
-					})
+				className: "w-full max-w-[280px] sm:max-w-[320px] bg-skip-neutral-400 border border-skip-neutral-500 rounded-xl p-4 sm:p-5 shadow-lg relative z-10 flex flex-col gap-3 sm:gap-4",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+					className: "text-sm sm:text-base font-bold text-white m-0 tracking-tight",
+					children: "Registro de Ponto"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "space-y-4",
+					className: "space-y-3 sm:space-y-3.5",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "space-y-2",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-16 h-2 sm:h-2.5 bg-skip-neutral-600 rounded-full" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-8 sm:h-10 bg-skip-neutral-500/50 rounded-lg w-full border border-skip-neutral-600/50" })]
+							className: "space-y-1.5",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+								className: "text-[10px] sm:text-xs font-medium text-skip-neutral-900 block",
+								children: "Nome do Funcionário"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "h-8 sm:h-9 bg-skip-neutral-500 rounded-md w-full border border-skip-neutral-600 flex items-center px-3",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[10px] sm:text-xs text-skip-neutral-900",
+									children: "Ex: João Silva"
+								})
+							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "space-y-2",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-24 h-2 sm:h-2.5 bg-skip-neutral-600 rounded-full" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-8 sm:h-10 bg-skip-neutral-500/50 rounded-lg w-full border border-skip-neutral-600/50" })]
+							className: "flex gap-2 sm:gap-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-1.5 flex-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+									className: "text-[10px] sm:text-xs font-medium text-skip-neutral-900 block",
+									children: "Data de Entrada"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "h-8 sm:h-9 bg-skip-neutral-500 rounded-md w-full border border-skip-neutral-600 flex items-center px-3",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[10px] sm:text-xs text-skip-neutral-900",
+										children: "DD/MM/AAAA"
+									})
+								})]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-1.5 flex-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+									className: "text-[10px] sm:text-xs font-medium text-skip-neutral-900 block",
+									children: "Departamento"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "h-8 sm:h-9 bg-skip-neutral-500 rounded-md w-full border border-skip-neutral-600 flex items-center px-3",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[10px] sm:text-xs text-skip-neutral-900",
+										children: "Selecione..."
+									})
+								})]
+							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "relative mt-6 pt-2",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "absolute -top-3 right-0 bg-green-500/10 text-green-400 border border-green-500/20 px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wider z-20",
-									children: "NOVO"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-2 relative z-10",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-28 h-2 sm:h-2.5 bg-blue-violet-400/80 rounded-full" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "h-8 sm:h-10 bg-blue-violet-900/20 rounded-lg w-full border border-blue-violet-500/50 shadow-[0_0_15px_rgba(124,58,237,0.15)] flex items-center px-3 relative overflow-hidden",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-r from-blue-violet-500/10 to-transparent animate-pulse" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "text-[11px] sm:text-xs text-blue-violet-300 font-medium relative z-10",
-											children: "Aprovação do Gestor"
-										})]
+							className: "relative mt-2 pt-1",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-1.5 relative z-10",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "text-[10px] sm:text-xs font-medium text-green-400 block",
+										children: "Aprovação do Gestor"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "bg-green-500/20 text-green-400 border border-green-500/30 px-1.5 py-[2px] rounded-full text-[8px] font-bold tracking-wider animate-pulse",
+										children: "NOVO"
 									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-2 border border-blue-violet-500/40 rounded-xl bg-blue-violet-500/5 pointer-events-none animate-pulse" })
-							]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "h-8 sm:h-9 bg-skip-neutral-500 rounded-md w-full border border-blue-violet-600 shadow-[0_0_12px_rgba(124,58,237,0.35)] flex items-center px-3 relative overflow-hidden",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-r from-blue-violet-500/10 to-transparent animate-pulse" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[10px] sm:text-xs text-skip-neutral-900 relative z-10",
+										children: "Selecione o gestor"
+									})]
+								})]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-[5px] border border-blue-violet-500/40 rounded-xl bg-blue-violet-500/5 pointer-events-none animate-pulse" })]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "pt-3",
+							className: "pt-2",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "h-8 sm:h-10 bg-blue-violet-600 rounded-lg w-full flex items-center justify-center mt-2",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-12 h-2 sm:h-2.5 bg-white/50 rounded-full" })
+								className: "h-8 sm:h-9 bg-blue-violet-600 rounded-md w-full flex items-center justify-center cursor-pointer shadow-md hover:bg-blue-violet-500 transition-colors",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[11px] sm:text-xs font-medium text-white",
+									children: "Enviar Registro"
+								})
 							})
 						})
 					]
@@ -26194,7 +26229,8 @@ function PlatformSection() {
 							title: "Personalize e ajuste",
 							description: "Continue a interação melhorando tudo o que quiser do projeto.",
 							layout: "text-left",
-							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Step3Mockup, {})
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Step3Mockup, {}),
+							hasFrame: false
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(WorkflowStep, {
 							step: "04",
@@ -26472,4 +26508,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BiRxPHz-.js.map
+//# sourceMappingURL=index-et7nP_On.js.map

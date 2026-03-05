@@ -273,44 +273,72 @@ export function Step3Mockup() {
 
       {/* Right Pane: Form Builder Preview */}
       <div className="flex-1 bg-skip-neutral-300 relative flex flex-col p-4 sm:p-6 overflow-hidden items-center justify-center">
-        <div className="w-full max-w-[280px] bg-skip-neutral-400 border border-skip-neutral-500 rounded-xl p-4 sm:p-5 shadow-lg relative z-10">
-          <div className="flex items-center justify-between mb-5">
-            <span className="text-xs sm:text-sm font-medium text-white">Registro de Ponto</span>
-          </div>
+        <div className="w-full max-w-[280px] sm:max-w-[320px] bg-skip-neutral-400 border border-skip-neutral-500 rounded-xl p-4 sm:p-5 shadow-lg relative z-10 flex flex-col gap-3 sm:gap-4">
+          <h4 className="text-sm sm:text-base font-bold text-white m-0 tracking-tight">
+            Registro de Ponto
+          </h4>
 
-          <div className="space-y-4">
-            {/* Existing Fields */}
-            <div className="space-y-2">
-              <div className="w-16 h-2 sm:h-2.5 bg-skip-neutral-600 rounded-full" />
-              <div className="h-8 sm:h-10 bg-skip-neutral-500/50 rounded-lg w-full border border-skip-neutral-600/50" />
+          <div className="space-y-3 sm:space-y-3.5">
+            {/* Field 1 */}
+            <div className="space-y-1.5">
+              <label className="text-[10px] sm:text-xs font-medium text-skip-neutral-900 block">
+                Nome do Funcionário
+              </label>
+              <div className="h-8 sm:h-9 bg-skip-neutral-500 rounded-md w-full border border-skip-neutral-600 flex items-center px-3">
+                <span className="text-[10px] sm:text-xs text-skip-neutral-900">Ex: João Silva</span>
+              </div>
             </div>
-            <div className="space-y-2">
-              <div className="w-24 h-2 sm:h-2.5 bg-skip-neutral-600 rounded-full" />
-              <div className="h-8 sm:h-10 bg-skip-neutral-500/50 rounded-lg w-full border border-skip-neutral-600/50" />
+
+            <div className="flex gap-2 sm:gap-3">
+              {/* Field 2 */}
+              <div className="space-y-1.5 flex-1">
+                <label className="text-[10px] sm:text-xs font-medium text-skip-neutral-900 block">
+                  Data de Entrada
+                </label>
+                <div className="h-8 sm:h-9 bg-skip-neutral-500 rounded-md w-full border border-skip-neutral-600 flex items-center px-3">
+                  <span className="text-[10px] sm:text-xs text-skip-neutral-900">DD/MM/AAAA</span>
+                </div>
+              </div>
+
+              {/* Field 3 */}
+              <div className="space-y-1.5 flex-1">
+                <label className="text-[10px] sm:text-xs font-medium text-skip-neutral-900 block">
+                  Departamento
+                </label>
+                <div className="h-8 sm:h-9 bg-skip-neutral-500 rounded-md w-full border border-skip-neutral-600 flex items-center px-3">
+                  <span className="text-[10px] sm:text-xs text-skip-neutral-900">Selecione...</span>
+                </div>
+              </div>
             </div>
 
             {/* New Field Highlighted */}
-            <div className="relative mt-6 pt-2">
-              <div className="absolute -top-3 right-0 bg-green-500/10 text-green-400 border border-green-500/20 px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wider z-20">
-                NOVO
-              </div>
-              <div className="space-y-2 relative z-10">
-                <div className="w-28 h-2 sm:h-2.5 bg-blue-violet-400/80 rounded-full" />
-                <div className="h-8 sm:h-10 bg-blue-violet-900/20 rounded-lg w-full border border-blue-violet-500/50 shadow-[0_0_15px_rgba(124,58,237,0.15)] flex items-center px-3 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-violet-500/10 to-transparent animate-pulse" />
-                  <span className="text-[11px] sm:text-xs text-blue-violet-300 font-medium relative z-10">
+            <div className="relative mt-2 pt-1">
+              <div className="space-y-1.5 relative z-10">
+                <div className="flex items-center gap-2">
+                  <label className="text-[10px] sm:text-xs font-medium text-green-400 block">
                     Aprovação do Gestor
+                  </label>
+                  <span className="bg-green-500/20 text-green-400 border border-green-500/30 px-1.5 py-[2px] rounded-full text-[8px] font-bold tracking-wider animate-pulse">
+                    NOVO
+                  </span>
+                </div>
+                <div className="h-8 sm:h-9 bg-skip-neutral-500 rounded-md w-full border border-blue-violet-600 shadow-[0_0_12px_rgba(124,58,237,0.35)] flex items-center px-3 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-violet-500/10 to-transparent animate-pulse" />
+                  <span className="text-[10px] sm:text-xs text-skip-neutral-900 relative z-10">
+                    Selecione o gestor
                   </span>
                 </div>
               </div>
 
               {/* Selection / Highlight Box */}
-              <div className="absolute -inset-2 border border-blue-violet-500/40 rounded-xl bg-blue-violet-500/5 pointer-events-none animate-pulse" />
+              <div className="absolute -inset-[5px] border border-blue-violet-500/40 rounded-xl bg-blue-violet-500/5 pointer-events-none animate-pulse" />
             </div>
 
-            <div className="pt-3">
-              <div className="h-8 sm:h-10 bg-blue-violet-600 rounded-lg w-full flex items-center justify-center mt-2">
-                <div className="w-12 h-2 sm:h-2.5 bg-white/50 rounded-full" />
+            <div className="pt-2">
+              <div className="h-8 sm:h-9 bg-blue-violet-600 rounded-md w-full flex items-center justify-center cursor-pointer shadow-md hover:bg-blue-violet-500 transition-colors">
+                <span className="text-[11px] sm:text-xs font-medium text-white">
+                  Enviar Registro
+                </span>
               </div>
             </div>
           </div>
