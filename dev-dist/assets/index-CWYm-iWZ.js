@@ -27313,11 +27313,11 @@ function OfferSection() {
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
 									className: "font-body text-body-s text-skip-neutral-700",
-									children: "1 Sistema Interno Completo"
+									children: "01 licença"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									className: "flex items-center gap-1.5 font-body text-body-s text-skip-neutral-700",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "1.000 Créditos de IA mensais" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipProvider, {
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "800 créditos mensais" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipProvider, {
 										delayDuration: 100,
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Tooltip, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipTrigger, {
 											asChild: true,
@@ -27333,7 +27333,7 @@ function OfferSection() {
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
 									className: "font-body text-body-s text-skip-neutral-700",
-									children: "Publicação em subdomínio Skip"
+									children: "SLA 5 dias úteis"
 								})
 							]
 						}),
@@ -27346,10 +27346,12 @@ function OfferSection() {
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 								className: "flex flex-col gap-3",
 								children: [
-									"Agentes de Desenvolvimento de IA",
-									"Banco de Dados Supabase (1GB)",
-									"Autenticação e Gestão de Usuários",
-									"Hospedagem e SSL inclusos"
+									"Projetos ilimitados",
+									"Baixar código-fonte",
+									"Gerenciar versões",
+									"Integração com Banco de Dados (Supabase)",
+									"Remover badge do Skip",
+									"Suporte por e-mail"
 								].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									className: "flex items-start gap-3",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -27366,7 +27368,13 @@ function OfferSection() {
 								children: "Bônus"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 								className: "flex flex-col gap-3",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+								children: [["4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM", "Templates front-end personalizados"].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+									className: "flex items-start gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "font-body text-body-s text-skip-neutral-800 font-medium",
+										children: item
+									})]
+								}, i)), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									className: "flex items-start gap-3",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "flex flex-wrap items-center gap-2",
@@ -27378,13 +27386,7 @@ function OfferSection() {
 											children: "exclusivo da live"
 										})]
 									})]
-								}), ["Biblioteca de Templates Premium", "Acesso antecipado a novas features"].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-									className: "flex items-start gap-3",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "font-body text-body-s text-skip-neutral-800 font-medium",
-										children: item
-									})]
-								}, i))]
+								})]
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -27691,4 +27693,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BzKLtdLI.js.map
+//# sourceMappingURL=index-CWYm-iWZ.js.map

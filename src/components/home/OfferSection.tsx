@@ -33,11 +33,9 @@ export function OfferSection() {
             <p className="font-body text-body-xs text-skip-neutral-800 mb-6">cobrado anualmente</p>
 
             <ul className="flex flex-col gap-2.5 mb-8">
-              <li className="font-body text-body-s text-skip-neutral-700">
-                1 Sistema Interno Completo
-              </li>
+              <li className="font-body text-body-s text-skip-neutral-700">01 licença</li>
               <li className="flex items-center gap-1.5 font-body text-body-s text-skip-neutral-700">
-                <span>1.000 Créditos de IA mensais</span>
+                <span>800 créditos mensais</span>
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -51,9 +49,7 @@ export function OfferSection() {
                   </Tooltip>
                 </TooltipProvider>
               </li>
-              <li className="font-body text-body-s text-skip-neutral-700">
-                Publicação em subdomínio Skip
-              </li>
+              <li className="font-body text-body-s text-skip-neutral-700">SLA 5 dias úteis</li>
             </ul>
 
             <Separator className="bg-skip-neutral-1350 mb-6" />
@@ -65,10 +61,12 @@ export function OfferSection() {
               </h3>
               <ul className="flex flex-col gap-3">
                 {[
-                  'Agentes de Desenvolvimento de IA',
-                  'Banco de Dados Supabase (1GB)',
-                  'Autenticação e Gestão de Usuários',
-                  'Hospedagem e SSL inclusos',
+                  'Projetos ilimitados',
+                  'Baixar código-fonte',
+                  'Gerenciar versões',
+                  'Integração com Banco de Dados (Supabase)',
+                  'Remover badge do Skip',
+                  'Suporte por e-mail',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-violet-600 shrink-0" />
@@ -84,6 +82,17 @@ export function OfferSection() {
                 Bônus
               </h3>
               <ul className="flex flex-col gap-3">
+                {[
+                  '4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM',
+                  'Templates front-end personalizados',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Gift className="w-5 h-5 text-blue-violet-600 shrink-0" />
+                    <span className="font-body text-body-s text-skip-neutral-800 font-medium">
+                      {item}
+                    </span>
+                  </li>
+                ))}
                 <li className="flex items-start gap-3">
                   <Gift className="w-5 h-5 text-blue-violet-600 shrink-0" />
                   <div className="flex flex-wrap items-center gap-2">
@@ -95,16 +104,6 @@ export function OfferSection() {
                     </span>
                   </div>
                 </li>
-                {['Biblioteca de Templates Premium', 'Acesso antecipado a novas features'].map(
-                  (item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <Gift className="w-5 h-5 text-blue-violet-600 shrink-0" />
-                      <span className="font-body text-body-s text-skip-neutral-800 font-medium">
-                        {item}
-                      </span>
-                    </li>
-                  ),
-                )}
               </ul>
             </div>
 
