@@ -38,13 +38,13 @@ export function TemplatesSection() {
 
         {/* Headline */}
         <div
-          className="max-w-[700px] mx-auto text-center mb-16 animate-fade-in-up"
+          className="max-w-[600px] mx-auto text-center mb-16 animate-fade-in-up"
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
         >
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-white mb-6 tracking-tight leading-tight">
-            Tenha sistemas internos prontos para implementar hoje
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold text-white mb-6 tracking-tight leading-tight">
+            Tenha sistemas internos prontos <br /> para implementar hoje
           </h2>
-          <p className="font-body text-body-m text-skip-neutral-800">
+          <p className="font-body text-body-m text-skip-neutral-900">
             Explore nossa biblioteca de templates e personalize o que mais fizer sentido para a sua
             operação
           </p>

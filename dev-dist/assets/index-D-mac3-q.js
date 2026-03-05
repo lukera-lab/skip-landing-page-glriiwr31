@@ -26950,16 +26950,20 @@ function TemplatesSection() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "max-w-[700px] mx-auto text-center mb-16 animate-fade-in-up",
+					className: "max-w-[600px] mx-auto text-center mb-16 animate-fade-in-up",
 					style: {
 						animationDelay: "100ms",
 						animationFillMode: "both"
 					},
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-white mb-6 tracking-tight leading-tight",
-						children: "Tenha sistemas internos prontos para implementar hoje"
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+						className: "font-heading text-3xl md:text-4xl font-semibold text-white mb-6 tracking-tight leading-tight",
+						children: [
+							"Tenha sistemas internos prontos ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
+							" para implementar hoje"
+						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "font-body text-body-m text-skip-neutral-800",
+						className: "font-body text-body-m text-skip-neutral-900",
 						children: "Explore nossa biblioteca de templates e personalize o que mais fizer sentido para a sua operação"
 					})]
 				}),
@@ -27252,4 +27256,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-ULQf1E7f.js.map
+//# sourceMappingURL=index-D-mac3-q.js.map
