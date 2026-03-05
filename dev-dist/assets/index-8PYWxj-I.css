@@ -1399,6 +1399,9 @@ h6{
 .max-w-\[280px\]{
   max-width: 280px;
 }
+.max-w-\[320px\]{
+  max-width: 320px;
+}
 .max-w-\[360px\]{
   max-width: 360px;
 }
@@ -2677,9 +2680,6 @@ h6{
 }
 .text-\[28px\]{
   font-size: 28px;
-}
-.text-\[32px\]{
-  font-size: 32px;
 }
 .text-\[40px\]{
   font-size: 40px;
@@ -4582,6 +4582,9 @@ h6{
   }
   .sm\:max-w-\[320px\]{
     max-width: 320px;
+  }
+  .sm\:max-w-none{
+    max-width: none;
   }
   .sm\:max-w-sm{
     max-width: 24rem;
