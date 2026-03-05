@@ -25863,7 +25863,7 @@ function PlatformSection() {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
 						children: "COMO FUNCIONA"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-blue-violet-600 mb-8 max-w-4xl leading-tight tracking-tight",
+						className: "font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-8 max-w-4xl leading-tight tracking-tight",
 						children: "Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos"
 					})]
 				}),
@@ -26179,4 +26179,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BEeJ7h88.js.map
+//# sourceMappingURL=index-C6i3hYWA.js.map

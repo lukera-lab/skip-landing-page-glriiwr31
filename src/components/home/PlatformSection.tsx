@@ -48,7 +48,7 @@ export function PlatformSection() {
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
             COMO FUNCIONA
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-blue-violet-600 mb-8 max-w-4xl leading-tight tracking-tight">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-8 max-w-4xl leading-tight tracking-tight">
             Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos
           </h2>
         </div>
