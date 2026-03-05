@@ -108,10 +108,14 @@ export function OfferSection() {
             </div>
 
             {/* CTA */}
-            <div className="mt-auto flex flex-col items-center gap-4">
-              <Button className="w-full h-auto py-4 sm:py-5 text-base sm:text-lg font-display font-bold !bg-blue-violet-600 hover:!bg-blue-violet-700 !bg-none text-white rounded-[90px] shadow-lg shadow-blue-violet-600/20 transition-all duration-300 hover:-translate-y-1">
-                Quero o Skip Basic <ArrowRight className="w-5 h-5 ml-1" />
-              </Button>
+            <div className="mt-auto flex flex-col items-center gap-4 w-full">
+              <div className="relative group w-full">
+                <div className="absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" />
+                <Button className="relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5">
+                  Quero o Skip Basic
+                  <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
               <div className="flex items-center gap-3 text-skip-neutral-900 mt-2">
                 <div className="flex items-center gap-1.5">
                   <Shield className="w-4 h-4" />

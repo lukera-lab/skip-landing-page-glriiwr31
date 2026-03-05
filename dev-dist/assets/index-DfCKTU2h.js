@@ -27390,10 +27390,13 @@ function OfferSection() {
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mt-auto flex flex-col items-center gap-4",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-								className: "w-full h-auto py-4 sm:py-5 text-base sm:text-lg font-display font-bold !bg-blue-violet-600 hover:!bg-blue-violet-700 !bg-none text-white rounded-[90px] shadow-lg shadow-blue-violet-600/20 transition-all duration-300 hover:-translate-y-1",
-								children: ["Quero o Skip Basic ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-5 h-5 ml-1" })]
+							className: "mt-auto flex flex-col items-center gap-4 w-full",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "relative group w-full",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+									className: "relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5",
+									children: ["Quero o Skip Basic", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center gap-3 text-skip-neutral-900 mt-2",
 								children: [
@@ -27693,4 +27696,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CWYm-iWZ.js.map
+//# sourceMappingURL=index-DfCKTU2h.js.map
