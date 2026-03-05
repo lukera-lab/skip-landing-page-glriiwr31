@@ -26080,7 +26080,6 @@ function Index() {
 					})]
 				})
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PlatformSection, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 				className: "w-full py-24 px-5 relative z-10 bg-skip-neutral-1550",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -26101,7 +26100,8 @@ function Index() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DemonstrationTabs, {})
 					]
 				})
-			})
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PlatformSection, {})
 		]
 	});
 }
@@ -26207,4 +26207,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CtaSPgjo.js.map
+//# sourceMappingURL=index-Dh0dhdvS.js.map

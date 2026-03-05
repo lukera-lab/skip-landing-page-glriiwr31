@@ -118,9 +118,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Platform Section */}
-      <PlatformSection />
-
       {/* Demonstration Section */}
       <section className="w-full py-24 px-5 relative z-10 bg-skip-neutral-1550">
         <div className="max-w-[1100px] mx-auto flex flex-col items-center text-center">
@@ -137,6 +134,9 @@ export default function Index() {
           <DemonstrationTabs />
         </div>
       </section>
+
+      {/* Platform Section */}
+      <PlatformSection />
     </div>
   )
 }
