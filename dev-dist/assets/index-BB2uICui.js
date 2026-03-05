@@ -26969,7 +26969,7 @@ function TemplatesSection() {
 							" para implementar hoje"
 						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "font-body text-body-m text-skip-neutral-900",
+						className: "font-body text-body-m text-skip-neutral-900 max-w-[480px] mx-auto",
 						children: "Explore nossa biblioteca de templates e personalize o que mais fizer sentido para a sua operação"
 					})]
 				}),
@@ -27262,4 +27262,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CwC-W84e.js.map
+//# sourceMappingURL=index-BB2uICui.js.map

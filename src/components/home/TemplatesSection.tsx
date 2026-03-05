@@ -45,7 +45,7 @@ export function TemplatesSection() {
           <SectionTitle className="font-heading font-semibold text-white mb-6 tracking-tight">
             Tenha sistemas internos prontos <br /> para implementar hoje
           </SectionTitle>
-          <p className="font-body text-body-m text-skip-neutral-900">
+          <p className="font-body text-body-m text-skip-neutral-900 max-w-[480px] mx-auto">
             Explore nossa biblioteca de templates e personalize o que mais fizer sentido para a sua
             operação
           </p>
