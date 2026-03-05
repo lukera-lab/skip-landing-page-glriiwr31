@@ -18994,6 +18994,18 @@ var Clock = createLucideIcon("clock", [["circle", {
 	d: "M12 6v6l4 2",
 	key: "mmk7yg"
 }]]);
+var Copy = createLucideIcon("copy", [["rect", {
+	width: "14",
+	height: "14",
+	x: "8",
+	y: "8",
+	rx: "2",
+	ry: "2",
+	key: "17jyea"
+}], ["path", {
+	d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",
+	key: "zix9uf"
+}]]);
 var Database = createLucideIcon("database", [
 	["ellipse", {
 		cx: "12",
@@ -19129,18 +19141,6 @@ var Link$1 = createLucideIcon("link", [["path", {
 var LoaderCircle = createLucideIcon("loader-circle", [["path", {
 	d: "M21 12a9 9 0 1 1-6.219-8.56",
 	key: "13zald"
-}]]);
-var Lock = createLucideIcon("lock", [["rect", {
-	width: "18",
-	height: "11",
-	x: "3",
-	y: "11",
-	rx: "2",
-	ry: "2",
-	key: "1w4ew1"
-}], ["path", {
-	d: "M7 11V7a5 5 0 0 1 10 0v4",
-	key: "fwvmzm"
 }]]);
 var Send = createLucideIcon("send", [["path", {
 	d: "M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z",
@@ -26089,50 +26089,76 @@ function Step3Mockup() {
 	});
 }
 function Step4Mockup() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "w-full h-[280px] bg-white rounded-xl border border-skip-neutral-1350 shadow-sm p-6 flex flex-col items-center justify-center relative overflow-hidden",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "w-full max-w-sm rounded-xl border border-skip-neutral-1350 shadow-lg bg-white overflow-hidden",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "h-12 bg-skip-neutral-1450 border-b border-skip-neutral-1350 flex items-center px-4 gap-3",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex gap-1.5",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-3 h-3 rounded-full bg-red-400" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-3 h-3 rounded-full bg-yellow-400" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-3 h-3 rounded-full bg-green-400" })
-					]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "flex-1 flex justify-center",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "bg-white border border-skip-neutral-1350 rounded-md px-3 py-1 flex items-center gap-2 text-xs font-mono text-skip-neutral-800 shadow-sm w-full max-w-[240px]",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Lock, { className: "w-3 h-3 text-green-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "truncate",
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-blue-violet-600/10 blur-[60px] rounded-full pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex flex-col items-center z-10 w-full px-6",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "relative flex items-center justify-center mb-5",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute w-12 h-12 bg-blue-violet-500/40 blur-[16px] rounded-full" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-14 h-14 bg-skip-neutral-500 border border-skip-neutral-600 rounded-2xl flex items-center justify-center relative z-10 shadow-[0_8px_16px_rgba(0,0,0,0.2)]",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, { className: "w-6 h-6 text-blue-violet-400" })
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+					className: "text-xl sm:text-2xl font-bold text-white tracking-tight mb-6",
+					children: "Sistema Online"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "w-full max-w-[280px] sm:max-w-[320px] h-11 sm:h-12 bg-skip-neutral-500 rounded-xl border border-skip-neutral-600 flex items-center justify-between px-3 sm:px-4 shadow-inner mb-6",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex items-center gap-2 overflow-hidden",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "font-mono text-xs sm:text-sm text-skip-neutral-900 truncate",
 							children: "suaempresa.skip.app"
-						})]
-					})
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "p-8 flex flex-col items-center text-center",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-4",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, { className: "w-8 h-8 text-green-600" })
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-						className: "font-heading font-semibold text-lg mb-2 text-skip-neutral-100",
-						children: "Sistema Online!"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 bg-skip-neutral-1450 px-3 py-1 rounded-full border border-skip-neutral-1350",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2 h-2 rounded-full bg-green-500 animate-pulse" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-xs font-medium text-skip-neutral-800",
+						})
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4 text-skip-neutral-900 shrink-0 hover:text-white transition-colors cursor-pointer" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-green-500/10 border border-green-500/20",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-green-400/80" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-[10px] sm:text-xs font-medium text-green-400/80",
 							children: "SSL Ativo"
 						})]
-					})
-				]
-			})]
-		})
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-blue-violet-500/10 border border-blue-violet-500/20",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-blue-violet-400/80" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-[10px] sm:text-xs font-medium text-blue-violet-400/80",
+							children: "Hospedagem otimizada"
+						})]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-5 border-t border-skip-neutral-600/50 w-full max-w-[280px] sm:max-w-[320px] justify-center",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex -space-x-2",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+								src: "https://img.usecurling.com/ppl/thumbnail?gender=female&seed=1",
+								alt: "Team member 1",
+								className: "w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+								src: "https://img.usecurling.com/ppl/thumbnail?gender=male&seed=2",
+								alt: "Team member 2",
+								className: "w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+								src: "https://img.usecurling.com/ppl/thumbnail?gender=female&seed=3",
+								alt: "Team member 3",
+								className: "w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
+							})
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-[11px] sm:text-xs font-medium text-skip-neutral-800",
+						children: "Compartilhado com seu time"
+					})]
+				})
+			]
+		})]
 	});
 }
 var mockskip_97ef9_default = "/assets/mockskip-97ef9-CocZIMDm.webp";
@@ -26512,4 +26538,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DgWeOzR8.js.map
+//# sourceMappingURL=index-B-Gtkd79.js.map

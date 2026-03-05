@@ -10,6 +10,7 @@ import {
   BarChart3,
   Users,
   Clock,
+  Copy,
 } from 'lucide-react'
 import { Progress } from '@/components/ui/progress'
 import { cn } from '@/lib/utils'
@@ -356,32 +357,69 @@ export function Step3Mockup() {
 
 export function Step4Mockup() {
   return (
-    <div className="w-full h-[280px] bg-white rounded-xl border border-skip-neutral-1350 shadow-sm p-6 flex flex-col items-center justify-center relative overflow-hidden">
-      <div className="w-full max-w-sm rounded-xl border border-skip-neutral-1350 shadow-lg bg-white overflow-hidden">
-        <div className="h-12 bg-skip-neutral-1450 border-b border-skip-neutral-1350 flex items-center px-4 gap-3">
-          <div className="flex gap-1.5">
-            <div className="w-3 h-3 rounded-full bg-red-400" />
-            <div className="w-3 h-3 rounded-full bg-yellow-400" />
-            <div className="w-3 h-3 rounded-full bg-green-400" />
-          </div>
-          <div className="flex-1 flex justify-center">
-            <div className="bg-white border border-skip-neutral-1350 rounded-md px-3 py-1 flex items-center gap-2 text-xs font-mono text-skip-neutral-800 shadow-sm w-full max-w-[240px]">
-              <Lock className="w-3 h-3 text-green-600" />
-              <span className="truncate">suaempresa.skip.app</span>
-            </div>
+    <div className="w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl">
+      {/* Background subtle glow for atmosphere */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-blue-violet-600/10 blur-[60px] rounded-full pointer-events-none" />
+
+      <div className="flex flex-col items-center z-10 w-full px-6">
+        {/* Celebration Header */}
+        <div className="relative flex items-center justify-center mb-5">
+          <div className="absolute w-12 h-12 bg-blue-violet-500/40 blur-[16px] rounded-full" />
+          <div className="w-14 h-14 bg-skip-neutral-500 border border-skip-neutral-600 rounded-2xl flex items-center justify-center relative z-10 shadow-[0_8px_16px_rgba(0,0,0,0.2)]">
+            <LinkIcon className="w-6 h-6 text-blue-violet-400" />
           </div>
         </div>
-        <div className="p-8 flex flex-col items-center text-center">
-          <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-4">
-            <LinkIcon className="w-8 h-8 text-green-600" />
+
+        <h4 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-6">
+          Sistema Online
+        </h4>
+
+        {/* Deployment URL Display */}
+        <div className="w-full max-w-[280px] sm:max-w-[320px] h-11 sm:h-12 bg-skip-neutral-500 rounded-xl border border-skip-neutral-600 flex items-center justify-between px-3 sm:px-4 shadow-inner mb-6">
+          <div className="flex items-center gap-2 overflow-hidden">
+            <span className="font-mono text-xs sm:text-sm text-skip-neutral-900 truncate">
+              suaempresa.skip.app
+            </span>
           </div>
-          <h4 className="font-heading font-semibold text-lg mb-2 text-skip-neutral-100">
-            Sistema Online!
-          </h4>
-          <div className="flex items-center gap-2 bg-skip-neutral-1450 px-3 py-1 rounded-full border border-skip-neutral-1350">
-            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-xs font-medium text-skip-neutral-800">SSL Ativo</span>
+          <Copy className="w-4 h-4 text-skip-neutral-900 shrink-0 hover:text-white transition-colors cursor-pointer" />
+        </div>
+
+        {/* Status Badges */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8">
+          <div className="flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-green-500/10 border border-green-500/20">
+            <div className="w-1.5 h-1.5 rounded-full bg-green-400/80" />
+            <span className="text-[10px] sm:text-xs font-medium text-green-400/80">SSL Ativo</span>
           </div>
+          <div className="flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-blue-violet-500/10 border border-blue-violet-500/20">
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-violet-400/80" />
+            <span className="text-[10px] sm:text-xs font-medium text-blue-violet-400/80">
+              Hospedagem otimizada
+            </span>
+          </div>
+        </div>
+
+        {/* Collaboration Footer */}
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-5 border-t border-skip-neutral-600/50 w-full max-w-[280px] sm:max-w-[320px] justify-center">
+          <div className="flex -space-x-2">
+            <img
+              src="https://img.usecurling.com/ppl/thumbnail?gender=female&seed=1"
+              alt="Team member 1"
+              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
+            />
+            <img
+              src="https://img.usecurling.com/ppl/thumbnail?gender=male&seed=2"
+              alt="Team member 2"
+              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
+            />
+            <img
+              src="https://img.usecurling.com/ppl/thumbnail?gender=female&seed=3"
+              alt="Team member 3"
+              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
+            />
+          </div>
+          <span className="text-[11px] sm:text-xs font-medium text-skip-neutral-800">
+            Compartilhado com seu time
+          </span>
         </div>
       </div>
     </div>
