@@ -18966,20 +18966,6 @@ var Sparkles = createLucideIcon("sparkles", [
 		key: "6kqj1y"
 	}]
 ]);
-var TrendingDown = createLucideIcon("trending-down", [["path", {
-	d: "M16 17h6v-6",
-	key: "t6n2it"
-}], ["path", {
-	d: "m22 17-8.5-8.5-5 5L2 7",
-	key: "x473p"
-}]]);
-var TrendingUp = createLucideIcon("trending-up", [["path", {
-	d: "M16 7h6v6",
-	key: "box55l"
-}], ["path", {
-	d: "m22 7-8.5 8.5-5-5L2 17",
-	key: "1t1m79"
-}]]);
 var X = createLucideIcon("x", [["path", {
 	d: "M18 6 6 18",
 	key: "1bl5f8"
@@ -24169,7 +24155,7 @@ var ANTES_ROWS = [
 		min: "50",
 		forn: "M-Corp",
 		status: "Falta",
-		eBg: "bg-red-100 text-red-700 font-medium"
+		isError: true
 	},
 	{
 		id: 2,
@@ -24178,8 +24164,7 @@ var ANTES_ROWS = [
 		qtd: "145",
 		min: "150",
 		forn: "Fer A",
-		status: "Atenção",
-		wBg: "bg-yellow-100"
+		status: "Atenção"
 	},
 	{
 		id: 3,
@@ -24198,7 +24183,7 @@ var ANTES_ROWS = [
 		min: "100",
 		forn: "#N/A",
 		status: "ERRO",
-		rowErr: true
+		isRowError: true
 	},
 	{
 		id: 5,
@@ -24210,35 +24195,6 @@ var ANTES_ROWS = [
 		status: "Comprar"
 	}
 ];
-var DEPOIS_ROWS = [
-	{
-		prod: "Parafuso Sextavado",
-		est: "12",
-		max: "50",
-		status: "Repor Urgente",
-		badge: "bg-red-50 text-red-600 border-red-200",
-		trend: "down",
-		tc: "text-red-500"
-	},
-	{
-		prod: "Porca M8",
-		est: "145",
-		max: "150",
-		status: "Atenção",
-		badge: "bg-yellow-50 text-yellow-600 border-yellow-200",
-		trend: "down",
-		tc: "text-yellow-500"
-	},
-	{
-		prod: "Arruela Lisa",
-		est: "890",
-		max: "200",
-		status: "Saudável",
-		badge: "bg-green-50 text-green-600 border-green-200",
-		trend: "up",
-		tc: "text-green-500"
-	}
-];
 function InventoryAntes() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex flex-col flex-1 w-full animate-fade-in",
@@ -24246,10 +24202,10 @@ function InventoryAntes() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "mb-6",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-lg font-semibold text-skip-neutral-900",
+					className: "text-lg font-semibold text-skip-neutral-400",
 					children: "Processo Padrão"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-base text-skip-neutral-500",
+					className: "text-base text-skip-neutral-800",
 					children: "Controle de Inventário em Planilhas"
 				})]
 			}),
@@ -24262,116 +24218,167 @@ function InventoryAntes() {
 				].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 					className: "flex items-start gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-0.5 rounded-full bg-red-100 p-1 shrink-0",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-600" })
+						className: "mt-0.5 rounded-full bg-red-50 p-1 shrink-0",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-700 leading-tight",
+						className: "text-sm text-skip-neutral-600 leading-tight",
 						children: item
 					})]
 				}, i))
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mt-auto border border-skip-neutral-200 rounded-md bg-white overflow-hidden text-[10px] flex flex-col shadow-sm",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "bg-skip-neutral-100 border-b border-skip-neutral-200 flex items-center px-2 py-1 gap-2 text-skip-neutral-500 font-mono",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex gap-1",
+				className: "mt-auto border border-skip-neutral-1350 rounded-lg bg-white overflow-hidden text-[10px] flex flex-col shadow-sm",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "flex-1 overflow-x-auto overflow-y-hidden",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
+						className: "w-full text-left border-collapse whitespace-nowrap min-w-max",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+							className: "bg-skip-neutral-1450 border-b border-skip-neutral-1350 text-skip-neutral-600",
 							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2 h-2 rounded-full bg-red-400" }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2 h-2 rounded-full bg-yellow-400" }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2 h-2 rounded-full bg-green-400" })
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", { className: "border-r border-skip-neutral-1350 p-1.5 font-normal w-6 text-center" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "border-r border-skip-neutral-1350 p-1.5 font-normal",
+									children: "Produto"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "border-r border-skip-neutral-1350 p-1.5 font-normal",
+									children: "Cód"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "border-r border-skip-neutral-1350 p-1.5 font-normal text-right",
+									children: "Qtd"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "border-r border-skip-neutral-1350 p-1.5 font-normal text-right",
+									children: "Est. Min"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "border-r border-skip-neutral-1350 p-1.5 font-normal",
+									children: "Fornecedor"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "p-1.5 font-normal",
+									children: "Status"
+								})
 							]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "inventario_final_v3.xlsx" })]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "flex-1 overflow-x-auto overflow-y-hidden",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
-							className: "w-full text-left border-collapse whitespace-nowrap min-w-max",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
-								className: "bg-skip-neutral-50 border-b border-skip-neutral-200 text-skip-neutral-600",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", { className: "border-r border-skip-neutral-200 p-1 font-normal w-6 text-center" }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-										className: "border-r border-skip-neutral-200 p-1 font-normal",
-										children: "Produto"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-										className: "border-r border-skip-neutral-200 p-1 font-normal",
-										children: "Cód"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-										className: "border-r border-skip-neutral-200 p-1 font-normal text-right",
-										children: "Qtd"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-										className: "border-r border-skip-neutral-200 p-1 font-normal text-right",
-										children: "Est. Min"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-										className: "border-r border-skip-neutral-200 p-1 font-normal",
-										children: "Fornecedor"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-										className: "p-1 font-normal",
-										children: "Status"
-									})
-								]
-							}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tbody", {
-								className: "text-skip-neutral-800",
-								children: ANTES_ROWS.map((r$1) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
-									className: `border-b border-skip-neutral-100 ${r$1.rowErr ? "bg-red-50/50" : ""}`,
+						}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tbody", {
+							className: "text-skip-neutral-500",
+							children: ANTES_ROWS.map((r$1) => {
+								const rowBg = r$1.isRowError ? "bg-[#FEF2F2]" : "bg-white";
+								const errCell = r$1.isError || r$1.isRowError ? "bg-[#FEF2F2] text-red-600 font-medium" : "";
+								return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+									className: `border-b border-skip-neutral-1350 ${rowBg}`,
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-											className: "border-r border-skip-neutral-200 p-1 bg-skip-neutral-50 text-center text-skip-neutral-400",
+											className: "border-r border-skip-neutral-1350 p-1.5 bg-skip-neutral-1450 text-center text-skip-neutral-800",
 											children: r$1.id
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-											className: `border-r border-skip-neutral-200 p-1 ${r$1.prod === "#REF!" ? "text-red-500 font-mono" : ""}`,
+											className: `border-r border-skip-neutral-1350 p-1.5 ${r$1.prod === "#REF!" ? "text-red-500 font-mono" : ""}`,
 											children: r$1.prod
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-											className: "border-r border-skip-neutral-200 p-1",
+											className: "border-r border-skip-neutral-1350 p-1.5",
 											children: r$1.cod
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-											className: `border-r border-skip-neutral-200 p-1 text-right ${r$1.eBg || ""} ${r$1.qtd === "#VALOR!" ? "text-red-500 font-mono" : ""}`,
+											className: `border-r border-skip-neutral-1350 p-1.5 text-right ${errCell} ${r$1.qtd === "#VALOR!" ? "text-red-500 font-mono" : ""}`,
 											children: r$1.qtd
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-											className: `border-r border-skip-neutral-200 p-1 text-right ${r$1.wBg || ""}`,
+											className: "border-r border-skip-neutral-1350 p-1.5 text-right",
 											children: r$1.min
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-											className: "border-r border-skip-neutral-200 p-1 text-skip-neutral-500",
+											className: "border-r border-skip-neutral-1350 p-1.5 text-skip-neutral-800",
 											children: r$1.forn
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-											className: `p-1 ${["Falta", "ERRO"].includes(r$1.status) ? "text-red-600 font-medium" : ["Atenção", "Comprar"].includes(r$1.status) ? "text-yellow-600 font-medium" : "text-green-600 font-medium"}`,
+											className: `p-1.5 ${r$1.isError || r$1.isRowError ? "text-red-600 font-medium" : "text-skip-neutral-600"}`,
 											children: r$1.status
 										})
 									]
-								}, r$1.id))
-							})]
-						})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "bg-skip-neutral-100 border-t border-skip-neutral-200 flex overflow-x-auto no-scrollbar",
-						children: [
-							"Plan1",
-							"Backup",
-							"FINAL_v3",
-							"NÃO MEXER"
-						].map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: `px-3 py-1.5 border-r border-skip-neutral-200 whitespace-nowrap ${i === 2 ? "bg-white font-medium text-skip-neutral-900 border-b-2 border-b-blue-500" : "text-skip-neutral-500"}`,
-							children: t
-						}, t))
+								}, r$1.id);
+							})
+						})]
 					})
-				]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "bg-skip-neutral-1450 border-t border-skip-neutral-1350 flex overflow-x-auto no-scrollbar",
+					children: [
+						"Plan1",
+						"Backup",
+						"FINAL_v3",
+						"NÃO MEXER"
+					].map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: `px-3 py-1.5 border-r border-skip-neutral-1350 whitespace-nowrap ${i === 2 ? "bg-white font-medium text-skip-neutral-400 border-b-2 border-b-skip-neutral-1100" : "text-skip-neutral-800"}`,
+						children: t
+					}, t))
+				})]
 			})
 		]
 	});
 }
+function Sparkline({ data }) {
+	const min$1 = Math.min(...data), range = Math.max(...data) - min$1 || 1;
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
+		width: "48",
+		height: "16",
+		className: "overflow-visible",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("polyline", {
+			fill: "none",
+			stroke: "currentColor",
+			strokeWidth: "1.5",
+			strokeLinecap: "round",
+			strokeLinejoin: "round",
+			points: data.map((d, i) => `${i / (data.length - 1) * 48},${16 - (d - min$1) / range * 16}`).join(" "),
+			className: "text-blue-violet-400"
+		})
+	});
+}
+var DEPOIS_ROWS = [
+	{
+		prod: "Parafuso Sextavado",
+		est: "12",
+		max: "50",
+		status: "Repor Urgente",
+		badge: "bg-[#FEF2F2] text-red-700 border-red-100",
+		sparkline: [
+			20,
+			18,
+			15,
+			14,
+			12
+		]
+	},
+	{
+		prod: "Porca M8",
+		est: "145",
+		max: "150",
+		status: "Atenção",
+		badge: "bg-[#FEF2F2] text-red-700 border-red-100",
+		sparkline: [
+			150,
+			148,
+			147,
+			146,
+			145
+		]
+	},
+	{
+		prod: "Arruela Lisa",
+		est: "890",
+		max: "200",
+		status: "Saudável",
+		badge: "bg-green-50 text-green-700 border-green-100",
+		sparkline: [
+			850,
+			860,
+			875,
+			880,
+			890
+		]
+	}
+];
 function InventoryDepois() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex flex-col flex-1 w-full animate-fade-in",
@@ -24379,10 +24386,10 @@ function InventoryDepois() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "mb-6",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-lg font-semibold text-skip-neutral-900",
+					className: "text-lg font-semibold text-skip-neutral-400",
 					children: "Sistema Skip"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-base text-blue-violet-600",
+					className: "text-base text-blue-violet-500",
 					children: "Inventory OS"
 				})]
 			}),
@@ -24395,31 +24402,31 @@ function InventoryDepois() {
 				].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 					className: "flex items-start gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-0.5 rounded-full bg-blue-violet-100 p-1 shrink-0",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-600" })
+						className: "mt-0.5 rounded-full bg-blue-violet-50 p-1 shrink-0",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-700 leading-tight",
+						className: "text-sm text-skip-neutral-600 leading-tight",
 						children: item
 					})]
 				}, i))
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mt-auto bg-white border border-blue-violet-100 rounded-xl p-3 sm:p-4 shadow-sm flex flex-col gap-4",
+				className: "mt-auto bg-white border border-skip-neutral-1350 rounded-xl p-3 sm:p-4 shadow-sm flex flex-col gap-4",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "grid grid-cols-3 gap-2",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "bg-skip-neutral-50 rounded-lg p-2 flex flex-col",
+							className: "bg-white rounded-lg p-2.5 flex flex-col border border-skip-neutral-1350 shadow-sm",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-[10px] text-skip-neutral-500 uppercase tracking-wider font-medium",
+								className: "text-[10px] text-skip-neutral-800 uppercase tracking-wider font-medium",
 								children: "Itens"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-lg font-semibold text-skip-neutral-900",
+								className: "text-lg font-semibold text-skip-neutral-400",
 								children: "247"
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "bg-red-50 rounded-lg p-2 flex flex-col border border-red-100",
+							className: "bg-[#FEF2F2] rounded-lg p-2.5 flex flex-col border border-red-100 shadow-sm",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 								className: "text-[10px] text-red-600 uppercase tracking-wider font-medium flex items-center gap-1",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleAlert, { className: "w-3 h-3" }), " Alertas"]
@@ -24429,71 +24436,71 @@ function InventoryDepois() {
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "bg-green-50 rounded-lg p-2 flex flex-col border border-green-100",
+							className: "bg-white rounded-lg p-2.5 flex flex-col border border-skip-neutral-1350 shadow-sm",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-[10px] text-green-600 uppercase tracking-wider font-medium",
+								className: "text-[10px] text-skip-neutral-800 uppercase tracking-wider font-medium",
 								children: "Rupturas"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-lg font-semibold text-green-700",
+								className: "text-lg font-semibold text-skip-neutral-400",
 								children: "0"
 							})]
 						})
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "text-[11px] w-full border border-skip-neutral-100 rounded-lg overflow-x-auto",
+					className: "text-[11px] w-full border border-skip-neutral-1350 rounded-lg overflow-x-auto shadow-sm",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
 						className: "w-full text-left border-collapse whitespace-nowrap min-w-max",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
-							className: "bg-skip-neutral-50 border-b border-skip-neutral-100 text-skip-neutral-500",
+							className: "bg-skip-neutral-1450 border-b border-skip-neutral-1350 text-skip-neutral-600",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-									className: "p-2 font-medium",
+									className: "p-2.5 font-medium",
 									children: "Produto"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-									className: "p-2 font-medium text-right",
+									className: "p-2.5 font-medium text-right",
 									children: "Estoque"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-									className: "p-2 font-medium text-center",
+									className: "p-2.5 font-medium text-center",
 									children: "Status"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-									className: "p-2 font-medium text-right",
+									className: "p-2.5 font-medium text-right",
 									children: "Tendência"
 								})
 							]
 						}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tbody", {
-							className: "text-skip-neutral-700",
+							className: "bg-white text-skip-neutral-500",
 							children: DEPOIS_ROWS.map((r$1, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
-								className: "border-b border-skip-neutral-50 last:border-0",
+								className: "border-b border-skip-neutral-1350 last:border-0",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-										className: "p-2 font-medium",
+										className: "p-2.5 font-medium text-skip-neutral-400",
 										children: r$1.prod
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
-										className: "p-2 text-right",
+										className: "p-2.5 text-right",
 										children: [
 											r$1.est,
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-												className: "text-skip-neutral-400",
+												className: "text-skip-neutral-800",
 												children: ["/ ", r$1.max]
 											})
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-										className: "p-2 text-center",
+										className: "p-2.5 text-center",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
 											variant: "outline",
-											className: `text-[9px] h-4 px-1.5 font-normal ${r$1.badge}`,
+											className: `text-[9px] h-5 px-2 font-medium ${r$1.badge}`,
 											children: r$1.status
 										})
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-										className: "p-2 flex justify-end",
-										children: r$1.trend === "up" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingUp, { className: `w-3 h-3 ${r$1.tc}` }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingDown, { className: `w-3 h-3 ${r$1.tc}` })
+										className: "p-2.5 flex justify-end items-center",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkline, { data: r$1.sparkline })
 									})
 								]
 							}, i))
@@ -24532,7 +24539,7 @@ function DemonstrationTabs() {
 				className: "bg-transparent h-auto p-0 border-b border-skip-neutral-1350 rounded-none w-full max-w-[600px] justify-between sm:justify-center sm:gap-12 mb-10 overflow-x-auto flex-nowrap",
 				children: TAB_ITEMS.map((tab) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TabsTrigger, {
 					value: tab.id,
-					className: "rounded-none px-2 sm:px-4 py-4 font-display font-medium text-base sm:text-lg text-skip-neutral-500 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:text-blue-violet-600 data-[state=active]:border-b-2 data-[state=active]:border-blue-violet-600 hover:text-skip-neutral-900 transition-colors whitespace-nowrap",
+					className: "rounded-none px-2 sm:px-4 py-4 font-display font-medium text-base sm:text-lg text-skip-neutral-800 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:text-blue-violet-600 data-[state=active]:border-b-2 data-[state=active]:border-blue-violet-600 hover:text-skip-neutral-400 transition-colors whitespace-nowrap",
 					children: tab.label
 				}, tab.id))
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -24550,11 +24557,11 @@ function ComparisonLayout({ tabId }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "grid grid-cols-1 md:grid-cols-2 gap-6 w-full",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "rounded-2xl border border-red-200 bg-skip-neutral-1500 p-6 sm:p-8 flex flex-col min-h-[350px] sm:min-h-[450px] transition-all duration-500 hover:shadow-sm overflow-hidden",
+			className: "rounded-2xl border border-skip-neutral-1350 bg-white p-6 sm:p-8 flex flex-col min-h-[350px] sm:min-h-[450px] transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "mb-6",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-[11px] sm:text-xs font-bold tracking-[0.1em] text-red-600 uppercase",
+					className: "inline-flex items-center rounded-full bg-red-50 px-3 py-1 text-[11px] sm:text-xs font-bold tracking-[0.1em] text-red-500 uppercase",
 					children: "Antes"
 				})
 			}), tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryAntes, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
@@ -24562,11 +24569,11 @@ function ComparisonLayout({ tabId }) {
 				type: "antes"
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "rounded-2xl border border-blue-violet-200 bg-gradient-to-b from-white to-blue-violet-50 p-6 sm:p-8 flex flex-col min-h-[350px] sm:min-h-[450px] shadow-lg shadow-blue-violet-900/5 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden",
+			className: "rounded-2xl border border-skip-neutral-1350 bg-white p-6 sm:p-8 flex flex-col min-h-[350px] sm:min-h-[450px] shadow-sm transition-all duration-500 hover:shadow-md overflow-hidden",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "mb-6",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "inline-flex items-center rounded-full bg-blue-violet-100 px-3 py-1 text-[11px] sm:text-xs font-bold tracking-[0.1em] text-blue-violet-700 uppercase",
+					className: "inline-flex items-center rounded-full bg-blue-violet-50 px-3 py-1 text-[11px] sm:text-xs font-bold tracking-[0.1em] text-blue-violet-500 uppercase",
 					children: "Depois"
 				})
 			}), tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryDepois, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
@@ -24579,12 +24586,12 @@ function ComparisonLayout({ tabId }) {
 function Placeholder({ tabId, type }) {
 	const isAntes = type === "antes";
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: `flex-1 w-full border border-dashed rounded-xl flex flex-col items-center justify-center p-6 text-center ${isAntes ? "border-red-200/60 bg-white/40" : "border-blue-violet-200/60 bg-white/60 backdrop-blur-sm shadow-sm"}`,
+		className: "flex-1 w-full border border-dashed rounded-xl flex flex-col items-center justify-center p-6 text-center border-skip-neutral-1300 bg-skip-neutral-1500",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: `w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 ${isAntes ? "bg-red-50" : "bg-blue-violet-100"}`,
-			children: isAntes ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-5 h-5 sm:w-6 sm:h-6 text-red-400" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 sm:w-6 sm:h-6 text-blue-violet-600" })
+			className: `w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 ${isAntes ? "bg-red-50" : "bg-blue-violet-50"}`,
+			children: isAntes ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-5 h-5 sm:w-6 sm:h-6 text-red-400" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 sm:w-6 sm:h-6 text-blue-violet-400" })
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-			className: `font-body text-sm sm:text-base ${isAntes ? "text-skip-neutral-500" : "text-blue-violet-700"}`,
+			className: "font-body text-sm sm:text-base text-skip-neutral-800",
 			children: [
 				"Área reservada para demonstração visual",
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
@@ -24860,4 +24867,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B512NmpN.js.map
+//# sourceMappingURL=index-ChhGxWKo.js.map
