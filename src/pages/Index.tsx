@@ -3,6 +3,7 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import { DemonstrationTabs } from '@/components/home/DemonstrationTabs'
+import { PlatformSection } from '@/components/home/PlatformSection'
 
 const LOGOS = [
   { name: 'microsoft', width: 'w-24' },
@@ -117,8 +118,11 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Platform Section */}
+      <PlatformSection />
+
       {/* Demonstration Section */}
-      <section className="w-full py-24 px-5 relative z-10">
+      <section className="w-full py-24 px-5 relative z-10 bg-skip-neutral-1550">
         <div className="max-w-[1100px] mx-auto flex flex-col items-center text-center">
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
             DEMONSTRAÇÃO
