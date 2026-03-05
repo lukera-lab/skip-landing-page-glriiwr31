@@ -4850,14 +4850,11 @@ h6{
   .lg\:col-span-2{
     grid-column: span 2 / span 2;
   }
-  .lg\:col-span-3{
-    grid-column: span 3 / span 3;
-  }
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .lg\:grid-cols-5{
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+  .lg\:grid-cols-\[45fr_55fr\]{
+    grid-template-columns: 45fr 55fr;
   }
   .lg\:gap-12{
     gap: 3rem;
