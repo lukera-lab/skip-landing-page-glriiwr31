@@ -24576,9 +24576,9 @@ function ComparisonLayout({ tabId }) {
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "flex flex-col gap-4 h-full",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "flex justify-start",
+				className: "flex justify-center",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
-					className: "bg-red-50 text-red-800 hover:bg-red-50 border-red-100 shadow-none font-semibold px-3 py-1 text-xs rounded-full font-body",
+					className: "bg-red-50 text-red-800 hover:bg-red-50 border-red-100 shadow-none font-semibold px-5 py-1.5 text-sm rounded-full font-body",
 					children: "Antes"
 				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -24591,9 +24591,9 @@ function ComparisonLayout({ tabId }) {
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "flex flex-col gap-4 h-full",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "flex justify-start",
+				className: "flex justify-center",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
-					className: "bg-blue-violet-50 text-blue-violet-800 hover:bg-blue-violet-50 border-blue-violet-100 shadow-none font-semibold px-3 py-1 text-xs rounded-full font-body",
+					className: "bg-blue-violet-50 text-blue-violet-800 hover:bg-blue-violet-50 border-blue-violet-100 shadow-none font-semibold px-5 py-1.5 text-sm rounded-full font-body",
 					children: "Depois"
 				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -24893,4 +24893,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BHCsqLk5.js.map
+//# sourceMappingURL=index-CugijI3j.js.map

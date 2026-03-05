@@ -49,8 +49,8 @@ function ComparisonLayout({ tabId }: { tabId: string }) {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full items-stretch">
       {/* Antes Card Container */}
       <div className="flex flex-col gap-4 h-full">
-        <div className="flex justify-start">
-          <Badge className="bg-red-50 text-red-800 hover:bg-red-50 border-red-100 shadow-none font-semibold px-3 py-1 text-xs rounded-full font-body">
+        <div className="flex justify-center">
+          <Badge className="bg-red-50 text-red-800 hover:bg-red-50 border-red-100 shadow-none font-semibold px-5 py-1.5 text-sm rounded-full font-body">
             Antes
           </Badge>
         </div>
@@ -61,8 +61,8 @@ function ComparisonLayout({ tabId }: { tabId: string }) {
 
       {/* Depois Card Container */}
       <div className="flex flex-col gap-4 h-full">
-        <div className="flex justify-start">
-          <Badge className="bg-blue-violet-50 text-blue-violet-800 hover:bg-blue-violet-50 border-blue-violet-100 shadow-none font-semibold px-3 py-1 text-xs rounded-full font-body">
+        <div className="flex justify-center">
+          <Badge className="bg-blue-violet-50 text-blue-violet-800 hover:bg-blue-violet-50 border-blue-violet-100 shadow-none font-semibold px-5 py-1.5 text-sm rounded-full font-body">
             Depois
           </Badge>
         </div>
