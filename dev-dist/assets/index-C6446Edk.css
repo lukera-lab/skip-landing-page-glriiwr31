@@ -1135,8 +1135,8 @@ h6{
 .h-\[320px\]{
   height: 320px;
 }
-.h-\[800px\]{
-  height: 800px;
+.h-\[600px\]{
+  height: 600px;
 }
 .h-\[var\(--radix-navigation-menu-viewport-height\)\]{
   height: var(--radix-navigation-menu-viewport-height);
@@ -2544,6 +2544,10 @@ h6{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.py-32{
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2574,9 +2578,6 @@ h6{
 }
 .pb-3{
   padding-bottom: 0.75rem;
-}
-.pb-32{
-  padding-bottom: 8rem;
 }
 .pb-4{
   padding-bottom: 1rem;
@@ -2613,9 +2614,6 @@ h6{
 }
 .pt-2{
   padding-top: 0.5rem;
-}
-.pt-24{
-  padding-top: 6rem;
 }
 .pt-3{
   padding-top: 0.75rem;
@@ -2679,6 +2677,9 @@ h6{
 }
 .text-\[28px\]{
   font-size: 28px;
+}
+.text-\[32px\]{
+  font-size: 32px;
 }
 .text-\[40px\]{
   font-size: 40px;
@@ -4777,6 +4778,9 @@ h6{
   .md\:h-8{
     height: 2rem;
   }
+  .md\:h-\[800px\]{
+    height: 800px;
+  }
   .md\:min-h-0{
     min-height: 0px;
   }
@@ -4857,9 +4861,6 @@ h6{
   }
   .md\:pr-12{
     padding-right: 3rem;
-  }
-  .md\:pt-32{
-    padding-top: 8rem;
   }
   .md\:text-left{
     text-align: left;

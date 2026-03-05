@@ -27536,7 +27536,7 @@ function Index() {
 		className: "flex flex-col min-h-screen",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-				className: "relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full h-[800px]",
+				className: "relative flex flex-col items-center py-32 w-full h-[600px] md:h-[800px]",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
@@ -27557,7 +27557,7 @@ function Index() {
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-							className: "font-display text-4xl sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full",
+							className: "font-display text-[32px] sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full",
 							style: { animationFillMode: "both" },
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -27772,4 +27772,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CqgF6uRh.js.map
+//# sourceMappingURL=index-BPhxw7Jd.js.map

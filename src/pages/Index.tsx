@@ -21,7 +21,7 @@ export default function Index() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full h-[800px]">
+      <section className="relative flex flex-col items-center py-32 w-full h-[600px] md:h-[800px]">
         {/* Background wrapper with fade-out mask */}
         <div className="absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden">
           {/* Hero Background Image */}
@@ -41,7 +41,7 @@ export default function Index() {
 
           {/* Main Headline */}
           <h1
-            className="font-display text-4xl sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full"
+            className="font-display text-[32px] sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full"
             style={{ animationFillMode: 'both' }}
           >
             <span className="inline-block">O criador de Sistemas Internos</span>{' '}
