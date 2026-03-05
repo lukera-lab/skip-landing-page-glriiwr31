@@ -10,8 +10,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          'flex bg-gradient-primary-btn text-white shadow-primary-btn-inner border border-white/20 rounded-[90px] hover:opacity-90',
+        default: 'flex bg-gradient-primary-btn text-white rounded-[90px] hover:opacity-90',
         destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:
           'border border-input bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground',

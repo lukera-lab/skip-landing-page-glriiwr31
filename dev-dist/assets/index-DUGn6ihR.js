@@ -23734,7 +23734,7 @@ function getElementRef(element) {
 var buttonVariants = cva("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium font-display ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0", {
 	variants: {
 		variant: {
-			default: "flex bg-gradient-primary-btn text-white shadow-primary-btn-inner border border-white/20 rounded-[90px] hover:opacity-90",
+			default: "flex bg-gradient-primary-btn text-white rounded-[90px] hover:opacity-90",
 			destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
 			outline: "border border-input bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground",
 			secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
@@ -23789,105 +23789,112 @@ var LOGOS = [
 	}
 ];
 function Index() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "flex-1 flex flex-col items-center pt-20 md:pt-32 pb-16 px-5 sm:px-6 lg:px-8 overflow-hidden",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "max-w-[1100px] w-full flex flex-col items-center text-center mx-auto relative z-10",
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-100/40 rounded-full blur-[100px] -z-10 pointer-events-none" }),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "flex items-center justify-center mb-8 animate-fade-in-down",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-						src: logo_skip_black_85aeb_default,
-						alt: "Skip Logo",
-						className: "h-12 w-auto drop-shadow-sm"
-					})
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-					className: "font-display text-[40px] leading-[1.1] font-bold sm:text-h1 tracking-tight text-skip-neutral-100 mb-4 animate-fade-in-up w-full sm:min-h-[141px]",
-					style: { animationFillMode: "both" },
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "inline-block",
-							children: "O criador de Sistemas Internos"
-						}),
-						" ",
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", { className: "hidden md:block" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-							className: "inline-block",
-							children: [
-								"mais",
-								" ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600",
-									children: "fácil e intuitivo"
-								}),
-								" ",
-								"do mundo"
-							]
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex flex-col min-h-screen",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+			className: "relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_60%,transparent_100%)] pointer-events-none",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-violet-100/50 rounded-full blur-[80px] sm:blur-[100px]" })
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "max-w-[1100px] w-full flex flex-col items-center text-center mx-auto px-5 relative z-10",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex items-center justify-center mb-10 animate-fade-in-down",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: logo_skip_black_85aeb_default,
+							alt: "Skip Logo",
+							className: "h-10 sm:h-12 w-auto drop-shadow-sm"
 						})
-					]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-body text-[18px] sm:text-body-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed",
-					style: {
-						animationDelay: "100ms",
-						animationFillMode: "both"
-					},
-					children: "Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a eficiência dos processos da sua empresa"
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mb-8 mt-4 animate-fade-in-up",
-					style: {
-						animationDelay: "200ms",
-						animationFillMode: "both"
-					},
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-mono text-[11px] sm:text-mono-s tracking-[0.15em] text-blue-violet-600 uppercase font-semibold",
-						children: "[Sem o custo de contratar desenvolvedores]"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+						className: "font-display text-4xl sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up w-full",
+						style: { animationFillMode: "both" },
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "inline-block",
+								children: "O criador de Sistemas Internos"
+							}),
+							" ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", { className: "hidden md:block" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+								className: "inline-block",
+								children: [
+									"mais",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600",
+										children: "fácil e intuitivo"
+									}),
+									" ",
+									"do mundo"
+								]
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed",
+						style: {
+							animationDelay: "100ms",
+							animationFillMode: "both"
+						},
+						children: "Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a eficiência dos processos da sua empresa"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mb-10 mt-6 animate-fade-in-up",
+						style: {
+							animationDelay: "200ms",
+							animationFillMode: "both"
+						},
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "font-mono text-[10px] sm:text-xs tracking-[0.15em] text-blue-violet-600 uppercase font-semibold",
+							children: "[Sem o custo de contratar desenvolvedores]"
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto animate-fade-in-up",
+						style: {
+							animationDelay: "300ms",
+							animationFillMode: "both"
+						},
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "relative group w-full sm:w-auto",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+								className: "relative w-full sm:w-auto font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5",
+								children: ["Explorar Soluções", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+							variant: "outline",
+							className: "w-full sm:w-auto h-12 sm:h-auto py-4 px-8 rounded-[90px] font-display font-medium text-sm sm:text-base bg-white hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300",
+							children: ["Agendar Demonstração ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-skip-neutral-900" })]
+						})]
 					})
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto animate-fade-in-up",
-					style: {
-						animationDelay: "300ms",
-						animationFillMode: "both"
-					},
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "relative group w-full sm:w-auto",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-							className: "relative w-full sm:w-auto font-display font-medium text-body-m text-white transition-all duration-300 group-hover:-translate-y-0.5",
-							children: ["Explorar Soluções", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-						variant: "outline",
-						className: "w-full sm:w-auto h-14 px-8 rounded-full font-display font-medium text-body-m bg-skip-neutral-1450 hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300",
-						children: ["Agendar Demonstração ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-skip-neutral-900" })]
+				]
+			})]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+			className: "w-full px-5 pb-20 -mt-10",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "max-w-[1100px] mx-auto animate-fade-in",
+				style: {
+					animationDelay: "500ms",
+					animationFillMode: "both"
+				},
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center justify-center gap-2 mb-8 text-center",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-fuchsia-500 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "font-body text-xs sm:text-sm text-skip-neutral-800",
+						children: "Skip é uma solução da Adapta, maior empresa de IA do Brasil, confiada por empresas como:"
 					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mt-28 w-full animate-fade-in",
-					style: {
-						animationDelay: "500ms",
-						animationFillMode: "both"
-					},
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center justify-center gap-2 mb-8 text-center px-4",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-fuchsia-500 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-body-xs text-skip-neutral-800",
-							children: "Skip é uma solução da Adapta, maior empresa de IA do Brasil, confiada por empresas como:"
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 opacity-40 hover:opacity-100 transition-opacity duration-500",
-						children: LOGOS.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							src: `https://img.usecurling.com/i?q=${encodeURIComponent(logo.name)}%20logo&color=solid-black`,
-							alt: `${logo.name} logo`,
-							className: `h-6 md:h-8 object-contain transition-all duration-300 grayscale hover:grayscale-0 hover:scale-105 cursor-default ${logo.width}`
-						}, logo.name))
-					})]
-				})
-			]
-		})
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 opacity-40 hover:opacity-100 transition-opacity duration-500",
+					children: LOGOS.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						src: `https://img.usecurling.com/i?q=${encodeURIComponent(logo.name)}%20logo&color=solid-black`,
+						alt: `${logo.name} logo`,
+						className: `h-5 sm:h-6 md:h-8 object-contain transition-all duration-300 grayscale hover:grayscale-0 hover:scale-105 cursor-default ${logo.width}`
+					}, logo.name))
+				})]
+			})
+		})]
 	});
 }
 var NotFound = () => {
@@ -23918,51 +23925,6 @@ var NotFound = () => {
 	});
 };
 var NotFound_default = NotFound;
-function Header() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-		className: "sticky top-0 z-50 w-full border-b border-skip-neutral-1350 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-				to: "/",
-				className: "flex items-center gap-2 transition-opacity hover:opacity-90",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-					src: logo_skip_black_85aeb_default,
-					alt: "Skip Logo",
-					className: "h-8 w-auto drop-shadow-sm"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "font-heading font-medium text-body-l tracking-tight text-skip-neutral-100",
-					children: "Skip"
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-				className: "flex items-center gap-4",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-						to: "/",
-						className: "font-body text-body-s text-skip-neutral-800 hover:text-skip-neutral-400 transition-colors hidden sm:block",
-						children: "Soluções"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-						to: "/",
-						className: "font-body text-body-s text-skip-neutral-800 hover:text-skip-neutral-400 transition-colors hidden sm:block",
-						children: "Preços"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-						to: "/",
-						className: "font-body text-body-s text-skip-neutral-800 hover:text-skip-neutral-400 transition-colors",
-						children: "Suporte"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-						variant: "ghost",
-						size: "sm",
-						className: "hidden sm:inline-flex font-heading font-medium text-skip-neutral-600 hover:text-skip-neutral-200",
-						children: "Entrar"
-					})
-				]
-			})]
-		})
-	});
-}
 function Footer() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
 		className: "border-t border-skip-neutral-1350 py-8 bg-skip-neutral-1500 mt-auto",
@@ -24008,14 +23970,10 @@ function Footer() {
 function Layout() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex flex-col min-h-screen bg-white selection:bg-violet-100 selection:text-violet-900",
-		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header, {}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
-				className: "flex-1 flex flex-col",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
-		]
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+			className: "flex-1 flex flex-col",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})]
 	});
 }
 var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
@@ -24041,4 +23999,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CB-SsZm1.js.map
+//# sourceMappingURL=index-DUGn6ihR.js.map
