@@ -2548,6 +2548,9 @@ h6{
 .text-\[11px\]{
   font-size: 11px;
 }
+.text-\[15px\]{
+  font-size: 15px;
+}
 .text-\[7px\]{
   font-size: 7px;
 }
@@ -2567,10 +2570,6 @@ h6{
 }
 .text-body-m{
   font-size: 16px;
-  line-height: 1.4;
-}
-.text-body-s{
-  font-size: 15px;
   line-height: 1.4;
 }
 .text-body-xs{

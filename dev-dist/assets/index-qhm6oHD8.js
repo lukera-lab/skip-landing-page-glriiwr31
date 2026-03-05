@@ -26806,7 +26806,7 @@ function BentoCard({ className, title, description, mockup }) {
 				className: "font-heading text-body-l font-bold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
 				children: title
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "font-body text-skip-neutral-800 leading-relaxed text-body-s",
+				className: "font-body text-skip-neutral-800 leading-relaxed text-[15px]",
 				children: description
 			})]
 		})]
@@ -26852,43 +26852,43 @@ function FeaturesSection() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
 						className: "md:col-span-2 lg:col-span-2 min-h-[380px]",
 						title: "Agentes de Desenvolvimento",
-						description: "Uma equipe de agentes inteligentes trabalhando em paralelo para arquitetar, escrever e testar sua aplicação em tempo real, sem intervenção humana.",
+						description: "Cada comando ativa uma equipe completa de IA: um PM desenha a interface, um Tech Lead define a arquitetura, um Dev escreve o código e um QA testa antes de entregar.",
 						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AgentsMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
 						className: "md:col-span-1 lg:col-span-1 min-h-[380px]",
 						title: "Banco de Dados Profissional",
-						description: "Esquemas relacionais estruturados automaticamente com PostgreSQL, garantindo integridade e alta performance.",
+						description: "Seus sistemas rodam sobre o Supabase — a mesma infraestrutura usada por Mozilla, Johnson & Johnson e mais de 1.000 startups do Y Combinator. Enterprise desde o primeiro dia.",
 						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DatabaseMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
 						className: "col-span-1 min-h-[340px]",
-						title: "Autenticação Pronta",
-						description: "Sistemas de login seguros com múltiplos provedores e controle de acesso integrado.",
+						title: "Autenticação Pronta para Uso",
+						description: "Email, Google e outros provedores configurados em minutos, com controle de permissões e segurança inclusos. Seu time acessa no mesmo dia.",
 						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuthMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
 						className: "col-span-1 min-h-[340px]",
 						title: "IA Conectada ao Seu Sistema",
-						description: "Integre capacidades de inteligência artificial diretamente nas regras de negócio da sua aplicação.",
+						description: "Integre os principais modelos de IA diretamente nos seus processos. O Skip gerencia as chaves de API com segurança — sem precisar de um desenvolvedor para fazer a conexão.",
 						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AIMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
 						className: "col-span-1 min-h-[340px]",
 						title: "Publicação com Um Clique",
-						description: "Deploy instantâneo da sua aplicação com URLs personalizadas, certificados SSL e infraestrutura escalável.",
+						description: "URL própria, SSL e hospedagem otimizada instantaneamente. Para mais controle, domínio personalizado e sincronização com GitHub inclusos.",
 						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DeployMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
 						className: "md:col-span-2 lg:col-span-2 min-h-[380px]",
 						title: "Código Limpo e Escalável",
-						description: "O Skip não cria 'caixas pretas'. Você recebe código-fonte moderno, tipado e otimizado, pronto para qualquer time de engenharia assumir.",
+						description: "React, TypeScript e Tailwind CSS — o mesmo stack do Netflix, Airbnb e Spotify. Seu sistema nasce performático, seguro e nos padrões da indústria global.",
 						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CodeMockup, {})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
 						className: "md:col-span-1 lg:col-span-1 min-h-[380px]",
 						title: "Modo Consultor",
-						description: "Um assistente que entende o contexto do seu negócio e sugere melhorias contínuas para o seu sistema.",
+						description: "Antes de construir, converse. Discuta arquitetura, valide ideias e peça sugestões — sem iniciar nada. Um consultor técnico disponível 24h.",
 						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChatMockup, {})
 					})
 				]
@@ -27160,4 +27160,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DPGRS15Y.js.map
+//# sourceMappingURL=index-qhm6oHD8.js.map
