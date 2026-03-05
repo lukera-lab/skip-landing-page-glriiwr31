@@ -2018,10 +2018,6 @@ h6{
 .border-t-transparent{
   border-top-color: transparent;
 }
-.bg-\[\#050505\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(5 5 5 / var(--tw-bg-opacity, 1));
-}
 .bg-\[\#27C93F\]{
   --tw-bg-opacity: 1;
   background-color: rgb(39 201 63 / var(--tw-bg-opacity, 1));
@@ -4853,9 +4849,6 @@ h6{
   }
   .lg\:col-span-2{
     grid-column: span 2 / span 2;
-  }
-  .lg\:min-h-full{
-    min-height: 100%;
   }
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));

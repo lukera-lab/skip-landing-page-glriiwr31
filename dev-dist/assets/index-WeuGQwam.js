@@ -27278,12 +27278,12 @@ function OfferSection() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] mx-auto",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch",
+				className: "grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 md:p-8 flex flex-col transition-all duration-300 hover:shadow-lg",
+					className: "bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 flex flex-col transition-all duration-300 hover:shadow-lg",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-6",
+							className: "flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-5",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "relative flex h-2 w-2",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-red-500" })]
@@ -27293,7 +27293,7 @@ function OfferSection() {
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "font-heading text-h4 font-semibold text-skip-neutral-300 mb-2",
+							className: "font-heading text-h4 font-semibold text-skip-neutral-300 mb-1",
 							children: "Skip Basic"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -27307,11 +27307,11 @@ function OfferSection() {
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-body-xs text-skip-neutral-800 mb-6",
+							className: "font-body text-body-xs text-skip-neutral-800 mb-5",
 							children: "cobrado anualmente"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-							className: "flex flex-col gap-2.5 mb-8",
+							className: "flex flex-col gap-2 mb-5",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
 									className: "font-body text-body-s text-skip-neutral-700",
@@ -27339,14 +27339,14 @@ function OfferSection() {
 								})
 							]
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Separator, { className: "bg-skip-neutral-1350 mb-6" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Separator, { className: "bg-skip-neutral-1350 mb-5" }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mb-8",
+							className: "mb-5",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-4",
+								className: "font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-3",
 								children: "Incluso"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-								className: "flex flex-col gap-3",
+								className: "flex flex-col gap-2",
 								children: [
 									"Projetos ilimitados",
 									"Baixar código-fonte",
@@ -27364,12 +27364,12 @@ function OfferSection() {
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mb-10",
+							className: "mb-6",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-4",
+								className: "font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-3",
 								children: "Bônus"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-								className: "flex flex-col gap-3",
+								className: "flex flex-col gap-2",
 								children: [["4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM", "Templates front-end personalizados"].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									className: "flex items-start gap-3",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -27392,15 +27392,15 @@ function OfferSection() {
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mt-auto flex flex-col items-center gap-4 w-full",
+							className: "mt-auto flex flex-col items-center gap-3 w-full",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "relative group w-full",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-									className: "relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5",
+									className: "relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto",
 									children: ["Quero o Skip Basic", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex items-center gap-3 text-skip-neutral-900 mt-2",
+								className: "flex items-center gap-3 text-skip-neutral-900 mt-1",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "flex items-center gap-1.5",
@@ -27422,7 +27422,7 @@ function OfferSection() {
 						})
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "bg-[#050505] border border-skip-neutral-1350 rounded-[20px] flex items-center justify-center min-h-[400px] lg:min-h-full overflow-hidden group",
+					className: "flex items-center justify-center w-full group",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: mock_offer_bf844_default,
 						alt: "Skip Offer Bundle",
@@ -27731,4 +27731,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-Qg32p-fk.js.map
+//# sourceMappingURL=index-WeuGQwam.js.map

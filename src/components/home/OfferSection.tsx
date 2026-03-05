@@ -9,11 +9,11 @@ export function OfferSection() {
   return (
     <section className="w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50">
       <div className="max-w-[1100px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Offer Card */}
-          <div className="bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 md:p-8 flex flex-col transition-all duration-300 hover:shadow-lg">
+          <div className="bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 flex flex-col transition-all duration-300 hover:shadow-lg">
             {/* Header */}
-            <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-6">
+            <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-5">
               <div className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
@@ -23,7 +23,7 @@ export function OfferSection() {
               </span>
             </div>
 
-            <h2 className="font-heading text-h4 font-semibold text-skip-neutral-300 mb-2">
+            <h2 className="font-heading text-h4 font-semibold text-skip-neutral-300 mb-1">
               Skip Basic
             </h2>
             <div className="flex items-baseline gap-1.5 mb-1">
@@ -32,9 +32,9 @@ export function OfferSection() {
               </span>
               <span className="font-heading text-xl font-bold text-skip-neutral-300">/mês</span>
             </div>
-            <p className="font-body text-body-xs text-skip-neutral-800 mb-6">cobrado anualmente</p>
+            <p className="font-body text-body-xs text-skip-neutral-800 mb-5">cobrado anualmente</p>
 
-            <ul className="flex flex-col gap-2.5 mb-8">
+            <ul className="flex flex-col gap-2 mb-5">
               <li className="font-body text-body-s text-skip-neutral-700">01 licença</li>
               <li className="flex items-center gap-1.5 font-body text-body-s text-skip-neutral-700">
                 <span>800 créditos mensais</span>
@@ -54,14 +54,14 @@ export function OfferSection() {
               <li className="font-body text-body-s text-skip-neutral-700">SLA 5 dias úteis</li>
             </ul>
 
-            <Separator className="bg-skip-neutral-1350 mb-6" />
+            <Separator className="bg-skip-neutral-1350 mb-5" />
 
             {/* Incluso */}
-            <div className="mb-8">
-              <h3 className="font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-4">
+            <div className="mb-5">
+              <h3 className="font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-3">
                 Incluso
               </h3>
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col gap-2">
                 {[
                   'Projetos ilimitados',
                   'Baixar código-fonte',
@@ -79,11 +79,11 @@ export function OfferSection() {
             </div>
 
             {/* Bonus */}
-            <div className="mb-10">
-              <h3 className="font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-4">
+            <div className="mb-6">
+              <h3 className="font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-3">
                 Bônus
               </h3>
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col gap-2">
                 {[
                   '4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM',
                   'Templates front-end personalizados',
@@ -110,15 +110,15 @@ export function OfferSection() {
             </div>
 
             {/* CTA */}
-            <div className="mt-auto flex flex-col items-center gap-4 w-full">
+            <div className="mt-auto flex flex-col items-center gap-3 w-full">
               <div className="relative group w-full">
                 <div className="absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" />
-                <Button className="relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5">
+                <Button className="relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto">
                   Quero o Skip Basic
                   <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>
-              <div className="flex items-center gap-3 text-skip-neutral-900 mt-2">
+              <div className="flex items-center gap-3 text-skip-neutral-900 mt-1">
                 <div className="flex items-center gap-1.5">
                   <Shield className="w-4 h-4" />
                   <span className="font-body text-body-xs font-medium uppercase tracking-wide">
@@ -137,7 +137,7 @@ export function OfferSection() {
           </div>
 
           {/* Mockup Container */}
-          <div className="bg-[#050505] border border-skip-neutral-1350 rounded-[20px] flex items-center justify-center min-h-[400px] lg:min-h-full overflow-hidden group">
+          <div className="flex items-center justify-center w-full group">
             <img
               src={mockOfferUrl}
               alt="Skip Offer Bundle"
