@@ -23815,7 +23815,7 @@ function Index() {
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-							className: "font-display text-4xl sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-100 animate-fade-in-up w-full",
+							className: "font-display text-4xl sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full",
 							style: { animationFillMode: "both" },
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -23880,27 +23880,7 @@ function Index() {
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "w-full py-24 px-5 relative z-10",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "max-w-[1100px] mx-auto flex flex-col items-center text-center",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "font-mono text-sm tracking-[0.15em] text-blue-violet-600 uppercase font-semibold mb-4",
-							children: "DEMONSTRAÇÃO"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "font-display text-4xl md:text-5xl font-semibold text-skip-neutral-900 mb-6 max-w-3xl leading-tight",
-							children: "Veja na prática como o Skip transforma seus processos"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-lg text-skip-neutral-600 max-w-2xl",
-							children: "Escolha um processo abaixo e compare como era antes e como fica com o Skip"
-						})
-					]
-				})
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "w-full px-5 pb-20 relative z-10",
+				className: "w-full px-5 py-12 relative z-10",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-[1100px] mx-auto animate-fade-in",
 					style: {
@@ -23921,6 +23901,26 @@ function Index() {
 							className: `h-5 sm:h-6 md:h-8 object-contain transition-all duration-300 grayscale hover:grayscale-0 hover:scale-105 cursor-default ${logo.width}`
 						}, logo.name))
 					})]
+				})
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+				className: "w-full py-24 px-5 relative z-10",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "max-w-[1100px] mx-auto flex flex-col items-center text-center",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "font-mono text-sm tracking-[0.15em] text-blue-violet-600 uppercase font-semibold mb-4",
+							children: "DEMONSTRAÇÃO"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "font-display text-4xl md:text-5xl font-semibold text-skip-neutral-900 mb-6 max-w-3xl leading-tight",
+							children: "Veja na prática como o Skip transforma seus processos"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "font-body text-lg text-skip-neutral-600 max-w-2xl",
+							children: "Escolha um processo abaixo e compare como era antes e como fica com o Skip"
+						})
+					]
 				})
 			})
 		]
@@ -24028,4 +24028,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-I8QE2Tvx.js.map
+//# sourceMappingURL=index-D5my4C2t.js.map
