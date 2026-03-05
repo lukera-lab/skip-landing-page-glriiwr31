@@ -4,6 +4,7 @@ import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import { DemonstrationTabs } from '@/components/home/DemonstrationTabs'
 import { PlatformSection } from '@/components/home/PlatformSection'
+import { FeaturesSection } from '@/components/home/FeaturesSection'
 
 const LOGOS = [
   { name: 'microsoft', width: 'w-24' },
@@ -137,6 +138,9 @@ export default function Index() {
 
       {/* Platform Section */}
       <PlatformSection />
+
+      {/* Features Section */}
+      <FeaturesSection />
     </div>
   )
 }

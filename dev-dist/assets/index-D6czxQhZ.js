@@ -19119,6 +19119,13 @@ var LayoutTemplate = createLucideIcon("layout-template", [
 		key: "q5h2i8"
 	}]
 ]);
+var Link$1 = createLucideIcon("link", [["path", {
+	d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71",
+	key: "1cjeqo"
+}], ["path", {
+	d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71",
+	key: "19qd67"
+}]]);
 var List = createLucideIcon("list", [
 	["path", {
 		d: "M3 5h.01",
@@ -19160,6 +19167,14 @@ var Lock = createLucideIcon("lock", [["rect", {
 }], ["path", {
 	d: "M7 11V7a5 5 0 0 1 10 0v4",
 	key: "fwvmzm"
+}]]);
+var MessageSquare = createLucideIcon("message-square", [["path", {
+	d: "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z",
+	key: "18887p"
+}]]);
+var MousePointer2 = createLucideIcon("mouse-pointer-2", [["path", {
+	d: "M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z",
+	key: "edeuup"
 }]]);
 var Send = createLucideIcon("send", [["path", {
 	d: "M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z",
@@ -19250,6 +19265,10 @@ var X = createLucideIcon("x", [["path", {
 }], ["path", {
 	d: "m6 6 12 12",
 	key: "d8bk6v"
+}]]);
+var Zap = createLucideIcon("zap", [["path", {
+	d: "M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z",
+	key: "1xq2db"
 }]]);
 var CLASS_PART_SEPARATOR = "-";
 var createClassGroupUtils = (config) => {
@@ -26459,6 +26478,160 @@ function PlatformSection() {
 		})
 	});
 }
+var AgentsGraphic = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+	className: "w-16 h-16 relative opacity-70 group-hover:opacity-100 transition-opacity duration-500",
+	children: [
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
+			className: "absolute inset-0 w-full h-full text-skip-neutral-1350",
+			viewBox: "0 0 64 64",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+				d: "M14 14 L32 32 L50 32 M14 50 L32 32",
+				stroke: "currentColor",
+				strokeWidth: "2",
+				fill: "none"
+			})
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-2 left-2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-white z-10" }),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute bottom-2 left-2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-white z-10" }),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 right-2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-white z-10" }),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-blue-violet-600 bg-blue-violet-100 z-10 shadow-[0_0_10px_rgba(79,70,229,0.5)]" })
+	]
+});
+var TechBadges = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+	className: "flex flex-wrap gap-2 justify-end max-w-[150px]",
+	children: [
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
+			variant: "outline",
+			className: "bg-sky-50/50 text-sky-700 hover:bg-sky-50 border-sky-200 shadow-none font-body",
+			children: "React"
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
+			variant: "outline",
+			className: "bg-blue-50/50 text-blue-700 hover:bg-blue-50 border-blue-200 shadow-none font-body",
+			children: "TypeScript"
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
+			variant: "outline",
+			className: "bg-teal-50/50 text-teal-700 hover:bg-teal-50 border-teal-200 shadow-none font-body",
+			children: "Tailwind"
+		})
+	]
+});
+function BentoCard({ className, title, description, icon, topRight }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: cn("rounded-[20px] border border-skip-neutral-1350 p-7 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500", className),
+		children: [
+			icon && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "w-12 h-12 rounded-[14px] bg-blue-violet-50 flex items-center justify-center mb-6 text-blue-violet-600 transition-transform duration-500 group-hover:scale-110 group-hover:bg-blue-violet-100",
+				children: icon
+			}),
+			topRight && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "absolute top-7 right-7",
+				children: topRight
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mt-auto relative z-10",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "font-heading text-xl md:text-2xl font-semibold text-skip-neutral-900 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
+					children: title
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "font-body text-skip-neutral-800 leading-relaxed text-sm md:text-base",
+					children: description
+				})]
+			})
+		]
+	});
+}
+function FeaturesSection() {
+	const [isVisible, setIsVisible] = (0, import_react.useState)(false);
+	const ref = (0, import_react.useRef)(null);
+	(0, import_react.useEffect)(() => {
+		const observer = new IntersectionObserver(([entry]) => {
+			if (entry.isIntersecting) setIsVisible(true);
+		}, {
+			threshold: .1,
+			rootMargin: "0px 0px -50px 0px"
+		});
+		if (ref.current) observer.observe(ref.current);
+		return () => observer.disconnect();
+	}, []);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "w-full py-24 md:py-32 px-5 relative z-10 bg-white",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			ref,
+			className: "max-w-[1100px] mx-auto flex flex-col items-center",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: cn("text-center mb-16 flex flex-col items-center w-full transition-all duration-700", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
+						children: "FUNCIONALIDADES"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-900 mb-6 max-w-3xl leading-tight tracking-tight",
+						children: "Skip não apenas gera código"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "font-body text-lg md:text-xl text-skip-neutral-800 max-w-2xl mx-auto",
+						children: "Ele gerencia todo o ciclo de vida de uma aplicação robusta, desde o banco de dados até a interface"
+					})
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full auto-rows-[minmax(220px,auto)] transition-all duration-700 delay-200", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+						className: "md:col-span-2 lg:col-span-2 min-h-[280px]",
+						title: "Agentes de Desenvolvimento",
+						description: "Uma equipe de agentes inteligentes trabalhando em paralelo para arquitetar, escrever e testar sua aplicação em tempo real, sem intervenção humana.",
+						topRight: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AgentsGraphic, {})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+						className: "md:col-span-1 lg:col-span-1 min-h-[280px]",
+						title: "Banco de Dados Profissional",
+						description: "Esquemas relacionais estruturados automaticamente com PostgreSQL, garantindo integridade e alta performance.",
+						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Database, { className: "w-6 h-6" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+						className: "col-span-1 min-h-[240px]",
+						title: "Autenticação Pronta",
+						description: "Sistemas de login seguros com múltiplos provedores e controle de acesso integrado.",
+						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Lock, { className: "w-6 h-6" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+						className: "col-span-1 min-h-[240px]",
+						title: "IA Conectada ao Seu Sistema",
+						description: "Integre capacidades de inteligência artificial diretamente nas regras de negócio da sua aplicação.",
+						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Zap, { className: "w-6 h-6" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+						className: "col-span-1 min-h-[240px]",
+						title: "Publicação com Um Clique",
+						description: "Deploy instantâneo da sua aplicação com URLs personalizadas, certificados SSL e infraestrutura escalável.",
+						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, { className: "w-6 h-6" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+						className: "md:col-span-2 lg:col-span-2 min-h-[280px]",
+						title: "Código Limpo e Escalável",
+						description: "O Skip não cria 'caixas pretas'. Você recebe código-fonte moderno, tipado e otimizado, pronto para qualquer time de engenharia assumir.",
+						topRight: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TechBadges, {})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+						className: "md:col-span-1 lg:col-span-1 min-h-[280px]",
+						title: "Modo Consultor",
+						description: "Um assistente que entende o contexto do seu negócio e sugere melhorias contínuas para o seu sistema.",
+						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "relative",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageSquare, { className: "w-6 h-6" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MousePointer2, {
+								className: "w-4 h-4 text-fuchsia-500 absolute -bottom-1 -right-1",
+								fill: "currentColor"
+							})]
+						})
+					})
+				]
+			})]
+		})
+	});
+}
 var LOGOS = [
 	{
 		name: "microsoft",
@@ -26616,7 +26789,8 @@ function Index() {
 					]
 				})
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PlatformSection, {})
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PlatformSection, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FeaturesSection, {})
 		]
 	});
 }
@@ -26722,4 +26896,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-9FKCQyVi.js.map
+//# sourceMappingURL=index-D6czxQhZ.js.map
