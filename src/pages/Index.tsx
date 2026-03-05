@@ -57,7 +57,7 @@ export default function Index() {
 
           {/* Subheadline */}
           <p
-            className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[600px] mx-auto animate-fade-in-up leading-relaxed mt-4"
+            className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[560px] mx-auto animate-fade-in-up leading-relaxed mt-4 line-clamp-2"
             style={{ animationDelay: '100ms', animationFillMode: 'both' }}
           >
             Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a
@@ -86,12 +86,6 @@ export default function Index() {
                 <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto h-12 sm:h-auto py-4 px-8 rounded-[90px] font-display font-medium text-sm sm:text-base bg-white/80 hover:bg-white border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300 backdrop-blur-sm"
-            >
-              Agendar Demonstração <ArrowRight className="w-4 h-4 text-skip-neutral-900" />
-            </Button>
           </div>
         </div>
       </section>

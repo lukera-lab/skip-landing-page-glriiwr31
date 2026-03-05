@@ -1016,6 +1016,12 @@ h6{
 .mt-auto{
   margin-top: auto;
 }
+.line-clamp-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
 .block{
   display: block;
 }
@@ -1404,6 +1410,9 @@ h6{
 }
 .max-w-\[520px\]{
   max-width: 520px;
+}
+.max-w-\[560px\]{
+  max-width: 560px;
 }
 .max-w-\[600px\]{
   max-width: 600px;
@@ -3655,10 +3664,6 @@ h6{
 .hover\:bg-skip-neutral-500\/10:hover{
   background-color: rgb(42 42 51 / 0.1);
 }
-.hover\:bg-white:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
 .hover\:text-accent-foreground:hover{
   color: hsl(var(--accent-foreground));
 }
@@ -4525,9 +4530,6 @@ h6{
   }
   .sm\:h-\[600px\]{
     height: 600px;
-  }
-  .sm\:h-auto{
-    height: auto;
   }
   .sm\:w-10{
     width: 2.5rem;
