@@ -26109,7 +26109,7 @@ function Step3Mockup() {
 }
 function Step4Mockup() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden shadow-2xl",
+		className: "w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "w-[120px] sm:w-[140px] border-r border-skip-neutral-600 flex flex-col bg-skip-neutral-400 z-10 shrink-0",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -26262,7 +26262,7 @@ function Step4Mockup() {
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										className: "w-16 sm:w-20 flex justify-center",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: cn("text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md border font-semibold tracking-wide", row.statusColor === "green" ? "bg-green-400/15 text-green-400 border-transparent" : "bg-red-400/15 text-red-400 border-transparent"),
+											className: cn("text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md font-semibold tracking-wide", row.statusColor === "green" ? "bg-green-400/15 text-green-400" : "bg-red-400/15 text-red-400"),
 											children: row.status
 										})
 									})
@@ -26681,4 +26681,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-D46RhTXO.js.map
+//# sourceMappingURL=index-B6AP2c1R.js.map

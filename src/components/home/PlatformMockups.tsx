@@ -357,7 +357,7 @@ export function Step3Mockup() {
 
 export function Step4Mockup() {
   return (
-    <div className="w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden shadow-2xl">
+    <div className="w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden">
       {/* Sidebar */}
       <div className="w-[120px] sm:w-[140px] border-r border-skip-neutral-600 flex flex-col bg-skip-neutral-400 z-10 shrink-0">
         <div className="p-4 sm:p-5 flex items-center gap-2 mb-2">
@@ -467,10 +467,10 @@ export function Step4Mockup() {
                   <div className="w-16 sm:w-20 flex justify-center">
                     <span
                       className={cn(
-                        'text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md border font-semibold tracking-wide',
+                        'text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md font-semibold tracking-wide',
                         row.statusColor === 'green'
-                          ? 'bg-green-400/15 text-green-400 border-transparent'
-                          : 'bg-red-400/15 text-red-400 border-transparent',
+                          ? 'bg-green-400/15 text-green-400'
+                          : 'bg-red-400/15 text-red-400',
                       )}
                     >
                       {row.status}
