@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
+import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 
 const LOGOS = [
   { name: 'microsoft', width: 'w-24' },
@@ -16,9 +17,14 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full">
         {/* Background wrapper with fade-out mask */}
-        <div className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_60%,transparent_100%)] pointer-events-none">
-          {/* Decorative Background Blob */}
-          <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-violet-100/50 rounded-full blur-[80px] sm:blur-[100px]" />
+        <div className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_60%,transparent_100%)] pointer-events-none overflow-hidden">
+          {/* Hero Background Image */}
+          <img
+            src={heroBgUrl}
+            alt="Hero Background"
+            className="absolute inset-0 w-full h-full object-cover object-top opacity-90"
+            aria-hidden="true"
+          />
         </div>
 
         <div className="max-w-[1100px] w-full flex flex-col items-center text-center mx-auto px-5 relative z-10">
@@ -76,7 +82,7 @@ export default function Index() {
             </div>
             <Button
               variant="outline"
-              className="w-full sm:w-auto h-12 sm:h-auto py-4 px-8 rounded-[90px] font-display font-medium text-sm sm:text-base bg-white hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300"
+              className="w-full sm:w-auto h-12 sm:h-auto py-4 px-8 rounded-[90px] font-display font-medium text-sm sm:text-base bg-white/80 hover:bg-white border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300 backdrop-blur-sm"
             >
               Agendar Demonstração <ArrowRight className="w-4 h-4 text-skip-neutral-900" />
             </Button>
@@ -85,7 +91,7 @@ export default function Index() {
       </section>
 
       {/* Social Proof */}
-      <section className="w-full px-5 pb-20 -mt-10">
+      <section className="w-full px-5 pb-20 -mt-10 relative z-10">
         <div
           className="max-w-[1100px] mx-auto animate-fade-in"
           style={{ animationDelay: '500ms', animationFillMode: 'both' }}

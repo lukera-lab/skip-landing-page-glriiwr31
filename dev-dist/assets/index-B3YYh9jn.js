@@ -23766,6 +23766,7 @@ var Button = import_react.forwardRef(({ className, variant, size: size$3, asChil
 });
 Button.displayName = "Button";
 var logo_skip_black_85aeb_default = "/assets/logo-skip-black-85aeb-Cld7xQRZ.svg";
+var bg_hero_skip_8319b_default = "/assets/bg-hero-skip-8319b-BMwiMWBh.webp";
 var LOGOS = [
 	{
 		name: "microsoft",
@@ -23794,8 +23795,13 @@ function Index() {
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 			className: "relative flex flex-col items-center pt-24 md:pt-32 pb-32 w-full",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_60%,transparent_100%)] pointer-events-none",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-violet-100/50 rounded-full blur-[80px] sm:blur-[100px]" })
+				className: "absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white_60%,transparent_100%)] pointer-events-none overflow-hidden",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					src: bg_hero_skip_8319b_default,
+					alt: "Hero Background",
+					className: "absolute inset-0 w-full h-full object-cover object-top opacity-90",
+					"aria-hidden": "true"
+				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-[1100px] w-full flex flex-col items-center text-center mx-auto px-5 relative z-10",
 				children: [
@@ -23865,14 +23871,14 @@ function Index() {
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 							variant: "outline",
-							className: "w-full sm:w-auto h-12 sm:h-auto py-4 px-8 rounded-[90px] font-display font-medium text-sm sm:text-base bg-white hover:bg-skip-neutral-1400 border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300",
+							className: "w-full sm:w-auto h-12 sm:h-auto py-4 px-8 rounded-[90px] font-display font-medium text-sm sm:text-base bg-white/80 hover:bg-white border-skip-neutral-1350 text-skip-neutral-500 transition-all duration-300 backdrop-blur-sm",
 							children: ["Agendar Demonstração ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-skip-neutral-900" })]
 						})]
 					})
 				]
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-			className: "w-full px-5 pb-20 -mt-10",
+			className: "w-full px-5 pb-20 -mt-10 relative z-10",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-[1100px] mx-auto animate-fade-in",
 				style: {
@@ -23999,4 +24005,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DUGn6ihR.js.map
+//# sourceMappingURL=index-B3YYh9jn.js.map
