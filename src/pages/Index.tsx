@@ -35,7 +35,7 @@ export default function Index() {
 
           {/* Main Headline */}
           <h1
-            className="font-display text-4xl sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up w-full"
+            className="font-display text-4xl sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-100 animate-fade-in-up w-full"
             style={{ animationFillMode: 'both' }}
           >
             <span className="inline-block">O criador de Sistemas Internos</span>{' '}
@@ -51,7 +51,7 @@ export default function Index() {
 
           {/* Subheadline */}
           <p
-            className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed"
+            className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed mt-4"
             style={{ animationDelay: '100ms', animationFillMode: 'both' }}
           >
             Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a
@@ -60,7 +60,7 @@ export default function Index() {
 
           {/* Disclaimer */}
           <div
-            className="mb-10 mt-6 animate-fade-in-up"
+            className="mb-10 mt-0 animate-fade-in-up"
             style={{ animationDelay: '200ms', animationFillMode: 'both' }}
           >
             <span className="font-mono text-[10px] sm:text-xs tracking-[0.15em] text-blue-violet-600 uppercase font-semibold">

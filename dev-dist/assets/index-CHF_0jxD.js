@@ -23814,7 +23814,7 @@ function Index() {
 						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-						className: "font-display text-4xl sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-100 mb-6 animate-fade-in-up w-full",
+						className: "font-display text-4xl sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-100 animate-fade-in-up w-full",
 						style: { animationFillMode: "both" },
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -23839,7 +23839,7 @@ function Index() {
 						]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed",
+						className: "font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[700px] mx-auto animate-fade-in-up leading-relaxed mt-4",
 						style: {
 							animationDelay: "100ms",
 							animationFillMode: "both"
@@ -23847,7 +23847,7 @@ function Index() {
 						children: "Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a eficiência dos processos da sua empresa"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mb-10 mt-6 animate-fade-in-up",
+						className: "mb-10 mt-0 animate-fade-in-up",
 						style: {
 							animationDelay: "200ms",
 							animationFillMode: "both"
@@ -24005,4 +24005,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DfJClvah.js.map
+//# sourceMappingURL=index-CHF_0jxD.js.map

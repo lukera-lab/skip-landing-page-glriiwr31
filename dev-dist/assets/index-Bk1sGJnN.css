@@ -866,9 +866,6 @@ h6{
 .mb-4{
   margin-bottom: 1rem;
 }
-.mb-6{
-  margin-bottom: 1.5rem;
-}
 .mb-8{
   margin-bottom: 2rem;
 }
@@ -881,6 +878,9 @@ h6{
 .mr-2{
   margin-right: 0.5rem;
 }
+.mt-0{
+  margin-top: 0px;
+}
 .mt-1\.5{
   margin-top: 0.375rem;
 }
@@ -892,9 +892,6 @@ h6{
 }
 .mt-4{
   margin-top: 1rem;
-}
-.mt-6{
-  margin-top: 1.5rem;
 }
 .mt-auto{
   margin-top: auto;
