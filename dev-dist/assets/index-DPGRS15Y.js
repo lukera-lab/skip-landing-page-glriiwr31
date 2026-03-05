@@ -26803,10 +26803,10 @@ function BentoCard({ className, title, description, mockup }) {
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mt-auto relative z-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-				className: "font-heading text-xl md:text-2xl font-semibold text-skip-neutral-900 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
+				className: "font-heading text-body-l font-bold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
 				children: title
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "font-body text-skip-neutral-800 leading-relaxed text-sm md:text-base",
+				className: "font-body text-skip-neutral-800 leading-relaxed text-body-s",
 				children: description
 			})]
 		})]
@@ -26838,7 +26838,7 @@ function FeaturesSection() {
 						children: "FUNCIONALIDADES"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-900 mb-6 max-w-3xl leading-tight tracking-tight",
+						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-bold text-skip-neutral-300 mb-6 max-w-3xl leading-tight tracking-tight",
 						children: "Skip não apenas gera código"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -27160,4 +27160,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-C_LrpqJS.js.map
+//# sourceMappingURL=index-DPGRS15Y.js.map

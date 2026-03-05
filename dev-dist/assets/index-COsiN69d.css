@@ -2561,8 +2561,16 @@ h6{
   font-size: 1rem;
   line-height: 1.5rem;
 }
+.text-body-l{
+  font-size: 18px;
+  line-height: 1.4;
+}
 .text-body-m{
   font-size: 16px;
+  line-height: 1.4;
+}
+.text-body-s{
+  font-size: 15px;
   line-height: 1.4;
 }
 .text-body-xs{
@@ -4617,10 +4625,6 @@ h6{
   .md\:text-left{
     text-align: left;
   }
-  .md\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
@@ -4630,10 +4634,6 @@ h6{
   }
   .md\:text-\[48px\]{
     font-size: 48px;
-  }
-  .md\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
   .md\:text-sm{
     font-size: 0.875rem;
