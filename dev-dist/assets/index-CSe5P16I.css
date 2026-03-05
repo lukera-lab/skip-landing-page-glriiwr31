@@ -1016,12 +1016,6 @@ h6{
 .mt-auto{
   margin-top: auto;
 }
-.line-clamp-2{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
 .block{
   display: block;
 }
@@ -4759,6 +4753,12 @@ h6{
   }
   .md\:mt-12{
     margin-top: 3rem;
+  }
+  .md\:line-clamp-2{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
   .md\:block{
     display: block;
