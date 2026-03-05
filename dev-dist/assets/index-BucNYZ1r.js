@@ -27278,9 +27278,9 @@ function OfferSection() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] mx-auto",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center",
+				className: "grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 items-center",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 flex flex-col transition-all duration-300 hover:shadow-lg",
+					className: "lg:col-span-2 bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 flex flex-col transition-all duration-300 hover:shadow-lg",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-5",
@@ -27422,7 +27422,7 @@ function OfferSection() {
 						})
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "flex items-center justify-center w-full group",
+					className: "lg:col-span-3 flex items-center justify-center w-full group",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: mock_offer_bf844_default,
 						alt: "Skip Offer Bundle",
@@ -27731,4 +27731,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-WeuGQwam.js.map
+//# sourceMappingURL=index-BucNYZ1r.js.map

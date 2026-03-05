@@ -9,9 +9,9 @@ export function OfferSection() {
   return (
     <section className="w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50">
       <div className="max-w-[1100px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 items-center">
           {/* Offer Card */}
-          <div className="bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 flex flex-col transition-all duration-300 hover:shadow-lg">
+          <div className="lg:col-span-2 bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 flex flex-col transition-all duration-300 hover:shadow-lg">
             {/* Header */}
             <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-5">
               <div className="relative flex h-2 w-2">
@@ -137,7 +137,7 @@ export function OfferSection() {
           </div>
 
           {/* Mockup Container */}
-          <div className="flex items-center justify-center w-full group">
+          <div className="lg:col-span-3 flex items-center justify-center w-full group">
             <img
               src={mockOfferUrl}
               alt="Skip Offer Bundle"
