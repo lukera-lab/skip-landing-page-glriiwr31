@@ -18920,6 +18920,20 @@ var ArrowRight = createLucideIcon("arrow-right", [["path", {
 	d: "m12 5 7 7-7 7",
 	key: "xquz4c"
 }]]);
+var ChartNoAxesColumn = createLucideIcon("chart-no-axes-column", [
+	["path", {
+		d: "M5 21v-6",
+		key: "1hz6c0"
+	}],
+	["path", {
+		d: "M12 21V3",
+		key: "1lcnhd"
+	}],
+	["path", {
+		d: "M19 21V9",
+		key: "unv183"
+	}]
+]);
 var Check = createLucideIcon("check", [["path", {
 	d: "M20 6 9 17l-5-5",
 	key: "1gmf2c"
@@ -18946,6 +18960,28 @@ var CircleAlert = createLucideIcon("circle-alert", [
 		key: "4dfq90"
 	}]
 ]);
+var FileText = createLucideIcon("file-text", [
+	["path", {
+		d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z",
+		key: "1oefj6"
+	}],
+	["path", {
+		d: "M14 2v5a1 1 0 0 0 1 1h5",
+		key: "wfsgrz"
+	}],
+	["path", {
+		d: "M10 9H8",
+		key: "b1mrlr"
+	}],
+	["path", {
+		d: "M16 13H8",
+		key: "t4e002"
+	}],
+	["path", {
+		d: "M16 17H8",
+		key: "z1uh3a"
+	}]
+]);
 var Sparkles = createLucideIcon("sparkles", [
 	["path", {
 		d: "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z",
@@ -18964,6 +19000,26 @@ var Sparkles = createLucideIcon("sparkles", [
 		cy: "20",
 		r: "2",
 		key: "6kqj1y"
+	}]
+]);
+var Users = createLucideIcon("users", [
+	["path", {
+		d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
+		key: "1yyitq"
+	}],
+	["path", {
+		d: "M16 3.128a4 4 0 0 1 0 7.744",
+		key: "16gr8j"
+	}],
+	["path", {
+		d: "M22 21v-2a4 4 0 0 0-3-3.87",
+		key: "kshegd"
+	}],
+	["circle", {
+		cx: "9",
+		cy: "7",
+		r: "4",
+		key: "nufk8"
 	}]
 ]);
 var X = createLucideIcon("x", [["path", {
@@ -24528,6 +24584,356 @@ function InventoryDepois() {
 		]
 	});
 }
+var ANTES_POINTS = [
+	"Feedback Lento e Baseado em pouca amostragem",
+	"Difícil Replicar e armazenar o Padrão de Sucesso",
+	"Cada líder avalia de um jeito"
+];
+var DEPOIS_POINTS = [
+	"Armazenamento e análise de cada reunião com base na transcrição",
+	"Análise de objeções com base em amostragem",
+	"Visualização de performance individual do time"
+];
+function SalesAntes() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex flex-col flex-1 w-full h-full animate-fade-in",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mb-6 shrink-0 flex flex-col gap-1.5",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "text-mono-xs uppercase text-blue-violet-600",
+					children: "Processo Padrão"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "text-xl font-heading font-semibold text-skip-neutral-100",
+					children: "Treinamento de Vendas no Achômetro"
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+				className: "space-y-3 mb-8 shrink-0",
+				children: ANTES_POINTS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+					className: "flex items-center gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "rounded-full bg-red-50 p-1 shrink-0",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-400" })
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-sm text-skip-neutral-600 leading-tight",
+						children: item
+					})]
+				}, i))
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex-1 border border-skip-neutral-1350 rounded-lg bg-skip-neutral-1450/50 p-4 flex flex-col min-h-[250px] shadow-inner relative overflow-hidden",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-white rounded-t-md border-b border-skip-neutral-1300 p-2 flex items-center gap-2 mb-4",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-6 h-6 bg-blue-500 rounded text-white flex items-center justify-center font-serif font-bold text-xs",
+						children: "W"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-col gap-1",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-2 w-32 bg-skip-neutral-1300 rounded" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex gap-1",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-1.5 w-8 bg-skip-neutral-1300 rounded" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-1.5 w-12 bg-skip-neutral-1300 rounded" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-1.5 w-10 bg-skip-neutral-1300 rounded" })
+							]
+						})]
+					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-white flex-1 p-5 rounded-md border border-skip-neutral-1300 shadow-sm shadow-black/5 rotate-[-1deg] mx-2 flex flex-col gap-4 relative font-serif",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "text-lg font-bold border-b border-skip-neutral-1300 pb-2 text-skip-neutral-300",
+							children: "Avaliação Call - João"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-3",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "font-bold text-sm text-skip-neutral-400",
+									children: "Pontos Fortes:"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-sm text-skip-neutral-500 italic mt-1 text-blue-600 rotate-[1deg]",
+									children: "\"Falou bem, foi simpático. Cliente gostou.\""
+								})] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "font-bold text-sm text-skip-neutral-400",
+									children: "O que melhorar:"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-sm text-skip-neutral-500 italic mt-1 text-red-500 rotate-[-2deg]",
+									children: "\"Acho que faltou apertar no preço. Faltou rapport.\""
+								})] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "font-bold text-sm text-skip-neutral-400",
+									children: "Nota Final:"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-xl font-bold text-green-600 rotate-[-1deg]",
+									children: "7.5 / 10"
+								})] })
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "absolute right-2 bottom-2 bg-yellow-200 p-3 rounded shadow-md rotate-[4deg] w-28 h-28 flex flex-col items-center justify-center text-yellow-800 text-sm leading-tight text-center border border-yellow-300 font-medium italic",
+							children: [
+								"Falar c/ RH sobre",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
+								"treinamento!!"
+							]
+						})
+					]
+				})]
+			})
+		]
+	});
+}
+function SalesDepois() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex flex-col flex-1 w-full h-full animate-fade-in",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mb-6 shrink-0 flex flex-col gap-1.5",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "text-mono-xs uppercase text-blue-violet-600",
+					children: "Sistema Skip"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "text-xl font-heading font-semibold text-skip-neutral-100",
+					children: "Sales Intelligence Platform"
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+				className: "space-y-3 mb-8 shrink-0",
+				children: DEPOIS_POINTS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+					className: "flex items-center gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "rounded-full bg-blue-violet-50 p-1 shrink-0",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-400" })
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-sm text-skip-neutral-600 leading-tight",
+						children: item
+					})]
+				}, i))
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "flex-1 rounded-xl border border-blue-violet-100 shadow-sm flex flex-col min-h-0 overflow-hidden",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex-1 bg-gradient-to-b from-white to-blue-violet-50 p-3 sm:p-4 flex flex-col gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid grid-cols-2 gap-2 shrink-0",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-white/80 backdrop-blur-sm rounded-lg p-2.5 flex items-center justify-between border border-skip-neutral-1350 shadow-sm",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex flex-col",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[10px] text-skip-neutral-800 uppercase tracking-wider font-medium",
+									children: "Score Médio"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-lg font-semibold text-green-600",
+									children: "89%"
+								})]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-8 h-8 rounded-full bg-green-50 flex items-center justify-center",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChartNoAxesColumn, { className: "w-4 h-4 text-green-600" })
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-white/80 backdrop-blur-sm rounded-lg p-2.5 flex items-center justify-between border border-skip-neutral-1350 shadow-sm",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex flex-col",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[10px] text-skip-neutral-800 uppercase tracking-wider font-medium",
+									children: "Reuniões"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-lg font-semibold text-blue-violet-600",
+									children: "142"
+								})]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-8 h-8 rounded-full bg-blue-violet-50 flex items-center justify-center",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-4 h-4 text-blue-violet-600" })
+							})]
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1 overflow-hidden min-h-0",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col gap-3 min-h-0",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-white rounded-lg border border-skip-neutral-1350 shadow-sm flex flex-col h-[130px]",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "px-3 py-1.5 border-b border-skip-neutral-1350 bg-skip-neutral-1450 text-[10px] font-medium text-skip-neutral-600",
+									children: "Últimas Reuniões"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "flex-1 overflow-y-auto p-1.5 flex flex-col gap-1 text-[10px]",
+									children: [
+										{
+											name: "Demo - TechCorp",
+											score: 92,
+											rep: "João"
+										},
+										{
+											name: "Discovery - Acme",
+											score: 65,
+											rep: "Maria"
+										},
+										{
+											name: "Follow-up - Global",
+											score: 88,
+											rep: "Pedro"
+										}
+									].map((mtg, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center justify-between p-1.5 rounded-md hover:bg-skip-neutral-1450 border border-transparent hover:border-skip-neutral-1350",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "w-6 h-6 rounded bg-blue-violet-50 flex items-center justify-center shrink-0",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, { className: "w-3 h-3 text-blue-violet-600" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex flex-col",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "text-[10px] font-medium text-skip-neutral-300 truncate w-16",
+													children: mtg.name
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "text-[8px] text-skip-neutral-600",
+													children: mtg.rep
+												})]
+											})]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
+											variant: "outline",
+											className: `text-[9px] h-4 px-1 py-0 border-none font-medium ${mtg.score > 80 ? "bg-green-50 text-green-700" : "bg-orange-50 text-orange-700"}`,
+											children: mtg.score
+										})]
+									}, i))
+								})]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-white rounded-lg border border-skip-neutral-1350 shadow-sm flex flex-col flex-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "px-3 py-1.5 border-b border-skip-neutral-1350 bg-skip-neutral-1450 text-[10px] font-medium text-skip-neutral-600",
+									children: "Top Objeções"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex-1 p-2 flex flex-col justify-center gap-2",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center gap-2 text-[9px]",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "w-12 truncate text-skip-neutral-500",
+													children: "Preço"
+												}),
+												" ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "flex-1 h-1.5 bg-skip-neutral-1450 rounded-full overflow-hidden",
+													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-full bg-red-400 rounded-full w-[80%]" })
+												})
+											]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center gap-2 text-[9px]",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "w-12 truncate text-skip-neutral-500",
+													children: "Concorrente"
+												}),
+												" ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "flex-1 h-1.5 bg-skip-neutral-1450 rounded-full overflow-hidden",
+													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-full bg-orange-400 rounded-full w-[60%]" })
+												})
+											]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center gap-2 text-[9px]",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "w-12 truncate text-skip-neutral-500",
+													children: "Tempo"
+												}),
+												" ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "flex-1 h-1.5 bg-skip-neutral-1450 rounded-full overflow-hidden",
+													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-full bg-blue-400 rounded-full w-[40%]" })
+												})
+											]
+										})
+									]
+								})]
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-white rounded-lg border border-skip-neutral-1350 shadow-sm flex flex-col min-h-0",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "px-3 py-1.5 border-b border-skip-neutral-1350 bg-skip-neutral-1450 text-[10px] font-medium text-skip-neutral-600",
+								children: "Ranking do Time"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "flex-1 overflow-y-auto p-1.5 flex flex-col gap-1 text-[10px]",
+								children: [
+									{
+										pos: 1,
+										name: "João S.",
+										win: "32%",
+										score: "94",
+										trend: "+"
+									},
+									{
+										pos: 2,
+										name: "Maria C.",
+										win: "28%",
+										score: "88",
+										trend: "+"
+									},
+									{
+										pos: 3,
+										name: "Pedro A.",
+										win: "24%",
+										score: "82",
+										trend: "-"
+									},
+									{
+										pos: 4,
+										name: "Ana B.",
+										win: "18%",
+										score: "76",
+										trend: "-"
+									},
+									{
+										pos: 5,
+										name: "Lucas M.",
+										win: "15%",
+										score: "70",
+										trend: "-"
+									},
+									{
+										pos: 6,
+										name: "Carla T.",
+										win: "12%",
+										score: "65",
+										trend: "-"
+									}
+								].map((r$1) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center justify-between p-1.5 rounded hover:bg-skip-neutral-1450 border border-transparent hover:border-skip-neutral-1350",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: `w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold shrink-0 ${r$1.pos === 1 ? "bg-yellow-100 text-yellow-700" : r$1.pos === 2 ? "bg-skip-neutral-1300 text-skip-neutral-500" : r$1.pos === 3 ? "bg-orange-100 text-orange-700" : "bg-skip-neutral-1450 text-skip-neutral-600"}`,
+											children: r$1.pos
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "font-medium text-skip-neutral-400 truncate w-14",
+											children: r$1.name
+										})]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex gap-2 text-right shrink-0",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-skip-neutral-600 w-5",
+											children: r$1.win
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: `font-semibold w-4 ${r$1.trend === "+" ? "text-green-600" : "text-red-500"}`,
+											children: r$1.score
+										})]
+									})]
+								}, r$1.pos))
+							})]
+						})]
+					})]
+				})
+			})
+		]
+	});
+}
 var TAB_ITEMS = [
 	{
 		id: "inventario",
@@ -24583,7 +24989,7 @@ function ComparisonLayout({ tabId }) {
 				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "rounded-2xl border border-skip-neutral-1350 bg-white p-6 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]",
-				children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryAntes, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
+				children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryAntes, {}) : tabId === "vendas" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SalesAntes, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
 					tabId,
 					type: "antes"
 				})
@@ -24600,7 +25006,7 @@ function ComparisonLayout({ tabId }) {
 				className: "rounded-2xl p-[1px] bg-gradient-to-br from-blue-violet-400 to-fuchsia-400 shadow-lg shadow-blue-violet-500/20 flex flex-col flex-1 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-blue-violet-500/30 min-h-[400px]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "bg-white rounded-[15px] p-6 flex flex-col flex-1 w-full overflow-hidden",
-					children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryDepois, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
+					children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryDepois, {}) : tabId === "vendas" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SalesDepois, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
 						tabId,
 						type: "depois"
 					})
@@ -24893,4 +25299,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-sxk3m7dO.js.map
+//# sourceMappingURL=index-LDckAs2I.js.map

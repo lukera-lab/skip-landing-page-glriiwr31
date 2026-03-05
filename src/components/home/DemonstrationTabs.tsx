@@ -2,6 +2,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import { Check, X } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { InventoryAntes, InventoryDepois } from './tabs/InventoryTab'
+import { SalesAntes, SalesDepois } from './tabs/SalesTab'
 
 const TAB_ITEMS = [
   { id: 'inventario', label: 'Inventário' },
@@ -55,7 +56,13 @@ function ComparisonLayout({ tabId }: { tabId: string }) {
           </Badge>
         </div>
         <div className="rounded-2xl border border-skip-neutral-1350 bg-white p-6 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]">
-          {tabId === 'inventario' ? <InventoryAntes /> : <Placeholder tabId={tabId} type="antes" />}
+          {tabId === 'inventario' ? (
+            <InventoryAntes />
+          ) : tabId === 'vendas' ? (
+            <SalesAntes />
+          ) : (
+            <Placeholder tabId={tabId} type="antes" />
+          )}
         </div>
       </div>
 
@@ -70,6 +77,8 @@ function ComparisonLayout({ tabId }: { tabId: string }) {
           <div className="bg-white rounded-[15px] p-6 flex flex-col flex-1 w-full overflow-hidden">
             {tabId === 'inventario' ? (
               <InventoryDepois />
+            ) : tabId === 'vendas' ? (
+              <SalesDepois />
             ) : (
               <Placeholder tabId={tabId} type="depois" />
             )}
