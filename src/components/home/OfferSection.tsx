@@ -144,7 +144,7 @@ export function OfferSection() {
         {/* Exclusivo da Live Banner */}
         <div className="mt-8 md:mt-12 bg-skip-neutral-300 border border-skip-neutral-1350 rounded-[20px] overflow-hidden flex flex-col md:flex-row items-stretch w-full shadow-md">
           {/* Left Content (60%) */}
-          <div className="w-full md:w-[60%] flex flex-col justify-center p-8 md:p-10 lg:p-12">
+          <div className="w-full md:w-[60%] flex flex-col justify-center p-8 md:p-10 lg:p-12 relative z-20">
             <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-6">
               <div className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
@@ -155,22 +155,23 @@ export function OfferSection() {
               </span>
             </div>
 
-            <h3 className="font-heading text-[20px] md:text-[24px] font-semibold text-white">
+            <h3 className="font-heading text-heading-s font-semibold text-white">
               2 Consultorias Individuais Gratuitas
             </h3>
 
-            <p className="mt-2 font-body text-body-s text-skip-neutral-800">
+            <p className="mt-2 font-body text-body-s text-skip-neutral-900">
               Sessões individuais com foco total no seu projeto — para sair com clareza, próximos
               passos definidos e resultados reais mais rápido.
             </p>
           </div>
 
           {/* Right Image (40%) */}
-          <div className="w-full md:w-[40%] relative min-h-[250px] md:min-h-0 bg-skip-neutral-1350">
+          <div className="w-full md:w-[40%] relative min-h-[250px] md:min-h-0 bg-skip-neutral-1350 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-skip-neutral-300 to-transparent z-10" />
             <img
               src={consultoriaImgUrl}
               alt="Consultoria Individual na Prática"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover z-0"
             />
           </div>
         </div>
