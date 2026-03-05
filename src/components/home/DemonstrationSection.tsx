@@ -9,10 +9,10 @@ export function DemonstrationSection() {
           <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
             DEMONSTRAÇÃO
           </span>
-          <SectionTitle className="font-heading font-bold text-skip-neutral-300 mb-6 max-w-3xl tracking-tight text-center">
+          <SectionTitle className="font-heading font-bold text-skip-neutral-300 mb-4 max-w-3xl tracking-tight text-center">
             Veja a diferença na prática
           </SectionTitle>
-          <p className="font-body text-lg md:text-xl text-skip-neutral-800 max-w-2xl mx-auto text-center">
+          <p className="font-body text-xl md:text-2xl text-skip-neutral-800 max-w-2xl mx-auto text-center">
             Compare o antes e o depois de estruturar seus processos no Skip
           </p>
         </div>
