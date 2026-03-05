@@ -866,6 +866,9 @@ h6{
 .mb-4{
   margin-bottom: 1rem;
 }
+.mb-6{
+  margin-bottom: 1.5rem;
+}
 .mb-8{
   margin-bottom: 2rem;
 }
@@ -1136,6 +1139,12 @@ h6{
 }
 .min-w-\[var\(--radix-select-trigger-width\)\]{
   min-width: var(--radix-select-trigger-width);
+}
+.max-w-2xl{
+  max-width: 42rem;
+}
+.max-w-3xl{
+  max-width: 48rem;
 }
 .max-w-\[--skeleton-width\]{
   max-width: var(--skeleton-width);
@@ -1607,6 +1616,10 @@ h6{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1755,6 +1768,9 @@ h6{
 .leading-relaxed{
   line-height: 1.625;
 }
+.leading-tight{
+  line-height: 1.25;
+}
 .tracking-\[0\.15em\]{
   letter-spacing: 0.15em;
 }
@@ -1829,6 +1845,10 @@ h6{
 .text-skip-neutral-500{
   --tw-text-opacity: 1;
   color: rgb(42 42 51 / var(--tw-text-opacity, 1));
+}
+.text-skip-neutral-600{
+  --tw-text-opacity: 1;
+  color: rgb(55 54 66 / var(--tw-text-opacity, 1));
 }
 .text-skip-neutral-800{
   --tw-text-opacity: 1;
@@ -3141,6 +3161,10 @@ h6{
   }
   .md\:text-left{
     text-align: left;
+  }
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
   .md\:text-sm{
     font-size: 0.875rem;

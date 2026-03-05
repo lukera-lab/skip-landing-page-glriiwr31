@@ -90,6 +90,21 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Demonstration Section */}
+      <section className="w-full py-24 px-5 relative z-10">
+        <div className="max-w-[1100px] mx-auto flex flex-col items-center text-center">
+          <span className="font-mono text-sm tracking-[0.15em] text-blue-violet-600 uppercase font-semibold mb-4">
+            DEMONSTRAÇÃO
+          </span>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold text-skip-neutral-900 mb-6 max-w-3xl leading-tight">
+            Veja na prática como o Skip transforma seus processos
+          </h2>
+          <p className="font-body text-lg text-skip-neutral-600 max-w-2xl">
+            Escolha um processo abaixo e compare como era antes e como fica com o Skip
+          </p>
+        </div>
+      </section>
+
       {/* Social Proof */}
       <section className="w-full px-5 pb-20 relative z-10">
         <div
