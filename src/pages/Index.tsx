@@ -41,18 +41,15 @@ export default function Index() {
 
           {/* Main Headline */}
           <h1
-            className="font-display text-[28px] sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full max-w-[320px] sm:max-w-none mx-auto"
+            className="font-display text-[28px] sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full max-w-[360px] sm:max-w-none mx-auto"
             style={{ animationFillMode: 'both' }}
           >
-            <span className="inline-block">O criador de Sistemas Internos</span>{' '}
-            <br className="hidden md:block" />
-            <span className="inline-block">
-              mais{' '}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600">
-                fácil e intuitivo
-              </span>{' '}
-              do mundo
-            </span>
+            O criador de Sistemas Internos <br className="hidden md:block" />
+            mais{' '}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600">
+              fácil e intuitivo
+            </span>{' '}
+            do mundo
           </h1>
 
           {/* Subheadline */}

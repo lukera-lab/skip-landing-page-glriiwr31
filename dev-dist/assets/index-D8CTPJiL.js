@@ -27557,28 +27557,19 @@ function Index() {
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-							className: "font-display text-[28px] sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full max-w-[320px] sm:max-w-none mx-auto",
+							className: "font-display text-[28px] sm:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full max-w-[360px] sm:max-w-none mx-auto",
 							style: { animationFillMode: "both" },
 							children: [
+								"O criador de Sistemas Internos ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", { className: "hidden md:block" }),
+								"mais",
+								" ",
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "inline-block",
-									children: "O criador de Sistemas Internos"
+									className: "bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600",
+									children: "fácil e intuitivo"
 								}),
 								" ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", { className: "hidden md:block" }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-									className: "inline-block",
-									children: [
-										"mais",
-										" ",
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600",
-											children: "fácil e intuitivo"
-										}),
-										" ",
-										"do mundo"
-									]
-								})
+								"do mundo"
 							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -27772,4 +27763,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index--G9ad9HR.js.map
+//# sourceMappingURL=index-D8CTPJiL.js.map
