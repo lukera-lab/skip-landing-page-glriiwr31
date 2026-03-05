@@ -26896,6 +26896,97 @@ function FeaturesSection() {
 		})
 	});
 }
+var TEMPLATES = [
+	{
+		label: "Gestão Comercial",
+		chips: [
+			"CRM B2B",
+			"Sistema de Cotação",
+			"Portal do Cliente"
+		]
+	},
+	{
+		label: "Operações & Processos",
+		chips: [
+			"Checklist Operacional",
+			"Gestão de Projetos",
+			"Timesheet"
+		]
+	},
+	{
+		label: "Pessoas & Cultura",
+		chips: [
+			"Controle de RH",
+			"Universidade Corporativa",
+			"Intranet"
+		]
+	},
+	{
+		label: "Dados & Inteligência",
+		chips: [
+			"Central de Indicadores",
+			"Formulário de Diagnóstico",
+			"Sistema de Feedback"
+		]
+	}
+];
+function TemplatesSection() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "w-full py-24 md:py-32 px-5 bg-skip-neutral-300 relative z-10 overflow-hidden",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "max-w-[1100px] mx-auto flex flex-col items-center",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "flex items-center justify-center mb-8 animate-fade-in-up",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "relative flex h-2 w-2",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-red-500" })]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "font-mono text-mono-xs tracking-[0.2em] text-red-500 uppercase font-semibold",
+							children: "Disponível durante a Live"
+						})]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "max-w-[700px] mx-auto text-center mb-16 animate-fade-in-up",
+					style: {
+						animationDelay: "100ms",
+						animationFillMode: "both"
+					},
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-white mb-6 tracking-tight leading-tight",
+						children: "Tenha sistemas internos prontos para implementar hoje"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "font-body text-body-m text-skip-neutral-800",
+						children: "Explore nossa biblioteca de templates e personalize o que mais fizer sentido para a sua operação"
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up",
+					style: {
+						animationDelay: "200ms",
+						animationFillMode: "both"
+					},
+					children: TEMPLATES.map((template) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "bg-skip-neutral-400 rounded-[20px] p-[28px] border border-skip-neutral-600 flex flex-col gap-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-skip-neutral-700",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-mono text-mono-xs tracking-[0.15em] text-blue-violet-500 uppercase font-semibold",
+							children: template.label
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "flex flex-wrap gap-2 mt-auto",
+							children: template.chips.map((chip) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "px-3.5 py-1.5 rounded-full bg-skip-neutral-500 text-skip-neutral-1100 font-body text-[13px] sm:text-sm font-medium",
+								children: chip
+							}, chip))
+						})]
+					}, template.label))
+				})
+			]
+		})
+	});
+}
 var LOGOS = [
 	{
 		name: "microsoft",
@@ -27054,7 +27145,8 @@ function Index() {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PlatformSection, {}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FeaturesSection, {})
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FeaturesSection, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TemplatesSection, {})
 		]
 	});
 }
@@ -27160,4 +27252,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-qhm6oHD8.js.map
+//# sourceMappingURL=index-ULQf1E7f.js.map
