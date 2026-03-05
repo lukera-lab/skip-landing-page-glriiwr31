@@ -27270,6 +27270,7 @@ var Separator = import_react.forwardRef(({ className, orientation = "horizontal"
 	...props
 }));
 Separator.displayName = Root.displayName;
+var consultoria_individual_skip_f7cfb_default = "/assets/consultoria-individual-skip-f7cfb-eDphXJlU.webp";
 function OfferSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		className: "w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50",
@@ -27427,9 +27428,9 @@ function OfferSection() {
 					})
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mt-8 md:mt-12 bg-skip-neutral-1450 border border-skip-neutral-1350 rounded-[20px] p-[40px] flex flex-col md:flex-row gap-8 items-stretch w-full",
+				className: "mt-8 md:mt-12 bg-skip-neutral-300 border border-skip-neutral-1350 rounded-[20px] overflow-hidden flex flex-col md:flex-row items-stretch w-full shadow-md",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "w-full md:w-[60%] flex flex-col justify-center",
+					className: "w-full md:w-[60%] flex flex-col justify-center p-8 md:p-10 lg:p-12",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-6",
@@ -27442,7 +27443,7 @@ function OfferSection() {
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-heading text-[20px] md:text-[24px] font-semibold text-skip-neutral-300",
+							className: "font-heading text-[20px] md:text-[24px] font-semibold text-white",
 							children: "2 Consultorias Individuais Gratuitas"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -27450,7 +27451,14 @@ function OfferSection() {
 							children: "Sessões individuais com foco total no seu projeto — para sair com clareza, próximos passos definidos e resultados reais mais rápido."
 						})
 					]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-full md:w-[40%] bg-skip-neutral-1350 rounded-[12px] min-h-[200px] md:min-h-0" })]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "w-full md:w-[40%] relative min-h-[250px] md:min-h-0 bg-skip-neutral-1350",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						src: consultoria_individual_skip_f7cfb_default,
+						alt: "Consultoria Individual na Prática",
+						className: "absolute inset-0 w-full h-full object-cover"
+					})
+				})]
 			})]
 		})
 	});
@@ -27721,4 +27729,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DhFgPawV.js.map
+//# sourceMappingURL=index-DB3nNmw5.js.map

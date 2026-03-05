@@ -1171,8 +1171,8 @@ h6{
 .min-h-\[160px\]{
   min-height: 160px;
 }
-.min-h-\[200px\]{
-  min-height: 200px;
+.min-h-\[250px\]{
+  min-height: 250px;
 }
 .min-h-\[300px\]{
   min-height: 300px;
@@ -2416,14 +2416,14 @@ h6{
 .p-7{
   padding: 1.75rem;
 }
+.p-8{
+  padding: 2rem;
+}
 .p-\[1px\]{
   padding: 1px;
 }
 .p-\[28px\]{
   padding: 28px;
-}
-.p-\[40px\]{
-  padding: 40px;
 }
 .px-1{
   padding-left: 0.25rem;
@@ -4764,6 +4764,9 @@ h6{
   .md\:border-\[4px\]{
     border-width: 4px;
   }
+  .md\:p-10{
+    padding: 2.5rem;
+  }
   .md\:p-8{
     padding: 2rem;
   }
@@ -4854,6 +4857,9 @@ h6{
   }
   .lg\:gap-16{
     gap: 4rem;
+  }
+  .lg\:p-12{
+    padding: 3rem;
   }
   .lg\:px-8{
     padding-left: 2rem;

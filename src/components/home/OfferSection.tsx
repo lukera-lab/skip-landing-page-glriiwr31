@@ -2,6 +2,7 @@ import { Check, Gift, Shield, ArrowRight, Info, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '@/components/ui/tooltip'
 import { Separator } from '@/components/ui/separator'
+import consultoriaImgUrl from '@/assets/consultoria-individual-skip-f7cfb.webp'
 
 export function OfferSection() {
   return (
@@ -141,9 +142,9 @@ export function OfferSection() {
         </div>
 
         {/* Exclusivo da Live Banner */}
-        <div className="mt-8 md:mt-12 bg-skip-neutral-1450 border border-skip-neutral-1350 rounded-[20px] p-[40px] flex flex-col md:flex-row gap-8 items-stretch w-full">
+        <div className="mt-8 md:mt-12 bg-skip-neutral-300 border border-skip-neutral-1350 rounded-[20px] overflow-hidden flex flex-col md:flex-row items-stretch w-full shadow-md">
           {/* Left Content (60%) */}
-          <div className="w-full md:w-[60%] flex flex-col justify-center">
+          <div className="w-full md:w-[60%] flex flex-col justify-center p-8 md:p-10 lg:p-12">
             <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-6">
               <div className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
@@ -154,7 +155,7 @@ export function OfferSection() {
               </span>
             </div>
 
-            <h3 className="font-heading text-[20px] md:text-[24px] font-semibold text-skip-neutral-300">
+            <h3 className="font-heading text-[20px] md:text-[24px] font-semibold text-white">
               2 Consultorias Individuais Gratuitas
             </h3>
 
@@ -164,8 +165,14 @@ export function OfferSection() {
             </p>
           </div>
 
-          {/* Right Image Placeholder (40%) */}
-          <div className="w-full md:w-[40%] bg-skip-neutral-1350 rounded-[12px] min-h-[200px] md:min-h-0" />
+          {/* Right Image (40%) */}
+          <div className="w-full md:w-[40%] relative min-h-[250px] md:min-h-0 bg-skip-neutral-1350">
+            <img
+              src={consultoriaImgUrl}
+              alt="Consultoria Individual na Prática"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
