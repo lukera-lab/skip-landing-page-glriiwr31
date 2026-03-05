@@ -18934,6 +18934,13 @@ var ChartNoAxesColumn = createLucideIcon("chart-no-axes-column", [
 		key: "unv183"
 	}]
 ]);
+var ChartPie = createLucideIcon("chart-pie", [["path", {
+	d: "M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z",
+	key: "pzmjnu"
+}], ["path", {
+	d: "M21.21 15.89A10 10 0 1 1 8 2.83",
+	key: "k2fpak"
+}]]);
 var Check = createLucideIcon("check", [["path", {
 	d: "M20 6 9 17l-5-5",
 	key: "1gmf2c"
@@ -18960,6 +18967,23 @@ var CircleAlert = createLucideIcon("circle-alert", [
 		key: "4dfq90"
 	}]
 ]);
+var Database = createLucideIcon("database", [
+	["ellipse", {
+		cx: "12",
+		cy: "5",
+		rx: "9",
+		ry: "3",
+		key: "msslwz"
+	}],
+	["path", {
+		d: "M3 5V19A9 3 0 0 0 21 19V5",
+		key: "1wlel7"
+	}],
+	["path", {
+		d: "M3 12A9 3 0 0 0 21 12",
+		key: "mv7ke4"
+	}]
+]);
 var FileText = createLucideIcon("file-text", [
 	["path", {
 		d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z",
@@ -18982,6 +19006,40 @@ var FileText = createLucideIcon("file-text", [
 		key: "z1uh3a"
 	}]
 ]);
+var LayoutDashboard = createLucideIcon("layout-dashboard", [
+	["rect", {
+		width: "7",
+		height: "9",
+		x: "3",
+		y: "3",
+		rx: "1",
+		key: "10lvy0"
+	}],
+	["rect", {
+		width: "7",
+		height: "5",
+		x: "14",
+		y: "3",
+		rx: "1",
+		key: "16une8"
+	}],
+	["rect", {
+		width: "7",
+		height: "9",
+		x: "14",
+		y: "12",
+		rx: "1",
+		key: "1hutg5"
+	}],
+	["rect", {
+		width: "7",
+		height: "5",
+		x: "3",
+		y: "16",
+		rx: "1",
+		key: "ldoo1y"
+	}]
+]);
 var Sparkles = createLucideIcon("sparkles", [
 	["path", {
 		d: "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z",
@@ -19002,6 +19060,20 @@ var Sparkles = createLucideIcon("sparkles", [
 		key: "6kqj1y"
 	}]
 ]);
+var TrendingDown = createLucideIcon("trending-down", [["path", {
+	d: "M16 17h6v-6",
+	key: "t6n2it"
+}], ["path", {
+	d: "m22 17-8.5-8.5-5 5L2 7",
+	key: "x473p"
+}]]);
+var TrendingUp = createLucideIcon("trending-up", [["path", {
+	d: "M16 7h6v6",
+	key: "box55l"
+}], ["path", {
+	d: "m22 7-8.5 8.5-5-5L2 17",
+	key: "1t1m79"
+}]]);
 var Users = createLucideIcon("users", [
 	["path", {
 		d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
@@ -24584,12 +24656,12 @@ function InventoryDepois() {
 		]
 	});
 }
-var ANTES_POINTS = [
+var ANTES_POINTS$1 = [
 	"Feedback Lento e Baseado em pouca amostragem",
 	"Difícil Replicar e armazenar o Padrão de Sucesso",
 	"Cada líder avalia de um jeito"
 ];
-var DEPOIS_POINTS = [
+var DEPOIS_POINTS$1 = [
 	"Armazenamento e análise de cada reunião com base na transcrição",
 	"Análise de objeções com base em amostragem",
 	"Visualização de performance individual do time"
@@ -24610,7 +24682,7 @@ function SalesAntes() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 				className: "space-y-3 mb-8 shrink-0",
-				children: ANTES_POINTS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+				children: ANTES_POINTS$1.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 					className: "flex items-center gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "rounded-full bg-red-50 p-1 shrink-0",
@@ -24702,7 +24774,7 @@ function SalesDepois() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 				className: "space-y-3 mb-8 shrink-0",
-				children: DEPOIS_POINTS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+				children: DEPOIS_POINTS$1.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 					className: "flex items-center gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "rounded-full bg-blue-violet-50 p-1 shrink-0",
@@ -24934,6 +25006,381 @@ function SalesDepois() {
 		]
 	});
 }
+var ANTES_POINTS = [
+	"Informações fragmentadas",
+	"Dependência de múltiplas ferramentas",
+	"Desconfiança nos dados"
+];
+function DashboardsAntes() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex flex-col flex-1 w-full h-full animate-fade-in",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mb-6 shrink-0 flex flex-col gap-1.5",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "text-mono-xs uppercase text-blue-violet-600",
+					children: "Processo Padrão"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "text-xl font-heading font-semibold text-skip-neutral-100",
+					children: "Múltiplos dashboards descentralizados"
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+				className: "space-y-3 mb-8 shrink-0",
+				children: ANTES_POINTS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+					className: "flex items-center gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "rounded-full bg-red-50 p-1 shrink-0",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-400" })
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-sm text-skip-neutral-600 leading-tight",
+						children: item
+					})]
+				}, i))
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex-1 border border-skip-neutral-1350 rounded-lg bg-skip-neutral-1450/50 p-4 flex flex-col min-h-[250px] shadow-inner relative overflow-hidden",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "absolute top-2 left-2 right-12 h-32 bg-white rounded-md border border-skip-neutral-1300 shadow-md rotate-[-2deg] flex flex-col overflow-hidden opacity-95 z-10 transition-transform hover:rotate-0 hover:z-40",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-blue-600 p-1.5 flex items-center gap-2 text-white",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-4 h-4 rounded bg-white/20 flex items-center justify-center",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Database, { className: "w-2.5 h-2.5" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-[10px] font-medium",
+								children: "CRM Cloud"
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "p-3 flex-1 flex flex-col gap-2",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "text-[10px] text-skip-neutral-500 font-medium",
+								children: "Receita Q3"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "text-lg font-bold text-skip-neutral-800",
+								children: ["R$ 1.2M ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[10px] text-green-500 font-normal ml-1",
+									children: "+12%"
+								})]
+							})]
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "absolute top-16 left-8 right-4 h-36 bg-white rounded-md border border-skip-neutral-1300 shadow-lg rotate-[3deg] flex flex-col overflow-hidden z-20 transition-transform hover:rotate-0 hover:z-40",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-green-600 p-1.5 flex items-center gap-2 text-white",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-4 h-4 rounded bg-white/20 flex items-center justify-center font-serif text-[10px] font-bold",
+								children: "X"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-[10px] font-medium",
+								children: "Financeiro_Final_v4.xlsx"
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "p-2 flex-1 flex flex-col",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
+								className: "w-full text-left text-[9px] border-collapse",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+									className: "border-b border-skip-neutral-1300 text-skip-neutral-500",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+										className: "p-1 font-medium",
+										children: "Mês"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+										className: "p-1 font-medium text-right",
+										children: "Faturamento"
+									})]
+								}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tbody", {
+									className: "text-skip-neutral-700",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+											className: "border-b border-skip-neutral-1300 bg-red-50",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+												className: "p-1 text-red-600",
+												children: "Julho"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+												className: "p-1 text-right text-red-600 font-medium",
+												children: "R$ 890k (ERRO)"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+											className: "border-b border-skip-neutral-1300",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+												className: "p-1",
+												children: "Agosto"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+												className: "p-1 text-right",
+												children: "R$ 950k"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+											className: "p-1",
+											children: "Total Q3"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+											className: "p-1 text-right font-bold text-red-500",
+											children: "!= REF"
+										})] })
+									]
+								})]
+							})
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "absolute bottom-2 left-4 right-10 h-28 bg-white rounded-md border border-skip-neutral-1300 shadow-xl rotate-[-1deg] flex flex-col overflow-hidden z-30 transition-transform hover:rotate-0 hover:z-40",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-orange-500 p-1.5 flex items-center gap-2 text-white",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-4 h-4 rounded bg-white/20 flex items-center justify-center",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChartPie, { className: "w-2.5 h-2.5" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-[10px] font-medium",
+								children: "Web Analytics"
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "p-3 flex-1 flex items-center justify-between",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex flex-col",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "text-[10px] text-skip-neutral-500 font-medium",
+										children: "Conversão"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "text-lg font-bold text-skip-neutral-800",
+										children: "2.4%"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "text-[9px] text-red-500 flex items-center mt-0.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingDown, { className: "w-2 h-2 mr-0.5" }), " -0.8%"]
+									})
+								]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-12 h-12 rounded-full border-4 border-orange-100 border-t-orange-500 border-r-orange-500" })]
+						})]
+					})
+				]
+			})
+		]
+	});
+}
+var DEPOIS_POINTS = [
+	"Eliminação de múltiplas ferramentas",
+	"Tomada de decisão 3-5x mais rápida",
+	"Confiabilidade dos dados"
+];
+function DashboardsDepois() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex flex-col flex-1 w-full h-full animate-fade-in",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mb-6 shrink-0 flex flex-col gap-1.5",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "text-mono-xs uppercase text-blue-violet-600",
+					children: "Sistema Skip"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "text-xl font-heading font-semibold text-skip-neutral-100",
+					children: "Central de Inteligência"
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+				className: "space-y-3 mb-8 shrink-0",
+				children: DEPOIS_POINTS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+					className: "flex items-center gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "rounded-full bg-blue-violet-50 p-1 shrink-0",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-400" })
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-sm text-skip-neutral-600 leading-tight",
+						children: item
+					})]
+				}, i))
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "flex-1 rounded-xl border border-blue-violet-100 shadow-sm flex flex-col min-h-0 overflow-hidden",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex-1 bg-gradient-to-b from-white to-blue-violet-50 p-3 sm:p-4 flex flex-col gap-3",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center justify-between border-b border-skip-neutral-1350 pb-2 shrink-0",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "w-6 h-6 rounded bg-blue-violet-600 text-white flex items-center justify-center shadow-sm",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutDashboard, { className: "w-3 h-3" })
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-xs font-semibold text-skip-neutral-800",
+									children: "Executive Overview"
+								})]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex gap-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
+									variant: "outline",
+									className: "text-[9px] h-4 px-1.5 py-0 font-medium bg-white",
+									children: "Q3 2024"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
+									variant: "outline",
+									className: "text-[9px] h-4 px-1.5 py-0 font-medium bg-green-50 text-green-700 border-green-200",
+									children: "Live"
+								})]
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid grid-cols-3 gap-2 shrink-0",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "bg-white/90 backdrop-blur-sm rounded-lg p-2.5 flex flex-col border border-skip-neutral-1350 shadow-sm relative overflow-hidden",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 right-0 w-8 h-8 bg-blue-50 rounded-bl-full -z-0" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-[9px] text-skip-neutral-500 uppercase tracking-wider font-medium z-10",
+											children: "Receita Global"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-end gap-1 mt-1 z-10",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-sm font-bold text-skip-neutral-800",
+												children: "R$ 3.2M"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+												className: "text-[8px] text-green-600 font-medium mb-0.5 flex items-center",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingUp, { className: "w-2 h-2 mr-0.5" }), " 24%"]
+											})]
+										})
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "bg-white/90 backdrop-blur-sm rounded-lg p-2.5 flex flex-col border border-skip-neutral-1350 shadow-sm relative overflow-hidden",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 right-0 w-8 h-8 bg-purple-50 rounded-bl-full -z-0" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-[9px] text-skip-neutral-500 uppercase tracking-wider font-medium z-10",
+											children: "Margem Líquida"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-end gap-1 mt-1 z-10",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-sm font-bold text-skip-neutral-800",
+												children: "28.4%"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+												className: "text-[8px] text-green-600 font-medium mb-0.5 flex items-center",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingUp, { className: "w-2 h-2 mr-0.5" }), " 4.2%"]
+											})]
+										})
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "bg-white/90 backdrop-blur-sm rounded-lg p-2.5 flex flex-col border border-skip-neutral-1350 shadow-sm relative overflow-hidden",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 right-0 w-8 h-8 bg-orange-50 rounded-bl-full -z-0" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-[9px] text-skip-neutral-500 uppercase tracking-wider font-medium z-10",
+											children: "CAC"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-end gap-1 mt-1 z-10",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-sm font-bold text-skip-neutral-800",
+												children: "R$ 450"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+												className: "text-[8px] text-green-600 font-medium mb-0.5 flex items-center",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingDown, { className: "w-2 h-2 mr-0.5" }), " 12%"]
+											})]
+										})
+									]
+								})
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-white rounded-lg border border-skip-neutral-1350 shadow-sm flex flex-col flex-1 p-3 min-h-[120px]",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex justify-between items-center mb-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[10px] font-medium text-skip-neutral-800",
+										children: "Crescimento de MRR vs Meta"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center gap-1",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-blue-violet-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[8px] text-skip-neutral-500",
+												children: "Realizado"
+											})]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center gap-1",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-skip-neutral-1300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[8px] text-skip-neutral-500",
+												children: "Meta"
+											})]
+										})]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex-1 flex items-end justify-between gap-1 mt-auto h-full pb-1 relative",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "absolute inset-0 flex flex-col justify-between z-0",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-full border-b border-dashed border-skip-neutral-1300 h-0" }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-full border-b border-dashed border-skip-neutral-1300 h-0" }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-full border-b border-dashed border-skip-neutral-1300 h-0" }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-full border-b border-skip-neutral-1350 h-0" })
+										]
+									}), [
+										{
+											h1: "40%",
+											h2: "45%"
+										},
+										{
+											h1: "55%",
+											h2: "50%"
+										},
+										{
+											h1: "65%",
+											h2: "60%"
+										},
+										{
+											h1: "70%",
+											h2: "70%"
+										},
+										{
+											h1: "85%",
+											h2: "80%"
+										},
+										{
+											h1: "100%",
+											h2: "90%"
+										}
+									].map((val, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex gap-0.5 w-full justify-center z-10 h-full items-end group",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "w-1/3 max-w-[12px] bg-blue-violet-500 rounded-t-sm transition-all duration-300 group-hover:bg-blue-violet-400 group-hover:w-1/2",
+											style: { height: val.h1 }
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "w-1/3 max-w-[12px] bg-skip-neutral-1300 rounded-t-sm transition-all duration-300 group-hover:w-1/2",
+											style: { height: val.h2 }
+										})]
+									}, i))]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "flex justify-between mt-1 z-10",
+									children: [
+										"Jan",
+										"Fev",
+										"Mar",
+										"Abr",
+										"Mai",
+										"Jun"
+									].map((m) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[8px] text-skip-neutral-500 w-full text-center",
+										children: m
+									}, m))
+								})
+							]
+						})
+					]
+				})
+			})
+		]
+	});
+}
 var TAB_ITEMS = [
 	{
 		id: "inventario",
@@ -24989,7 +25436,7 @@ function ComparisonLayout({ tabId }) {
 				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "rounded-2xl border border-skip-neutral-1350 bg-white p-6 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]",
-				children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryAntes, {}) : tabId === "vendas" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SalesAntes, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
+				children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryAntes, {}) : tabId === "vendas" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SalesAntes, {}) : tabId === "dashboards" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DashboardsAntes, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
 					tabId,
 					type: "antes"
 				})
@@ -25006,7 +25453,7 @@ function ComparisonLayout({ tabId }) {
 				className: "rounded-2xl p-[1px] bg-gradient-to-br from-blue-violet-400 to-fuchsia-400 shadow-lg shadow-blue-violet-500/20 flex flex-col flex-1 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-blue-violet-500/30 min-h-[400px]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "bg-white rounded-[15px] p-6 flex flex-col flex-1 w-full overflow-hidden",
-					children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryDepois, {}) : tabId === "vendas" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SalesDepois, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
+					children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryDepois, {}) : tabId === "vendas" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SalesDepois, {}) : tabId === "dashboards" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DashboardsDepois, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
 						tabId,
 						type: "depois"
 					})
@@ -25299,4 +25746,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-LDckAs2I.js.map
+//# sourceMappingURL=index-BoEMzwqR.js.map

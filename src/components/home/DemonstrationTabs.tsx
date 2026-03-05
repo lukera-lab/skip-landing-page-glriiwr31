@@ -3,6 +3,7 @@ import { Check, X } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { InventoryAntes, InventoryDepois } from './tabs/InventoryTab'
 import { SalesAntes, SalesDepois } from './tabs/SalesTab'
+import { DashboardsAntes, DashboardsDepois } from './tabs/DashboardsTab'
 
 const TAB_ITEMS = [
   { id: 'inventario', label: 'Inventário' },
@@ -60,6 +61,8 @@ function ComparisonLayout({ tabId }: { tabId: string }) {
             <InventoryAntes />
           ) : tabId === 'vendas' ? (
             <SalesAntes />
+          ) : tabId === 'dashboards' ? (
+            <DashboardsAntes />
           ) : (
             <Placeholder tabId={tabId} type="antes" />
           )}
@@ -79,6 +82,8 @@ function ComparisonLayout({ tabId }: { tabId: string }) {
               <InventoryDepois />
             ) : tabId === 'vendas' ? (
               <SalesDepois />
+            ) : tabId === 'dashboards' ? (
+              <DashboardsDepois />
             ) : (
               <Placeholder tabId={tabId} type="depois" />
             )}
