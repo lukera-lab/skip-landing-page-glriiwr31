@@ -26387,7 +26387,7 @@ function PlatformSection() {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
 						children: "PLATAFORMA"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						className: "font-display text-4xl md:text-[48px] font-semibold text-white mb-8 max-w-[680px] mx-auto text-center leading-tight tracking-tight",
+						className: "font-display text-[28px] md:text-[40px] font-semibold text-white mb-8 max-w-[680px] mx-auto text-center leading-[1.1em] tracking-tight",
 						children: [
 							"Skip é a primeira plataforma de IA agêntica para criação de",
 							" ",
@@ -26412,7 +26412,7 @@ function PlatformSection() {
 					className: "w-full mt-[80px] mb-20 flex justify-center animate-fade-in-up",
 					style: { animationDelay: "300ms" },
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-4xl md:text-[48px] font-semibold text-white text-center tracking-tight",
+						className: "font-heading text-[28px] md:text-[40px] font-semibold text-white text-center leading-[1.1em] tracking-tight",
 						children: "Como funciona?"
 					})
 				}),
@@ -26838,7 +26838,7 @@ function FeaturesSection() {
 						children: "FUNCIONALIDADES"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-bold text-skip-neutral-300 mb-6 max-w-3xl leading-tight tracking-tight",
+						className: "font-heading text-[28px] md:text-[40px] font-bold text-skip-neutral-300 mb-6 max-w-3xl leading-[1.1em] tracking-tight",
 						children: "Skip não apenas gera código"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -26956,7 +26956,7 @@ function TemplatesSection() {
 						animationFillMode: "both"
 					},
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						className: "font-heading text-3xl md:text-4xl font-semibold text-white mb-6 tracking-tight leading-tight",
+						className: "font-heading text-[28px] md:text-[40px] font-semibold text-white mb-6 tracking-tight leading-[1.1em]",
 						children: [
 							"Tenha sistemas internos prontos ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
@@ -27256,4 +27256,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-D-mac3-q.js.map
+//# sourceMappingURL=index-CAvrQm3b.js.map

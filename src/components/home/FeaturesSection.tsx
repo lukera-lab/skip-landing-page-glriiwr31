@@ -69,7 +69,7 @@ export function FeaturesSection() {
           <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
             FUNCIONALIDADES
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-bold text-skip-neutral-300 mb-6 max-w-3xl leading-tight tracking-tight">
+          <h2 className="font-heading text-[28px] md:text-[40px] font-bold text-skip-neutral-300 mb-6 max-w-3xl leading-[1.1em] tracking-tight">
             Skip não apenas gera código
           </h2>
           <p className="font-body text-lg md:text-xl text-skip-neutral-800 max-w-2xl mx-auto">

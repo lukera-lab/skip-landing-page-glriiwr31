@@ -41,7 +41,7 @@ export function TemplatesSection() {
           className="max-w-[600px] mx-auto text-center mb-16 animate-fade-in-up"
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold text-white mb-6 tracking-tight leading-tight">
+          <h2 className="font-heading text-[28px] md:text-[40px] font-semibold text-white mb-6 tracking-tight leading-[1.1em]">
             Tenha sistemas internos prontos <br /> para implementar hoje
           </h2>
           <p className="font-body text-body-m text-skip-neutral-900">
