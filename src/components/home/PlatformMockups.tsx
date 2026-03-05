@@ -429,13 +429,13 @@ export function Step4Mockup() {
           <div className="flex-1 bg-skip-neutral-400 border border-skip-neutral-500 rounded-lg sm:rounded-xl overflow-hidden flex flex-col shadow-sm min-h-[100px]">
             <div className="grid grid-cols-[1fr_auto_auto] gap-2 px-3 py-2 border-b border-skip-neutral-500 bg-skip-neutral-500/20">
               <div className="text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider">
-                Nome
+                NOME
               </div>
               <div className="text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider w-12 sm:w-16 text-center">
-                Horário
+                HORÁRIO
               </div>
               <div className="text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider w-16 sm:w-20 text-center">
-                Status
+                STATUS
               </div>
             </div>
             <div className="flex flex-col gap-0 overflow-y-auto">

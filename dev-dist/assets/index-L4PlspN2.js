@@ -26200,15 +26200,15 @@ function Step4Mockup() {
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider",
-									children: "Nome"
+									children: "NOME"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider w-12 sm:w-16 text-center",
-									children: "Horário"
+									children: "HORÁRIO"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "text-[8px] sm:text-[10px] text-skip-neutral-900 font-semibold uppercase tracking-wider w-16 sm:w-20 text-center",
-									children: "Status"
+									children: "STATUS"
 								})
 							]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -26681,4 +26681,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DMOxRyZD.js.map
+//# sourceMappingURL=index-L4PlspN2.js.map
