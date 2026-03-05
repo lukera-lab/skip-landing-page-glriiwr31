@@ -1,6 +1,6 @@
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { Step1Mockup, Step2Mockup, Step3Mockup, Step4Mockup } from './PlatformMockups'
 import { cn } from '@/lib/utils'
+import { Step1Mockup, Step2Mockup, Step3Mockup, Step4Mockup } from './PlatformMockups'
+import mockskipUrl from '@/assets/mockskip-97ef9.webp'
 
 interface WorkflowStepProps {
   step: string
@@ -22,16 +22,16 @@ function WorkflowStep({ step, title, description, layout, mockup }: WorkflowStep
     >
       {/* Text Content */}
       <div className="flex-1 w-full flex flex-col animate-fade-in-up">
-        <span className="font-mono text-mono-xl text-blue-violet-600 mb-4">{step}</span>
-        <h3 className="font-heading text-4xl md:text-5xl font-semibold text-skip-neutral-100 mb-4 tracking-tight">
+        <span className="font-mono text-mono-xl text-white mb-4">{step}</span>
+        <h3 className="font-heading text-4xl md:text-5xl font-semibold text-white mb-4 tracking-tight">
           {title}
         </h3>
-        <p className="font-body text-body-l text-skip-neutral-800">{description}</p>
+        <p className="font-body text-body-l text-skip-neutral-700">{description}</p>
       </div>
 
       {/* Mockup Container */}
       <div className="flex-[1.5] w-full animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-        <div className="bg-skip-neutral-1450 rounded-[24px] p-4 md:p-8 border border-skip-neutral-1350/50 relative">
+        <div className="bg-skip-neutral-1450 rounded-[24px] p-4 md:p-8 border border-skip-neutral-1350/50 relative shadow-sm">
           {mockup}
         </div>
       </div>
@@ -41,37 +41,37 @@ function WorkflowStep({ step, title, description, layout, mockup }: WorkflowStep
 
 export function PlatformSection() {
   return (
-    <section className="w-full py-24 px-5 relative z-10 bg-white">
+    <section className="w-full py-24 px-5 relative z-10 bg-skip-neutral-1500 overflow-hidden">
       <div className="max-w-[1100px] mx-auto flex flex-col items-center">
         {/* Headline */}
-        <div className="text-center mb-12 flex flex-col items-center animate-fade-in-up">
+        <div className="text-center mb-12 flex flex-col items-center animate-fade-in-up relative z-20">
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
-            A PLATAFORMA
+            COMO FUNCIONA
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-100 mb-8 max-w-4xl leading-tight tracking-tight">
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-white mb-8 max-w-4xl leading-tight tracking-tight">
             Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos
           </h2>
         </div>
 
-        {/* Platform Placeholder */}
+        {/* Platform Mockup */}
         <div
-          className="w-full max-w-5xl mb-32 animate-fade-in-up"
+          className="w-full max-w-4xl mb-32 md:mb-40 relative animate-fade-in-up flex justify-center items-center z-10"
           style={{ animationDelay: '200ms' }}
         >
-          <AspectRatio
-            ratio={16 / 9}
-            className="bg-skip-neutral-1500 rounded-[20px] border border-skip-neutral-1350 shadow-subtle overflow-hidden relative"
-          >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-body text-body-s text-skip-neutral-900">
-                [ screenshot da plataforma ]
-              </span>
-            </div>
-          </AspectRatio>
+          {/* Radial Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] bg-gradient-to-r from-blue-violet-600 to-fuchsia-600 opacity-35 blur-[80px] sm:blur-[120px] rounded-full pointer-events-none" />
+
+          <div className="relative w-full drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]">
+            <img
+              src={mockskipUrl}
+              alt="Skip Platform Interface Mockup"
+              className="w-full h-auto relative z-10 object-contain"
+            />
+          </div>
         </div>
 
         {/* Workflow Steps */}
-        <div className="w-full flex flex-col gap-24 md:gap-32">
+        <div className="w-full flex flex-col gap-24 md:gap-32 relative z-20">
           <WorkflowStep
             step="01"
             title="Descreva sua ideia"

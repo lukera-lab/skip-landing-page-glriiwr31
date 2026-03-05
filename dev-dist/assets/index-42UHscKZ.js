@@ -18045,7 +18045,7 @@ function handleAndDispatchCustomEvent$1(name, handler, detail, { discrete }) {
 	if (discrete) dispatchDiscreteCustomEvent(target, event);
 	else target.dispatchEvent(event);
 }
-var Root$5 = DismissableLayer;
+var Root$4 = DismissableLayer;
 var Branch = DismissableLayerBranch;
 var useLayoutEffect2 = globalThis?.document ? import_react.useLayoutEffect : () => {};
 var import_react_dom$4 = /* @__PURE__ */ __toESM(require_react_dom(), 1);
@@ -18224,7 +18224,7 @@ var VISUALLY_HIDDEN_STYLES = Object.freeze({
 	whiteSpace: "nowrap",
 	wordWrap: "normal"
 });
-var NAME$2 = "VisuallyHidden";
+var NAME$1 = "VisuallyHidden";
 var VisuallyHidden = import_react.forwardRef((props, forwardedRef) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.span, {
 		...props,
@@ -18235,8 +18235,8 @@ var VisuallyHidden = import_react.forwardRef((props, forwardedRef) => {
 		}
 	});
 });
-VisuallyHidden.displayName = NAME$2;
-var Root$4 = VisuallyHidden;
+VisuallyHidden.displayName = NAME$1;
+var Root$3 = VisuallyHidden;
 var import_react_dom$3 = /* @__PURE__ */ __toESM(require_react_dom(), 1);
 var PROVIDER_NAME$1 = "ToastProvider";
 var [Collection$1, useCollection$1, createCollectionScope$1] = createCollection("Toast");
@@ -18535,7 +18535,7 @@ var ToastImpl = import_react.forwardRef((props, forwardedRef) => {
 		onClose: handleClose,
 		children: import_react_dom$3.createPortal(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection$1.ItemSlot, {
 			scope: __scopeToast,
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$5, {
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$4, {
 				asChild: true,
 				onEscapeKeyDown: composeEventHandlers(onEscapeKeyDown, () => {
 					if (!context.isFocusedToastEscapeKeyDownRef.current) handleClose();
@@ -20994,10 +20994,10 @@ var Observer = class {
 			if (typeof id !== "string" && typeof id !== "number") return { unwrap };
 			else return Object.assign(id, { unwrap });
 		};
-		this.custom = (jsx$19, data) => {
+		this.custom = (jsx$18, data) => {
 			const id = (data == null ? void 0 : data.id) || toastsCounter++;
 			this.create({
-				jsx: jsx$19(id),
+				jsx: jsx$18(id),
 				id,
 				...data
 			});
@@ -23123,7 +23123,7 @@ var arrow = (options, deps) => ({
 	...arrow$1$1(options),
 	options: [options, deps]
 });
-var NAME$1 = "Arrow";
+var NAME = "Arrow";
 var Arrow$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { children, width = 10, height = 5, ...arrowProps } = props;
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.svg, {
@@ -23136,8 +23136,8 @@ var Arrow$1 = import_react.forwardRef((props, forwardedRef) => {
 		children: props.asChild ? children : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("polygon", { points: "0,0 30,0 15,10" })
 	});
 });
-Arrow$1.displayName = NAME$1;
-var Root$3 = Arrow$1;
+Arrow$1.displayName = NAME;
+var Root$2 = Arrow$1;
 function useSize(element) {
 	const [size$3, setSize] = import_react.useState(void 0);
 	useLayoutEffect2(() => {
@@ -23354,7 +23354,7 @@ var PopperArrow = import_react.forwardRef(function PopperArrow2(props, forwarded
 			}[contentContext.placedSide],
 			visibility: contentContext.shouldHideArrow ? "hidden" : void 0
 		},
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$3, {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$2, {
 			...arrowProps,
 			ref: forwardedRef,
 			style: {
@@ -23736,7 +23736,7 @@ var TooltipContentImpl = import_react.forwardRef((props, forwardedRef) => {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Slottable, { children }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(VisuallyHiddenContentContextProvider, {
 				scope: __scopeTooltip,
 				isInside: true,
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$4, {
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$3, {
 					id: context.contentId,
 					role: "tooltip",
 					children: ariaLabel || children
@@ -24210,7 +24210,7 @@ function focusFirst(candidates, preventScroll = false) {
 function wrapArray(array, startIndex) {
 	return array.map((_$1, index$1) => array[(startIndex + index$1) % array.length]);
 }
-var Root$2 = RovingFocusGroup;
+var Root$1 = RovingFocusGroup;
 var Item = RovingFocusGroupItem;
 var TABS_NAME = "Tabs";
 var [createTabsContext, createTabsScope] = createContextScope$1(TABS_NAME, [createRovingFocusGroupScope]);
@@ -24247,7 +24247,7 @@ var TabsList$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeTabs, loop = true, ...listProps } = props;
 	const context = useTabsContext(TAB_LIST_NAME, __scopeTabs);
 	const rovingFocusGroupScope = useRovingFocusGroupScope(__scopeTabs);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$2, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$1, {
 		asChild: true,
 		...rovingFocusGroupScope,
 		orientation: context.orientation,
@@ -25471,68 +25471,6 @@ function Placeholder({ tabId, type }) {
 		})]
 	});
 }
-require_react_dom();
-var Primitive = [
-	"a",
-	"button",
-	"div",
-	"form",
-	"h2",
-	"h3",
-	"img",
-	"input",
-	"label",
-	"li",
-	"nav",
-	"ol",
-	"p",
-	"select",
-	"span",
-	"svg",
-	"ul"
-].reduce((primitive, node) => {
-	const Slot$1 = /* @__PURE__ */ createSlot(`Primitive.${node}`);
-	const Node$1 = import_react.forwardRef((props, forwardedRef) => {
-		const { asChild, ...primitiveProps } = props;
-		const Comp = asChild ? Slot$1 : node;
-		if (typeof window !== "undefined") window[Symbol.for("radix-ui")] = true;
-		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Comp, {
-			...primitiveProps,
-			ref: forwardedRef
-		});
-	});
-	Node$1.displayName = `Primitive.${node}`;
-	return {
-		...primitive,
-		[node]: Node$1
-	};
-}, {});
-var NAME = "AspectRatio";
-var AspectRatio$1 = import_react.forwardRef((props, forwardedRef) => {
-	const { ratio = 1 / 1, style, ...aspectRatioProps } = props;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		style: {
-			position: "relative",
-			width: "100%",
-			paddingBottom: `${100 / ratio}%`
-		},
-		"data-radix-aspect-ratio-wrapper": "",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.div, {
-			...aspectRatioProps,
-			ref: forwardedRef,
-			style: {
-				...style,
-				position: "absolute",
-				top: 0,
-				right: 0,
-				bottom: 0,
-				left: 0
-			}
-		})
-	});
-});
-AspectRatio$1.displayName = NAME;
-var AspectRatio = AspectRatio$1;
 function createContextScope(scopeName, createContextScopeDeps = []) {
 	let defaultContexts = [];
 	function createContext3(rootComponentName, defaultContext) {
@@ -25596,6 +25534,42 @@ function composeContextScopes(...scopes) {
 	createScope.scopeName = baseScope.scopeName;
 	return createScope;
 }
+require_react_dom();
+var Primitive = [
+	"a",
+	"button",
+	"div",
+	"form",
+	"h2",
+	"h3",
+	"img",
+	"input",
+	"label",
+	"li",
+	"nav",
+	"ol",
+	"p",
+	"select",
+	"span",
+	"svg",
+	"ul"
+].reduce((primitive, node) => {
+	const Slot$1 = /* @__PURE__ */ createSlot(`Primitive.${node}`);
+	const Node$1 = import_react.forwardRef((props, forwardedRef) => {
+		const { asChild, ...primitiveProps } = props;
+		const Comp = asChild ? Slot$1 : node;
+		if (typeof window !== "undefined") window[Symbol.for("radix-ui")] = true;
+		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Comp, {
+			...primitiveProps,
+			ref: forwardedRef
+		});
+	});
+	Node$1.displayName = `Primitive.${node}`;
+	return {
+		...primitive,
+		[node]: Node$1
+	};
+}, {});
 var PROGRESS_NAME = "Progress";
 var DEFAULT_MAX = 100;
 var [createProgressContext, createProgressScope] = createContextScope(PROGRESS_NAME);
@@ -25847,6 +25821,7 @@ function Step4Mockup() {
 		})
 	});
 }
+var mockskip_97ef9_default = "/assets/mockskip-97ef9-CocZIMDm.webp";
 function WorkflowStep({ step, title, description, layout, mockup }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: cn("flex flex-col gap-10 md:gap-16 items-center", layout === "text-left" ? "md:flex-row" : "md:flex-row-reverse"),
@@ -25854,15 +25829,15 @@ function WorkflowStep({ step, title, description, layout, mockup }) {
 			className: "flex-1 w-full flex flex-col animate-fade-in-up",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "font-mono text-mono-xl text-blue-violet-600 mb-4",
+					className: "font-mono text-mono-xl text-white mb-4",
 					children: step
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "font-heading text-4xl md:text-5xl font-semibold text-skip-neutral-100 mb-4 tracking-tight",
+					className: "font-heading text-4xl md:text-5xl font-semibold text-white mb-4 tracking-tight",
 					children: title
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-body text-body-l text-skip-neutral-800",
+					className: "font-body text-body-l text-skip-neutral-700",
 					children: description
 				})
 			]
@@ -25870,7 +25845,7 @@ function WorkflowStep({ step, title, description, layout, mockup }) {
 			className: "flex-[1.5] w-full animate-fade-in-up",
 			style: { animationDelay: "100ms" },
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-skip-neutral-1450 rounded-[24px] p-4 md:p-8 border border-skip-neutral-1350/50 relative",
+				className: "bg-skip-neutral-1450 rounded-[24px] p-4 md:p-8 border border-skip-neutral-1350/50 relative shadow-sm",
 				children: mockup
 			})
 		})]
@@ -25878,37 +25853,34 @@ function WorkflowStep({ step, title, description, layout, mockup }) {
 }
 function PlatformSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "w-full py-24 px-5 relative z-10 bg-white",
+		className: "w-full py-24 px-5 relative z-10 bg-skip-neutral-1500 overflow-hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] mx-auto flex flex-col items-center",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "text-center mb-12 flex flex-col items-center animate-fade-in-up",
+					className: "text-center mb-12 flex flex-col items-center animate-fade-in-up relative z-20",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
-						children: "A PLATAFORMA"
+						children: "COMO FUNCIONA"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-100 mb-8 max-w-4xl leading-tight tracking-tight",
+						className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-white mb-8 max-w-4xl leading-tight tracking-tight",
 						children: "Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos"
 					})]
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "w-full max-w-5xl mb-32 animate-fade-in-up",
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "w-full max-w-4xl mb-32 md:mb-40 relative animate-fade-in-up flex justify-center items-center z-10",
 					style: { animationDelay: "200ms" },
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AspectRatio, {
-						ratio: 16 / 9,
-						className: "bg-skip-neutral-1500 rounded-[20px] border border-skip-neutral-1350 shadow-subtle overflow-hidden relative",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "absolute inset-0 flex items-center justify-center",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "font-body text-body-s text-skip-neutral-900",
-								children: "[ screenshot da plataforma ]"
-							})
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] bg-gradient-to-r from-blue-violet-600 to-fuchsia-600 opacity-35 blur-[80px] sm:blur-[120px] rounded-full pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "relative w-full drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: mockskip_97ef9_default,
+							alt: "Skip Platform Interface Mockup",
+							className: "w-full h-auto relative z-10 object-contain"
 						})
-					})
+					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "w-full flex flex-col gap-24 md:gap-32",
+					className: "w-full flex flex-col gap-24 md:gap-32 relative z-20",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(WorkflowStep, {
 							step: "01",
@@ -26207,4 +26179,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-Dh0dhdvS.js.map
+//# sourceMappingURL=index-42UHscKZ.js.map
