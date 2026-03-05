@@ -18924,6 +18924,28 @@ var Check = createLucideIcon("check", [["path", {
 	d: "M20 6 9 17l-5-5",
 	key: "1gmf2c"
 }]]);
+var CircleAlert = createLucideIcon("circle-alert", [
+	["circle", {
+		cx: "12",
+		cy: "12",
+		r: "10",
+		key: "1mglay"
+	}],
+	["line", {
+		x1: "12",
+		x2: "12",
+		y1: "8",
+		y2: "12",
+		key: "1pkeuh"
+	}],
+	["line", {
+		x1: "12",
+		x2: "12.01",
+		y1: "16",
+		y2: "16",
+		key: "4dfq90"
+	}]
+]);
 var Sparkles = createLucideIcon("sparkles", [
 	["path", {
 		d: "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z",
@@ -18944,6 +18966,20 @@ var Sparkles = createLucideIcon("sparkles", [
 		key: "6kqj1y"
 	}]
 ]);
+var TrendingDown = createLucideIcon("trending-down", [["path", {
+	d: "M16 17h6v-6",
+	key: "t6n2it"
+}], ["path", {
+	d: "m22 17-8.5-8.5-5 5L2 7",
+	key: "x473p"
+}]]);
+var TrendingUp = createLucideIcon("trending-up", [["path", {
+	d: "M16 7h6v6",
+	key: "box55l"
+}], ["path", {
+	d: "m22 7-8.5 8.5-5-5L2 17",
+	key: "1t1m79"
+}]]);
 var X = createLucideIcon("x", [["path", {
 	d: "M18 6 6 18",
 	key: "1bl5f8"
@@ -24109,6 +24145,365 @@ var TabsContent = import_react.forwardRef(({ className, ...props }, ref) => /* @
 	...props
 }));
 TabsContent.displayName = Content.displayName;
+var badgeVariants = cva("inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2", {
+	variants: { variant: {
+		default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+		secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+		destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+		outline: "text-foreground"
+	} },
+	defaultVariants: { variant: "default" }
+});
+function Badge({ className, variant, ...props }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: cn(badgeVariants({ variant }), className),
+		...props
+	});
+}
+var ANTES_ROWS = [
+	{
+		id: 1,
+		prod: "Parafuso Sextavado",
+		cod: "PR-01",
+		qtd: "12",
+		min: "50",
+		forn: "M-Corp",
+		status: "Falta",
+		eBg: "bg-red-100 text-red-700 font-medium"
+	},
+	{
+		id: 2,
+		prod: "Porca M8",
+		cod: "PO-08",
+		qtd: "145",
+		min: "150",
+		forn: "Fer A",
+		status: "Atenção",
+		wBg: "bg-yellow-100"
+	},
+	{
+		id: 3,
+		prod: "Arruela Lisa",
+		cod: "AR-02",
+		qtd: "890",
+		min: "200",
+		forn: "M-Corp",
+		status: "OK"
+	},
+	{
+		id: 4,
+		prod: "#REF!",
+		cod: "CB-12",
+		qtd: "#VALOR!",
+		min: "100",
+		forn: "#N/A",
+		status: "ERRO",
+		rowErr: true
+	},
+	{
+		id: 5,
+		prod: "Dobradiça 35mm",
+		cod: "DB-35",
+		qtd: "45",
+		min: "50",
+		forn: "DobrasBR",
+		status: "Comprar"
+	}
+];
+var DEPOIS_ROWS = [
+	{
+		prod: "Parafuso Sextavado",
+		est: "12",
+		max: "50",
+		status: "Repor Urgente",
+		badge: "bg-red-50 text-red-600 border-red-200",
+		trend: "down",
+		tc: "text-red-500"
+	},
+	{
+		prod: "Porca M8",
+		est: "145",
+		max: "150",
+		status: "Atenção",
+		badge: "bg-yellow-50 text-yellow-600 border-yellow-200",
+		trend: "down",
+		tc: "text-yellow-500"
+	},
+	{
+		prod: "Arruela Lisa",
+		est: "890",
+		max: "200",
+		status: "Saudável",
+		badge: "bg-green-50 text-green-600 border-green-200",
+		trend: "up",
+		tc: "text-green-500"
+	}
+];
+function InventoryAntes() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex flex-col flex-1 w-full animate-fade-in",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mb-6",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "text-lg font-semibold text-skip-neutral-900",
+					children: "Processo Padrão"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-base text-skip-neutral-500",
+					children: "Controle de Inventário em Planilhas"
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+				className: "space-y-3 mb-8",
+				children: [
+					"Erros Manuais Constantes",
+					"Complexidade (múltiplas abas, arquivos, gambiarras)",
+					"Ruptura por falta de previsão (planilha mostra saldo, não tendência)"
+				].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+					className: "flex items-start gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mt-0.5 rounded-full bg-red-100 p-1 shrink-0",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-600" })
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-sm text-skip-neutral-700 leading-tight",
+						children: item
+					})]
+				}, i))
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mt-auto border border-skip-neutral-200 rounded-md bg-white overflow-hidden text-[10px] flex flex-col shadow-sm",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "bg-skip-neutral-100 border-b border-skip-neutral-200 flex items-center px-2 py-1 gap-2 text-skip-neutral-500 font-mono",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex gap-1",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2 h-2 rounded-full bg-red-400" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2 h-2 rounded-full bg-yellow-400" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2 h-2 rounded-full bg-green-400" })
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "inventario_final_v3.xlsx" })]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex-1 overflow-x-auto overflow-y-hidden",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
+							className: "w-full text-left border-collapse whitespace-nowrap min-w-max",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+								className: "bg-skip-neutral-50 border-b border-skip-neutral-200 text-skip-neutral-600",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", { className: "border-r border-skip-neutral-200 p-1 font-normal w-6 text-center" }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+										className: "border-r border-skip-neutral-200 p-1 font-normal",
+										children: "Produto"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+										className: "border-r border-skip-neutral-200 p-1 font-normal",
+										children: "Cód"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+										className: "border-r border-skip-neutral-200 p-1 font-normal text-right",
+										children: "Qtd"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+										className: "border-r border-skip-neutral-200 p-1 font-normal text-right",
+										children: "Est. Min"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+										className: "border-r border-skip-neutral-200 p-1 font-normal",
+										children: "Fornecedor"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+										className: "p-1 font-normal",
+										children: "Status"
+									})
+								]
+							}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tbody", {
+								className: "text-skip-neutral-800",
+								children: ANTES_ROWS.map((r$1) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+									className: `border-b border-skip-neutral-100 ${r$1.rowErr ? "bg-red-50/50" : ""}`,
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+											className: "border-r border-skip-neutral-200 p-1 bg-skip-neutral-50 text-center text-skip-neutral-400",
+											children: r$1.id
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+											className: `border-r border-skip-neutral-200 p-1 ${r$1.prod === "#REF!" ? "text-red-500 font-mono" : ""}`,
+											children: r$1.prod
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+											className: "border-r border-skip-neutral-200 p-1",
+											children: r$1.cod
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+											className: `border-r border-skip-neutral-200 p-1 text-right ${r$1.eBg || ""} ${r$1.qtd === "#VALOR!" ? "text-red-500 font-mono" : ""}`,
+											children: r$1.qtd
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+											className: `border-r border-skip-neutral-200 p-1 text-right ${r$1.wBg || ""}`,
+											children: r$1.min
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+											className: "border-r border-skip-neutral-200 p-1 text-skip-neutral-500",
+											children: r$1.forn
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+											className: `p-1 ${["Falta", "ERRO"].includes(r$1.status) ? "text-red-600 font-medium" : ["Atenção", "Comprar"].includes(r$1.status) ? "text-yellow-600 font-medium" : "text-green-600 font-medium"}`,
+											children: r$1.status
+										})
+									]
+								}, r$1.id))
+							})]
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "bg-skip-neutral-100 border-t border-skip-neutral-200 flex overflow-x-auto no-scrollbar",
+						children: [
+							"Plan1",
+							"Backup",
+							"FINAL_v3",
+							"NÃO MEXER"
+						].map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: `px-3 py-1.5 border-r border-skip-neutral-200 whitespace-nowrap ${i === 2 ? "bg-white font-medium text-skip-neutral-900 border-b-2 border-b-blue-500" : "text-skip-neutral-500"}`,
+							children: t
+						}, t))
+					})
+				]
+			})
+		]
+	});
+}
+function InventoryDepois() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex flex-col flex-1 w-full animate-fade-in",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mb-6",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "text-lg font-semibold text-skip-neutral-900",
+					children: "Sistema Skip"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-base text-blue-violet-600",
+					children: "Inventory OS"
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+				className: "space-y-3 mb-8",
+				children: [
+					"Automação Elimina Erros Manuais",
+					"Rastreabilidade Completa: quem fez o quê e quando",
+					"Alertas e relatórios em Tempo Real"
+				].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+					className: "flex items-start gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mt-0.5 rounded-full bg-blue-violet-100 p-1 shrink-0",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-600" })
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-sm text-skip-neutral-700 leading-tight",
+						children: item
+					})]
+				}, i))
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mt-auto bg-white border border-blue-violet-100 rounded-xl p-3 sm:p-4 shadow-sm flex flex-col gap-4",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "grid grid-cols-3 gap-2",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-skip-neutral-50 rounded-lg p-2 flex flex-col",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-[10px] text-skip-neutral-500 uppercase tracking-wider font-medium",
+								children: "Itens"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-lg font-semibold text-skip-neutral-900",
+								children: "247"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-red-50 rounded-lg p-2 flex flex-col border border-red-100",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+								className: "text-[10px] text-red-600 uppercase tracking-wider font-medium flex items-center gap-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleAlert, { className: "w-3 h-3" }), " Alertas"]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-lg font-semibold text-red-700",
+								children: "3"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-green-50 rounded-lg p-2 flex flex-col border border-green-100",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-[10px] text-green-600 uppercase tracking-wider font-medium",
+								children: "Rupturas"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-lg font-semibold text-green-700",
+								children: "0"
+							})]
+						})
+					]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "text-[11px] w-full border border-skip-neutral-100 rounded-lg overflow-x-auto",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
+						className: "w-full text-left border-collapse whitespace-nowrap min-w-max",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+							className: "bg-skip-neutral-50 border-b border-skip-neutral-100 text-skip-neutral-500",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "p-2 font-medium",
+									children: "Produto"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "p-2 font-medium text-right",
+									children: "Estoque"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "p-2 font-medium text-center",
+									children: "Status"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "p-2 font-medium text-right",
+									children: "Tendência"
+								})
+							]
+						}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tbody", {
+							className: "text-skip-neutral-700",
+							children: DEPOIS_ROWS.map((r$1, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+								className: "border-b border-skip-neutral-50 last:border-0",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+										className: "p-2 font-medium",
+										children: r$1.prod
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
+										className: "p-2 text-right",
+										children: [
+											r$1.est,
+											" ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+												className: "text-skip-neutral-400",
+												children: ["/ ", r$1.max]
+											})
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+										className: "p-2 text-center",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
+											variant: "outline",
+											className: `text-[9px] h-4 px-1.5 font-normal ${r$1.badge}`,
+											children: r$1.status
+										})
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+										className: "p-2 flex justify-end",
+										children: r$1.trend === "up" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingUp, { className: `w-3 h-3 ${r$1.tc}` }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingDown, { className: `w-3 h-3 ${r$1.tc}` })
+									})
+								]
+							}, i))
+						})]
+					})
+				})]
+			})
+		]
+	});
+}
 var TAB_ITEMS = [
 	{
 		id: "inventario",
@@ -24155,59 +24550,51 @@ function ComparisonLayout({ tabId }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "grid grid-cols-1 md:grid-cols-2 gap-6 w-full",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "rounded-2xl border border-red-200 bg-skip-neutral-1500 p-6 sm:p-8 flex flex-col min-h-[350px] sm:min-h-[450px] transition-all duration-500 hover:shadow-sm",
+			className: "rounded-2xl border border-red-200 bg-skip-neutral-1500 p-6 sm:p-8 flex flex-col min-h-[350px] sm:min-h-[450px] transition-all duration-500 hover:shadow-sm overflow-hidden",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "mb-6",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-[11px] sm:text-xs font-bold tracking-[0.1em] text-red-600 uppercase",
 					children: "Antes"
 				})
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "flex-1 w-full border border-dashed border-red-200/60 rounded-xl flex flex-col items-center justify-center bg-white/40 p-6 text-center",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-red-50 flex items-center justify-center mb-4",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-5 h-5 sm:w-6 sm:h-6 text-red-400" })
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					className: "font-body text-sm sm:text-base text-skip-neutral-500",
-					children: [
-						"Área reservada para demonstração visual",
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
-						"do processo de ",
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "font-medium capitalize",
-							children: tabId
-						}),
-						" desestruturado."
-					]
-				})]
+			}), tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryAntes, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
+				tabId,
+				type: "antes"
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "rounded-2xl border border-blue-violet-200 bg-gradient-to-b from-white to-blue-violet-50 p-6 sm:p-8 flex flex-col min-h-[350px] sm:min-h-[450px] shadow-lg shadow-blue-violet-900/5 transition-all duration-500 hover:shadow-xl hover:-translate-y-1",
+			className: "rounded-2xl border border-blue-violet-200 bg-gradient-to-b from-white to-blue-violet-50 p-6 sm:p-8 flex flex-col min-h-[350px] sm:min-h-[450px] shadow-lg shadow-blue-violet-900/5 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "mb-6",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "inline-flex items-center rounded-full bg-blue-violet-100 px-3 py-1 text-[11px] sm:text-xs font-bold tracking-[0.1em] text-blue-violet-700 uppercase",
 					children: "Depois"
 				})
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "flex-1 w-full border border-dashed border-blue-violet-200/60 rounded-xl flex flex-col items-center justify-center bg-white/60 p-6 text-center backdrop-blur-sm shadow-sm",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-blue-violet-100 flex items-center justify-center mb-4",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 sm:w-6 sm:h-6 text-blue-violet-600" })
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					className: "font-body text-sm sm:text-base text-blue-violet-700",
-					children: [
-						"Área reservada para demonstração visual",
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
-						"do sistema de ",
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "font-medium capitalize",
-							children: tabId
-						}),
-						" no Skip."
-					]
-				})]
+			}), tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryDepois, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
+				tabId,
+				type: "depois"
 			})]
+		})]
+	});
+}
+function Placeholder({ tabId, type }) {
+	const isAntes = type === "antes";
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: `flex-1 w-full border border-dashed rounded-xl flex flex-col items-center justify-center p-6 text-center ${isAntes ? "border-red-200/60 bg-white/40" : "border-blue-violet-200/60 bg-white/60 backdrop-blur-sm shadow-sm"}`,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: `w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 ${isAntes ? "bg-red-50" : "bg-blue-violet-100"}`,
+			children: isAntes ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-5 h-5 sm:w-6 sm:h-6 text-red-400" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 sm:w-6 sm:h-6 text-blue-violet-600" })
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+			className: `font-body text-sm sm:text-base ${isAntes ? "text-skip-neutral-500" : "text-blue-violet-700"}`,
+			children: [
+				"Área reservada para demonstração visual",
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
+				isAntes ? "do processo de " : "do sistema de ",
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "font-medium capitalize",
+					children: tabId
+				}),
+				isAntes ? " desestruturado." : " no Skip."
+			]
 		})]
 	});
 }
@@ -24473,4 +24860,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BqxGiTfl.js.map
+//# sourceMappingURL=index-B512NmpN.js.map
