@@ -18994,18 +18994,6 @@ var Clock = createLucideIcon("clock", [["circle", {
 	d: "M12 6v6l4 2",
 	key: "mmk7yg"
 }]]);
-var Copy = createLucideIcon("copy", [["rect", {
-	width: "14",
-	height: "14",
-	x: "8",
-	y: "8",
-	rx: "2",
-	ry: "2",
-	key: "17jyea"
-}], ["path", {
-	d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",
-	key: "zix9uf"
-}]]);
 var Database = createLucideIcon("database", [
 	["ellipse", {
 		cx: "12",
@@ -19131,16 +19119,47 @@ var LayoutTemplate = createLucideIcon("layout-template", [
 		key: "q5h2i8"
 	}]
 ]);
-var Link$1 = createLucideIcon("link", [["path", {
-	d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71",
-	key: "1cjeqo"
-}], ["path", {
-	d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71",
-	key: "19qd67"
-}]]);
+var List = createLucideIcon("list", [
+	["path", {
+		d: "M3 5h.01",
+		key: "18ugdj"
+	}],
+	["path", {
+		d: "M3 12h.01",
+		key: "nlz23k"
+	}],
+	["path", {
+		d: "M3 19h.01",
+		key: "noohij"
+	}],
+	["path", {
+		d: "M8 5h13",
+		key: "1pao27"
+	}],
+	["path", {
+		d: "M8 12h13",
+		key: "1za7za"
+	}],
+	["path", {
+		d: "M8 19h13",
+		key: "m83p4d"
+	}]
+]);
 var LoaderCircle = createLucideIcon("loader-circle", [["path", {
 	d: "M21 12a9 9 0 1 1-6.219-8.56",
 	key: "13zald"
+}]]);
+var Lock = createLucideIcon("lock", [["rect", {
+	width: "18",
+	height: "11",
+	x: "3",
+	y: "11",
+	rx: "2",
+	ry: "2",
+	key: "1w4ew1"
+}], ["path", {
+	d: "M7 11V7a5 5 0 0 1 10 0v4",
+	key: "fwvmzm"
 }]]);
 var Send = createLucideIcon("send", [["path", {
 	d: "M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z",
@@ -24368,16 +24387,16 @@ function makeContentId(baseId, value) {
 	return `${baseId}-content-${value}`;
 }
 var Root2 = Tabs$1;
-var List = TabsList$1;
+var List$1 = TabsList$1;
 var Trigger = TabsTrigger$1;
 var Content = TabsContent$1;
 var Tabs = Root2;
-var TabsList = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(List, {
+var TabsList = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(List$1, {
 	ref,
 	className: cn("inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground", className),
 	...props
 }));
-TabsList.displayName = List.displayName;
+TabsList.displayName = List$1.displayName;
 var TabsTrigger = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Trigger, {
 	ref,
 	className: cn("inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm", className),
@@ -26090,72 +26109,196 @@ function Step3Mockup() {
 }
 function Step4Mockup() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl",
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-blue-violet-600/10 blur-[60px] rounded-full pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "flex flex-col items-center z-10 w-full px-6",
+		className: "w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden shadow-2xl",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "w-[120px] sm:w-[140px] border-r border-skip-neutral-600 flex flex-col bg-skip-neutral-400 z-10 shrink-0",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "p-4 sm:p-5 flex items-center gap-2 mb-2",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "w-6 h-6 rounded bg-blue-violet-600 flex items-center justify-center shrink-0 shadow-sm",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-3 h-3 text-white" })
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "font-bold text-white text-[10px] sm:text-xs truncate tracking-tight",
+					children: "ControlePonto"
+				})]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex flex-col gap-1 px-2 sm:px-3",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-2 text-[10px] sm:text-xs text-white bg-skip-neutral-500/50 px-2 py-1.5 sm:py-2 rounded-md font-medium",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutDashboard, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Dashboard" })]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-2 text-[10px] sm:text-xs text-skip-neutral-1000 hover:text-white px-2 py-1.5 sm:py-2 rounded-md transition-colors cursor-pointer",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(List, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Registros" })]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-2 text-[10px] sm:text-xs text-skip-neutral-1000 hover:text-white px-2 py-1.5 sm:py-2 rounded-md transition-colors cursor-pointer",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Equipe" })]
+					})
+				]
+			})]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex-1 flex flex-col bg-skip-neutral-300 relative z-0",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "relative flex items-center justify-center mb-5",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute w-12 h-12 bg-blue-violet-500/40 blur-[16px] rounded-full" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-14 h-14 bg-skip-neutral-500 border border-skip-neutral-600 rounded-2xl flex items-center justify-center relative z-10 shadow-[0_8px_16px_rgba(0,0,0,0.2)]",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link$1, { className: "w-6 h-6 text-blue-violet-400" })
-					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-					className: "text-xl sm:text-2xl font-bold text-white tracking-tight mb-6",
-					children: "Sistema Online"
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "w-full max-w-[280px] sm:max-w-[320px] h-11 sm:h-12 bg-skip-neutral-500 rounded-xl border border-skip-neutral-600 flex items-center justify-between px-3 sm:px-4 shadow-inner mb-6",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "flex items-center gap-2 overflow-hidden",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "font-mono text-xs sm:text-sm text-skip-neutral-900 truncate",
-							children: "suaempresa.skip.app"
-						})
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4 text-skip-neutral-900 shrink-0 hover:text-white transition-colors cursor-pointer" })]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8",
+					className: "h-10 sm:h-12 border-b border-skip-neutral-500 flex items-center justify-between px-4 sm:px-5 bg-skip-neutral-400/30 backdrop-blur-sm shrink-0",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-green-500/10 border border-green-500/20",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-green-400/80" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-[10px] sm:text-xs font-medium text-green-400/80",
-							children: "SSL Ativo"
+						className: "flex items-center gap-2",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Lock, { className: "w-3 h-3 text-skip-neutral-900" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "font-mono text-[10px] sm:text-xs text-skip-neutral-900 tracking-tight",
+							children: "suaempresa.skip.app"
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-blue-violet-500/10 border border-blue-violet-500/20",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-blue-violet-400/80" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-[10px] sm:text-xs font-medium text-blue-violet-400/80",
-							children: "Hospedagem otimizada"
+						className: "flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-[9px] sm:text-[10px] text-green-400 font-medium",
+							children: "Online"
 						})]
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-5 border-t border-skip-neutral-600/50 w-full max-w-[280px] sm:max-w-[320px] justify-center",
+					className: "p-3 sm:p-5 flex flex-col gap-3 sm:gap-4 flex-1 overflow-hidden",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex -space-x-2",
+						className: "grid grid-cols-3 gap-2 sm:gap-3 shrink-0",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								src: "https://img.usecurling.com/ppl/thumbnail?gender=female&seed=1",
-								alt: "Team member 1",
-								className: "w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-skip-neutral-400 border border-skip-neutral-500 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-sm flex flex-col gap-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-1000 font-medium truncate",
+									children: "Entradas hoje"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-sm sm:text-xl font-bold text-white tracking-tight",
+									children: "142"
+								})]
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								src: "https://img.usecurling.com/ppl/thumbnail?gender=male&seed=2",
-								alt: "Team member 2",
-								className: "w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-skip-neutral-400 border border-skip-neutral-500 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-sm flex flex-col gap-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-1000 font-medium truncate",
+									children: "Presentes"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-sm sm:text-xl font-bold text-green-400 tracking-tight",
+									children: "138"
+								})]
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								src: "https://img.usecurling.com/ppl/thumbnail?gender=female&seed=3",
-								alt: "Team member 3",
-								className: "w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-skip-neutral-400 border border-skip-neutral-500 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-sm flex flex-col gap-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-1000 font-medium truncate",
+									children: "Atrasos"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-sm sm:text-xl font-bold text-red-400 tracking-tight",
+									children: "4"
+								})]
 							})
 						]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-[11px] sm:text-xs font-medium text-skip-neutral-800",
-						children: "Compartilhado com seu time"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex-1 bg-skip-neutral-400 border border-skip-neutral-500 rounded-lg sm:rounded-xl overflow-hidden flex flex-col shadow-sm min-h-[100px]",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid grid-cols-[1fr_auto_auto] gap-2 px-3 py-2 border-b border-skip-neutral-500 bg-skip-neutral-500/20",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider",
+									children: "Nome"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider w-12 sm:w-16 text-center",
+									children: "Horário"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider w-16 sm:w-20 text-center",
+									children: "Status"
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "flex flex-col gap-0 overflow-y-auto",
+							children: [
+								{
+									name: "Ana Silva",
+									time: "08:00",
+									status: "Presente",
+									statusColor: "green"
+								},
+								{
+									name: "Carlos Costa",
+									time: "08:15",
+									status: "Presente",
+									statusColor: "green"
+								},
+								{
+									name: "Maria Souza",
+									time: "09:30",
+									status: "Atrasado",
+									statusColor: "red"
+								},
+								{
+									name: "Pedro Lima",
+									time: "09:45",
+									status: "Atrasado",
+									statusColor: "red"
+								}
+							].map((row, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "grid grid-cols-[1fr_auto_auto] gap-2 px-3 py-2 items-center border-b border-skip-neutral-500/30 last:border-0 hover:bg-skip-neutral-500/10 transition-colors",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-2 overflow-hidden",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-skip-neutral-500 shrink-0 overflow-hidden border border-skip-neutral-600",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+												src: `https://img.usecurling.com/ppl/thumbnail?gender=${i % 2 === 0 ? "female" : "male"}&seed=${i + 10}`,
+												alt: row.name,
+												className: "w-full h-full object-cover"
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "text-[10px] sm:text-xs text-white truncate font-medium",
+											children: row.name
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "text-[9px] sm:text-[11px] text-skip-neutral-900 font-mono w-12 sm:w-16 text-center",
+										children: row.time
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "w-16 sm:w-20 flex justify-center",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: cn("text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md border font-semibold tracking-wide", row.statusColor === "green" ? "bg-green-500/10 text-green-400 border-green-500/20" : "bg-red-500/10 text-red-400 border-red-500/20"),
+											children: row.status
+										})
+									})
+								]
+							}, i))
+						})]
 					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "h-10 sm:h-12 border-t border-skip-neutral-500 bg-skip-neutral-400 flex items-center px-4 sm:px-5 justify-between shrink-0",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-3",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex -space-x-1.5 sm:-space-x-2",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: "https://img.usecurling.com/ppl/thumbnail?gender=female&seed=1",
+									alt: "Team member 1",
+									className: "w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-skip-neutral-400 object-cover"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: "https://img.usecurling.com/ppl/thumbnail?gender=male&seed=2",
+									alt: "Team member 2",
+									className: "w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-skip-neutral-400 object-cover"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: "https://img.usecurling.com/ppl/thumbnail?gender=female&seed=3",
+									alt: "Team member 3",
+									className: "w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-skip-neutral-400 object-cover"
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-[9px] sm:text-[10px] font-medium text-skip-neutral-800",
+							children: "Compartilhado com 3 pessoas"
+						})]
+					})
 				})
 			]
 		})]
@@ -26538,4 +26681,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B-Gtkd79.js.map
+//# sourceMappingURL=index-CNrnty00.js.map

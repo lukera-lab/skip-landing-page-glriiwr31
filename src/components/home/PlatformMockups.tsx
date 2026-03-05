@@ -1,5 +1,4 @@
 import {
-  Link as LinkIcon,
   Lock,
   Loader2,
   Sparkles,
@@ -10,7 +9,8 @@ import {
   BarChart3,
   Users,
   Clock,
-  Copy,
+  LayoutDashboard,
+  List,
 } from 'lucide-react'
 import { Progress } from '@/components/ui/progress'
 import { cn } from '@/lib/utils'
@@ -357,69 +357,157 @@ export function Step3Mockup() {
 
 export function Step4Mockup() {
   return (
-    <div className="w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl">
-      {/* Background subtle glow for atmosphere */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-blue-violet-600/10 blur-[60px] rounded-full pointer-events-none" />
-
-      <div className="flex flex-col items-center z-10 w-full px-6">
-        {/* Celebration Header */}
-        <div className="relative flex items-center justify-center mb-5">
-          <div className="absolute w-12 h-12 bg-blue-violet-500/40 blur-[16px] rounded-full" />
-          <div className="w-14 h-14 bg-skip-neutral-500 border border-skip-neutral-600 rounded-2xl flex items-center justify-center relative z-10 shadow-[0_8px_16px_rgba(0,0,0,0.2)]">
-            <LinkIcon className="w-6 h-6 text-blue-violet-400" />
+    <div className="w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden shadow-2xl">
+      {/* Sidebar */}
+      <div className="w-[120px] sm:w-[140px] border-r border-skip-neutral-600 flex flex-col bg-skip-neutral-400 z-10 shrink-0">
+        <div className="p-4 sm:p-5 flex items-center gap-2 mb-2">
+          <div className="w-6 h-6 rounded bg-blue-violet-600 flex items-center justify-center shrink-0 shadow-sm">
+            <Clock className="w-3 h-3 text-white" />
           </div>
+          <span className="font-bold text-white text-[10px] sm:text-xs truncate tracking-tight">
+            ControlePonto
+          </span>
         </div>
 
-        <h4 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-6">
-          Sistema Online
-        </h4>
+        <div className="flex flex-col gap-1 px-2 sm:px-3">
+          <div className="flex items-center gap-2 text-[10px] sm:text-xs text-white bg-skip-neutral-500/50 px-2 py-1.5 sm:py-2 rounded-md font-medium">
+            <LayoutDashboard className="w-3.5 h-3.5" />
+            <span>Dashboard</span>
+          </div>
+          <div className="flex items-center gap-2 text-[10px] sm:text-xs text-skip-neutral-1000 hover:text-white px-2 py-1.5 sm:py-2 rounded-md transition-colors cursor-pointer">
+            <List className="w-3.5 h-3.5" />
+            <span>Registros</span>
+          </div>
+          <div className="flex items-center gap-2 text-[10px] sm:text-xs text-skip-neutral-1000 hover:text-white px-2 py-1.5 sm:py-2 rounded-md transition-colors cursor-pointer">
+            <Users className="w-3.5 h-3.5" />
+            <span>Equipe</span>
+          </div>
+        </div>
+      </div>
 
-        {/* Deployment URL Display */}
-        <div className="w-full max-w-[280px] sm:max-w-[320px] h-11 sm:h-12 bg-skip-neutral-500 rounded-xl border border-skip-neutral-600 flex items-center justify-between px-3 sm:px-4 shadow-inner mb-6">
-          <div className="flex items-center gap-2 overflow-hidden">
-            <span className="font-mono text-xs sm:text-sm text-skip-neutral-900 truncate">
+      {/* Main View */}
+      <div className="flex-1 flex flex-col bg-skip-neutral-300 relative z-0">
+        {/* Header */}
+        <div className="h-10 sm:h-12 border-b border-skip-neutral-500 flex items-center justify-between px-4 sm:px-5 bg-skip-neutral-400/30 backdrop-blur-sm shrink-0">
+          <div className="flex items-center gap-2">
+            <Lock className="w-3 h-3 text-skip-neutral-900" />
+            <span className="font-mono text-[10px] sm:text-xs text-skip-neutral-900 tracking-tight">
               suaempresa.skip.app
             </span>
           </div>
-          <Copy className="w-4 h-4 text-skip-neutral-900 shrink-0 hover:text-white transition-colors cursor-pointer" />
+          <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20">
+            <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse" />
+            <span className="text-[9px] sm:text-[10px] text-green-400 font-medium">Online</span>
+          </div>
         </div>
 
-        {/* Status Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8">
-          <div className="flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-green-500/10 border border-green-500/20">
-            <div className="w-1.5 h-1.5 rounded-full bg-green-400/80" />
-            <span className="text-[10px] sm:text-xs font-medium text-green-400/80">SSL Ativo</span>
+        {/* Content */}
+        <div className="p-3 sm:p-5 flex flex-col gap-3 sm:gap-4 flex-1 overflow-hidden">
+          {/* KPIs */}
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 shrink-0">
+            <div className="bg-skip-neutral-400 border border-skip-neutral-500 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-sm flex flex-col gap-1">
+              <span className="text-[8px] sm:text-[10px] text-skip-neutral-1000 font-medium truncate">
+                Entradas hoje
+              </span>
+              <span className="text-sm sm:text-xl font-bold text-white tracking-tight">142</span>
+            </div>
+            <div className="bg-skip-neutral-400 border border-skip-neutral-500 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-sm flex flex-col gap-1">
+              <span className="text-[8px] sm:text-[10px] text-skip-neutral-1000 font-medium truncate">
+                Presentes
+              </span>
+              <span className="text-sm sm:text-xl font-bold text-green-400 tracking-tight">
+                138
+              </span>
+            </div>
+            <div className="bg-skip-neutral-400 border border-skip-neutral-500 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-sm flex flex-col gap-1">
+              <span className="text-[8px] sm:text-[10px] text-skip-neutral-1000 font-medium truncate">
+                Atrasos
+              </span>
+              <span className="text-sm sm:text-xl font-bold text-red-400 tracking-tight">4</span>
+            </div>
           </div>
-          <div className="flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-blue-violet-500/10 border border-blue-violet-500/20">
-            <div className="w-1.5 h-1.5 rounded-full bg-blue-violet-400/80" />
-            <span className="text-[10px] sm:text-xs font-medium text-blue-violet-400/80">
-              Hospedagem otimizada
+
+          {/* Table Area */}
+          <div className="flex-1 bg-skip-neutral-400 border border-skip-neutral-500 rounded-lg sm:rounded-xl overflow-hidden flex flex-col shadow-sm min-h-[100px]">
+            <div className="grid grid-cols-[1fr_auto_auto] gap-2 px-3 py-2 border-b border-skip-neutral-500 bg-skip-neutral-500/20">
+              <div className="text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider">
+                Nome
+              </div>
+              <div className="text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider w-12 sm:w-16 text-center">
+                Horário
+              </div>
+              <div className="text-[8px] sm:text-[10px] text-skip-neutral-1100 font-semibold uppercase tracking-wider w-16 sm:w-20 text-center">
+                Status
+              </div>
+            </div>
+            <div className="flex flex-col gap-0 overflow-y-auto">
+              {[
+                { name: 'Ana Silva', time: '08:00', status: 'Presente', statusColor: 'green' },
+                { name: 'Carlos Costa', time: '08:15', status: 'Presente', statusColor: 'green' },
+                { name: 'Maria Souza', time: '09:30', status: 'Atrasado', statusColor: 'red' },
+                { name: 'Pedro Lima', time: '09:45', status: 'Atrasado', statusColor: 'red' },
+              ].map((row, i) => (
+                <div
+                  key={i}
+                  className="grid grid-cols-[1fr_auto_auto] gap-2 px-3 py-2 items-center border-b border-skip-neutral-500/30 last:border-0 hover:bg-skip-neutral-500/10 transition-colors"
+                >
+                  <div className="flex items-center gap-2 overflow-hidden">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-skip-neutral-500 shrink-0 overflow-hidden border border-skip-neutral-600">
+                      <img
+                        src={`https://img.usecurling.com/ppl/thumbnail?gender=${i % 2 === 0 ? 'female' : 'male'}&seed=${i + 10}`}
+                        alt={row.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="text-[10px] sm:text-xs text-white truncate font-medium">
+                      {row.name}
+                    </div>
+                  </div>
+                  <div className="text-[9px] sm:text-[11px] text-skip-neutral-900 font-mono w-12 sm:w-16 text-center">
+                    {row.time}
+                  </div>
+                  <div className="w-16 sm:w-20 flex justify-center">
+                    <span
+                      className={cn(
+                        'text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md border font-semibold tracking-wide',
+                        row.statusColor === 'green'
+                          ? 'bg-green-500/10 text-green-400 border-green-500/20'
+                          : 'bg-red-500/10 text-red-400 border-red-500/20',
+                      )}
+                    >
+                      {row.status}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="h-10 sm:h-12 border-t border-skip-neutral-500 bg-skip-neutral-400 flex items-center px-4 sm:px-5 justify-between shrink-0">
+          <div className="flex items-center gap-3">
+            <div className="flex -space-x-1.5 sm:-space-x-2">
+              <img
+                src="https://img.usecurling.com/ppl/thumbnail?gender=female&seed=1"
+                alt="Team member 1"
+                className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-skip-neutral-400 object-cover"
+              />
+              <img
+                src="https://img.usecurling.com/ppl/thumbnail?gender=male&seed=2"
+                alt="Team member 2"
+                className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-skip-neutral-400 object-cover"
+              />
+              <img
+                src="https://img.usecurling.com/ppl/thumbnail?gender=female&seed=3"
+                alt="Team member 3"
+                className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-skip-neutral-400 object-cover"
+              />
+            </div>
+            <span className="text-[9px] sm:text-[10px] font-medium text-skip-neutral-800">
+              Compartilhado com 3 pessoas
             </span>
           </div>
-        </div>
-
-        {/* Collaboration Footer */}
-        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-5 border-t border-skip-neutral-600/50 w-full max-w-[280px] sm:max-w-[320px] justify-center">
-          <div className="flex -space-x-2">
-            <img
-              src="https://img.usecurling.com/ppl/thumbnail?gender=female&seed=1"
-              alt="Team member 1"
-              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
-            />
-            <img
-              src="https://img.usecurling.com/ppl/thumbnail?gender=male&seed=2"
-              alt="Team member 2"
-              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
-            />
-            <img
-              src="https://img.usecurling.com/ppl/thumbnail?gender=female&seed=3"
-              alt="Team member 3"
-              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-skip-neutral-400 object-cover"
-            />
-          </div>
-          <span className="text-[11px] sm:text-xs font-medium text-skip-neutral-800">
-            Compartilhado com seu time
-          </span>
         </div>
       </div>
     </div>
