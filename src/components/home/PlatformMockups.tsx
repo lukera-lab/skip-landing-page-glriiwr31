@@ -13,9 +13,9 @@ import { Progress } from '@/components/ui/progress'
 export function Step1Mockup() {
   return (
     <div className="w-full h-[280px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col relative overflow-hidden shadow-2xl">
-      <div className="flex-1 bg-skip-neutral-350 p-4 flex flex-col justify-end relative overflow-hidden">
+      <div className="flex-1 p-4 flex flex-col justify-end relative overflow-hidden bg-transparent">
         {/* Top fade out for scroll effect */}
-        <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-skip-neutral-350 to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-skip-neutral-400 to-transparent z-10 pointer-events-none" />
 
         {/* Chat History Placeholders */}
         <div className="flex flex-col gap-3 mb-5 w-full relative z-0 opacity-80">
@@ -28,7 +28,7 @@ export function Step1Mockup() {
           <div className="bg-blue-violet-600 text-white p-3 sm:px-4 sm:py-3 rounded-2xl rounded-tr-sm font-body text-xs sm:text-sm shadow-md leading-relaxed">
             Crie um sistema de controle de ponto para minha equipe
           </div>
-          <div className="w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center overflow-hidden ring-2 ring-skip-neutral-350">
+          <div className="w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center overflow-hidden ring-2 ring-skip-neutral-400">
             <img
               src="https://img.usecurling.com/ppl/thumbnail?gender=male&seed=1"
               alt="User"
@@ -51,8 +51,8 @@ export function Step1Mockup() {
       </div>
 
       {/* Footer Input Field */}
-      <div className="p-3 shrink-0 bg-skip-neutral-400">
-        <div className="w-full h-12 bg-skip-neutral-400 rounded-xl border border-skip-neutral-600 flex items-center px-4 justify-between text-skip-neutral-800 shrink-0">
+      <div className="p-3 shrink-0 bg-transparent">
+        <div className="w-full h-12 bg-skip-neutral-500/50 rounded-xl border border-skip-neutral-600 flex items-center px-4 justify-between text-skip-neutral-800 shrink-0">
           <span className="text-sm font-body">Descreva o que deseja criar...</span>
           <div className="w-8 h-8 bg-blue-violet-600 rounded-full flex items-center justify-center shrink-0 shadow-sm">
             <Send className="w-4 h-4 text-white -ml-0.5" />

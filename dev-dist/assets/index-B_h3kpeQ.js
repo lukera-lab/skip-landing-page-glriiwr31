@@ -25655,9 +25655,9 @@ function Step1Mockup() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "w-full h-[280px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col relative overflow-hidden shadow-2xl",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "flex-1 bg-skip-neutral-350 p-4 flex flex-col justify-end relative overflow-hidden",
+			className: "flex-1 p-4 flex flex-col justify-end relative overflow-hidden bg-transparent",
 			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-skip-neutral-350 to-transparent z-10 pointer-events-none" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-skip-neutral-400 to-transparent z-10 pointer-events-none" }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex flex-col gap-3 mb-5 w-full relative z-0 opacity-80",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-[65%] h-9 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-[45%] h-9 bg-skip-neutral-500 rounded-2xl rounded-tl-sm" })]
@@ -25668,7 +25668,7 @@ function Step1Mockup() {
 						className: "bg-blue-violet-600 text-white p-3 sm:px-4 sm:py-3 rounded-2xl rounded-tr-sm font-body text-xs sm:text-sm shadow-md leading-relaxed",
 						children: "Crie um sistema de controle de ponto para minha equipe"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center overflow-hidden ring-2 ring-skip-neutral-350",
+						className: "w-8 h-8 rounded-full bg-skip-neutral-500 shrink-0 flex items-center justify-center overflow-hidden ring-2 ring-skip-neutral-400",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 							src: "https://img.usecurling.com/ppl/thumbnail?gender=male&seed=1",
 							alt: "User",
@@ -25692,9 +25692,9 @@ function Step1Mockup() {
 				})
 			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "p-3 shrink-0 bg-skip-neutral-400",
+			className: "p-3 shrink-0 bg-transparent",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "w-full h-12 bg-skip-neutral-400 rounded-xl border border-skip-neutral-600 flex items-center px-4 justify-between text-skip-neutral-800 shrink-0",
+				className: "w-full h-12 bg-skip-neutral-500/50 rounded-xl border border-skip-neutral-600 flex items-center px-4 justify-between text-skip-neutral-800 shrink-0",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "text-sm font-body",
 					children: "Descreva o que deseja criar..."
@@ -26219,4 +26219,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DV2SXTpC.js.map
+//# sourceMappingURL=index-B_h3kpeQ.js.map

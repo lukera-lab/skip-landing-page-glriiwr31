@@ -1943,10 +1943,6 @@ h6{
   --tw-bg-opacity: 1;
   background-color: rgb(26 25 31 / var(--tw-bg-opacity, 1));
 }
-.bg-skip-neutral-350{
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 30 36 / var(--tw-bg-opacity, 1));
-}
 .bg-skip-neutral-400{
   --tw-bg-opacity: 1;
   background-color: rgb(34 34 41 / var(--tw-bg-opacity, 1));
@@ -1957,6 +1953,9 @@ h6{
 }
 .bg-skip-neutral-500\/40{
   background-color: rgb(42 42 51 / 0.4);
+}
+.bg-skip-neutral-500\/50{
+  background-color: rgb(42 42 51 / 0.5);
 }
 .bg-transparent{
   background-color: transparent;
@@ -2020,9 +2019,9 @@ h6{
   --tw-gradient-to: rgb(79 70 229 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
-.from-skip-neutral-350{
-  --tw-gradient-from: #1e1e24 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(30 30 36 / 0) var(--tw-gradient-to-position);
+.from-skip-neutral-400{
+  --tw-gradient-from: #222229 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(34 34 41 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .from-white{
@@ -2655,9 +2654,9 @@ h6{
 .ring-sidebar-ring{
   --tw-ring-color: hsl(var(--sidebar-ring));
 }
-.ring-skip-neutral-350{
+.ring-skip-neutral-400{
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(30 30 36 / var(--tw-ring-opacity, 1));
+  --tw-ring-color: rgb(34 34 41 / var(--tw-ring-opacity, 1));
 }
 .ring-offset-background{
   --tw-ring-offset-color: hsl(var(--background));
