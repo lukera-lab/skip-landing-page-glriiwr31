@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
+import { DemonstrationTabs } from '@/components/home/DemonstrationTabs'
 
 const LOGOS = [
   { name: 'microsoft', width: 'w-24' },
@@ -128,6 +129,8 @@ export default function Index() {
           <p className="font-body text-lg text-skip-neutral-600 max-w-2xl">
             Escolha um processo abaixo e compare como era antes e como fica com o Skip
           </p>
+
+          <DemonstrationTabs />
         </div>
       </section>
     </div>
