@@ -27271,6 +27271,7 @@ var Separator = import_react.forwardRef(({ className, orientation = "horizontal"
 }));
 Separator.displayName = Root.displayName;
 var consultoria_individual_skip_f7cfb_default = "/assets/consultoria-individual-skip-f7cfb-eDphXJlU.webp";
+var mock_offer_bf844_default = "/assets/mock-offer-bf844-BdKIRsEO.webp";
 function OfferSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		className: "w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50",
@@ -27421,10 +27422,11 @@ function OfferSection() {
 						})
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "bg-skip-neutral-1450 border border-skip-neutral-1350 rounded-[20px] flex items-center justify-center min-h-[400px] lg:min-h-full",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-body text-body-s text-skip-neutral-900",
-						children: "[ mockup ]"
+					className: "bg-[#050505] border border-skip-neutral-1350 rounded-[20px] flex items-center justify-center min-h-[400px] lg:min-h-full overflow-hidden group",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						src: mock_offer_bf844_default,
+						alt: "Skip Offer Bundle",
+						className: "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
 					})
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -27729,4 +27731,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B8gmi3P7.js.map
+//# sourceMappingURL=index-Ckz8DCLe.js.map

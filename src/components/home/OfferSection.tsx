@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '@/components/ui/tooltip'
 import { Separator } from '@/components/ui/separator'
 import consultoriaImgUrl from '@/assets/consultoria-individual-skip-f7cfb.webp'
+import mockOfferUrl from '@/assets/mock-offer-bf844.webp'
 
 export function OfferSection() {
   return (
@@ -136,8 +137,12 @@ export function OfferSection() {
           </div>
 
           {/* Mockup Container */}
-          <div className="bg-skip-neutral-1450 border border-skip-neutral-1350 rounded-[20px] flex items-center justify-center min-h-[400px] lg:min-h-full">
-            <span className="font-body text-body-s text-skip-neutral-900">[ mockup ]</span>
+          <div className="bg-[#050505] border border-skip-neutral-1350 rounded-[20px] flex items-center justify-center min-h-[400px] lg:min-h-full overflow-hidden group">
+            <img
+              src={mockOfferUrl}
+              alt="Skip Offer Bundle"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
           </div>
         </div>
 
