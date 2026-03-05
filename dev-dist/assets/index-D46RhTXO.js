@@ -26150,8 +26150,8 @@ function Step4Mockup() {
 							children: "suaempresa.skip.app"
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-400/10 border border-green-400/20",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.6)] animate-pulse" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "text-[9px] sm:text-[10px] text-green-400 font-medium",
 							children: "Online"
 						})]
@@ -26262,7 +26262,7 @@ function Step4Mockup() {
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										className: "w-16 sm:w-20 flex justify-center",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: cn("text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md border font-semibold tracking-wide", row.statusColor === "green" ? "bg-green-500/15 text-green-400 border-green-500/20" : "bg-red-500/15 text-red-400 border-red-500/20"),
+											className: cn("text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md border font-semibold tracking-wide", row.statusColor === "green" ? "bg-green-400/15 text-green-400 border-transparent" : "bg-red-400/15 text-red-400 border-transparent"),
 											children: row.status
 										})
 									})
@@ -26681,4 +26681,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-L4PlspN2.js.map
+//# sourceMappingURL=index-D46RhTXO.js.map

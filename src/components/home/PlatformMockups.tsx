@@ -395,8 +395,8 @@ export function Step4Mockup() {
               suaempresa.skip.app
             </span>
           </div>
-          <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20">
-            <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse" />
+          <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-400/10 border border-green-400/20">
+            <div className="w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.6)] animate-pulse" />
             <span className="text-[9px] sm:text-[10px] text-green-400 font-medium">Online</span>
           </div>
         </div>
@@ -469,8 +469,8 @@ export function Step4Mockup() {
                       className={cn(
                         'text-[8px] sm:text-[9px] px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md border font-semibold tracking-wide',
                         row.statusColor === 'green'
-                          ? 'bg-green-500/15 text-green-400 border-green-500/20'
-                          : 'bg-red-500/15 text-red-400 border-red-500/20',
+                          ? 'bg-green-400/15 text-green-400 border-transparent'
+                          : 'bg-red-400/15 text-red-400 border-transparent',
                       )}
                     >
                       {row.status}
