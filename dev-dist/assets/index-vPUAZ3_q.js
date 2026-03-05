@@ -18920,6 +18920,24 @@ var ArrowRight = createLucideIcon("arrow-right", [["path", {
 	d: "m12 5 7 7-7 7",
 	key: "xquz4c"
 }]]);
+var ChartColumn = createLucideIcon("chart-column", [
+	["path", {
+		d: "M3 3v16a2 2 0 0 0 2 2h16",
+		key: "c24i48"
+	}],
+	["path", {
+		d: "M18 17V9",
+		key: "2bz60n"
+	}],
+	["path", {
+		d: "M13 17V5",
+		key: "1frdt8"
+	}],
+	["path", {
+		d: "M8 17v-3",
+		key: "17ska0"
+	}]
+]);
 var ChartNoAxesColumn = createLucideIcon("chart-no-axes-column", [
 	["path", {
 		d: "M5 21v-6",
@@ -18967,6 +18985,15 @@ var CircleAlert = createLucideIcon("circle-alert", [
 		key: "4dfq90"
 	}]
 ]);
+var Clock = createLucideIcon("clock", [["circle", {
+	cx: "12",
+	cy: "12",
+	r: "10",
+	key: "1mglay"
+}], ["path", {
+	d: "M12 6v6l4 2",
+	key: "mmk7yg"
+}]]);
 var Database = createLucideIcon("database", [
 	["ellipse", {
 		cx: "12",
@@ -25708,47 +25735,217 @@ function Step1Mockup() {
 }
 function Step2Mockup() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "w-full h-[280px] bg-white rounded-xl border border-skip-neutral-1350 shadow-sm p-6 flex flex-col items-center justify-center relative overflow-hidden",
-		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "w-10 h-10 text-blue-violet-600 animate-spin mb-6" }),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "w-full max-w-xs space-y-4",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex justify-between text-sm font-body text-skip-neutral-800",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Construindo arquitetura..." }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-blue-violet-600 font-medium",
-						children: "75%"
+		className: "w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex relative overflow-hidden shadow-2xl",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "w-[35%] sm:w-[40%] border-r border-skip-neutral-600 flex flex-col p-4 sm:p-5 bg-skip-neutral-400 relative z-10 shrink-0",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center gap-1.5 mb-6",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2.5 h-2.5 rounded-full bg-red-500/80 shadow-[0_0_8px_rgba(239,68,68,0.4)]" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2.5 h-2.5 rounded-full bg-yellow-500/80 shadow-[0_0_8px_rgba(234,179,8,0.4)]" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-2.5 h-2.5 rounded-full bg-green-500/80 shadow-[0_0_8px_rgba(34,197,94,0.4)]" })
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex-1 flex flex-col gap-3 font-mono text-[10px] sm:text-xs text-skip-neutral-800",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-2 text-green-400/80",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "truncate",
+								children: "Requisitos analisados"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-2 text-green-400/80",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "truncate",
+								children: "Banco de dados criado"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-2 text-blue-violet-400",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "truncate",
+								children: "Gerando interface..."
+							})]
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mt-auto pt-4 border-t border-skip-neutral-600/50",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex justify-between text-[10px] sm:text-xs font-mono text-skip-neutral-800 mb-2",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Progresso" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-blue-violet-400",
+							children: "80%"
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Progress, {
+						value: 80,
+						className: "h-1 sm:h-1.5 bg-skip-neutral-600 [&>div]:bg-blue-violet-500"
 					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Progress, {
-					value: 75,
-					className: "h-2"
-				})]
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "flex gap-4 mt-8 opacity-50",
+				})
+			]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex-1 bg-skip-neutral-300 relative flex overflow-hidden",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "w-12 sm:w-16 bg-skip-neutral-400 border-r border-skip-neutral-500 flex flex-col items-center py-4 gap-4 z-10 shrink-0",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-blue-violet-600 flex items-center justify-center mb-2 shadow-sm",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutTemplate, { className: "w-3 h-3 sm:w-4 sm:h-4 text-white" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-skip-neutral-100",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-3 h-3 sm:w-4 sm:h-4" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-skip-neutral-100",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChartColumn, { className: "w-3 h-3 sm:w-4 sm:h-4" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-skip-neutral-500/50 flex items-center justify-center text-skip-neutral-100 mt-auto",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Database, { className: "w-3 h-3 sm:w-4 sm:h-4" })
+					})
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex-1 flex flex-col overflow-hidden relative z-0",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex items-center gap-2 bg-skip-neutral-1450 px-3 py-1.5 rounded-md border border-skip-neutral-1300",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Database, { className: "w-4 h-4" }),
-						" ",
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-xs font-mono",
-							children: "schema.sql"
+					className: "h-10 sm:h-12 border-b border-skip-neutral-500 flex items-center px-4 justify-between bg-skip-neutral-400/30 backdrop-blur-sm shrink-0",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-24 h-3 bg-skip-neutral-500 rounded" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-6 h-6 rounded-full bg-skip-neutral-600 border border-skip-neutral-500 flex items-center justify-center overflow-hidden",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: "https://img.usecurling.com/ppl/thumbnail?gender=female&seed=2",
+							alt: "User",
+							className: "w-full h-full object-cover opacity-80"
 						})
-					]
+					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex items-center gap-2 bg-skip-neutral-1450 px-3 py-1.5 rounded-md border border-skip-neutral-1300",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutTemplate, { className: "w-4 h-4" }),
-						" ",
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-xs font-mono",
-							children: "dashboard.tsx"
-						})
-					]
+					className: "flex-1 p-3 sm:p-5 flex flex-col gap-3 sm:gap-4 overflow-hidden",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid grid-cols-3 gap-2 sm:gap-3 shrink-0",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-skip-neutral-400 rounded-lg p-2.5 sm:p-3 border border-skip-neutral-500 flex flex-col shadow-sm",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-1.5 mb-1.5 sm:mb-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChartColumn, { className: "w-3 h-3 text-blue-violet-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[8px] sm:text-[10px] text-skip-neutral-800 truncate font-medium",
+										children: "Entradas Hoje"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-sm sm:text-lg font-semibold text-skip-neutral-100",
+									children: "142"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-skip-neutral-400 rounded-lg p-2.5 sm:p-3 border border-skip-neutral-500 flex flex-col shadow-sm",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-1.5 mb-1.5 sm:mb-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-3 h-3 text-green-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[8px] sm:text-[10px] text-skip-neutral-800 truncate font-medium",
+										children: "Presentes"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-sm sm:text-lg font-semibold text-skip-neutral-100",
+									children: "138"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-skip-neutral-400 rounded-lg p-2.5 sm:p-3 border border-skip-neutral-500 flex flex-col shadow-sm",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-1.5 mb-1.5 sm:mb-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-3 h-3 text-red-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[8px] sm:text-[10px] text-skip-neutral-800 truncate font-medium",
+										children: "Atrasos"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-sm sm:text-lg font-semibold text-red-400",
+									children: "4"
+								})]
+							})
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex-1 bg-skip-neutral-400 rounded-lg border border-skip-neutral-500 overflow-hidden flex flex-col shadow-sm min-h-[120px]",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid grid-cols-[1fr_auto_auto] gap-2 p-2 sm:p-3 border-b border-skip-neutral-500 bg-skip-neutral-500/20",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-800 font-medium uppercase tracking-wider",
+									children: "Nome"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-800 font-medium w-12 text-center uppercase tracking-wider",
+									children: "Horário"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "text-[8px] sm:text-[10px] text-skip-neutral-800 font-medium w-16 text-center uppercase tracking-wider",
+									children: "Status"
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "p-2 sm:p-3 flex flex-col gap-2.5",
+							children: [
+								{
+									nameW: "80%",
+									time: "08:00",
+									status: "Ativo",
+									statusColor: "green"
+								},
+								{
+									nameW: "65%",
+									time: "08:15",
+									status: "Ativo",
+									statusColor: "green"
+								},
+								{
+									nameW: "90%",
+									time: "09:30",
+									status: "Atraso",
+									statusColor: "red"
+								},
+								{
+									nameW: "75%",
+									time: "09:45",
+									status: "Atraso",
+									statusColor: "red"
+								}
+							].map((row, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "grid grid-cols-[1fr_auto_auto] gap-2 items-center group",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "w-4 h-4 sm:w-5 sm:h-5 rounded bg-skip-neutral-500/50 shrink-0 flex items-center justify-center overflow-hidden",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+												src: `https://img.usecurling.com/ppl/thumbnail?gender=${i % 2 === 0 ? "female" : "male"}&seed=${i + 5}`,
+												alt: "Avatar",
+												className: "w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity"
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "h-2 bg-skip-neutral-500 rounded",
+											style: { width: row.nameW }
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "text-[8px] sm:text-[10px] text-skip-neutral-700 font-mono w-12 text-center",
+										children: row.time
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "w-16 flex justify-center",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: cn("inline-flex px-1.5 py-0.5 rounded text-[8px] sm:text-[9px] font-medium border", row.statusColor === "green" ? "bg-green-500/10 text-green-400 border-green-500/20" : "bg-red-500/10 text-red-400 border-red-500/20"),
+											children: row.status
+										})
+									})
+								]
+							}, i))
+						})]
+					})]
 				})]
-			})
-		]
+			})]
+		})]
 	});
 }
 function Step3Mockup() {
@@ -26223,4 +26420,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-C1ccJYfq.js.map
+//# sourceMappingURL=index-vPUAZ3_q.js.map
