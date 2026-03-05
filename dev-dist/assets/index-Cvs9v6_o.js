@@ -27402,9 +27402,13 @@ function OfferSection() {
 							className: "mt-auto flex flex-col items-center gap-3 w-full",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "relative group w-full",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									asChild: true,
 									className: "relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto",
-									children: ["Quero o Skip Basic", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+										href: "https://go.adapta.org/checkout/skip-basic",
+										children: ["Quero o Skip Basic", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+									})
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center gap-3 text-skip-neutral-900 mt-1",
@@ -27772,4 +27776,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-S2--hvWH.js.map
+//# sourceMappingURL=index-Cvs9v6_o.js.map
