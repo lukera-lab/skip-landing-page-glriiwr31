@@ -27426,7 +27426,7 @@ function OfferSection() {
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: mock_offer_bf844_default,
 						alt: "Skip Offer Bundle",
-						className: "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+						className: "w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
 					})
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -27731,4 +27731,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-Ckz8DCLe.js.map
+//# sourceMappingURL=index-Qg32p-fk.js.map

@@ -141,7 +141,7 @@ export function OfferSection() {
             <img
               src={mockOfferUrl}
               alt="Skip Offer Bundle"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
             />
           </div>
         </div>
