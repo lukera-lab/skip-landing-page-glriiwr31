@@ -1240,8 +1240,14 @@ h6{
 .w-\[45\%\]{
   width: 45%;
 }
+.w-\[55\%\]{
+  width: 55%;
+}
 .w-\[65\%\]{
   width: 65%;
+}
+.w-\[75\%\]{
+  width: 75%;
 }
 .w-auto{
   width: auto;
@@ -1685,6 +1691,9 @@ h6{
 .border{
   border-width: 1px;
 }
+.border-0{
+  border-width: 0px;
+}
 .border-2{
   border-width: 2px;
 }
@@ -2001,6 +2010,9 @@ h6{
 }
 .bg-skip-neutral-500\/20{
   background-color: rgb(42 42 51 / 0.2);
+}
+.bg-skip-neutral-500\/30{
+  background-color: rgb(42 42 51 / 0.3);
 }
 .bg-skip-neutral-500\/40{
   background-color: rgb(42 42 51 / 0.4);
