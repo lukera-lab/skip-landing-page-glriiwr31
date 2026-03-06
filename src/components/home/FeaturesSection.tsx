@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { SectionTitle } from '@/components/ui/section-title'
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
 import {
   AgentsMockup,
   DatabaseMockup,
@@ -141,6 +143,20 @@ export function FeaturesSection() {
             description="Antes de construir, converse. Discuta arquitetura, valide ideias e peça sugestões — sem iniciar nada. Um consultor técnico disponível 24h."
             mockup={<ChatMockup />}
           />
+        </div>
+
+        {/* CTA */}
+        <div className="flex justify-center mt-12 md:mt-16">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" />
+            <Button
+              onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
+              className="relative font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5"
+            >
+              Aproveitar Condição Exclusiva
+              <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

@@ -3,6 +3,8 @@ import { SectionTitle } from '@/components/ui/section-title'
 import { Step1Mockup, Step2Mockup, Step3Mockup, Step4Mockup } from './PlatformMockups'
 import mockskipUrl from '@/assets/mockskip-97ef9.webp'
 import { useEffect, useRef, useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
 
 interface WorkflowStepProps {
   step: string
@@ -200,6 +202,20 @@ export function PlatformSection() {
             mockup={<Step4Mockup />}
             hasFrame={false}
           />
+        </div>
+
+        {/* CTA */}
+        <div className="flex justify-center mt-12 md:mt-16">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" />
+            <Button
+              onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
+              className="relative font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5"
+            >
+              Aproveitar Condição Exclusiva
+              <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>
