@@ -21,7 +21,7 @@ export function HeroSection({
   return (
     <section
       className={cn(
-        'relative flex flex-col items-center py-32 w-full min-h-[600px] md:min-h-[800px]',
+        'relative flex flex-col items-center py-12 md:py-20 w-full min-h-[600px] md:min-h-[800px]',
         isLive && 'bg-skip-neutral-300 overflow-hidden',
       )}
     >
