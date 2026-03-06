@@ -24654,7 +24654,7 @@ function InventoryAntes() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Processo Padrão"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl leading-[1.1] font-heading font-semibold text-skip-neutral-100",
 					children: "Controle de Inventário em Planilhas"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -24665,7 +24665,7 @@ function InventoryAntes() {
 						className: "rounded-full bg-red-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-900 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
 				}, i))
@@ -24859,7 +24859,7 @@ function InventoryDepois() {
 						className: "rounded-full bg-blue-violet-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-900 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
 				}, i))
@@ -24945,7 +24945,7 @@ function SalesAntes() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Processo Padrão"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl leading-[1.1] font-heading font-semibold text-skip-neutral-100",
 					children: "Treinamento de Vendas no Achômetro"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -24956,7 +24956,7 @@ function SalesAntes() {
 						className: "rounded-full bg-red-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-900 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
 				}, i))
@@ -25108,7 +25108,7 @@ function SalesDepois() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Sistema Skip"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl leading-[1.1] font-heading font-semibold text-skip-neutral-100",
 					children: "Sales Intelligence Platform"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -25119,7 +25119,7 @@ function SalesDepois() {
 						className: "rounded-full bg-blue-violet-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-900 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
 				}, i))
@@ -25268,7 +25268,7 @@ function DashboardsAntes() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Processo Padrão"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl leading-[1.1] font-heading font-semibold text-skip-neutral-100",
 					children: "Múltiplos dashboards descentralizados"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -25279,7 +25279,7 @@ function DashboardsAntes() {
 						className: "rounded-full bg-red-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-900 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
 				}, i))
@@ -25452,7 +25452,7 @@ function DashboardsDepois() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Sistema Skip"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl leading-[1.1] font-heading font-semibold text-skip-neutral-100",
 					children: "Central de Inteligência"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -25463,7 +25463,7 @@ function DashboardsDepois() {
 						className: "rounded-full bg-blue-violet-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-900 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
 				}, i))
@@ -26398,11 +26398,11 @@ function WorkflowStep({ step, title, description, layout, mockup, hasFrame = tru
 						children: step
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-						className: "font-heading text-[20px] md:text-[28px] font-semibold text-skip-neutral-100 mb-2 tracking-tight",
+						className: "font-heading text-[20px] md:text-[28px] leading-[1.1] font-semibold text-skip-neutral-1200 mb-2 tracking-tight",
 						children: title
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "font-body text-body-m text-skip-neutral-900",
+						className: "font-body text-body-m text-skip-neutral-900 leading-[1.3]",
 						children: description
 					})
 				]
@@ -26441,17 +26441,17 @@ function PlatformSection() {
 			className: "max-w-[1100px] mx-auto flex flex-col items-center",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "text-center mb-12 flex flex-col items-center animate-fade-in-up relative z-20 w-full",
+					className: "text-center mb-8 md:mb-12 flex flex-col items-center animate-fade-in-up relative z-20 w-full",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
+						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3",
 						children: "PLATAFORMA"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
-						className: "font-display font-semibold text-white mb-8 max-w-[800px] mx-auto text-center tracking-tight",
+						className: "font-display font-semibold text-white mb-4 max-w-[800px] mx-auto text-center tracking-tight",
 						children: "Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "w-full max-w-4xl relative animate-fade-in-up flex justify-center items-center z-10",
+					className: "w-full max-w-4xl relative animate-fade-in-up flex justify-center items-center z-10 mb-8 md:mb-12",
 					style: { animationDelay: "200ms" },
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] bg-gradient-to-r from-blue-violet-600 to-fuchsia-600 opacity-35 blur-[80px] sm:blur-[120px] rounded-full pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "relative w-full drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]",
@@ -26842,17 +26842,17 @@ const ChatMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 });
 function BentoCard({ className, title, description, mockup }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: cn("rounded-[20px] border border-skip-neutral-1350 p-4 md:p-7 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500", className),
+		className: cn("rounded-[20px] border border-skip-neutral-1350 p-4 md:p-5 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500", className),
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "w-full flex-1 min-h-[160px] bg-slate-50 bg-skip-neutral-1450 rounded-[12px] overflow-hidden border border-slate-100 mb-6 relative group-hover:bg-slate-100/50 transition-colors duration-500 flex items-center justify-center",
 			children: mockup
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mt-auto relative z-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-				className: "font-heading text-body-l font-semibold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
+				className: "font-heading text-body-l leading-[1.1] font-semibold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
 				children: title
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "font-body text-skip-neutral-800 leading-relaxed text-[15px]",
+				className: "font-body text-skip-neutral-800 leading-[1.3] text-[15px]",
 				children: description
 			})]
 		})]
@@ -26880,15 +26880,15 @@ function FeaturesSection() {
 				className: cn("text-center mb-10 md:mb-16 flex flex-col items-center w-full transition-all duration-700", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-3 md:mb-6",
+						className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3",
 						children: "FUNCIONALIDADES"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
-						className: "font-heading font-semibold text-skip-neutral-300 mb-6 max-w-3xl tracking-tight",
+						className: "font-heading font-semibold text-skip-neutral-300 mb-4 max-w-3xl tracking-tight",
 						children: "Skip não apenas gera código"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "font-body text-lg md:text-xl text-skip-neutral-800 max-w-2xl mx-auto",
+						className: "font-body text-lg md:text-xl text-skip-neutral-800 max-w-[580px] mx-auto leading-[1.3]",
 						children: "Ele gerencia todo o ciclo de vida de uma aplicação robusta, desde o banco de dados até a interface"
 					})
 				]
@@ -27481,15 +27481,15 @@ function GuaranteeSection() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-6",
+					className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-2 md:mb-3",
 					children: "Garantia"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					className: "font-heading text-[28px] md:text-[40px] leading-[1.1em] font-semibold text-white mb-6 tracking-tight",
+					className: "font-heading text-[28px] md:text-[40px] leading-[1.1em] font-semibold text-white mb-4 tracking-tight",
 					children: "Teste o Skip por 30 dias sem compromisso"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-body text-sm md:text-base text-skip-neutral-800 leading-relaxed max-w-[520px]",
+					className: "font-body text-sm md:text-base text-skip-neutral-800 leading-[1.3] max-w-[520px]",
 					children: "Se você não ficar satisfeito com o resultado, devolvemos 100% do valor investido — sem perguntas, sem burocracia."
 				})
 			]
@@ -27560,7 +27560,7 @@ function Index() {
 							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[560px] mx-auto animate-fade-in-up leading-relaxed mt-4",
+							className: "font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4",
 							style: {
 								animationDelay: "100ms",
 								animationFillMode: "both"
@@ -27625,15 +27625,15 @@ function Index() {
 					className: "max-w-[1100px] mx-auto flex flex-col items-center text-center",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-4 md:mb-6",
+							className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3",
 							children: "DEMONSTRAÇÃO"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-3 md:mb-5 max-w-4xl tracking-tight",
+							className: "font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-4 max-w-[50rem] tracking-tight",
 							children: "Veja na prática como o Skip transforma seus processos"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-body-l text-skip-neutral-800",
+							className: "font-body text-body-l text-skip-neutral-800 leading-[1.3]",
 							children: "Escolha um processo abaixo e compare como era antes e como fica com o Skip"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DemonstrationTabs, {})
@@ -27750,4 +27750,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CF3K1fHp.js.map
+//# sourceMappingURL=index-CA9sd282.js.map
