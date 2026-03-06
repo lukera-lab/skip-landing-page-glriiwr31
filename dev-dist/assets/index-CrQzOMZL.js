@@ -24129,26 +24129,6 @@ var logo_skip_black_85aeb_default = "/assets/logo-skip-black-85aeb-Cld7xQRZ.svg"
 var logo_skip_white_1b688_default = "/assets/logo-skip-white-1b688-D7aboadx.webp";
 var bg_hero_skip_8319b_default = "/assets/bg-hero-skip-8319b-BMwiMWBh.webp";
 var bg_dark_e697d_default = "/assets/bg-dark-e697d-DGeGyp3_.webp";
-function VideoPlayer({ videoId, label, isLive, className }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: cn("flex flex-col items-center gap-4 w-full", className),
-		children: [label && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-			className: cn("font-mono text-sm md:text-base tracking-[0.1em] uppercase font-semibold text-center", isLive ? "text-white" : "text-skip-neutral-300"),
-			children: label
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "w-full rounded-[20px] overflow-hidden border border-skip-neutral-1350/50 shadow-2xl relative aspect-video bg-black/5 backdrop-blur-sm ring-1 ring-white/10",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
-				className: "absolute inset-0 w-full h-full",
-				src: `https://www.youtube.com/embed/${videoId}?si=NDcTkUC6QI0MXniV`,
-				title: "YouTube video player",
-				frameBorder: "0",
-				allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
-				referrerPolicy: "strict-origin-when-cross-origin",
-				allowFullScreen: true
-			})
-		})]
-	});
-}
 function HeroSection({ isLive = false, showVideo = false }) {
 	const handleScrollToOffer = () => {
 		document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" });
@@ -24212,17 +24192,28 @@ function HeroSection({ isLive = false, showVideo = false }) {
 							children: "[Sem o custo de contratar desenvolvedores]"
 						})
 					}),
-					showVideo && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					showVideo && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "w-full max-w-4xl mx-auto mb-10 animate-fade-in-up",
 						style: {
 							animationDelay: "200ms",
 							animationFillMode: "both"
 						},
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(VideoPlayer, {
-							videoId: "Tu1EdYbs32Q",
-							label: "Assista a live de lançamento",
-							isLive
-						})
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: cn("block text-center font-mono text-sm md:text-base tracking-[0.1em] uppercase font-semibold mb-4", isLive ? "text-white" : "text-skip-neutral-300"),
+							children: "Assista a live de lançamento"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "relative w-full rounded-[20px] overflow-hidden border border-skip-neutral-1350/50 shadow-2xl",
+							style: { paddingBottom: "56.25%" },
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
+								className: "absolute inset-0 w-full h-full",
+								src: "https://www.youtube.com/embed/Tu1EdYbs32Q?si=NDcTkUC6QI0MXniV",
+								title: "YouTube video player",
+								frameBorder: "0",
+								allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+								referrerPolicy: "strict-origin-when-cross-origin",
+								allowFullScreen: true
+							})
+						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto animate-fade-in-up",
@@ -34460,4 +34451,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-D5L2oZv9.js.map
+//# sourceMappingURL=index-CrQzOMZL.js.map
