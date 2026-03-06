@@ -24129,6 +24129,25 @@ var logo_skip_black_85aeb_default = "/assets/logo-skip-black-85aeb-Cld7xQRZ.svg"
 var logo_skip_white_1b688_default = "/assets/logo-skip-white-1b688-D7aboadx.webp";
 var bg_hero_skip_8319b_default = "/assets/bg-hero-skip-8319b-BMwiMWBh.webp";
 var bg_dark_e697d_default = "/assets/bg-dark-e697d-DGeGyp3_.webp";
+function VideoPlayer({ videoId, label, isLive, className }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: cn("flex flex-col items-center gap-4 w-full", className),
+		children: [label && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			className: cn("font-mono text-sm md:text-base tracking-[0.1em] uppercase font-semibold text-center", isLive ? "text-white" : "text-skip-neutral-300"),
+			children: label
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "w-full rounded-[20px] overflow-hidden border border-skip-neutral-1350/50 shadow-2xl relative aspect-video bg-black/5 backdrop-blur-sm ring-1 ring-white/10",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
+				className: "absolute inset-0 w-full h-full",
+				src: `https://www.youtube.com/embed/${videoId}?autoplay=0`,
+				title: label || "Video Player",
+				frameBorder: "0",
+				allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+				allowFullScreen: true
+			})
+		})]
+	});
+}
 function HeroSection({ isLive = false }) {
 	const handleScrollToOffer = () => {
 		document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" });
@@ -24174,7 +24193,7 @@ function HeroSection({ isLive = false }) {
 						]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: cn("font-body text-base sm:text-lg lg:text-xl max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4", isLive ? "text-skip-neutral-1000" : "text-skip-neutral-800"),
+						className: cn("font-body text-base sm:text-lg lg:text-xl max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4 mb-10", isLive ? "text-skip-neutral-1000" : "text-skip-neutral-800"),
 						style: {
 							animationDelay: "100ms",
 							animationFillMode: "both"
@@ -24182,38 +24201,15 @@ function HeroSection({ isLive = false }) {
 						children: "Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a eficiência dos processos da sua empresa"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mb-10 mt-0 animate-fade-in-up",
+						className: "w-full max-w-4xl mx-auto mb-10 animate-fade-in-up",
 						style: {
 							animationDelay: "200ms",
 							animationFillMode: "both"
 						},
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: cn("font-mono text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold", isLive ? "text-blue-violet-500" : "text-blue-violet-600"),
-							children: "[Sem o custo de contratar desenvolvedores]"
-						})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-full max-w-4xl mx-auto mb-10 animate-fade-in-up",
-						style: {
-							animationDelay: "250ms",
-							animationFillMode: "both"
-						},
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex flex-col items-center gap-4",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: cn("font-mono text-sm md:text-base tracking-[0.1em] uppercase font-semibold", isLive ? "text-white" : "text-skip-neutral-300"),
-								children: "Assista a live de lançamento"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "w-full rounded-[20px] overflow-hidden border border-skip-neutral-1350/50 shadow-2xl relative aspect-video bg-black/5 backdrop-blur-sm ring-1 ring-white/10",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
-									className: "absolute inset-0 w-full h-full",
-									src: "https://www.youtube.com/embed/Tu1EdYbs32Q?autoplay=0",
-									title: "Live de Lançamento",
-									frameBorder: "0",
-									allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
-									allowFullScreen: true
-								})
-							})]
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(VideoPlayer, {
+							videoId: "Tu1EdYbs32Q",
+							label: "Assista a live de lançamento",
+							isLive
 						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -24229,6 +24225,17 @@ function HeroSection({ isLive = false }) {
 								className: "relative w-full sm:w-auto font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5",
 								children: ["Aproveitar Condição Exclusiva", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
 							})]
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mt-6 animate-fade-in-up",
+						style: {
+							animationDelay: "400ms",
+							animationFillMode: "both"
+						},
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: cn("font-mono text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold", isLive ? "text-blue-violet-500" : "text-blue-violet-600"),
+							children: "[Sem o custo de contratar desenvolvedores]"
 						})
 					})
 				]
@@ -34452,4 +34459,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-__Pz_4Ww.js.map
+//# sourceMappingURL=index-B32djW-B.js.map

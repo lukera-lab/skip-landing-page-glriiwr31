@@ -5,6 +5,7 @@ import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
 import logoWhiteUrl from '@/assets/logo-skip-white-1b688.webp'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import liveBgUrl from '@/assets/bg-dark-e697d.webp'
+import { VideoPlayer } from './VideoPlayer'
 
 export function HeroSection({ isLive = false }: { isLive?: boolean }) {
   const handleScrollToOffer = () => {
@@ -71,7 +72,7 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
         {/* Subheadline */}
         <p
           className={cn(
-            'font-body text-base sm:text-lg lg:text-xl max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4',
+            'font-body text-base sm:text-lg lg:text-xl max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4 mb-10',
             isLive ? 'text-skip-neutral-1000' : 'text-skip-neutral-800',
           )}
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
@@ -80,46 +81,12 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
           eficiência dos processos da sua empresa
         </p>
 
-        {/* Disclaimer */}
-        <div
-          className="mb-10 mt-0 animate-fade-in-up"
-          style={{ animationDelay: '200ms', animationFillMode: 'both' }}
-        >
-          <span
-            className={cn(
-              'font-mono text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold',
-              isLive ? 'text-blue-violet-500' : 'text-blue-violet-600',
-            )}
-          >
-            [Sem o custo de contratar desenvolvedores]
-          </span>
-        </div>
-
-        {/* Embedded Video Player */}
+        {/* Embedded Video Player Component */}
         <div
           className="w-full max-w-4xl mx-auto mb-10 animate-fade-in-up"
-          style={{ animationDelay: '250ms', animationFillMode: 'both' }}
+          style={{ animationDelay: '200ms', animationFillMode: 'both' }}
         >
-          <div className="flex flex-col items-center gap-4">
-            <span
-              className={cn(
-                'font-mono text-sm md:text-base tracking-[0.1em] uppercase font-semibold',
-                isLive ? 'text-white' : 'text-skip-neutral-300',
-              )}
-            >
-              Assista a live de lançamento
-            </span>
-            <div className="w-full rounded-[20px] overflow-hidden border border-skip-neutral-1350/50 shadow-2xl relative aspect-video bg-black/5 backdrop-blur-sm ring-1 ring-white/10">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/Tu1EdYbs32Q?autoplay=0"
-                title="Live de Lançamento"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
+          <VideoPlayer videoId="Tu1EdYbs32Q" label="Assista a live de lançamento" isLive={isLive} />
         </div>
 
         {/* Call to Actions */}
@@ -137,6 +104,21 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
               <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
+        </div>
+
+        {/* Disclaimer */}
+        <div
+          className="mt-6 animate-fade-in-up"
+          style={{ animationDelay: '400ms', animationFillMode: 'both' }}
+        >
+          <span
+            className={cn(
+              'font-mono text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold',
+              isLive ? 'text-blue-violet-500' : 'text-blue-violet-600',
+            )}
+          >
+            [Sem o custo de contratar desenvolvedores]
+          </span>
         </div>
       </div>
     </section>
