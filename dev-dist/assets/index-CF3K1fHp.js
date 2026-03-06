@@ -24654,7 +24654,7 @@ function InventoryAntes() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Processo Padrão"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
 					children: "Controle de Inventário em Planilhas"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -24665,7 +24665,7 @@ function InventoryAntes() {
 						className: "rounded-full bg-red-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-600 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-tight",
 						children: item
 					})]
 				}, i))
@@ -24848,7 +24848,7 @@ function InventoryDepois() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Sistema Skip"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
 					children: "Inventory OS"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -24859,7 +24859,7 @@ function InventoryDepois() {
 						className: "rounded-full bg-blue-violet-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-600 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-tight",
 						children: item
 					})]
 				}, i))
@@ -24945,7 +24945,7 @@ function SalesAntes() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Processo Padrão"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
 					children: "Treinamento de Vendas no Achômetro"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -24956,7 +24956,7 @@ function SalesAntes() {
 						className: "rounded-full bg-red-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-600 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-tight",
 						children: item
 					})]
 				}, i))
@@ -25108,7 +25108,7 @@ function SalesDepois() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Sistema Skip"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
 					children: "Sales Intelligence Platform"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -25119,7 +25119,7 @@ function SalesDepois() {
 						className: "rounded-full bg-blue-violet-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-600 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-tight",
 						children: item
 					})]
 				}, i))
@@ -25268,7 +25268,7 @@ function DashboardsAntes() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Processo Padrão"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
 					children: "Múltiplos dashboards descentralizados"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -25279,7 +25279,7 @@ function DashboardsAntes() {
 						className: "rounded-full bg-red-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-3 h-3 text-red-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-600 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-tight",
 						children: item
 					})]
 				}, i))
@@ -25452,7 +25452,7 @@ function DashboardsDepois() {
 					className: "text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono",
 					children: "Sistema Skip"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "text-xl font-heading font-semibold text-skip-neutral-100",
+					className: "text-lg md:text-xl font-heading font-semibold text-skip-neutral-100",
 					children: "Central de Inteligência"
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
@@ -25463,7 +25463,7 @@ function DashboardsDepois() {
 						className: "rounded-full bg-blue-violet-50 p-1 shrink-0 mt-0.5",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-blue-violet-400" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-sm text-skip-neutral-600 leading-tight",
+						className: "text-sm text-skip-neutral-900 leading-tight",
 						children: item
 					})]
 				}, i))
@@ -25525,7 +25525,7 @@ function ComparisonLayout({ tabId }) {
 					children: "Antes"
 				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "rounded-2xl border border-skip-neutral-1350 bg-white p-6 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]",
+				className: "rounded-2xl border border-skip-neutral-1350 bg-white p-[18px] md:p-6 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]",
 				children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryAntes, {}) : tabId === "vendas" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SalesAntes, {}) : tabId === "dashboards" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DashboardsAntes, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
 					tabId,
 					type: "antes"
@@ -25542,7 +25542,7 @@ function ComparisonLayout({ tabId }) {
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "rounded-2xl p-[1px] bg-gradient-to-br from-blue-violet-400 to-fuchsia-400 shadow-lg shadow-blue-violet-500/20 flex flex-col flex-1 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-blue-violet-500/30 min-h-[400px]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "bg-white rounded-[15px] p-6 flex flex-col flex-1 w-full overflow-hidden",
+					className: "bg-white rounded-[15px] p-[18px] md:p-6 flex flex-col flex-1 w-full overflow-hidden",
 					children: tabId === "inventario" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InventoryDepois, {}) : tabId === "vendas" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SalesDepois, {}) : tabId === "dashboards" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DashboardsDepois, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Placeholder, {
 						tabId,
 						type: "depois"
@@ -26394,11 +26394,11 @@ function WorkflowStep({ step, title, description, layout, mockup, hasFrame = tru
 				className: cn("w-[calc(100%-24px)] ml-6 md:w-full md:ml-0 transition-all duration-1000 ease-out z-10 flex flex-col", isVisible ? "opacity-100 translate-x-0 translate-y-0" : cn("opacity-0 translate-y-8 md:translate-y-0", isTextLeft ? "md:-translate-x-16" : "md:translate-x-16"), isTextLeft ? "md:col-start-1 md:pr-12 lg:pr-20" : "md:col-start-2 md:pl-12 lg:pl-20"),
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-4",
+						className: "font-mono text-sm tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-2",
 						children: step
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-						className: "font-heading text-3xl md:text-[36px] font-semibold text-white mb-4 tracking-tight",
+						className: "font-heading text-[20px] md:text-[28px] font-semibold text-skip-neutral-100 mb-2 tracking-tight",
 						children: title
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -26408,7 +26408,7 @@ function WorkflowStep({ step, title, description, layout, mockup, hasFrame = tru
 				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: cn("w-[calc(100%-24px)] ml-6 md:w-full md:ml-0 mt-8 md:mt-0 transition-all duration-1000 ease-out z-10 md:delay-150", isVisible ? "opacity-100 translate-x-0 translate-y-0" : cn("opacity-0 translate-y-8 md:translate-y-0", isTextLeft ? "md:translate-x-16" : "md:-translate-x-16"), isTextLeft ? "md:col-start-2 md:pl-12 lg:pl-20 md:row-start-1" : "md:col-start-1 md:pr-12 lg:pr-20 md:row-start-1"),
+				className: cn("w-[calc(100%-24px)] ml-6 md:w-full md:ml-0 mt-5 md:mt-0 transition-all duration-1000 ease-out z-10 md:delay-150", isVisible ? "opacity-100 translate-x-0 translate-y-0" : cn("opacity-0 translate-y-8 md:translate-y-0", isTextLeft ? "md:translate-x-16" : "md:-translate-x-16"), isTextLeft ? "md:col-start-2 md:pl-12 lg:pl-20 md:row-start-1" : "md:col-start-1 md:pr-12 lg:pr-20 md:row-start-1"),
 				children: hasFrame ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "bg-skip-neutral-1450 rounded-[24px] p-4 md:p-8 border border-skip-neutral-1350/50 relative shadow-sm",
 					children: mockup
@@ -26445,14 +26445,9 @@ function PlatformSection() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
 						children: "PLATAFORMA"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SectionTitle, {
-						className: "font-display font-semibold text-white mb-8 max-w-[680px] mx-auto text-center tracking-tight",
-						children: [
-							"Skip é a primeira plataforma de IA agêntica para criação de",
-							" ",
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", { className: "hidden md:block" }),
-							" Sistemas Internos"
-						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
+						className: "font-display font-semibold text-white mb-8 max-w-[800px] mx-auto text-center tracking-tight",
+						children: "Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -26467,17 +26462,9 @@ function PlatformSection() {
 						})
 					})]
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "w-full mt-[80px] mb-20 flex justify-center animate-fade-in-up",
-					style: { animationDelay: "300ms" },
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
-						className: "font-heading font-semibold text-white text-center tracking-tight",
-						children: "Como funciona?"
-					})
-				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					ref: containerRef,
-					className: "w-full flex flex-col gap-24 md:gap-32 relative z-20 pt-4 pb-12",
+					className: "w-full flex flex-col gap-16 md:gap-24 relative z-20 pt-4 pb-12",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-0 md:left-1/2 top-4 bottom-0 w-1 bg-skip-neutral-600/50 md:-translate-x-1/2 rounded-full [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)]" }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -26855,14 +26842,14 @@ const ChatMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 });
 function BentoCard({ className, title, description, mockup }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: cn("rounded-[20px] border border-skip-neutral-1350 p-7 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500", className),
+		className: cn("rounded-[20px] border border-skip-neutral-1350 p-4 md:p-7 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500", className),
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "w-full flex-1 min-h-[160px] bg-slate-50 bg-skip-neutral-1450 rounded-[12px] overflow-hidden border border-slate-100 mb-6 relative group-hover:bg-slate-100/50 transition-colors duration-500 flex items-center justify-center",
 			children: mockup
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mt-auto relative z-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-				className: "font-heading text-body-l font-bold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
+				className: "font-heading text-body-l font-semibold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
 				children: title
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "font-body text-skip-neutral-800 leading-relaxed text-[15px]",
@@ -26885,19 +26872,19 @@ function FeaturesSection() {
 		return () => observer.disconnect();
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "w-full py-24 md:py-32 px-5 relative z-10 bg-white",
+		className: "w-full py-16 md:py-32 px-5 relative z-10 bg-white",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			ref,
 			className: "max-w-[1100px] mx-auto flex flex-col items-center",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: cn("text-center mb-16 flex flex-col items-center w-full transition-all duration-700", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
+				className: cn("text-center mb-10 md:mb-16 flex flex-col items-center w-full transition-all duration-700", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
+						className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-3 md:mb-6",
 						children: "FUNCIONALIDADES"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
-						className: "font-heading font-bold text-skip-neutral-300 mb-6 max-w-3xl tracking-tight",
+						className: "font-heading font-semibold text-skip-neutral-300 mb-6 max-w-3xl tracking-tight",
 						children: "Skip não apenas gera código"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -27498,7 +27485,7 @@ function GuaranteeSection() {
 					children: "Garantia"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					className: "font-heading text-3xl md:text-4xl lg:text-[40px] leading-[1.2] font-semibold text-white mb-6 tracking-tight",
+					className: "font-heading text-[28px] md:text-[40px] leading-[1.1em] font-semibold text-white mb-6 tracking-tight",
 					children: "Teste o Skip por 30 dias sem compromisso"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -27549,7 +27536,7 @@ function Index() {
 					className: "max-w-[1100px] w-full flex flex-col items-center text-center mx-auto px-5 relative z-10",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "flex items-center justify-center mb-10 animate-fade-in-down",
+							className: "flex items-center justify-center mb-6 animate-fade-in-down",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 								src: logo_skip_black_85aeb_default,
 								alt: "Skip Logo",
@@ -27557,7 +27544,7 @@ function Index() {
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-							className: "font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full sm:max-w-none mx-auto",
+							className: "font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full sm:max-w-none mx-auto",
 							style: { animationFillMode: "both" },
 							children: [
 								"O criador de Sistemas Internos ",
@@ -27573,7 +27560,7 @@ function Index() {
 							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[560px] mx-auto animate-fade-in-up leading-relaxed mt-4 md:line-clamp-2",
+							className: "font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[560px] mx-auto animate-fade-in-up leading-relaxed mt-4",
 							style: {
 								animationDelay: "100ms",
 								animationFillMode: "both"
@@ -27633,23 +27620,21 @@ function Index() {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "w-full py-24 px-5 relative z-10 bg-skip-neutral-1550",
+				className: "w-full py-16 md:py-24 px-5 relative z-10 bg-skip-neutral-1550",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-[1100px] mx-auto flex flex-col items-center text-center",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
+							className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-4 md:mb-6",
 							children: "DEMONSTRAÇÃO"
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex flex-col items-center gap-[16px] w-full",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-								className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-100 max-w-4xl leading-tight tracking-tight",
-								children: "Veja na prática como o Skip transforma seus processos"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-2xl",
-								children: "Escolha um processo abaixo e compare como era antes e como fica com o Skip"
-							})]
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-3 md:mb-5 max-w-4xl tracking-tight",
+							children: "Veja na prática como o Skip transforma seus processos"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "font-body text-body-l text-skip-neutral-800",
+							children: "Escolha um processo abaixo e compare como era antes e como fica com o Skip"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DemonstrationTabs, {})
 					]
@@ -27765,4 +27750,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-n78Yukxj.js.map
+//# sourceMappingURL=index-CF3K1fHp.js.map

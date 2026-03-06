@@ -229,7 +229,9 @@ export function InventoryDepois() {
           <span className="text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono">
             Sistema Skip
           </span>
-          <h3 className="text-lg md:text-xl font-heading font-semibold text-skip-neutral-100">Inventory OS</h3>
+          <h3 className="text-lg md:text-xl font-heading font-semibold text-skip-neutral-100">
+            Inventory OS
+          </h3>
         </div>
         <ul className="space-y-3">
           {DEPOIS_POINTS.map((item, i) => (
