@@ -8,7 +8,7 @@ export default function LiveB() {
     <div className="flex flex-col min-h-screen">
       <HelloBar />
       <HeroSection isLive />
-      <OfferSection />
+      <OfferSection directCheckout />
       <GuaranteeSection />
     </div>
   )

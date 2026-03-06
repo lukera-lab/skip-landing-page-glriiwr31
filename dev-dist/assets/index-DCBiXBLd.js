@@ -33922,7 +33922,10 @@ function LeadCaptureModal({ children }) {
 		})]
 	});
 }
-function OfferSection() {
+function OfferSection({ directCheckout = false }) {
+	const handleDirectCheckout = () => {
+		window.location.href = "https://go.adapta.org/checkout/skip-basic";
+	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "offer",
 		className: "w-full py-12 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50",
@@ -34038,7 +34041,11 @@ function OfferSection() {
 								className: "mt-auto flex flex-col items-center gap-3 w-full",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "relative group w-full",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LeadCaptureModal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), directCheckout ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+										onClick: handleDirectCheckout,
+										className: "relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto",
+										children: ["Quero o Skip Basic", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+									}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LeadCaptureModal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 										className: "relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto",
 										children: ["Quero o Skip Basic", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
 									}) })]
@@ -34219,7 +34226,7 @@ function LiveB() {
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HelloBar, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeroSection, { isLive: true }),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OfferSection, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OfferSection, { directCheckout: true }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GuaranteeSection, {})
 		]
 	});
@@ -34337,4 +34344,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DqD0yy-W.js.map
+//# sourceMappingURL=index-DCBiXBLd.js.map
