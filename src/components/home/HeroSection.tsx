@@ -7,7 +7,13 @@ import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import liveBgUrl from '@/assets/bg-dark-e697d.webp'
 import { VideoPlayer } from './VideoPlayer'
 
-export function HeroSection({ isLive = false, showVideo = false }: { isLive?: boolean; showVideo?: boolean }) {
+export function HeroSection({
+  isLive = false,
+  showVideo = false,
+}: {
+  isLive?: boolean
+  showVideo?: boolean
+}) {
   const handleScrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -126,7 +132,6 @@ export function HeroSection({ isLive = false, showVideo = false }: { isLive?: bo
             </Button>
           </div>
         </div>
-
       </div>
     </section>
   )

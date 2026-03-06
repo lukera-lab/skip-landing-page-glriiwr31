@@ -24149,8 +24149,7 @@ function VideoPlayer({ videoId, label, isLive, className }) {
 		})]
 	});
 }
-function HeroSection({ isLive = false }) {
-	const isHomePage = useLocation().pathname === "/";
+function HeroSection({ isLive = false, showVideo = false }) {
 	const handleScrollToOffer = () => {
 		document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" });
 	};
@@ -24195,14 +24194,25 @@ function HeroSection({ isLive = false }) {
 						]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: cn("font-body text-base sm:text-lg lg:text-xl max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4 mb-10", isLive ? "text-skip-neutral-1000" : "text-skip-neutral-800"),
+						className: cn("font-body text-base sm:text-lg lg:text-xl max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4 mb-2", isLive ? "text-skip-neutral-1000" : "text-skip-neutral-800"),
 						style: {
 							animationDelay: "100ms",
 							animationFillMode: "both"
 						},
 						children: "Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a eficiência dos processos da sua empresa"
 					}),
-					isHomePage && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mb-10 animate-fade-in-up",
+						style: {
+							animationDelay: "150ms",
+							animationFillMode: "both"
+						},
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: cn("font-mono text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold", isLive ? "text-blue-violet-500" : "text-blue-violet-600"),
+							children: "[Sem o custo de contratar desenvolvedores]"
+						})
+					}),
+					showVideo && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "w-full max-w-4xl mx-auto mb-10 animate-fade-in-up",
 						style: {
 							animationDelay: "200ms",
@@ -24227,17 +24237,6 @@ function HeroSection({ isLive = false }) {
 								className: "relative w-full sm:w-auto font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5",
 								children: ["Aproveitar Condição Exclusiva", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
 							})]
-						})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-6 animate-fade-in-up",
-						style: {
-							animationDelay: "400ms",
-							animationFillMode: "both"
-						},
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: cn("font-mono text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold", isLive ? "text-blue-violet-500" : "text-blue-violet-600"),
-							children: "[Sem o custo de contratar desenvolvedores]"
 						})
 					})
 				]
@@ -34278,7 +34277,7 @@ function Index() {
 		className: "flex flex-col min-h-screen",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HelloBar, { text: "Condição exclusiva de lançamento" }),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeroSection, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeroSection, { showVideo: true }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "w-full px-5 py-6 relative z-10",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -34461,4 +34460,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-Bt67O1dK.js.map
+//# sourceMappingURL=index-D5L2oZv9.js.map
