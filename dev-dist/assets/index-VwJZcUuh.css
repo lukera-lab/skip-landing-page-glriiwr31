@@ -2669,6 +2669,9 @@ h6{
 .text-\[15px\]{
   font-size: 15px;
 }
+.text-\[22px\]{
+  font-size: 22px;
+}
 .text-\[28px\]{
   font-size: 28px;
 }
@@ -2766,6 +2769,9 @@ h6{
 }
 .leading-relaxed{
   line-height: 1.625;
+}
+.leading-snug{
+  line-height: 1.375;
 }
 .leading-tight{
   line-height: 1.25;
@@ -4865,10 +4871,6 @@ h6{
   .md\:text-left{
     text-align: left;
   }
-  .md\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -4876,6 +4878,9 @@ h6{
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
+  }
+  .md\:text-\[28px\]{
+    font-size: 28px;
   }
   .md\:text-\[36px\]{
     font-size: 36px;

@@ -13,7 +13,7 @@ export function DemonstrationSection() {
             <SectionTitle className="font-heading font-bold text-skip-neutral-300 max-w-3xl tracking-tight text-center">
               Veja a diferença na prática
             </SectionTitle>
-            <p className="font-body text-xl md:text-2xl text-skip-neutral-800 max-w-2xl mx-auto text-center">
+            <p className="font-body text-[22px] md:text-[28px] leading-snug text-skip-neutral-800 max-w-2xl mx-auto text-center">
               Compare o antes e o depois de estruturar seus processos no Skip
             </p>
           </div>
