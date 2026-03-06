@@ -2562,10 +2562,6 @@ h6{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-.py-32{
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -4931,6 +4927,10 @@ h6{
   }
   .md\:p-8{
     padding: 2rem;
+  }
+  .md\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
   .md\:py-24{
     padding-top: 6rem;

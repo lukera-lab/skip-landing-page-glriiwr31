@@ -24134,7 +24134,7 @@ function HeroSection({ isLive = false, showVideo = false }) {
 		document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" });
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		className: cn("relative flex flex-col items-center py-32 w-full min-h-[600px] md:min-h-[800px]", isLive && "bg-skip-neutral-300 overflow-hidden"),
+		className: cn("relative flex flex-col items-center py-12 md:py-20 w-full min-h-[600px] md:min-h-[800px]", isLive && "bg-skip-neutral-300 overflow-hidden"),
 		children: [
 			isLive && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.06)_0%,transparent_60%)] pointer-events-none" }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -34451,4 +34451,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CrQzOMZL.js.map
+//# sourceMappingURL=index-CJVnqhMg.js.map
