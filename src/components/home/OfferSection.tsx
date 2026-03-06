@@ -5,7 +5,13 @@ import consultoriaImgUrl from '@/assets/consultoria-individual-skip-f7cfb.webp'
 import offerSkipUrl from '@/assets/offer-skip-85e8a.webp'
 import { LeadCaptureModal } from './LeadCaptureModal'
 
-export function OfferSection({ directCheckout = false }: { directCheckout?: boolean }) {
+export function OfferSection({
+  directCheckout = false,
+  ctaText = 'Quero o Skip Basic',
+}: {
+  directCheckout?: boolean
+  ctaText?: string
+}) {
   const handleDirectCheckout = () => {
     window.location.href = 'https://go.adapta.org/checkout/skip-basic'
   }
@@ -120,13 +126,13 @@ export function OfferSection({ directCheckout = false }: { directCheckout?: bool
                     onClick={handleDirectCheckout}
                     className="relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto"
                   >
-                    Quero o Skip Basic
+                    {ctaText}
                     <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
                   </Button>
                 ) : (
                   <LeadCaptureModal>
                     <Button className="relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto">
-                      Quero o Skip Basic
+                      {ctaText}
                       <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
                     </Button>
                   </LeadCaptureModal>
