@@ -18,4 +18,8 @@ const App = () => (
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </Toolt
+    </TooltipProvider>
+  </BrowserRouter>
+)
+
+export default App
