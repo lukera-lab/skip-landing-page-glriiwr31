@@ -363,6 +363,16 @@
     }
   }
 
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
   .animate-accordion-down {
     animation: accordion-down 0.2s ease-out;
   }
@@ -398,5 +408,8 @@
   }
   .animate-spotlight {
     animation: spotlight 2s ease forwards;
+  }
+  .animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
   }
 }

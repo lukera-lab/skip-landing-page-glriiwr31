@@ -24137,14 +24137,14 @@ function HeroSection({ isLive = false }) {
 		className: cn("relative flex flex-col items-center py-32 w-full h-[600px] md:h-[800px]", isLive && "bg-skip-neutral-300 overflow-hidden"),
 		children: [
 			isLive && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.06)_0%,transparent_60%)] pointer-events-none" }),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					src: isLive ? bg_dark_e697d_default : bg_hero_skip_8319b_default,
 					alt: "Hero Background",
 					className: cn("absolute inset-0 w-full h-full object-cover object-top", isLive && "opacity-30"),
 					"aria-hidden": "true"
-				})
+				}), isLive && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(79,70,229,0.20)_0%,transparent_80%)] animate-pulse-slow mix-blend-screen pointer-events-none" })]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-[1100px] w-full flex flex-col items-center text-center mx-auto px-5 relative z-10",
@@ -24158,7 +24158,7 @@ function HeroSection({ isLive = false }) {
 						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						className: cn("font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-[-0.02em] animate-fade-in-up w-full sm:max-w-none mx-auto", isLive ? "text-white" : "text-skip-neutral-0"),
+						className: cn("font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-tight animate-fade-in-up w-full sm:max-w-none mx-auto", isLive ? "text-white" : "text-skip-neutral-0"),
 						style: { animationFillMode: "both" },
 						children: [
 							"O criador de Sistemas Internos ",
@@ -34314,4 +34314,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-D58CMHDK.js.map
+//# sourceMappingURL=index-DDPsoXu6.js.map

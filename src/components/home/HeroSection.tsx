@@ -35,6 +35,11 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
           )}
           aria-hidden="true"
         />
+
+        {/* Pulsating Overlay for Live Page */}
+        {isLive && (
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(79,70,229,0.20)_0%,transparent_80%)] animate-pulse-slow mix-blend-screen pointer-events-none" />
+        )}
       </div>
 
       <div className="max-w-[1100px] w-full flex flex-col items-center text-center mx-auto px-5 relative z-10">
@@ -50,7 +55,7 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
         {/* Main Headline */}
         <h2
           className={cn(
-            'font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-[-0.02em] animate-fade-in-up w-full sm:max-w-none mx-auto',
+            'font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-tight animate-fade-in-up w-full sm:max-w-none mx-auto',
             isLive ? 'text-white' : 'text-skip-neutral-0',
           )}
           style={{ animationFillMode: 'both' }}
