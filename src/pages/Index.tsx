@@ -1,5 +1,6 @@
 import { HeroSection } from '@/components/home/HeroSection'
 import { HelloBar } from '@/components/home/HelloBar'
+import { HowItWorksSection } from '@/components/home/HowItWorksSection'
 import { DemonstrationTabs } from '@/components/home/DemonstrationTabs'
 import { PlatformSection } from '@/components/home/PlatformSection'
 import { FeaturesSection } from '@/components/home/FeaturesSection'
@@ -24,6 +25,9 @@ export default function Index() {
           <div className="flex-1 h-px bg-skip-neutral-1350" />
         </div>
       </div>
+
+      {/* How it Works Section */}
+      <HowItWorksSection />
 
       {/* Demonstration Section */}
       <section className="w-full py-12 md:py-24 px-5 relative z-10 bg-skip-neutral-1550">

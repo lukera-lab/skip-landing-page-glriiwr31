@@ -24221,6 +24221,66 @@ function HelloBar({ text = "Condição Exclusiva da live de lançamento" }) {
 		})
 	});
 }
+function HowItWorksSection() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "w-full py-12 md:py-24 px-5 bg-white relative z-10",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "max-w-[1100px] mx-auto flex flex-col items-center",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "text-center mb-10 md:mb-16 flex flex-col items-center",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3",
+						children: "COMO FUNCIONA"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "font-heading text-[28px] md:text-[40px] leading-[1.1] font-semibold text-skip-neutral-100 mb-4 tracking-[-0.02em]",
+						children: "Como o Skip funciona?"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "font-body text-base md:text-lg text-skip-neutral-800 leading-[1.3] max-w-[600px]",
+						children: "Mande sua ideia. Receba seu Skip. Compartilhe com seu time."
+					})
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "grid grid-cols-1 md:grid-cols-3 gap-6 w-full",
+				children: [
+					{
+						number: "01",
+						title: "Fale sobre seu processo interno",
+						description: "Escolha um processo da sua empresa que deseja melhorar e conte para o Skip como ele funciona hoje."
+					},
+					{
+						number: "02",
+						title: "Deixe o Skip Trabalhar",
+						description: "O Skip vai mapear seu processo e criar um Sistema Interno completo para melhorar sua operação."
+					},
+					{
+						number: "03",
+						title: "Receba seu Sistema Pronto para usar",
+						description: "Após seus feedbacks, o sistema é entregue 100% pronto: banco de dados, login, URL própria, SSL e hospedagem otimizada."
+					}
+				].map((step, index$1) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex flex-col border border-skip-neutral-1350 rounded-[20px] p-[28px] bg-white shadow-sm hover:shadow-md transition-shadow duration-300",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "font-mono text-2xl md:text-3xl text-blue-violet-600 font-semibold mb-4 block",
+							children: step.number
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-heading text-lg md:text-xl font-semibold text-skip-neutral-300 mb-3 leading-[1.2]",
+							children: step.title
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "font-body text-sm md:text-base text-skip-neutral-800 leading-[1.4]",
+							children: step.description
+						})
+					]
+				}, index$1))
+			})]
+		})
+	});
+}
 var DirectionContext = import_react.createContext(void 0);
 function useDirection(localDir) {
 	const globalDir = import_react.useContext(DirectionContext);
@@ -34180,6 +34240,7 @@ function Index() {
 					]
 				})
 			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HowItWorksSection, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 				className: "w-full py-12 md:py-24 px-5 relative z-10 bg-skip-neutral-1550",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -34347,4 +34408,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DuTWvPid.js.map
+//# sourceMappingURL=index-B1yO3NVr.js.map
