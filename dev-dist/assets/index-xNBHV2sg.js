@@ -34081,9 +34081,19 @@ function OfferSection() {
 								className: "font-heading text-[22px] md:text-[28px] leading-[1.1] font-semibold text-white",
 								children: "2 Consultorias Individuais Gratuitas"
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-2 font-body text-body-s text-skip-neutral-900",
-								children: "Sessões individuais com foco total no seu projeto — para sair com clareza, próximos passos definidos e resultados reais mais rápido."
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "mt-3 md:mt-4 font-body text-body-s text-skip-neutral-900 flex flex-col gap-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "2 calls individuais com um consultor especializado em Skip que irá te ajudar a construir os seus sistemas de forma relâmpago." }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mb-2",
+									children: "Nessas calls, você poderá:"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+									className: "flex flex-col gap-1.5 list-disc pl-5 marker:text-blue-violet-500",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Criar seus sistemas ao vivo com um consultor Skip" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Garantir que seu app funcione perfeitamente integrado com sua empresa" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Receber um \"Pente Fino\" profissional no seu sistema para garantir que ele atinja seus objetivos" })
+									]
+								})] })]
 							})
 						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -34364,4 +34374,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CFkzcz9t.js.map
+//# sourceMappingURL=index-xNBHV2sg.js.map

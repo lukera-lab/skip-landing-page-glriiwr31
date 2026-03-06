@@ -177,10 +177,23 @@ export function OfferSection() {
               2 Consultorias Individuais Gratuitas
             </h3>
 
-            <p className="mt-2 font-body text-body-s text-skip-neutral-900">
-              Sessões individuais com foco total no seu projeto — para sair com clareza, próximos
-              passos definidos e resultados reais mais rápido.
-            </p>
+            <div className="mt-3 md:mt-4 font-body text-body-s text-skip-neutral-900 flex flex-col gap-3">
+              <p>
+                2 calls individuais com um consultor especializado em Skip que irá te ajudar a
+                construir os seus sistemas de forma relâmpago.
+              </p>
+              <div>
+                <p className="mb-2">Nessas calls, você poderá:</p>
+                <ul className="flex flex-col gap-1.5 list-disc pl-5 marker:text-blue-violet-500">
+                  <li>Criar seus sistemas ao vivo com um consultor Skip</li>
+                  <li>Garantir que seu app funcione perfeitamente integrado com sua empresa</li>
+                  <li>
+                    Receber um "Pente Fino" profissional no seu sistema para garantir que ele atinja
+                    seus objetivos
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Right Image (40%) */}
