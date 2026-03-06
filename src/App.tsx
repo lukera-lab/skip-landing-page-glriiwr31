@@ -19,4 +19,10 @@ const App = () => (
           <Route path="/live" element={<Live />} />
           <Route path="/live-b" element={<LiveB />} />
         </Route>
-        <Route path="*" element={<NotFoun
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </TooltipProvider>
+  </BrowserRouter>
+)
+
+export default App
