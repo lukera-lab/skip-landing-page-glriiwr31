@@ -4,6 +4,7 @@ import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '@/comp
 import { Separator } from '@/components/ui/separator'
 import consultoriaImgUrl from '@/assets/consultoria-individual-skip-f7cfb.webp'
 import mockOfferUrl from '@/assets/mock-offer-bf844.webp'
+import { LeadCaptureModal } from './LeadCaptureModal'
 
 export function OfferSection() {
   return (
@@ -113,15 +114,12 @@ export function OfferSection() {
             <div className="mt-auto flex flex-col items-center gap-3 w-full">
               <div className="relative group w-full">
                 <div className="absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" />
-                <Button
-                  asChild
-                  className="relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto"
-                >
-                  <a href="https://go.adapta.org/checkout/skip-basic">
+                <LeadCaptureModal>
+                  <Button className="relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto">
                     Quero o Skip Basic
                     <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
-                  </a>
-                </Button>
+                  </Button>
+                </LeadCaptureModal>
               </div>
               <div className="flex items-center gap-3 text-skip-neutral-900 mt-1">
                 <div className="flex items-center gap-1.5">

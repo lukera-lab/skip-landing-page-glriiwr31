@@ -6,8 +6,8 @@ var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJSMin = (cb, mod) => () => (mod || cb((mod = { exports: {} }).exports, mod), mod.exports);
 var __copyProps = (to, from, except, desc) => {
-	if (from && typeof from === "object" || typeof from === "function") for (var keys = __getOwnPropNames(from), i = 0, n = keys.length, key; i < n; i++) {
-		key = keys[i];
+	if (from && typeof from === "object" || typeof from === "function") for (var keys = __getOwnPropNames(from), i$2 = 0, n$1 = keys.length, key; i$2 < n$1; i$2++) {
+		key = keys[i$2];
 		if (!__hasOwnProp.call(to, key) && key !== except) __defProp(to, key, {
 			get: ((k) => from[k]).bind(null, key),
 			enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable
@@ -136,9 +136,9 @@ var require_scheduler_development = /* @__PURE__ */ __commonJSMin(((exports) => 
 			}
 			return first;
 		}
-		function compare(a, b$1) {
-			var diff = a.sortIndex - b$1.sortIndex;
-			return 0 !== diff ? diff : a.id - b$1.id;
+		function compare(a$1, b$1) {
+			var diff = a$1.sortIndex - b$1.sortIndex;
+			return 0 !== diff ? diff : a$1.id - b$1.id;
 		}
 		function advanceTimers(currentTime) {
 			for (var timer = peek(timerQueue); null !== timer;) {
@@ -243,9 +243,9 @@ var require_scheduler_development = /* @__PURE__ */ __commonJSMin(((exports) => 
 				currentPriorityLevel = previousPriorityLevel;
 			}
 		};
-		exports.unstable_scheduleCallback = function(priorityLevel, callback, options) {
+		exports.unstable_scheduleCallback = function(priorityLevel, callback, options$1) {
 			var currentTime = exports.unstable_now();
-			"object" === typeof options && null !== options ? (options = options.delay, options = "number" === typeof options && 0 < options ? currentTime + options : currentTime) : options = currentTime;
+			"object" === typeof options$1 && null !== options$1 ? (options$1 = options$1.delay, options$1 = "number" === typeof options$1 && 0 < options$1 ? currentTime + options$1 : currentTime) : options$1 = currentTime;
 			switch (priorityLevel) {
 				case 1:
 					var timeout = -1;
@@ -261,16 +261,16 @@ var require_scheduler_development = /* @__PURE__ */ __commonJSMin(((exports) => 
 					break;
 				default: timeout = 5e3;
 			}
-			timeout = options + timeout;
+			timeout = options$1 + timeout;
 			priorityLevel = {
 				id: taskIdCounter++,
 				callback,
 				priorityLevel,
-				startTime: options,
+				startTime: options$1,
 				expirationTime: timeout,
 				sortIndex: -1
 			};
-			options > currentTime ? (priorityLevel.sortIndex = options, push(timerQueue, priorityLevel), null === peek(taskQueue) && priorityLevel === peek(timerQueue) && (isHostTimeoutScheduled ? (localClearTimeout(taskTimeoutID), taskTimeoutID = -1) : isHostTimeoutScheduled = !0, requestHostTimeout(handleTimeout, options - currentTime))) : (priorityLevel.sortIndex = timeout, push(taskQueue, priorityLevel), isHostCallbackScheduled || isPerformingWork || (isHostCallbackScheduled = !0, isMessageLoopRunning || (isMessageLoopRunning = !0, schedulePerformWorkUntilDeadline())));
+			options$1 > currentTime ? (priorityLevel.sortIndex = options$1, push(timerQueue, priorityLevel), null === peek(taskQueue) && priorityLevel === peek(timerQueue) && (isHostTimeoutScheduled ? (localClearTimeout(taskTimeoutID), taskTimeoutID = -1) : isHostTimeoutScheduled = !0, requestHostTimeout(handleTimeout, options$1 - currentTime))) : (priorityLevel.sortIndex = timeout, push(taskQueue, priorityLevel), isHostCallbackScheduled || isPerformingWork || (isHostCallbackScheduled = !0, isMessageLoopRunning || (isMessageLoopRunning = !0, schedulePerformWorkUntilDeadline())));
 			return priorityLevel;
 		};
 		exports.unstable_shouldYield = shouldYieldToHost;
@@ -398,12 +398,12 @@ var require_react_development = /* @__PURE__ */ __commonJSMin(((exports, module)
 		function UnknownOwner() {
 			return Error("react-stack-top-frame");
 		}
-		function hasValidKey(config) {
-			if (hasOwnProperty.call(config, "key")) {
-				var getter = Object.getOwnPropertyDescriptor(config, "key").get;
+		function hasValidKey(config$1) {
+			if (hasOwnProperty.call(config$1, "key")) {
+				var getter = Object.getOwnPropertyDescriptor(config$1, "key").get;
 				if (getter && getter.isReactWarning) return !1;
 			}
-			return void 0 !== config.key;
+			return void 0 !== config$1.key;
 		}
 		function defineKeyPropWarningGetter(props, displayName) {
 			function warnAboutAccessingKey() {
@@ -473,8 +473,8 @@ var require_react_development = /* @__PURE__ */ __commonJSMin(((exports, module)
 		function validateChildKeys(node) {
 			isValidElement(node) ? node._store && (node._store.validated = 1) : "object" === typeof node && null !== node && node.$$typeof === REACT_LAZY_TYPE$1 && ("fulfilled" === node._payload.status ? isValidElement(node._payload.value) && node._payload.value._store && (node._payload.value._store.validated = 1) : node._store && (node._store.validated = 1));
 		}
-		function isValidElement(object) {
-			return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
+		function isValidElement(object$1) {
+			return "object" === typeof object$1 && null !== object$1 && object$1.$$typeof === REACT_ELEMENT_TYPE;
 		}
 		function escape(key) {
 			var escaperLookup = {
@@ -503,7 +503,7 @@ var require_react_development = /* @__PURE__ */ __commonJSMin(((exports, module)
 			}
 			throw thenable;
 		}
-		function mapIntoArray(children, array, escapedPrefix, nameSoFar, callback) {
+		function mapIntoArray(children, array$1, escapedPrefix, nameSoFar, callback) {
 			var type = typeof children;
 			if ("undefined" === type || "boolean" === type) children = null;
 			var invokeCallback = !1;
@@ -519,34 +519,34 @@ var require_react_development = /* @__PURE__ */ __commonJSMin(((exports, module)
 					case REACT_PORTAL_TYPE:
 						invokeCallback = !0;
 						break;
-					case REACT_LAZY_TYPE$1: return invokeCallback = children._init, mapIntoArray(invokeCallback(children._payload), array, escapedPrefix, nameSoFar, callback);
+					case REACT_LAZY_TYPE$1: return invokeCallback = children._init, mapIntoArray(invokeCallback(children._payload), array$1, escapedPrefix, nameSoFar, callback);
 				}
 			}
 			if (invokeCallback) {
 				invokeCallback = children;
 				callback = callback(invokeCallback);
 				var childKey = "" === nameSoFar ? "." + getElementKey(invokeCallback, 0) : nameSoFar;
-				isArrayImpl(callback) ? (escapedPrefix = "", null != childKey && (escapedPrefix = childKey.replace(userProvidedKeyEscapeRegex, "$&/") + "/"), mapIntoArray(callback, array, escapedPrefix, "", function(c) {
+				isArrayImpl(callback) ? (escapedPrefix = "", null != childKey && (escapedPrefix = childKey.replace(userProvidedKeyEscapeRegex, "$&/") + "/"), mapIntoArray(callback, array$1, escapedPrefix, "", function(c) {
 					return c;
-				})) : null != callback && (isValidElement(callback) && (null != callback.key && (invokeCallback && invokeCallback.key === callback.key || checkKeyStringCoercion(callback.key)), escapedPrefix = cloneAndReplaceKey(callback, escapedPrefix + (null == callback.key || invokeCallback && invokeCallback.key === callback.key ? "" : ("" + callback.key).replace(userProvidedKeyEscapeRegex, "$&/") + "/") + childKey), "" !== nameSoFar && null != invokeCallback && isValidElement(invokeCallback) && null == invokeCallback.key && invokeCallback._store && !invokeCallback._store.validated && (escapedPrefix._store.validated = 2), callback = escapedPrefix), array.push(callback));
+				})) : null != callback && (isValidElement(callback) && (null != callback.key && (invokeCallback && invokeCallback.key === callback.key || checkKeyStringCoercion(callback.key)), escapedPrefix = cloneAndReplaceKey(callback, escapedPrefix + (null == callback.key || invokeCallback && invokeCallback.key === callback.key ? "" : ("" + callback.key).replace(userProvidedKeyEscapeRegex, "$&/") + "/") + childKey), "" !== nameSoFar && null != invokeCallback && isValidElement(invokeCallback) && null == invokeCallback.key && invokeCallback._store && !invokeCallback._store.validated && (escapedPrefix._store.validated = 2), callback = escapedPrefix), array$1.push(callback));
 				return 1;
 			}
 			invokeCallback = 0;
 			childKey = "" === nameSoFar ? "." : nameSoFar + ":";
-			if (isArrayImpl(children)) for (var i = 0; i < children.length; i++) nameSoFar = children[i], type = childKey + getElementKey(nameSoFar, i), invokeCallback += mapIntoArray(nameSoFar, array, escapedPrefix, type, callback);
-			else if (i = getIteratorFn(children), "function" === typeof i) for (i === children.entries && (didWarnAboutMaps || console.warn("Using Maps as children is not supported. Use an array of keyed ReactElements instead."), didWarnAboutMaps = !0), children = i.call(children), i = 0; !(nameSoFar = children.next()).done;) nameSoFar = nameSoFar.value, type = childKey + getElementKey(nameSoFar, i++), invokeCallback += mapIntoArray(nameSoFar, array, escapedPrefix, type, callback);
+			if (isArrayImpl(children)) for (var i$2 = 0; i$2 < children.length; i$2++) nameSoFar = children[i$2], type = childKey + getElementKey(nameSoFar, i$2), invokeCallback += mapIntoArray(nameSoFar, array$1, escapedPrefix, type, callback);
+			else if (i$2 = getIteratorFn(children), "function" === typeof i$2) for (i$2 === children.entries && (didWarnAboutMaps || console.warn("Using Maps as children is not supported. Use an array of keyed ReactElements instead."), didWarnAboutMaps = !0), children = i$2.call(children), i$2 = 0; !(nameSoFar = children.next()).done;) nameSoFar = nameSoFar.value, type = childKey + getElementKey(nameSoFar, i$2++), invokeCallback += mapIntoArray(nameSoFar, array$1, escapedPrefix, type, callback);
 			else if ("object" === type) {
-				if ("function" === typeof children.then) return mapIntoArray(resolveThenable(children), array, escapedPrefix, nameSoFar, callback);
-				array = String(children);
-				throw Error("Objects are not valid as a React child (found: " + ("[object Object]" === array ? "object with keys {" + Object.keys(children).join(", ") + "}" : array) + "). If you meant to render a collection of children, use an array instead.");
+				if ("function" === typeof children.then) return mapIntoArray(resolveThenable(children), array$1, escapedPrefix, nameSoFar, callback);
+				array$1 = String(children);
+				throw Error("Objects are not valid as a React child (found: " + ("[object Object]" === array$1 ? "object with keys {" + Object.keys(children).join(", ") + "}" : array$1) + "). If you meant to render a collection of children, use an array instead.");
 			}
 			return invokeCallback;
 		}
 		function mapChildren(children, func, context) {
 			if (null == children) return children;
-			var result = [], count$2 = 0;
+			var result = [], count$3 = 0;
 			mapIntoArray(children, result, "", "", function(child) {
-				return func.call(context, child, count$2++);
+				return func.call(context, child, count$3++);
 			});
 			return result;
 		}
@@ -630,17 +630,17 @@ var require_react_development = /* @__PURE__ */ __commonJSMin(((exports, module)
 		function flushActQueue(queue) {
 			if (!isFlushing) {
 				isFlushing = !0;
-				var i = 0;
+				var i$2 = 0;
 				try {
-					for (; i < queue.length; i++) {
-						var callback = queue[i];
+					for (; i$2 < queue.length; i$2++) {
+						var callback = queue[i$2];
 						do {
 							ReactSharedInternals.didUsePromise = !1;
 							var continuation = callback(!1);
 							if (null !== continuation) {
 								if (ReactSharedInternals.didUsePromise) {
-									queue[i] = callback;
-									queue.splice(0, i);
+									queue[i$2] = callback;
+									queue.splice(0, i$2);
 									return;
 								}
 								callback = continuation;
@@ -649,7 +649,7 @@ var require_react_development = /* @__PURE__ */ __commonJSMin(((exports, module)
 					}
 					queue.length = 0;
 				} catch (error) {
-					queue.splice(0, i + 1), ReactSharedInternals.thrownErrors.push(error);
+					queue.splice(0, i$2 + 1), ReactSharedInternals.thrownErrors.push(error);
 				} finally {
 					isFlushing = !1;
 				}
@@ -745,11 +745,11 @@ var require_react_development = /* @__PURE__ */ __commonJSMin(((exports, module)
 				}, forEachContext);
 			},
 			count: function(children) {
-				var n = 0;
+				var n$1 = 0;
 				mapChildren(children, function() {
-					n++;
+					n$1++;
 				});
-				return n;
+				return n$1;
 			},
 			toArray: function(children) {
 				return mapChildren(children, function(child) {
@@ -835,27 +835,27 @@ var require_react_development = /* @__PURE__ */ __commonJSMin(((exports, module)
 			var getCurrentStack = ReactSharedInternals.getCurrentStack;
 			return null === getCurrentStack ? null : getCurrentStack();
 		};
-		exports.cloneElement = function(element, config, children) {
+		exports.cloneElement = function(element, config$1, children) {
 			if (null === element || void 0 === element) throw Error("The argument must be a React element, but you passed " + element + ".");
 			var props = assign({}, element.props), key = element.key, owner = element._owner;
-			if (null != config) {
+			if (null != config$1) {
 				var JSCompiler_inline_result;
 				a: {
-					if (hasOwnProperty.call(config, "ref") && (JSCompiler_inline_result = Object.getOwnPropertyDescriptor(config, "ref").get) && JSCompiler_inline_result.isReactWarning) {
+					if (hasOwnProperty.call(config$1, "ref") && (JSCompiler_inline_result = Object.getOwnPropertyDescriptor(config$1, "ref").get) && JSCompiler_inline_result.isReactWarning) {
 						JSCompiler_inline_result = !1;
 						break a;
 					}
-					JSCompiler_inline_result = void 0 !== config.ref;
+					JSCompiler_inline_result = void 0 !== config$1.ref;
 				}
 				JSCompiler_inline_result && (owner = getOwner());
-				hasValidKey(config) && (checkKeyStringCoercion(config.key), key = "" + config.key);
-				for (propName in config) !hasOwnProperty.call(config, propName) || "key" === propName || "__self" === propName || "__source" === propName || "ref" === propName && void 0 === config.ref || (props[propName] = config[propName]);
+				hasValidKey(config$1) && (checkKeyStringCoercion(config$1.key), key = "" + config$1.key);
+				for (propName in config$1) !hasOwnProperty.call(config$1, propName) || "key" === propName || "__self" === propName || "__source" === propName || "ref" === propName && void 0 === config$1.ref || (props[propName] = config$1[propName]);
 			}
 			var propName = arguments.length - 2;
 			if (1 === propName) props.children = children;
 			else if (1 < propName) {
 				JSCompiler_inline_result = Array(propName);
-				for (var i = 0; i < propName; i++) JSCompiler_inline_result[i] = arguments[i + 2];
+				for (var i$2 = 0; i$2 < propName; i$2++) JSCompiler_inline_result[i$2] = arguments[i$2 + 2];
 				props.children = JSCompiler_inline_result;
 			}
 			props = ReactElement(element.type, key, props, owner, element._debugStack, element._debugTask);
@@ -880,22 +880,22 @@ var require_react_development = /* @__PURE__ */ __commonJSMin(((exports, module)
 			defaultValue._currentRenderer2 = null;
 			return defaultValue;
 		};
-		exports.createElement = function(type, config, children) {
-			for (var i = 2; i < arguments.length; i++) validateChildKeys(arguments[i]);
-			i = {};
+		exports.createElement = function(type, config$1, children) {
+			for (var i$2 = 2; i$2 < arguments.length; i$2++) validateChildKeys(arguments[i$2]);
+			i$2 = {};
 			var key = null;
-			if (null != config) for (propName in didWarnAboutOldJSXRuntime || !("__self" in config) || "key" in config || (didWarnAboutOldJSXRuntime = !0, console.warn("Your app (or one of its dependencies) is using an outdated JSX transform. Update to the modern JSX transform for faster performance: https://react.dev/link/new-jsx-transform")), hasValidKey(config) && (checkKeyStringCoercion(config.key), key = "" + config.key), config) hasOwnProperty.call(config, propName) && "key" !== propName && "__self" !== propName && "__source" !== propName && (i[propName] = config[propName]);
+			if (null != config$1) for (propName in didWarnAboutOldJSXRuntime || !("__self" in config$1) || "key" in config$1 || (didWarnAboutOldJSXRuntime = !0, console.warn("Your app (or one of its dependencies) is using an outdated JSX transform. Update to the modern JSX transform for faster performance: https://react.dev/link/new-jsx-transform")), hasValidKey(config$1) && (checkKeyStringCoercion(config$1.key), key = "" + config$1.key), config$1) hasOwnProperty.call(config$1, propName) && "key" !== propName && "__self" !== propName && "__source" !== propName && (i$2[propName] = config$1[propName]);
 			var childrenLength = arguments.length - 2;
-			if (1 === childrenLength) i.children = children;
+			if (1 === childrenLength) i$2.children = children;
 			else if (1 < childrenLength) {
 				for (var childArray = Array(childrenLength), _i = 0; _i < childrenLength; _i++) childArray[_i] = arguments[_i + 2];
 				Object.freeze && Object.freeze(childArray);
-				i.children = childArray;
+				i$2.children = childArray;
 			}
-			if (type && type.defaultProps) for (propName in childrenLength = type.defaultProps, childrenLength) void 0 === i[propName] && (i[propName] = childrenLength[propName]);
-			key && defineKeyPropWarningGetter(i, "function" === typeof type ? type.displayName || type.name || "Unknown" : type);
+			if (type && type.defaultProps) for (propName in childrenLength = type.defaultProps, childrenLength) void 0 === i$2[propName] && (i$2[propName] = childrenLength[propName]);
+			key && defineKeyPropWarningGetter(i$2, "function" === typeof type ? type.displayName || type.name || "Unknown" : type);
 			var propName = 1e4 > ReactSharedInternals.recentlyCreatedOwnerStacks++;
-			return ReactElement(type, key, i, getOwner(), propName ? Error("react-stack-top-frame") : unknownOwnerDebugStack, propName ? createTask(getTaskName(type)) : unknownOwnerDebugTask);
+			return ReactElement(type, key, i$2, getOwner(), propName ? Error("react-stack-top-frame") : unknownOwnerDebugStack, propName ? createTask(getTaskName(type)) : unknownOwnerDebugTask);
 		};
 		exports.createRef = function() {
 			var refObject = { current: null };
@@ -1100,7 +1100,7 @@ var require_react_dom_development = /* @__PURE__ */ __commonJSMin(((exports) => 
 			return dispatcher;
 		}
 		"undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-		var React$2 = require_react(), Internals = {
+		var React$3 = require_react(), Internals = {
 			d: {
 				f: noop,
 				r: function() {
@@ -1116,7 +1116,7 @@ var require_react_dom_development = /* @__PURE__ */ __commonJSMin(((exports) => 
 			},
 			p: 0,
 			findDOMNode: null
-		}, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React$2.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+		}, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React$3.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
 		"function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error("React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills");
 		exports.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = Internals;
 		exports.createPortal = function(children, container) {
@@ -1132,23 +1132,23 @@ var require_react_dom_development = /* @__PURE__ */ __commonJSMin(((exports) => 
 				ReactSharedInternals.T = previousTransition, Internals.p = previousUpdatePriority, Internals.d.f() && console.error("flushSync was called from inside a lifecycle method. React cannot flush when React is already rendering. Consider moving this call to a scheduler task or micro task.");
 			}
 		};
-		exports.preconnect = function(href, options) {
-			"string" === typeof href && href ? null != options && "object" !== typeof options ? console.error("ReactDOM.preconnect(): Expected the `options` argument (second) to be an object but encountered %s instead. The only supported option at this time is `crossOrigin` which accepts a string.", getValueDescriptorExpectingEnumForWarning(options)) : null != options && "string" !== typeof options.crossOrigin && console.error("ReactDOM.preconnect(): Expected the `crossOrigin` option (second argument) to be a string but encountered %s instead. Try removing this option or passing a string value instead.", getValueDescriptorExpectingObjectForWarning(options.crossOrigin)) : console.error("ReactDOM.preconnect(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.", getValueDescriptorExpectingObjectForWarning(href));
-			"string" === typeof href && (options ? (options = options.crossOrigin, options = "string" === typeof options ? "use-credentials" === options ? options : "" : void 0) : options = null, Internals.d.C(href, options));
+		exports.preconnect = function(href, options$1) {
+			"string" === typeof href && href ? null != options$1 && "object" !== typeof options$1 ? console.error("ReactDOM.preconnect(): Expected the `options` argument (second) to be an object but encountered %s instead. The only supported option at this time is `crossOrigin` which accepts a string.", getValueDescriptorExpectingEnumForWarning(options$1)) : null != options$1 && "string" !== typeof options$1.crossOrigin && console.error("ReactDOM.preconnect(): Expected the `crossOrigin` option (second argument) to be a string but encountered %s instead. Try removing this option or passing a string value instead.", getValueDescriptorExpectingObjectForWarning(options$1.crossOrigin)) : console.error("ReactDOM.preconnect(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.", getValueDescriptorExpectingObjectForWarning(href));
+			"string" === typeof href && (options$1 ? (options$1 = options$1.crossOrigin, options$1 = "string" === typeof options$1 ? "use-credentials" === options$1 ? options$1 : "" : void 0) : options$1 = null, Internals.d.C(href, options$1));
 		};
 		exports.prefetchDNS = function(href) {
 			if ("string" !== typeof href || !href) console.error("ReactDOM.prefetchDNS(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.", getValueDescriptorExpectingObjectForWarning(href));
 			else if (1 < arguments.length) {
-				var options = arguments[1];
-				"object" === typeof options && options.hasOwnProperty("crossOrigin") ? console.error("ReactDOM.prefetchDNS(): Expected only one argument, `href`, but encountered %s as a second argument instead. This argument is reserved for future options and is currently disallowed. It looks like the you are attempting to set a crossOrigin property for this DNS lookup hint. Browsers do not perform DNS queries using CORS and setting this attribute on the resource hint has no effect. Try calling ReactDOM.prefetchDNS() with just a single string argument, `href`.", getValueDescriptorExpectingEnumForWarning(options)) : console.error("ReactDOM.prefetchDNS(): Expected only one argument, `href`, but encountered %s as a second argument instead. This argument is reserved for future options and is currently disallowed. Try calling ReactDOM.prefetchDNS() with just a single string argument, `href`.", getValueDescriptorExpectingEnumForWarning(options));
+				var options$1 = arguments[1];
+				"object" === typeof options$1 && options$1.hasOwnProperty("crossOrigin") ? console.error("ReactDOM.prefetchDNS(): Expected only one argument, `href`, but encountered %s as a second argument instead. This argument is reserved for future options and is currently disallowed. It looks like the you are attempting to set a crossOrigin property for this DNS lookup hint. Browsers do not perform DNS queries using CORS and setting this attribute on the resource hint has no effect. Try calling ReactDOM.prefetchDNS() with just a single string argument, `href`.", getValueDescriptorExpectingEnumForWarning(options$1)) : console.error("ReactDOM.prefetchDNS(): Expected only one argument, `href`, but encountered %s as a second argument instead. This argument is reserved for future options and is currently disallowed. Try calling ReactDOM.prefetchDNS() with just a single string argument, `href`.", getValueDescriptorExpectingEnumForWarning(options$1));
 			}
 			"string" === typeof href && Internals.d.D(href);
 		};
-		exports.preinit = function(href, options) {
-			"string" === typeof href && href ? null == options || "object" !== typeof options ? console.error("ReactDOM.preinit(): Expected the `options` argument (second) to be an object with an `as` property describing the type of resource to be preinitialized but encountered %s instead.", getValueDescriptorExpectingEnumForWarning(options)) : "style" !== options.as && "script" !== options.as && console.error("ReactDOM.preinit(): Expected the `as` property in the `options` argument (second) to contain a valid value describing the type of resource to be preinitialized but encountered %s instead. Valid values for `as` are \"style\" and \"script\".", getValueDescriptorExpectingEnumForWarning(options.as)) : console.error("ReactDOM.preinit(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.", getValueDescriptorExpectingObjectForWarning(href));
-			if ("string" === typeof href && options && "string" === typeof options.as) {
-				var as = options.as, crossOrigin = getCrossOriginStringAs(as, options.crossOrigin), integrity = "string" === typeof options.integrity ? options.integrity : void 0, fetchPriority = "string" === typeof options.fetchPriority ? options.fetchPriority : void 0;
-				"style" === as ? Internals.d.S(href, "string" === typeof options.precedence ? options.precedence : void 0, {
+		exports.preinit = function(href, options$1) {
+			"string" === typeof href && href ? null == options$1 || "object" !== typeof options$1 ? console.error("ReactDOM.preinit(): Expected the `options` argument (second) to be an object with an `as` property describing the type of resource to be preinitialized but encountered %s instead.", getValueDescriptorExpectingEnumForWarning(options$1)) : "style" !== options$1.as && "script" !== options$1.as && console.error("ReactDOM.preinit(): Expected the `as` property in the `options` argument (second) to contain a valid value describing the type of resource to be preinitialized but encountered %s instead. Valid values for `as` are \"style\" and \"script\".", getValueDescriptorExpectingEnumForWarning(options$1.as)) : console.error("ReactDOM.preinit(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.", getValueDescriptorExpectingObjectForWarning(href));
+			if ("string" === typeof href && options$1 && "string" === typeof options$1.as) {
+				var as = options$1.as, crossOrigin = getCrossOriginStringAs(as, options$1.crossOrigin), integrity = "string" === typeof options$1.integrity ? options$1.integrity : void 0, fetchPriority = "string" === typeof options$1.fetchPriority ? options$1.fetchPriority : void 0;
+				"style" === as ? Internals.d.S(href, "string" === typeof options$1.precedence ? options$1.precedence : void 0, {
 					crossOrigin,
 					integrity,
 					fetchPriority
@@ -1156,64 +1156,64 @@ var require_react_dom_development = /* @__PURE__ */ __commonJSMin(((exports) => 
 					crossOrigin,
 					integrity,
 					fetchPriority,
-					nonce: "string" === typeof options.nonce ? options.nonce : void 0
+					nonce: "string" === typeof options$1.nonce ? options$1.nonce : void 0
 				});
 			}
 		};
-		exports.preinitModule = function(href, options) {
+		exports.preinitModule = function(href, options$1) {
 			var encountered = "";
 			"string" === typeof href && href || (encountered += " The `href` argument encountered was " + getValueDescriptorExpectingObjectForWarning(href) + ".");
-			void 0 !== options && "object" !== typeof options ? encountered += " The `options` argument encountered was " + getValueDescriptorExpectingObjectForWarning(options) + "." : options && "as" in options && "script" !== options.as && (encountered += " The `as` option encountered was " + getValueDescriptorExpectingEnumForWarning(options.as) + ".");
+			void 0 !== options$1 && "object" !== typeof options$1 ? encountered += " The `options` argument encountered was " + getValueDescriptorExpectingObjectForWarning(options$1) + "." : options$1 && "as" in options$1 && "script" !== options$1.as && (encountered += " The `as` option encountered was " + getValueDescriptorExpectingEnumForWarning(options$1.as) + ".");
 			if (encountered) console.error("ReactDOM.preinitModule(): Expected up to two arguments, a non-empty `href` string and, optionally, an `options` object with a valid `as` property.%s", encountered);
-			else switch (encountered = options && "string" === typeof options.as ? options.as : "script", encountered) {
+			else switch (encountered = options$1 && "string" === typeof options$1.as ? options$1.as : "script", encountered) {
 				case "script": break;
 				default: encountered = getValueDescriptorExpectingEnumForWarning(encountered), console.error("ReactDOM.preinitModule(): Currently the only supported \"as\" type for this function is \"script\" but received \"%s\" instead. This warning was generated for `href` \"%s\". In the future other module types will be supported, aligning with the import-attributes proposal. Learn more here: (https://github.com/tc39/proposal-import-attributes)", encountered, href);
 			}
-			if ("string" === typeof href) if ("object" === typeof options && null !== options) {
-				if (null == options.as || "script" === options.as) encountered = getCrossOriginStringAs(options.as, options.crossOrigin), Internals.d.M(href, {
+			if ("string" === typeof href) if ("object" === typeof options$1 && null !== options$1) {
+				if (null == options$1.as || "script" === options$1.as) encountered = getCrossOriginStringAs(options$1.as, options$1.crossOrigin), Internals.d.M(href, {
 					crossOrigin: encountered,
-					integrity: "string" === typeof options.integrity ? options.integrity : void 0,
-					nonce: "string" === typeof options.nonce ? options.nonce : void 0
+					integrity: "string" === typeof options$1.integrity ? options$1.integrity : void 0,
+					nonce: "string" === typeof options$1.nonce ? options$1.nonce : void 0
 				});
-			} else options ?? Internals.d.M(href);
+			} else options$1 ?? Internals.d.M(href);
 		};
-		exports.preload = function(href, options) {
+		exports.preload = function(href, options$1) {
 			var encountered = "";
 			"string" === typeof href && href || (encountered += " The `href` argument encountered was " + getValueDescriptorExpectingObjectForWarning(href) + ".");
-			null == options || "object" !== typeof options ? encountered += " The `options` argument encountered was " + getValueDescriptorExpectingObjectForWarning(options) + "." : "string" === typeof options.as && options.as || (encountered += " The `as` option encountered was " + getValueDescriptorExpectingObjectForWarning(options.as) + ".");
+			null == options$1 || "object" !== typeof options$1 ? encountered += " The `options` argument encountered was " + getValueDescriptorExpectingObjectForWarning(options$1) + "." : "string" === typeof options$1.as && options$1.as || (encountered += " The `as` option encountered was " + getValueDescriptorExpectingObjectForWarning(options$1.as) + ".");
 			encountered && console.error("ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel=\"preload\" as=\"...\" />` tag.%s", encountered);
-			if ("string" === typeof href && "object" === typeof options && null !== options && "string" === typeof options.as) {
-				encountered = options.as;
-				var crossOrigin = getCrossOriginStringAs(encountered, options.crossOrigin);
+			if ("string" === typeof href && "object" === typeof options$1 && null !== options$1 && "string" === typeof options$1.as) {
+				encountered = options$1.as;
+				var crossOrigin = getCrossOriginStringAs(encountered, options$1.crossOrigin);
 				Internals.d.L(href, encountered, {
 					crossOrigin,
-					integrity: "string" === typeof options.integrity ? options.integrity : void 0,
-					nonce: "string" === typeof options.nonce ? options.nonce : void 0,
-					type: "string" === typeof options.type ? options.type : void 0,
-					fetchPriority: "string" === typeof options.fetchPriority ? options.fetchPriority : void 0,
-					referrerPolicy: "string" === typeof options.referrerPolicy ? options.referrerPolicy : void 0,
-					imageSrcSet: "string" === typeof options.imageSrcSet ? options.imageSrcSet : void 0,
-					imageSizes: "string" === typeof options.imageSizes ? options.imageSizes : void 0,
-					media: "string" === typeof options.media ? options.media : void 0
+					integrity: "string" === typeof options$1.integrity ? options$1.integrity : void 0,
+					nonce: "string" === typeof options$1.nonce ? options$1.nonce : void 0,
+					type: "string" === typeof options$1.type ? options$1.type : void 0,
+					fetchPriority: "string" === typeof options$1.fetchPriority ? options$1.fetchPriority : void 0,
+					referrerPolicy: "string" === typeof options$1.referrerPolicy ? options$1.referrerPolicy : void 0,
+					imageSrcSet: "string" === typeof options$1.imageSrcSet ? options$1.imageSrcSet : void 0,
+					imageSizes: "string" === typeof options$1.imageSizes ? options$1.imageSizes : void 0,
+					media: "string" === typeof options$1.media ? options$1.media : void 0
 				});
 			}
 		};
-		exports.preloadModule = function(href, options) {
+		exports.preloadModule = function(href, options$1) {
 			var encountered = "";
 			"string" === typeof href && href || (encountered += " The `href` argument encountered was " + getValueDescriptorExpectingObjectForWarning(href) + ".");
-			void 0 !== options && "object" !== typeof options ? encountered += " The `options` argument encountered was " + getValueDescriptorExpectingObjectForWarning(options) + "." : options && "as" in options && "string" !== typeof options.as && (encountered += " The `as` option encountered was " + getValueDescriptorExpectingObjectForWarning(options.as) + ".");
+			void 0 !== options$1 && "object" !== typeof options$1 ? encountered += " The `options` argument encountered was " + getValueDescriptorExpectingObjectForWarning(options$1) + "." : options$1 && "as" in options$1 && "string" !== typeof options$1.as && (encountered += " The `as` option encountered was " + getValueDescriptorExpectingObjectForWarning(options$1.as) + ".");
 			encountered && console.error("ReactDOM.preloadModule(): Expected two arguments, a non-empty `href` string and, optionally, an `options` object with an `as` property valid for a `<link rel=\"modulepreload\" as=\"...\" />` tag.%s", encountered);
-			"string" === typeof href && (options ? (encountered = getCrossOriginStringAs(options.as, options.crossOrigin), Internals.d.m(href, {
-				as: "string" === typeof options.as && "script" !== options.as ? options.as : void 0,
+			"string" === typeof href && (options$1 ? (encountered = getCrossOriginStringAs(options$1.as, options$1.crossOrigin), Internals.d.m(href, {
+				as: "string" === typeof options$1.as && "script" !== options$1.as ? options$1.as : void 0,
 				crossOrigin: encountered,
-				integrity: "string" === typeof options.integrity ? options.integrity : void 0
+				integrity: "string" === typeof options$1.integrity ? options$1.integrity : void 0
 			})) : Internals.d.m(href));
 		};
 		exports.requestFormReset = function(form) {
 			Internals.d.r(form);
 		};
-		exports.unstable_batchedUpdates = function(fn, a) {
-			return fn(a);
+		exports.unstable_batchedUpdates = function(fn, a$1) {
+			return fn(a$1);
 		};
 		exports.useFormState = function(action, initialState, permalink) {
 			return resolveDispatcher().useFormState(action, initialState, permalink);
@@ -1252,7 +1252,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		function copyWithRename(obj, oldPath, newPath) {
 			if (oldPath.length !== newPath.length) console.warn("copyWithRename() expects paths of the same length");
 			else {
-				for (var i = 0; i < newPath.length - 1; i++) if (oldPath[i] !== newPath[i]) {
+				for (var i$2 = 0; i$2 < newPath.length - 1; i$2++) if (oldPath[i$2] !== newPath[i$2]) {
 					console.warn("copyWithRename() expects paths to be the same except for the deepest key");
 					return;
 				}
@@ -1284,12 +1284,12 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		}
 		function noop() {}
 		function warnForMissingKey() {}
-		function setToSortedString(set) {
-			var array = [];
-			set.forEach(function(value) {
-				array.push(value);
+		function setToSortedString(set$1) {
+			var array$1 = [];
+			set$1.forEach(function(value) {
+				array$1.push(value);
 			});
-			return array.sort().join(", ");
+			return array$1.sort().join(", ");
 		}
 		function createFiber(tag, pendingProps, key, mode) {
 			return new FiberNode(tag, pendingProps, key, mode);
@@ -1349,55 +1349,55 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 				if (null === alternate) throw Error("Unable to find node on an unmounted component.");
 				return alternate !== fiber ? null : fiber;
 			}
-			for (var a = fiber, b$1 = alternate;;) {
-				var parentA = a.return;
+			for (var a$1 = fiber, b$1 = alternate;;) {
+				var parentA = a$1.return;
 				if (null === parentA) break;
 				var parentB = parentA.alternate;
 				if (null === parentB) {
 					b$1 = parentA.return;
 					if (null !== b$1) {
-						a = b$1;
+						a$1 = b$1;
 						continue;
 					}
 					break;
 				}
 				if (parentA.child === parentB.child) {
 					for (parentB = parentA.child; parentB;) {
-						if (parentB === a) return assertIsMounted(parentA), fiber;
+						if (parentB === a$1) return assertIsMounted(parentA), fiber;
 						if (parentB === b$1) return assertIsMounted(parentA), alternate;
 						parentB = parentB.sibling;
 					}
 					throw Error("Unable to find node on an unmounted component.");
 				}
-				if (a.return !== b$1.return) a = parentA, b$1 = parentB;
+				if (a$1.return !== b$1.return) a$1 = parentA, b$1 = parentB;
 				else {
 					for (var didFindChild = !1, _child = parentA.child; _child;) {
-						if (_child === a) {
+						if (_child === a$1) {
 							didFindChild = !0;
-							a = parentA;
+							a$1 = parentA;
 							b$1 = parentB;
 							break;
 						}
 						if (_child === b$1) {
 							didFindChild = !0;
 							b$1 = parentA;
-							a = parentB;
+							a$1 = parentB;
 							break;
 						}
 						_child = _child.sibling;
 					}
 					if (!didFindChild) {
 						for (_child = parentB.child; _child;) {
-							if (_child === a) {
+							if (_child === a$1) {
 								didFindChild = !0;
-								a = parentB;
+								a$1 = parentB;
 								b$1 = parentA;
 								break;
 							}
 							if (_child === b$1) {
 								didFindChild = !0;
 								b$1 = parentB;
-								a = parentA;
+								a$1 = parentA;
 								break;
 							}
 							_child = _child.sibling;
@@ -1405,10 +1405,10 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 						if (!didFindChild) throw Error("Child was not found in either parent set. This indicates a bug in React related to the return pointer. Please file an issue.");
 					}
 				}
-				if (a.alternate !== b$1) throw Error("Return fibers should always be each others' alternates. This error is likely caused by a bug in React. Please file an issue.");
+				if (a$1.alternate !== b$1) throw Error("Return fibers should always be each others' alternates. This error is likely caused by a bug in React. Please file an issue.");
 			}
-			if (3 !== a.tag) throw Error("Unable to find node on an unmounted component.");
-			return a.stateNode.current === a ? fiber : alternate;
+			if (3 !== a$1.tag) throw Error("Unable to find node on an unmounted component.");
+			return a$1.stateNode.current === a$1 ? fiber : alternate;
 		}
 		function findCurrentHostFiberImpl(node) {
 			var tag = node.tag;
@@ -1493,7 +1493,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 				case 29:
 					type = fiber._debugInfo;
 					if (null != type) {
-						for (var i = type.length - 1; 0 <= i; i--) if ("string" === typeof type[i].name) return type[i].name;
+						for (var i$2 = type.length - 1; 0 <= i$2; i$2--) if ("string" === typeof type[i$2].name) return type[i$2].name;
 					}
 					if (null !== fiber.return) return getComponentNameFromFiber(fiber.return);
 			}
@@ -1741,8 +1741,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 				do {
 					info += describeFiber(workInProgress$1, previous);
 					var debugInfo = workInProgress$1._debugInfo;
-					if (debugInfo) for (var i = debugInfo.length - 1; 0 <= i; i--) {
-						var entry = debugInfo[i];
+					if (debugInfo) for (var i$2 = debugInfo.length - 1; 0 <= i$2; i$2--) {
+						var entry = debugInfo[i$2];
 						if ("string" === typeof entry.name) {
 							var JSCompiler_temp_const = info;
 							a: {
@@ -1976,7 +1976,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			return lane;
 		}
 		function createLaneMap(initial) {
-			for (var laneMap = [], i = 0; 31 > i; i++) laneMap.push(initial);
+			for (var laneMap = [], i$2 = 0; 31 > i$2; i$2++) laneMap.push(initial);
 			return laneMap;
 		}
 		function markRootUpdated$1(root$1, updateLane) {
@@ -2259,16 +2259,16 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		function trackValueOnNode(node, valueField, currentValue) {
 			var descriptor = Object.getOwnPropertyDescriptor(node.constructor.prototype, valueField);
 			if (!node.hasOwnProperty(valueField) && "undefined" !== typeof descriptor && "function" === typeof descriptor.get && "function" === typeof descriptor.set) {
-				var get = descriptor.get, set = descriptor.set;
+				var get$1 = descriptor.get, set$1 = descriptor.set;
 				Object.defineProperty(node, valueField, {
 					configurable: !0,
 					get: function() {
-						return get.call(this);
+						return get$1.call(this);
 					},
 					set: function(value) {
 						checkFormFieldValueStringCoercion(value);
 						currentValue = "" + value;
-						set.call(this, value);
+						set$1.call(this, value);
 					}
 				});
 				Object.defineProperty(node, valueField, { enumerable: descriptor.enumerable });
@@ -2356,7 +2356,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			"number" === type && getActiveElement(node.ownerDocument) === node || node.defaultValue === "" + value || (node.defaultValue = "" + value);
 		}
 		function validateOptionProps(element, props) {
-			props.value ?? ("object" === typeof props.children && null !== props.children ? React$2.Children.forEach(props.children, function(child) {
+			props.value ?? ("object" === typeof props.children && null !== props.children ? React$3.Children.forEach(props.children, function(child) {
 				null == child || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || didWarnInvalidChild || (didWarnInvalidChild = !0, console.error("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."));
 			}) : null == props.dangerouslySetInnerHTML || didWarnInvalidInnerHTML || (didWarnInvalidInnerHTML = !0, console.error("Pass a `value` prop if you set dangerouslyInnerHTML so React knows which value should be selected.")));
 			null == props.selected || didWarnSelectedSetOnOption || (console.error("Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>."), didWarnSelectedSetOnOption = !0);
@@ -2369,18 +2369,18 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			node = node.options;
 			if (multiple) {
 				multiple = {};
-				for (var i = 0; i < propValue.length; i++) multiple["$" + propValue[i]] = !0;
-				for (propValue = 0; propValue < node.length; propValue++) i = multiple.hasOwnProperty("$" + node[propValue].value), node[propValue].selected !== i && (node[propValue].selected = i), i && setDefaultSelected && (node[propValue].defaultSelected = !0);
+				for (var i$2 = 0; i$2 < propValue.length; i$2++) multiple["$" + propValue[i$2]] = !0;
+				for (propValue = 0; propValue < node.length; propValue++) i$2 = multiple.hasOwnProperty("$" + node[propValue].value), node[propValue].selected !== i$2 && (node[propValue].selected = i$2), i$2 && setDefaultSelected && (node[propValue].defaultSelected = !0);
 			} else {
 				propValue = "" + getToStringValue(propValue);
 				multiple = null;
-				for (i = 0; i < node.length; i++) {
-					if (node[i].value === propValue) {
-						node[i].selected = !0;
-						setDefaultSelected && (node[i].defaultSelected = !0);
+				for (i$2 = 0; i$2 < node.length; i$2++) {
+					if (node[i$2].value === propValue) {
+						node[i$2].selected = !0;
+						setDefaultSelected && (node[i$2].defaultSelected = !0);
 						return;
 					}
-					null !== multiple || node[i].disabled || (multiple = node[i]);
+					null !== multiple || node[i$2].disabled || (multiple = node[i$2]);
 				}
 				null !== multiple && (multiple.selected = !0);
 			}
@@ -2466,8 +2466,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			}
 			return indentation(indent) + describeTextNode(clientText, maxLength) + "\n";
 		}
-		function objectName(object) {
-			return Object.prototype.toString.call(object).replace(/^\[object (.*)\]$/, function(m, p0) {
+		function objectName(object$1) {
+			return Object.prototype.toString.call(object$1).replace(/^\[object (.*)\]$/, function(m, p0) {
 				return p0;
 			});
 		}
@@ -2570,18 +2570,18 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			if (skipToNode !== node && (1 !== node.children.length || node.children[0] !== skipToNode)) return indentation(indent) + "...\n" + describeNode(skipToNode, indent + 1);
 			skipToNode = "";
 			var debugInfo = node.fiber._debugInfo;
-			if (debugInfo) for (var i = 0; i < debugInfo.length; i++) {
-				var serverComponentName = debugInfo[i].name;
+			if (debugInfo) for (var i$2 = 0; i$2 < debugInfo.length; i$2++) {
+				var serverComponentName = debugInfo[i$2].name;
 				"string" === typeof serverComponentName && (skipToNode += indentation(indent) + "<" + serverComponentName + ">\n", indent++);
 			}
 			debugInfo = "";
-			i = node.fiber.pendingProps;
-			if (6 === node.fiber.tag) debugInfo = describeTextDiff(i, node.serverProps, indent), indent++;
+			i$2 = node.fiber.pendingProps;
+			if (6 === node.fiber.tag) debugInfo = describeTextDiff(i$2, node.serverProps, indent), indent++;
 			else if (serverComponentName = describeFiberType(node.fiber), null !== serverComponentName) if (void 0 === node.serverProps) {
 				debugInfo = indent;
 				var maxLength = 120 - 2 * debugInfo - serverComponentName.length - 2, content = "";
-				for (propName in i) if (i.hasOwnProperty(propName) && "children" !== propName) {
-					var propValue = describePropValue(i[propName], 15);
+				for (propName in i$2) if (i$2.hasOwnProperty(propName) && "children" !== propName) {
+					var propValue = describePropValue(i$2[propName], 15);
 					maxLength -= propName.length + propValue.length + 2;
 					if (0 > maxLength) {
 						content += " ...";
@@ -2591,14 +2591,14 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 				}
 				debugInfo = indentation(debugInfo) + "<" + serverComponentName + content + ">\n";
 				indent++;
-			} else null === node.serverProps ? (debugInfo = describeExpandedElement(serverComponentName, i, added(indent)), indent++) : "string" === typeof node.serverProps ? console.error("Should not have matched a non HostText fiber to a Text node. This is a bug in React.") : (debugInfo = describeElementDiff(serverComponentName, i, node.serverProps, indent), indent++);
+			} else null === node.serverProps ? (debugInfo = describeExpandedElement(serverComponentName, i$2, added(indent)), indent++) : "string" === typeof node.serverProps ? console.error("Should not have matched a non HostText fiber to a Text node. This is a bug in React.") : (debugInfo = describeElementDiff(serverComponentName, i$2, node.serverProps, indent), indent++);
 			var propName = "";
-			i = node.fiber.child;
-			for (serverComponentName = 0; i && serverComponentName < node.children.length;) maxLength = node.children[serverComponentName], maxLength.fiber === i ? (propName += describeNode(maxLength, indent), serverComponentName++) : propName += describeSiblingFiber(i, indent), i = i.sibling;
-			i && 0 < node.children.length && (propName += indentation(indent) + "...\n");
-			i = node.serverTail;
+			i$2 = node.fiber.child;
+			for (serverComponentName = 0; i$2 && serverComponentName < node.children.length;) maxLength = node.children[serverComponentName], maxLength.fiber === i$2 ? (propName += describeNode(maxLength, indent), serverComponentName++) : propName += describeSiblingFiber(i$2, indent), i$2 = i$2.sibling;
+			i$2 && 0 < node.children.length && (propName += indentation(indent) + "...\n");
+			i$2 = node.serverTail;
 			null === node.serverProps && indent--;
-			for (node = 0; node < i.length; node++) serverComponentName = i[node], propName = "string" === typeof serverComponentName ? propName + (removed(indent) + describeTextNode(serverComponentName, 120 - 2 * indent) + "\n") : propName + describeExpandedElement(serverComponentName.type, serverComponentName.props, removed(indent));
+			for (node = 0; node < i$2.length; node++) serverComponentName = i$2[node], propName = "string" === typeof serverComponentName ? propName + (removed(indent) + describeTextNode(serverComponentName, 120 - 2 * indent) + "\n") : propName + describeExpandedElement(serverComponentName.type, serverComponentName.props, removed(indent));
 			return skipToNode + debugInfo + propName;
 		}
 		function describeDiff(rootNode) {
@@ -2774,8 +2774,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			}
 			node.textContent = text;
 		}
-		function camelize(string) {
-			return string.replace(hyphenPattern, function(_$1, character) {
+		function camelize(string$2) {
+			return string$2.replace(hyphenPattern, function(_$1, character) {
 				return character.toUpperCase();
 			});
 		}
@@ -2792,17 +2792,17 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 				if (styles) {
 					var expandedUpdates = {};
 					if (prevStyles) {
-						for (var key in prevStyles) if (prevStyles.hasOwnProperty(key) && !styles.hasOwnProperty(key)) for (var longhands = shorthandToLonghand[key] || [key], i = 0; i < longhands.length; i++) expandedUpdates[longhands[i]] = key;
+						for (var key in prevStyles) if (prevStyles.hasOwnProperty(key) && !styles.hasOwnProperty(key)) for (var longhands = shorthandToLonghand[key] || [key], i$2 = 0; i$2 < longhands.length; i$2++) expandedUpdates[longhands[i$2]] = key;
 					}
 					for (var _key in styles) if (styles.hasOwnProperty(_key) && (!prevStyles || prevStyles[_key] !== styles[_key])) for (key = shorthandToLonghand[_key] || [_key], longhands = 0; longhands < key.length; longhands++) expandedUpdates[key[longhands]] = _key;
 					_key = {};
 					for (var key$jscomp$0 in styles) for (key = shorthandToLonghand[key$jscomp$0] || [key$jscomp$0], longhands = 0; longhands < key.length; longhands++) _key[key[longhands]] = key$jscomp$0;
 					key$jscomp$0 = {};
-					for (var _key2 in expandedUpdates) if (key = expandedUpdates[_key2], (longhands = _key[_key2]) && key !== longhands && (i = key + "," + longhands, !key$jscomp$0[i])) {
-						key$jscomp$0[i] = !0;
-						i = console;
+					for (var _key2 in expandedUpdates) if (key = expandedUpdates[_key2], (longhands = _key[_key2]) && key !== longhands && (i$2 = key + "," + longhands, !key$jscomp$0[i$2])) {
+						key$jscomp$0[i$2] = !0;
+						i$2 = console;
 						var value = styles[key];
-						i.error.call(i, "%s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values.", null == value || "boolean" === typeof value || "" === value ? "Removing" : "Updating", key, longhands);
+						i$2.error.call(i$2, "%s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values.", null == value || "boolean" === typeof value || "" === value ? "Removing" : "Updating", key, longhands);
 					}
 				}
 				for (var styleName in prevStyles) !prevStyles.hasOwnProperty(styleName) || null != styles && styles.hasOwnProperty(styleName) || (0 === styleName.indexOf("--") ? node.setProperty(styleName, "") : "float" === styleName ? node.cssFloat = "" : node[styleName] = "");
@@ -3015,14 +3015,14 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 				}
 			}
 		}
-		function batchedUpdates$1(fn, a, b$1) {
-			if (isInsideEventHandler) return fn(a, b$1);
+		function batchedUpdates$1(fn, a$1, b$1) {
+			if (isInsideEventHandler) return fn(a$1, b$1);
 			isInsideEventHandler = !0;
 			try {
-				return fn(a);
+				return fn(a$1);
 			} finally {
 				if (isInsideEventHandler = !1, null !== restoreTarget || null !== restoreQueue) {
-					if (flushSyncWork$1(), restoreTarget && (a = restoreTarget, fn = restoreQueue, restoreQueue = restoreTarget = null, restoreStateOfTarget(a), fn)) for (a = 0; a < fn.length; a++) restoreStateOfTarget(fn[a]);
+					if (flushSyncWork$1(), restoreTarget && (a$1 = restoreTarget, fn = restoreQueue, restoreQueue = restoreTarget = null, restoreStateOfTarget(a$1), fn)) for (a$1 = 0; a$1 < fn.length; a$1++) restoreStateOfTarget(fn[a$1]);
 				}
 			}
 		}
@@ -3294,9 +3294,9 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			topLevelEventsToReactNames.set(domEventName, reactName);
 			registerTwoPhaseEvent(reactName, [domEventName]);
 		}
-		function getArrayKind(array) {
-			for (var kind = EMPTY_ARRAY, i = 0; i < array.length; i++) {
-				var value = array[i];
+		function getArrayKind(array$1) {
+			for (var kind = EMPTY_ARRAY, i$2 = 0; i$2 < array$1.length; i$2++) {
+				var value = array$1[i$2];
 				if ("object" === typeof value && null !== value) if (isArrayImpl(value) && 2 === value.length && "string" === typeof value[0]) {
 					if (kind !== EMPTY_ARRAY && kind !== ENTRIES_ARRAY) return COMPLEX_ARRAY;
 					kind = ENTRIES_ARRAY;
@@ -3308,8 +3308,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			}
 			return kind;
 		}
-		function addObjectToProperties(object, properties, indent, prefix$1) {
-			for (var key in object) hasOwnProperty.call(object, key) && "_" !== key[0] && addValueToProperties(key, object[key], properties, indent, prefix$1);
+		function addObjectToProperties(object$1, properties, indent, prefix$1) {
+			for (var key in object$1) hasOwnProperty.call(object$1, key) && "_" !== key[0] && addValueToProperties(key, object$1[key], properties, indent, prefix$1);
 		}
 		function addValueToProperties(propertyName, value, properties, indent, prefix$1) {
 			switch (typeof value) {
@@ -3451,8 +3451,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			if (supportsUserTiming) {
 				var name = getComponentNameFromFiber(fiber);
 				if (null !== name) {
-					for (var debugTask = null, properties = [], i = 0; i < errors.length; i++) {
-						var capturedValue = errors[i];
+					for (var debugTask = null, properties = [], i$2 = 0; i$2 < errors.length; i$2++) {
+						var capturedValue = errors[i$2];
 						null == debugTask && null !== capturedValue.source && (debugTask = capturedValue.source._debugTask);
 						capturedValue = capturedValue.value;
 						properties.push(["Error", "object" === typeof capturedValue && null !== capturedValue && "string" === typeof capturedValue.message ? String(capturedValue.message) : String(capturedValue)]);
@@ -3480,8 +3480,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					var name = getComponentNameFromFiber(fiber);
 					if (null !== name) {
 						selfTime = [];
-						for (var i = 0; i < errors.length; i++) {
-							var error = errors[i].value;
+						for (var i$2 = 0; i$2 < errors.length; i$2++) {
+							var error = errors[i$2].value;
 							selfTime.push(["Error", "object" === typeof error && null !== error && "string" === typeof error.message ? String(error.message) : String(error)]);
 						}
 						null !== fiber.key && addValueToProperties("key", fiber.key, selfTime, 0, "");
@@ -3517,8 +3517,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		function logRecoveredRenderPhase(startTime, endTime, lanes, recoverableErrors, hydrationFailed, debugTask) {
 			if (supportsUserTiming && !(endTime <= startTime)) {
 				lanes = [];
-				for (var i = 0; i < recoverableErrors.length; i++) {
-					var error = recoverableErrors[i].value;
+				for (var i$2 = 0; i$2 < recoverableErrors.length; i$2++) {
+					var error = recoverableErrors[i$2].value;
 					lanes.push(["Recoverable Error", "object" === typeof error && null !== error && "string" === typeof error.message ? String(error.message) : String(error)]);
 				}
 				startTime = {
@@ -3543,8 +3543,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		}
 		function logCommitErrored(startTime, endTime, errors, passive, debugTask) {
 			if (supportsUserTiming && !(endTime <= startTime)) {
-				for (var properties = [], i = 0; i < errors.length; i++) {
-					var error = errors[i].value;
+				for (var properties = [], i$2 = 0; i$2 < errors.length; i$2++) {
+					var error = errors[i$2].value;
 					properties.push(["Error", "object" === typeof error && null !== error && "string" === typeof error.message ? String(error.message) : String(error)]);
 				}
 				startTime = {
@@ -3565,15 +3565,15 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			!supportsUserTiming || endTime <= startTime || (debugTask ? debugTask.run(console.timeStamp.bind(console, "Animating", startTime, endTime, currentTrack, LANES_TRACK_GROUP, "secondary-dark")) : console.timeStamp("Animating", startTime, endTime, currentTrack, LANES_TRACK_GROUP, "secondary-dark"));
 		}
 		function finishQueueingConcurrentUpdates() {
-			for (var endIndex = concurrentQueuesIndex, i = concurrentlyUpdatedLanes = concurrentQueuesIndex = 0; i < endIndex;) {
-				var fiber = concurrentQueues[i];
-				concurrentQueues[i++] = null;
-				var queue = concurrentQueues[i];
-				concurrentQueues[i++] = null;
-				var update = concurrentQueues[i];
-				concurrentQueues[i++] = null;
-				var lane = concurrentQueues[i];
-				concurrentQueues[i++] = null;
+			for (var endIndex = concurrentQueuesIndex, i$2 = concurrentlyUpdatedLanes = concurrentQueuesIndex = 0; i$2 < endIndex;) {
+				var fiber = concurrentQueues[i$2];
+				concurrentQueues[i$2++] = null;
+				var queue = concurrentQueues[i$2];
+				concurrentQueues[i$2++] = null;
+				var update = concurrentQueues[i$2];
+				concurrentQueues[i$2++] = null;
+				var lane = concurrentQueues[i$2];
+				concurrentQueues[i$2++] = null;
 				if (null !== queue && null !== update) {
 					var pending = queue.pending;
 					null === pending ? update.next = update : (update.next = pending.next, pending.next = update);
@@ -3604,8 +3604,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			sourceFiber.lanes |= lane;
 			var alternate = sourceFiber.alternate;
 			null !== alternate && (alternate.lanes |= lane);
-			for (var isHidden = !1, parent = sourceFiber.return; null !== parent;) parent.childLanes |= lane, alternate = parent.alternate, null !== alternate && (alternate.childLanes |= lane), 22 === parent.tag && (sourceFiber = parent.stateNode, null === sourceFiber || sourceFiber._visibility & OffscreenVisible || (isHidden = !0)), sourceFiber = parent, parent = parent.return;
-			return 3 === sourceFiber.tag ? (parent = sourceFiber.stateNode, isHidden && null !== update && (isHidden = 31 - clz32(lane), sourceFiber = parent.hiddenUpdates, alternate = sourceFiber[isHidden], null === alternate ? sourceFiber[isHidden] = [update] : alternate.push(update), update.lane = lane | 536870912), parent) : null;
+			for (var isHidden$1 = !1, parent = sourceFiber.return; null !== parent;) parent.childLanes |= lane, alternate = parent.alternate, null !== alternate && (alternate.childLanes |= lane), 22 === parent.tag && (sourceFiber = parent.stateNode, null === sourceFiber || sourceFiber._visibility & OffscreenVisible || (isHidden$1 = !0)), sourceFiber = parent, parent = parent.return;
+			return 3 === sourceFiber.tag ? (parent = sourceFiber.stateNode, isHidden$1 && null !== update && (isHidden$1 = 31 - clz32(lane), sourceFiber = parent.hiddenUpdates, alternate = sourceFiber[isHidden$1], null === alternate ? sourceFiber[isHidden$1] = [update] : alternate.push(update), update.lane = lane | 536870912), parent) : null;
 		}
 		function getRootForUpdatedFiber(sourceFiber) {
 			if (nestedUpdateCount > NESTED_UPDATE_LIMIT) throw nestedPassiveUpdateCount = nestedUpdateCount = 0, rootWithPassiveNestedUpdates = rootWithNestedUpdates = null, Error("Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.");
@@ -4102,7 +4102,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					a: for (; null !== list;) {
 						var dependency = list;
 						list = fiber;
-						for (var i = 0; i < contexts.length; i++) if (dependency.context === contexts[i]) {
+						for (var i$2 = 0; i$2 < contexts.length; i$2++) if (dependency.context === contexts[i$2]) {
 							list.lanes |= renderLanes$1;
 							dependency = list.alternate;
 							null !== dependency && (dependency.lanes |= renderLanes$1);
@@ -4358,7 +4358,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 				currentEntangledListeners = null;
 				currentEntangledLane = 0;
 				currentEntangledActionThenable = null;
-				for (var i = 0; i < listeners$1.length; i++) (0, listeners$1[i])();
+				for (var i$2 = 0; i$2 < listeners$1.length; i$2++) (0, listeners$1[i$2])();
 			}
 		}
 		function chainThenableValue(thenable, result) {
@@ -4373,7 +4373,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			thenable.then(function() {
 				thenableWithOverride.status = "fulfilled";
 				thenableWithOverride.value = result;
-				for (var i = 0; i < listeners$1.length; i++) (0, listeners$1[i])(result);
+				for (var i$2 = 0; i$2 < listeners$1.length; i$2++) (0, listeners$1[i$2])(result);
 			}, function(error) {
 				thenableWithOverride.status = "rejected";
 				thenableWithOverride.reason = error;
@@ -4483,16 +4483,16 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		function getCurrentDebugTask() {
 			var debugInfo = currentDebugInfo;
 			if (null != debugInfo) {
-				for (var i = debugInfo.length - 1; 0 <= i; i--) if (null != debugInfo[i].name) {
-					var debugTask = debugInfo[i].debugTask;
+				for (var i$2 = debugInfo.length - 1; 0 <= i$2; i$2--) if (null != debugInfo[i$2].name) {
+					var debugTask = debugInfo[i$2].debugTask;
 					if (null != debugTask) return debugTask;
 				}
 			}
 			return null;
 		}
 		function validateFragmentProps(element, fiber, returnFiber) {
-			for (var keys = Object.keys(element.props), i = 0; i < keys.length; i++) {
-				var key = keys[i];
+			for (var keys = Object.keys(element.props), i$2 = 0; i$2 < keys.length; i$2++) {
+				var key = keys[i$2];
 				if ("children" !== key && "key" !== key) {
 					null === fiber && (fiber = createFiberFromElement(element, returnFiber.mode, 0), fiber._debugInfo = currentDebugInfo, fiber.return = returnFiber);
 					runWithFiberInDEV(fiber, function(erroredKey) {
@@ -4856,9 +4856,9 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					fiber._debugOwner = returnFiber._debugOwner;
 					fiber._debugTask = returnFiber._debugTask;
 					if (null != debugInfo) {
-						for (var i = debugInfo.length - 1; 0 <= i; i--) if ("string" === typeof debugInfo[i].stack) {
-							fiber._debugOwner = debugInfo[i];
-							fiber._debugTask = debugInfo[i].debugTask;
+						for (var i$2 = debugInfo.length - 1; 0 <= i$2; i$2--) if ("string" === typeof debugInfo[i$2].stack) {
+							fiber._debugOwner = debugInfo[i$2];
+							fiber._debugTask = debugInfo[i$2].debugTask;
 							break;
 						}
 					}
@@ -4935,14 +4935,14 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 				queue = queue.firstBaseUpdate;
 				if (null !== queue) {
 					do {
-						var clone = {
+						var clone$1 = {
 							lane: queue.lane,
 							tag: queue.tag,
 							payload: queue.payload,
 							callback: null,
 							next: null
 						};
-						null === newLast ? newFirst = newLast = clone : newLast = newLast.next = clone;
+						null === newLast ? newFirst = newLast = clone$1 : newLast = newLast.next = clone$1;
 						queue = queue.next;
 					} while (null !== queue);
 					null === newLast ? newFirst = newLast = capturedUpdate : newLast = newLast.next = capturedUpdate;
@@ -5149,9 +5149,9 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			if (null !== hookTypesDev && (hookTypesUpdateIndexDev++, hookTypesDev[hookTypesUpdateIndexDev] !== hookName)) {
 				var componentName$1 = getComponentNameFromFiber(currentlyRenderingFiber);
 				if (!didWarnAboutMismatchedHooksForComponent.has(componentName$1) && (didWarnAboutMismatchedHooksForComponent.add(componentName$1), null !== hookTypesDev)) {
-					for (var table = "", i = 0; i <= hookTypesUpdateIndexDev; i++) {
-						var oldHookName = hookTypesDev[i], newHookName = i === hookTypesUpdateIndexDev ? hookName : oldHookName;
-						for (oldHookName = i + 1 + ". " + oldHookName; 30 > oldHookName.length;) oldHookName += " ";
+					for (var table = "", i$2 = 0; i$2 <= hookTypesUpdateIndexDev; i$2++) {
+						var oldHookName = hookTypesDev[i$2], newHookName = i$2 === hookTypesUpdateIndexDev ? hookName : oldHookName;
+						for (oldHookName = i$2 + 1 + ". " + oldHookName; 30 > oldHookName.length;) oldHookName += " ";
 						oldHookName += newHookName + "\n";
 						table += oldHookName;
 					}
@@ -5173,7 +5173,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			if (ignorePreviousDependencies) return !1;
 			if (null === prevDeps) return console.error("%s received a final argument during this render, but not during the previous render. Even though the final argument is optional, its type cannot change between renders.", currentHookNameInDev), !1;
 			nextDeps.length !== prevDeps.length && console.error("The final argument passed to %s changed size between renders. The order and size of this array must remain constant.\n\nPrevious: %s\nIncoming: %s", currentHookNameInDev, "[" + prevDeps.join(", ") + "]", "[" + nextDeps.join(", ") + "]");
-			for (var i = 0; i < prevDeps.length && i < nextDeps.length; i++) if (!objectIs(nextDeps[i], prevDeps[i])) return !1;
+			for (var i$2 = 0; i$2 < prevDeps.length && i$2 < nextDeps.length; i$2++) if (!objectIs(nextDeps[i$2], prevDeps[i$2])) return !1;
 			return !0;
 		}
 		function renderWithHooks(current$1, workInProgress$1, Component, props, secondArg, nextRenderLanes) {
@@ -5346,8 +5346,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			if (null == memoCache) {
 				var current$1 = currentlyRenderingFiber.alternate;
 				null !== current$1 && (current$1 = current$1.updateQueue, null !== current$1 && (current$1 = current$1.memoCache, null != current$1 && (memoCache = {
-					data: current$1.data.map(function(array) {
-						return array.slice();
+					data: current$1.data.map(function(array$1) {
+						return array$1.slice();
 					}),
 					index: 0
 				})));
@@ -5689,7 +5689,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		}
 		function notifyActionListeners(actionNode) {
 			actionNode = actionNode.listeners;
-			for (var i = 0; i < actionNode.length; i++) (0, actionNode[i])();
+			for (var i$2 = 0; i$2 < actionNode.length; i$2++) (0, actionNode[i$2])();
 		}
 		function actionStateReducer(oldState, newState) {
 			return newState;
@@ -7597,8 +7597,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 							hookName = 0 !== (updateQueue.tag & Layout$1) ? "useLayoutEffect" : 0 !== (updateQueue.tag & Insertion) ? "useInsertionEffect" : "useEffect";
 							var addendum = void 0;
 							addendum = null === lastEffect ? " You returned null. If your effect does not require clean up, return undefined (or nothing)." : "function" === typeof lastEffect.then ? "\n\nIt looks like you wrote " + hookName + "(async () => ...) or returned a Promise. Instead, write the async function inside your effect and call it immediately:\n\n" + hookName + "(() => {\n  async function fetchData() {\n    // You can await here\n    const response = await MyAPI.getData(someId);\n    // ...\n  }\n  fetchData();\n}, [someId]); // Or [] if effect doesn't need props or state\n\nLearn more about data fetching with Hooks: https://react.dev/link/hooks-data-fetching" : " You returned: " + lastEffect;
-							runWithFiberInDEV(finishedWork, function(n, a) {
-								console.error("%s must not return anything besides a function, which is used for clean-up.%s", n, a);
+							runWithFiberInDEV(finishedWork, function(n$1, a$1) {
+								console.error("%s must not return anything besides a function, which is used for clean-up.%s", n$1, a$1);
 							}, hookName, addendum);
 						}
 						updateQueue = updateQueue.next;
@@ -8174,8 +8174,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		}
 		function recursivelyTraverseMutationEffects(root$jscomp$0, parentFiber) {
 			var deletions = parentFiber.deletions;
-			if (null !== deletions) for (var i = 0; i < deletions.length; i++) {
-				var root$1 = root$jscomp$0, returnFiber = parentFiber, deletedFiber = deletions[i], prevEffectStart = pushComponentEffectStart(), parent = returnFiber;
+			if (null !== deletions) for (var i$2 = 0; i$2 < deletions.length; i$2++) {
+				var root$1 = root$jscomp$0, returnFiber = parentFiber, deletedFiber = deletions[i$2], prevEffectStart = pushComponentEffectStart(), parent = returnFiber;
 				a: for (; null !== parent;) {
 					switch (parent.tag) {
 						case 27:
@@ -8255,8 +8255,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 									case "link":
 										var maybeNodes = getHydratableHoistableCache("link", "href", existingHiddenCallbacks).get(flags + (current$1.href || ""));
 										if (maybeNodes) {
-											for (var i = 0; i < maybeNodes.length; i++) if (currentResource = maybeNodes[i], currentResource.getAttribute("href") === (null == current$1.href || "" === current$1.href ? null : current$1.href) && currentResource.getAttribute("rel") === (null == current$1.rel ? null : current$1.rel) && currentResource.getAttribute("title") === (null == current$1.title ? null : current$1.title) && currentResource.getAttribute("crossorigin") === (null == current$1.crossOrigin ? null : current$1.crossOrigin)) {
-												maybeNodes.splice(i, 1);
+											for (var i$2 = 0; i$2 < maybeNodes.length; i$2++) if (currentResource = maybeNodes[i$2], currentResource.getAttribute("href") === (null == current$1.href || "" === current$1.href ? null : current$1.href) && currentResource.getAttribute("rel") === (null == current$1.rel ? null : current$1.rel) && currentResource.getAttribute("title") === (null == current$1.title ? null : current$1.title) && currentResource.getAttribute("crossorigin") === (null == current$1.crossOrigin ? null : current$1.crossOrigin)) {
+												maybeNodes.splice(i$2, 1);
 												break b;
 											}
 										}
@@ -8266,8 +8266,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 										break;
 									case "meta":
 										if (maybeNodes = getHydratableHoistableCache("meta", "content", existingHiddenCallbacks).get(flags + (current$1.content || ""))) {
-											for (i = 0; i < maybeNodes.length; i++) if (currentResource = maybeNodes[i], checkAttributeStringCoercion(current$1.content, "content"), currentResource.getAttribute("content") === (null == current$1.content ? null : "" + current$1.content) && currentResource.getAttribute("name") === (null == current$1.name ? null : current$1.name) && currentResource.getAttribute("property") === (null == current$1.property ? null : current$1.property) && currentResource.getAttribute("http-equiv") === (null == current$1.httpEquiv ? null : current$1.httpEquiv) && currentResource.getAttribute("charset") === (null == current$1.charSet ? null : current$1.charSet)) {
-												maybeNodes.splice(i, 1);
+											for (i$2 = 0; i$2 < maybeNodes.length; i$2++) if (currentResource = maybeNodes[i$2], checkAttributeStringCoercion(current$1.content, "content"), currentResource.getAttribute("content") === (null == current$1.content ? null : "" + current$1.content) && currentResource.getAttribute("name") === (null == current$1.name ? null : current$1.name) && currentResource.getAttribute("property") === (null == current$1.property ? null : current$1.property) && currentResource.getAttribute("http-equiv") === (null == current$1.httpEquiv ? null : current$1.httpEquiv) && currentResource.getAttribute("charset") === (null == current$1.charSet ? null : current$1.charSet)) {
+												maybeNodes.splice(i$2, 1);
 												break b;
 											}
 										}
@@ -8396,7 +8396,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 							if (null === current$1) {
 								wasHidden = root$1;
 								try {
-									i = wasHidden.stateNode, existingHiddenCallbacks ? runWithFiberInDEV(wasHidden, hideDehydratedBoundary, i) : runWithFiberInDEV(wasHidden, unhideDehydratedBoundary, wasHidden.stateNode);
+									i$2 = wasHidden.stateNode, existingHiddenCallbacks ? runWithFiberInDEV(wasHidden, hideDehydratedBoundary, i$2) : runWithFiberInDEV(wasHidden, unhideDehydratedBoundary, wasHidden.stateNode);
 								} catch (error) {
 									captureCommitPhaseError(wasHidden, wasHidden.return, error);
 								}
@@ -8755,8 +8755,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		function recursivelyTraversePassiveUnmountEffects(parentFiber) {
 			var deletions = parentFiber.deletions;
 			if (0 !== (parentFiber.flags & 16)) {
-				if (null !== deletions) for (var i = 0; i < deletions.length; i++) {
-					var childToDelete = deletions[i], prevEffectStart = pushComponentEffectStart();
+				if (null !== deletions) for (var i$2 = 0; i$2 < deletions.length; i$2++) {
+					var childToDelete = deletions[i$2], prevEffectStart = pushComponentEffectStart();
 					nextEffect = childToDelete;
 					commitPassiveUnmountEffectsInsideOfDeletedTree_begin(childToDelete, parentFiber);
 					(childToDelete.mode & ProfileMode) !== NoMode && 0 <= componentEffectStartTime && 0 <= componentEffectEndTime && .05 < componentEffectEndTime - componentEffectStartTime && logComponentTrigger(childToDelete, componentEffectStartTime, componentEffectEndTime, "Unmount");
@@ -8800,8 +8800,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		function recursivelyTraverseDisconnectPassiveEffects(parentFiber) {
 			var deletions = parentFiber.deletions;
 			if (0 !== (parentFiber.flags & 16)) {
-				if (null !== deletions) for (var i = 0; i < deletions.length; i++) {
-					var childToDelete = deletions[i], prevEffectStart = pushComponentEffectStart();
+				if (null !== deletions) for (var i$2 = 0; i$2 < deletions.length; i$2++) {
+					var childToDelete = deletions[i$2], prevEffectStart = pushComponentEffectStart();
 					nextEffect = childToDelete;
 					commitPassiveUnmountEffectsInsideOfDeletedTree_begin(childToDelete, parentFiber);
 					(childToDelete.mode & ProfileMode) !== NoMode && 0 <= componentEffectStartTime && 0 <= componentEffectEndTime && .05 < componentEffectEndTime - componentEffectStartTime && logComponentTrigger(childToDelete, componentEffectStartTime, componentEffectEndTime, "Unmount");
@@ -9059,8 +9059,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		function isRenderConsistentWithExternalStores(finishedWork) {
 			for (var node = finishedWork;;) {
 				var tag = node.tag;
-				if ((0 === tag || 11 === tag || 15 === tag) && node.flags & 16384 && (tag = node.updateQueue, null !== tag && (tag = tag.stores, null !== tag))) for (var i = 0; i < tag.length; i++) {
-					var check = tag[i], getSnapshot = check.getSnapshot;
+				if ((0 === tag || 11 === tag || 15 === tag) && node.flags & 16384 && (tag = node.updateQueue, null !== tag && (tag = tag.stores, null !== tag))) for (var i$2 = 0; i$2 < tag.length; i$2++) {
+					var check = tag[i$2], getSnapshot = check.getSnapshot;
 					check = check.value;
 					try {
 						if (!objectIs(getSnapshot(), check)) return !1;
@@ -10124,8 +10124,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		}
 		function processDispatchQueue(dispatchQueue, eventSystemFlags) {
 			eventSystemFlags = 0 !== (eventSystemFlags & 4);
-			for (var i = 0; i < dispatchQueue.length; i++) {
-				var _dispatchQueue$i = dispatchQueue[i];
+			for (var i$2 = 0; i$2 < dispatchQueue.length; i$2++) {
+				var _dispatchQueue$i = dispatchQueue[i$2];
 				a: {
 					var previousInstance = void 0, event = _dispatchQueue$i.event;
 					_dispatchQueue$i = _dispatchQueue$i.listeners;
@@ -11059,8 +11059,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		function getStylesObjectFromElement(domElement) {
 			var serverValueInObjectForm = {};
 			domElement = domElement.style;
-			for (var i = 0; i < domElement.length; i++) {
-				var styleName = domElement[i];
+			for (var i$2 = 0; i$2 < domElement.length; i$2++) {
+				var styleName = domElement[i$2];
 				serverValueInObjectForm[styleName] = domElement.getPropertyValue(styleName);
 			}
 			return serverValueInObjectForm;
@@ -11163,11 +11163,11 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			warnForPropDifference(propKey, domElement, value, serverDifferences);
 		}
 		function diffHydratedProperties(domElement, tag, props, hostContext) {
-			for (var serverDifferences = {}, extraAttributes = /* @__PURE__ */ new Set(), attributes = domElement.attributes, i = 0; i < attributes.length; i++) switch (attributes[i].name.toLowerCase()) {
+			for (var serverDifferences = {}, extraAttributes = /* @__PURE__ */ new Set(), attributes = domElement.attributes, i$2 = 0; i$2 < attributes.length; i$2++) switch (attributes[i$2].name.toLowerCase()) {
 				case "value": break;
 				case "checked": break;
 				case "selected": break;
-				default: extraAttributes.add(attributes[i].name);
+				default: extraAttributes.add(attributes[i$2].name);
 			}
 			if (isCustomElement(tag)) {
 				for (var propKey in props) if (props.hasOwnProperty(propKey)) {
@@ -11326,11 +11326,11 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					case "capture":
 					case "download":
 						a: {
-							i = domElement;
+							i$2 = domElement;
 							var attributeName = attributes = value, serverDifferences$jscomp$0 = serverDifferences;
 							extraAttributes.delete(attributeName);
-							i = i.getAttribute(attributeName);
-							if (null === i) switch (typeof propKey) {
+							i$2 = i$2.getAttribute(attributeName);
+							if (null === i$2) switch (typeof propKey) {
 								case "undefined":
 								case "function":
 								case "symbol": break a;
@@ -11340,11 +11340,11 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 								case "function":
 								case "symbol": break;
 								case "boolean":
-									if (!0 === propKey && "" === i) break a;
+									if (!0 === propKey && "" === i$2) break a;
 									break;
-								default: if (checkAttributeStringCoercion(propKey, attributes), i === "" + propKey) break a;
+								default: if (checkAttributeStringCoercion(propKey, attributes), i$2 === "" + propKey) break a;
 							}
-							warnForPropDifference(attributes, i, propKey, serverDifferences$jscomp$0);
+							warnForPropDifference(attributes, i$2, propKey, serverDifferences$jscomp$0);
 						}
 						continue;
 					case "cols":
@@ -11352,12 +11352,12 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					case "size":
 					case "span":
 						a: {
-							i = domElement;
+							i$2 = domElement;
 							attributeName = attributes = value;
 							serverDifferences$jscomp$0 = serverDifferences;
 							extraAttributes.delete(attributeName);
-							i = i.getAttribute(attributeName);
-							if (null === i) switch (typeof propKey) {
+							i$2 = i$2.getAttribute(attributeName);
+							if (null === i$2) switch (typeof propKey) {
 								case "undefined":
 								case "function":
 								case "symbol":
@@ -11368,9 +11368,9 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 								case "function":
 								case "symbol":
 								case "boolean": break;
-								default: if (!(isNaN(propKey) || 1 > propKey) && (checkAttributeStringCoercion(propKey, attributes), i === "" + propKey)) break a;
+								default: if (!(isNaN(propKey) || 1 > propKey) && (checkAttributeStringCoercion(propKey, attributes), i$2 === "" + propKey)) break a;
 							}
-							warnForPropDifference(attributes, i, propKey, serverDifferences$jscomp$0);
+							warnForPropDifference(attributes, i$2, propKey, serverDifferences$jscomp$0);
 						}
 						continue;
 					case "rowSpan":
@@ -11414,20 +11414,20 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 						hydrateBooleanAttribute(domElement, value, value, propKey, extraAttributes, serverDifferences);
 						continue;
 					default: if (!(2 < value.length) || "o" !== value[0] && "O" !== value[0] || "n" !== value[1] && "N" !== value[1]) {
-						i = getAttributeAlias(value);
+						i$2 = getAttributeAlias(value);
 						attributes = !1;
-						hostContext.context === HostContextNamespaceNone && "svg" !== tag && "math" !== tag ? extraAttributes.delete(i.toLowerCase()) : (attributeName = value.toLowerCase(), attributeName = possibleStandardNames.hasOwnProperty(attributeName) ? possibleStandardNames[attributeName] || null : null, null !== attributeName && attributeName !== value && (attributes = !0, extraAttributes.delete(attributeName)), extraAttributes.delete(i));
-						a: if (attributeName = domElement, serverDifferences$jscomp$0 = i, i = propKey, isAttributeNameSafe(serverDifferences$jscomp$0)) if (attributeName.hasAttribute(serverDifferences$jscomp$0)) attributeName = attributeName.getAttribute(serverDifferences$jscomp$0), checkAttributeStringCoercion(i, serverDifferences$jscomp$0), i = attributeName === "" + i ? i : attributeName;
+						hostContext.context === HostContextNamespaceNone && "svg" !== tag && "math" !== tag ? extraAttributes.delete(i$2.toLowerCase()) : (attributeName = value.toLowerCase(), attributeName = possibleStandardNames.hasOwnProperty(attributeName) ? possibleStandardNames[attributeName] || null : null, null !== attributeName && attributeName !== value && (attributes = !0, extraAttributes.delete(attributeName)), extraAttributes.delete(i$2));
+						a: if (attributeName = domElement, serverDifferences$jscomp$0 = i$2, i$2 = propKey, isAttributeNameSafe(serverDifferences$jscomp$0)) if (attributeName.hasAttribute(serverDifferences$jscomp$0)) attributeName = attributeName.getAttribute(serverDifferences$jscomp$0), checkAttributeStringCoercion(i$2, serverDifferences$jscomp$0), i$2 = attributeName === "" + i$2 ? i$2 : attributeName;
 						else {
-							switch (typeof i) {
+							switch (typeof i$2) {
 								case "function":
 								case "symbol": break a;
 								case "boolean": if (attributeName = serverDifferences$jscomp$0.toLowerCase().slice(0, 5), "data-" !== attributeName && "aria-" !== attributeName) break a;
 							}
-							i = void 0 === i ? void 0 : null;
+							i$2 = void 0 === i$2 ? void 0 : null;
 						}
-						else i = void 0;
-						attributes || warnForPropDifference(value, i, propKey, serverDifferences);
+						else i$2 = void 0;
+						attributes || warnForPropDifference(value, i$2, propKey, serverDifferences);
 					}
 				}
 			}
@@ -11456,26 +11456,26 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		}
 		function estimateBandwidth() {
 			if ("function" === typeof performance.getEntriesByType) {
-				for (var count$2 = 0, bits = 0, resourceEntries = performance.getEntriesByType("resource"), i = 0; i < resourceEntries.length; i++) {
-					var entry = resourceEntries[i], transferSize = entry.transferSize, initiatorType = entry.initiatorType, duration = entry.duration;
-					if (transferSize && duration && isLikelyStaticResource(initiatorType)) {
+				for (var count$3 = 0, bits = 0, resourceEntries = performance.getEntriesByType("resource"), i$2 = 0; i$2 < resourceEntries.length; i$2++) {
+					var entry = resourceEntries[i$2], transferSize = entry.transferSize, initiatorType = entry.initiatorType, duration$2 = entry.duration;
+					if (transferSize && duration$2 && isLikelyStaticResource(initiatorType)) {
 						initiatorType = 0;
-						duration = entry.responseEnd;
-						for (i += 1; i < resourceEntries.length; i++) {
-							var overlapEntry = resourceEntries[i], overlapStartTime = overlapEntry.startTime;
-							if (overlapStartTime > duration) break;
+						duration$2 = entry.responseEnd;
+						for (i$2 += 1; i$2 < resourceEntries.length; i$2++) {
+							var overlapEntry = resourceEntries[i$2], overlapStartTime = overlapEntry.startTime;
+							if (overlapStartTime > duration$2) break;
 							var overlapTransferSize = overlapEntry.transferSize, overlapInitiatorType = overlapEntry.initiatorType;
-							overlapTransferSize && isLikelyStaticResource(overlapInitiatorType) && (overlapEntry = overlapEntry.responseEnd, initiatorType += overlapTransferSize * (overlapEntry < duration ? 1 : (duration - overlapStartTime) / (overlapEntry - overlapStartTime)));
+							overlapTransferSize && isLikelyStaticResource(overlapInitiatorType) && (overlapEntry = overlapEntry.responseEnd, initiatorType += overlapTransferSize * (overlapEntry < duration$2 ? 1 : (duration$2 - overlapStartTime) / (overlapEntry - overlapStartTime)));
 						}
-						--i;
+						--i$2;
 						bits += 8 * (transferSize + initiatorType) / (entry.duration / 1e3);
-						count$2++;
-						if (10 < count$2) break;
+						count$3++;
+						if (10 < count$3) break;
 					}
 				}
-				if (0 < count$2) return bits / count$2 / 1e6;
+				if (0 < count$3) return bits / count$3 / 1e6;
 			}
-			return navigator.connection && (count$2 = navigator.connection.downlink, "number" === typeof count$2) ? count$2 : 5;
+			return navigator.connection && (count$3 = navigator.connection.downlink, "number" === typeof count$3) ? count$3 : 5;
 		}
 		function getOwnerDocumentFromRootContainer(rootContainerElement) {
 			return 9 === rootContainerElement.nodeType ? rootContainerElement : rootContainerElement.ownerDocument;
@@ -11592,12 +11592,12 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			} while (node);
 			retryIfBlockedOn(hydrationInstance);
 		}
-		function hideOrUnhideDehydratedBoundary(suspenseInstance, isHidden) {
+		function hideOrUnhideDehydratedBoundary(suspenseInstance, isHidden$1) {
 			var node = suspenseInstance;
 			suspenseInstance = 0;
 			do {
 				var nextNode = node.nextSibling;
-				1 === node.nodeType ? isHidden ? (node._stashedDisplay = node.style.display, node.style.display = "none") : (node.style.display = node._stashedDisplay || "", "" === node.getAttribute("style") && node.removeAttribute("style")) : 3 === node.nodeType && (isHidden ? (node._stashedText = node.nodeValue, node.nodeValue = "") : node.nodeValue = node._stashedText || "");
+				1 === node.nodeType ? isHidden$1 ? (node._stashedDisplay = node.style.display, node.style.display = "none") : (node.style.display = node._stashedDisplay || "", "" === node.getAttribute("style") && node.removeAttribute("style")) : 3 === node.nodeType && (isHidden$1 ? (node._stashedText = node.nodeValue, node.nodeValue = "") : node.nodeValue = node._stashedText || "");
 				if (nextNode && 8 === nextNode.nodeType) if (node = nextNode.data, node === SUSPENSE_END_DATA) if (0 === suspenseInstance) break;
 				else suspenseInstance--;
 				else node !== SUSPENSE_START_DATA && node !== SUSPENSE_PENDING_START_DATA && node !== SUSPENSE_QUEUED_START_DATA && node !== SUSPENSE_FALLBACK_START_DATA || suspenseInstance++;
@@ -11728,8 +11728,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		}
 		function describeHydratableInstanceForDevWarnings(instance) {
 			if (1 === instance.nodeType) {
-				for (var JSCompiler_temp_const = instance.nodeName.toLowerCase(), serverDifferences = {}, attributes = instance.attributes, i = 0; i < attributes.length; i++) {
-					var attr = attributes[i];
+				for (var JSCompiler_temp_const = instance.nodeName.toLowerCase(), serverDifferences = {}, attributes = instance.attributes, i$2 = 0; i$2 < attributes.length; i$2++) {
+					var attr = attributes[i$2];
 					serverDifferences[getPropNameFromAttributeName(attr.name)] = "style" === attr.name.toLowerCase() ? getStylesObjectFromElement(instance) : attr.value;
 				}
 				return {
@@ -11987,8 +11987,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			return resource.instance;
 		}
 		function insertStylesheet(instance, precedence, root$1) {
-			for (var nodes = root$1.querySelectorAll("link[rel=\"stylesheet\"][data-precedence],style[data-precedence]"), last = nodes.length ? nodes[nodes.length - 1] : null, prior = last, i = 0; i < nodes.length; i++) {
-				var node = nodes[i];
+			for (var nodes = root$1.querySelectorAll("link[rel=\"stylesheet\"][data-precedence],style[data-precedence]"), last = nodes.length ? nodes[nodes.length - 1] : null, prior = last, i$2 = 0; i$2 < nodes.length; i$2++) {
+				var node = nodes[i$2];
 				if (node.dataset.precedence === precedence) prior = node;
 				else if (prior !== last) break;
 			}
@@ -12156,22 +12156,22 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 				else {
 					precedences = /* @__PURE__ */ new Map();
 					precedencesByRoot.set(root$1, precedences);
-					for (var nodes = root$1.querySelectorAll("link[data-precedence],style[data-precedence]"), i = 0; i < nodes.length; i++) {
-						var node = nodes[i];
+					for (var nodes = root$1.querySelectorAll("link[data-precedence],style[data-precedence]"), i$2 = 0; i$2 < nodes.length; i$2++) {
+						var node = nodes[i$2];
 						if ("LINK" === node.nodeName || "not all" !== node.getAttribute("media")) precedences.set(node.dataset.precedence, node), last = node;
 					}
 					last && precedences.set(LAST_PRECEDENCE, last);
 				}
 				nodes = resource.instance;
 				node = nodes.getAttribute("data-precedence");
-				i = precedences.get(node) || last;
-				i === last && precedences.set(LAST_PRECEDENCE, nodes);
+				i$2 = precedences.get(node) || last;
+				i$2 === last && precedences.set(LAST_PRECEDENCE, nodes);
 				precedences.set(node, nodes);
 				this.count++;
 				last = onUnsuspend.bind(this);
 				nodes.addEventListener("load", last);
 				nodes.addEventListener("error", last);
-				i ? i.parentNode.insertBefore(nodes, i.nextSibling) : (root$1 = 9 === root$1.nodeType ? root$1.head : root$1, root$1.insertBefore(nodes, root$1.firstChild));
+				i$2 ? i$2.parentNode.insertBefore(nodes, i$2.nextSibling) : (root$1 = 9 === root$1.nodeType ? root$1.head : root$1, root$1.insertBefore(nodes, root$1.firstChild));
 				resource.state.loading |= Inserted;
 			}
 		}
@@ -12244,8 +12244,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		function markRetryLaneImpl(fiber, retryLane) {
 			fiber = fiber.memoizedState;
 			if (null !== fiber && null !== fiber.dehydrated) {
-				var a = fiber.retryLane;
-				fiber.retryLane = 0 !== a && a < retryLane ? a : retryLane;
+				var a$1 = fiber.retryLane;
+				fiber.retryLane = 0 !== a$1 && a$1 < retryLane ? a$1 : retryLane;
 			}
 		}
 		function markRetryLaneIfNotHydrated(fiber, retryLane) {
@@ -12553,12 +12553,12 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		function scheduleReplayQueueIfNeeded(formReplayingQueue) {
 			lastScheduledReplayQueue !== formReplayingQueue && (lastScheduledReplayQueue = formReplayingQueue, Scheduler.unstable_scheduleCallback(Scheduler.unstable_NormalPriority, function() {
 				lastScheduledReplayQueue === formReplayingQueue && (lastScheduledReplayQueue = null);
-				for (var i = 0; i < formReplayingQueue.length; i += 3) {
-					var form = formReplayingQueue[i], submitterOrAction = formReplayingQueue[i + 1], formData = formReplayingQueue[i + 2];
+				for (var i$2 = 0; i$2 < formReplayingQueue.length; i$2 += 3) {
+					var form = formReplayingQueue[i$2], submitterOrAction = formReplayingQueue[i$2 + 1], formData = formReplayingQueue[i$2 + 2];
 					if ("function" !== typeof submitterOrAction) if (null === findInstanceBlockingTarget(submitterOrAction || form)) continue;
 					else break;
 					var formInst = getInstanceFromNode(form);
-					null !== formInst && (formReplayingQueue.splice(i, 3), i -= 3, form = {
+					null !== formInst && (formReplayingQueue.splice(i$2, 3), i$2 -= 3, form = {
 						pending: !0,
 						data: formData,
 						method: form.method,
@@ -12576,23 +12576,23 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			null !== queuedMouse && scheduleCallbackIfUnblocked(queuedMouse, unblocked);
 			queuedPointers.forEach(unblock);
 			queuedPointerCaptures.forEach(unblock);
-			for (var i = 0; i < queuedExplicitHydrationTargets.length; i++) {
-				var queuedTarget = queuedExplicitHydrationTargets[i];
+			for (var i$2 = 0; i$2 < queuedExplicitHydrationTargets.length; i$2++) {
+				var queuedTarget = queuedExplicitHydrationTargets[i$2];
 				queuedTarget.blockedOn === unblocked && (queuedTarget.blockedOn = null);
 			}
-			for (; 0 < queuedExplicitHydrationTargets.length && (i = queuedExplicitHydrationTargets[0], null === i.blockedOn);) attemptExplicitHydrationTarget(i), null === i.blockedOn && queuedExplicitHydrationTargets.shift();
-			i = (unblocked.ownerDocument || unblocked).$$reactFormReplay;
-			if (null != i) for (queuedTarget = 0; queuedTarget < i.length; queuedTarget += 3) {
-				var form = i[queuedTarget], submitterOrAction = i[queuedTarget + 1], formProps = form[internalPropsKey] || null;
-				if ("function" === typeof submitterOrAction) formProps || scheduleReplayQueueIfNeeded(i);
+			for (; 0 < queuedExplicitHydrationTargets.length && (i$2 = queuedExplicitHydrationTargets[0], null === i$2.blockedOn);) attemptExplicitHydrationTarget(i$2), null === i$2.blockedOn && queuedExplicitHydrationTargets.shift();
+			i$2 = (unblocked.ownerDocument || unblocked).$$reactFormReplay;
+			if (null != i$2) for (queuedTarget = 0; queuedTarget < i$2.length; queuedTarget += 3) {
+				var form = i$2[queuedTarget], submitterOrAction = i$2[queuedTarget + 1], formProps = form[internalPropsKey] || null;
+				if ("function" === typeof submitterOrAction) formProps || scheduleReplayQueueIfNeeded(i$2);
 				else if (formProps) {
 					var action = null;
 					if (submitterOrAction && submitterOrAction.hasAttribute("formAction")) {
 						if (form = submitterOrAction, formProps = submitterOrAction[internalPropsKey] || null) action = formProps.formAction;
 						else if (null !== findInstanceBlockingTarget(form)) continue;
 					} else action = formProps.action;
-					"function" === typeof action ? i[queuedTarget + 1] = action : (i.splice(queuedTarget, 3), queuedTarget -= 3);
-					scheduleReplayQueueIfNeeded(i);
+					"function" === typeof action ? i$2[queuedTarget + 1] = action : (i$2.splice(queuedTarget, 3), queuedTarget -= 3);
+					scheduleReplayQueueIfNeeded(i$2);
 				}
 			}
 		}
@@ -12647,10 +12647,10 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			container[internalContainerInstanceKey] && (container._reactRootContainer ? console.error("You are calling ReactDOMClient.createRoot() on a container that was previously passed to ReactDOM.render(). This is not supported.") : console.error("You are calling ReactDOMClient.createRoot() on a container that has already been passed to createRoot() before. Instead, call root.render() on the existing root instead if you want to update it."));
 		}
 		"undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-		var Scheduler = require_scheduler(), React$2 = require_react(), ReactDOM$2 = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = Symbol.for("react.element"), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE$1 = Symbol.for("react.lazy");
+		var Scheduler = require_scheduler(), React$3 = require_react(), ReactDOM$2 = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = Symbol.for("react.element"), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE$1 = Symbol.for("react.lazy");
 		var REACT_ACTIVITY_TYPE = Symbol.for("react.activity");
 		var REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel");
-		var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React$2.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM$2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+		var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React$3.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM$2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
 			pending: !1,
 			data: null,
 			method: null,
@@ -14993,8 +14993,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 		var didWarnAboutUpdateInRenderForAnotherComponent = /* @__PURE__ */ new Set();
 		var fakeActCallbackNode$1 = {}, firstScheduledRoot = null, lastScheduledRoot = null, didScheduleMicrotask = !1, didScheduleMicrotask_act = !1, mightHavePendingSyncWork = !1, isFlushingWork = !1, currentEventTransitionLane = 0, fakeActCallbackNode = {};
 		(function() {
-			for (var i = 0; i < simpleEventPluginEvents.length; i++) {
-				var eventName = simpleEventPluginEvents[i], domEventName = eventName.toLowerCase();
+			for (var i$2 = 0; i$2 < simpleEventPluginEvents.length; i$2++) {
+				var eventName = simpleEventPluginEvents[i$2], domEventName = eventName.toLowerCase();
 				eventName = eventName[0].toUpperCase() + eventName.slice(1);
 				registerSimpleEvent(domEventName, "on" + eventName);
 			}
@@ -15049,12 +15049,12 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 				previousDispatcher.C(href, crossOrigin);
 				preconnectAs("preconnect", href, crossOrigin);
 			},
-			L: function(href, as, options) {
-				previousDispatcher.L(href, as, options);
+			L: function(href, as, options$1) {
+				previousDispatcher.L(href, as, options$1);
 				var ownerDocument = globalDocument;
 				if (ownerDocument && href && as) {
 					var preloadSelector = "link[rel=\"preload\"][as=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(as) + "\"]";
-					"image" === as ? options && options.imageSrcSet ? (preloadSelector += "[imagesrcset=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(options.imageSrcSet) + "\"]", "string" === typeof options.imageSizes && (preloadSelector += "[imagesizes=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(options.imageSizes) + "\"]")) : preloadSelector += "[href=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(href) + "\"]" : preloadSelector += "[href=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(href) + "\"]";
+					"image" === as ? options$1 && options$1.imageSrcSet ? (preloadSelector += "[imagesrcset=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(options$1.imageSrcSet) + "\"]", "string" === typeof options$1.imageSizes && (preloadSelector += "[imagesizes=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(options$1.imageSizes) + "\"]")) : preloadSelector += "[href=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(href) + "\"]" : preloadSelector += "[href=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(href) + "\"]";
 					var key = preloadSelector;
 					switch (as) {
 						case "style":
@@ -15064,16 +15064,16 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					}
 					preloadPropsMap.has(key) || (href = assign({
 						rel: "preload",
-						href: "image" === as && options && options.imageSrcSet ? void 0 : href,
+						href: "image" === as && options$1 && options$1.imageSrcSet ? void 0 : href,
 						as
-					}, options), preloadPropsMap.set(key, href), null !== ownerDocument.querySelector(preloadSelector) || "style" === as && ownerDocument.querySelector(getStylesheetSelectorFromKey(key)) || "script" === as && ownerDocument.querySelector(getScriptSelectorFromKey(key)) || (as = ownerDocument.createElement("link"), setInitialProperties(as, "link", href), markNodeAsHoistable(as), ownerDocument.head.appendChild(as)));
+					}, options$1), preloadPropsMap.set(key, href), null !== ownerDocument.querySelector(preloadSelector) || "style" === as && ownerDocument.querySelector(getStylesheetSelectorFromKey(key)) || "script" === as && ownerDocument.querySelector(getScriptSelectorFromKey(key)) || (as = ownerDocument.createElement("link"), setInitialProperties(as, "link", href), markNodeAsHoistable(as), ownerDocument.head.appendChild(as)));
 				}
 			},
-			m: function(href, options) {
-				previousDispatcher.m(href, options);
+			m: function(href, options$1) {
+				previousDispatcher.m(href, options$1);
 				var ownerDocument = globalDocument;
 				if (ownerDocument && href) {
-					var as = options && "string" === typeof options.as ? options.as : "script", preloadSelector = "link[rel=\"modulepreload\"][as=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(as) + "\"][href=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(href) + "\"]", key = preloadSelector;
+					var as = options$1 && "string" === typeof options$1.as ? options$1.as : "script", preloadSelector = "link[rel=\"modulepreload\"][as=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(as) + "\"][href=\"" + escapeSelectorAttributeValueInsideDoubleQuotes(href) + "\"]", key = preloadSelector;
 					switch (as) {
 						case "audioworklet":
 						case "paintworklet":
@@ -15085,7 +15085,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					if (!preloadPropsMap.has(key) && (href = assign({
 						rel: "modulepreload",
 						href
-					}, options), preloadPropsMap.set(key, href), null === ownerDocument.querySelector(preloadSelector))) {
+					}, options$1), preloadPropsMap.set(key, href), null === ownerDocument.querySelector(preloadSelector))) {
 						switch (as) {
 							case "audioworklet":
 							case "paintworklet":
@@ -15101,15 +15101,15 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					}
 				}
 			},
-			X: function(src, options) {
-				previousDispatcher.X(src, options);
+			X: function(src, options$1) {
+				previousDispatcher.X(src, options$1);
 				var ownerDocument = globalDocument;
 				if (ownerDocument && src) {
 					var scripts = getResourcesFromRoot(ownerDocument).hoistableScripts, key = getScriptKey(src), resource = scripts.get(key);
 					resource || (resource = ownerDocument.querySelector(getScriptSelectorFromKey(key)), resource || (src = assign({
 						src,
 						async: !0
-					}, options), (options = preloadPropsMap.get(key)) && adoptPreloadPropsForScript(src, options), resource = ownerDocument.createElement("script"), markNodeAsHoistable(resource), setInitialProperties(resource, "link", src), ownerDocument.head.appendChild(resource)), resource = {
+					}, options$1), (options$1 = preloadPropsMap.get(key)) && adoptPreloadPropsForScript(src, options$1), resource = ownerDocument.createElement("script"), markNodeAsHoistable(resource), setInitialProperties(resource, "link", src), ownerDocument.head.appendChild(resource)), resource = {
 						type: "script",
 						instance: resource,
 						count: 1,
@@ -15117,8 +15117,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					}, scripts.set(key, resource));
 				}
 			},
-			S: function(href, precedence, options) {
-				previousDispatcher.S(href, precedence, options);
+			S: function(href, precedence, options$1) {
+				previousDispatcher.S(href, precedence, options$1);
 				var ownerDocument = globalDocument;
 				if (ownerDocument && href) {
 					var styles = getResourcesFromRoot(ownerDocument).hoistableStyles, key = getStyleKey(href);
@@ -15135,8 +15135,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 								rel: "stylesheet",
 								href,
 								"data-precedence": precedence
-							}, options);
-							(options = preloadPropsMap.get(key)) && adoptPreloadPropsForStylesheet(href, options);
+							}, options$1);
+							(options$1 = preloadPropsMap.get(key)) && adoptPreloadPropsForStylesheet(href, options$1);
 							var link = resource = ownerDocument.createElement("link");
 							markNodeAsHoistable(link);
 							setInitialProperties(link, "link", href);
@@ -15163,8 +15163,8 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					}
 				}
 			},
-			M: function(src, options) {
-				previousDispatcher.M(src, options);
+			M: function(src, options$1) {
+				previousDispatcher.M(src, options$1);
 				var ownerDocument = globalDocument;
 				if (ownerDocument && src) {
 					var scripts = getResourcesFromRoot(ownerDocument).hoistableScripts, key = getScriptKey(src), resource = scripts.get(key);
@@ -15172,7 +15172,7 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 						src,
 						async: !0,
 						type: "module"
-					}, options), (options = preloadPropsMap.get(key)) && adoptPreloadPropsForScript(src, options), resource = ownerDocument.createElement("script"), markNodeAsHoistable(resource), setInitialProperties(resource, "link", src), ownerDocument.head.appendChild(resource)), resource = {
+					}, options$1), (options$1 = preloadPropsMap.get(key)) && adoptPreloadPropsForScript(src, options$1), resource = ownerDocument.createElement("script"), markNodeAsHoistable(resource), setInitialProperties(resource, "link", src), ownerDocument.head.appendChild(resource)), resource = {
 						type: "script",
 						instance: resource,
 						count: 1,
@@ -15266,13 +15266,13 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 					target,
 					priority: updatePriority
 				};
-				for (var i = 0; i < queuedExplicitHydrationTargets.length && 0 !== updatePriority && updatePriority < queuedExplicitHydrationTargets[i].priority; i++);
-				queuedExplicitHydrationTargets.splice(i, 0, target);
-				0 === i && attemptExplicitHydrationTarget(target);
+				for (var i$2 = 0; i$2 < queuedExplicitHydrationTargets.length && 0 !== updatePriority && updatePriority < queuedExplicitHydrationTargets[i$2].priority; i$2++);
+				queuedExplicitHydrationTargets.splice(i$2, 0, target);
+				0 === i$2 && attemptExplicitHydrationTarget(target);
 			}
 		};
 		(function() {
-			var isomorphicReactPackageVersion = React$2.version;
+			var isomorphicReactPackageVersion = React$3.version;
 			if ("19.2.4" !== isomorphicReactPackageVersion) throw Error("Incompatible React versions: The \"react\" and \"react-dom\" packages must have the exact same version. Instead got:\n  - react:      " + (isomorphicReactPackageVersion + "\n  - react-dom:  19.2.4\nLearn more: https://react.dev/warnings/version-mismatch"));
 		})();
 		"function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error("React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://react.dev/link/react-polyfills");
@@ -15315,34 +15315,34 @@ var require_react_dom_client_development = /* @__PURE__ */ __commonJSMin(((expor
 			var protocol = window.location.protocol;
 			/^(https?|file):$/.test(protocol) && console.info("%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools" + ("file:" === protocol ? "\nYou might need to use a local HTTP server (instead of file://): https://react.dev/link/react-devtools-faq" : ""), "font-weight:bold");
 		}
-		exports.createRoot = function(container, options) {
+		exports.createRoot = function(container, options$1) {
 			if (!isValidContainer(container)) throw Error("Target container is not a DOM element.");
 			warnIfReactDOMContainerInDEV(container);
 			var isStrictMode = !1, identifierPrefix = "", onUncaughtError = defaultOnUncaughtError, onCaughtError = defaultOnCaughtError, onRecoverableError = defaultOnRecoverableError;
-			null !== options && void 0 !== options && (options.hydrate ? console.warn("hydrate through createRoot is deprecated. Use ReactDOMClient.hydrateRoot(container, <App />) instead.") : "object" === typeof options && null !== options && options.$$typeof === REACT_ELEMENT_TYPE && console.error("You passed a JSX element to createRoot. You probably meant to call root.render instead. Example usage:\n\n  let root = createRoot(domContainer);\n  root.render(<App />);"), !0 === options.unstable_strictMode && (isStrictMode = !0), void 0 !== options.identifierPrefix && (identifierPrefix = options.identifierPrefix), void 0 !== options.onUncaughtError && (onUncaughtError = options.onUncaughtError), void 0 !== options.onCaughtError && (onCaughtError = options.onCaughtError), void 0 !== options.onRecoverableError && (onRecoverableError = options.onRecoverableError));
-			options = createFiberRoot(container, 1, !1, null, null, isStrictMode, identifierPrefix, null, onUncaughtError, onCaughtError, onRecoverableError, defaultOnDefaultTransitionIndicator);
-			container[internalContainerInstanceKey] = options.current;
+			null !== options$1 && void 0 !== options$1 && (options$1.hydrate ? console.warn("hydrate through createRoot is deprecated. Use ReactDOMClient.hydrateRoot(container, <App />) instead.") : "object" === typeof options$1 && null !== options$1 && options$1.$$typeof === REACT_ELEMENT_TYPE && console.error("You passed a JSX element to createRoot. You probably meant to call root.render instead. Example usage:\n\n  let root = createRoot(domContainer);\n  root.render(<App />);"), !0 === options$1.unstable_strictMode && (isStrictMode = !0), void 0 !== options$1.identifierPrefix && (identifierPrefix = options$1.identifierPrefix), void 0 !== options$1.onUncaughtError && (onUncaughtError = options$1.onUncaughtError), void 0 !== options$1.onCaughtError && (onCaughtError = options$1.onCaughtError), void 0 !== options$1.onRecoverableError && (onRecoverableError = options$1.onRecoverableError));
+			options$1 = createFiberRoot(container, 1, !1, null, null, isStrictMode, identifierPrefix, null, onUncaughtError, onCaughtError, onRecoverableError, defaultOnDefaultTransitionIndicator);
+			container[internalContainerInstanceKey] = options$1.current;
 			listenToAllSupportedEvents(container);
-			return new ReactDOMRoot(options);
+			return new ReactDOMRoot(options$1);
 		};
-		exports.hydrateRoot = function(container, initialChildren, options) {
+		exports.hydrateRoot = function(container, initialChildren, options$1) {
 			if (!isValidContainer(container)) throw Error("Target container is not a DOM element.");
 			warnIfReactDOMContainerInDEV(container);
 			void 0 === initialChildren && console.error("Must provide initial children as second argument to hydrateRoot. Example usage: hydrateRoot(domContainer, <App />)");
 			var isStrictMode = !1, identifierPrefix = "", onUncaughtError = defaultOnUncaughtError, onCaughtError = defaultOnCaughtError, onRecoverableError = defaultOnRecoverableError, formState = null;
-			null !== options && void 0 !== options && (!0 === options.unstable_strictMode && (isStrictMode = !0), void 0 !== options.identifierPrefix && (identifierPrefix = options.identifierPrefix), void 0 !== options.onUncaughtError && (onUncaughtError = options.onUncaughtError), void 0 !== options.onCaughtError && (onCaughtError = options.onCaughtError), void 0 !== options.onRecoverableError && (onRecoverableError = options.onRecoverableError), void 0 !== options.formState && (formState = options.formState));
-			initialChildren = createFiberRoot(container, 1, !0, initialChildren, null != options ? options : null, isStrictMode, identifierPrefix, formState, onUncaughtError, onCaughtError, onRecoverableError, defaultOnDefaultTransitionIndicator);
+			null !== options$1 && void 0 !== options$1 && (!0 === options$1.unstable_strictMode && (isStrictMode = !0), void 0 !== options$1.identifierPrefix && (identifierPrefix = options$1.identifierPrefix), void 0 !== options$1.onUncaughtError && (onUncaughtError = options$1.onUncaughtError), void 0 !== options$1.onCaughtError && (onCaughtError = options$1.onCaughtError), void 0 !== options$1.onRecoverableError && (onRecoverableError = options$1.onRecoverableError), void 0 !== options$1.formState && (formState = options$1.formState));
+			initialChildren = createFiberRoot(container, 1, !0, initialChildren, null != options$1 ? options$1 : null, isStrictMode, identifierPrefix, formState, onUncaughtError, onCaughtError, onRecoverableError, defaultOnDefaultTransitionIndicator);
 			initialChildren.context = getContextForSubtree(null);
-			options = initialChildren.current;
-			isStrictMode = requestUpdateLane(options);
+			options$1 = initialChildren.current;
+			isStrictMode = requestUpdateLane(options$1);
 			isStrictMode = getBumpedLaneForHydrationByLane(isStrictMode);
 			identifierPrefix = createUpdate(isStrictMode);
 			identifierPrefix.callback = null;
-			enqueueUpdate(options, identifierPrefix, isStrictMode);
+			enqueueUpdate(options$1, identifierPrefix, isStrictMode);
 			startUpdateTimerByLane(isStrictMode, "hydrateRoot()", null);
-			options = isStrictMode;
-			initialChildren.current.lanes = options;
-			markRootUpdated$1(initialChildren, options);
+			options$1 = isStrictMode;
+			initialChildren.current.lanes = options$1;
+			markRootUpdated$1(initialChildren, options$1);
 			ensureRootIsScheduled(initialChildren);
 			container[internalContainerInstanceKey] = initialChildren.current;
 			listenToAllSupportedEvents(container);
@@ -15381,8 +15381,8 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
 			seen[dep] = true;
 			const isCss = dep.endsWith(".css");
 			const cssSelector = isCss ? "[rel=\"stylesheet\"]" : "";
-			if (!!importerUrl) for (let i$1 = links.length - 1; i$1 >= 0; i$1--) {
-				const link$1 = links[i$1];
+			if (!!importerUrl) for (let i$1$1 = links.length - 1; i$1$1 >= 0; i$1$1--) {
+				const link$1 = links[i$1$1];
 				if (link$1.href === dep && (!isCss || link$1.rel === "stylesheet")) return;
 			}
 			else if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) return;
@@ -15418,7 +15418,7 @@ var PopStateEventType = "popstate";
 function isLocation(obj) {
 	return typeof obj === "object" && obj != null && "pathname" in obj && "search" in obj && "hash" in obj && "state" in obj && "key" in obj;
 }
-function createBrowserHistory(options = {}) {
+function createBrowserHistory(options$1 = {}) {
 	function createBrowserLocation(window2, globalHistory) {
 		let maskedLocation = globalHistory.state?.masked;
 		let { pathname, search, hash } = maskedLocation || window2.location;
@@ -15435,7 +15435,7 @@ function createBrowserHistory(options = {}) {
 	function createBrowserHref(window2, to) {
 		return typeof to === "string" ? to : createPath(to);
 	}
-	return getUrlBasedHistory(createBrowserLocation, createBrowserHref, null, options);
+	return getUrlBasedHistory(createBrowserLocation, createBrowserHref, null, options$1);
 }
 function invariant(value, message) {
 	if (value === false || value === null || typeof value === "undefined") throw new Error(message);
@@ -15496,8 +15496,8 @@ function parsePath(path) {
 	}
 	return parsedPath;
 }
-function getUrlBasedHistory(getLocation, createHref2, validateLocation, options = {}) {
-	let { window: window2 = document.defaultView, v5Compat = false } = options;
+function getUrlBasedHistory(getLocation, createHref2, validateLocation, options$1 = {}) {
+	let { window: window2 = document.defaultView, v5Compat = false } = options$1;
 	let globalHistory = window2.history;
 	let action = "POP";
 	let listener = null;
@@ -15589,8 +15589,8 @@ function getUrlBasedHistory(getLocation, createHref2, validateLocation, options 
 		},
 		push,
 		replace: replace2,
-		go(n) {
-			return globalHistory.go(n);
+		go(n$1) {
+			return globalHistory.go(n$1);
 		}
 	};
 	return history;
@@ -15613,9 +15613,9 @@ function matchRoutesImpl(routes, locationArg, basename, allowPartial) {
 	let branches = flattenRoutes(routes);
 	rankRouteBranches(branches);
 	let matches = null;
-	for (let i = 0; matches == null && i < branches.length; ++i) {
+	for (let i$2 = 0; matches == null && i$2 < branches.length; ++i$2) {
 		let decoded = decodePath(pathname);
-		matches = matchRouteBranch(branches[i], decoded, allowPartial);
+		matches = matchRouteBranch(branches[i$2], decoded, allowPartial);
 	}
 	return matches;
 }
@@ -15632,19 +15632,19 @@ function convertRouteMatchToUiMatch(match, loaderData) {
 }
 function flattenRoutes(routes, branches = [], parentsMeta = [], parentPath = "", _hasParentOptionalSegments = false) {
 	let flattenRoute = (route, index$1, hasParentOptionalSegments = _hasParentOptionalSegments, relativePath) => {
-		let meta = {
+		let meta$2 = {
 			relativePath: relativePath === void 0 ? route.path || "" : relativePath,
 			caseSensitive: route.caseSensitive === true,
 			childrenIndex: index$1,
 			route
 		};
-		if (meta.relativePath.startsWith("/")) {
-			if (!meta.relativePath.startsWith(parentPath) && hasParentOptionalSegments) return;
-			invariant(meta.relativePath.startsWith(parentPath), `Absolute route path "${meta.relativePath}" nested under path "${parentPath}" is not valid. An absolute child route path must start with the combined path of all its parent routes.`);
-			meta.relativePath = meta.relativePath.slice(parentPath.length);
+		if (meta$2.relativePath.startsWith("/")) {
+			if (!meta$2.relativePath.startsWith(parentPath) && hasParentOptionalSegments) return;
+			invariant(meta$2.relativePath.startsWith(parentPath), `Absolute route path "${meta$2.relativePath}" nested under path "${parentPath}" is not valid. An absolute child route path must start with the combined path of all its parent routes.`);
+			meta$2.relativePath = meta$2.relativePath.slice(parentPath.length);
 		}
-		let path = joinPaths([parentPath, meta.relativePath]);
-		let routesMeta = parentsMeta.concat(meta);
+		let path = joinPaths([parentPath, meta$2.relativePath]);
+		let routesMeta = parentsMeta.concat(meta$2);
 		if (route.children && route.children.length > 0) {
 			invariant(route.index !== true, `Index routes must not have child routes. Please remove all child routes from route path "${path}".`);
 			flattenRoutes(route.children, branches, routesMeta, path, hasParentOptionalSegments);
@@ -15667,16 +15667,16 @@ function explodeOptionalSegments(path) {
 	if (segments.length === 0) return [];
 	let [first, ...rest] = segments;
 	let isOptional = first.endsWith("?");
-	let required = first.replace(/\?$/, "");
-	if (rest.length === 0) return isOptional ? [required, ""] : [required];
+	let required$1 = first.replace(/\?$/, "");
+	if (rest.length === 0) return isOptional ? [required$1, ""] : [required$1];
 	let restExploded = explodeOptionalSegments(rest.join("/"));
 	let result = [];
-	result.push(...restExploded.map((subpath) => subpath === "" ? required : [required, subpath].join("/")));
+	result.push(...restExploded.map((subpath) => subpath === "" ? required$1 : [required$1, subpath].join("/")));
 	if (isOptional) result.push(...restExploded);
 	return result.map((exploded) => path.startsWith("/") && exploded === "" ? "/" : exploded);
 }
 function rankRouteBranches(branches) {
-	branches.sort((a, b$1) => a.score !== b$1.score ? b$1.score - a.score : compareIndexes(a.routesMeta.map((meta) => meta.childrenIndex), b$1.routesMeta.map((meta) => meta.childrenIndex)));
+	branches.sort((a$1, b$1) => a$1.score !== b$1.score ? b$1.score - a$1.score : compareIndexes(a$1.routesMeta.map((meta$2) => meta$2.childrenIndex), b$1.routesMeta.map((meta$2) => meta$2.childrenIndex)));
 }
 var paramRe = /^:[\w-]+$/;
 var dynamicSegmentValue = 3;
@@ -15684,35 +15684,35 @@ var indexRouteValue = 2;
 var emptySegmentValue = 1;
 var staticSegmentValue = 10;
 var splatPenalty = -2;
-var isSplat = (s) => s === "*";
+var isSplat = (s$2) => s$2 === "*";
 function computeScore(path, index$1) {
 	let segments = path.split("/");
 	let initialScore = segments.length;
 	if (segments.some(isSplat)) initialScore += splatPenalty;
 	if (index$1) initialScore += indexRouteValue;
-	return segments.filter((s) => !isSplat(s)).reduce((score, segment) => score + (paramRe.test(segment) ? dynamicSegmentValue : segment === "" ? emptySegmentValue : staticSegmentValue), initialScore);
+	return segments.filter((s$2) => !isSplat(s$2)).reduce((score, segment) => score + (paramRe.test(segment) ? dynamicSegmentValue : segment === "" ? emptySegmentValue : staticSegmentValue), initialScore);
 }
-function compareIndexes(a, b$1) {
-	return a.length === b$1.length && a.slice(0, -1).every((n, i) => n === b$1[i]) ? a[a.length - 1] - b$1[b$1.length - 1] : 0;
+function compareIndexes(a$1, b$1) {
+	return a$1.length === b$1.length && a$1.slice(0, -1).every((n$1, i$2) => n$1 === b$1[i$2]) ? a$1[a$1.length - 1] - b$1[b$1.length - 1] : 0;
 }
 function matchRouteBranch(branch, pathname, allowPartial = false) {
 	let { routesMeta } = branch;
 	let matchedParams = {};
 	let matchedPathname = "/";
 	let matches = [];
-	for (let i = 0; i < routesMeta.length; ++i) {
-		let meta = routesMeta[i];
-		let end = i === routesMeta.length - 1;
+	for (let i$2 = 0; i$2 < routesMeta.length; ++i$2) {
+		let meta$2 = routesMeta[i$2];
+		let end = i$2 === routesMeta.length - 1;
 		let remainingPathname = matchedPathname === "/" ? pathname : pathname.slice(matchedPathname.length) || "/";
 		let match = matchPath({
-			path: meta.relativePath,
-			caseSensitive: meta.caseSensitive,
+			path: meta$2.relativePath,
+			caseSensitive: meta$2.caseSensitive,
 			end
 		}, remainingPathname);
-		let route = meta.route;
+		let route = meta$2.route;
 		if (!match && end && allowPartial && !routesMeta[routesMeta.length - 1].route.index) match = matchPath({
-			path: meta.relativePath,
-			caseSensitive: meta.caseSensitive,
+			path: meta$2.relativePath,
+			caseSensitive: meta$2.caseSensitive,
 			end: false
 		}, remainingPathname);
 		if (!match) return null;
@@ -15963,7 +15963,7 @@ function useLocation() {
 	return import_react.useContext(LocationContext).location;
 }
 var navigateEffectWarning = `You should call navigate() in a React.useEffect(), not when your component is first rendered.`;
-function useIsomorphicLayoutEffect(cb) {
+function useIsomorphicLayoutEffect$2(cb) {
 	if (!import_react.useContext(NavigationContext).static) import_react.useLayoutEffect(cb);
 }
 function useNavigate() {
@@ -15978,19 +15978,19 @@ function useNavigateUnstable() {
 	let { pathname: locationPathname } = useLocation();
 	let routePathnamesJson = JSON.stringify(getResolveToMatches(matches));
 	let activeRef = import_react.useRef(false);
-	useIsomorphicLayoutEffect(() => {
+	useIsomorphicLayoutEffect$2(() => {
 		activeRef.current = true;
 	});
-	return import_react.useCallback((to, options = {}) => {
+	return import_react.useCallback((to, options$1 = {}) => {
 		warning(activeRef.current, navigateEffectWarning);
 		if (!activeRef.current) return;
 		if (typeof to === "number") {
 			navigator$1.go(to);
 			return;
 		}
-		let path = resolveTo(to, JSON.parse(routePathnamesJson), locationPathname, options.relative === "path");
+		let path = resolveTo(to, JSON.parse(routePathnamesJson), locationPathname, options$1.relative === "path");
 		if (dataRouterContext == null && basename !== "/") path.pathname = path.pathname === "/" ? basename : joinPaths([basename, path.pathname]);
-		(!!options.replace ? navigator$1.replace : navigator$1.push)(path, options.state, options);
+		(!!options$1.replace ? navigator$1.replace : navigator$1.push)(path, options$1.state, options$1);
 	}, [
 		basename,
 		navigator$1,
@@ -16177,9 +16177,9 @@ function _renderMatches(matches, parentMatches = [], dataRouterOpts) {
 	let fallbackIndex = -1;
 	if (dataRouterOpts && dataRouterState) {
 		renderFallback = dataRouterState.renderFallback;
-		for (let i = 0; i < renderedMatches.length; i++) {
-			let match = renderedMatches[i];
-			if (match.route.HydrateFallback || match.route.hydrateFallbackElement) fallbackIndex = i;
+		for (let i$2 = 0; i$2 < renderedMatches.length; i$2++) {
+			let match = renderedMatches[i$2];
+			if (match.route.HydrateFallback || match.route.hydrateFallbackElement) fallbackIndex = i$2;
 			if (match.route.id) {
 				let { loaderData, errors: errors2 } = dataRouterState;
 				let needsToRunLoader = match.route.loader && !loaderData.hasOwnProperty(match.route.id) && (!errors2 || errors2[match.route.id] === void 0);
@@ -16298,16 +16298,16 @@ function useNavigateStable() {
 	let { router } = useDataRouterContext("useNavigate");
 	let id = useCurrentRouteId("useNavigate");
 	let activeRef = import_react.useRef(false);
-	useIsomorphicLayoutEffect(() => {
+	useIsomorphicLayoutEffect$2(() => {
 		activeRef.current = true;
 	});
-	return import_react.useCallback(async (to, options = {}) => {
+	return import_react.useCallback(async (to, options$1 = {}) => {
 		warning(activeRef.current, navigateEffectWarning);
 		if (!activeRef.current) return;
 		if (typeof to === "number") await router.navigate(to);
 		else await router.navigate(to, {
 			fromRouteId: id,
-			...options
+			...options$1
 		});
 	}, [router, id]);
 }
@@ -16422,17 +16422,17 @@ function createRoutesFromChildren(children, parentPath = []) {
 }
 var defaultMethod = "get";
 var defaultEncType = "application/x-www-form-urlencoded";
-function isHtmlElement(object) {
-	return typeof HTMLElement !== "undefined" && object instanceof HTMLElement;
+function isHtmlElement(object$1) {
+	return typeof HTMLElement !== "undefined" && object$1 instanceof HTMLElement;
 }
-function isButtonElement(object) {
-	return isHtmlElement(object) && object.tagName.toLowerCase() === "button";
+function isButtonElement(object$1) {
+	return isHtmlElement(object$1) && object$1.tagName.toLowerCase() === "button";
 }
-function isFormElement(object) {
-	return isHtmlElement(object) && object.tagName.toLowerCase() === "form";
+function isFormElement(object$1) {
+	return isHtmlElement(object$1) && object$1.tagName.toLowerCase() === "form";
 }
-function isInputElement(object) {
-	return isHtmlElement(object) && object.tagName.toLowerCase() === "input";
+function isInputElement(object$1) {
+	return isHtmlElement(object$1) && object$1.tagName.toLowerCase() === "input";
 }
 function isModifiedEvent(event) {
 	return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
@@ -16551,13 +16551,13 @@ async function loadRouteModule(route, routeModulesCache) {
 		return new Promise(() => {});
 	}
 }
-function isPageLinkDescriptor(object) {
-	return object != null && typeof object.page === "string";
+function isPageLinkDescriptor(object$1) {
+	return object$1 != null && typeof object$1.page === "string";
 }
-function isHtmlLinkDescriptor(object) {
-	if (object == null) return false;
-	if (object.href == null) return object.rel === "preload" && typeof object.imageSrcSet === "string" && typeof object.imageSizes === "string";
-	return typeof object.rel === "string" && typeof object.href === "string";
+function isHtmlLinkDescriptor(object$1) {
+	if (object$1 == null) return false;
+	if (object$1.href == null) return object$1.rel === "preload" && typeof object$1.imageSrcSet === "string" && typeof object$1.imageSizes === "string";
+	return typeof object$1.rel === "string" && typeof object$1.href === "string";
 }
 async function getKeyedPrefetchLinks(matches, manifest, routeModules) {
 	return dedupeLinkDescriptors((await Promise.all(matches.map(async (match) => {
@@ -16625,13 +16625,13 @@ function sortKeys(obj) {
 	return sorted;
 }
 function dedupeLinkDescriptors(descriptors, preloads) {
-	let set = /* @__PURE__ */ new Set();
+	let set$1 = /* @__PURE__ */ new Set();
 	let preloadsSet = new Set(preloads);
 	return descriptors.reduce((deduped, descriptor) => {
 		if (preloads && !isPageLinkDescriptor(descriptor) && descriptor.as === "script" && descriptor.href && preloadsSet.has(descriptor.href)) return deduped;
 		let key = JSON.stringify(sortKeys(descriptor));
-		if (!set.has(key)) {
-			set.add(key);
+		if (!set$1.has(key)) {
+			set$1.add(key);
 			deduped.push({
 				key,
 				link: descriptor
@@ -16964,7 +16964,7 @@ var NavLink = import_react.forwardRef(function NavLinkWithRef({ "aria-current": 
 	}, typeof children === "function" ? children(renderProps) : children);
 });
 NavLink.displayName = "NavLink";
-var Form = import_react.forwardRef(({ discover = "render", fetcherKey, navigate, reloadDocument, replace: replace2, state, method = defaultMethod, action, onSubmit, relative, preventScrollReset, viewTransition, unstable_defaultShouldRevalidate, ...props }, forwardedRef) => {
+var Form$1 = import_react.forwardRef(({ discover = "render", fetcherKey, navigate, reloadDocument, replace: replace2, state, method = defaultMethod, action, onSubmit, relative, preventScrollReset, viewTransition, unstable_defaultShouldRevalidate, ...props }, forwardedRef) => {
 	let { unstable_useTransitions } = import_react.useContext(NavigationContext);
 	let submit = useSubmit();
 	let formAction = useFormAction(action, { relative });
@@ -16999,7 +16999,7 @@ var Form = import_react.forwardRef(({ discover = "render", fetcherKey, navigate,
 		"data-discover": !isAbsolute && discover === "render" ? "true" : void 0
 	});
 });
-Form.displayName = "Form";
+Form$1.displayName = "Form";
 function ScrollRestoration({ getKey, storageKey, ...props }) {
 	let remixContext = import_react.useContext(FrameworkContext);
 	let { basename } = import_react.useContext(NavigationContext);
@@ -17092,29 +17092,29 @@ function useSubmit() {
 	let currentRouteId = useRouteId();
 	let routerFetch = router.fetch;
 	let routerNavigate = router.navigate;
-	return import_react.useCallback(async (target, options = {}) => {
+	return import_react.useCallback(async (target, options$1 = {}) => {
 		let { action, method, encType, formData, body } = getFormSubmissionInfo(target, basename);
-		if (options.navigate === false) await routerFetch(options.fetcherKey || getUniqueFetcherId(), currentRouteId, options.action || action, {
-			unstable_defaultShouldRevalidate: options.unstable_defaultShouldRevalidate,
-			preventScrollReset: options.preventScrollReset,
+		if (options$1.navigate === false) await routerFetch(options$1.fetcherKey || getUniqueFetcherId(), currentRouteId, options$1.action || action, {
+			unstable_defaultShouldRevalidate: options$1.unstable_defaultShouldRevalidate,
+			preventScrollReset: options$1.preventScrollReset,
 			formData,
 			body,
-			formMethod: options.method || method,
-			formEncType: options.encType || encType,
-			flushSync: options.flushSync
+			formMethod: options$1.method || method,
+			formEncType: options$1.encType || encType,
+			flushSync: options$1.flushSync
 		});
-		else await routerNavigate(options.action || action, {
-			unstable_defaultShouldRevalidate: options.unstable_defaultShouldRevalidate,
-			preventScrollReset: options.preventScrollReset,
+		else await routerNavigate(options$1.action || action, {
+			unstable_defaultShouldRevalidate: options$1.unstable_defaultShouldRevalidate,
+			preventScrollReset: options$1.preventScrollReset,
 			formData,
 			body,
-			formMethod: options.method || method,
-			formEncType: options.encType || encType,
-			replace: options.replace,
-			state: options.state,
+			formMethod: options$1.method || method,
+			formEncType: options$1.encType || encType,
+			replace: options$1.replace,
+			state: options$1.state,
 			fromRouteId: currentRouteId,
-			flushSync: options.flushSync,
-			viewTransition: options.viewTransition
+			flushSync: options$1.flushSync,
+			viewTransition: options$1.viewTransition
 		});
 	}, [
 		routerFetch,
@@ -17230,8 +17230,8 @@ function useScrollRestoration({ getKey, storageKey } = {}) {
 		]);
 	}
 }
-function usePageHide(callback, options) {
-	let { capture } = options || {};
+function usePageHide(callback, options$1) {
+	let { capture } = options$1 || {};
 	import_react.useEffect(() => {
 		let opts = capture != null ? { capture } : void 0;
 		window.addEventListener("pagehide", callback, opts);
@@ -17253,10 +17253,10 @@ function useViewTransitionState(to, { relative } = {}) {
 var import_client = require_client();
 var TOAST_LIMIT = 1;
 var TOAST_REMOVE_DELAY = 1e6;
-var count$1 = 0;
+var count$2 = 0;
 function genId() {
-	count$1 = (count$1 + 1) % Number.MAX_SAFE_INTEGER;
-	return count$1.toString();
+	count$2 = (count$2 + 1) % Number.MAX_SAFE_INTEGER;
+	return count$2.toString();
 }
 var toastTimeouts = /* @__PURE__ */ new Map();
 var addToRemoveQueue = (toastId) => {
@@ -17278,10 +17278,10 @@ const reducer = (state, action) => {
 		};
 		case "UPDATE_TOAST": return {
 			...state,
-			toasts: state.toasts.map((t) => t.id === action.toast.id ? {
-				...t,
+			toasts: state.toasts.map((t$1) => t$1.id === action.toast.id ? {
+				...t$1,
 				...action.toast
-			} : t)
+			} : t$1)
 		};
 		case "DISMISS_TOAST": {
 			const { toastId } = action;
@@ -17291,10 +17291,10 @@ const reducer = (state, action) => {
 			});
 			return {
 				...state,
-				toasts: state.toasts.map((t) => t.id === toastId || toastId === void 0 ? {
-					...t,
+				toasts: state.toasts.map((t$1) => t$1.id === toastId || toastId === void 0 ? {
+					...t$1,
 					open: false
-				} : t)
+				} : t$1)
 			};
 		}
 		case "REMOVE_TOAST":
@@ -17304,7 +17304,7 @@ const reducer = (state, action) => {
 			};
 			return {
 				...state,
-				toasts: state.toasts.filter((t) => t.id !== action.toastId)
+				toasts: state.toasts.filter((t$1) => t$1.id !== action.toastId)
 			};
 	}
 };
@@ -17385,10 +17385,10 @@ function composeRefs(...refs) {
 			return cleanup;
 		});
 		if (hasCleanup) return () => {
-			for (let i = 0; i < cleanups.length; i++) {
-				const cleanup = cleanups[i];
+			for (let i$2 = 0; i$2 < cleanups.length; i$2++) {
+				const cleanup = cleanups[i$2];
 				if (typeof cleanup == "function") cleanup();
-				else setRef(refs[i], null);
+				else setRef(refs[i$2], null);
 			}
 		};
 	};
@@ -17473,12 +17473,12 @@ var require_react_jsx_runtime_development = /* @__PURE__ */ __commonJSMin(((expo
 		function UnknownOwner() {
 			return Error("react-stack-top-frame");
 		}
-		function hasValidKey(config) {
-			if (hasOwnProperty.call(config, "key")) {
-				var getter = Object.getOwnPropertyDescriptor(config, "key").get;
+		function hasValidKey(config$1) {
+			if (hasOwnProperty.call(config$1, "key")) {
+				var getter = Object.getOwnPropertyDescriptor(config$1, "key").get;
 				if (getter && getter.isReactWarning) return !1;
 			}
-			return void 0 !== config.key;
+			return void 0 !== config$1.key;
 		}
 		function defineKeyPropWarningGetter(props, displayName) {
 			function warnAboutAccessingKey() {
@@ -17540,16 +17540,16 @@ var require_react_jsx_runtime_development = /* @__PURE__ */ __commonJSMin(((expo
 			Object.freeze && (Object.freeze(type.props), Object.freeze(type));
 			return type;
 		}
-		function jsxDEVImpl(type, config, maybeKey, isStaticChildren, debugStack, debugTask) {
-			var children = config.children;
+		function jsxDEVImpl(type, config$1, maybeKey, isStaticChildren, debugStack, debugTask) {
+			var children = config$1.children;
 			if (void 0 !== children) if (isStaticChildren) if (isArrayImpl(children)) {
 				for (isStaticChildren = 0; isStaticChildren < children.length; isStaticChildren++) validateChildKeys(children[isStaticChildren]);
 				Object.freeze && Object.freeze(children);
 			} else console.error("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
 			else validateChildKeys(children);
-			if (hasOwnProperty.call(config, "key")) {
+			if (hasOwnProperty.call(config$1, "key")) {
 				children = getComponentNameFromType(type);
-				var keys = Object.keys(config).filter(function(k) {
+				var keys = Object.keys(config$1).filter(function(k) {
 					return "key" !== k;
 				});
 				isStaticChildren = 0 < keys.length ? "{key: someKey, " + keys.join(": ..., ") + ": ...}" : "{key: someKey}";
@@ -17557,46 +17557,65 @@ var require_react_jsx_runtime_development = /* @__PURE__ */ __commonJSMin(((expo
 			}
 			children = null;
 			void 0 !== maybeKey && (checkKeyStringCoercion(maybeKey), children = "" + maybeKey);
-			hasValidKey(config) && (checkKeyStringCoercion(config.key), children = "" + config.key);
-			if ("key" in config) {
+			hasValidKey(config$1) && (checkKeyStringCoercion(config$1.key), children = "" + config$1.key);
+			if ("key" in config$1) {
 				maybeKey = {};
-				for (var propName in config) "key" !== propName && (maybeKey[propName] = config[propName]);
-			} else maybeKey = config;
+				for (var propName in config$1) "key" !== propName && (maybeKey[propName] = config$1[propName]);
+			} else maybeKey = config$1;
 			children && defineKeyPropWarningGetter(maybeKey, "function" === typeof type ? type.displayName || type.name || "Unknown" : type);
 			return ReactElement(type, children, maybeKey, getOwner(), debugStack, debugTask);
 		}
 		function validateChildKeys(node) {
 			isValidElement(node) ? node._store && (node._store.validated = 1) : "object" === typeof node && null !== node && node.$$typeof === REACT_LAZY_TYPE$1 && ("fulfilled" === node._payload.status ? isValidElement(node._payload.value) && node._payload.value._store && (node._payload.value._store.validated = 1) : node._store && (node._store.validated = 1));
 		}
-		function isValidElement(object) {
-			return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
+		function isValidElement(object$1) {
+			return "object" === typeof object$1 && null !== object$1 && object$1.$$typeof === REACT_ELEMENT_TYPE;
 		}
-		var React$2 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE$1 = Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), ReactSharedInternals = React$2.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
+		var React$3 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE$1 = Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), ReactSharedInternals = React$3.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
 			return null;
 		};
-		React$2 = { react_stack_bottom_frame: function(callStackForError) {
+		React$3 = { react_stack_bottom_frame: function(callStackForError) {
 			return callStackForError();
 		} };
 		var specialPropKeyWarningShown;
 		var didWarnAboutElementRef = {};
-		var unknownOwnerDebugStack = React$2.react_stack_bottom_frame.bind(React$2, UnknownOwner)();
+		var unknownOwnerDebugStack = React$3.react_stack_bottom_frame.bind(React$3, UnknownOwner)();
 		var unknownOwnerDebugTask = createTask(getTaskName(UnknownOwner));
 		var didWarnAboutKeySpread = {};
 		exports.Fragment = REACT_FRAGMENT_TYPE;
-		exports.jsx = function(type, config, maybeKey) {
+		exports.jsx = function(type, config$1, maybeKey) {
 			var trackActualOwner = 1e4 > ReactSharedInternals.recentlyCreatedOwnerStacks++;
-			return jsxDEVImpl(type, config, maybeKey, !1, trackActualOwner ? Error("react-stack-top-frame") : unknownOwnerDebugStack, trackActualOwner ? createTask(getTaskName(type)) : unknownOwnerDebugTask);
+			return jsxDEVImpl(type, config$1, maybeKey, !1, trackActualOwner ? Error("react-stack-top-frame") : unknownOwnerDebugStack, trackActualOwner ? createTask(getTaskName(type)) : unknownOwnerDebugTask);
 		};
-		exports.jsxs = function(type, config, maybeKey) {
+		exports.jsxs = function(type, config$1, maybeKey) {
 			var trackActualOwner = 1e4 > ReactSharedInternals.recentlyCreatedOwnerStacks++;
-			return jsxDEVImpl(type, config, maybeKey, !0, trackActualOwner ? Error("react-stack-top-frame") : unknownOwnerDebugStack, trackActualOwner ? createTask(getTaskName(type)) : unknownOwnerDebugTask);
+			return jsxDEVImpl(type, config$1, maybeKey, !0, trackActualOwner ? Error("react-stack-top-frame") : unknownOwnerDebugStack, trackActualOwner ? createTask(getTaskName(type)) : unknownOwnerDebugTask);
 		};
 	})();
 }));
 var import_jsx_runtime = /* @__PURE__ */ __toESM((/* @__PURE__ */ __commonJSMin(((exports, module) => {
 	module.exports = require_react_jsx_runtime_development();
 })))(), 1);
-function createContextScope$1(scopeName, createContextScopeDeps = []) {
+function createContext2(rootComponentName, defaultContext) {
+	const Context = import_react.createContext(defaultContext);
+	const Provider$2 = (props) => {
+		const { children, ...context } = props;
+		const value = import_react.useMemo(() => context, Object.values(context));
+		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Context.Provider, {
+			value,
+			children
+		});
+	};
+	Provider$2.displayName = rootComponentName + "Provider";
+	function useContext2(consumerName) {
+		const context = import_react.useContext(Context);
+		if (context) return context;
+		if (defaultContext !== void 0) return defaultContext;
+		throw new Error(`\`${consumerName}\` must be used within \`${rootComponentName}\``);
+	}
+	return [Provider$2, useContext2];
+}
+function createContextScope(scopeName, createContextScopeDeps = []) {
 	let defaultContexts = [];
 	function createContext3(rootComponentName, defaultContext) {
 		const BaseContext = import_react.createContext(defaultContext);
@@ -17659,7 +17678,7 @@ function composeContextScopes$1(...scopes) {
 	return createScope;
 }
 /* @__NO_SIDE_EFFECTS__ */
-function createSlot$1(ownerName) {
+function createSlot(ownerName) {
 	const SlotClone = /* @__PURE__ */ createSlotClone$1(ownerName);
 	const Slot2 = import_react.forwardRef((props, forwardedRef) => {
 		const { children, ...slotProps } = props;
@@ -17750,7 +17769,7 @@ function getElementRef$2(element) {
 }
 function createCollection(name) {
 	const PROVIDER_NAME$2 = name + "CollectionProvider";
-	const [createCollectionContext, createCollectionScope$2] = createContextScope$1(PROVIDER_NAME$2);
+	const [createCollectionContext, createCollectionScope$2] = createContextScope(PROVIDER_NAME$2);
 	const [CollectionProviderImpl, useCollectionContext] = createCollectionContext(PROVIDER_NAME$2, {
 		collectionRef: { current: null },
 		itemMap: /* @__PURE__ */ new Map()
@@ -17768,7 +17787,7 @@ function createCollection(name) {
 	};
 	CollectionProvider.displayName = PROVIDER_NAME$2;
 	const COLLECTION_SLOT_NAME = name + "CollectionSlot";
-	const CollectionSlotImpl = /* @__PURE__ */ createSlot$1(COLLECTION_SLOT_NAME);
+	const CollectionSlotImpl = /* @__PURE__ */ createSlot(COLLECTION_SLOT_NAME);
 	const CollectionSlot = import_react.forwardRef((props, forwardedRef) => {
 		const { scope, children } = props;
 		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CollectionSlotImpl, {
@@ -17779,7 +17798,7 @@ function createCollection(name) {
 	CollectionSlot.displayName = COLLECTION_SLOT_NAME;
 	const ITEM_SLOT_NAME = name + "CollectionItemSlot";
 	const ITEM_DATA_ATTR = "data-radix-collection-item";
-	const CollectionItemSlotImpl = /* @__PURE__ */ createSlot$1(ITEM_SLOT_NAME);
+	const CollectionItemSlotImpl = /* @__PURE__ */ createSlot(ITEM_SLOT_NAME);
 	const CollectionItemSlot = import_react.forwardRef((props, forwardedRef) => {
 		const { scope, children, ...itemData } = props;
 		const ref = import_react.useRef(null);
@@ -17805,7 +17824,7 @@ function createCollection(name) {
 			const collectionNode = context.collectionRef.current;
 			if (!collectionNode) return [];
 			const orderedNodes = Array.from(collectionNode.querySelectorAll(`[${ITEM_DATA_ATTR}]`));
-			return Array.from(context.itemMap.values()).sort((a, b$1) => orderedNodes.indexOf(a.ref.current) - orderedNodes.indexOf(b$1.ref.current));
+			return Array.from(context.itemMap.values()).sort((a$1, b$1) => orderedNodes.indexOf(a$1.ref.current) - orderedNodes.indexOf(b$1.ref.current));
 		}, [context.collectionRef, context.itemMap]);
 	}
 	return [
@@ -17837,10 +17856,10 @@ var Primitive$1 = [
 	"svg",
 	"ul"
 ].reduce((primitive, node) => {
-	const Slot$1 = /* @__PURE__ */ createSlot$1(`Primitive.${node}`);
+	const Slot$2 = /* @__PURE__ */ createSlot(`Primitive.${node}`);
 	const Node$1 = import_react.forwardRef((props, forwardedRef) => {
 		const { asChild, ...primitiveProps } = props;
-		const Comp = asChild ? Slot$1 : node;
+		const Comp = asChild ? Slot$2 : node;
 		if (typeof window !== "undefined") window[Symbol.for("radix-ui")] = true;
 		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Comp, {
 			...primitiveProps,
@@ -17856,7 +17875,7 @@ var Primitive$1 = [
 function dispatchDiscreteCustomEvent(target, event) {
 	if (target) import_react_dom$5.flushSync(() => target.dispatchEvent(event));
 }
-function useCallbackRef(callback) {
+function useCallbackRef$1(callback) {
 	const callbackRef = import_react.useRef(callback);
 	import_react.useEffect(() => {
 		callbackRef.current = callback;
@@ -17864,7 +17883,7 @@ function useCallbackRef(callback) {
 	return import_react.useMemo(() => (...args) => callbackRef.current?.(...args), []);
 }
 function useEscapeKeydown(onEscapeKeyDownProp, ownerDocument = globalThis?.document) {
-	const onEscapeKeyDown = useCallbackRef(onEscapeKeyDownProp);
+	const onEscapeKeyDown = useCallbackRef$1(onEscapeKeyDownProp);
 	import_react.useEffect(() => {
 		const handleKeyDown = (event) => {
 			if (event.key === "Escape") onEscapeKeyDown(event);
@@ -17986,7 +18005,7 @@ var DismissableLayerBranch = import_react.forwardRef((props, forwardedRef) => {
 });
 DismissableLayerBranch.displayName = BRANCH_NAME;
 function usePointerDownOutside(onPointerDownOutside, ownerDocument = globalThis?.document) {
-	const handlePointerDownOutside = useCallbackRef(onPointerDownOutside);
+	const handlePointerDownOutside = useCallbackRef$1(onPointerDownOutside);
 	const isPointerInsideReactTreeRef = import_react.useRef(false);
 	const handleClickRef = import_react.useRef(() => {});
 	import_react.useEffect(() => {
@@ -18016,7 +18035,7 @@ function usePointerDownOutside(onPointerDownOutside, ownerDocument = globalThis?
 	return { onPointerDownCapture: () => isPointerInsideReactTreeRef.current = true };
 }
 function useFocusOutside(onFocusOutside, ownerDocument = globalThis?.document) {
-	const handleFocusOutside = useCallbackRef(onFocusOutside);
+	const handleFocusOutside = useCallbackRef$1(onFocusOutside);
 	const isFocusInsideReactTreeRef = import_react.useRef(false);
 	import_react.useEffect(() => {
 		const handleFocus = (event) => {
@@ -18045,11 +18064,11 @@ function handleAndDispatchCustomEvent$1(name, handler, detail, { discrete }) {
 	if (discrete) dispatchDiscreteCustomEvent(target, event);
 	else target.dispatchEvent(event);
 }
-var Root$5 = DismissableLayer;
+var Root$7 = DismissableLayer;
 var Branch = DismissableLayerBranch;
 var useLayoutEffect2 = globalThis?.document ? import_react.useLayoutEffect : () => {};
 var import_react_dom$4 = /* @__PURE__ */ __toESM(require_react_dom(), 1);
-var PORTAL_NAME$1 = "Portal";
+var PORTAL_NAME$2 = "Portal";
 var Portal = import_react.forwardRef((props, forwardedRef) => {
 	const { container: containerProp, ...portalProps } = props;
 	const [mounted, setMounted] = import_react.useState(false);
@@ -18060,7 +18079,7 @@ var Portal = import_react.forwardRef((props, forwardedRef) => {
 		ref: forwardedRef
 	}), container) : null;
 });
-Portal.displayName = PORTAL_NAME$1;
+Portal.displayName = PORTAL_NAME$2;
 function useStateMachine(initialState, machine) {
 	return import_react.useReducer((state, event) => {
 		return machine[state][event] ?? state;
@@ -18180,7 +18199,7 @@ function useControllableState({ prop, defaultProp, onChange = () => {}, caller }
 	}
 	return [value, import_react.useCallback((nextValue) => {
 		if (isControlled) {
-			const value2 = isFunction(nextValue) ? nextValue(prop) : nextValue;
+			const value2 = isFunction$1(nextValue) ? nextValue(prop) : nextValue;
 			if (value2 !== prop) onChangeRef.current?.(value2);
 		} else setUncontrolledProp(nextValue);
 	}, [
@@ -18209,7 +18228,7 @@ function useUncontrolledState({ defaultProp, onChange }) {
 		onChangeRef
 	];
 }
-function isFunction(value) {
+function isFunction$1(value) {
 	return typeof value === "function";
 }
 var VISUALLY_HIDDEN_STYLES = Object.freeze({
@@ -18224,7 +18243,7 @@ var VISUALLY_HIDDEN_STYLES = Object.freeze({
 	whiteSpace: "nowrap",
 	wordWrap: "normal"
 });
-var NAME$2 = "VisuallyHidden";
+var NAME$3 = "VisuallyHidden";
 var VisuallyHidden = import_react.forwardRef((props, forwardedRef) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.span, {
 		...props,
@@ -18235,15 +18254,15 @@ var VisuallyHidden = import_react.forwardRef((props, forwardedRef) => {
 		}
 	});
 });
-VisuallyHidden.displayName = NAME$2;
-var Root$4 = VisuallyHidden;
+VisuallyHidden.displayName = NAME$3;
+var Root$6 = VisuallyHidden;
 var import_react_dom$3 = /* @__PURE__ */ __toESM(require_react_dom(), 1);
 var PROVIDER_NAME$1 = "ToastProvider";
 var [Collection$1, useCollection$1, createCollectionScope$1] = createCollection("Toast");
-var [createToastContext, createToastScope] = createContextScope$1("Toast", [createCollectionScope$1]);
+var [createToastContext, createToastScope] = createContextScope("Toast", [createCollectionScope$1]);
 var [ToastProviderProvider, useToastProviderContext] = createToastContext(PROVIDER_NAME$1);
 var ToastProvider$1 = (props) => {
-	const { __scopeToast, label = "Notification", duration = 5e3, swipeDirection = "right", swipeThreshold = 50, children } = props;
+	const { __scopeToast, label = "Notification", duration: duration$2 = 5e3, swipeDirection = "right", swipeThreshold = 50, children } = props;
 	const [viewport, setViewport] = import_react.useState(null);
 	const [toastCount, setToastCount] = import_react.useState(0);
 	const isFocusedToastEscapeKeyDownRef = import_react.useRef(false);
@@ -18254,7 +18273,7 @@ var ToastProvider$1 = (props) => {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastProviderProvider, {
 			scope: __scopeToast,
 			label,
-			duration,
+			duration: duration$2,
 			swipeDirection,
 			swipeThreshold,
 			toastCount,
@@ -18334,7 +18353,7 @@ var ToastViewport$1 = import_react.forwardRef((props, forwardedRef) => {
 	const getSortedTabbableCandidates = import_react.useCallback(({ tabbingDirection }) => {
 		const tabbableCandidates = getItems().map((toastItem) => {
 			const toastNode = toastItem.ref.current;
-			const toastTabbableCandidates = [toastNode, ...getTabbableCandidates(toastNode)];
+			const toastTabbableCandidates = [toastNode, ...getTabbableCandidates$1(toastNode)];
 			return tabbingDirection === "forwards" ? toastTabbableCandidates : toastTabbableCandidates.reverse();
 		});
 		return (tabbingDirection === "forwards" ? tabbableCandidates.reverse() : tabbableCandidates).flat();
@@ -18353,7 +18372,7 @@ var ToastViewport$1 = import_react.forwardRef((props, forwardedRef) => {
 					}
 					const sortedCandidates = getSortedTabbableCandidates({ tabbingDirection: isTabbingBackwards ? "backwards" : "forwards" });
 					const index$1 = sortedCandidates.findIndex((candidate) => candidate === focusedElement);
-					if (focusFirst$1(sortedCandidates.slice(index$1 + 1))) event.preventDefault();
+					if (focusFirst$2(sortedCandidates.slice(index$1 + 1))) event.preventDefault();
 					else isTabbingBackwards ? headFocusProxyRef.current?.focus() : tailFocusProxyRef.current?.focus();
 				}
 			};
@@ -18371,7 +18390,7 @@ var ToastViewport$1 = import_react.forwardRef((props, forwardedRef) => {
 			hasToasts && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FocusProxy, {
 				ref: headFocusProxyRef,
 				onFocusFromOutsideViewport: () => {
-					focusFirst$1(getSortedTabbableCandidates({ tabbingDirection: "forwards" }));
+					focusFirst$2(getSortedTabbableCandidates({ tabbingDirection: "forwards" }));
 				}
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection$1.Slot, {
@@ -18385,7 +18404,7 @@ var ToastViewport$1 = import_react.forwardRef((props, forwardedRef) => {
 			hasToasts && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FocusProxy, {
 				ref: tailFocusProxyRef,
 				onFocusFromOutsideViewport: () => {
-					focusFirst$1(getSortedTabbableCandidates({ tabbingDirection: "backwards" }));
+					focusFirst$2(getSortedTabbableCandidates({ tabbingDirection: "backwards" }));
 				}
 			})
 		]
@@ -18428,8 +18447,8 @@ var Toast$2 = import_react.forwardRef((props, forwardedRef) => {
 			...toastProps,
 			ref: forwardedRef,
 			onClose: () => setOpen(false),
-			onPause: useCallbackRef(props.onPause),
-			onResume: useCallbackRef(props.onResume),
+			onPause: useCallbackRef$1(props.onPause),
+			onResume: useCallbackRef$1(props.onResume),
 			onSwipeStart: composeEventHandlers(props.onSwipeStart, (event) => {
 				event.currentTarget.setAttribute("data-swipe", "start");
 			}),
@@ -18467,12 +18486,12 @@ var ToastImpl = import_react.forwardRef((props, forwardedRef) => {
 	const composedRefs = useComposedRefs(forwardedRef, (node2) => setNode(node2));
 	const pointerStartRef = import_react.useRef(null);
 	const swipeDeltaRef = import_react.useRef(null);
-	const duration = durationProp || context.duration;
+	const duration$2 = durationProp || context.duration;
 	const closeTimerStartTimeRef = import_react.useRef(0);
-	const closeTimerRemainingTimeRef = import_react.useRef(duration);
+	const closeTimerRemainingTimeRef = import_react.useRef(duration$2);
 	const closeTimerRef = import_react.useRef(0);
 	const { onToastAdd, onToastRemove } = context;
-	const handleClose = useCallbackRef(() => {
+	const handleClose = useCallbackRef$1(() => {
 		if (node?.contains(document.activeElement)) context.viewport?.focus();
 		onClose();
 	});
@@ -18504,16 +18523,16 @@ var ToastImpl = import_react.forwardRef((props, forwardedRef) => {
 		}
 	}, [
 		context.viewport,
-		duration,
+		duration$2,
 		onPause,
 		onResume,
 		startTimer
 	]);
 	import_react.useEffect(() => {
-		if (open && !context.isClosePausedRef.current) startTimer(duration);
+		if (open && !context.isClosePausedRef.current) startTimer(duration$2);
 	}, [
 		open,
-		duration,
+		duration$2,
 		context.isClosePausedRef,
 		startTimer
 	]);
@@ -18535,7 +18554,7 @@ var ToastImpl = import_react.forwardRef((props, forwardedRef) => {
 		onClose: handleClose,
 		children: import_react_dom$3.createPortal(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection$1.ItemSlot, {
 			scope: __scopeToast,
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$5, {
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$7, {
 				asChild: true,
 				onEscapeKeyDown: composeEventHandlers(onEscapeKeyDown, () => {
 					if (!context.isFocusedToastEscapeKeyDownRef.current) handleClose();
@@ -18638,7 +18657,7 @@ var ToastAnnounce = (props) => {
 		})
 	});
 };
-var TITLE_NAME = "ToastTitle";
+var TITLE_NAME$1 = "ToastTitle";
 var ToastTitle$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeToast, ...titleProps } = props;
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
@@ -18646,8 +18665,8 @@ var ToastTitle$1 = import_react.forwardRef((props, forwardedRef) => {
 		ref: forwardedRef
 	});
 });
-ToastTitle$1.displayName = TITLE_NAME;
-var DESCRIPTION_NAME = "ToastDescription";
+ToastTitle$1.displayName = TITLE_NAME$1;
+var DESCRIPTION_NAME$1 = "ToastDescription";
 var ToastDescription$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeToast, ...descriptionProps } = props;
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
@@ -18655,7 +18674,7 @@ var ToastDescription$1 = import_react.forwardRef((props, forwardedRef) => {
 		ref: forwardedRef
 	});
 });
-ToastDescription$1.displayName = DESCRIPTION_NAME;
+ToastDescription$1.displayName = DESCRIPTION_NAME$1;
 var ACTION_NAME = "ToastAction";
 var ToastAction$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { altText, ...actionProps } = props;
@@ -18673,10 +18692,10 @@ var ToastAction$1 = import_react.forwardRef((props, forwardedRef) => {
 	});
 });
 ToastAction$1.displayName = ACTION_NAME;
-var CLOSE_NAME = "ToastClose";
+var CLOSE_NAME$1 = "ToastClose";
 var ToastClose$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeToast, ...closeProps } = props;
-	const interactiveContext = useToastInteractiveContext(CLOSE_NAME, __scopeToast);
+	const interactiveContext = useToastInteractiveContext(CLOSE_NAME$1, __scopeToast);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastAnnounceExclude, {
 		asChild: true,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.button, {
@@ -18687,7 +18706,7 @@ var ToastClose$1 = import_react.forwardRef((props, forwardedRef) => {
 		})
 	});
 });
-ToastClose$1.displayName = CLOSE_NAME;
+ToastClose$1.displayName = CLOSE_NAME$1;
 var ToastAnnounceExclude = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeToast, altText, ...announceExcludeProps } = props;
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
@@ -18701,10 +18720,10 @@ function getAnnounceTextContent(container) {
 	const textContent = [];
 	Array.from(container.childNodes).forEach((node) => {
 		if (node.nodeType === node.TEXT_NODE && node.textContent) textContent.push(node.textContent);
-		if (isHTMLElement$1(node)) {
-			const isHidden = node.ariaHidden || node.hidden || node.style.display === "none";
+		if (isHTMLElement$2(node)) {
+			const isHidden$1 = node.ariaHidden || node.hidden || node.style.display === "none";
 			const isExcluded = node.dataset.radixToastAnnounceExclude === "";
-			if (!isHidden) if (isExcluded) {
+			if (!isHidden$1) if (isExcluded) {
 				const altText = node.dataset.radixToastAnnounceAlt;
 				if (altText) textContent.push(altText);
 			} else textContent.push(...getAnnounceTextContent(node));
@@ -18731,7 +18750,7 @@ var isDeltaInDirection = (delta, direction, threshold = 0) => {
 	else return !isDeltaX && deltaY > threshold;
 };
 function useNextFrame(callback = () => {}) {
-	const fn = useCallbackRef(callback);
+	const fn = useCallbackRef$1(callback);
 	useLayoutEffect2(() => {
 		let raf1 = 0;
 		let raf2 = 0;
@@ -18742,10 +18761,10 @@ function useNextFrame(callback = () => {}) {
 		};
 	}, [fn]);
 }
-function isHTMLElement$1(node) {
+function isHTMLElement$2(node) {
 	return node.nodeType === node.ELEMENT_NODE;
 }
-function getTabbableCandidates(container) {
+function getTabbableCandidates$1(container) {
 	const nodes = [];
 	const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, { acceptNode: (node) => {
 		const isHiddenInput = node.tagName === "INPUT" && node.type === "hidden";
@@ -18755,7 +18774,7 @@ function getTabbableCandidates(container) {
 	while (walker.nextNode()) nodes.push(walker.currentNode);
 	return nodes;
 }
-function focusFirst$1(candidates) {
+function focusFirst$2(candidates) {
 	const previouslyFocusedElement = document.activeElement;
 	return candidates.some((candidate) => {
 		if (candidate === previouslyFocusedElement) return true;
@@ -18766,29 +18785,29 @@ function focusFirst$1(candidates) {
 var Provider$1 = ToastProvider$1;
 var Viewport = ToastViewport$1;
 var Root2$2 = Toast$2;
-var Title = ToastTitle$1;
-var Description = ToastDescription$1;
+var Title$1 = ToastTitle$1;
+var Description$1 = ToastDescription$1;
 var Action = ToastAction$1;
-var Close = ToastClose$1;
-function r(e) {
-	var t, f, n = "";
-	if ("string" == typeof e || "number" == typeof e) n += e;
+var Close$1 = ToastClose$1;
+function r$1(e) {
+	var t$1, f, n$1 = "";
+	if ("string" == typeof e || "number" == typeof e) n$1 += e;
 	else if ("object" == typeof e) if (Array.isArray(e)) {
-		var o = e.length;
-		for (t = 0; t < o; t++) e[t] && (f = r(e[t])) && (n && (n += " "), n += f);
-	} else for (f in e) e[f] && (n && (n += " "), n += f);
-	return n;
+		var o$1 = e.length;
+		for (t$1 = 0; t$1 < o$1; t$1++) e[t$1] && (f = r$1(e[t$1])) && (n$1 && (n$1 += " "), n$1 += f);
+	} else for (f in e) e[f] && (n$1 && (n$1 += " "), n$1 += f);
+	return n$1;
 }
 function clsx() {
-	for (var e, t, f = 0, n = "", o = arguments.length; f < o; f++) (e = arguments[f]) && (t = r(e)) && (n && (n += " "), n += t);
-	return n;
+	for (var e, t$1, f = 0, n$1 = "", o$1 = arguments.length; f < o$1; f++) (e = arguments[f]) && (t$1 = r$1(e)) && (n$1 && (n$1 += " "), n$1 += t$1);
+	return n$1;
 }
 var falsyToString = (value) => typeof value === "boolean" ? `${value}` : value === 0 ? "0" : value;
 const cx = clsx;
-const cva = (base, config) => (props) => {
+const cva = (base, config$1) => (props) => {
 	var _config_compoundVariants;
-	if ((config === null || config === void 0 ? void 0 : config.variants) == null) return cx(base, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
-	const { variants, defaultVariants } = config;
+	if ((config$1 === null || config$1 === void 0 ? void 0 : config$1.variants) == null) return cx(base, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
+	const { variants, defaultVariants } = config$1;
 	const getVariantClassNames = Object.keys(variants).map((variant) => {
 		const variantProp = props === null || props === void 0 ? void 0 : props[variant];
 		const defaultVariantProp = defaultVariants === null || defaultVariants === void 0 ? void 0 : defaultVariants[variant];
@@ -18802,7 +18821,7 @@ const cva = (base, config) => (props) => {
 		acc[key] = value;
 		return acc;
 	}, {});
-	return cx(base, getVariantClassNames, config === null || config === void 0 ? void 0 : (_config_compoundVariants = config.compoundVariants) === null || _config_compoundVariants === void 0 ? void 0 : _config_compoundVariants.reduce((acc, param) => {
+	return cx(base, getVariantClassNames, config$1 === null || config$1 === void 0 ? void 0 : (_config_compoundVariants = config$1.compoundVariants) === null || _config_compoundVariants === void 0 ? void 0 : _config_compoundVariants.reduce((acc, param) => {
 		let { class: cvClass, className: cvClassName, ...compoundVariantOptions } = param;
 		return Object.entries(compoundVariantOptions).every((param$1) => {
 			let [key, value] = param$1;
@@ -18826,8 +18845,8 @@ const cva = (base, config) => (props) => {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var mergeClasses = (...classes) => classes.filter((className, index$1, array) => {
-	return Boolean(className) && className.trim() !== "" && array.indexOf(className) === index$1;
+var mergeClasses = (...classes) => classes.filter((className, index$1, array$1) => {
+	return Boolean(className) && className.trim() !== "" && array$1.indexOf(className) === index$1;
 }).join(" ").trim();
 /**
 * @license lucide-react v0.575.0 - ISC
@@ -18835,22 +18854,22 @@ var mergeClasses = (...classes) => classes.filter((className, index$1, array) =>
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+var toKebabCase = (string$2) => string$2.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
 /**
 * @license lucide-react v0.575.0 - ISC
 *
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var toCamelCase = (string) => string.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) => p2 ? p2.toUpperCase() : p1.toLowerCase());
+var toCamelCase = (string$2) => string$2.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) => p2 ? p2.toUpperCase() : p1.toLowerCase());
 /**
 * @license lucide-react v0.575.0 - ISC
 *
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var toPascalCase = (string) => {
-	const camelCase = toCamelCase(string);
+var toPascalCase = (string$2) => {
+	const camelCase = toCamelCase(string$2);
 	return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
 };
 /**
@@ -19305,9 +19324,9 @@ var X = createLucideIcon("x", [["path", {
 	key: "d8bk6v"
 }]]);
 var CLASS_PART_SEPARATOR = "-";
-var createClassGroupUtils = (config) => {
-	const classMap = createClassMap(config);
-	const { conflictingClassGroups, conflictingClassGroupModifiers } = config;
+var createClassGroupUtils = (config$1) => {
+	const classMap = createClassMap(config$1);
+	const { conflictingClassGroups, conflictingClassGroupModifiers } = config$1;
 	const getClassGroupId = (className) => {
 		const classParts = className.split(CLASS_PART_SEPARATOR);
 		if (classParts[0] === "" && classParts.length !== 1) classParts.shift();
@@ -19341,13 +19360,13 @@ var getGroupIdForArbitraryProperty = (className) => {
 		if (property) return "arbitrary.." + property;
 	}
 };
-var createClassMap = (config) => {
-	const { theme, prefix } = config;
+var createClassMap = (config$1) => {
+	const { theme, prefix } = config$1;
 	const classMap = {
 		nextPart: /* @__PURE__ */ new Map(),
 		validators: []
 	};
-	getPrefixedClassGroupEntries(Object.entries(config.classGroups), prefix).forEach(([classGroupId, classGroup]) => {
+	getPrefixedClassGroupEntries(Object.entries(config$1.classGroups), prefix).forEach(([classGroupId, classGroup]) => {
 		processClassesRecursively(classGroup, classMap, classGroupId, theme);
 	});
 	return classMap;
@@ -19430,8 +19449,8 @@ var createLruCache = (maxCacheSize) => {
 	};
 };
 var IMPORTANT_MODIFIER = "!";
-var createParseClassName = (config) => {
-	const { separator, experimentalParseClassName } = config;
+var createParseClassName = (config$1) => {
+	const { separator, experimentalParseClassName } = config$1;
 	const isSeparatorSingleCharacter = separator.length === 1;
 	const firstSeparatorCharacter = separator[0];
 	const separatorLength = separator.length;
@@ -19484,10 +19503,10 @@ var sortModifiers = (modifiers) => {
 	sortedModifiers.push(...unsortedModifiers.sort());
 	return sortedModifiers;
 };
-var createConfigUtils = (config) => ({
-	cache: createLruCache(config.cacheSize),
-	parseClassName: createParseClassName(config),
-	...createClassGroupUtils(config)
+var createConfigUtils = (config$1) => ({
+	cache: createLruCache(config$1.cacheSize),
+	parseClassName: createParseClassName(config$1),
+	...createClassGroupUtils(config$1)
 });
 var SPLIT_CLASSES_REGEX = /\s+/;
 var mergeClassList = (classList, configUtils) => {
@@ -19518,8 +19537,8 @@ var mergeClassList = (classList, configUtils) => {
 		if (classGroupsInConflict.includes(classId)) continue;
 		classGroupsInConflict.push(classId);
 		const conflictGroups = getConflictingClassGroupIds(classGroupId, hasPostfixModifier);
-		for (let i = 0; i < conflictGroups.length; ++i) {
-			const group = conflictGroups[i];
+		for (let i$2 = 0; i$2 < conflictGroups.length; ++i$2) {
+			const group = conflictGroups[i$2];
 			classGroupsInConflict.push(modifierId + group);
 		}
 		result = originalClassName + (result.length > 0 ? " " + result : result);
@@ -19530,26 +19549,26 @@ function twJoin() {
 	let index$1 = 0;
 	let argument;
 	let resolvedValue;
-	let string = "";
+	let string$2 = "";
 	while (index$1 < arguments.length) if (argument = arguments[index$1++]) {
 		if (resolvedValue = toValue(argument)) {
-			string && (string += " ");
-			string += resolvedValue;
+			string$2 && (string$2 += " ");
+			string$2 += resolvedValue;
 		}
 	}
-	return string;
+	return string$2;
 }
 var toValue = (mix) => {
 	if (typeof mix === "string") return mix;
 	let resolvedValue;
-	let string = "";
+	let string$2 = "";
 	for (let k = 0; k < mix.length; k++) if (mix[k]) {
 		if (resolvedValue = toValue(mix[k])) {
-			string && (string += " ");
-			string += resolvedValue;
+			string$2 && (string$2 += " ");
+			string$2 += resolvedValue;
 		}
 	}
-	return string;
+	return string$2;
 };
 function createTailwindMerge(createConfigFirst, ...createConfigRest) {
 	let configUtils;
@@ -20720,26 +20739,26 @@ var ToastAction = import_react.forwardRef(({ className, ...props }, ref) => /* @
 	...props
 }));
 ToastAction.displayName = Action.displayName;
-var ToastClose = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Close, {
+var ToastClose = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Close$1, {
 	ref,
 	className: cn("absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600", className),
 	"toast-close": "",
 	...props,
 	children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "h-4 w-4" })
 }));
-ToastClose.displayName = Close.displayName;
-var ToastTitle = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Title, {
+ToastClose.displayName = Close$1.displayName;
+var ToastTitle = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Title$1, {
 	ref,
 	className: cn("text-sm font-semibold", className),
 	...props
 }));
-ToastTitle.displayName = Title.displayName;
-var ToastDescription = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Description, {
+ToastTitle.displayName = Title$1.displayName;
+var ToastDescription = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Description$1, {
 	ref,
 	className: cn("text-sm opacity-90", className),
 	...props
 }));
-ToastDescription.displayName = Description.displayName;
+ToastDescription.displayName = Description$1.displayName;
 function Toaster() {
 	const { toasts } = useToast();
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(ToastProvider, { children: [toasts.map(function({ id, title, description, action, ...props }) {
@@ -20756,25 +20775,25 @@ function Toaster() {
 		}, id);
 	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastViewport, {})] });
 }
-var M = (e, i, s, u, m, a, l, h) => {
+var M = (e, i$2, s$2, u, m, a$1, l, h) => {
 	let d = document.documentElement, w = ["light", "dark"];
-	function p(n) {
+	function p(n$1) {
 		(Array.isArray(e) ? e : [e]).forEach((y) => {
-			let k = y === "class", S = k && a ? m.map((f) => a[f] || f) : m;
-			k ? (d.classList.remove(...S), d.classList.add(a && a[n] ? a[n] : n)) : d.setAttribute(y, n);
-		}), R(n);
+			let k = y === "class", S = k && a$1 ? m.map((f) => a$1[f] || f) : m;
+			k ? (d.classList.remove(...S), d.classList.add(a$1 && a$1[n$1] ? a$1[n$1] : n$1)) : d.setAttribute(y, n$1);
+		}), R(n$1);
 	}
-	function R(n) {
-		h && w.includes(n) && (d.style.colorScheme = n);
+	function R(n$1) {
+		h && w.includes(n$1) && (d.style.colorScheme = n$1);
 	}
 	function c() {
 		return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 	}
 	if (u) p(u);
 	else try {
-		let n = localStorage.getItem(i) || s;
-		p(l && n === "system" ? c() : n);
-	} catch (n) {}
+		let n$1 = localStorage.getItem(i$2) || s$2;
+		p(l && n$1 === "system" ? c() : n$1);
+	} catch (n$1) {}
 }, x = import_react.createContext(void 0), U = {
 	setTheme: (e) => {},
 	themes: []
@@ -20782,11 +20801,11 @@ var M = (e, i, s, u, m, a, l, h) => {
 	var e;
 	return (e = import_react.useContext(x)) != null ? e : U;
 };
-import_react.memo(({ forcedTheme: e, storageKey: i, attribute: s, enableSystem: u, enableColorScheme: m, defaultTheme: a, value: l, themes: h, nonce: d, scriptProps: w }) => {
+import_react.memo(({ forcedTheme: e, storageKey: i$2, attribute: s$2, enableSystem: u, enableColorScheme: m, defaultTheme: a$1, value: l, themes: h, nonce: d, scriptProps: w }) => {
 	let p = JSON.stringify([
-		s,
-		i,
-		a,
+		s$2,
+		i$2,
+		a$1,
 		e,
 		h,
 		l,
@@ -20823,9 +20842,9 @@ var Loader = ({ visible, className }) => {
 	return /* @__PURE__ */ import_react.createElement("div", {
 		className: ["sonner-loading-wrapper", className].filter(Boolean).join(" "),
 		"data-visible": visible
-	}, /* @__PURE__ */ import_react.createElement("div", { className: "sonner-spinner" }, bars.map((_$1, i) => /* @__PURE__ */ import_react.createElement("div", {
+	}, /* @__PURE__ */ import_react.createElement("div", { className: "sonner-spinner" }, bars.map((_$1, i$2) => /* @__PURE__ */ import_react.createElement("div", {
 		className: "sonner-loading-bar",
-		key: `spinner-bar-${i}`
+		key: `spinner-bar-${i$2}`
 	}))));
 };
 var SuccessIcon = /* @__PURE__ */ import_react.createElement("svg", {
@@ -21093,10 +21112,10 @@ var Observer = class {
 			if (typeof id !== "string" && typeof id !== "number") return { unwrap };
 			else return Object.assign(id, { unwrap });
 		};
-		this.custom = (jsx$19, data) => {
+		this.custom = (jsx$22, data) => {
 			const id = (data == null ? void 0 : data.id) || toastsCounter++;
 			this.create({
-				jsx: jsx$19(id),
+				jsx: jsx$22(id),
 				id,
 				...data
 			});
@@ -21188,7 +21207,7 @@ var Toast = (props) => {
 		var _toast_closeButton;
 		return (_toast_closeButton = toast$2.closeButton) != null ? _toast_closeButton : closeButtonFromToaster;
 	}, [toast$2.closeButton, closeButtonFromToaster]);
-	const duration = import_react.useMemo(() => toast$2.duration || durationFromToaster || TOAST_LIFETIME, [toast$2.duration, durationFromToaster]);
+	const duration$2 = import_react.useMemo(() => toast$2.duration || durationFromToaster || TOAST_LIFETIME, [toast$2.duration, durationFromToaster]);
 	const closeTimerStartTimeRef = import_react.useRef(0);
 	const offset$3 = import_react.useRef(0);
 	const lastCloseTimerStartTimeRef = import_react.useRef(0);
@@ -21205,8 +21224,8 @@ var Toast = (props) => {
 	const disabled = toastType === "loading";
 	offset$3.current = import_react.useMemo(() => heightIndex * gap + toastsHeightBefore, [heightIndex, toastsHeightBefore]);
 	import_react.useEffect(() => {
-		remainingTime.current = duration;
-	}, [duration]);
+		remainingTime.current = duration$2;
+	}, [duration$2]);
 	import_react.useEffect(() => {
 		setMounted(true);
 	}, []);
@@ -21509,7 +21528,7 @@ function assignOffset(defaultOffset, mobileOffset) {
 	return styles;
 }
 var Toaster$2 = /* @__PURE__ */ import_react.forwardRef(function Toaster$3(props, ref) {
-	const { id, invert, position = "bottom-right", hotkey = ["altKey", "KeyT"], expand, closeButton, className, offset: offset$3, mobileOffset, theme = "light", richColors, duration, style, visibleToasts = VISIBLE_TOASTS_AMOUNT, toastOptions, dir = getDocumentDirection(), gap = GAP, icons, containerAriaLabel = "Notifications" } = props;
+	const { id, invert, position = "bottom-right", hotkey = ["altKey", "KeyT"], expand, closeButton, className, offset: offset$3, mobileOffset, theme = "light", richColors, duration: duration$2, style, visibleToasts = VISIBLE_TOASTS_AMOUNT, toastOptions, dir = getDocumentDirection(), gap = GAP, icons, containerAriaLabel = "Notifications" } = props;
 	const [toasts, setToasts] = import_react.useState([]);
 	const filteredToasts = import_react.useMemo(() => {
 		if (id) return toasts.filter((toast$2) => toast$2.toasterId === id);
@@ -21537,17 +21556,17 @@ var Toaster$2 = /* @__PURE__ */ import_react.forwardRef(function Toaster$3(props
 		return ToastState.subscribe((toast$2) => {
 			if (toast$2.dismiss) {
 				requestAnimationFrame(() => {
-					setToasts((toasts$1) => toasts$1.map((t) => t.id === toast$2.id ? {
-						...t,
+					setToasts((toasts$1) => toasts$1.map((t$1) => t$1.id === toast$2.id ? {
+						...t$1,
 						delete: true
-					} : t));
+					} : t$1));
 				});
 				return;
 			}
 			setTimeout(() => {
 				import_react_dom$2.flushSync(() => {
 					setToasts((toasts$1) => {
-						const indexOfExistingToast = toasts$1.findIndex((t) => t.id === toast$2.id);
+						const indexOfExistingToast = toasts$1.findIndex((t$1) => t$1.id === toast$2.id);
 						if (indexOfExistingToast !== -1) return [
 							...toasts$1.slice(0, indexOfExistingToast),
 							{
@@ -21676,7 +21695,7 @@ var Toaster$2 = /* @__PURE__ */ import_react.forwardRef(function Toaster$3(props
 				index: index$2,
 				toast: toast$2,
 				defaultRichColors: richColors,
-				duration: (_toastOptions_duration = toastOptions == null ? void 0 : toastOptions.duration) != null ? _toastOptions_duration : duration,
+				duration: (_toastOptions_duration = toastOptions == null ? void 0 : toastOptions.duration) != null ? _toastOptions_duration : duration$2,
 				className: toastOptions == null ? void 0 : toastOptions.className,
 				descriptionClassName: toastOptions == null ? void 0 : toastOptions.descriptionClassName,
 				invert,
@@ -21691,7 +21710,7 @@ var Toaster$2 = /* @__PURE__ */ import_react.forwardRef(function Toaster$3(props
 				actionButtonStyle: toastOptions == null ? void 0 : toastOptions.actionButtonStyle,
 				closeButtonAriaLabel: toastOptions == null ? void 0 : toastOptions.closeButtonAriaLabel,
 				removeToast,
-				toasts: filteredToasts.filter((t) => t.position == toast$2.position),
+				toasts: filteredToasts.filter((t$1) => t$1.position == toast$2.position),
 				heights: heights.filter((h) => h.position == toast$2.position),
 				setHeights,
 				expandByDefault: expand,
@@ -21717,11 +21736,11 @@ var Toaster$1 = ({ ...props }) => {
 	});
 };
 var useReactId = import_react[" useId ".trim().toString()] || (() => void 0);
-var count = 0;
+var count$1 = 0;
 function useId(deterministicId) {
 	const [id, setId] = import_react.useState(useReactId());
 	useLayoutEffect2(() => {
-		if (!deterministicId) setId((reactId) => reactId ?? String(count++));
+		if (!deterministicId) setId((reactId) => reactId ?? String(count$1++));
 	}, [deterministicId]);
 	return deterministicId || (id ? `radix-${id}` : "");
 }
@@ -21902,11 +21921,11 @@ function computeCoordsFromPlacement(_ref, placement, rtl) {
 	}
 	return coords;
 }
-async function detectOverflow$1(state, options) {
+async function detectOverflow$1(state, options$1) {
 	var _await$platform$isEle;
-	if (options === void 0) options = {};
+	if (options$1 === void 0) options$1 = {};
 	const { x: x$1, y, platform: platform$1, rects, elements, strategy } = state;
-	const { boundary = "clippingAncestors", rootBoundary = "viewport", elementContext = "floating", altBoundary = false, padding = 0 } = evaluate(options, state);
+	const { boundary = "clippingAncestors", rootBoundary = "viewport", elementContext = "floating", altBoundary = false, padding = 0 } = evaluate(options$1, state);
 	const paddingObject = getPaddingObject(padding);
 	const element = elements[altBoundary ? elementContext === "floating" ? "reference" : "floating" : elementContext];
 	const clippingClientRect = rectToClientRect(await platform$1.getClippingRect({
@@ -21942,8 +21961,8 @@ async function detectOverflow$1(state, options) {
 		right: (elementClientRect.right - clippingClientRect.right + paddingObject.right) / offsetScale.x
 	};
 }
-var computePosition$1 = async (reference, floating, config) => {
-	const { placement = "bottom", strategy = "absolute", middleware = [], platform: platform$1 } = config;
+var computePosition$1 = async (reference, floating, config$1) => {
+	const { placement = "bottom", strategy = "absolute", middleware = [], platform: platform$1 } = config$1;
 	const validMiddleware = middleware.filter(Boolean);
 	const rtl = await (platform$1.isRTL == null ? void 0 : platform$1.isRTL(floating));
 	let rects = await platform$1.getElementRects({
@@ -21955,9 +21974,9 @@ var computePosition$1 = async (reference, floating, config) => {
 	let statefulPlacement = placement;
 	let middlewareData = {};
 	let resetCount = 0;
-	for (let i = 0; i < validMiddleware.length; i++) {
+	for (let i$2 = 0; i$2 < validMiddleware.length; i$2++) {
 		var _platform$detectOverf;
-		const { name, fn } = validMiddleware[i];
+		const { name, fn } = validMiddleware[i$2];
 		const { x: nextX, y: nextY, data, reset } = await fn({
 			x: x$1,
 			y,
@@ -21995,7 +22014,7 @@ var computePosition$1 = async (reference, floating, config) => {
 				}) : reset.rects;
 				({x: x$1, y} = computeCoordsFromPlacement(rects, statefulPlacement, rtl));
 			}
-			i = -1;
+			i$2 = -1;
 		}
 	}
 	return {
@@ -22006,12 +22025,12 @@ var computePosition$1 = async (reference, floating, config) => {
 		middlewareData
 	};
 };
-var arrow$2 = (options) => ({
+var arrow$2 = (options$1) => ({
 	name: "arrow",
-	options,
+	options: options$1,
 	async fn(state) {
 		const { x: x$1, y, placement, rects, platform: platform$1, elements, middlewareData } = state;
-		const { element, padding = 0 } = evaluate(options, state) || {};
+		const { element, padding = 0 } = evaluate(options$1, state) || {};
 		if (element == null) return {};
 		const paddingObject = getPaddingObject(padding);
 		const coords = {
@@ -22051,15 +22070,15 @@ var arrow$2 = (options) => ({
 		};
 	}
 });
-var flip$2 = function(options) {
-	if (options === void 0) options = {};
+var flip$2 = function(options$1) {
+	if (options$1 === void 0) options$1 = {};
 	return {
 		name: "flip",
-		options,
+		options: options$1,
 		async fn(state) {
 			var _middlewareData$arrow, _middlewareData$flip;
 			const { placement, middlewareData, rects, initialPlacement, platform: platform$1, elements } = state;
-			const { mainAxis: checkMainAxis = true, crossAxis: checkCrossAxis = true, fallbackPlacements: specifiedFallbackPlacements, fallbackStrategy = "bestFit", fallbackAxisSideDirection = "none", flipAlignment = true, ...detectOverflowOptions } = evaluate(options, state);
+			const { mainAxis: checkMainAxis = true, crossAxis: checkCrossAxis = true, fallbackPlacements: specifiedFallbackPlacements, fallbackStrategy = "bestFit", fallbackAxisSideDirection = "none", flipAlignment = true, ...detectOverflowOptions } = evaluate(options$1, state);
 			if ((_middlewareData$arrow = middlewareData.arrow) != null && _middlewareData$arrow.alignmentOffset) return {};
 			const side = getSide(placement);
 			const initialSideAxis = getSideAxis(initialPlacement);
@@ -22094,7 +22113,7 @@ var flip$2 = function(options) {
 						reset: { placement: nextPlacement }
 					};
 				}
-				let resetPlacement = (_overflowsData$filter = overflowsData.filter((d) => d.overflows[0] <= 0).sort((a, b$1) => a.overflows[1] - b$1.overflows[1])[0]) == null ? void 0 : _overflowsData$filter.placement;
+				let resetPlacement = (_overflowsData$filter = overflowsData.filter((d) => d.overflows[0] <= 0).sort((a$1, b$1) => a$1.overflows[1] - b$1.overflows[1])[0]) == null ? void 0 : _overflowsData$filter.placement;
 				if (!resetPlacement) switch (fallbackStrategy) {
 					case "bestFit": {
 						var _overflowsData$filter2;
@@ -22104,7 +22123,7 @@ var flip$2 = function(options) {
 								return currentSideAxis === initialSideAxis || currentSideAxis === "y";
 							}
 							return true;
-						}).map((d) => [d.placement, d.overflows.filter((overflow$1) => overflow$1 > 0).reduce((acc, overflow$1) => acc + overflow$1, 0)]).sort((a, b$1) => a[1] - b$1[1])[0]) == null ? void 0 : _overflowsData$filter2[0];
+						}).map((d) => [d.placement, d.overflows.filter((overflow$1) => overflow$1 > 0).reduce((acc, overflow$1) => acc + overflow$1, 0)]).sort((a$1, b$1) => a$1[1] - b$1[1])[0]) == null ? void 0 : _overflowsData$filter2[0];
 						if (placement$1) resetPlacement = placement$1;
 						break;
 					}
@@ -22129,14 +22148,14 @@ function getSideOffsets(overflow, rect) {
 function isAnySideFullyClipped(overflow) {
 	return sides.some((side) => overflow[side] >= 0);
 }
-var hide$2 = function(options) {
-	if (options === void 0) options = {};
+var hide$2 = function(options$1) {
+	if (options$1 === void 0) options$1 = {};
 	return {
 		name: "hide",
-		options,
+		options: options$1,
 		async fn(state) {
 			const { rects, platform: platform$1 } = state;
-			const { strategy = "referenceHidden", ...detectOverflowOptions } = evaluate(options, state);
+			const { strategy = "referenceHidden", ...detectOverflowOptions } = evaluate(options$1, state);
 			switch (strategy) {
 				case "referenceHidden": {
 					const offsets = getSideOffsets(await platform$1.detectOverflow(state, {
@@ -22164,7 +22183,7 @@ var hide$2 = function(options) {
 	};
 };
 var originSides = /* @__PURE__ */ new Set(["left", "top"]);
-async function convertValueToCoords(state, options) {
+async function convertValueToCoords(state, options$1) {
 	const { placement, platform: platform$1, elements } = state;
 	const rtl = await (platform$1.isRTL == null ? void 0 : platform$1.isRTL(elements.floating));
 	const side = getSide(placement);
@@ -22172,7 +22191,7 @@ async function convertValueToCoords(state, options) {
 	const isVertical = getSideAxis(placement) === "y";
 	const mainAxisMulti = originSides.has(side) ? -1 : 1;
 	const crossAxisMulti = rtl && isVertical ? -1 : 1;
-	const rawValue = evaluate(options, state);
+	const rawValue = evaluate(options$1, state);
 	let { mainAxis, crossAxis, alignmentAxis } = typeof rawValue === "number" ? {
 		mainAxis: rawValue,
 		crossAxis: 0,
@@ -22191,15 +22210,15 @@ async function convertValueToCoords(state, options) {
 		y: crossAxis * crossAxisMulti
 	};
 }
-var offset$2 = function(options) {
-	if (options === void 0) options = 0;
+var offset$2 = function(options$1) {
+	if (options$1 === void 0) options$1 = 0;
 	return {
 		name: "offset",
-		options,
+		options: options$1,
 		async fn(state) {
 			var _middlewareData$offse, _middlewareData$arrow;
 			const { x: x$1, y, placement, middlewareData } = state;
-			const diffCoords = await convertValueToCoords(state, options);
+			const diffCoords = await convertValueToCoords(state, options$1);
 			if (placement === ((_middlewareData$offse = middlewareData.offset) == null ? void 0 : _middlewareData$offse.placement) && (_middlewareData$arrow = middlewareData.arrow) != null && _middlewareData$arrow.alignmentOffset) return {};
 			return {
 				x: x$1 + diffCoords.x,
@@ -22212,11 +22231,11 @@ var offset$2 = function(options) {
 		}
 	};
 };
-var shift$2 = function(options) {
-	if (options === void 0) options = {};
+var shift$2 = function(options$1) {
+	if (options$1 === void 0) options$1 = {};
 	return {
 		name: "shift",
-		options,
+		options: options$1,
 		async fn(state) {
 			const { x: x$1, y, placement, platform: platform$1 } = state;
 			const { mainAxis: checkMainAxis = true, crossAxis: checkCrossAxis = false, limiter = { fn: (_ref) => {
@@ -22225,7 +22244,7 @@ var shift$2 = function(options) {
 					x: x$2,
 					y: y$1
 				};
-			} }, ...detectOverflowOptions } = evaluate(options, state);
+			} }, ...detectOverflowOptions } = evaluate(options$1, state);
 			const coords = {
 				x: x$1,
 				y
@@ -22268,13 +22287,13 @@ var shift$2 = function(options) {
 		}
 	};
 };
-var limitShift$2 = function(options) {
-	if (options === void 0) options = {};
+var limitShift$2 = function(options$1) {
+	if (options$1 === void 0) options$1 = {};
 	return {
-		options,
+		options: options$1,
 		fn(state) {
 			const { x: x$1, y, placement, rects, middlewareData } = state;
-			const { offset: offset$3 = 0, mainAxis: checkMainAxis = true, crossAxis: checkCrossAxis = true } = evaluate(options, state);
+			const { offset: offset$3 = 0, mainAxis: checkMainAxis = true, crossAxis: checkCrossAxis = true } = evaluate(options$1, state);
 			const coords = {
 				x: x$1,
 				y
@@ -22315,15 +22334,15 @@ var limitShift$2 = function(options) {
 		}
 	};
 };
-var size$2 = function(options) {
-	if (options === void 0) options = {};
+var size$2 = function(options$1) {
+	if (options$1 === void 0) options$1 = {};
 	return {
 		name: "size",
-		options,
+		options: options$1,
 		async fn(state) {
 			var _state$middlewareData, _state$middlewareData2;
 			const { placement, rects, platform: platform$1, elements } = state;
-			const { apply = () => {}, ...detectOverflowOptions } = evaluate(options, state);
+			const { apply = () => {}, ...detectOverflowOptions } = evaluate(options$1, state);
 			const overflow = await platform$1.detectOverflow(state, detectOverflowOptions);
 			const side = getSide(placement);
 			const alignment = getAlignment(placement);
@@ -22389,7 +22408,7 @@ function isElement(value) {
 	if (!hasWindow()) return false;
 	return value instanceof Element || value instanceof getWindow(value).Element;
 }
-function isHTMLElement(value) {
+function isHTMLElement$1(value) {
 	if (!hasWindow()) return false;
 	return value instanceof HTMLElement || value instanceof getWindow(value).HTMLElement;
 }
@@ -22448,7 +22467,7 @@ function isContainingBlock(elementOrCss) {
 }
 function getContainingBlock(element) {
 	let currentNode = getParentNode(element);
-	while (isHTMLElement(currentNode) && !isLastTraversableNode(currentNode)) {
+	while (isHTMLElement$1(currentNode) && !isLastTraversableNode(currentNode)) {
 		if (isContainingBlock(currentNode)) return currentNode;
 		else if (isTopLayer(currentNode)) return null;
 		currentNode = getParentNode(currentNode);
@@ -22488,7 +22507,7 @@ function getParentNode(node) {
 function getNearestOverflowAncestor(node) {
 	const parentNode = getParentNode(node);
 	if (isLastTraversableNode(parentNode)) return node.ownerDocument ? node.ownerDocument.body : node.body;
-	if (isHTMLElement(parentNode) && isOverflowElement(parentNode)) return parentNode;
+	if (isHTMLElement$1(parentNode) && isOverflowElement(parentNode)) return parentNode;
 	return getNearestOverflowAncestor(parentNode);
 }
 function getOverflowAncestors(node, list, traverseIframes) {
@@ -22511,7 +22530,7 @@ function getCssDimensions(element) {
 	const css = getComputedStyle$1(element);
 	let width = parseFloat(css.width) || 0;
 	let height = parseFloat(css.height) || 0;
-	const hasOffset = isHTMLElement(element);
+	const hasOffset = isHTMLElement$1(element);
 	const offsetWidth = hasOffset ? element.offsetWidth : width;
 	const offsetHeight = hasOffset ? element.offsetHeight : height;
 	const shouldFallback = round(width) !== offsetWidth || round(height) !== offsetHeight;
@@ -22530,7 +22549,7 @@ function unwrapElement(element) {
 }
 function getScale(element) {
 	const domElement = unwrapElement(element);
-	if (!isHTMLElement(domElement)) return createCoords(1);
+	if (!isHTMLElement$1(domElement)) return createCoords(1);
 	const rect = domElement.getBoundingClientRect();
 	const { width, height, $ } = getCssDimensions(domElement);
 	let x$1 = ($ ? round(rect.width) : rect.width) / width;
@@ -22622,10 +22641,10 @@ function convertOffsetParentRelativeRectToViewportRelativeRect(_ref) {
 	};
 	let scale = createCoords(1);
 	const offsets = createCoords(0);
-	const isOffsetParentAnElement = isHTMLElement(offsetParent);
+	const isOffsetParentAnElement = isHTMLElement$1(offsetParent);
 	if (isOffsetParentAnElement || !isOffsetParentAnElement && !isFixed) {
 		if (getNodeName(offsetParent) !== "body" || isOverflowElement(documentElement)) scroll = getNodeScroll(offsetParent);
-		if (isHTMLElement(offsetParent)) {
+		if (isHTMLElement$1(offsetParent)) {
 			const offsetRect = getBoundingClientRect(offsetParent);
 			scale = getScale(offsetParent);
 			offsets.x = offsetRect.x + offsetParent.clientLeft;
@@ -22698,7 +22717,7 @@ function getInnerBoundingClientRect(element, strategy) {
 	const clientRect = getBoundingClientRect(element, true, strategy === "fixed");
 	const top = clientRect.top + element.clientTop;
 	const left = clientRect.left + element.clientLeft;
-	const scale = isHTMLElement(element) ? getScale(element) : createCoords(1);
+	const scale = isHTMLElement$1(element) ? getScale(element) : createCoords(1);
 	return {
 		width: element.clientWidth * scale.x,
 		height: element.clientHeight * scale.y,
@@ -22772,7 +22791,7 @@ function getDimensions(element) {
 	};
 }
 function getRectRelativeToOffsetParent(element, offsetParent, strategy) {
-	const isOffsetParentAnElement = isHTMLElement(offsetParent);
+	const isOffsetParentAnElement = isHTMLElement$1(offsetParent);
 	const documentElement = getDocumentElement(offsetParent);
 	const isFixed = strategy === "fixed";
 	const rect = getBoundingClientRect(element, true, isFixed, offsetParent);
@@ -22805,7 +22824,7 @@ function isStaticPositioned(element) {
 	return getComputedStyle$1(element).position === "static";
 }
 function getTrueOffsetParent(element, polyfill) {
-	if (!isHTMLElement(element) || getComputedStyle$1(element).position === "fixed") return null;
+	if (!isHTMLElement$1(element) || getComputedStyle$1(element).position === "fixed") return null;
 	if (polyfill) return polyfill(element);
 	let rawOffsetParent = element.offsetParent;
 	if (getDocumentElement(element) === rawOffsetParent) rawOffsetParent = rawOffsetParent.ownerDocument.body;
@@ -22814,7 +22833,7 @@ function getTrueOffsetParent(element, polyfill) {
 function getOffsetParent(element, polyfill) {
 	const win = getWindow(element);
 	if (isTopLayer(element)) return win;
-	if (!isHTMLElement(element)) {
+	if (!isHTMLElement$1(element)) {
 		let svgOffsetParent = getParentNode(element);
 		while (svgOffsetParent && !isLastTraversableNode(svgOffsetParent)) {
 			if (isElement(svgOffsetParent) && !isStaticPositioned(svgOffsetParent)) return svgOffsetParent;
@@ -22856,8 +22875,8 @@ var platform = {
 	isElement,
 	isRTL
 };
-function rectsAreEqual(a, b$1) {
-	return a.x === b$1.x && a.y === b$1.y && a.width === b$1.width && a.height === b$1.height;
+function rectsAreEqual(a$1, b$1) {
+	return a$1.x === b$1.x && a$1.y === b$1.y && a$1.width === b$1.width && a$1.height === b$1.height;
 }
 function observeMove(element, onMove) {
 	let io = null;
@@ -22881,7 +22900,7 @@ function observeMove(element, onMove) {
 		const insetRight = floor(root.clientWidth - (left + width));
 		const insetBottom = floor(root.clientHeight - (top + height));
 		const insetLeft = floor(left);
-		const options = {
+		const options$1 = {
 			rootMargin: -insetTop + "px " + -insetRight + "px " + -insetBottom + "px " + -insetLeft + "px",
 			threshold: max(0, min(1, threshold)) || 1
 		};
@@ -22900,20 +22919,20 @@ function observeMove(element, onMove) {
 		}
 		try {
 			io = new IntersectionObserver(handleObserve, {
-				...options,
+				...options$1,
 				root: root.ownerDocument
 			});
 		} catch (_e) {
-			io = new IntersectionObserver(handleObserve, options);
+			io = new IntersectionObserver(handleObserve, options$1);
 		}
 		io.observe(element);
 	}
 	refresh(true);
 	return cleanup;
 }
-function autoUpdate(reference, floating, update, options) {
-	if (options === void 0) options = {};
-	const { ancestorScroll = true, ancestorResize = true, elementResize = typeof ResizeObserver === "function", layoutShift = typeof IntersectionObserver === "function", animationFrame = false } = options;
+function autoUpdate(reference, floating, update, options$1) {
+	if (options$1 === void 0) options$1 = {};
+	const { ancestorScroll = true, ancestorResize = true, elementResize = typeof ResizeObserver === "function", layoutShift = typeof IntersectionObserver === "function", animationFrame = false } = options$1;
 	const referenceEl = unwrapElement(reference);
 	const ancestors = ancestorScroll || ancestorResize ? [...referenceEl ? getOverflowAncestors(referenceEl) : [], ...getOverflowAncestors(floating)] : [];
 	ancestors.forEach((ancestor) => {
@@ -22968,11 +22987,11 @@ var size$1 = size$2;
 var hide$1 = hide$2;
 var arrow$1 = arrow$2;
 var limitShift$1 = limitShift$2;
-var computePosition = (reference, floating, options) => {
+var computePosition = (reference, floating, options$1) => {
 	const cache = /* @__PURE__ */ new Map();
 	const mergedOptions = {
 		platform,
-		...options
+		...options$1
 	};
 	const platformWithCache = {
 		...mergedOptions.platform,
@@ -22985,32 +23004,32 @@ var computePosition = (reference, floating, options) => {
 };
 var import_react_dom$1 = /* @__PURE__ */ __toESM(require_react_dom(), 1);
 var index = typeof document !== "undefined" ? import_react.useLayoutEffect : function noop() {};
-function deepEqual(a, b$1) {
-	if (a === b$1) return true;
-	if (typeof a !== typeof b$1) return false;
-	if (typeof a === "function" && a.toString() === b$1.toString()) return true;
+function deepEqual$1(a$1, b$1) {
+	if (a$1 === b$1) return true;
+	if (typeof a$1 !== typeof b$1) return false;
+	if (typeof a$1 === "function" && a$1.toString() === b$1.toString()) return true;
 	let length;
-	let i;
+	let i$2;
 	let keys;
-	if (a && b$1 && typeof a === "object") {
-		if (Array.isArray(a)) {
-			length = a.length;
+	if (a$1 && b$1 && typeof a$1 === "object") {
+		if (Array.isArray(a$1)) {
+			length = a$1.length;
 			if (length !== b$1.length) return false;
-			for (i = length; i-- !== 0;) if (!deepEqual(a[i], b$1[i])) return false;
+			for (i$2 = length; i$2-- !== 0;) if (!deepEqual$1(a$1[i$2], b$1[i$2])) return false;
 			return true;
 		}
-		keys = Object.keys(a);
+		keys = Object.keys(a$1);
 		length = keys.length;
 		if (length !== Object.keys(b$1).length) return false;
-		for (i = length; i-- !== 0;) if (!{}.hasOwnProperty.call(b$1, keys[i])) return false;
-		for (i = length; i-- !== 0;) {
-			const key = keys[i];
-			if (key === "_owner" && a.$$typeof) continue;
-			if (!deepEqual(a[key], b$1[key])) return false;
+		for (i$2 = length; i$2-- !== 0;) if (!{}.hasOwnProperty.call(b$1, keys[i$2])) return false;
+		for (i$2 = length; i$2-- !== 0;) {
+			const key = keys[i$2];
+			if (key === "_owner" && a$1.$$typeof) continue;
+			if (!deepEqual$1(a$1[key], b$1[key])) return false;
 		}
 		return true;
 	}
-	return a !== a && b$1 !== b$1;
+	return a$1 !== a$1 && b$1 !== b$1;
 }
 function getDPR(element) {
 	if (typeof window === "undefined") return 1;
@@ -23027,9 +23046,9 @@ function useLatestRef(value) {
 	});
 	return ref;
 }
-function useFloating(options) {
-	if (options === void 0) options = {};
-	const { placement = "bottom", strategy = "absolute", middleware = [], platform: platform$1, elements: { reference: externalReference, floating: externalFloating } = {}, transform = true, whileElementsMounted, open } = options;
+function useFloating(options$1) {
+	if (options$1 === void 0) options$1 = {};
+	const { placement = "bottom", strategy = "absolute", middleware = [], platform: platform$1, elements: { reference: externalReference, floating: externalFloating } = {}, transform: transform$1 = true, whileElementsMounted, open } = options$1;
 	const [data, setData] = import_react.useState({
 		x: 0,
 		y: 0,
@@ -23039,7 +23058,7 @@ function useFloating(options) {
 		isPositioned: false
 	});
 	const [latestMiddleware, setLatestMiddleware] = import_react.useState(middleware);
-	if (!deepEqual(latestMiddleware, middleware)) setLatestMiddleware(middleware);
+	if (!deepEqual$1(latestMiddleware, middleware)) setLatestMiddleware(middleware);
 	const [_reference, _setReference] = import_react.useState(null);
 	const [_floating, _setFloating] = import_react.useState(null);
 	const setReference = import_react.useCallback((node) => {
@@ -23065,18 +23084,18 @@ function useFloating(options) {
 	const openRef = useLatestRef(open);
 	const update = import_react.useCallback(() => {
 		if (!referenceRef.current || !floatingRef.current) return;
-		const config = {
+		const config$1 = {
 			placement,
 			strategy,
 			middleware: latestMiddleware
 		};
-		if (platformRef.current) config.platform = platformRef.current;
-		computePosition(referenceRef.current, floatingRef.current, config).then((data$1) => {
+		if (platformRef.current) config$1.platform = platformRef.current;
+		computePosition(referenceRef.current, floatingRef.current, config$1).then((data$1) => {
 			const fullData = {
 				...data$1,
 				isPositioned: openRef.current !== false
 			};
-			if (isMountedRef.current && !deepEqual(dataRef.current, fullData)) {
+			if (isMountedRef.current && !deepEqual$1(dataRef.current, fullData)) {
 				dataRef.current = fullData;
 				import_react_dom$1.flushSync(() => {
 					setData(fullData);
@@ -23139,7 +23158,7 @@ function useFloating(options) {
 		if (!elements.floating) return initialStyles;
 		const x$1 = roundByDPR(elements.floating, data.x);
 		const y = roundByDPR(elements.floating, data.y);
-		if (transform) return {
+		if (transform$1) return {
 			...initialStyles,
 			transform: "translate(" + x$1 + "px, " + y + "px)",
 			...getDPR(elements.floating) >= 1.5 && { willChange: "transform" }
@@ -23151,7 +23170,7 @@ function useFloating(options) {
 		};
 	}, [
 		strategy,
-		transform,
+		transform$1,
 		elements.floating,
 		data.x,
 		data.y
@@ -23170,15 +23189,15 @@ function useFloating(options) {
 		floatingStyles
 	]);
 }
-var arrow$1$1 = (options) => {
+var arrow$1$1 = (options$1) => {
 	function isRef(value) {
 		return {}.hasOwnProperty.call(value, "current");
 	}
 	return {
 		name: "arrow",
-		options,
+		options: options$1,
 		fn(state) {
-			const { element, padding } = typeof options === "function" ? options(state) : options;
+			const { element, padding } = typeof options$1 === "function" ? options$1(state) : options$1;
 			if (element && isRef(element)) {
 				if (element.current != null) return arrow$1({
 					element: element.current,
@@ -23194,35 +23213,35 @@ var arrow$1$1 = (options) => {
 		}
 	};
 };
-var offset = (options, deps) => ({
-	...offset$1(options),
-	options: [options, deps]
+var offset = (options$1, deps) => ({
+	...offset$1(options$1),
+	options: [options$1, deps]
 });
-var shift = (options, deps) => ({
-	...shift$1(options),
-	options: [options, deps]
+var shift = (options$1, deps) => ({
+	...shift$1(options$1),
+	options: [options$1, deps]
 });
-var limitShift = (options, deps) => ({
-	...limitShift$1(options),
-	options: [options, deps]
+var limitShift = (options$1, deps) => ({
+	...limitShift$1(options$1),
+	options: [options$1, deps]
 });
-var flip = (options, deps) => ({
-	...flip$1(options),
-	options: [options, deps]
+var flip = (options$1, deps) => ({
+	...flip$1(options$1),
+	options: [options$1, deps]
 });
-var size = (options, deps) => ({
-	...size$1(options),
-	options: [options, deps]
+var size = (options$1, deps) => ({
+	...size$1(options$1),
+	options: [options$1, deps]
 });
-var hide = (options, deps) => ({
-	...hide$1(options),
-	options: [options, deps]
+var hide = (options$1, deps) => ({
+	...hide$1(options$1),
+	options: [options$1, deps]
 });
-var arrow = (options, deps) => ({
-	...arrow$1$1(options),
-	options: [options, deps]
+var arrow = (options$1, deps) => ({
+	...arrow$1$1(options$1),
+	options: [options$1, deps]
 });
-var NAME$1 = "Arrow";
+var NAME$2 = "Arrow";
 var Arrow$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { children, width = 10, height = 5, ...arrowProps } = props;
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.svg, {
@@ -23235,8 +23254,8 @@ var Arrow$1 = import_react.forwardRef((props, forwardedRef) => {
 		children: props.asChild ? children : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("polygon", { points: "0,0 30,0 15,10" })
 	});
 });
-Arrow$1.displayName = NAME$1;
-var Root$3 = Arrow$1;
+Arrow$1.displayName = NAME$2;
+var Root$5 = Arrow$1;
 function useSize(element) {
 	const [size$3, setSize] = import_react.useState(void 0);
 	useLayoutEffect2(() => {
@@ -23272,7 +23291,7 @@ function useSize(element) {
 	return size$3;
 }
 var POPPER_NAME = "Popper";
-var [createPopperContext, createPopperScope] = createContextScope$1(POPPER_NAME);
+var [createPopperContext, createPopperScope] = createContextScope(POPPER_NAME);
 var [PopperProvider, usePopperContext] = createPopperContext(POPPER_NAME);
 var Popper = (props) => {
 	const { __scopePopper, children } = props;
@@ -23303,11 +23322,11 @@ var PopperAnchor = import_react.forwardRef((props, forwardedRef) => {
 	});
 });
 PopperAnchor.displayName = ANCHOR_NAME;
-var CONTENT_NAME$2 = "PopperContent";
-var [PopperContentProvider, useContentContext] = createPopperContext(CONTENT_NAME$2);
+var CONTENT_NAME$3 = "PopperContent";
+var [PopperContentProvider, useContentContext] = createPopperContext(CONTENT_NAME$3);
 var PopperContent = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopePopper, side = "bottom", sideOffset = 0, align = "center", alignOffset = 0, arrowPadding = 0, avoidCollisions = true, collisionBoundary = [], collisionPadding: collisionPaddingProp = 0, sticky = "partial", hideWhenDetached = false, updatePositionStrategy = "optimized", onPlaced, ...contentProps } = props;
-	const context = usePopperContext(CONTENT_NAME$2, __scopePopper);
+	const context = usePopperContext(CONTENT_NAME$3, __scopePopper);
 	const [content, setContent] = import_react.useState(null);
 	const composedRefs = useComposedRefs(forwardedRef, (node) => setContent(node));
 	const [arrow$3, setArrow] = import_react.useState(null);
@@ -23374,7 +23393,7 @@ var PopperContent = import_react.forwardRef((props, forwardedRef) => {
 		]
 	});
 	const [placedSide, placedAlign] = getSideAndAlignFromPlacement(placement);
-	const handlePlaced = useCallbackRef(onPlaced);
+	const handlePlaced = useCallbackRef$1(onPlaced);
 	useLayoutEffect2(() => {
 		if (isPositioned) handlePlaced?.();
 	}, [isPositioned, handlePlaced]);
@@ -23420,7 +23439,7 @@ var PopperContent = import_react.forwardRef((props, forwardedRef) => {
 		})
 	});
 });
-PopperContent.displayName = CONTENT_NAME$2;
+PopperContent.displayName = CONTENT_NAME$3;
 var ARROW_NAME$1 = "PopperArrow";
 var OPPOSITE_SIDE = {
 	top: "bottom",
@@ -23453,7 +23472,7 @@ var PopperArrow = import_react.forwardRef(function PopperArrow2(props, forwarded
 			}[contentContext.placedSide],
 			visibility: contentContext.shouldHideArrow ? "hidden" : void 0
 		},
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$3, {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$5, {
 			...arrowProps,
 			ref: forwardedRef,
 			style: {
@@ -23467,14 +23486,14 @@ PopperArrow.displayName = ARROW_NAME$1;
 function isNotNull(value) {
 	return value !== null;
 }
-var transformOrigin = (options) => ({
+var transformOrigin = (options$1) => ({
 	name: "transformOrigin",
-	options,
+	options: options$1,
 	fn(data) {
 		const { placement, rects, middlewareData } = data;
 		const isArrowHidden = middlewareData.arrow?.centerOffset !== 0;
-		const arrowWidth = isArrowHidden ? 0 : options.arrowWidth;
-		const arrowHeight = isArrowHidden ? 0 : options.arrowHeight;
+		const arrowWidth = isArrowHidden ? 0 : options$1.arrowWidth;
+		const arrowHeight = isArrowHidden ? 0 : options$1.arrowHeight;
 		const [placedSide, placedAlign] = getSideAndAlignFromPlacement(placement);
 		const noArrowAlign = {
 			start: "0%",
@@ -23510,9 +23529,9 @@ function getSideAndAlignFromPlacement(placement) {
 }
 var Root2$1 = Popper;
 var Anchor = PopperAnchor;
-var Content$1 = PopperContent;
+var Content$2 = PopperContent;
 var Arrow = PopperArrow;
-var [createTooltipContext, createTooltipScope] = createContextScope$1("Tooltip", [createPopperScope]);
+var [createTooltipContext, createTooltipScope] = createContextScope("Tooltip", [createPopperScope]);
 var usePopperScope = createPopperScope();
 var PROVIDER_NAME = "TooltipProvider";
 var DEFAULT_DELAY_DURATION = 700;
@@ -23634,11 +23653,11 @@ var Tooltip$1 = (props) => {
 	});
 };
 Tooltip$1.displayName = TOOLTIP_NAME;
-var TRIGGER_NAME$1 = "TooltipTrigger";
+var TRIGGER_NAME$2 = "TooltipTrigger";
 var TooltipTrigger$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeTooltip, ...triggerProps } = props;
-	const context = useTooltipContext(TRIGGER_NAME$1, __scopeTooltip);
-	const providerContext = useTooltipProviderContext(TRIGGER_NAME$1, __scopeTooltip);
+	const context = useTooltipContext(TRIGGER_NAME$2, __scopeTooltip);
+	const providerContext = useTooltipProviderContext(TRIGGER_NAME$2, __scopeTooltip);
 	const popperScope = usePopperScope(__scopeTooltip);
 	const composedRefs = useComposedRefs(forwardedRef, import_react.useRef(null), context.onTriggerChange);
 	const isPointerDownRef = import_react.useRef(false);
@@ -23679,13 +23698,13 @@ var TooltipTrigger$1 = import_react.forwardRef((props, forwardedRef) => {
 		})
 	});
 });
-TooltipTrigger$1.displayName = TRIGGER_NAME$1;
-var PORTAL_NAME = "TooltipPortal";
-var [PortalProvider, usePortalContext] = createTooltipContext(PORTAL_NAME, { forceMount: void 0 });
+TooltipTrigger$1.displayName = TRIGGER_NAME$2;
+var PORTAL_NAME$1 = "TooltipPortal";
+var [PortalProvider$1, usePortalContext$1] = createTooltipContext(PORTAL_NAME$1, { forceMount: void 0 });
 var TooltipPortal = (props) => {
 	const { __scopeTooltip, forceMount, children, container } = props;
-	const context = useTooltipContext(PORTAL_NAME, __scopeTooltip);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PortalProvider, {
+	const context = useTooltipContext(PORTAL_NAME$1, __scopeTooltip);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PortalProvider$1, {
 		scope: __scopeTooltip,
 		forceMount,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Presence, {
@@ -23698,12 +23717,12 @@ var TooltipPortal = (props) => {
 		})
 	});
 };
-TooltipPortal.displayName = PORTAL_NAME;
-var CONTENT_NAME$1 = "TooltipContent";
+TooltipPortal.displayName = PORTAL_NAME$1;
+var CONTENT_NAME$2 = "TooltipContent";
 var TooltipContent$1 = import_react.forwardRef((props, forwardedRef) => {
-	const portalContext = usePortalContext(CONTENT_NAME$1, props.__scopeTooltip);
+	const portalContext = usePortalContext$1(CONTENT_NAME$2, props.__scopeTooltip);
 	const { forceMount = portalContext.forceMount, side = "top", ...contentProps } = props;
-	const context = useTooltipContext(CONTENT_NAME$1, props.__scopeTooltip);
+	const context = useTooltipContext(CONTENT_NAME$2, props.__scopeTooltip);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Presence, {
 		present: forceMount || context.open,
 		children: context.disableHoverableContent ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipContentImpl, {
@@ -23718,8 +23737,8 @@ var TooltipContent$1 = import_react.forwardRef((props, forwardedRef) => {
 	});
 });
 var TooltipContentHoverable = import_react.forwardRef((props, forwardedRef) => {
-	const context = useTooltipContext(CONTENT_NAME$1, props.__scopeTooltip);
-	const providerContext = useTooltipProviderContext(CONTENT_NAME$1, props.__scopeTooltip);
+	const context = useTooltipContext(CONTENT_NAME$2, props.__scopeTooltip);
+	const providerContext = useTooltipProviderContext(CONTENT_NAME$2, props.__scopeTooltip);
 	const ref = import_react.useRef(null);
 	const composedRefs = useComposedRefs(forwardedRef, ref);
 	const [pointerGraceArea, setPointerGraceArea] = import_react.useState(null);
@@ -23796,7 +23815,7 @@ var [VisuallyHiddenContentContextProvider, useVisuallyHiddenContentContext] = cr
 var Slottable = /* @__PURE__ */ createSlottable("TooltipContent");
 var TooltipContentImpl = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeTooltip, children, "aria-label": ariaLabel, onEscapeKeyDown, onPointerDownOutside, ...contentProps } = props;
-	const context = useTooltipContext(CONTENT_NAME$1, __scopeTooltip);
+	const context = useTooltipContext(CONTENT_NAME$2, __scopeTooltip);
 	const popperScope = usePopperScope(__scopeTooltip);
 	const { onClose } = context;
 	import_react.useEffect(() => {
@@ -23805,11 +23824,11 @@ var TooltipContentImpl = import_react.forwardRef((props, forwardedRef) => {
 	}, [onClose]);
 	import_react.useEffect(() => {
 		if (context.trigger) {
-			const handleScroll = (event) => {
+			const handleScroll$1 = (event) => {
 				if (event.target?.contains(context.trigger)) onClose();
 			};
-			window.addEventListener("scroll", handleScroll, { capture: true });
-			return () => window.removeEventListener("scroll", handleScroll, { capture: true });
+			window.addEventListener("scroll", handleScroll$1, { capture: true });
+			return () => window.removeEventListener("scroll", handleScroll$1, { capture: true });
 		}
 	}, [context.trigger, onClose]);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DismissableLayer, {
@@ -23819,7 +23838,7 @@ var TooltipContentImpl = import_react.forwardRef((props, forwardedRef) => {
 		onPointerDownOutside,
 		onFocusOutside: (event) => event.preventDefault(),
 		onDismiss: onClose,
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Content$1, {
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Content$2, {
 			"data-state": context.stateAttribute,
 			...popperScope,
 			...contentProps,
@@ -23835,7 +23854,7 @@ var TooltipContentImpl = import_react.forwardRef((props, forwardedRef) => {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Slottable, { children }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(VisuallyHiddenContentContextProvider, {
 				scope: __scopeTooltip,
 				isInside: true,
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$4, {
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$6, {
 					id: context.contentId,
 					role: "tooltip",
 					children: ariaLabel || children
@@ -23844,7 +23863,7 @@ var TooltipContentImpl = import_react.forwardRef((props, forwardedRef) => {
 		})
 	});
 });
-TooltipContent$1.displayName = CONTENT_NAME$1;
+TooltipContent$1.displayName = CONTENT_NAME$2;
 var ARROW_NAME = "TooltipArrow";
 var TooltipArrow = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeTooltip, ...arrowProps } = props;
@@ -23935,8 +23954,8 @@ function getPointsFromRect(rect) {
 function isPointInPolygon(point, polygon) {
 	const { x: x$1, y } = point;
 	let inside = false;
-	for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
-		const ii = polygon[i];
+	for (let i$2 = 0, j = polygon.length - 1; i$2 < polygon.length; j = i$2++) {
+		const ii = polygon[i$2];
 		const jj = polygon[j];
 		const xi = ii.x;
 		const yi = ii.y;
@@ -23948,11 +23967,11 @@ function isPointInPolygon(point, polygon) {
 }
 function getHull(points) {
 	const newPoints = points.slice();
-	newPoints.sort((a, b$1) => {
-		if (a.x < b$1.x) return -1;
-		else if (a.x > b$1.x) return 1;
-		else if (a.y < b$1.y) return -1;
-		else if (a.y > b$1.y) return 1;
+	newPoints.sort((a$1, b$1) => {
+		if (a$1.x < b$1.x) return -1;
+		else if (a$1.x > b$1.x) return 1;
+		else if (a$1.y < b$1.y) return -1;
+		else if (a$1.y > b$1.y) return 1;
 		else return 0;
 	});
 	return getHullPresorted(newPoints);
@@ -23960,24 +23979,24 @@ function getHull(points) {
 function getHullPresorted(points) {
 	if (points.length <= 1) return points.slice();
 	const upperHull = [];
-	for (let i = 0; i < points.length; i++) {
-		const p = points[i];
+	for (let i$2 = 0; i$2 < points.length; i$2++) {
+		const p = points[i$2];
 		while (upperHull.length >= 2) {
 			const q = upperHull[upperHull.length - 1];
-			const r$1 = upperHull[upperHull.length - 2];
-			if ((q.x - r$1.x) * (p.y - r$1.y) >= (q.y - r$1.y) * (p.x - r$1.x)) upperHull.pop();
+			const r$2 = upperHull[upperHull.length - 2];
+			if ((q.x - r$2.x) * (p.y - r$2.y) >= (q.y - r$2.y) * (p.x - r$2.x)) upperHull.pop();
 			else break;
 		}
 		upperHull.push(p);
 	}
 	upperHull.pop();
 	const lowerHull = [];
-	for (let i = points.length - 1; i >= 0; i--) {
-		const p = points[i];
+	for (let i$2 = points.length - 1; i$2 >= 0; i$2--) {
+		const p = points[i$2];
 		while (lowerHull.length >= 2) {
 			const q = lowerHull[lowerHull.length - 1];
-			const r$1 = lowerHull[lowerHull.length - 2];
-			if ((q.x - r$1.x) * (p.y - r$1.y) >= (q.y - r$1.y) * (p.x - r$1.x)) lowerHull.pop();
+			const r$2 = lowerHull[lowerHull.length - 2];
+			if ((q.x - r$2.x) * (p.y - r$2.y) >= (q.y - r$2.y) * (p.x - r$2.x)) lowerHull.pop();
 			else break;
 		}
 		lowerHull.push(p);
@@ -23988,11 +24007,11 @@ function getHullPresorted(points) {
 }
 var Provider = TooltipProvider$1;
 var Root3 = Tooltip$1;
-var Trigger$1 = TooltipTrigger$1;
+var Trigger$2 = TooltipTrigger$1;
 var Content2 = TooltipContent$1;
 var TooltipProvider = Provider;
 var Tooltip = Root3;
-var TooltipTrigger = Trigger$1;
+var TooltipTrigger = Trigger$2;
 var TooltipContent = import_react.forwardRef(({ className, sideOffset = 4, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Content2, {
 	ref,
 	sideOffset,
@@ -24009,7 +24028,7 @@ function isLazyComponent(element) {
 	return element != null && typeof element === "object" && "$$typeof" in element && element.$$typeof === REACT_LAZY_TYPE && "_payload" in element && isPromiseLike(element._payload);
 }
 /* @__NO_SIDE_EFFECTS__ */
-function createSlot(ownerName) {
+function createSlot$1(ownerName) {
 	const SlotClone = /* @__PURE__ */ createSlotClone(ownerName);
 	const Slot2 = import_react.forwardRef((props, forwardedRef) => {
 		let { children, ...slotProps } = props;
@@ -24039,7 +24058,7 @@ function createSlot(ownerName) {
 	Slot2.displayName = `${ownerName}.Slot`;
 	return Slot2;
 }
-var Slot = /* @__PURE__ */ createSlot("Slot");
+var Slot = /* @__PURE__ */ createSlot$1("Slot");
 /* @__NO_SIDE_EFFECTS__ */
 function createSlotClone(ownerName) {
 	const SlotClone = import_react.forwardRef((props, forwardedRef) => {
@@ -24134,13 +24153,13 @@ function useDirection(localDir) {
 	return localDir || globalDir || "ltr";
 }
 var ENTRY_FOCUS = "rovingFocusGroup.onEntryFocus";
-var EVENT_OPTIONS = {
+var EVENT_OPTIONS$1 = {
 	bubbles: false,
 	cancelable: true
 };
 var GROUP_NAME = "RovingFocusGroup";
 var [Collection, useCollection, createCollectionScope] = createCollection(GROUP_NAME);
-var [createRovingFocusGroupContext, createRovingFocusGroupScope] = createContextScope$1(GROUP_NAME, [createCollectionScope]);
+var [createRovingFocusGroupContext, createRovingFocusGroupScope] = createContextScope(GROUP_NAME, [createCollectionScope]);
 var [RovingFocusProvider, useRovingFocusContext] = createRovingFocusGroupContext(GROUP_NAME);
 var RovingFocusGroup = import_react.forwardRef((props, forwardedRef) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Collection.Provider, {
@@ -24167,7 +24186,7 @@ var RovingFocusGroupImpl = import_react.forwardRef((props, forwardedRef) => {
 		caller: GROUP_NAME
 	});
 	const [isTabbingBackOut, setIsTabbingBackOut] = import_react.useState(false);
-	const handleEntryFocus = useCallbackRef(onEntryFocus);
+	const handleEntryFocus = useCallbackRef$1(onEntryFocus);
 	const getItems = useCollection(__scopeRovingFocusGroup);
 	const isClickFocusRef = import_react.useRef(false);
 	const [focusableItemsCount, setFocusableItemsCount] = import_react.useState(0);
@@ -24203,11 +24222,11 @@ var RovingFocusGroupImpl = import_react.forwardRef((props, forwardedRef) => {
 			onFocus: composeEventHandlers(props.onFocus, (event) => {
 				const isKeyboardFocus = !isClickFocusRef.current;
 				if (event.target === event.currentTarget && isKeyboardFocus && !isTabbingBackOut) {
-					const entryFocusEvent = new CustomEvent(ENTRY_FOCUS, EVENT_OPTIONS);
+					const entryFocusEvent = new CustomEvent(ENTRY_FOCUS, EVENT_OPTIONS$1);
 					event.currentTarget.dispatchEvent(entryFocusEvent);
 					if (!entryFocusEvent.defaultPrevented) {
 						const items = getItems().filter((item) => item.focusable);
-						focusFirst([
+						focusFirst$1([
 							items.find((item) => item.active),
 							items.find((item) => item.id === currentTabStopId),
 							...items
@@ -24271,7 +24290,7 @@ var RovingFocusGroupItem = import_react.forwardRef((props, forwardedRef) => {
 						const currentIndex = candidateNodes.indexOf(event.currentTarget);
 						candidateNodes = context.loop ? wrapArray(candidateNodes, currentIndex + 1) : candidateNodes.slice(currentIndex + 1);
 					}
-					setTimeout(() => focusFirst(candidateNodes));
+					setTimeout(() => focusFirst$1(candidateNodes));
 				}
 			}),
 			children: typeof children === "function" ? children({
@@ -24302,7 +24321,7 @@ function getFocusIntent(event, orientation, dir) {
 	if (orientation === "horizontal" && ["ArrowUp", "ArrowDown"].includes(key)) return void 0;
 	return MAP_KEY_TO_FOCUS_INTENT[key];
 }
-function focusFirst(candidates, preventScroll = false) {
+function focusFirst$1(candidates, preventScroll = false) {
 	const PREVIOUSLY_FOCUSED_ELEMENT = document.activeElement;
 	for (const candidate of candidates) {
 		if (candidate === PREVIOUSLY_FOCUSED_ELEMENT) return;
@@ -24310,13 +24329,13 @@ function focusFirst(candidates, preventScroll = false) {
 		if (document.activeElement !== PREVIOUSLY_FOCUSED_ELEMENT) return;
 	}
 }
-function wrapArray(array, startIndex) {
-	return array.map((_$1, index$1) => array[(startIndex + index$1) % array.length]);
+function wrapArray(array$1, startIndex) {
+	return array$1.map((_$1, index$1) => array$1[(startIndex + index$1) % array$1.length]);
 }
-var Root$2 = RovingFocusGroup;
+var Root$4 = RovingFocusGroup;
 var Item = RovingFocusGroupItem;
 var TABS_NAME = "Tabs";
-var [createTabsContext, createTabsScope] = createContextScope$1(TABS_NAME, [createRovingFocusGroupScope]);
+var [createTabsContext, createTabsScope] = createContextScope(TABS_NAME, [createRovingFocusGroupScope]);
 var useRovingFocusGroupScope = createRovingFocusGroupScope();
 var [TabsProvider, useTabsContext] = createTabsContext(TABS_NAME);
 var Tabs$1 = import_react.forwardRef((props, forwardedRef) => {
@@ -24350,7 +24369,7 @@ var TabsList$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeTabs, loop = true, ...listProps } = props;
 	const context = useTabsContext(TAB_LIST_NAME, __scopeTabs);
 	const rovingFocusGroupScope = useRovingFocusGroupScope(__scopeTabs);
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$2, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$4, {
 		asChild: true,
 		...rovingFocusGroupScope,
 		orientation: context.orientation,
@@ -24365,10 +24384,10 @@ var TabsList$1 = import_react.forwardRef((props, forwardedRef) => {
 	});
 });
 TabsList$1.displayName = TAB_LIST_NAME;
-var TRIGGER_NAME = "TabsTrigger";
+var TRIGGER_NAME$1 = "TabsTrigger";
 var TabsTrigger$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeTabs, value, disabled = false, ...triggerProps } = props;
-	const context = useTabsContext(TRIGGER_NAME, __scopeTabs);
+	const context = useTabsContext(TRIGGER_NAME$1, __scopeTabs);
 	const rovingFocusGroupScope = useRovingFocusGroupScope(__scopeTabs);
 	const triggerId = makeTriggerId(context.baseId, value);
 	const contentId = makeContentId(context.baseId, value);
@@ -24403,11 +24422,11 @@ var TabsTrigger$1 = import_react.forwardRef((props, forwardedRef) => {
 		})
 	});
 });
-TabsTrigger$1.displayName = TRIGGER_NAME;
-var CONTENT_NAME = "TabsContent";
+TabsTrigger$1.displayName = TRIGGER_NAME$1;
+var CONTENT_NAME$1 = "TabsContent";
 var TabsContent$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeTabs, value, forceMount, children, ...contentProps } = props;
-	const context = useTabsContext(CONTENT_NAME, __scopeTabs);
+	const context = useTabsContext(CONTENT_NAME$1, __scopeTabs);
 	const triggerId = makeTriggerId(context.baseId, value);
 	const contentId = makeContentId(context.baseId, value);
 	const isSelected = value === context.value;
@@ -24436,7 +24455,7 @@ var TabsContent$1 = import_react.forwardRef((props, forwardedRef) => {
 		})
 	});
 });
-TabsContent$1.displayName = CONTENT_NAME;
+TabsContent$1.displayName = CONTENT_NAME$1;
 function makeTriggerId(baseId, value) {
 	return `${baseId}-trigger-${value}`;
 }
@@ -24445,8 +24464,8 @@ function makeContentId(baseId, value) {
 }
 var Root2 = Tabs$1;
 var List$1 = TabsList$1;
-var Trigger = TabsTrigger$1;
-var Content = TabsContent$1;
+var Trigger$1 = TabsTrigger$1;
+var Content$1 = TabsContent$1;
 var Tabs = Root2;
 var TabsList = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(List$1, {
 	ref,
@@ -24454,18 +24473,18 @@ var TabsList = import_react.forwardRef(({ className, ...props }, ref) => /* @__P
 	...props
 }));
 TabsList.displayName = List$1.displayName;
-var TabsTrigger = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Trigger, {
+var TabsTrigger = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Trigger$1, {
 	ref,
 	className: cn("inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm", className),
 	...props
 }));
-TabsTrigger.displayName = Trigger.displayName;
-var TabsContent = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Content, {
+TabsTrigger.displayName = Trigger$1.displayName;
+var TabsContent = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Content$1, {
 	ref,
 	className: cn("mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2", className),
 	...props
 }));
-TabsContent.displayName = Content.displayName;
+TabsContent.displayName = Content$1.displayName;
 var badgeVariants = cva("inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2", {
 	variants: { variant: {
 		default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
@@ -24659,7 +24678,7 @@ function InventoryAntes() {
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 				className: "space-y-3",
-				children: ANTES_POINTS$2.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+				children: ANTES_POINTS$2.map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 					className: "flex items-start gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "rounded-full bg-red-50 p-1 shrink-0 mt-0.5",
@@ -24668,7 +24687,7 @@ function InventoryAntes() {
 						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
-				}, i))
+				}, i$2))
 			})]
 		})]
 	});
@@ -24685,7 +24704,7 @@ function Sparkline({ data }) {
 			strokeWidth: "1",
 			strokeLinecap: "round",
 			strokeLinejoin: "round",
-			points: data.map((d, i) => `${i / (data.length - 1) * 36},${12 - (d - min$1) / range * 12}`).join(" "),
+			points: data.map((d, i$2) => `${i$2 / (data.length - 1) * 36},${12 - (d - min$1) / range * 12}`).join(" "),
 			className: "text-blue-violet-400"
 		})
 	});
@@ -24803,21 +24822,21 @@ function InventoryDepois() {
 								]
 							}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tbody", {
 								className: "bg-white text-skip-neutral-500",
-								children: DEPOIS_ROWS.map((r$1, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+								children: DEPOIS_ROWS.map((r$2, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
 									className: "border-b border-skip-neutral-1350 last:border-0",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
 											className: "p-2.5 font-medium text-skip-neutral-400",
-											children: r$1.prod
+											children: r$2.prod
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
 											className: "p-2.5 text-right",
 											children: [
-												r$1.est,
+												r$2.est,
 												" ",
 												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 													className: "text-skip-neutral-800",
-													children: ["/ ", r$1.max]
+													children: ["/ ", r$2.max]
 												})
 											]
 										}),
@@ -24825,16 +24844,16 @@ function InventoryDepois() {
 											className: "p-2.5 text-center",
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Badge, {
 												variant: "outline",
-												className: `text-[9px] h-5 px-2 font-medium ${r$1.badge}`,
-												children: r$1.status
+												className: `text-[9px] h-5 px-2 font-medium ${r$2.badge}`,
+												children: r$2.status
 											})
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
 											className: "p-2.5 flex justify-end items-center h-full",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkline, { data: r$1.sparkline })
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkline, { data: r$2.sparkline })
 										})
 									]
-								}, i))
+								}, i$2))
 							})]
 						})
 					})
@@ -24853,7 +24872,7 @@ function InventoryDepois() {
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 				className: "space-y-3",
-				children: DEPOIS_POINTS$2.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+				children: DEPOIS_POINTS$2.map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 					className: "flex items-start gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "rounded-full bg-blue-violet-50 p-1 shrink-0 mt-0.5",
@@ -24862,7 +24881,7 @@ function InventoryDepois() {
 						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
-				}, i))
+				}, i$2))
 			})]
 		})]
 	});
@@ -24950,7 +24969,7 @@ function SalesAntes() {
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 				className: "space-y-3",
-				children: ANTES_POINTS$1.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+				children: ANTES_POINTS$1.map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 					className: "flex items-start gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "rounded-full bg-red-50 p-1 shrink-0 mt-0.5",
@@ -24959,7 +24978,7 @@ function SalesAntes() {
 						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
-				}, i))
+				}, i$2))
 			})]
 		})]
 	});
@@ -25023,7 +25042,7 @@ function SalesDepois() {
 									name: "Discovery - Acme",
 									score: 65,
 									rep: "Maria"
-								}].map((mtg, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								}].map((mtg, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "flex items-center justify-between p-1 rounded hover:bg-skip-neutral-1450",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "flex items-center gap-1",
@@ -25042,7 +25061,7 @@ function SalesDepois() {
 										className: `text-[9px] h-4 px-1 py-0 border-none font-medium ${mtg.score > 80 ? "bg-green-50 text-green-700" : "bg-orange-50 text-orange-700"}`,
 										children: mtg.score
 									})]
-								}, i))
+								}, i$2))
 							})]
 						})
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -25074,28 +25093,28 @@ function SalesDepois() {
 									score: "82",
 									trend: "-"
 								}
-							].map((r$1) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							].map((r$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center justify-between p-1 rounded hover:bg-skip-neutral-1450",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "flex items-center gap-1",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: `w-3 h-3 rounded-full flex items-center justify-center text-[7px] font-bold shrink-0 ${r$1.pos === 1 ? "bg-yellow-100 text-yellow-700" : r$1.pos === 2 ? "bg-skip-neutral-1300 text-skip-neutral-500" : "bg-orange-100 text-orange-700"}`,
-										children: r$1.pos
+										className: `w-3 h-3 rounded-full flex items-center justify-center text-[7px] font-bold shrink-0 ${r$2.pos === 1 ? "bg-yellow-100 text-yellow-700" : r$2.pos === 2 ? "bg-skip-neutral-1300 text-skip-neutral-500" : "bg-orange-100 text-orange-700"}`,
+										children: r$2.pos
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "font-medium text-skip-neutral-400 truncate w-12",
-										children: r$1.name
+										children: r$2.name
 									})]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "flex gap-1 text-right shrink-0",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "text-skip-neutral-600 w-4",
-										children: r$1.win
+										children: r$2.win
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: `font-semibold w-3 ${r$1.trend === "+" ? "text-green-600" : "text-red-500"}`,
-										children: r$1.score
+										className: `font-semibold w-3 ${r$2.trend === "+" ? "text-green-600" : "text-red-500"}`,
+										children: r$2.score
 									})]
 								})]
-							}, r$1.pos))
+							}, r$2.pos))
 						})]
 					})]
 				})]
@@ -25113,7 +25132,7 @@ function SalesDepois() {
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 				className: "space-y-3",
-				children: DEPOIS_POINTS$1.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+				children: DEPOIS_POINTS$1.map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 					className: "flex items-start gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "rounded-full bg-blue-violet-50 p-1 shrink-0 mt-0.5",
@@ -25122,7 +25141,7 @@ function SalesDepois() {
 						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
-				}, i))
+				}, i$2))
 			})]
 		})]
 	});
@@ -25273,7 +25292,7 @@ function DashboardsAntes() {
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 				className: "space-y-3",
-				children: ANTES_POINTS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+				children: ANTES_POINTS.map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 					className: "flex items-start gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "rounded-full bg-red-50 p-1 shrink-0 mt-0.5",
@@ -25282,7 +25301,7 @@ function DashboardsAntes() {
 						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
-				}, i))
+				}, i$2))
 			})]
 		})]
 	});
@@ -25430,7 +25449,7 @@ function DashboardsDepois() {
 									h1: "85%",
 									h2: "80%"
 								}
-							].map((val, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							].map((val, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex gap-0.5 w-full justify-center z-10 h-full items-end group",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "w-1/3 max-w-[12px] bg-blue-violet-500 rounded-t-sm transition-all duration-300 group-hover:bg-blue-violet-400 group-hover:w-1/2",
@@ -25439,7 +25458,7 @@ function DashboardsDepois() {
 									className: "w-1/3 max-w-[12px] bg-skip-neutral-1300 rounded-t-sm transition-all duration-300 group-hover:w-1/2",
 									style: { height: val.h2 }
 								})]
-							}, i))
+							}, i$2))
 						})]
 					})
 				]
@@ -25457,7 +25476,7 @@ function DashboardsDepois() {
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 				className: "space-y-3",
-				children: DEPOIS_POINTS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+				children: DEPOIS_POINTS.map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 					className: "flex items-start gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "rounded-full bg-blue-violet-50 p-1 shrink-0 mt-0.5",
@@ -25466,7 +25485,7 @@ function DashboardsDepois() {
 						className: "text-sm text-skip-neutral-900 leading-[1.3]",
 						children: item
 					})]
-				}, i))
+				}, i$2))
 			})]
 		})]
 	});
@@ -25580,7 +25599,7 @@ function SectionTitle({ className, ...props }) {
 		...props
 	});
 }
-function createContextScope(scopeName, createContextScopeDeps = []) {
+function createContextScope$1(scopeName, createContextScopeDeps = []) {
 	let defaultContexts = [];
 	function createContext3(rootComponentName, defaultContext) {
 		const BaseContext = import_react.createContext(defaultContext);
@@ -25663,10 +25682,10 @@ var Primitive = [
 	"svg",
 	"ul"
 ].reduce((primitive, node) => {
-	const Slot$1 = /* @__PURE__ */ createSlot(`Primitive.${node}`);
+	const Slot$2 = /* @__PURE__ */ createSlot$1(`Primitive.${node}`);
 	const Node$1 = import_react.forwardRef((props, forwardedRef) => {
 		const { asChild, ...primitiveProps } = props;
-		const Comp = asChild ? Slot$1 : node;
+		const Comp = asChild ? Slot$2 : node;
 		if (typeof window !== "undefined") window[Symbol.for("radix-ui")] = true;
 		return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Comp, {
 			...primitiveProps,
@@ -25681,7 +25700,7 @@ var Primitive = [
 }, {});
 var PROGRESS_NAME = "Progress";
 var DEFAULT_MAX = 100;
-var [createProgressContext, createProgressScope] = createContextScope(PROGRESS_NAME);
+var [createProgressContext, createProgressScope] = createContextScope$1(PROGRESS_NAME);
 var [ProgressProvider, useProgressContext] = createProgressContext(PROGRESS_NAME);
 var Progress$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { __scopeProgress, value: valueProp = null, max: maxProp, getValueLabel = defaultGetValueLabel, ...progressProps } = props;
@@ -25748,9 +25767,9 @@ function getInvalidValueError(propValue, componentName) {
 
 Defaulting to \`null\`.`;
 }
-var Root$1 = Progress$1;
+var Root$3 = Progress$1;
 var Indicator = ProgressIndicator;
-var Progress = import_react.forwardRef(({ className, value, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$1, {
+var Progress = import_react.forwardRef(({ className, value, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$3, {
 	ref,
 	className: cn("relative h-4 w-full overflow-hidden rounded-full bg-secondary", className),
 	...props,
@@ -25759,7 +25778,7 @@ var Progress = import_react.forwardRef(({ className, value, ...props }, ref) => 
 		style: { transform: `translateX(-${100 - (value || 0)}%)` }
 	})
 }));
-Progress.displayName = Root$1.displayName;
+Progress.displayName = Root$3.displayName;
 function Step1Mockup() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "w-full h-[320px] sm:h-[360px] bg-skip-neutral-400 rounded-[20px] border border-skip-neutral-600 flex flex-col relative overflow-hidden shadow-2xl",
@@ -25993,7 +26012,7 @@ function Step2Mockup() {
 									status: "Atraso",
 									statusColor: "red"
 								}
-							].map((row, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							].map((row, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "grid grid-cols-[1fr_auto_auto] gap-2 items-center group",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -26001,7 +26020,7 @@ function Step2Mockup() {
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											className: "w-4 h-4 sm:w-5 sm:h-5 rounded bg-skip-neutral-500/50 shrink-0 flex items-center justify-center overflow-hidden",
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-												src: `https://img.usecurling.com/ppl/thumbnail?gender=${i % 2 === 0 ? "female" : "male"}&seed=${i + 5}`,
+												src: `https://img.usecurling.com/ppl/thumbnail?gender=${i$2 % 2 === 0 ? "female" : "male"}&seed=${i$2 + 5}`,
 												alt: "Avatar",
 												className: "w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity"
 											})
@@ -26022,7 +26041,7 @@ function Step2Mockup() {
 										})
 									})
 								]
-							}, i))
+							}, i$2))
 						})]
 					})]
 				})]
@@ -26301,7 +26320,7 @@ function Step4Mockup() {
 									status: "Atrasado",
 									statusColor: "red"
 								}
-							].map((row, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							].map((row, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "grid grid-cols-[1fr_auto_auto] gap-2 px-3 py-2 items-center border-b border-skip-neutral-500/30 last:border-0 hover:bg-skip-neutral-500/10 transition-colors",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -26309,7 +26328,7 @@ function Step4Mockup() {
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											className: "w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-skip-neutral-500 shrink-0 overflow-hidden border border-skip-neutral-600",
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-												src: `https://img.usecurling.com/ppl/thumbnail?gender=${i % 2 === 0 ? "female" : "male"}&seed=${i + 10}`,
+												src: `https://img.usecurling.com/ppl/thumbnail?gender=${i$2 % 2 === 0 ? "female" : "male"}&seed=${i$2 + 10}`,
 												alt: row.name,
 												className: "w-full h-full object-cover"
 											})
@@ -26330,7 +26349,7 @@ function Step4Mockup() {
 										})
 									})
 								]
-							}, i))
+							}, i$2))
 						})]
 					})]
 				}),
@@ -26424,16 +26443,16 @@ function PlatformSection() {
 	const containerRef = (0, import_react.useRef)(null);
 	const [progress, setProgress] = (0, import_react.useState)(0);
 	(0, import_react.useEffect)(() => {
-		const handleScroll = () => {
+		const handleScroll$1 = () => {
 			if (!containerRef.current) return;
 			const rect = containerRef.current.getBoundingClientRect();
 			let p = (window.innerHeight * .6 - rect.top) / rect.height;
 			p = Math.max(0, Math.min(1, p));
 			setProgress(p);
 		};
-		window.addEventListener("scroll", handleScroll, { passive: true });
-		handleScroll();
-		return () => window.removeEventListener("scroll", handleScroll);
+		window.addEventListener("scroll", handleScroll$1, { passive: true });
+		handleScroll$1();
+		return () => window.removeEventListener("scroll", handleScroll$1);
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		className: "w-full py-24 px-5 relative z-10 bg-skip-neutral-300 overflow-hidden",
@@ -26518,13 +26537,13 @@ const AgentsMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			{ role: "Lead" },
 			{ role: "Dev" },
 			{ role: "QA" }
-		].map((node, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		].map((node, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "relative z-10 flex flex-col items-center",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "w-12 h-12 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center text-[10px] font-bold text-slate-700 relative",
 				children: [node.role, /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "absolute -bottom-1 -right-1 w-3 h-3 rounded-full border-2 border-white bg-blue-violet-600 animate-pulse",
-					style: { animationDelay: `${i * 300}ms` }
+					style: { animationDelay: `${i$2 * 300}ms` }
 				})]
 			})
 		}, node.role))]
@@ -26681,7 +26700,7 @@ const AIMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "flex items-center gap-1.5 bg-slate-50 p-1.5 rounded border border-slate-100",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "flex gap-0.5 ml-1",
-					children: [...Array(12)].map((_$1, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1 h-1 rounded-full bg-slate-300" }, i))
+					children: [...Array(12)].map((_$1, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1 h-1 rounded-full bg-slate-300" }, i$2))
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "text-[10px] text-slate-500 font-mono ml-auto mr-1",
 					children: "a9f2"
@@ -26975,23 +26994,23 @@ var GestaoComercialMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("
 				s: "Fechado",
 				b: "bg-[#6FCF97]/10 text-[#6FCF97] border-[#6FCF97]/20"
 			}
-		].map((r$1, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		].map((r$2, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "grid grid-cols-3 gap-2 items-center px-2 py-1.5 bg-skip-neutral-400/40 rounded-md",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "text-[10px] text-skip-neutral-1100 font-medium truncate",
-					children: r$1.n
+					children: r$2.n
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "text-[10px] text-skip-neutral-900 truncate",
-					children: r$1.c
+					children: r$2.c
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: cn("text-[8px] px-1.5 py-0.5 rounded-sm font-semibold border", r$1.b),
-					children: r$1.s
+					className: cn("text-[8px] px-1.5 py-0.5 rounded-sm font-semibold border", r$2.b),
+					children: r$2.s
 				}) })
 			]
-		}, i))
+		}, i$2))
 	})]
 });
 var OperacoesProcessosMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -27009,7 +27028,7 @@ var OperacoesProcessosMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)
 			t: "Concluído",
 			c: 2
 		}
-	].map((col, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+	].map((col, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex-1 flex flex-col gap-1.5 bg-skip-neutral-400/20 rounded-lg p-1.5 border border-skip-neutral-600/20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 			className: "text-[8px] text-skip-neutral-900 font-medium uppercase tracking-wider px-1",
@@ -27018,7 +27037,7 @@ var OperacoesProcessosMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)
 			className: "flex flex-col gap-1.5",
 			children: Array.from({ length: col.c }).map((_$1, j) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "bg-skip-neutral-400/80 h-4 rounded border border-skip-neutral-600/30 shadow-sm" }, j))
 		})]
-	}, i))
+	}, i$2))
 });
 var PessoasCulturaMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 	className: "flex flex-col justify-center gap-1.5 p-3 w-full h-full",
@@ -27041,7 +27060,7 @@ var PessoasCulturaMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("di
 			g: "female",
 			s: 3
 		}
-	].map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+	].map((p, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex items-center gap-2.5 p-1.5 px-2 bg-skip-neutral-400/30 rounded-lg border border-skip-neutral-600/20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 			src: `https://img.usecurling.com/ppl/thumbnail?gender=${p.g}&seed=${p.s}`,
@@ -27057,7 +27076,7 @@ var PessoasCulturaMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("di
 				children: p.t
 			})]
 		})]
-	}, i))
+	}, i$2))
 });
 var DadosInteligenciaMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 	className: "flex flex-col p-3 w-full h-full gap-2",
@@ -27069,7 +27088,7 @@ var DadosInteligenciaMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)
 		}, {
 			l: "Usuários",
 			v: "1.240"
-		}].map((kpi, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		}].map((kpi, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "bg-skip-neutral-400/40 rounded-lg p-1.5 px-2 flex flex-col border border-skip-neutral-600/30",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 				className: "text-[8px] text-skip-neutral-900 font-medium uppercase tracking-wider",
@@ -27078,7 +27097,7 @@ var DadosInteligenciaMockup = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)
 				className: "text-[11px] text-blue-violet-400 font-semibold mt-0.5",
 				children: kpi.v
 			})]
-		}, i))
+		}, i$2))
 	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 		className: "flex-1 bg-skip-neutral-400/20 rounded-lg border border-skip-neutral-600/20 relative overflow-hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
@@ -27233,7 +27252,7 @@ function TemplatesSection() {
 		})
 	});
 }
-var NAME = "Separator";
+var NAME$1 = "Separator";
 var DEFAULT_ORIENTATION = "horizontal";
 var ORIENTATIONS = ["horizontal", "vertical"];
 var Separator$1 = import_react.forwardRef((props, forwardedRef) => {
@@ -27251,21 +27270,6552 @@ var Separator$1 = import_react.forwardRef((props, forwardedRef) => {
 		ref: forwardedRef
 	});
 });
-Separator$1.displayName = NAME;
+Separator$1.displayName = NAME$1;
 function isValidOrientation(orientation) {
 	return ORIENTATIONS.includes(orientation);
 }
-var Root = Separator$1;
-var Separator = import_react.forwardRef(({ className, orientation = "horizontal", decorative = true, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root, {
+var Root$2 = Separator$1;
+var Separator = import_react.forwardRef(({ className, orientation = "horizontal", decorative = true, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root$2, {
 	ref,
 	decorative,
 	orientation,
 	className: cn("shrink-0 bg-border", orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]", className),
 	...props
 }));
-Separator.displayName = Root.displayName;
+Separator.displayName = Root$2.displayName;
 var consultoria_individual_skip_f7cfb_default = "/assets/consultoria-individual-skip-f7cfb-eDphXJlU.webp";
 var mock_offer_bf844_default = "/assets/mock-offer-bf844-BdKIRsEO.webp";
+var isCheckBoxInput = (element) => element.type === "checkbox";
+var isDateObject = (value) => value instanceof Date;
+var isNullOrUndefined = (value) => value == null;
+var isObjectType = (value) => typeof value === "object";
+var isObject$1 = (value) => !isNullOrUndefined(value) && !Array.isArray(value) && isObjectType(value) && !isDateObject(value);
+var getEventValue = (event) => isObject$1(event) && event.target ? isCheckBoxInput(event.target) ? event.target.checked : event.target.value : event;
+var getNodeParentName = (name) => name.substring(0, name.search(/\.\d+(\.|$)/)) || name;
+var isNameInFieldArray = (names, name) => names.has(getNodeParentName(name));
+var isPlainObject$1 = (tempObject) => {
+	const prototypeCopy = tempObject.constructor && tempObject.constructor.prototype;
+	return isObject$1(prototypeCopy) && prototypeCopy.hasOwnProperty("isPrototypeOf");
+};
+var isWeb = typeof window !== "undefined" && typeof window.HTMLElement !== "undefined" && typeof document !== "undefined";
+function cloneObject(data) {
+	if (data instanceof Date) return new Date(data);
+	const isFileListInstance = typeof FileList !== "undefined" && data instanceof FileList;
+	if (isWeb && (data instanceof Blob || isFileListInstance)) return data;
+	const isArray = Array.isArray(data);
+	if (!isArray && !(isObject$1(data) && isPlainObject$1(data))) return data;
+	const copy = isArray ? [] : Object.create(Object.getPrototypeOf(data));
+	for (const key in data) if (Object.prototype.hasOwnProperty.call(data, key)) copy[key] = cloneObject(data[key]);
+	return copy;
+}
+var isKey = (value) => /^\w*$/.test(value);
+var isUndefined = (val) => val === void 0;
+var compact = (value) => Array.isArray(value) ? value.filter(Boolean) : [];
+var stringToPath = (input) => compact(input.replace(/["|']|\]/g, "").split(/\.|\[/));
+var get = (object$1, path, defaultValue) => {
+	if (!path || !isObject$1(object$1)) return defaultValue;
+	const result = (isKey(path) ? [path] : stringToPath(path)).reduce((result$1, key) => isNullOrUndefined(result$1) ? result$1 : result$1[key], object$1);
+	return isUndefined(result) || result === object$1 ? isUndefined(object$1[path]) ? defaultValue : object$1[path] : result;
+};
+var isBoolean = (value) => typeof value === "boolean";
+var isFunction = (value) => typeof value === "function";
+var set = (object$1, path, value) => {
+	let index$1 = -1;
+	const tempPath = isKey(path) ? [path] : stringToPath(path);
+	const length = tempPath.length;
+	const lastIndex = length - 1;
+	while (++index$1 < length) {
+		const key = tempPath[index$1];
+		let newValue = value;
+		if (index$1 !== lastIndex) {
+			const objValue = object$1[key];
+			newValue = isObject$1(objValue) || Array.isArray(objValue) ? objValue : !isNaN(+tempPath[index$1 + 1]) ? [] : {};
+		}
+		if (key === "__proto__" || key === "constructor" || key === "prototype") return;
+		object$1[key] = newValue;
+		object$1 = object$1[key];
+	}
+};
+var EVENTS = {
+	BLUR: "blur",
+	FOCUS_OUT: "focusout",
+	CHANGE: "change"
+};
+var VALIDATION_MODE = {
+	onBlur: "onBlur",
+	onChange: "onChange",
+	onSubmit: "onSubmit",
+	onTouched: "onTouched",
+	all: "all"
+};
+var INPUT_VALIDATION_RULES = {
+	max: "max",
+	min: "min",
+	maxLength: "maxLength",
+	minLength: "minLength",
+	pattern: "pattern",
+	required: "required",
+	validate: "validate"
+};
+var HookFormControlContext = import_react.createContext(null);
+HookFormControlContext.displayName = "HookFormControlContext";
+var useFormControlContext = () => import_react.useContext(HookFormControlContext);
+var getProxyFormState = (formState, control, localProxyFormState, isRoot = true) => {
+	const result = { defaultValues: control._defaultValues };
+	for (const key in formState) Object.defineProperty(result, key, { get: () => {
+		const _key = key;
+		if (control._proxyFormState[_key] !== VALIDATION_MODE.all) control._proxyFormState[_key] = !isRoot || VALIDATION_MODE.all;
+		localProxyFormState && (localProxyFormState[_key] = true);
+		return formState[_key];
+	} });
+	return result;
+};
+var useIsomorphicLayoutEffect$1 = typeof window !== "undefined" ? import_react.useLayoutEffect : import_react.useEffect;
+function useFormState(props) {
+	const formControl = useFormControlContext();
+	const { control = formControl, disabled, name, exact } = props || {};
+	const [formState, updateFormState] = import_react.useState(control._formState);
+	const _localProxyFormState = import_react.useRef({
+		isDirty: false,
+		isLoading: false,
+		dirtyFields: false,
+		touchedFields: false,
+		validatingFields: false,
+		isValidating: false,
+		isValid: false,
+		errors: false
+	});
+	useIsomorphicLayoutEffect$1(() => control._subscribe({
+		name,
+		formState: _localProxyFormState.current,
+		exact,
+		callback: (formState$1) => {
+			!disabled && updateFormState({
+				...control._formState,
+				...formState$1
+			});
+		}
+	}), [
+		name,
+		disabled,
+		exact
+	]);
+	import_react.useEffect(() => {
+		_localProxyFormState.current.isValid && control._setValid(true);
+	}, [control]);
+	return import_react.useMemo(() => getProxyFormState(formState, control, _localProxyFormState.current, false), [formState, control]);
+}
+var isString = (value) => typeof value === "string";
+var generateWatchOutput = (names, _names, formValues, isGlobal, defaultValue) => {
+	if (isString(names)) {
+		isGlobal && _names.watch.add(names);
+		return get(formValues, names, defaultValue);
+	}
+	if (Array.isArray(names)) return names.map((fieldName) => (isGlobal && _names.watch.add(fieldName), get(formValues, fieldName)));
+	isGlobal && (_names.watchAll = true);
+	return formValues;
+};
+var isPrimitive = (value) => isNullOrUndefined(value) || !isObjectType(value);
+function deepEqual(object1, object2, _internal_visited = /* @__PURE__ */ new WeakSet()) {
+	if (isPrimitive(object1) || isPrimitive(object2)) return Object.is(object1, object2);
+	if (isDateObject(object1) && isDateObject(object2)) return Object.is(object1.getTime(), object2.getTime());
+	const keys1 = Object.keys(object1);
+	const keys2 = Object.keys(object2);
+	if (keys1.length !== keys2.length) return false;
+	if (_internal_visited.has(object1) || _internal_visited.has(object2)) return true;
+	_internal_visited.add(object1);
+	_internal_visited.add(object2);
+	for (const key of keys1) {
+		const val1 = object1[key];
+		if (!keys2.includes(key)) return false;
+		if (key !== "ref") {
+			const val2 = object2[key];
+			if (isDateObject(val1) && isDateObject(val2) || isObject$1(val1) && isObject$1(val2) || Array.isArray(val1) && Array.isArray(val2) ? !deepEqual(val1, val2, _internal_visited) : !Object.is(val1, val2)) return false;
+		}
+	}
+	return true;
+}
+function useWatch(props) {
+	const formControl = useFormControlContext();
+	const { control = formControl, name, defaultValue, disabled, exact, compute } = props || {};
+	const _defaultValue = import_react.useRef(defaultValue);
+	const _compute = import_react.useRef(compute);
+	const _computeFormValues = import_react.useRef(void 0);
+	const _prevControl = import_react.useRef(control);
+	const _prevName = import_react.useRef(name);
+	_compute.current = compute;
+	const [value, updateValue] = import_react.useState(() => {
+		const defaultValue$1 = control._getWatch(name, _defaultValue.current);
+		return _compute.current ? _compute.current(defaultValue$1) : defaultValue$1;
+	});
+	const getCurrentOutput = import_react.useCallback((values) => {
+		const formValues = generateWatchOutput(name, control._names, values || control._formValues, false, _defaultValue.current);
+		return _compute.current ? _compute.current(formValues) : formValues;
+	}, [
+		control._formValues,
+		control._names,
+		name
+	]);
+	const refreshValue = import_react.useCallback((values) => {
+		if (!disabled) {
+			const formValues = generateWatchOutput(name, control._names, values || control._formValues, false, _defaultValue.current);
+			if (_compute.current) {
+				const computedFormValues = _compute.current(formValues);
+				if (!deepEqual(computedFormValues, _computeFormValues.current)) {
+					updateValue(computedFormValues);
+					_computeFormValues.current = computedFormValues;
+				}
+			} else updateValue(formValues);
+		}
+	}, [
+		control._formValues,
+		control._names,
+		disabled,
+		name
+	]);
+	useIsomorphicLayoutEffect$1(() => {
+		if (_prevControl.current !== control || !deepEqual(_prevName.current, name)) {
+			_prevControl.current = control;
+			_prevName.current = name;
+			refreshValue();
+		}
+		return control._subscribe({
+			name,
+			formState: { values: true },
+			exact,
+			callback: (formState) => {
+				refreshValue(formState.values);
+			}
+		});
+	}, [
+		control,
+		exact,
+		name,
+		refreshValue
+	]);
+	import_react.useEffect(() => control._removeUnmounted());
+	const controlChanged = _prevControl.current !== control;
+	const prevName = _prevName.current;
+	const computedOutput = import_react.useMemo(() => {
+		if (disabled) return null;
+		const nameChanged = !controlChanged && !deepEqual(prevName, name);
+		return controlChanged || nameChanged ? getCurrentOutput() : null;
+	}, [
+		disabled,
+		controlChanged,
+		name,
+		prevName,
+		getCurrentOutput
+	]);
+	return computedOutput !== null ? computedOutput : value;
+}
+function useController(props) {
+	const formControl = useFormControlContext();
+	const { name, disabled, control = formControl, shouldUnregister, defaultValue, exact = true } = props;
+	const isArrayField = isNameInFieldArray(control._names.array, name);
+	const value = useWatch({
+		control,
+		name,
+		defaultValue: import_react.useMemo(() => get(control._formValues, name, get(control._defaultValues, name, defaultValue)), [
+			control,
+			name,
+			defaultValue
+		]),
+		exact
+	});
+	const formState = useFormState({
+		control,
+		name,
+		exact
+	});
+	const _props = import_react.useRef(props);
+	const _previousNameRef = import_react.useRef(void 0);
+	const _registerProps = import_react.useRef(control.register(name, {
+		...props.rules,
+		value,
+		...isBoolean(props.disabled) ? { disabled: props.disabled } : {}
+	}));
+	_props.current = props;
+	const fieldState = import_react.useMemo(() => Object.defineProperties({}, {
+		invalid: {
+			enumerable: true,
+			get: () => !!get(formState.errors, name)
+		},
+		isDirty: {
+			enumerable: true,
+			get: () => !!get(formState.dirtyFields, name)
+		},
+		isTouched: {
+			enumerable: true,
+			get: () => !!get(formState.touchedFields, name)
+		},
+		isValidating: {
+			enumerable: true,
+			get: () => !!get(formState.validatingFields, name)
+		},
+		error: {
+			enumerable: true,
+			get: () => get(formState.errors, name)
+		}
+	}), [formState, name]);
+	const onChange = import_react.useCallback((event) => _registerProps.current.onChange({
+		target: {
+			value: getEventValue(event),
+			name
+		},
+		type: EVENTS.CHANGE
+	}), [name]);
+	const onBlur = import_react.useCallback(() => _registerProps.current.onBlur({
+		target: {
+			value: get(control._formValues, name),
+			name
+		},
+		type: EVENTS.BLUR
+	}), [name, control._formValues]);
+	const ref = import_react.useCallback((elm) => {
+		const field$1 = get(control._fields, name);
+		if (field$1 && field$1._f && elm) field$1._f.ref = {
+			focus: () => isFunction(elm.focus) && elm.focus(),
+			select: () => isFunction(elm.select) && elm.select(),
+			setCustomValidity: (message) => isFunction(elm.setCustomValidity) && elm.setCustomValidity(message),
+			reportValidity: () => isFunction(elm.reportValidity) && elm.reportValidity()
+		};
+	}, [control._fields, name]);
+	const field = import_react.useMemo(() => ({
+		name,
+		value,
+		...isBoolean(disabled) || formState.disabled ? { disabled: formState.disabled || disabled } : {},
+		onChange,
+		onBlur,
+		ref
+	}), [
+		name,
+		disabled,
+		formState.disabled,
+		onChange,
+		onBlur,
+		ref,
+		value
+	]);
+	import_react.useEffect(() => {
+		const _shouldUnregisterField = control._options.shouldUnregister || shouldUnregister;
+		const previousName = _previousNameRef.current;
+		if (previousName && previousName !== name && !isArrayField) control.unregister(previousName);
+		control.register(name, {
+			..._props.current.rules,
+			...isBoolean(_props.current.disabled) ? { disabled: _props.current.disabled } : {}
+		});
+		const updateMounted = (name$1, value$1) => {
+			const field$1 = get(control._fields, name$1);
+			if (field$1 && field$1._f) field$1._f.mount = value$1;
+		};
+		updateMounted(name, true);
+		if (_shouldUnregisterField) {
+			const value$1 = cloneObject(get(control._options.defaultValues, name, _props.current.defaultValue));
+			set(control._defaultValues, name, value$1);
+			if (isUndefined(get(control._formValues, name))) set(control._formValues, name, value$1);
+		}
+		!isArrayField && control.register(name);
+		_previousNameRef.current = name;
+		return () => {
+			(isArrayField ? _shouldUnregisterField && !control._state.action : _shouldUnregisterField) ? control.unregister(name) : updateMounted(name, false);
+		};
+	}, [
+		name,
+		control,
+		isArrayField,
+		shouldUnregister
+	]);
+	import_react.useEffect(() => {
+		control._setDisabledField({
+			disabled,
+			name
+		});
+	}, [
+		disabled,
+		name,
+		control
+	]);
+	return import_react.useMemo(() => ({
+		field,
+		formState,
+		fieldState
+	}), [
+		field,
+		formState,
+		fieldState
+	]);
+}
+var Controller = (props) => props.render(useController(props));
+var HookFormContext = import_react.createContext(null);
+HookFormContext.displayName = "HookFormContext";
+var useFormContext = () => import_react.useContext(HookFormContext);
+var FormProvider = (props) => {
+	const { children, watch, getValues, getFieldState, setError, clearErrors, setValue, trigger, formState, resetField, reset, handleSubmit, unregister, control, register, setFocus, subscribe } = props;
+	return import_react.createElement(HookFormContext.Provider, { value: import_react.useMemo(() => ({
+		watch,
+		getValues,
+		getFieldState,
+		setError,
+		clearErrors,
+		setValue,
+		trigger,
+		formState,
+		resetField,
+		reset,
+		handleSubmit,
+		unregister,
+		control,
+		register,
+		setFocus,
+		subscribe
+	}), [
+		clearErrors,
+		control,
+		formState,
+		getFieldState,
+		getValues,
+		handleSubmit,
+		register,
+		reset,
+		resetField,
+		setError,
+		setFocus,
+		setValue,
+		subscribe,
+		trigger,
+		unregister,
+		watch
+	]) }, import_react.createElement(HookFormControlContext.Provider, { value: control }, children));
+};
+var appendErrors = (name, validateAllFieldCriteria, errors, type, message) => validateAllFieldCriteria ? {
+	...errors[name],
+	types: {
+		...errors[name] && errors[name].types ? errors[name].types : {},
+		[type]: message || true
+	}
+} : {};
+var convertToArrayPayload = (value) => Array.isArray(value) ? value : [value];
+var createSubject = () => {
+	let _observers = [];
+	const next = (value) => {
+		for (const observer of _observers) observer.next && observer.next(value);
+	};
+	const subscribe = (observer) => {
+		_observers.push(observer);
+		return { unsubscribe: () => {
+			_observers = _observers.filter((o$1) => o$1 !== observer);
+		} };
+	};
+	const unsubscribe = () => {
+		_observers = [];
+	};
+	return {
+		get observers() {
+			return _observers;
+		},
+		next,
+		subscribe,
+		unsubscribe
+	};
+};
+function extractFormValues(fieldsState, formValues) {
+	const values = {};
+	for (const key in fieldsState) if (fieldsState.hasOwnProperty(key)) {
+		const fieldState = fieldsState[key];
+		const fieldValue = formValues[key];
+		if (fieldState && isObject$1(fieldState) && fieldValue) {
+			const nestedFieldsState = extractFormValues(fieldState, fieldValue);
+			if (isObject$1(nestedFieldsState)) values[key] = nestedFieldsState;
+		} else if (fieldsState[key]) values[key] = fieldValue;
+	}
+	return values;
+}
+var isEmptyObject = (value) => isObject$1(value) && !Object.keys(value).length;
+var isFileInput = (element) => element.type === "file";
+var isHTMLElement = (value) => {
+	if (!isWeb) return false;
+	const owner = value ? value.ownerDocument : 0;
+	return value instanceof (owner && owner.defaultView ? owner.defaultView.HTMLElement : HTMLElement);
+};
+var isMultipleSelect = (element) => element.type === `select-multiple`;
+var isRadioInput = (element) => element.type === "radio";
+var isRadioOrCheckbox = (ref) => isRadioInput(ref) || isCheckBoxInput(ref);
+var live = (ref) => isHTMLElement(ref) && ref.isConnected;
+function baseGet(object$1, updatePath) {
+	const length = updatePath.slice(0, -1).length;
+	let index$1 = 0;
+	while (index$1 < length) object$1 = isUndefined(object$1) ? index$1++ : object$1[updatePath[index$1++]];
+	return object$1;
+}
+function isEmptyArray(obj) {
+	for (const key in obj) if (obj.hasOwnProperty(key) && !isUndefined(obj[key])) return false;
+	return true;
+}
+function unset(object$1, path) {
+	const paths = Array.isArray(path) ? path : isKey(path) ? [path] : stringToPath(path);
+	const childObject = paths.length === 1 ? object$1 : baseGet(object$1, paths);
+	const index$1 = paths.length - 1;
+	const key = paths[index$1];
+	if (childObject) delete childObject[key];
+	if (index$1 !== 0 && (isObject$1(childObject) && isEmptyObject(childObject) || Array.isArray(childObject) && isEmptyArray(childObject))) unset(object$1, paths.slice(0, -1));
+	return object$1;
+}
+var objectHasFunction = (data) => {
+	for (const key in data) if (isFunction(data[key])) return true;
+	return false;
+};
+function isTraversable(value) {
+	return Array.isArray(value) || isObject$1(value) && !objectHasFunction(value);
+}
+function markFieldsDirty(data, fields = {}) {
+	for (const key in data) {
+		const value = data[key];
+		if (isTraversable(value)) {
+			fields[key] = Array.isArray(value) ? [] : {};
+			markFieldsDirty(value, fields[key]);
+		} else if (!isUndefined(value)) fields[key] = true;
+	}
+	return fields;
+}
+function getDirtyFields(data, formValues, dirtyFieldsFromValues) {
+	if (!dirtyFieldsFromValues) dirtyFieldsFromValues = markFieldsDirty(formValues);
+	for (const key in data) {
+		const value = data[key];
+		if (isTraversable(value)) if (isUndefined(formValues) || isPrimitive(dirtyFieldsFromValues[key])) dirtyFieldsFromValues[key] = markFieldsDirty(value, Array.isArray(value) ? [] : {});
+		else getDirtyFields(value, isNullOrUndefined(formValues) ? {} : formValues[key], dirtyFieldsFromValues[key]);
+		else {
+			const formValue = formValues[key];
+			dirtyFieldsFromValues[key] = !deepEqual(value, formValue);
+		}
+	}
+	return dirtyFieldsFromValues;
+}
+var defaultResult = {
+	value: false,
+	isValid: false
+};
+var validResult = {
+	value: true,
+	isValid: true
+};
+var getCheckboxValue = (options$1) => {
+	if (Array.isArray(options$1)) {
+		if (options$1.length > 1) {
+			const values = options$1.filter((option) => option && option.checked && !option.disabled).map((option) => option.value);
+			return {
+				value: values,
+				isValid: !!values.length
+			};
+		}
+		return options$1[0].checked && !options$1[0].disabled ? options$1[0].attributes && !isUndefined(options$1[0].attributes.value) ? isUndefined(options$1[0].value) || options$1[0].value === "" ? validResult : {
+			value: options$1[0].value,
+			isValid: true
+		} : validResult : defaultResult;
+	}
+	return defaultResult;
+};
+var getFieldValueAs = (value, { valueAsNumber, valueAsDate, setValueAs }) => isUndefined(value) ? value : valueAsNumber ? value === "" ? NaN : value ? +value : value : valueAsDate && isString(value) ? new Date(value) : setValueAs ? setValueAs(value) : value;
+var defaultReturn = {
+	isValid: false,
+	value: null
+};
+var getRadioValue = (options$1) => Array.isArray(options$1) ? options$1.reduce((previous, option) => option && option.checked && !option.disabled ? {
+	isValid: true,
+	value: option.value
+} : previous, defaultReturn) : defaultReturn;
+function getFieldValue(_f) {
+	const ref = _f.ref;
+	if (isFileInput(ref)) return ref.files;
+	if (isRadioInput(ref)) return getRadioValue(_f.refs).value;
+	if (isMultipleSelect(ref)) return [...ref.selectedOptions].map(({ value }) => value);
+	if (isCheckBoxInput(ref)) return getCheckboxValue(_f.refs).value;
+	return getFieldValueAs(isUndefined(ref.value) ? _f.ref.value : ref.value, _f);
+}
+var getResolverOptions = (fieldsNames, _fields, criteriaMode, shouldUseNativeValidation) => {
+	const fields = {};
+	for (const name of fieldsNames) {
+		const field = get(_fields, name);
+		field && set(fields, name, field._f);
+	}
+	return {
+		criteriaMode,
+		names: [...fieldsNames],
+		fields,
+		shouldUseNativeValidation
+	};
+};
+var isRegex = (value) => value instanceof RegExp;
+var getRuleValue = (rule) => isUndefined(rule) ? rule : isRegex(rule) ? rule.source : isObject$1(rule) ? isRegex(rule.value) ? rule.value.source : rule.value : rule;
+var getValidationModes = (mode) => ({
+	isOnSubmit: !mode || mode === VALIDATION_MODE.onSubmit,
+	isOnBlur: mode === VALIDATION_MODE.onBlur,
+	isOnChange: mode === VALIDATION_MODE.onChange,
+	isOnAll: mode === VALIDATION_MODE.all,
+	isOnTouch: mode === VALIDATION_MODE.onTouched
+});
+var ASYNC_FUNCTION = "AsyncFunction";
+var hasPromiseValidation = (fieldReference) => !!fieldReference && !!fieldReference.validate && !!(isFunction(fieldReference.validate) && fieldReference.validate.constructor.name === ASYNC_FUNCTION || isObject$1(fieldReference.validate) && Object.values(fieldReference.validate).find((validateFunction) => validateFunction.constructor.name === ASYNC_FUNCTION));
+var hasValidation = (options$1) => options$1.mount && (options$1.required || options$1.min || options$1.max || options$1.maxLength || options$1.minLength || options$1.pattern || options$1.validate);
+var isWatched = (name, _names, isBlurEvent) => !isBlurEvent && (_names.watchAll || _names.watch.has(name) || [..._names.watch].some((watchName) => name.startsWith(watchName) && /^\.\w+/.test(name.slice(watchName.length))));
+var iterateFieldsByAction = (fields, action, fieldsNames, abortEarly) => {
+	for (const key of fieldsNames || Object.keys(fields)) {
+		const field = get(fields, key);
+		if (field) {
+			const { _f, ...currentField } = field;
+			if (_f) {
+				if (_f.refs && _f.refs[0] && action(_f.refs[0], key) && !abortEarly) return true;
+				else if (_f.ref && action(_f.ref, _f.name) && !abortEarly) return true;
+				else if (iterateFieldsByAction(currentField, action)) break;
+			} else if (isObject$1(currentField)) {
+				if (iterateFieldsByAction(currentField, action)) break;
+			}
+		}
+	}
+};
+function schemaErrorLookup(errors, _fields, name) {
+	const error = get(errors, name);
+	if (error || isKey(name)) return {
+		error,
+		name
+	};
+	const names = name.split(".");
+	while (names.length) {
+		const fieldName = names.join(".");
+		const field = get(_fields, fieldName);
+		const foundError = get(errors, fieldName);
+		if (field && !Array.isArray(field) && name !== fieldName) return { name };
+		if (foundError && foundError.type) return {
+			name: fieldName,
+			error: foundError
+		};
+		if (foundError && foundError.root && foundError.root.type) return {
+			name: `${fieldName}.root`,
+			error: foundError.root
+		};
+		names.pop();
+	}
+	return { name };
+}
+var shouldRenderFormState = (formStateData, _proxyFormState, updateFormState, isRoot) => {
+	updateFormState(formStateData);
+	const { name, ...formState } = formStateData;
+	return isEmptyObject(formState) || Object.keys(formState).length >= Object.keys(_proxyFormState).length || Object.keys(formState).find((key) => _proxyFormState[key] === (!isRoot || VALIDATION_MODE.all));
+};
+var shouldSubscribeByName = (name, signalName, exact) => !name || !signalName || name === signalName || convertToArrayPayload(name).some((currentName) => currentName && (exact ? currentName === signalName : currentName.startsWith(signalName) || signalName.startsWith(currentName)));
+var skipValidation = (isBlurEvent, isTouched, isSubmitted, reValidateMode, mode) => {
+	if (mode.isOnAll) return false;
+	else if (!isSubmitted && mode.isOnTouch) return !(isTouched || isBlurEvent);
+	else if (isSubmitted ? reValidateMode.isOnBlur : mode.isOnBlur) return !isBlurEvent;
+	else if (isSubmitted ? reValidateMode.isOnChange : mode.isOnChange) return isBlurEvent;
+	return true;
+};
+var unsetEmptyArray = (ref, name) => !compact(get(ref, name)).length && unset(ref, name);
+var updateFieldArrayRootError = (errors, error, name) => {
+	const fieldArrayErrors = convertToArrayPayload(get(errors, name));
+	set(fieldArrayErrors, "root", error[name]);
+	set(errors, name, fieldArrayErrors);
+	return errors;
+};
+function getValidateError(result, ref, type = "validate") {
+	if (isString(result) || Array.isArray(result) && result.every(isString) || isBoolean(result) && !result) return {
+		type,
+		message: isString(result) ? result : "",
+		ref
+	};
+}
+var getValueAndMessage = (validationData) => isObject$1(validationData) && !isRegex(validationData) ? validationData : {
+	value: validationData,
+	message: ""
+};
+var validateField = async (field, disabledFieldNames, formValues, validateAllFieldCriteria, shouldUseNativeValidation, isFieldArray) => {
+	const { ref, refs, required: required$1, maxLength, minLength, min: min$1, max: max$1, pattern, validate, name, valueAsNumber, mount } = field._f;
+	const inputValue = get(formValues, name);
+	if (!mount || disabledFieldNames.has(name)) return {};
+	const inputRef = refs ? refs[0] : ref;
+	const setCustomValidity = (message) => {
+		if (shouldUseNativeValidation && inputRef.reportValidity) {
+			inputRef.setCustomValidity(isBoolean(message) ? "" : message || "");
+			inputRef.reportValidity();
+		}
+	};
+	const error = {};
+	const isRadio = isRadioInput(ref);
+	const isCheckBox = isCheckBoxInput(ref);
+	const isRadioOrCheckbox$1 = isRadio || isCheckBox;
+	const isEmpty = (valueAsNumber || isFileInput(ref)) && isUndefined(ref.value) && isUndefined(inputValue) || isHTMLElement(ref) && ref.value === "" || inputValue === "" || Array.isArray(inputValue) && !inputValue.length;
+	const appendErrorsCurry = appendErrors.bind(null, name, validateAllFieldCriteria, error);
+	const getMinMaxMessage = (exceedMax, maxLengthMessage, minLengthMessage, maxType = INPUT_VALIDATION_RULES.maxLength, minType = INPUT_VALIDATION_RULES.minLength) => {
+		const message = exceedMax ? maxLengthMessage : minLengthMessage;
+		error[name] = {
+			type: exceedMax ? maxType : minType,
+			message,
+			ref,
+			...appendErrorsCurry(exceedMax ? maxType : minType, message)
+		};
+	};
+	if (isFieldArray ? !Array.isArray(inputValue) || !inputValue.length : required$1 && (!isRadioOrCheckbox$1 && (isEmpty || isNullOrUndefined(inputValue)) || isBoolean(inputValue) && !inputValue || isCheckBox && !getCheckboxValue(refs).isValid || isRadio && !getRadioValue(refs).isValid)) {
+		const { value, message } = isString(required$1) ? {
+			value: !!required$1,
+			message: required$1
+		} : getValueAndMessage(required$1);
+		if (value) {
+			error[name] = {
+				type: INPUT_VALIDATION_RULES.required,
+				message,
+				ref: inputRef,
+				...appendErrorsCurry(INPUT_VALIDATION_RULES.required, message)
+			};
+			if (!validateAllFieldCriteria) {
+				setCustomValidity(message);
+				return error;
+			}
+		}
+	}
+	if (!isEmpty && (!isNullOrUndefined(min$1) || !isNullOrUndefined(max$1))) {
+		let exceedMax;
+		let exceedMin;
+		const maxOutput = getValueAndMessage(max$1);
+		const minOutput = getValueAndMessage(min$1);
+		if (!isNullOrUndefined(inputValue) && !isNaN(inputValue)) {
+			const valueNumber = ref.valueAsNumber || (inputValue ? +inputValue : inputValue);
+			if (!isNullOrUndefined(maxOutput.value)) exceedMax = valueNumber > maxOutput.value;
+			if (!isNullOrUndefined(minOutput.value)) exceedMin = valueNumber < minOutput.value;
+		} else {
+			const valueDate = ref.valueAsDate || new Date(inputValue);
+			const convertTimeToDate = (time$2) => /* @__PURE__ */ new Date((/* @__PURE__ */ new Date()).toDateString() + " " + time$2);
+			const isTime = ref.type == "time";
+			const isWeek = ref.type == "week";
+			if (isString(maxOutput.value) && inputValue) exceedMax = isTime ? convertTimeToDate(inputValue) > convertTimeToDate(maxOutput.value) : isWeek ? inputValue > maxOutput.value : valueDate > new Date(maxOutput.value);
+			if (isString(minOutput.value) && inputValue) exceedMin = isTime ? convertTimeToDate(inputValue) < convertTimeToDate(minOutput.value) : isWeek ? inputValue < minOutput.value : valueDate < new Date(minOutput.value);
+		}
+		if (exceedMax || exceedMin) {
+			getMinMaxMessage(!!exceedMax, maxOutput.message, minOutput.message, INPUT_VALIDATION_RULES.max, INPUT_VALIDATION_RULES.min);
+			if (!validateAllFieldCriteria) {
+				setCustomValidity(error[name].message);
+				return error;
+			}
+		}
+	}
+	if ((maxLength || minLength) && !isEmpty && (isString(inputValue) || isFieldArray && Array.isArray(inputValue))) {
+		const maxLengthOutput = getValueAndMessage(maxLength);
+		const minLengthOutput = getValueAndMessage(minLength);
+		const exceedMax = !isNullOrUndefined(maxLengthOutput.value) && inputValue.length > +maxLengthOutput.value;
+		const exceedMin = !isNullOrUndefined(minLengthOutput.value) && inputValue.length < +minLengthOutput.value;
+		if (exceedMax || exceedMin) {
+			getMinMaxMessage(exceedMax, maxLengthOutput.message, minLengthOutput.message);
+			if (!validateAllFieldCriteria) {
+				setCustomValidity(error[name].message);
+				return error;
+			}
+		}
+	}
+	if (pattern && !isEmpty && isString(inputValue)) {
+		const { value: patternValue, message } = getValueAndMessage(pattern);
+		if (isRegex(patternValue) && !inputValue.match(patternValue)) {
+			error[name] = {
+				type: INPUT_VALIDATION_RULES.pattern,
+				message,
+				ref,
+				...appendErrorsCurry(INPUT_VALIDATION_RULES.pattern, message)
+			};
+			if (!validateAllFieldCriteria) {
+				setCustomValidity(message);
+				return error;
+			}
+		}
+	}
+	if (validate) {
+		if (isFunction(validate)) {
+			const validateError = getValidateError(await validate(inputValue, formValues), inputRef);
+			if (validateError) {
+				error[name] = {
+					...validateError,
+					...appendErrorsCurry(INPUT_VALIDATION_RULES.validate, validateError.message)
+				};
+				if (!validateAllFieldCriteria) {
+					setCustomValidity(validateError.message);
+					return error;
+				}
+			}
+		} else if (isObject$1(validate)) {
+			let validationResult = {};
+			for (const key in validate) {
+				if (!isEmptyObject(validationResult) && !validateAllFieldCriteria) break;
+				const validateError = getValidateError(await validate[key](inputValue, formValues), inputRef, key);
+				if (validateError) {
+					validationResult = {
+						...validateError,
+						...appendErrorsCurry(key, validateError.message)
+					};
+					setCustomValidity(validateError.message);
+					if (validateAllFieldCriteria) error[name] = validationResult;
+				}
+			}
+			if (!isEmptyObject(validationResult)) {
+				error[name] = {
+					ref: inputRef,
+					...validationResult
+				};
+				if (!validateAllFieldCriteria) return error;
+			}
+		}
+	}
+	setCustomValidity(true);
+	return error;
+};
+var defaultOptions = {
+	mode: VALIDATION_MODE.onSubmit,
+	reValidateMode: VALIDATION_MODE.onChange,
+	shouldFocusError: true
+};
+function createFormControl(props = {}) {
+	let _options = {
+		...defaultOptions,
+		...props
+	};
+	let _formState = {
+		submitCount: 0,
+		isDirty: false,
+		isReady: false,
+		isLoading: isFunction(_options.defaultValues),
+		isValidating: false,
+		isSubmitted: false,
+		isSubmitting: false,
+		isSubmitSuccessful: false,
+		isValid: false,
+		touchedFields: {},
+		dirtyFields: {},
+		validatingFields: {},
+		errors: _options.errors || {},
+		disabled: _options.disabled || false
+	};
+	let _fields = {};
+	let _defaultValues = isObject$1(_options.defaultValues) || isObject$1(_options.values) ? cloneObject(_options.defaultValues || _options.values) || {} : {};
+	let _formValues = _options.shouldUnregister ? {} : cloneObject(_defaultValues);
+	let _state = {
+		action: false,
+		mount: false,
+		watch: false,
+		keepIsValid: false
+	};
+	let _names = {
+		mount: /* @__PURE__ */ new Set(),
+		disabled: /* @__PURE__ */ new Set(),
+		unMount: /* @__PURE__ */ new Set(),
+		array: /* @__PURE__ */ new Set(),
+		watch: /* @__PURE__ */ new Set()
+	};
+	let delayErrorCallback;
+	let timer = 0;
+	const defaultProxyFormState = {
+		isDirty: false,
+		dirtyFields: false,
+		validatingFields: false,
+		touchedFields: false,
+		isValidating: false,
+		isValid: false,
+		errors: false
+	};
+	const _proxyFormState = { ...defaultProxyFormState };
+	let _proxySubscribeFormState = { ..._proxyFormState };
+	const _subjects = {
+		array: createSubject(),
+		state: createSubject()
+	};
+	const shouldDisplayAllAssociatedErrors = _options.criteriaMode === VALIDATION_MODE.all;
+	const debounce = (callback) => (wait) => {
+		clearTimeout(timer);
+		timer = setTimeout(callback, wait);
+	};
+	const _setValid = async (shouldUpdateValid) => {
+		if (_state.keepIsValid) return;
+		if (!_options.disabled && (_proxyFormState.isValid || _proxySubscribeFormState.isValid || shouldUpdateValid)) {
+			let isValid;
+			if (_options.resolver) {
+				isValid = isEmptyObject((await _runSchema()).errors);
+				_updateIsValidating();
+			} else isValid = await executeBuiltInValidation(_fields, true);
+			if (isValid !== _formState.isValid) _subjects.state.next({ isValid });
+		}
+	};
+	const _updateIsValidating = (names, isValidating) => {
+		if (!_options.disabled && (_proxyFormState.isValidating || _proxyFormState.validatingFields || _proxySubscribeFormState.isValidating || _proxySubscribeFormState.validatingFields)) {
+			(names || Array.from(_names.mount)).forEach((name) => {
+				if (name) isValidating ? set(_formState.validatingFields, name, isValidating) : unset(_formState.validatingFields, name);
+			});
+			_subjects.state.next({
+				validatingFields: _formState.validatingFields,
+				isValidating: !isEmptyObject(_formState.validatingFields)
+			});
+		}
+	};
+	const _setFieldArray = (name, values = [], method, args, shouldSetValues = true, shouldUpdateFieldsAndState = true) => {
+		if (args && method && !_options.disabled) {
+			_state.action = true;
+			if (shouldUpdateFieldsAndState && Array.isArray(get(_fields, name))) {
+				const fieldValues = method(get(_fields, name), args.argA, args.argB);
+				shouldSetValues && set(_fields, name, fieldValues);
+			}
+			if (shouldUpdateFieldsAndState && Array.isArray(get(_formState.errors, name))) {
+				const errors = method(get(_formState.errors, name), args.argA, args.argB);
+				shouldSetValues && set(_formState.errors, name, errors);
+				unsetEmptyArray(_formState.errors, name);
+			}
+			if ((_proxyFormState.touchedFields || _proxySubscribeFormState.touchedFields) && shouldUpdateFieldsAndState && Array.isArray(get(_formState.touchedFields, name))) {
+				const touchedFields = method(get(_formState.touchedFields, name), args.argA, args.argB);
+				shouldSetValues && set(_formState.touchedFields, name, touchedFields);
+			}
+			if (_proxyFormState.dirtyFields || _proxySubscribeFormState.dirtyFields) _formState.dirtyFields = getDirtyFields(_defaultValues, _formValues);
+			_subjects.state.next({
+				name,
+				isDirty: _getDirty(name, values),
+				dirtyFields: _formState.dirtyFields,
+				errors: _formState.errors,
+				isValid: _formState.isValid
+			});
+		} else set(_formValues, name, values);
+	};
+	const updateErrors = (name, error) => {
+		set(_formState.errors, name, error);
+		_subjects.state.next({ errors: _formState.errors });
+	};
+	const _setErrors = (errors) => {
+		_formState.errors = errors;
+		_subjects.state.next({
+			errors: _formState.errors,
+			isValid: false
+		});
+	};
+	const updateValidAndValue = (name, shouldSkipSetValueAs, value, ref) => {
+		const field = get(_fields, name);
+		if (field) {
+			const defaultValue = get(_formValues, name, isUndefined(value) ? get(_defaultValues, name) : value);
+			isUndefined(defaultValue) || ref && ref.defaultChecked || shouldSkipSetValueAs ? set(_formValues, name, shouldSkipSetValueAs ? defaultValue : getFieldValue(field._f)) : setFieldValue(name, defaultValue);
+			_state.mount && !_state.action && _setValid();
+		}
+	};
+	const updateTouchAndDirty = (name, fieldValue, isBlurEvent, shouldDirty, shouldRender) => {
+		let shouldUpdateField = false;
+		let isPreviousDirty = false;
+		const output = { name };
+		if (!_options.disabled) {
+			if (!isBlurEvent || shouldDirty) {
+				if (_proxyFormState.isDirty || _proxySubscribeFormState.isDirty) {
+					isPreviousDirty = _formState.isDirty;
+					_formState.isDirty = output.isDirty = _getDirty();
+					shouldUpdateField = isPreviousDirty !== output.isDirty;
+				}
+				const isCurrentFieldPristine = deepEqual(get(_defaultValues, name), fieldValue);
+				isPreviousDirty = !!get(_formState.dirtyFields, name);
+				isCurrentFieldPristine ? unset(_formState.dirtyFields, name) : set(_formState.dirtyFields, name, true);
+				output.dirtyFields = _formState.dirtyFields;
+				shouldUpdateField = shouldUpdateField || (_proxyFormState.dirtyFields || _proxySubscribeFormState.dirtyFields) && isPreviousDirty !== !isCurrentFieldPristine;
+			}
+			if (isBlurEvent) {
+				const isPreviousFieldTouched = get(_formState.touchedFields, name);
+				if (!isPreviousFieldTouched) {
+					set(_formState.touchedFields, name, isBlurEvent);
+					output.touchedFields = _formState.touchedFields;
+					shouldUpdateField = shouldUpdateField || (_proxyFormState.touchedFields || _proxySubscribeFormState.touchedFields) && isPreviousFieldTouched !== isBlurEvent;
+				}
+			}
+			shouldUpdateField && shouldRender && _subjects.state.next(output);
+		}
+		return shouldUpdateField ? output : {};
+	};
+	const shouldRenderByError = (name, isValid, error, fieldState) => {
+		const previousFieldError = get(_formState.errors, name);
+		const shouldUpdateValid = (_proxyFormState.isValid || _proxySubscribeFormState.isValid) && isBoolean(isValid) && _formState.isValid !== isValid;
+		if (_options.delayError && error) {
+			delayErrorCallback = debounce(() => updateErrors(name, error));
+			delayErrorCallback(_options.delayError);
+		} else {
+			clearTimeout(timer);
+			delayErrorCallback = null;
+			error ? set(_formState.errors, name, error) : unset(_formState.errors, name);
+		}
+		if ((error ? !deepEqual(previousFieldError, error) : previousFieldError) || !isEmptyObject(fieldState) || shouldUpdateValid) {
+			const updatedFormState = {
+				...fieldState,
+				...shouldUpdateValid && isBoolean(isValid) ? { isValid } : {},
+				errors: _formState.errors,
+				name
+			};
+			_formState = {
+				..._formState,
+				...updatedFormState
+			};
+			_subjects.state.next(updatedFormState);
+		}
+	};
+	const _runSchema = async (name) => {
+		_updateIsValidating(name, true);
+		return await _options.resolver(_formValues, _options.context, getResolverOptions(name || _names.mount, _fields, _options.criteriaMode, _options.shouldUseNativeValidation));
+	};
+	const executeSchemaAndUpdateState = async (names) => {
+		const { errors } = await _runSchema(names);
+		_updateIsValidating(names);
+		if (names) for (const name of names) {
+			const error = get(errors, name);
+			error ? set(_formState.errors, name, error) : unset(_formState.errors, name);
+		}
+		else _formState.errors = errors;
+		return errors;
+	};
+	const executeBuiltInValidation = async (fields, shouldOnlyCheckValid, context = { valid: true }) => {
+		for (const name in fields) {
+			const field = fields[name];
+			if (field) {
+				const { _f, ...fieldValue } = field;
+				if (_f) {
+					const isFieldArrayRoot = _names.array.has(_f.name);
+					const isPromiseFunction = field._f && hasPromiseValidation(field._f);
+					if (isPromiseFunction && _proxyFormState.validatingFields) _updateIsValidating([_f.name], true);
+					const fieldError = await validateField(field, _names.disabled, _formValues, shouldDisplayAllAssociatedErrors, _options.shouldUseNativeValidation && !shouldOnlyCheckValid, isFieldArrayRoot);
+					if (isPromiseFunction && _proxyFormState.validatingFields) _updateIsValidating([_f.name]);
+					if (fieldError[_f.name]) {
+						context.valid = false;
+						if (shouldOnlyCheckValid || props.shouldUseNativeValidation) break;
+					}
+					!shouldOnlyCheckValid && (get(fieldError, _f.name) ? isFieldArrayRoot ? updateFieldArrayRootError(_formState.errors, fieldError, _f.name) : set(_formState.errors, _f.name, fieldError[_f.name]) : unset(_formState.errors, _f.name));
+				}
+				!isEmptyObject(fieldValue) && await executeBuiltInValidation(fieldValue, shouldOnlyCheckValid, context);
+			}
+		}
+		return context.valid;
+	};
+	const _removeUnmounted = () => {
+		for (const name of _names.unMount) {
+			const field = get(_fields, name);
+			field && (field._f.refs ? field._f.refs.every((ref) => !live(ref)) : !live(field._f.ref)) && unregister(name);
+		}
+		_names.unMount = /* @__PURE__ */ new Set();
+	};
+	const _getDirty = (name, data) => !_options.disabled && (name && data && set(_formValues, name, data), !deepEqual(getValues(), _defaultValues));
+	const _getWatch = (names, defaultValue, isGlobal) => generateWatchOutput(names, _names, { ..._state.mount ? _formValues : isUndefined(defaultValue) ? _defaultValues : isString(names) ? { [names]: defaultValue } : defaultValue }, isGlobal, defaultValue);
+	const _getFieldArray = (name) => compact(get(_state.mount ? _formValues : _defaultValues, name, _options.shouldUnregister ? get(_defaultValues, name, []) : []));
+	const setFieldValue = (name, value, options$1 = {}) => {
+		const field = get(_fields, name);
+		let fieldValue = value;
+		if (field) {
+			const fieldReference = field._f;
+			if (fieldReference) {
+				!fieldReference.disabled && set(_formValues, name, getFieldValueAs(value, fieldReference));
+				fieldValue = isHTMLElement(fieldReference.ref) && isNullOrUndefined(value) ? "" : value;
+				if (isMultipleSelect(fieldReference.ref)) [...fieldReference.ref.options].forEach((optionRef) => optionRef.selected = fieldValue.includes(optionRef.value));
+				else if (fieldReference.refs) if (isCheckBoxInput(fieldReference.ref)) fieldReference.refs.forEach((checkboxRef) => {
+					if (!checkboxRef.defaultChecked || !checkboxRef.disabled) if (Array.isArray(fieldValue)) checkboxRef.checked = !!fieldValue.find((data) => data === checkboxRef.value);
+					else checkboxRef.checked = fieldValue === checkboxRef.value || !!fieldValue;
+				});
+				else fieldReference.refs.forEach((radioRef) => radioRef.checked = radioRef.value === fieldValue);
+				else if (isFileInput(fieldReference.ref)) fieldReference.ref.value = "";
+				else {
+					fieldReference.ref.value = fieldValue;
+					if (!fieldReference.ref.type) _subjects.state.next({
+						name,
+						values: cloneObject(_formValues)
+					});
+				}
+			}
+		}
+		(options$1.shouldDirty || options$1.shouldTouch) && updateTouchAndDirty(name, fieldValue, options$1.shouldTouch, options$1.shouldDirty, true);
+		options$1.shouldValidate && trigger(name);
+	};
+	const setValues = (name, value, options$1) => {
+		for (const fieldKey in value) {
+			if (!value.hasOwnProperty(fieldKey)) return;
+			const fieldValue = value[fieldKey];
+			const fieldName = name + "." + fieldKey;
+			const field = get(_fields, fieldName);
+			(_names.array.has(name) || isObject$1(fieldValue) || field && !field._f) && !isDateObject(fieldValue) ? setValues(fieldName, fieldValue, options$1) : setFieldValue(fieldName, fieldValue, options$1);
+		}
+	};
+	const setValue = (name, value, options$1 = {}) => {
+		const field = get(_fields, name);
+		const isFieldArray = _names.array.has(name);
+		const cloneValue = cloneObject(value);
+		set(_formValues, name, cloneValue);
+		if (isFieldArray) {
+			_subjects.array.next({
+				name,
+				values: cloneObject(_formValues)
+			});
+			if ((_proxyFormState.isDirty || _proxyFormState.dirtyFields || _proxySubscribeFormState.isDirty || _proxySubscribeFormState.dirtyFields) && options$1.shouldDirty) _subjects.state.next({
+				name,
+				dirtyFields: getDirtyFields(_defaultValues, _formValues),
+				isDirty: _getDirty(name, cloneValue)
+			});
+		} else field && !field._f && !isNullOrUndefined(cloneValue) ? setValues(name, cloneValue, options$1) : setFieldValue(name, cloneValue, options$1);
+		if (isWatched(name, _names)) _subjects.state.next({
+			..._formState,
+			name,
+			values: cloneObject(_formValues)
+		});
+		else _subjects.state.next({
+			name: _state.mount ? name : void 0,
+			values: cloneObject(_formValues)
+		});
+	};
+	const onChange = async (event) => {
+		_state.mount = true;
+		const target = event.target;
+		let name = target.name;
+		let isFieldValueUpdated = true;
+		const field = get(_fields, name);
+		const _updateIsFieldValueUpdated = (fieldValue) => {
+			isFieldValueUpdated = Number.isNaN(fieldValue) || isDateObject(fieldValue) && isNaN(fieldValue.getTime()) || deepEqual(fieldValue, get(_formValues, name, fieldValue));
+		};
+		const validationModeBeforeSubmit = getValidationModes(_options.mode);
+		const validationModeAfterSubmit = getValidationModes(_options.reValidateMode);
+		if (field) {
+			let error;
+			let isValid;
+			const fieldValue = target.type ? getFieldValue(field._f) : getEventValue(event);
+			const isBlurEvent = event.type === EVENTS.BLUR || event.type === EVENTS.FOCUS_OUT;
+			const shouldSkipValidation = !hasValidation(field._f) && !_options.resolver && !get(_formState.errors, name) && !field._f.deps || skipValidation(isBlurEvent, get(_formState.touchedFields, name), _formState.isSubmitted, validationModeAfterSubmit, validationModeBeforeSubmit);
+			const watched = isWatched(name, _names, isBlurEvent);
+			set(_formValues, name, fieldValue);
+			if (isBlurEvent) {
+				if (!target || !target.readOnly) {
+					field._f.onBlur && field._f.onBlur(event);
+					delayErrorCallback && delayErrorCallback(0);
+				}
+			} else if (field._f.onChange) field._f.onChange(event);
+			const fieldState = updateTouchAndDirty(name, fieldValue, isBlurEvent);
+			const shouldRender = !isEmptyObject(fieldState) || watched;
+			!isBlurEvent && _subjects.state.next({
+				name,
+				type: event.type,
+				values: cloneObject(_formValues)
+			});
+			if (shouldSkipValidation) {
+				if (_proxyFormState.isValid || _proxySubscribeFormState.isValid) {
+					if (_options.mode === "onBlur") {
+						if (isBlurEvent) _setValid();
+					} else if (!isBlurEvent) _setValid();
+				}
+				return shouldRender && _subjects.state.next({
+					name,
+					...watched ? {} : fieldState
+				});
+			}
+			!isBlurEvent && watched && _subjects.state.next({ ..._formState });
+			if (_options.resolver) {
+				const { errors } = await _runSchema([name]);
+				_updateIsValidating([name]);
+				_updateIsFieldValueUpdated(fieldValue);
+				if (isFieldValueUpdated) {
+					const previousErrorLookupResult = schemaErrorLookup(_formState.errors, _fields, name);
+					const errorLookupResult = schemaErrorLookup(errors, _fields, previousErrorLookupResult.name || name);
+					error = errorLookupResult.error;
+					name = errorLookupResult.name;
+					isValid = isEmptyObject(errors);
+				}
+			} else {
+				_updateIsValidating([name], true);
+				error = (await validateField(field, _names.disabled, _formValues, shouldDisplayAllAssociatedErrors, _options.shouldUseNativeValidation))[name];
+				_updateIsValidating([name]);
+				_updateIsFieldValueUpdated(fieldValue);
+				if (isFieldValueUpdated) {
+					if (error) isValid = false;
+					else if (_proxyFormState.isValid || _proxySubscribeFormState.isValid) isValid = await executeBuiltInValidation(_fields, true);
+				}
+			}
+			if (isFieldValueUpdated) {
+				field._f.deps && (!Array.isArray(field._f.deps) || field._f.deps.length > 0) && trigger(field._f.deps);
+				shouldRenderByError(name, isValid, error, fieldState);
+			}
+		}
+	};
+	const _focusInput = (ref, key) => {
+		if (get(_formState.errors, key) && ref.focus) {
+			ref.focus();
+			return 1;
+		}
+	};
+	const trigger = async (name, options$1 = {}) => {
+		let isValid;
+		let validationResult;
+		const fieldNames = convertToArrayPayload(name);
+		if (_options.resolver) {
+			const errors = await executeSchemaAndUpdateState(isUndefined(name) ? name : fieldNames);
+			isValid = isEmptyObject(errors);
+			validationResult = name ? !fieldNames.some((name$1) => get(errors, name$1)) : isValid;
+		} else if (name) {
+			validationResult = (await Promise.all(fieldNames.map(async (fieldName) => {
+				const field = get(_fields, fieldName);
+				return await executeBuiltInValidation(field && field._f ? { [fieldName]: field } : field);
+			}))).every(Boolean);
+			!(!validationResult && !_formState.isValid) && _setValid();
+		} else validationResult = isValid = await executeBuiltInValidation(_fields);
+		_subjects.state.next({
+			...!isString(name) || (_proxyFormState.isValid || _proxySubscribeFormState.isValid) && isValid !== _formState.isValid ? {} : { name },
+			..._options.resolver || !name ? { isValid } : {},
+			errors: _formState.errors
+		});
+		options$1.shouldFocus && !validationResult && iterateFieldsByAction(_fields, _focusInput, name ? fieldNames : _names.mount);
+		return validationResult;
+	};
+	const getValues = (fieldNames, config$1) => {
+		let values = { ..._state.mount ? _formValues : _defaultValues };
+		if (config$1) values = extractFormValues(config$1.dirtyFields ? _formState.dirtyFields : _formState.touchedFields, values);
+		return isUndefined(fieldNames) ? values : isString(fieldNames) ? get(values, fieldNames) : fieldNames.map((name) => get(values, name));
+	};
+	const getFieldState = (name, formState) => ({
+		invalid: !!get((formState || _formState).errors, name),
+		isDirty: !!get((formState || _formState).dirtyFields, name),
+		error: get((formState || _formState).errors, name),
+		isValidating: !!get(_formState.validatingFields, name),
+		isTouched: !!get((formState || _formState).touchedFields, name)
+	});
+	const clearErrors = (name) => {
+		const names = name ? convertToArrayPayload(name) : void 0;
+		names === null || names === void 0 || names.forEach((inputName) => unset(_formState.errors, inputName));
+		if (names) names.forEach((inputName) => {
+			_subjects.state.next({
+				name: inputName,
+				errors: _formState.errors
+			});
+		});
+		else _subjects.state.next({ errors: {} });
+	};
+	const setError = (name, error, options$1) => {
+		const ref = (get(_fields, name, { _f: {} })._f || {}).ref;
+		const { ref: currentRef, message, type, ...restOfErrorTree } = get(_formState.errors, name) || {};
+		set(_formState.errors, name, {
+			...restOfErrorTree,
+			...error,
+			ref
+		});
+		_subjects.state.next({
+			name,
+			errors: _formState.errors,
+			isValid: false
+		});
+		options$1 && options$1.shouldFocus && ref && ref.focus && ref.focus();
+	};
+	const watch = (name, defaultValue) => isFunction(name) ? _subjects.state.subscribe({ next: (payload) => "values" in payload && name(_getWatch(void 0, defaultValue), payload) }) : _getWatch(name, defaultValue, true);
+	const _subscribe = (props$1) => _subjects.state.subscribe({ next: (formState) => {
+		if (shouldSubscribeByName(props$1.name, formState.name, props$1.exact) && shouldRenderFormState(formState, props$1.formState || _proxyFormState, _setFormState, props$1.reRenderRoot)) props$1.callback({
+			values: { ..._formValues },
+			..._formState,
+			...formState,
+			defaultValues: _defaultValues
+		});
+	} }).unsubscribe;
+	const subscribe = (props$1) => {
+		_state.mount = true;
+		_proxySubscribeFormState = {
+			..._proxySubscribeFormState,
+			...props$1.formState
+		};
+		return _subscribe({
+			...props$1,
+			formState: {
+				...defaultProxyFormState,
+				...props$1.formState
+			}
+		});
+	};
+	const unregister = (name, options$1 = {}) => {
+		for (const fieldName of name ? convertToArrayPayload(name) : _names.mount) {
+			_names.mount.delete(fieldName);
+			_names.array.delete(fieldName);
+			if (!options$1.keepValue) {
+				unset(_fields, fieldName);
+				unset(_formValues, fieldName);
+			}
+			!options$1.keepError && unset(_formState.errors, fieldName);
+			!options$1.keepDirty && unset(_formState.dirtyFields, fieldName);
+			!options$1.keepTouched && unset(_formState.touchedFields, fieldName);
+			!options$1.keepIsValidating && unset(_formState.validatingFields, fieldName);
+			!_options.shouldUnregister && !options$1.keepDefaultValue && unset(_defaultValues, fieldName);
+		}
+		_subjects.state.next({ values: cloneObject(_formValues) });
+		_subjects.state.next({
+			..._formState,
+			...!options$1.keepDirty ? {} : { isDirty: _getDirty() }
+		});
+		!options$1.keepIsValid && _setValid();
+	};
+	const _setDisabledField = ({ disabled, name }) => {
+		if (isBoolean(disabled) && _state.mount || !!disabled || _names.disabled.has(name)) {
+			const disabledStateChanged = _names.disabled.has(name) !== !!disabled;
+			disabled ? _names.disabled.add(name) : _names.disabled.delete(name);
+			disabledStateChanged && _state.mount && !_state.action && _setValid();
+		}
+	};
+	const register = (name, options$1 = {}) => {
+		let field = get(_fields, name);
+		const disabledIsDefined = isBoolean(options$1.disabled) || isBoolean(_options.disabled);
+		set(_fields, name, {
+			...field || {},
+			_f: {
+				...field && field._f ? field._f : { ref: { name } },
+				name,
+				mount: true,
+				...options$1
+			}
+		});
+		_names.mount.add(name);
+		if (field) _setDisabledField({
+			disabled: isBoolean(options$1.disabled) ? options$1.disabled : _options.disabled,
+			name
+		});
+		else updateValidAndValue(name, true, options$1.value);
+		return {
+			...disabledIsDefined ? { disabled: options$1.disabled || _options.disabled } : {},
+			..._options.progressive ? {
+				required: !!options$1.required,
+				min: getRuleValue(options$1.min),
+				max: getRuleValue(options$1.max),
+				minLength: getRuleValue(options$1.minLength),
+				maxLength: getRuleValue(options$1.maxLength),
+				pattern: getRuleValue(options$1.pattern)
+			} : {},
+			name,
+			onChange,
+			onBlur: onChange,
+			ref: (ref) => {
+				if (ref) {
+					register(name, options$1);
+					field = get(_fields, name);
+					const fieldRef = isUndefined(ref.value) ? ref.querySelectorAll ? ref.querySelectorAll("input,select,textarea")[0] || ref : ref : ref;
+					const radioOrCheckbox = isRadioOrCheckbox(fieldRef);
+					const refs = field._f.refs || [];
+					if (radioOrCheckbox ? refs.find((option) => option === fieldRef) : fieldRef === field._f.ref) return;
+					set(_fields, name, { _f: {
+						...field._f,
+						...radioOrCheckbox ? {
+							refs: [
+								...refs.filter(live),
+								fieldRef,
+								...Array.isArray(get(_defaultValues, name)) ? [{}] : []
+							],
+							ref: {
+								type: fieldRef.type,
+								name
+							}
+						} : { ref: fieldRef }
+					} });
+					updateValidAndValue(name, false, void 0, fieldRef);
+				} else {
+					field = get(_fields, name, {});
+					if (field._f) field._f.mount = false;
+					(_options.shouldUnregister || options$1.shouldUnregister) && !(isNameInFieldArray(_names.array, name) && _state.action) && _names.unMount.add(name);
+				}
+			}
+		};
+	};
+	const _focusError = () => _options.shouldFocusError && iterateFieldsByAction(_fields, _focusInput, _names.mount);
+	const _disableForm = (disabled) => {
+		if (isBoolean(disabled)) {
+			_subjects.state.next({ disabled });
+			iterateFieldsByAction(_fields, (ref, name) => {
+				const currentField = get(_fields, name);
+				if (currentField) {
+					ref.disabled = currentField._f.disabled || disabled;
+					if (Array.isArray(currentField._f.refs)) currentField._f.refs.forEach((inputRef) => {
+						inputRef.disabled = currentField._f.disabled || disabled;
+					});
+				}
+			}, 0, false);
+		}
+	};
+	const handleSubmit = (onValid, onInvalid) => async (e) => {
+		let onValidError = void 0;
+		if (e) {
+			e.preventDefault && e.preventDefault();
+			e.persist && e.persist();
+		}
+		let fieldValues = cloneObject(_formValues);
+		_subjects.state.next({ isSubmitting: true });
+		if (_options.resolver) {
+			const { errors, values } = await _runSchema();
+			_updateIsValidating();
+			_formState.errors = errors;
+			fieldValues = cloneObject(values);
+		} else await executeBuiltInValidation(_fields);
+		if (_names.disabled.size) for (const name of _names.disabled) unset(fieldValues, name);
+		unset(_formState.errors, "root");
+		if (isEmptyObject(_formState.errors)) {
+			_subjects.state.next({ errors: {} });
+			try {
+				await onValid(fieldValues, e);
+			} catch (error) {
+				onValidError = error;
+			}
+		} else {
+			if (onInvalid) await onInvalid({ ..._formState.errors }, e);
+			_focusError();
+			setTimeout(_focusError);
+		}
+		_subjects.state.next({
+			isSubmitted: true,
+			isSubmitting: false,
+			isSubmitSuccessful: isEmptyObject(_formState.errors) && !onValidError,
+			submitCount: _formState.submitCount + 1,
+			errors: _formState.errors
+		});
+		if (onValidError) throw onValidError;
+	};
+	const resetField = (name, options$1 = {}) => {
+		if (get(_fields, name)) {
+			if (isUndefined(options$1.defaultValue)) setValue(name, cloneObject(get(_defaultValues, name)));
+			else {
+				setValue(name, options$1.defaultValue);
+				set(_defaultValues, name, cloneObject(options$1.defaultValue));
+			}
+			if (!options$1.keepTouched) unset(_formState.touchedFields, name);
+			if (!options$1.keepDirty) {
+				unset(_formState.dirtyFields, name);
+				_formState.isDirty = options$1.defaultValue ? _getDirty(name, cloneObject(get(_defaultValues, name))) : _getDirty();
+			}
+			if (!options$1.keepError) {
+				unset(_formState.errors, name);
+				_proxyFormState.isValid && _setValid();
+			}
+			_subjects.state.next({ ..._formState });
+		}
+	};
+	const _reset = (formValues, keepStateOptions = {}) => {
+		const updatedValues = formValues ? cloneObject(formValues) : _defaultValues;
+		const cloneUpdatedValues = cloneObject(updatedValues);
+		const isEmptyResetValues = isEmptyObject(formValues);
+		const values = isEmptyResetValues ? _defaultValues : cloneUpdatedValues;
+		if (!keepStateOptions.keepDefaultValues) _defaultValues = updatedValues;
+		if (!keepStateOptions.keepValues) {
+			if (keepStateOptions.keepDirtyValues) {
+				const fieldsToCheck = new Set([..._names.mount, ...Object.keys(getDirtyFields(_defaultValues, _formValues))]);
+				for (const fieldName of Array.from(fieldsToCheck)) {
+					const isDirty = get(_formState.dirtyFields, fieldName);
+					const existingValue = get(_formValues, fieldName);
+					const newValue = get(values, fieldName);
+					if (isDirty && !isUndefined(existingValue)) set(values, fieldName, existingValue);
+					else if (!isDirty && !isUndefined(newValue)) setValue(fieldName, newValue);
+				}
+			} else {
+				if (isWeb && isUndefined(formValues)) for (const name of _names.mount) {
+					const field = get(_fields, name);
+					if (field && field._f) {
+						const fieldReference = Array.isArray(field._f.refs) ? field._f.refs[0] : field._f.ref;
+						if (isHTMLElement(fieldReference)) {
+							const form = fieldReference.closest("form");
+							if (form) {
+								form.reset();
+								break;
+							}
+						}
+					}
+				}
+				if (keepStateOptions.keepFieldsRef) for (const fieldName of _names.mount) setValue(fieldName, get(values, fieldName));
+				else _fields = {};
+			}
+			_formValues = _options.shouldUnregister ? keepStateOptions.keepDefaultValues ? cloneObject(_defaultValues) : {} : cloneObject(values);
+			_subjects.array.next({ values: { ...values } });
+			_subjects.state.next({ values: { ...values } });
+		}
+		_names = {
+			mount: keepStateOptions.keepDirtyValues ? _names.mount : /* @__PURE__ */ new Set(),
+			unMount: /* @__PURE__ */ new Set(),
+			array: /* @__PURE__ */ new Set(),
+			disabled: /* @__PURE__ */ new Set(),
+			watch: /* @__PURE__ */ new Set(),
+			watchAll: false,
+			focus: ""
+		};
+		_state.mount = !_proxyFormState.isValid || !!keepStateOptions.keepIsValid || !!keepStateOptions.keepDirtyValues || !_options.shouldUnregister && !isEmptyObject(values);
+		_state.watch = !!_options.shouldUnregister;
+		_state.keepIsValid = !!keepStateOptions.keepIsValid;
+		_state.action = false;
+		if (!keepStateOptions.keepErrors) _formState.errors = {};
+		_subjects.state.next({
+			submitCount: keepStateOptions.keepSubmitCount ? _formState.submitCount : 0,
+			isDirty: isEmptyResetValues ? false : keepStateOptions.keepDirty ? _formState.isDirty : !!(keepStateOptions.keepDefaultValues && !deepEqual(formValues, _defaultValues)),
+			isSubmitted: keepStateOptions.keepIsSubmitted ? _formState.isSubmitted : false,
+			dirtyFields: isEmptyResetValues ? {} : keepStateOptions.keepDirtyValues ? keepStateOptions.keepDefaultValues && _formValues ? getDirtyFields(_defaultValues, _formValues) : _formState.dirtyFields : keepStateOptions.keepDefaultValues && formValues ? getDirtyFields(_defaultValues, formValues) : keepStateOptions.keepDirty ? _formState.dirtyFields : {},
+			touchedFields: keepStateOptions.keepTouched ? _formState.touchedFields : {},
+			errors: keepStateOptions.keepErrors ? _formState.errors : {},
+			isSubmitSuccessful: keepStateOptions.keepIsSubmitSuccessful ? _formState.isSubmitSuccessful : false,
+			isSubmitting: false,
+			defaultValues: _defaultValues
+		});
+	};
+	const reset = (formValues, keepStateOptions) => _reset(isFunction(formValues) ? formValues(_formValues) : formValues, {
+		..._options.resetOptions,
+		...keepStateOptions
+	});
+	const setFocus = (name, options$1 = {}) => {
+		const field = get(_fields, name);
+		const fieldReference = field && field._f;
+		if (fieldReference) {
+			const fieldRef = fieldReference.refs ? fieldReference.refs[0] : fieldReference.ref;
+			if (fieldRef.focus) setTimeout(() => {
+				fieldRef.focus();
+				options$1.shouldSelect && isFunction(fieldRef.select) && fieldRef.select();
+			});
+		}
+	};
+	const _setFormState = (updatedFormState) => {
+		_formState = {
+			..._formState,
+			...updatedFormState
+		};
+	};
+	const _resetDefaultValues = () => isFunction(_options.defaultValues) && _options.defaultValues().then((values) => {
+		reset(values, _options.resetOptions);
+		_subjects.state.next({ isLoading: false });
+	});
+	const methods = {
+		control: {
+			register,
+			unregister,
+			getFieldState,
+			handleSubmit,
+			setError,
+			_subscribe,
+			_runSchema,
+			_updateIsValidating,
+			_focusError,
+			_getWatch,
+			_getDirty,
+			_setValid,
+			_setFieldArray,
+			_setDisabledField,
+			_setErrors,
+			_getFieldArray,
+			_reset,
+			_resetDefaultValues,
+			_removeUnmounted,
+			_disableForm,
+			_subjects,
+			_proxyFormState,
+			get _fields() {
+				return _fields;
+			},
+			get _formValues() {
+				return _formValues;
+			},
+			get _state() {
+				return _state;
+			},
+			set _state(value) {
+				_state = value;
+			},
+			get _defaultValues() {
+				return _defaultValues;
+			},
+			get _names() {
+				return _names;
+			},
+			set _names(value) {
+				_names = value;
+			},
+			get _formState() {
+				return _formState;
+			},
+			get _options() {
+				return _options;
+			},
+			set _options(value) {
+				_options = {
+					..._options,
+					...value
+				};
+			}
+		},
+		subscribe,
+		trigger,
+		register,
+		handleSubmit,
+		watch,
+		setValue,
+		getValues,
+		reset,
+		resetField,
+		clearErrors,
+		unregister,
+		setError,
+		setFocus,
+		getFieldState
+	};
+	return {
+		...methods,
+		formControl: methods
+	};
+}
+function useForm(props = {}) {
+	const _formControl = import_react.useRef(void 0);
+	const _values = import_react.useRef(void 0);
+	const [formState, updateFormState] = import_react.useState({
+		isDirty: false,
+		isValidating: false,
+		isLoading: isFunction(props.defaultValues),
+		isSubmitted: false,
+		isSubmitting: false,
+		isSubmitSuccessful: false,
+		isValid: false,
+		submitCount: 0,
+		dirtyFields: {},
+		touchedFields: {},
+		validatingFields: {},
+		errors: props.errors || {},
+		disabled: props.disabled || false,
+		isReady: false,
+		defaultValues: isFunction(props.defaultValues) ? void 0 : props.defaultValues
+	});
+	if (!_formControl.current) if (props.formControl) {
+		_formControl.current = {
+			...props.formControl,
+			formState
+		};
+		if (props.defaultValues && !isFunction(props.defaultValues)) props.formControl.reset(props.defaultValues, props.resetOptions);
+	} else {
+		const { formControl, ...rest } = createFormControl(props);
+		_formControl.current = {
+			...rest,
+			formState
+		};
+	}
+	const control = _formControl.current.control;
+	control._options = props;
+	useIsomorphicLayoutEffect$1(() => {
+		const sub = control._subscribe({
+			formState: control._proxyFormState,
+			callback: () => updateFormState({ ...control._formState }),
+			reRenderRoot: true
+		});
+		updateFormState((data) => ({
+			...data,
+			isReady: true
+		}));
+		control._formState.isReady = true;
+		return sub;
+	}, [control]);
+	import_react.useEffect(() => control._disableForm(props.disabled), [control, props.disabled]);
+	import_react.useEffect(() => {
+		if (props.mode) control._options.mode = props.mode;
+		if (props.reValidateMode) control._options.reValidateMode = props.reValidateMode;
+	}, [
+		control,
+		props.mode,
+		props.reValidateMode
+	]);
+	import_react.useEffect(() => {
+		if (props.errors) {
+			control._setErrors(props.errors);
+			control._focusError();
+		}
+	}, [control, props.errors]);
+	import_react.useEffect(() => {
+		props.shouldUnregister && control._subjects.state.next({ values: control._getWatch() });
+	}, [control, props.shouldUnregister]);
+	import_react.useEffect(() => {
+		if (control._proxyFormState.isDirty) {
+			const isDirty = control._getDirty();
+			if (isDirty !== formState.isDirty) control._subjects.state.next({ isDirty });
+		}
+	}, [control, formState.isDirty]);
+	import_react.useEffect(() => {
+		var _a$1;
+		if (props.values && !deepEqual(props.values, _values.current)) {
+			control._reset(props.values, {
+				keepFieldsRef: true,
+				...control._options.resetOptions
+			});
+			if (!((_a$1 = control._options.resetOptions) === null || _a$1 === void 0 ? void 0 : _a$1.keepIsValid)) control._setValid();
+			_values.current = props.values;
+			updateFormState((state) => ({ ...state }));
+		} else control._resetDefaultValues();
+	}, [control, props.values]);
+	import_react.useEffect(() => {
+		if (!control._state.mount) {
+			control._setValid();
+			control._state.mount = true;
+		}
+		if (control._state.watch) {
+			control._state.watch = false;
+			control._subjects.state.next({ ...control._formState });
+		}
+		control._removeUnmounted();
+	});
+	_formControl.current.formState = import_react.useMemo(() => getProxyFormState(formState, control), [control, formState]);
+	return _formControl.current;
+}
+var r = (t$1, r$2, o$1) => {
+	if (t$1 && "reportValidity" in t$1) {
+		const s$2 = get(o$1, r$2);
+		t$1.setCustomValidity(s$2 && s$2.message || ""), t$1.reportValidity();
+	}
+}, o = (e, t$1) => {
+	for (const o$1 in t$1.fields) {
+		const s$2 = t$1.fields[o$1];
+		s$2 && s$2.ref && "reportValidity" in s$2.ref ? r(s$2.ref, o$1, e) : s$2 && s$2.refs && s$2.refs.forEach((t$2) => r(t$2, o$1, e));
+	}
+}, s = (r$2, s$2) => {
+	s$2.shouldUseNativeValidation && o(r$2, s$2);
+	const n$1 = {};
+	for (const o$1 in r$2) {
+		const f = get(s$2.fields, o$1), c = Object.assign(r$2[o$1] || {}, { ref: f && f.ref });
+		if (i$1(s$2.names || Object.keys(r$2), o$1)) {
+			const r$3 = Object.assign({}, get(n$1, o$1));
+			set(r$3, "root", c), set(n$1, o$1, r$3);
+		} else set(n$1, o$1, c);
+	}
+	return n$1;
+}, i$1 = (e, t$1) => {
+	const r$2 = n(t$1);
+	return e.some((e$1) => n(e$1).match(`^${r$2}\\.\\d+`));
+};
+function n(e) {
+	return e.replace(/\]|\[/g, "");
+}
+Object.freeze({ status: "aborted" });
+function $constructor(name, initializer$2, params) {
+	function init(inst, def) {
+		if (!inst._zod) Object.defineProperty(inst, "_zod", {
+			value: {
+				def,
+				constr: _$1,
+				traits: /* @__PURE__ */ new Set()
+			},
+			enumerable: false
+		});
+		if (inst._zod.traits.has(name)) return;
+		inst._zod.traits.add(name);
+		initializer$2(inst, def);
+		const proto = _$1.prototype;
+		const keys = Object.keys(proto);
+		for (let i$2 = 0; i$2 < keys.length; i$2++) {
+			const k = keys[i$2];
+			if (!(k in inst)) inst[k] = proto[k].bind(inst);
+		}
+	}
+	const Parent = params?.Parent ?? Object;
+	class Definition extends Parent {}
+	Object.defineProperty(Definition, "name", { value: name });
+	function _$1(def) {
+		var _a$1;
+		const inst = params?.Parent ? new Definition() : this;
+		init(inst, def);
+		(_a$1 = inst._zod).deferred ?? (_a$1.deferred = []);
+		for (const fn of inst._zod.deferred) fn();
+		return inst;
+	}
+	Object.defineProperty(_$1, "init", { value: init });
+	Object.defineProperty(_$1, Symbol.hasInstance, { value: (inst) => {
+		if (params?.Parent && inst instanceof params.Parent) return true;
+		return inst?._zod?.traits?.has(name);
+	} });
+	Object.defineProperty(_$1, "name", { value: name });
+	return _$1;
+}
+var $ZodAsyncError = class extends Error {
+	constructor() {
+		super(`Encountered Promise during synchronous parse. Use .parseAsync() instead.`);
+	}
+};
+var $ZodEncodeError = class extends Error {
+	constructor(name) {
+		super(`Encountered unidirectional transform during encode: ${name}`);
+		this.name = "ZodEncodeError";
+	}
+};
+const globalConfig = {};
+function config(newConfig) {
+	if (newConfig) Object.assign(globalConfig, newConfig);
+	return globalConfig;
+}
+function getEnumValues(entries) {
+	const numericValues = Object.values(entries).filter((v) => typeof v === "number");
+	return Object.entries(entries).filter(([k, _$1]) => numericValues.indexOf(+k) === -1).map(([_$1, v]) => v);
+}
+function jsonStringifyReplacer(_$1, value) {
+	if (typeof value === "bigint") return value.toString();
+	return value;
+}
+function cached(getter) {
+	return { get value() {
+		{
+			const value = getter();
+			Object.defineProperty(this, "value", { value });
+			return value;
+		}
+		throw new Error("cached value already set");
+	} };
+}
+function nullish(input) {
+	return input === null || input === void 0;
+}
+function cleanRegex(source) {
+	const start = source.startsWith("^") ? 1 : 0;
+	const end = source.endsWith("$") ? source.length - 1 : source.length;
+	return source.slice(start, end);
+}
+var EVALUATING = Symbol("evaluating");
+function defineLazy(object$1, key, getter) {
+	let value = void 0;
+	Object.defineProperty(object$1, key, {
+		get() {
+			if (value === EVALUATING) return;
+			if (value === void 0) {
+				value = EVALUATING;
+				value = getter();
+			}
+			return value;
+		},
+		set(v) {
+			Object.defineProperty(object$1, key, { value: v });
+		},
+		configurable: true
+	});
+}
+function assignProp(target, prop, value) {
+	Object.defineProperty(target, prop, {
+		value,
+		writable: true,
+		enumerable: true,
+		configurable: true
+	});
+}
+function mergeDefs(...defs) {
+	const mergedDescriptors = {};
+	for (const def of defs) {
+		const descriptors = Object.getOwnPropertyDescriptors(def);
+		Object.assign(mergedDescriptors, descriptors);
+	}
+	return Object.defineProperties({}, mergedDescriptors);
+}
+function esc(str) {
+	return JSON.stringify(str);
+}
+function slugify(input) {
+	return input.toLowerCase().trim().replace(/[^\w\s-]/g, "").replace(/[\s_-]+/g, "-").replace(/^-+|-+$/g, "");
+}
+const captureStackTrace = "captureStackTrace" in Error ? Error.captureStackTrace : (..._args) => {};
+function isObject(data) {
+	return typeof data === "object" && data !== null && !Array.isArray(data);
+}
+const allowsEval = cached(() => {
+	if (typeof navigator !== "undefined" && navigator?.userAgent?.includes("Cloudflare")) return false;
+	try {
+		new Function("");
+		return true;
+	} catch (_$1) {
+		return false;
+	}
+});
+function isPlainObject(o$1) {
+	if (isObject(o$1) === false) return false;
+	const ctor = o$1.constructor;
+	if (ctor === void 0) return true;
+	if (typeof ctor !== "function") return true;
+	const prot = ctor.prototype;
+	if (isObject(prot) === false) return false;
+	if (Object.prototype.hasOwnProperty.call(prot, "isPrototypeOf") === false) return false;
+	return true;
+}
+function shallowClone(o$1) {
+	if (isPlainObject(o$1)) return { ...o$1 };
+	if (Array.isArray(o$1)) return [...o$1];
+	return o$1;
+}
+const propertyKeyTypes = new Set([
+	"string",
+	"number",
+	"symbol"
+]);
+function escapeRegex(str) {
+	return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+function clone(inst, def, params) {
+	const cl = new inst._zod.constr(def ?? inst._zod.def);
+	if (!def || params?.parent) cl._zod.parent = inst;
+	return cl;
+}
+function normalizeParams(_params) {
+	const params = _params;
+	if (!params) return {};
+	if (typeof params === "string") return { error: () => params };
+	if (params?.message !== void 0) {
+		if (params?.error !== void 0) throw new Error("Cannot specify both `message` and `error` params");
+		params.error = params.message;
+	}
+	delete params.message;
+	if (typeof params.error === "string") return {
+		...params,
+		error: () => params.error
+	};
+	return params;
+}
+function optionalKeys(shape) {
+	return Object.keys(shape).filter((k) => {
+		return shape[k]._zod.optin === "optional" && shape[k]._zod.optout === "optional";
+	});
+}
+Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, -Number.MAX_VALUE, Number.MAX_VALUE;
+function pick(schema, mask) {
+	const currDef = schema._zod.def;
+	const checks = currDef.checks;
+	if (checks && checks.length > 0) throw new Error(".pick() cannot be used on object schemas containing refinements");
+	return clone(schema, mergeDefs(schema._zod.def, {
+		get shape() {
+			const newShape = {};
+			for (const key in mask) {
+				if (!(key in currDef.shape)) throw new Error(`Unrecognized key: "${key}"`);
+				if (!mask[key]) continue;
+				newShape[key] = currDef.shape[key];
+			}
+			assignProp(this, "shape", newShape);
+			return newShape;
+		},
+		checks: []
+	}));
+}
+function omit(schema, mask) {
+	const currDef = schema._zod.def;
+	const checks = currDef.checks;
+	if (checks && checks.length > 0) throw new Error(".omit() cannot be used on object schemas containing refinements");
+	return clone(schema, mergeDefs(schema._zod.def, {
+		get shape() {
+			const newShape = { ...schema._zod.def.shape };
+			for (const key in mask) {
+				if (!(key in currDef.shape)) throw new Error(`Unrecognized key: "${key}"`);
+				if (!mask[key]) continue;
+				delete newShape[key];
+			}
+			assignProp(this, "shape", newShape);
+			return newShape;
+		},
+		checks: []
+	}));
+}
+function extend(schema, shape) {
+	if (!isPlainObject(shape)) throw new Error("Invalid input to extend: expected a plain object");
+	const checks = schema._zod.def.checks;
+	if (checks && checks.length > 0) {
+		const existingShape = schema._zod.def.shape;
+		for (const key in shape) if (Object.getOwnPropertyDescriptor(existingShape, key) !== void 0) throw new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
+	}
+	return clone(schema, mergeDefs(schema._zod.def, { get shape() {
+		const _shape = {
+			...schema._zod.def.shape,
+			...shape
+		};
+		assignProp(this, "shape", _shape);
+		return _shape;
+	} }));
+}
+function safeExtend(schema, shape) {
+	if (!isPlainObject(shape)) throw new Error("Invalid input to safeExtend: expected a plain object");
+	return clone(schema, mergeDefs(schema._zod.def, { get shape() {
+		const _shape = {
+			...schema._zod.def.shape,
+			...shape
+		};
+		assignProp(this, "shape", _shape);
+		return _shape;
+	} }));
+}
+function merge(a$1, b$1) {
+	return clone(a$1, mergeDefs(a$1._zod.def, {
+		get shape() {
+			const _shape = {
+				...a$1._zod.def.shape,
+				...b$1._zod.def.shape
+			};
+			assignProp(this, "shape", _shape);
+			return _shape;
+		},
+		get catchall() {
+			return b$1._zod.def.catchall;
+		},
+		checks: []
+	}));
+}
+function partial(Class, schema, mask) {
+	const checks = schema._zod.def.checks;
+	if (checks && checks.length > 0) throw new Error(".partial() cannot be used on object schemas containing refinements");
+	return clone(schema, mergeDefs(schema._zod.def, {
+		get shape() {
+			const oldShape = schema._zod.def.shape;
+			const shape = { ...oldShape };
+			if (mask) for (const key in mask) {
+				if (!(key in oldShape)) throw new Error(`Unrecognized key: "${key}"`);
+				if (!mask[key]) continue;
+				shape[key] = Class ? new Class({
+					type: "optional",
+					innerType: oldShape[key]
+				}) : oldShape[key];
+			}
+			else for (const key in oldShape) shape[key] = Class ? new Class({
+				type: "optional",
+				innerType: oldShape[key]
+			}) : oldShape[key];
+			assignProp(this, "shape", shape);
+			return shape;
+		},
+		checks: []
+	}));
+}
+function required(Class, schema, mask) {
+	return clone(schema, mergeDefs(schema._zod.def, { get shape() {
+		const oldShape = schema._zod.def.shape;
+		const shape = { ...oldShape };
+		if (mask) for (const key in mask) {
+			if (!(key in shape)) throw new Error(`Unrecognized key: "${key}"`);
+			if (!mask[key]) continue;
+			shape[key] = new Class({
+				type: "nonoptional",
+				innerType: oldShape[key]
+			});
+		}
+		else for (const key in oldShape) shape[key] = new Class({
+			type: "nonoptional",
+			innerType: oldShape[key]
+		});
+		assignProp(this, "shape", shape);
+		return shape;
+	} }));
+}
+function aborted(x$1, startIndex = 0) {
+	if (x$1.aborted === true) return true;
+	for (let i$2 = startIndex; i$2 < x$1.issues.length; i$2++) if (x$1.issues[i$2]?.continue !== true) return true;
+	return false;
+}
+function prefixIssues(path, issues) {
+	return issues.map((iss) => {
+		var _a$1;
+		(_a$1 = iss).path ?? (_a$1.path = []);
+		iss.path.unshift(path);
+		return iss;
+	});
+}
+function unwrapMessage(message) {
+	return typeof message === "string" ? message : message?.message;
+}
+function finalizeIssue(iss, ctx, config$1) {
+	const full = {
+		...iss,
+		path: iss.path ?? []
+	};
+	if (!iss.message) full.message = unwrapMessage(iss.inst?._zod.def?.error?.(iss)) ?? unwrapMessage(ctx?.error?.(iss)) ?? unwrapMessage(config$1.customError?.(iss)) ?? unwrapMessage(config$1.localeError?.(iss)) ?? "Invalid input";
+	delete full.inst;
+	delete full.continue;
+	if (!ctx?.reportInput) delete full.input;
+	return full;
+}
+function getLengthableOrigin(input) {
+	if (Array.isArray(input)) return "array";
+	if (typeof input === "string") return "string";
+	return "unknown";
+}
+function issue(...args) {
+	const [iss, input, inst] = args;
+	if (typeof iss === "string") return {
+		message: iss,
+		code: "custom",
+		input,
+		inst
+	};
+	return { ...iss };
+}
+var initializer$1 = (inst, def) => {
+	inst.name = "$ZodError";
+	Object.defineProperty(inst, "_zod", {
+		value: inst._zod,
+		enumerable: false
+	});
+	Object.defineProperty(inst, "issues", {
+		value: def,
+		enumerable: false
+	});
+	inst.message = JSON.stringify(def, jsonStringifyReplacer, 2);
+	Object.defineProperty(inst, "toString", {
+		value: () => inst.message,
+		enumerable: false
+	});
+};
+const $ZodError = $constructor("$ZodError", initializer$1);
+const $ZodRealError = $constructor("$ZodError", initializer$1, { Parent: Error });
+function flattenError(error, mapper = (issue$1) => issue$1.message) {
+	const fieldErrors = {};
+	const formErrors = [];
+	for (const sub of error.issues) if (sub.path.length > 0) {
+		fieldErrors[sub.path[0]] = fieldErrors[sub.path[0]] || [];
+		fieldErrors[sub.path[0]].push(mapper(sub));
+	} else formErrors.push(mapper(sub));
+	return {
+		formErrors,
+		fieldErrors
+	};
+}
+function formatError(error, mapper = (issue$1) => issue$1.message) {
+	const fieldErrors = { _errors: [] };
+	const processError = (error$1) => {
+		for (const issue$1 of error$1.issues) if (issue$1.code === "invalid_union" && issue$1.errors.length) issue$1.errors.map((issues) => processError({ issues }));
+		else if (issue$1.code === "invalid_key") processError({ issues: issue$1.issues });
+		else if (issue$1.code === "invalid_element") processError({ issues: issue$1.issues });
+		else if (issue$1.path.length === 0) fieldErrors._errors.push(mapper(issue$1));
+		else {
+			let curr = fieldErrors;
+			let i$2 = 0;
+			while (i$2 < issue$1.path.length) {
+				const el = issue$1.path[i$2];
+				if (!(i$2 === issue$1.path.length - 1)) curr[el] = curr[el] || { _errors: [] };
+				else {
+					curr[el] = curr[el] || { _errors: [] };
+					curr[el]._errors.push(mapper(issue$1));
+				}
+				curr = curr[el];
+				i$2++;
+			}
+		}
+	};
+	processError(error);
+	return fieldErrors;
+}
+const _parse = (_Err) => (schema, value, _ctx, _params) => {
+	const ctx = _ctx ? Object.assign(_ctx, { async: false }) : { async: false };
+	const result = schema._zod.run({
+		value,
+		issues: []
+	}, ctx);
+	if (result instanceof Promise) throw new $ZodAsyncError();
+	if (result.issues.length) {
+		const e = new (_params?.Err ?? _Err)(result.issues.map((iss) => finalizeIssue(iss, ctx, config())));
+		captureStackTrace(e, _params?.callee);
+		throw e;
+	}
+	return result.value;
+};
+const parse$2 = /* @__PURE__ */ _parse($ZodRealError);
+const _parseAsync = (_Err) => async (schema, value, _ctx, params) => {
+	const ctx = _ctx ? Object.assign(_ctx, { async: true }) : { async: true };
+	let result = schema._zod.run({
+		value,
+		issues: []
+	}, ctx);
+	if (result instanceof Promise) result = await result;
+	if (result.issues.length) {
+		const e = new (params?.Err ?? _Err)(result.issues.map((iss) => finalizeIssue(iss, ctx, config())));
+		captureStackTrace(e, params?.callee);
+		throw e;
+	}
+	return result.value;
+};
+const parseAsync$1 = /* @__PURE__ */ _parseAsync($ZodRealError);
+const _safeParse = (_Err) => (schema, value, _ctx) => {
+	const ctx = _ctx ? {
+		..._ctx,
+		async: false
+	} : { async: false };
+	const result = schema._zod.run({
+		value,
+		issues: []
+	}, ctx);
+	if (result instanceof Promise) throw new $ZodAsyncError();
+	return result.issues.length ? {
+		success: false,
+		error: new (_Err ?? $ZodError)(result.issues.map((iss) => finalizeIssue(iss, ctx, config())))
+	} : {
+		success: true,
+		data: result.value
+	};
+};
+const safeParse$1 = /* @__PURE__ */ _safeParse($ZodRealError);
+const _safeParseAsync = (_Err) => async (schema, value, _ctx) => {
+	const ctx = _ctx ? Object.assign(_ctx, { async: true }) : { async: true };
+	let result = schema._zod.run({
+		value,
+		issues: []
+	}, ctx);
+	if (result instanceof Promise) result = await result;
+	return result.issues.length ? {
+		success: false,
+		error: new _Err(result.issues.map((iss) => finalizeIssue(iss, ctx, config())))
+	} : {
+		success: true,
+		data: result.value
+	};
+};
+const safeParseAsync$1 = /* @__PURE__ */ _safeParseAsync($ZodRealError);
+const _encode = (_Err) => (schema, value, _ctx) => {
+	const ctx = _ctx ? Object.assign(_ctx, { direction: "backward" }) : { direction: "backward" };
+	return _parse(_Err)(schema, value, ctx);
+};
+const _decode = (_Err) => (schema, value, _ctx) => {
+	return _parse(_Err)(schema, value, _ctx);
+};
+const _encodeAsync = (_Err) => async (schema, value, _ctx) => {
+	const ctx = _ctx ? Object.assign(_ctx, { direction: "backward" }) : { direction: "backward" };
+	return _parseAsync(_Err)(schema, value, ctx);
+};
+const _decodeAsync = (_Err) => async (schema, value, _ctx) => {
+	return _parseAsync(_Err)(schema, value, _ctx);
+};
+const _safeEncode = (_Err) => (schema, value, _ctx) => {
+	const ctx = _ctx ? Object.assign(_ctx, { direction: "backward" }) : { direction: "backward" };
+	return _safeParse(_Err)(schema, value, ctx);
+};
+const _safeDecode = (_Err) => (schema, value, _ctx) => {
+	return _safeParse(_Err)(schema, value, _ctx);
+};
+const _safeEncodeAsync = (_Err) => async (schema, value, _ctx) => {
+	const ctx = _ctx ? Object.assign(_ctx, { direction: "backward" }) : { direction: "backward" };
+	return _safeParseAsync(_Err)(schema, value, ctx);
+};
+const _safeDecodeAsync = (_Err) => async (schema, value, _ctx) => {
+	return _safeParseAsync(_Err)(schema, value, _ctx);
+};
+const cuid = /^[cC][^\s-]{8,}$/;
+const cuid2 = /^[0-9a-z]+$/;
+const ulid = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/;
+const xid = /^[0-9a-vA-V]{20}$/;
+const ksuid = /^[A-Za-z0-9]{27}$/;
+const nanoid = /^[a-zA-Z0-9_-]{21}$/;
+const duration$1 = /^P(?:(\d+W)|(?!.*W)(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+([.,]\d+)?S)?)?)$/;
+const guid = /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$/;
+const uuid = (version$1) => {
+	if (!version$1) return /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/;
+	return /* @__PURE__ */ new RegExp(`^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-${version$1}[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$`);
+};
+const email = /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/;
+var _emoji$1 = `^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$`;
+function emoji() {
+	return new RegExp(_emoji$1, "u");
+}
+const ipv4 = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/;
+const ipv6 = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))$/;
+const cidrv4 = /^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\/([0-9]|[1-2][0-9]|3[0-2])$/;
+const cidrv6 = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::|([0-9a-fA-F]{1,4})?::([0-9a-fA-F]{1,4}:?){0,6})\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/;
+const base64 = /^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$/;
+const base64url = /^[A-Za-z0-9_-]*$/;
+const e164 = /^\+[1-9]\d{6,14}$/;
+var dateSource = `(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))`;
+const date$1 = /* @__PURE__ */ new RegExp(`^${dateSource}$`);
+function timeSource(args) {
+	const hhmm = `(?:[01]\\d|2[0-3]):[0-5]\\d`;
+	return typeof args.precision === "number" ? args.precision === -1 ? `${hhmm}` : args.precision === 0 ? `${hhmm}:[0-5]\\d` : `${hhmm}:[0-5]\\d\\.\\d{${args.precision}}` : `${hhmm}(?::[0-5]\\d(?:\\.\\d+)?)?`;
+}
+function time$1(args) {
+	return /* @__PURE__ */ new RegExp(`^${timeSource(args)}$`);
+}
+function datetime$1(args) {
+	const time$2 = timeSource({ precision: args.precision });
+	const opts = ["Z"];
+	if (args.local) opts.push("");
+	if (args.offset) opts.push(`([+-](?:[01]\\d|2[0-3]):[0-5]\\d)`);
+	const timeRegex = `${time$2}(?:${opts.join("|")})`;
+	return /* @__PURE__ */ new RegExp(`^${dateSource}T(?:${timeRegex})$`);
+}
+const string$1 = (params) => {
+	const regex = params ? `[\\s\\S]{${params?.minimum ?? 0},${params?.maximum ?? ""}}` : `[\\s\\S]*`;
+	return /* @__PURE__ */ new RegExp(`^${regex}$`);
+};
+const lowercase = /^[^A-Z]*$/;
+const uppercase = /^[^a-z]*$/;
+const $ZodCheck = /* @__PURE__ */ $constructor("$ZodCheck", (inst, def) => {
+	var _a$1;
+	inst._zod ?? (inst._zod = {});
+	inst._zod.def = def;
+	(_a$1 = inst._zod).onattach ?? (_a$1.onattach = []);
+});
+const $ZodCheckMaxLength = /* @__PURE__ */ $constructor("$ZodCheckMaxLength", (inst, def) => {
+	var _a$1;
+	$ZodCheck.init(inst, def);
+	(_a$1 = inst._zod.def).when ?? (_a$1.when = (payload) => {
+		const val = payload.value;
+		return !nullish(val) && val.length !== void 0;
+	});
+	inst._zod.onattach.push((inst$1) => {
+		const curr = inst$1._zod.bag.maximum ?? Number.POSITIVE_INFINITY;
+		if (def.maximum < curr) inst$1._zod.bag.maximum = def.maximum;
+	});
+	inst._zod.check = (payload) => {
+		const input = payload.value;
+		if (input.length <= def.maximum) return;
+		const origin = getLengthableOrigin(input);
+		payload.issues.push({
+			origin,
+			code: "too_big",
+			maximum: def.maximum,
+			inclusive: true,
+			input,
+			inst,
+			continue: !def.abort
+		});
+	};
+});
+const $ZodCheckMinLength = /* @__PURE__ */ $constructor("$ZodCheckMinLength", (inst, def) => {
+	var _a$1;
+	$ZodCheck.init(inst, def);
+	(_a$1 = inst._zod.def).when ?? (_a$1.when = (payload) => {
+		const val = payload.value;
+		return !nullish(val) && val.length !== void 0;
+	});
+	inst._zod.onattach.push((inst$1) => {
+		const curr = inst$1._zod.bag.minimum ?? Number.NEGATIVE_INFINITY;
+		if (def.minimum > curr) inst$1._zod.bag.minimum = def.minimum;
+	});
+	inst._zod.check = (payload) => {
+		const input = payload.value;
+		if (input.length >= def.minimum) return;
+		const origin = getLengthableOrigin(input);
+		payload.issues.push({
+			origin,
+			code: "too_small",
+			minimum: def.minimum,
+			inclusive: true,
+			input,
+			inst,
+			continue: !def.abort
+		});
+	};
+});
+const $ZodCheckLengthEquals = /* @__PURE__ */ $constructor("$ZodCheckLengthEquals", (inst, def) => {
+	var _a$1;
+	$ZodCheck.init(inst, def);
+	(_a$1 = inst._zod.def).when ?? (_a$1.when = (payload) => {
+		const val = payload.value;
+		return !nullish(val) && val.length !== void 0;
+	});
+	inst._zod.onattach.push((inst$1) => {
+		const bag = inst$1._zod.bag;
+		bag.minimum = def.length;
+		bag.maximum = def.length;
+		bag.length = def.length;
+	});
+	inst._zod.check = (payload) => {
+		const input = payload.value;
+		const length = input.length;
+		if (length === def.length) return;
+		const origin = getLengthableOrigin(input);
+		const tooBig = length > def.length;
+		payload.issues.push({
+			origin,
+			...tooBig ? {
+				code: "too_big",
+				maximum: def.length
+			} : {
+				code: "too_small",
+				minimum: def.length
+			},
+			inclusive: true,
+			exact: true,
+			input: payload.value,
+			inst,
+			continue: !def.abort
+		});
+	};
+});
+const $ZodCheckStringFormat = /* @__PURE__ */ $constructor("$ZodCheckStringFormat", (inst, def) => {
+	var _a$1, _b;
+	$ZodCheck.init(inst, def);
+	inst._zod.onattach.push((inst$1) => {
+		const bag = inst$1._zod.bag;
+		bag.format = def.format;
+		if (def.pattern) {
+			bag.patterns ?? (bag.patterns = /* @__PURE__ */ new Set());
+			bag.patterns.add(def.pattern);
+		}
+	});
+	if (def.pattern) (_a$1 = inst._zod).check ?? (_a$1.check = (payload) => {
+		def.pattern.lastIndex = 0;
+		if (def.pattern.test(payload.value)) return;
+		payload.issues.push({
+			origin: "string",
+			code: "invalid_format",
+			format: def.format,
+			input: payload.value,
+			...def.pattern ? { pattern: def.pattern.toString() } : {},
+			inst,
+			continue: !def.abort
+		});
+	});
+	else (_b = inst._zod).check ?? (_b.check = () => {});
+});
+const $ZodCheckRegex = /* @__PURE__ */ $constructor("$ZodCheckRegex", (inst, def) => {
+	$ZodCheckStringFormat.init(inst, def);
+	inst._zod.check = (payload) => {
+		def.pattern.lastIndex = 0;
+		if (def.pattern.test(payload.value)) return;
+		payload.issues.push({
+			origin: "string",
+			code: "invalid_format",
+			format: "regex",
+			input: payload.value,
+			pattern: def.pattern.toString(),
+			inst,
+			continue: !def.abort
+		});
+	};
+});
+const $ZodCheckLowerCase = /* @__PURE__ */ $constructor("$ZodCheckLowerCase", (inst, def) => {
+	def.pattern ?? (def.pattern = lowercase);
+	$ZodCheckStringFormat.init(inst, def);
+});
+const $ZodCheckUpperCase = /* @__PURE__ */ $constructor("$ZodCheckUpperCase", (inst, def) => {
+	def.pattern ?? (def.pattern = uppercase);
+	$ZodCheckStringFormat.init(inst, def);
+});
+const $ZodCheckIncludes = /* @__PURE__ */ $constructor("$ZodCheckIncludes", (inst, def) => {
+	$ZodCheck.init(inst, def);
+	const escapedRegex = escapeRegex(def.includes);
+	const pattern = new RegExp(typeof def.position === "number" ? `^.{${def.position}}${escapedRegex}` : escapedRegex);
+	def.pattern = pattern;
+	inst._zod.onattach.push((inst$1) => {
+		const bag = inst$1._zod.bag;
+		bag.patterns ?? (bag.patterns = /* @__PURE__ */ new Set());
+		bag.patterns.add(pattern);
+	});
+	inst._zod.check = (payload) => {
+		if (payload.value.includes(def.includes, def.position)) return;
+		payload.issues.push({
+			origin: "string",
+			code: "invalid_format",
+			format: "includes",
+			includes: def.includes,
+			input: payload.value,
+			inst,
+			continue: !def.abort
+		});
+	};
+});
+const $ZodCheckStartsWith = /* @__PURE__ */ $constructor("$ZodCheckStartsWith", (inst, def) => {
+	$ZodCheck.init(inst, def);
+	const pattern = /* @__PURE__ */ new RegExp(`^${escapeRegex(def.prefix)}.*`);
+	def.pattern ?? (def.pattern = pattern);
+	inst._zod.onattach.push((inst$1) => {
+		const bag = inst$1._zod.bag;
+		bag.patterns ?? (bag.patterns = /* @__PURE__ */ new Set());
+		bag.patterns.add(pattern);
+	});
+	inst._zod.check = (payload) => {
+		if (payload.value.startsWith(def.prefix)) return;
+		payload.issues.push({
+			origin: "string",
+			code: "invalid_format",
+			format: "starts_with",
+			prefix: def.prefix,
+			input: payload.value,
+			inst,
+			continue: !def.abort
+		});
+	};
+});
+const $ZodCheckEndsWith = /* @__PURE__ */ $constructor("$ZodCheckEndsWith", (inst, def) => {
+	$ZodCheck.init(inst, def);
+	const pattern = /* @__PURE__ */ new RegExp(`.*${escapeRegex(def.suffix)}$`);
+	def.pattern ?? (def.pattern = pattern);
+	inst._zod.onattach.push((inst$1) => {
+		const bag = inst$1._zod.bag;
+		bag.patterns ?? (bag.patterns = /* @__PURE__ */ new Set());
+		bag.patterns.add(pattern);
+	});
+	inst._zod.check = (payload) => {
+		if (payload.value.endsWith(def.suffix)) return;
+		payload.issues.push({
+			origin: "string",
+			code: "invalid_format",
+			format: "ends_with",
+			suffix: def.suffix,
+			input: payload.value,
+			inst,
+			continue: !def.abort
+		});
+	};
+});
+const $ZodCheckOverwrite = /* @__PURE__ */ $constructor("$ZodCheckOverwrite", (inst, def) => {
+	$ZodCheck.init(inst, def);
+	inst._zod.check = (payload) => {
+		payload.value = def.tx(payload.value);
+	};
+});
+var Doc = class {
+	constructor(args = []) {
+		this.content = [];
+		this.indent = 0;
+		if (this) this.args = args;
+	}
+	indented(fn) {
+		this.indent += 1;
+		fn(this);
+		this.indent -= 1;
+	}
+	write(arg) {
+		if (typeof arg === "function") {
+			arg(this, { execution: "sync" });
+			arg(this, { execution: "async" });
+			return;
+		}
+		const lines = arg.split("\n").filter((x$1) => x$1);
+		const minIndent = Math.min(...lines.map((x$1) => x$1.length - x$1.trimStart().length));
+		const dedented = lines.map((x$1) => x$1.slice(minIndent)).map((x$1) => " ".repeat(this.indent * 2) + x$1);
+		for (const line of dedented) this.content.push(line);
+	}
+	compile() {
+		const F = Function;
+		const args = this?.args;
+		const lines = [...(this?.content ?? [``]).map((x$1) => `  ${x$1}`)];
+		return new F(...args, lines.join("\n"));
+	}
+};
+const version = {
+	major: 4,
+	minor: 3,
+	patch: 6
+};
+const $ZodType = /* @__PURE__ */ $constructor("$ZodType", (inst, def) => {
+	var _a$1;
+	inst ?? (inst = {});
+	inst._zod.def = def;
+	inst._zod.bag = inst._zod.bag || {};
+	inst._zod.version = version;
+	const checks = [...inst._zod.def.checks ?? []];
+	if (inst._zod.traits.has("$ZodCheck")) checks.unshift(inst);
+	for (const ch of checks) for (const fn of ch._zod.onattach) fn(inst);
+	if (checks.length === 0) {
+		(_a$1 = inst._zod).deferred ?? (_a$1.deferred = []);
+		inst._zod.deferred?.push(() => {
+			inst._zod.run = inst._zod.parse;
+		});
+	} else {
+		const runChecks = (payload, checks$1, ctx) => {
+			let isAborted = aborted(payload);
+			let asyncResult;
+			for (const ch of checks$1) {
+				if (ch._zod.def.when) {
+					if (!ch._zod.def.when(payload)) continue;
+				} else if (isAborted) continue;
+				const currLen = payload.issues.length;
+				const _$1 = ch._zod.check(payload);
+				if (_$1 instanceof Promise && ctx?.async === false) throw new $ZodAsyncError();
+				if (asyncResult || _$1 instanceof Promise) asyncResult = (asyncResult ?? Promise.resolve()).then(async () => {
+					await _$1;
+					if (payload.issues.length === currLen) return;
+					if (!isAborted) isAborted = aborted(payload, currLen);
+				});
+				else {
+					if (payload.issues.length === currLen) continue;
+					if (!isAborted) isAborted = aborted(payload, currLen);
+				}
+			}
+			if (asyncResult) return asyncResult.then(() => {
+				return payload;
+			});
+			return payload;
+		};
+		const handleCanaryResult = (canary, payload, ctx) => {
+			if (aborted(canary)) {
+				canary.aborted = true;
+				return canary;
+			}
+			const checkResult = runChecks(payload, checks, ctx);
+			if (checkResult instanceof Promise) {
+				if (ctx.async === false) throw new $ZodAsyncError();
+				return checkResult.then((checkResult$1) => inst._zod.parse(checkResult$1, ctx));
+			}
+			return inst._zod.parse(checkResult, ctx);
+		};
+		inst._zod.run = (payload, ctx) => {
+			if (ctx.skipChecks) return inst._zod.parse(payload, ctx);
+			if (ctx.direction === "backward") {
+				const canary = inst._zod.parse({
+					value: payload.value,
+					issues: []
+				}, {
+					...ctx,
+					skipChecks: true
+				});
+				if (canary instanceof Promise) return canary.then((canary$1) => {
+					return handleCanaryResult(canary$1, payload, ctx);
+				});
+				return handleCanaryResult(canary, payload, ctx);
+			}
+			const result = inst._zod.parse(payload, ctx);
+			if (result instanceof Promise) {
+				if (ctx.async === false) throw new $ZodAsyncError();
+				return result.then((result$1) => runChecks(result$1, checks, ctx));
+			}
+			return runChecks(result, checks, ctx);
+		};
+	}
+	defineLazy(inst, "~standard", () => ({
+		validate: (value) => {
+			try {
+				const r$2 = safeParse$1(inst, value);
+				return r$2.success ? { value: r$2.data } : { issues: r$2.error?.issues };
+			} catch (_$1) {
+				return safeParseAsync$1(inst, value).then((r$2) => r$2.success ? { value: r$2.data } : { issues: r$2.error?.issues });
+			}
+		},
+		vendor: "zod",
+		version: 1
+	}));
+});
+const $ZodString = /* @__PURE__ */ $constructor("$ZodString", (inst, def) => {
+	$ZodType.init(inst, def);
+	inst._zod.pattern = [...inst?._zod.bag?.patterns ?? []].pop() ?? string$1(inst._zod.bag);
+	inst._zod.parse = (payload, _$1) => {
+		if (def.coerce) try {
+			payload.value = String(payload.value);
+		} catch (_$2) {}
+		if (typeof payload.value === "string") return payload;
+		payload.issues.push({
+			expected: "string",
+			code: "invalid_type",
+			input: payload.value,
+			inst
+		});
+		return payload;
+	};
+});
+const $ZodStringFormat = /* @__PURE__ */ $constructor("$ZodStringFormat", (inst, def) => {
+	$ZodCheckStringFormat.init(inst, def);
+	$ZodString.init(inst, def);
+});
+const $ZodGUID = /* @__PURE__ */ $constructor("$ZodGUID", (inst, def) => {
+	def.pattern ?? (def.pattern = guid);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodUUID = /* @__PURE__ */ $constructor("$ZodUUID", (inst, def) => {
+	if (def.version) {
+		const v = {
+			v1: 1,
+			v2: 2,
+			v3: 3,
+			v4: 4,
+			v5: 5,
+			v6: 6,
+			v7: 7,
+			v8: 8
+		}[def.version];
+		if (v === void 0) throw new Error(`Invalid UUID version: "${def.version}"`);
+		def.pattern ?? (def.pattern = uuid(v));
+	} else def.pattern ?? (def.pattern = uuid());
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodEmail = /* @__PURE__ */ $constructor("$ZodEmail", (inst, def) => {
+	def.pattern ?? (def.pattern = email);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodURL = /* @__PURE__ */ $constructor("$ZodURL", (inst, def) => {
+	$ZodStringFormat.init(inst, def);
+	inst._zod.check = (payload) => {
+		try {
+			const trimmed = payload.value.trim();
+			const url = new URL(trimmed);
+			if (def.hostname) {
+				def.hostname.lastIndex = 0;
+				if (!def.hostname.test(url.hostname)) payload.issues.push({
+					code: "invalid_format",
+					format: "url",
+					note: "Invalid hostname",
+					pattern: def.hostname.source,
+					input: payload.value,
+					inst,
+					continue: !def.abort
+				});
+			}
+			if (def.protocol) {
+				def.protocol.lastIndex = 0;
+				if (!def.protocol.test(url.protocol.endsWith(":") ? url.protocol.slice(0, -1) : url.protocol)) payload.issues.push({
+					code: "invalid_format",
+					format: "url",
+					note: "Invalid protocol",
+					pattern: def.protocol.source,
+					input: payload.value,
+					inst,
+					continue: !def.abort
+				});
+			}
+			if (def.normalize) payload.value = url.href;
+			else payload.value = trimmed;
+			return;
+		} catch (_$1) {
+			payload.issues.push({
+				code: "invalid_format",
+				format: "url",
+				input: payload.value,
+				inst,
+				continue: !def.abort
+			});
+		}
+	};
+});
+const $ZodEmoji = /* @__PURE__ */ $constructor("$ZodEmoji", (inst, def) => {
+	def.pattern ?? (def.pattern = emoji());
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodNanoID = /* @__PURE__ */ $constructor("$ZodNanoID", (inst, def) => {
+	def.pattern ?? (def.pattern = nanoid);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodCUID = /* @__PURE__ */ $constructor("$ZodCUID", (inst, def) => {
+	def.pattern ?? (def.pattern = cuid);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodCUID2 = /* @__PURE__ */ $constructor("$ZodCUID2", (inst, def) => {
+	def.pattern ?? (def.pattern = cuid2);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodULID = /* @__PURE__ */ $constructor("$ZodULID", (inst, def) => {
+	def.pattern ?? (def.pattern = ulid);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodXID = /* @__PURE__ */ $constructor("$ZodXID", (inst, def) => {
+	def.pattern ?? (def.pattern = xid);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodKSUID = /* @__PURE__ */ $constructor("$ZodKSUID", (inst, def) => {
+	def.pattern ?? (def.pattern = ksuid);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodISODateTime = /* @__PURE__ */ $constructor("$ZodISODateTime", (inst, def) => {
+	def.pattern ?? (def.pattern = datetime$1(def));
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodISODate = /* @__PURE__ */ $constructor("$ZodISODate", (inst, def) => {
+	def.pattern ?? (def.pattern = date$1);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodISOTime = /* @__PURE__ */ $constructor("$ZodISOTime", (inst, def) => {
+	def.pattern ?? (def.pattern = time$1(def));
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodISODuration = /* @__PURE__ */ $constructor("$ZodISODuration", (inst, def) => {
+	def.pattern ?? (def.pattern = duration$1);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodIPv4 = /* @__PURE__ */ $constructor("$ZodIPv4", (inst, def) => {
+	def.pattern ?? (def.pattern = ipv4);
+	$ZodStringFormat.init(inst, def);
+	inst._zod.bag.format = `ipv4`;
+});
+const $ZodIPv6 = /* @__PURE__ */ $constructor("$ZodIPv6", (inst, def) => {
+	def.pattern ?? (def.pattern = ipv6);
+	$ZodStringFormat.init(inst, def);
+	inst._zod.bag.format = `ipv6`;
+	inst._zod.check = (payload) => {
+		try {
+			new URL(`http://[${payload.value}]`);
+		} catch {
+			payload.issues.push({
+				code: "invalid_format",
+				format: "ipv6",
+				input: payload.value,
+				inst,
+				continue: !def.abort
+			});
+		}
+	};
+});
+const $ZodCIDRv4 = /* @__PURE__ */ $constructor("$ZodCIDRv4", (inst, def) => {
+	def.pattern ?? (def.pattern = cidrv4);
+	$ZodStringFormat.init(inst, def);
+});
+const $ZodCIDRv6 = /* @__PURE__ */ $constructor("$ZodCIDRv6", (inst, def) => {
+	def.pattern ?? (def.pattern = cidrv6);
+	$ZodStringFormat.init(inst, def);
+	inst._zod.check = (payload) => {
+		const parts = payload.value.split("/");
+		try {
+			if (parts.length !== 2) throw new Error();
+			const [address, prefix] = parts;
+			if (!prefix) throw new Error();
+			const prefixNum = Number(prefix);
+			if (`${prefixNum}` !== prefix) throw new Error();
+			if (prefixNum < 0 || prefixNum > 128) throw new Error();
+			new URL(`http://[${address}]`);
+		} catch {
+			payload.issues.push({
+				code: "invalid_format",
+				format: "cidrv6",
+				input: payload.value,
+				inst,
+				continue: !def.abort
+			});
+		}
+	};
+});
+function isValidBase64(data) {
+	if (data === "") return true;
+	if (data.length % 4 !== 0) return false;
+	try {
+		atob(data);
+		return true;
+	} catch {
+		return false;
+	}
+}
+const $ZodBase64 = /* @__PURE__ */ $constructor("$ZodBase64", (inst, def) => {
+	def.pattern ?? (def.pattern = base64);
+	$ZodStringFormat.init(inst, def);
+	inst._zod.bag.contentEncoding = "base64";
+	inst._zod.check = (payload) => {
+		if (isValidBase64(payload.value)) return;
+		payload.issues.push({
+			code: "invalid_format",
+			format: "base64",
+			input: payload.value,
+			inst,
+			continue: !def.abort
+		});
+	};
+});
+function isValidBase64URL(data) {
+	if (!base64url.test(data)) return false;
+	const base64$1 = data.replace(/[-_]/g, (c) => c === "-" ? "+" : "/");
+	return isValidBase64(base64$1.padEnd(Math.ceil(base64$1.length / 4) * 4, "="));
+}
+const $ZodBase64URL = /* @__PURE__ */ $constructor("$ZodBase64URL", (inst, def) => {
+	def.pattern ?? (def.pattern = base64url);
+	$ZodStringFormat.init(inst, def);
+	inst._zod.bag.contentEncoding = "base64url";
+	inst._zod.check = (payload) => {
+		if (isValidBase64URL(payload.value)) return;
+		payload.issues.push({
+			code: "invalid_format",
+			format: "base64url",
+			input: payload.value,
+			inst,
+			continue: !def.abort
+		});
+	};
+});
+const $ZodE164 = /* @__PURE__ */ $constructor("$ZodE164", (inst, def) => {
+	def.pattern ?? (def.pattern = e164);
+	$ZodStringFormat.init(inst, def);
+});
+function isValidJWT(token, algorithm = null) {
+	try {
+		const tokensParts = token.split(".");
+		if (tokensParts.length !== 3) return false;
+		const [header] = tokensParts;
+		if (!header) return false;
+		const parsedHeader = JSON.parse(atob(header));
+		if ("typ" in parsedHeader && parsedHeader?.typ !== "JWT") return false;
+		if (!parsedHeader.alg) return false;
+		if (algorithm && (!("alg" in parsedHeader) || parsedHeader.alg !== algorithm)) return false;
+		return true;
+	} catch {
+		return false;
+	}
+}
+const $ZodJWT = /* @__PURE__ */ $constructor("$ZodJWT", (inst, def) => {
+	$ZodStringFormat.init(inst, def);
+	inst._zod.check = (payload) => {
+		if (isValidJWT(payload.value, def.alg)) return;
+		payload.issues.push({
+			code: "invalid_format",
+			format: "jwt",
+			input: payload.value,
+			inst,
+			continue: !def.abort
+		});
+	};
+});
+const $ZodUnknown = /* @__PURE__ */ $constructor("$ZodUnknown", (inst, def) => {
+	$ZodType.init(inst, def);
+	inst._zod.parse = (payload) => payload;
+});
+const $ZodNever = /* @__PURE__ */ $constructor("$ZodNever", (inst, def) => {
+	$ZodType.init(inst, def);
+	inst._zod.parse = (payload, _ctx) => {
+		payload.issues.push({
+			expected: "never",
+			code: "invalid_type",
+			input: payload.value,
+			inst
+		});
+		return payload;
+	};
+});
+function handleArrayResult(result, final, index$1) {
+	if (result.issues.length) final.issues.push(...prefixIssues(index$1, result.issues));
+	final.value[index$1] = result.value;
+}
+const $ZodArray = /* @__PURE__ */ $constructor("$ZodArray", (inst, def) => {
+	$ZodType.init(inst, def);
+	inst._zod.parse = (payload, ctx) => {
+		const input = payload.value;
+		if (!Array.isArray(input)) {
+			payload.issues.push({
+				expected: "array",
+				code: "invalid_type",
+				input,
+				inst
+			});
+			return payload;
+		}
+		payload.value = Array(input.length);
+		const proms = [];
+		for (let i$2 = 0; i$2 < input.length; i$2++) {
+			const item = input[i$2];
+			const result = def.element._zod.run({
+				value: item,
+				issues: []
+			}, ctx);
+			if (result instanceof Promise) proms.push(result.then((result$1) => handleArrayResult(result$1, payload, i$2)));
+			else handleArrayResult(result, payload, i$2);
+		}
+		if (proms.length) return Promise.all(proms).then(() => payload);
+		return payload;
+	};
+});
+function handlePropertyResult(result, final, key, input, isOptionalOut) {
+	if (result.issues.length) {
+		if (isOptionalOut && !(key in input)) return;
+		final.issues.push(...prefixIssues(key, result.issues));
+	}
+	if (result.value === void 0) {
+		if (key in input) final.value[key] = void 0;
+	} else final.value[key] = result.value;
+}
+function normalizeDef(def) {
+	const keys = Object.keys(def.shape);
+	for (const k of keys) if (!def.shape?.[k]?._zod?.traits?.has("$ZodType")) throw new Error(`Invalid element at key "${k}": expected a Zod schema`);
+	const okeys = optionalKeys(def.shape);
+	return {
+		...def,
+		keys,
+		keySet: new Set(keys),
+		numKeys: keys.length,
+		optionalKeys: new Set(okeys)
+	};
+}
+function handleCatchall(proms, input, payload, ctx, def, inst) {
+	const unrecognized = [];
+	const keySet = def.keySet;
+	const _catchall = def.catchall._zod;
+	const t$1 = _catchall.def.type;
+	const isOptionalOut = _catchall.optout === "optional";
+	for (const key in input) {
+		if (keySet.has(key)) continue;
+		if (t$1 === "never") {
+			unrecognized.push(key);
+			continue;
+		}
+		const r$2 = _catchall.run({
+			value: input[key],
+			issues: []
+		}, ctx);
+		if (r$2 instanceof Promise) proms.push(r$2.then((r$3) => handlePropertyResult(r$3, payload, key, input, isOptionalOut)));
+		else handlePropertyResult(r$2, payload, key, input, isOptionalOut);
+	}
+	if (unrecognized.length) payload.issues.push({
+		code: "unrecognized_keys",
+		keys: unrecognized,
+		input,
+		inst
+	});
+	if (!proms.length) return payload;
+	return Promise.all(proms).then(() => {
+		return payload;
+	});
+}
+const $ZodObject = /* @__PURE__ */ $constructor("$ZodObject", (inst, def) => {
+	$ZodType.init(inst, def);
+	if (!Object.getOwnPropertyDescriptor(def, "shape")?.get) {
+		const sh = def.shape;
+		Object.defineProperty(def, "shape", { get: () => {
+			const newSh = { ...sh };
+			Object.defineProperty(def, "shape", { value: newSh });
+			return newSh;
+		} });
+	}
+	const _normalized = cached(() => normalizeDef(def));
+	defineLazy(inst._zod, "propValues", () => {
+		const shape = def.shape;
+		const propValues = {};
+		for (const key in shape) {
+			const field = shape[key]._zod;
+			if (field.values) {
+				propValues[key] ?? (propValues[key] = /* @__PURE__ */ new Set());
+				for (const v of field.values) propValues[key].add(v);
+			}
+		}
+		return propValues;
+	});
+	const isObject$2 = isObject;
+	const catchall = def.catchall;
+	let value;
+	inst._zod.parse = (payload, ctx) => {
+		value ?? (value = _normalized.value);
+		const input = payload.value;
+		if (!isObject$2(input)) {
+			payload.issues.push({
+				expected: "object",
+				code: "invalid_type",
+				input,
+				inst
+			});
+			return payload;
+		}
+		payload.value = {};
+		const proms = [];
+		const shape = value.shape;
+		for (const key of value.keys) {
+			const el = shape[key];
+			const isOptionalOut = el._zod.optout === "optional";
+			const r$2 = el._zod.run({
+				value: input[key],
+				issues: []
+			}, ctx);
+			if (r$2 instanceof Promise) proms.push(r$2.then((r$3) => handlePropertyResult(r$3, payload, key, input, isOptionalOut)));
+			else handlePropertyResult(r$2, payload, key, input, isOptionalOut);
+		}
+		if (!catchall) return proms.length ? Promise.all(proms).then(() => payload) : payload;
+		return handleCatchall(proms, input, payload, ctx, _normalized.value, inst);
+	};
+});
+const $ZodObjectJIT = /* @__PURE__ */ $constructor("$ZodObjectJIT", (inst, def) => {
+	$ZodObject.init(inst, def);
+	const superParse = inst._zod.parse;
+	const _normalized = cached(() => normalizeDef(def));
+	const generateFastpass = (shape) => {
+		const doc = new Doc([
+			"shape",
+			"payload",
+			"ctx"
+		]);
+		const normalized = _normalized.value;
+		const parseStr = (key) => {
+			const k = esc(key);
+			return `shape[${k}]._zod.run({ value: input[${k}], issues: [] }, ctx)`;
+		};
+		doc.write(`const input = payload.value;`);
+		const ids = Object.create(null);
+		let counter = 0;
+		for (const key of normalized.keys) ids[key] = `key_${counter++}`;
+		doc.write(`const newResult = {};`);
+		for (const key of normalized.keys) {
+			const id = ids[key];
+			const k = esc(key);
+			const isOptionalOut = shape[key]?._zod?.optout === "optional";
+			doc.write(`const ${id} = ${parseStr(key)};`);
+			if (isOptionalOut) doc.write(`
+        if (${id}.issues.length) {
+          if (${k} in input) {
+            payload.issues = payload.issues.concat(${id}.issues.map(iss => ({
+              ...iss,
+              path: iss.path ? [${k}, ...iss.path] : [${k}]
+            })));
+          }
+        }
+        
+        if (${id}.value === undefined) {
+          if (${k} in input) {
+            newResult[${k}] = undefined;
+          }
+        } else {
+          newResult[${k}] = ${id}.value;
+        }
+        
+      `);
+			else doc.write(`
+        if (${id}.issues.length) {
+          payload.issues = payload.issues.concat(${id}.issues.map(iss => ({
+            ...iss,
+            path: iss.path ? [${k}, ...iss.path] : [${k}]
+          })));
+        }
+        
+        if (${id}.value === undefined) {
+          if (${k} in input) {
+            newResult[${k}] = undefined;
+          }
+        } else {
+          newResult[${k}] = ${id}.value;
+        }
+        
+      `);
+		}
+		doc.write(`payload.value = newResult;`);
+		doc.write(`return payload;`);
+		const fn = doc.compile();
+		return (payload, ctx) => fn(shape, payload, ctx);
+	};
+	let fastpass;
+	const isObject$2 = isObject;
+	const jit = !globalConfig.jitless;
+	const fastEnabled = jit && allowsEval.value;
+	const catchall = def.catchall;
+	let value;
+	inst._zod.parse = (payload, ctx) => {
+		value ?? (value = _normalized.value);
+		const input = payload.value;
+		if (!isObject$2(input)) {
+			payload.issues.push({
+				expected: "object",
+				code: "invalid_type",
+				input,
+				inst
+			});
+			return payload;
+		}
+		if (jit && fastEnabled && ctx?.async === false && ctx.jitless !== true) {
+			if (!fastpass) fastpass = generateFastpass(def.shape);
+			payload = fastpass(payload, ctx);
+			if (!catchall) return payload;
+			return handleCatchall([], input, payload, ctx, value, inst);
+		}
+		return superParse(payload, ctx);
+	};
+});
+function handleUnionResults(results, final, inst, ctx) {
+	for (const result of results) if (result.issues.length === 0) {
+		final.value = result.value;
+		return final;
+	}
+	const nonaborted = results.filter((r$2) => !aborted(r$2));
+	if (nonaborted.length === 1) {
+		final.value = nonaborted[0].value;
+		return nonaborted[0];
+	}
+	final.issues.push({
+		code: "invalid_union",
+		input: final.value,
+		inst,
+		errors: results.map((result) => result.issues.map((iss) => finalizeIssue(iss, ctx, config())))
+	});
+	return final;
+}
+const $ZodUnion = /* @__PURE__ */ $constructor("$ZodUnion", (inst, def) => {
+	$ZodType.init(inst, def);
+	defineLazy(inst._zod, "optin", () => def.options.some((o$1) => o$1._zod.optin === "optional") ? "optional" : void 0);
+	defineLazy(inst._zod, "optout", () => def.options.some((o$1) => o$1._zod.optout === "optional") ? "optional" : void 0);
+	defineLazy(inst._zod, "values", () => {
+		if (def.options.every((o$1) => o$1._zod.values)) return new Set(def.options.flatMap((option) => Array.from(option._zod.values)));
+	});
+	defineLazy(inst._zod, "pattern", () => {
+		if (def.options.every((o$1) => o$1._zod.pattern)) {
+			const patterns = def.options.map((o$1) => o$1._zod.pattern);
+			return /* @__PURE__ */ new RegExp(`^(${patterns.map((p) => cleanRegex(p.source)).join("|")})$`);
+		}
+	});
+	const single = def.options.length === 1;
+	const first = def.options[0]._zod.run;
+	inst._zod.parse = (payload, ctx) => {
+		if (single) return first(payload, ctx);
+		let async = false;
+		const results = [];
+		for (const option of def.options) {
+			const result = option._zod.run({
+				value: payload.value,
+				issues: []
+			}, ctx);
+			if (result instanceof Promise) {
+				results.push(result);
+				async = true;
+			} else {
+				if (result.issues.length === 0) return result;
+				results.push(result);
+			}
+		}
+		if (!async) return handleUnionResults(results, payload, inst, ctx);
+		return Promise.all(results).then((results$1) => {
+			return handleUnionResults(results$1, payload, inst, ctx);
+		});
+	};
+});
+const $ZodIntersection = /* @__PURE__ */ $constructor("$ZodIntersection", (inst, def) => {
+	$ZodType.init(inst, def);
+	inst._zod.parse = (payload, ctx) => {
+		const input = payload.value;
+		const left = def.left._zod.run({
+			value: input,
+			issues: []
+		}, ctx);
+		const right = def.right._zod.run({
+			value: input,
+			issues: []
+		}, ctx);
+		if (left instanceof Promise || right instanceof Promise) return Promise.all([left, right]).then(([left$1, right$1]) => {
+			return handleIntersectionResults(payload, left$1, right$1);
+		});
+		return handleIntersectionResults(payload, left, right);
+	};
+});
+function mergeValues(a$1, b$1) {
+	if (a$1 === b$1) return {
+		valid: true,
+		data: a$1
+	};
+	if (a$1 instanceof Date && b$1 instanceof Date && +a$1 === +b$1) return {
+		valid: true,
+		data: a$1
+	};
+	if (isPlainObject(a$1) && isPlainObject(b$1)) {
+		const bKeys = Object.keys(b$1);
+		const sharedKeys = Object.keys(a$1).filter((key) => bKeys.indexOf(key) !== -1);
+		const newObj = {
+			...a$1,
+			...b$1
+		};
+		for (const key of sharedKeys) {
+			const sharedValue = mergeValues(a$1[key], b$1[key]);
+			if (!sharedValue.valid) return {
+				valid: false,
+				mergeErrorPath: [key, ...sharedValue.mergeErrorPath]
+			};
+			newObj[key] = sharedValue.data;
+		}
+		return {
+			valid: true,
+			data: newObj
+		};
+	}
+	if (Array.isArray(a$1) && Array.isArray(b$1)) {
+		if (a$1.length !== b$1.length) return {
+			valid: false,
+			mergeErrorPath: []
+		};
+		const newArray = [];
+		for (let index$1 = 0; index$1 < a$1.length; index$1++) {
+			const itemA = a$1[index$1];
+			const itemB = b$1[index$1];
+			const sharedValue = mergeValues(itemA, itemB);
+			if (!sharedValue.valid) return {
+				valid: false,
+				mergeErrorPath: [index$1, ...sharedValue.mergeErrorPath]
+			};
+			newArray.push(sharedValue.data);
+		}
+		return {
+			valid: true,
+			data: newArray
+		};
+	}
+	return {
+		valid: false,
+		mergeErrorPath: []
+	};
+}
+function handleIntersectionResults(result, left, right) {
+	const unrecKeys = /* @__PURE__ */ new Map();
+	let unrecIssue;
+	for (const iss of left.issues) if (iss.code === "unrecognized_keys") {
+		unrecIssue ?? (unrecIssue = iss);
+		for (const k of iss.keys) {
+			if (!unrecKeys.has(k)) unrecKeys.set(k, {});
+			unrecKeys.get(k).l = true;
+		}
+	} else result.issues.push(iss);
+	for (const iss of right.issues) if (iss.code === "unrecognized_keys") for (const k of iss.keys) {
+		if (!unrecKeys.has(k)) unrecKeys.set(k, {});
+		unrecKeys.get(k).r = true;
+	}
+	else result.issues.push(iss);
+	const bothKeys = [...unrecKeys].filter(([, f]) => f.l && f.r).map(([k]) => k);
+	if (bothKeys.length && unrecIssue) result.issues.push({
+		...unrecIssue,
+		keys: bothKeys
+	});
+	if (aborted(result)) return result;
+	const merged = mergeValues(left.value, right.value);
+	if (!merged.valid) throw new Error(`Unmergable intersection. Error path: ${JSON.stringify(merged.mergeErrorPath)}`);
+	result.value = merged.data;
+	return result;
+}
+const $ZodEnum = /* @__PURE__ */ $constructor("$ZodEnum", (inst, def) => {
+	$ZodType.init(inst, def);
+	const values = getEnumValues(def.entries);
+	const valuesSet = new Set(values);
+	inst._zod.values = valuesSet;
+	inst._zod.pattern = /* @__PURE__ */ new RegExp(`^(${values.filter((k) => propertyKeyTypes.has(typeof k)).map((o$1) => typeof o$1 === "string" ? escapeRegex(o$1) : o$1.toString()).join("|")})$`);
+	inst._zod.parse = (payload, _ctx) => {
+		const input = payload.value;
+		if (valuesSet.has(input)) return payload;
+		payload.issues.push({
+			code: "invalid_value",
+			values,
+			input,
+			inst
+		});
+		return payload;
+	};
+});
+const $ZodTransform = /* @__PURE__ */ $constructor("$ZodTransform", (inst, def) => {
+	$ZodType.init(inst, def);
+	inst._zod.parse = (payload, ctx) => {
+		if (ctx.direction === "backward") throw new $ZodEncodeError(inst.constructor.name);
+		const _out = def.transform(payload.value, payload);
+		if (ctx.async) return (_out instanceof Promise ? _out : Promise.resolve(_out)).then((output) => {
+			payload.value = output;
+			return payload;
+		});
+		if (_out instanceof Promise) throw new $ZodAsyncError();
+		payload.value = _out;
+		return payload;
+	};
+});
+function handleOptionalResult(result, input) {
+	if (result.issues.length && input === void 0) return {
+		issues: [],
+		value: void 0
+	};
+	return result;
+}
+const $ZodOptional = /* @__PURE__ */ $constructor("$ZodOptional", (inst, def) => {
+	$ZodType.init(inst, def);
+	inst._zod.optin = "optional";
+	inst._zod.optout = "optional";
+	defineLazy(inst._zod, "values", () => {
+		return def.innerType._zod.values ? new Set([...def.innerType._zod.values, void 0]) : void 0;
+	});
+	defineLazy(inst._zod, "pattern", () => {
+		const pattern = def.innerType._zod.pattern;
+		return pattern ? /* @__PURE__ */ new RegExp(`^(${cleanRegex(pattern.source)})?$`) : void 0;
+	});
+	inst._zod.parse = (payload, ctx) => {
+		if (def.innerType._zod.optin === "optional") {
+			const result = def.innerType._zod.run(payload, ctx);
+			if (result instanceof Promise) return result.then((r$2) => handleOptionalResult(r$2, payload.value));
+			return handleOptionalResult(result, payload.value);
+		}
+		if (payload.value === void 0) return payload;
+		return def.innerType._zod.run(payload, ctx);
+	};
+});
+const $ZodExactOptional = /* @__PURE__ */ $constructor("$ZodExactOptional", (inst, def) => {
+	$ZodOptional.init(inst, def);
+	defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+	defineLazy(inst._zod, "pattern", () => def.innerType._zod.pattern);
+	inst._zod.parse = (payload, ctx) => {
+		return def.innerType._zod.run(payload, ctx);
+	};
+});
+const $ZodNullable = /* @__PURE__ */ $constructor("$ZodNullable", (inst, def) => {
+	$ZodType.init(inst, def);
+	defineLazy(inst._zod, "optin", () => def.innerType._zod.optin);
+	defineLazy(inst._zod, "optout", () => def.innerType._zod.optout);
+	defineLazy(inst._zod, "pattern", () => {
+		const pattern = def.innerType._zod.pattern;
+		return pattern ? /* @__PURE__ */ new RegExp(`^(${cleanRegex(pattern.source)}|null)$`) : void 0;
+	});
+	defineLazy(inst._zod, "values", () => {
+		return def.innerType._zod.values ? new Set([...def.innerType._zod.values, null]) : void 0;
+	});
+	inst._zod.parse = (payload, ctx) => {
+		if (payload.value === null) return payload;
+		return def.innerType._zod.run(payload, ctx);
+	};
+});
+const $ZodDefault = /* @__PURE__ */ $constructor("$ZodDefault", (inst, def) => {
+	$ZodType.init(inst, def);
+	inst._zod.optin = "optional";
+	defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+	inst._zod.parse = (payload, ctx) => {
+		if (ctx.direction === "backward") return def.innerType._zod.run(payload, ctx);
+		if (payload.value === void 0) {
+			payload.value = def.defaultValue;
+			return payload;
+		}
+		const result = def.innerType._zod.run(payload, ctx);
+		if (result instanceof Promise) return result.then((result$1) => handleDefaultResult(result$1, def));
+		return handleDefaultResult(result, def);
+	};
+});
+function handleDefaultResult(payload, def) {
+	if (payload.value === void 0) payload.value = def.defaultValue;
+	return payload;
+}
+const $ZodPrefault = /* @__PURE__ */ $constructor("$ZodPrefault", (inst, def) => {
+	$ZodType.init(inst, def);
+	inst._zod.optin = "optional";
+	defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+	inst._zod.parse = (payload, ctx) => {
+		if (ctx.direction === "backward") return def.innerType._zod.run(payload, ctx);
+		if (payload.value === void 0) payload.value = def.defaultValue;
+		return def.innerType._zod.run(payload, ctx);
+	};
+});
+const $ZodNonOptional = /* @__PURE__ */ $constructor("$ZodNonOptional", (inst, def) => {
+	$ZodType.init(inst, def);
+	defineLazy(inst._zod, "values", () => {
+		const v = def.innerType._zod.values;
+		return v ? new Set([...v].filter((x$1) => x$1 !== void 0)) : void 0;
+	});
+	inst._zod.parse = (payload, ctx) => {
+		const result = def.innerType._zod.run(payload, ctx);
+		if (result instanceof Promise) return result.then((result$1) => handleNonOptionalResult(result$1, inst));
+		return handleNonOptionalResult(result, inst);
+	};
+});
+function handleNonOptionalResult(payload, inst) {
+	if (!payload.issues.length && payload.value === void 0) payload.issues.push({
+		code: "invalid_type",
+		expected: "nonoptional",
+		input: payload.value,
+		inst
+	});
+	return payload;
+}
+const $ZodCatch = /* @__PURE__ */ $constructor("$ZodCatch", (inst, def) => {
+	$ZodType.init(inst, def);
+	defineLazy(inst._zod, "optin", () => def.innerType._zod.optin);
+	defineLazy(inst._zod, "optout", () => def.innerType._zod.optout);
+	defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+	inst._zod.parse = (payload, ctx) => {
+		if (ctx.direction === "backward") return def.innerType._zod.run(payload, ctx);
+		const result = def.innerType._zod.run(payload, ctx);
+		if (result instanceof Promise) return result.then((result$1) => {
+			payload.value = result$1.value;
+			if (result$1.issues.length) {
+				payload.value = def.catchValue({
+					...payload,
+					error: { issues: result$1.issues.map((iss) => finalizeIssue(iss, ctx, config())) },
+					input: payload.value
+				});
+				payload.issues = [];
+			}
+			return payload;
+		});
+		payload.value = result.value;
+		if (result.issues.length) {
+			payload.value = def.catchValue({
+				...payload,
+				error: { issues: result.issues.map((iss) => finalizeIssue(iss, ctx, config())) },
+				input: payload.value
+			});
+			payload.issues = [];
+		}
+		return payload;
+	};
+});
+const $ZodPipe = /* @__PURE__ */ $constructor("$ZodPipe", (inst, def) => {
+	$ZodType.init(inst, def);
+	defineLazy(inst._zod, "values", () => def.in._zod.values);
+	defineLazy(inst._zod, "optin", () => def.in._zod.optin);
+	defineLazy(inst._zod, "optout", () => def.out._zod.optout);
+	defineLazy(inst._zod, "propValues", () => def.in._zod.propValues);
+	inst._zod.parse = (payload, ctx) => {
+		if (ctx.direction === "backward") {
+			const right = def.out._zod.run(payload, ctx);
+			if (right instanceof Promise) return right.then((right$1) => handlePipeResult(right$1, def.in, ctx));
+			return handlePipeResult(right, def.in, ctx);
+		}
+		const left = def.in._zod.run(payload, ctx);
+		if (left instanceof Promise) return left.then((left$1) => handlePipeResult(left$1, def.out, ctx));
+		return handlePipeResult(left, def.out, ctx);
+	};
+});
+function handlePipeResult(left, next, ctx) {
+	if (left.issues.length) {
+		left.aborted = true;
+		return left;
+	}
+	return next._zod.run({
+		value: left.value,
+		issues: left.issues
+	}, ctx);
+}
+const $ZodReadonly = /* @__PURE__ */ $constructor("$ZodReadonly", (inst, def) => {
+	$ZodType.init(inst, def);
+	defineLazy(inst._zod, "propValues", () => def.innerType._zod.propValues);
+	defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+	defineLazy(inst._zod, "optin", () => def.innerType?._zod?.optin);
+	defineLazy(inst._zod, "optout", () => def.innerType?._zod?.optout);
+	inst._zod.parse = (payload, ctx) => {
+		if (ctx.direction === "backward") return def.innerType._zod.run(payload, ctx);
+		const result = def.innerType._zod.run(payload, ctx);
+		if (result instanceof Promise) return result.then(handleReadonlyResult);
+		return handleReadonlyResult(result);
+	};
+});
+function handleReadonlyResult(payload) {
+	payload.value = Object.freeze(payload.value);
+	return payload;
+}
+const $ZodCustom = /* @__PURE__ */ $constructor("$ZodCustom", (inst, def) => {
+	$ZodCheck.init(inst, def);
+	$ZodType.init(inst, def);
+	inst._zod.parse = (payload, _$1) => {
+		return payload;
+	};
+	inst._zod.check = (payload) => {
+		const input = payload.value;
+		const r$2 = def.fn(input);
+		if (r$2 instanceof Promise) return r$2.then((r$3) => handleRefineResult(r$3, payload, input, inst));
+		handleRefineResult(r$2, payload, input, inst);
+	};
+});
+function handleRefineResult(result, payload, input, inst) {
+	if (!result) {
+		const _iss = {
+			code: "custom",
+			input,
+			inst,
+			path: [...inst._zod.def.path ?? []],
+			continue: !inst._zod.def.abort
+		};
+		if (inst._zod.def.params) _iss.params = inst._zod.def.params;
+		payload.issues.push(issue(_iss));
+	}
+}
+var _a;
+var $ZodRegistry = class {
+	constructor() {
+		this._map = /* @__PURE__ */ new WeakMap();
+		this._idmap = /* @__PURE__ */ new Map();
+	}
+	add(schema, ..._meta) {
+		const meta$2 = _meta[0];
+		this._map.set(schema, meta$2);
+		if (meta$2 && typeof meta$2 === "object" && "id" in meta$2) this._idmap.set(meta$2.id, schema);
+		return this;
+	}
+	clear() {
+		this._map = /* @__PURE__ */ new WeakMap();
+		this._idmap = /* @__PURE__ */ new Map();
+		return this;
+	}
+	remove(schema) {
+		const meta$2 = this._map.get(schema);
+		if (meta$2 && typeof meta$2 === "object" && "id" in meta$2) this._idmap.delete(meta$2.id);
+		this._map.delete(schema);
+		return this;
+	}
+	get(schema) {
+		const p = schema._zod.parent;
+		if (p) {
+			const pm = { ...this.get(p) ?? {} };
+			delete pm.id;
+			const f = {
+				...pm,
+				...this._map.get(schema)
+			};
+			return Object.keys(f).length ? f : void 0;
+		}
+		return this._map.get(schema);
+	}
+	has(schema) {
+		return this._map.has(schema);
+	}
+};
+function registry() {
+	return new $ZodRegistry();
+}
+(_a = globalThis).__zod_globalRegistry ?? (_a.__zod_globalRegistry = registry());
+const globalRegistry = globalThis.__zod_globalRegistry;
+/* @__NO_SIDE_EFFECTS__ */
+function _string(Class, params) {
+	return new Class({
+		type: "string",
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _email(Class, params) {
+	return new Class({
+		type: "string",
+		format: "email",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _guid(Class, params) {
+	return new Class({
+		type: "string",
+		format: "guid",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _uuid(Class, params) {
+	return new Class({
+		type: "string",
+		format: "uuid",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _uuidv4(Class, params) {
+	return new Class({
+		type: "string",
+		format: "uuid",
+		check: "string_format",
+		abort: false,
+		version: "v4",
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _uuidv6(Class, params) {
+	return new Class({
+		type: "string",
+		format: "uuid",
+		check: "string_format",
+		abort: false,
+		version: "v6",
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _uuidv7(Class, params) {
+	return new Class({
+		type: "string",
+		format: "uuid",
+		check: "string_format",
+		abort: false,
+		version: "v7",
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _url(Class, params) {
+	return new Class({
+		type: "string",
+		format: "url",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _emoji(Class, params) {
+	return new Class({
+		type: "string",
+		format: "emoji",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _nanoid(Class, params) {
+	return new Class({
+		type: "string",
+		format: "nanoid",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _cuid(Class, params) {
+	return new Class({
+		type: "string",
+		format: "cuid",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _cuid2(Class, params) {
+	return new Class({
+		type: "string",
+		format: "cuid2",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _ulid(Class, params) {
+	return new Class({
+		type: "string",
+		format: "ulid",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _xid(Class, params) {
+	return new Class({
+		type: "string",
+		format: "xid",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _ksuid(Class, params) {
+	return new Class({
+		type: "string",
+		format: "ksuid",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _ipv4(Class, params) {
+	return new Class({
+		type: "string",
+		format: "ipv4",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _ipv6(Class, params) {
+	return new Class({
+		type: "string",
+		format: "ipv6",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _cidrv4(Class, params) {
+	return new Class({
+		type: "string",
+		format: "cidrv4",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _cidrv6(Class, params) {
+	return new Class({
+		type: "string",
+		format: "cidrv6",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _base64(Class, params) {
+	return new Class({
+		type: "string",
+		format: "base64",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _base64url(Class, params) {
+	return new Class({
+		type: "string",
+		format: "base64url",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _e164(Class, params) {
+	return new Class({
+		type: "string",
+		format: "e164",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _jwt(Class, params) {
+	return new Class({
+		type: "string",
+		format: "jwt",
+		check: "string_format",
+		abort: false,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _isoDateTime(Class, params) {
+	return new Class({
+		type: "string",
+		format: "datetime",
+		check: "string_format",
+		offset: false,
+		local: false,
+		precision: null,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _isoDate(Class, params) {
+	return new Class({
+		type: "string",
+		format: "date",
+		check: "string_format",
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _isoTime(Class, params) {
+	return new Class({
+		type: "string",
+		format: "time",
+		check: "string_format",
+		precision: null,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _isoDuration(Class, params) {
+	return new Class({
+		type: "string",
+		format: "duration",
+		check: "string_format",
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _unknown(Class) {
+	return new Class({ type: "unknown" });
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _never(Class, params) {
+	return new Class({
+		type: "never",
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _maxLength(maximum, params) {
+	return new $ZodCheckMaxLength({
+		check: "max_length",
+		...normalizeParams(params),
+		maximum
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _minLength(minimum, params) {
+	return new $ZodCheckMinLength({
+		check: "min_length",
+		...normalizeParams(params),
+		minimum
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _length(length, params) {
+	return new $ZodCheckLengthEquals({
+		check: "length_equals",
+		...normalizeParams(params),
+		length
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _regex(pattern, params) {
+	return new $ZodCheckRegex({
+		check: "string_format",
+		format: "regex",
+		...normalizeParams(params),
+		pattern
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _lowercase(params) {
+	return new $ZodCheckLowerCase({
+		check: "string_format",
+		format: "lowercase",
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _uppercase(params) {
+	return new $ZodCheckUpperCase({
+		check: "string_format",
+		format: "uppercase",
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _includes(includes, params) {
+	return new $ZodCheckIncludes({
+		check: "string_format",
+		format: "includes",
+		...normalizeParams(params),
+		includes
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _startsWith(prefix, params) {
+	return new $ZodCheckStartsWith({
+		check: "string_format",
+		format: "starts_with",
+		...normalizeParams(params),
+		prefix
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _endsWith(suffix, params) {
+	return new $ZodCheckEndsWith({
+		check: "string_format",
+		format: "ends_with",
+		...normalizeParams(params),
+		suffix
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _overwrite(tx) {
+	return new $ZodCheckOverwrite({
+		check: "overwrite",
+		tx
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _normalize(form) {
+	return /* @__PURE__ */ _overwrite((input) => input.normalize(form));
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _trim() {
+	return /* @__PURE__ */ _overwrite((input) => input.trim());
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _toLowerCase() {
+	return /* @__PURE__ */ _overwrite((input) => input.toLowerCase());
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _toUpperCase() {
+	return /* @__PURE__ */ _overwrite((input) => input.toUpperCase());
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _slugify() {
+	return /* @__PURE__ */ _overwrite((input) => slugify(input));
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _array(Class, element, params) {
+	return new Class({
+		type: "array",
+		element,
+		...normalizeParams(params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _refine(Class, fn, _params) {
+	return new Class({
+		type: "custom",
+		check: "custom",
+		fn,
+		...normalizeParams(_params)
+	});
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _superRefine(fn) {
+	const ch = /* @__PURE__ */ _check((payload) => {
+		payload.addIssue = (issue$1) => {
+			if (typeof issue$1 === "string") payload.issues.push(issue(issue$1, payload.value, ch._zod.def));
+			else {
+				const _issue = issue$1;
+				if (_issue.fatal) _issue.continue = false;
+				_issue.code ?? (_issue.code = "custom");
+				_issue.input ?? (_issue.input = payload.value);
+				_issue.inst ?? (_issue.inst = ch);
+				_issue.continue ?? (_issue.continue = !ch._zod.def.abort);
+				payload.issues.push(issue(_issue));
+			}
+		};
+		return fn(payload.value, payload);
+	});
+	return ch;
+}
+/* @__NO_SIDE_EFFECTS__ */
+function _check(fn, params) {
+	const ch = new $ZodCheck({
+		check: "custom",
+		...normalizeParams(params)
+	});
+	ch._zod.check = fn;
+	return ch;
+}
+function initializeContext(params) {
+	let target = params?.target ?? "draft-2020-12";
+	if (target === "draft-4") target = "draft-04";
+	if (target === "draft-7") target = "draft-07";
+	return {
+		processors: params.processors ?? {},
+		metadataRegistry: params?.metadata ?? globalRegistry,
+		target,
+		unrepresentable: params?.unrepresentable ?? "throw",
+		override: params?.override ?? (() => {}),
+		io: params?.io ?? "output",
+		counter: 0,
+		seen: /* @__PURE__ */ new Map(),
+		cycles: params?.cycles ?? "ref",
+		reused: params?.reused ?? "inline",
+		external: params?.external ?? void 0
+	};
+}
+function process$1(schema, ctx, _params = {
+	path: [],
+	schemaPath: []
+}) {
+	var _a$1;
+	const def = schema._zod.def;
+	const seen$1 = ctx.seen.get(schema);
+	if (seen$1) {
+		seen$1.count++;
+		if (_params.schemaPath.includes(schema)) seen$1.cycle = _params.path;
+		return seen$1.schema;
+	}
+	const result = {
+		schema: {},
+		count: 1,
+		cycle: void 0,
+		path: _params.path
+	};
+	ctx.seen.set(schema, result);
+	const overrideSchema = schema._zod.toJSONSchema?.();
+	if (overrideSchema) result.schema = overrideSchema;
+	else {
+		const params = {
+			..._params,
+			schemaPath: [..._params.schemaPath, schema],
+			path: _params.path
+		};
+		if (schema._zod.processJSONSchema) schema._zod.processJSONSchema(ctx, result.schema, params);
+		else {
+			const _json = result.schema;
+			const processor = ctx.processors[def.type];
+			if (!processor) throw new Error(`[toJSONSchema]: Non-representable type encountered: ${def.type}`);
+			processor(schema, ctx, _json, params);
+		}
+		const parent = schema._zod.parent;
+		if (parent) {
+			if (!result.ref) result.ref = parent;
+			process$1(parent, ctx, params);
+			ctx.seen.get(parent).isParent = true;
+		}
+	}
+	const meta$2 = ctx.metadataRegistry.get(schema);
+	if (meta$2) Object.assign(result.schema, meta$2);
+	if (ctx.io === "input" && isTransforming(schema)) {
+		delete result.schema.examples;
+		delete result.schema.default;
+	}
+	if (ctx.io === "input" && result.schema._prefault) (_a$1 = result.schema).default ?? (_a$1.default = result.schema._prefault);
+	delete result.schema._prefault;
+	return ctx.seen.get(schema).schema;
+}
+function extractDefs(ctx, schema) {
+	const root = ctx.seen.get(schema);
+	if (!root) throw new Error("Unprocessed schema. This is a bug in Zod.");
+	const idToSchema = /* @__PURE__ */ new Map();
+	for (const entry of ctx.seen.entries()) {
+		const id = ctx.metadataRegistry.get(entry[0])?.id;
+		if (id) {
+			const existing = idToSchema.get(id);
+			if (existing && existing !== entry[0]) throw new Error(`Duplicate schema id "${id}" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.`);
+			idToSchema.set(id, entry[0]);
+		}
+	}
+	const makeURI = (entry) => {
+		const defsSegment = ctx.target === "draft-2020-12" ? "$defs" : "definitions";
+		if (ctx.external) {
+			const externalId = ctx.external.registry.get(entry[0])?.id;
+			const uriGenerator = ctx.external.uri ?? ((id$1) => id$1);
+			if (externalId) return { ref: uriGenerator(externalId) };
+			const id = entry[1].defId ?? entry[1].schema.id ?? `schema${ctx.counter++}`;
+			entry[1].defId = id;
+			return {
+				defId: id,
+				ref: `${uriGenerator("__shared")}#/${defsSegment}/${id}`
+			};
+		}
+		if (entry[1] === root) return { ref: "#" };
+		const defUriPrefix = `#/${defsSegment}/`;
+		const defId = entry[1].schema.id ?? `__schema${ctx.counter++}`;
+		return {
+			defId,
+			ref: defUriPrefix + defId
+		};
+	};
+	const extractToDef = (entry) => {
+		if (entry[1].schema.$ref) return;
+		const seen$1 = entry[1];
+		const { ref, defId } = makeURI(entry);
+		seen$1.def = { ...seen$1.schema };
+		if (defId) seen$1.defId = defId;
+		const schema$1 = seen$1.schema;
+		for (const key in schema$1) delete schema$1[key];
+		schema$1.$ref = ref;
+	};
+	if (ctx.cycles === "throw") for (const entry of ctx.seen.entries()) {
+		const seen$1 = entry[1];
+		if (seen$1.cycle) throw new Error(`Cycle detected: #/${seen$1.cycle?.join("/")}/<root>
+
+Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.`);
+	}
+	for (const entry of ctx.seen.entries()) {
+		const seen$1 = entry[1];
+		if (schema === entry[0]) {
+			extractToDef(entry);
+			continue;
+		}
+		if (ctx.external) {
+			const ext = ctx.external.registry.get(entry[0])?.id;
+			if (schema !== entry[0] && ext) {
+				extractToDef(entry);
+				continue;
+			}
+		}
+		if (ctx.metadataRegistry.get(entry[0])?.id) {
+			extractToDef(entry);
+			continue;
+		}
+		if (seen$1.cycle) {
+			extractToDef(entry);
+			continue;
+		}
+		if (seen$1.count > 1) {
+			if (ctx.reused === "ref") {
+				extractToDef(entry);
+				continue;
+			}
+		}
+	}
+}
+function finalize(ctx, schema) {
+	const root = ctx.seen.get(schema);
+	if (!root) throw new Error("Unprocessed schema. This is a bug in Zod.");
+	const flattenRef = (zodSchema) => {
+		const seen$1 = ctx.seen.get(zodSchema);
+		if (seen$1.ref === null) return;
+		const schema$1 = seen$1.def ?? seen$1.schema;
+		const _cached = { ...schema$1 };
+		const ref = seen$1.ref;
+		seen$1.ref = null;
+		if (ref) {
+			flattenRef(ref);
+			const refSeen = ctx.seen.get(ref);
+			const refSchema = refSeen.schema;
+			if (refSchema.$ref && (ctx.target === "draft-07" || ctx.target === "draft-04" || ctx.target === "openapi-3.0")) {
+				schema$1.allOf = schema$1.allOf ?? [];
+				schema$1.allOf.push(refSchema);
+			} else Object.assign(schema$1, refSchema);
+			Object.assign(schema$1, _cached);
+			if (zodSchema._zod.parent === ref) for (const key in schema$1) {
+				if (key === "$ref" || key === "allOf") continue;
+				if (!(key in _cached)) delete schema$1[key];
+			}
+			if (refSchema.$ref && refSeen.def) for (const key in schema$1) {
+				if (key === "$ref" || key === "allOf") continue;
+				if (key in refSeen.def && JSON.stringify(schema$1[key]) === JSON.stringify(refSeen.def[key])) delete schema$1[key];
+			}
+		}
+		const parent = zodSchema._zod.parent;
+		if (parent && parent !== ref) {
+			flattenRef(parent);
+			const parentSeen = ctx.seen.get(parent);
+			if (parentSeen?.schema.$ref) {
+				schema$1.$ref = parentSeen.schema.$ref;
+				if (parentSeen.def) for (const key in schema$1) {
+					if (key === "$ref" || key === "allOf") continue;
+					if (key in parentSeen.def && JSON.stringify(schema$1[key]) === JSON.stringify(parentSeen.def[key])) delete schema$1[key];
+				}
+			}
+		}
+		ctx.override({
+			zodSchema,
+			jsonSchema: schema$1,
+			path: seen$1.path ?? []
+		});
+	};
+	for (const entry of [...ctx.seen.entries()].reverse()) flattenRef(entry[0]);
+	const result = {};
+	if (ctx.target === "draft-2020-12") result.$schema = "https://json-schema.org/draft/2020-12/schema";
+	else if (ctx.target === "draft-07") result.$schema = "http://json-schema.org/draft-07/schema#";
+	else if (ctx.target === "draft-04") result.$schema = "http://json-schema.org/draft-04/schema#";
+	else if (ctx.target === "openapi-3.0") {}
+	if (ctx.external?.uri) {
+		const id = ctx.external.registry.get(schema)?.id;
+		if (!id) throw new Error("Schema is missing an `id` property");
+		result.$id = ctx.external.uri(id);
+	}
+	Object.assign(result, root.def ?? root.schema);
+	const defs = ctx.external?.defs ?? {};
+	for (const entry of ctx.seen.entries()) {
+		const seen$1 = entry[1];
+		if (seen$1.def && seen$1.defId) defs[seen$1.defId] = seen$1.def;
+	}
+	if (ctx.external) {} else if (Object.keys(defs).length > 0) if (ctx.target === "draft-2020-12") result.$defs = defs;
+	else result.definitions = defs;
+	try {
+		const finalized = JSON.parse(JSON.stringify(result));
+		Object.defineProperty(finalized, "~standard", {
+			value: {
+				...schema["~standard"],
+				jsonSchema: {
+					input: createStandardJSONSchemaMethod(schema, "input", ctx.processors),
+					output: createStandardJSONSchemaMethod(schema, "output", ctx.processors)
+				}
+			},
+			enumerable: false,
+			writable: false
+		});
+		return finalized;
+	} catch (_err) {
+		throw new Error("Error converting schema to JSON.");
+	}
+}
+function isTransforming(_schema, _ctx) {
+	const ctx = _ctx ?? { seen: /* @__PURE__ */ new Set() };
+	if (ctx.seen.has(_schema)) return false;
+	ctx.seen.add(_schema);
+	const def = _schema._zod.def;
+	if (def.type === "transform") return true;
+	if (def.type === "array") return isTransforming(def.element, ctx);
+	if (def.type === "set") return isTransforming(def.valueType, ctx);
+	if (def.type === "lazy") return isTransforming(def.getter(), ctx);
+	if (def.type === "promise" || def.type === "optional" || def.type === "nonoptional" || def.type === "nullable" || def.type === "readonly" || def.type === "default" || def.type === "prefault") return isTransforming(def.innerType, ctx);
+	if (def.type === "intersection") return isTransforming(def.left, ctx) || isTransforming(def.right, ctx);
+	if (def.type === "record" || def.type === "map") return isTransforming(def.keyType, ctx) || isTransforming(def.valueType, ctx);
+	if (def.type === "pipe") return isTransforming(def.in, ctx) || isTransforming(def.out, ctx);
+	if (def.type === "object") {
+		for (const key in def.shape) if (isTransforming(def.shape[key], ctx)) return true;
+		return false;
+	}
+	if (def.type === "union") {
+		for (const option of def.options) if (isTransforming(option, ctx)) return true;
+		return false;
+	}
+	if (def.type === "tuple") {
+		for (const item of def.items) if (isTransforming(item, ctx)) return true;
+		if (def.rest && isTransforming(def.rest, ctx)) return true;
+		return false;
+	}
+	return false;
+}
+const createToJSONSchemaMethod = (schema, processors = {}) => (params) => {
+	const ctx = initializeContext({
+		...params,
+		processors
+	});
+	process$1(schema, ctx);
+	extractDefs(ctx, schema);
+	return finalize(ctx, schema);
+};
+const createStandardJSONSchemaMethod = (schema, io, processors = {}) => (params) => {
+	const { libraryOptions, target } = params ?? {};
+	const ctx = initializeContext({
+		...libraryOptions ?? {},
+		target,
+		io,
+		processors
+	});
+	process$1(schema, ctx);
+	extractDefs(ctx, schema);
+	return finalize(ctx, schema);
+};
+var formatMap = {
+	guid: "uuid",
+	url: "uri",
+	datetime: "date-time",
+	json_string: "json-string",
+	regex: ""
+};
+const stringProcessor = (schema, ctx, _json, _params) => {
+	const json = _json;
+	json.type = "string";
+	const { minimum, maximum, format, patterns, contentEncoding } = schema._zod.bag;
+	if (typeof minimum === "number") json.minLength = minimum;
+	if (typeof maximum === "number") json.maxLength = maximum;
+	if (format) {
+		json.format = formatMap[format] ?? format;
+		if (json.format === "") delete json.format;
+		if (format === "time") delete json.format;
+	}
+	if (contentEncoding) json.contentEncoding = contentEncoding;
+	if (patterns && patterns.size > 0) {
+		const regexes = [...patterns];
+		if (regexes.length === 1) json.pattern = regexes[0].source;
+		else if (regexes.length > 1) json.allOf = [...regexes.map((regex) => ({
+			...ctx.target === "draft-07" || ctx.target === "draft-04" || ctx.target === "openapi-3.0" ? { type: "string" } : {},
+			pattern: regex.source
+		}))];
+	}
+};
+const neverProcessor = (_schema, _ctx, json, _params) => {
+	json.not = {};
+};
+const unknownProcessor = (_schema, _ctx, _json, _params) => {};
+const enumProcessor = (schema, _ctx, json, _params) => {
+	const def = schema._zod.def;
+	const values = getEnumValues(def.entries);
+	if (values.every((v) => typeof v === "number")) json.type = "number";
+	if (values.every((v) => typeof v === "string")) json.type = "string";
+	json.enum = values;
+};
+const customProcessor = (_schema, ctx, _json, _params) => {
+	if (ctx.unrepresentable === "throw") throw new Error("Custom types cannot be represented in JSON Schema");
+};
+const transformProcessor = (_schema, ctx, _json, _params) => {
+	if (ctx.unrepresentable === "throw") throw new Error("Transforms cannot be represented in JSON Schema");
+};
+const arrayProcessor = (schema, ctx, _json, params) => {
+	const json = _json;
+	const def = schema._zod.def;
+	const { minimum, maximum } = schema._zod.bag;
+	if (typeof minimum === "number") json.minItems = minimum;
+	if (typeof maximum === "number") json.maxItems = maximum;
+	json.type = "array";
+	json.items = process$1(def.element, ctx, {
+		...params,
+		path: [...params.path, "items"]
+	});
+};
+const objectProcessor = (schema, ctx, _json, params) => {
+	const json = _json;
+	const def = schema._zod.def;
+	json.type = "object";
+	json.properties = {};
+	const shape = def.shape;
+	for (const key in shape) json.properties[key] = process$1(shape[key], ctx, {
+		...params,
+		path: [
+			...params.path,
+			"properties",
+			key
+		]
+	});
+	const allKeys = new Set(Object.keys(shape));
+	const requiredKeys = new Set([...allKeys].filter((key) => {
+		const v = def.shape[key]._zod;
+		if (ctx.io === "input") return v.optin === void 0;
+		else return v.optout === void 0;
+	}));
+	if (requiredKeys.size > 0) json.required = Array.from(requiredKeys);
+	if (def.catchall?._zod.def.type === "never") json.additionalProperties = false;
+	else if (!def.catchall) {
+		if (ctx.io === "output") json.additionalProperties = false;
+	} else if (def.catchall) json.additionalProperties = process$1(def.catchall, ctx, {
+		...params,
+		path: [...params.path, "additionalProperties"]
+	});
+};
+const unionProcessor = (schema, ctx, json, params) => {
+	const def = schema._zod.def;
+	const isExclusive = def.inclusive === false;
+	const options$1 = def.options.map((x$1, i$2) => process$1(x$1, ctx, {
+		...params,
+		path: [
+			...params.path,
+			isExclusive ? "oneOf" : "anyOf",
+			i$2
+		]
+	}));
+	if (isExclusive) json.oneOf = options$1;
+	else json.anyOf = options$1;
+};
+const intersectionProcessor = (schema, ctx, json, params) => {
+	const def = schema._zod.def;
+	const a$1 = process$1(def.left, ctx, {
+		...params,
+		path: [
+			...params.path,
+			"allOf",
+			0
+		]
+	});
+	const b$1 = process$1(def.right, ctx, {
+		...params,
+		path: [
+			...params.path,
+			"allOf",
+			1
+		]
+	});
+	const isSimpleIntersection = (val) => "allOf" in val && Object.keys(val).length === 1;
+	json.allOf = [...isSimpleIntersection(a$1) ? a$1.allOf : [a$1], ...isSimpleIntersection(b$1) ? b$1.allOf : [b$1]];
+};
+const nullableProcessor = (schema, ctx, json, params) => {
+	const def = schema._zod.def;
+	const inner = process$1(def.innerType, ctx, params);
+	const seen$1 = ctx.seen.get(schema);
+	if (ctx.target === "openapi-3.0") {
+		seen$1.ref = def.innerType;
+		json.nullable = true;
+	} else json.anyOf = [inner, { type: "null" }];
+};
+const nonoptionalProcessor = (schema, ctx, _json, params) => {
+	const def = schema._zod.def;
+	process$1(def.innerType, ctx, params);
+	const seen$1 = ctx.seen.get(schema);
+	seen$1.ref = def.innerType;
+};
+const defaultProcessor = (schema, ctx, json, params) => {
+	const def = schema._zod.def;
+	process$1(def.innerType, ctx, params);
+	const seen$1 = ctx.seen.get(schema);
+	seen$1.ref = def.innerType;
+	json.default = JSON.parse(JSON.stringify(def.defaultValue));
+};
+const prefaultProcessor = (schema, ctx, json, params) => {
+	const def = schema._zod.def;
+	process$1(def.innerType, ctx, params);
+	const seen$1 = ctx.seen.get(schema);
+	seen$1.ref = def.innerType;
+	if (ctx.io === "input") json._prefault = JSON.parse(JSON.stringify(def.defaultValue));
+};
+const catchProcessor = (schema, ctx, json, params) => {
+	const def = schema._zod.def;
+	process$1(def.innerType, ctx, params);
+	const seen$1 = ctx.seen.get(schema);
+	seen$1.ref = def.innerType;
+	let catchValue;
+	try {
+		catchValue = def.catchValue(void 0);
+	} catch {
+		throw new Error("Dynamic catch values are not supported in JSON Schema");
+	}
+	json.default = catchValue;
+};
+const pipeProcessor = (schema, ctx, _json, params) => {
+	const def = schema._zod.def;
+	const innerType = ctx.io === "input" ? def.in._zod.def.type === "transform" ? def.out : def.in : def.out;
+	process$1(innerType, ctx, params);
+	const seen$1 = ctx.seen.get(schema);
+	seen$1.ref = innerType;
+};
+const readonlyProcessor = (schema, ctx, json, params) => {
+	const def = schema._zod.def;
+	process$1(def.innerType, ctx, params);
+	const seen$1 = ctx.seen.get(schema);
+	seen$1.ref = def.innerType;
+	json.readOnly = true;
+};
+const optionalProcessor = (schema, ctx, _json, params) => {
+	const def = schema._zod.def;
+	process$1(def.innerType, ctx, params);
+	const seen$1 = ctx.seen.get(schema);
+	seen$1.ref = def.innerType;
+};
+function t(r$2, e) {
+	try {
+		var o$1 = r$2();
+	} catch (r$3) {
+		return e(r$3);
+	}
+	return o$1 && o$1.then ? o$1.then(void 0, e) : o$1;
+}
+function s$1(r$2, e) {
+	for (var n$1 = {}; r$2.length;) {
+		var t$1 = r$2[0], s$2 = t$1.code, i$2 = t$1.message, a$1 = t$1.path.join(".");
+		if (!n$1[a$1]) if ("unionErrors" in t$1) {
+			var u = t$1.unionErrors[0].errors[0];
+			n$1[a$1] = {
+				message: u.message,
+				type: u.code
+			};
+		} else n$1[a$1] = {
+			message: i$2,
+			type: s$2
+		};
+		if ("unionErrors" in t$1 && t$1.unionErrors.forEach(function(e$1) {
+			return e$1.errors.forEach(function(e$2) {
+				return r$2.push(e$2);
+			});
+		}), e) {
+			var c = n$1[a$1].types, f = c && c[t$1.code];
+			n$1[a$1] = appendErrors(a$1, e, n$1, s$2, f ? [].concat(f, t$1.message) : t$1.message);
+		}
+		r$2.shift();
+	}
+	return n$1;
+}
+function i(r$2, e) {
+	for (var n$1 = {}; r$2.length;) {
+		var t$1 = r$2[0], s$2 = t$1.code, i$2 = t$1.message, a$1 = t$1.path.join(".");
+		if (!n$1[a$1]) if ("invalid_union" === t$1.code && t$1.errors.length > 0) {
+			var u = t$1.errors[0][0];
+			n$1[a$1] = {
+				message: u.message,
+				type: u.code
+			};
+		} else n$1[a$1] = {
+			message: i$2,
+			type: s$2
+		};
+		if ("invalid_union" === t$1.code && t$1.errors.forEach(function(e$1) {
+			return e$1.forEach(function(e$2) {
+				return r$2.push(e$2);
+			});
+		}), e) {
+			var c = n$1[a$1].types, f = c && c[t$1.code];
+			n$1[a$1] = appendErrors(a$1, e, n$1, s$2, f ? [].concat(f, t$1.message) : t$1.message);
+		}
+		r$2.shift();
+	}
+	return n$1;
+}
+function a(o$1, a$1, u) {
+	if (void 0 === u && (u = {}), function(r$2) {
+		return "_def" in r$2 && "object" == typeof r$2._def && "typeName" in r$2._def;
+	}(o$1)) return function(n$1, i$2, c) {
+		try {
+			return Promise.resolve(t(function() {
+				return Promise.resolve(o$1["sync" === u.mode ? "parse" : "parseAsync"](n$1, a$1)).then(function(e) {
+					return c.shouldUseNativeValidation && o({}, c), {
+						errors: {},
+						values: u.raw ? Object.assign({}, n$1) : e
+					};
+				});
+			}, function(r$2) {
+				if (function(r$3) {
+					return Array.isArray(null == r$3 ? void 0 : r$3.issues);
+				}(r$2)) return {
+					values: {},
+					errors: s(s$1(r$2.errors, !c.shouldUseNativeValidation && "all" === c.criteriaMode), c)
+				};
+				throw r$2;
+			}));
+		} catch (r$2) {
+			return Promise.reject(r$2);
+		}
+	};
+	if (function(r$2) {
+		return "_zod" in r$2 && "object" == typeof r$2._zod;
+	}(o$1)) return function(s$2, c, f) {
+		try {
+			return Promise.resolve(t(function() {
+				return Promise.resolve(("sync" === u.mode ? parse$2 : parseAsync$1)(o$1, s$2, a$1)).then(function(e) {
+					return f.shouldUseNativeValidation && o({}, f), {
+						errors: {},
+						values: u.raw ? Object.assign({}, s$2) : e
+					};
+				});
+			}, function(r$2) {
+				if (function(r$3) {
+					return r$3 instanceof $ZodError;
+				}(r$2)) return {
+					values: {},
+					errors: s(i(r$2.issues, !f.shouldUseNativeValidation && "all" === f.criteriaMode), f)
+				};
+				throw r$2;
+			}));
+		} catch (r$2) {
+			return Promise.reject(r$2);
+		}
+	};
+	throw new Error("Invalid input: not a Zod schema");
+}
+const ZodISODateTime = /* @__PURE__ */ $constructor("ZodISODateTime", (inst, def) => {
+	$ZodISODateTime.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+function datetime(params) {
+	return /* @__PURE__ */ _isoDateTime(ZodISODateTime, params);
+}
+const ZodISODate = /* @__PURE__ */ $constructor("ZodISODate", (inst, def) => {
+	$ZodISODate.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+function date(params) {
+	return /* @__PURE__ */ _isoDate(ZodISODate, params);
+}
+const ZodISOTime = /* @__PURE__ */ $constructor("ZodISOTime", (inst, def) => {
+	$ZodISOTime.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+function time(params) {
+	return /* @__PURE__ */ _isoTime(ZodISOTime, params);
+}
+const ZodISODuration = /* @__PURE__ */ $constructor("ZodISODuration", (inst, def) => {
+	$ZodISODuration.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+function duration(params) {
+	return /* @__PURE__ */ _isoDuration(ZodISODuration, params);
+}
+var initializer = (inst, issues) => {
+	$ZodError.init(inst, issues);
+	inst.name = "ZodError";
+	Object.defineProperties(inst, {
+		format: { value: (mapper) => formatError(inst, mapper) },
+		flatten: { value: (mapper) => flattenError(inst, mapper) },
+		addIssue: { value: (issue$1) => {
+			inst.issues.push(issue$1);
+			inst.message = JSON.stringify(inst.issues, jsonStringifyReplacer, 2);
+		} },
+		addIssues: { value: (issues$1) => {
+			inst.issues.push(...issues$1);
+			inst.message = JSON.stringify(inst.issues, jsonStringifyReplacer, 2);
+		} },
+		isEmpty: { get() {
+			return inst.issues.length === 0;
+		} }
+	});
+};
+$constructor("ZodError", initializer);
+const ZodRealError = $constructor("ZodError", initializer, { Parent: Error });
+const parse$1 = /* @__PURE__ */ _parse(ZodRealError);
+const parseAsync = /* @__PURE__ */ _parseAsync(ZodRealError);
+const safeParse = /* @__PURE__ */ _safeParse(ZodRealError);
+const safeParseAsync = /* @__PURE__ */ _safeParseAsync(ZodRealError);
+const encode = /* @__PURE__ */ _encode(ZodRealError);
+const decode = /* @__PURE__ */ _decode(ZodRealError);
+const encodeAsync = /* @__PURE__ */ _encodeAsync(ZodRealError);
+const decodeAsync = /* @__PURE__ */ _decodeAsync(ZodRealError);
+const safeEncode = /* @__PURE__ */ _safeEncode(ZodRealError);
+const safeDecode = /* @__PURE__ */ _safeDecode(ZodRealError);
+const safeEncodeAsync = /* @__PURE__ */ _safeEncodeAsync(ZodRealError);
+const safeDecodeAsync = /* @__PURE__ */ _safeDecodeAsync(ZodRealError);
+const ZodType = /* @__PURE__ */ $constructor("ZodType", (inst, def) => {
+	$ZodType.init(inst, def);
+	Object.assign(inst["~standard"], { jsonSchema: {
+		input: createStandardJSONSchemaMethod(inst, "input"),
+		output: createStandardJSONSchemaMethod(inst, "output")
+	} });
+	inst.toJSONSchema = createToJSONSchemaMethod(inst, {});
+	inst.def = def;
+	inst.type = def.type;
+	Object.defineProperty(inst, "_def", { value: def });
+	inst.check = (...checks) => {
+		return inst.clone(mergeDefs(def, { checks: [...def.checks ?? [], ...checks.map((ch) => typeof ch === "function" ? { _zod: {
+			check: ch,
+			def: { check: "custom" },
+			onattach: []
+		} } : ch)] }), { parent: true });
+	};
+	inst.with = inst.check;
+	inst.clone = (def$1, params) => clone(inst, def$1, params);
+	inst.brand = () => inst;
+	inst.register = ((reg, meta$2) => {
+		reg.add(inst, meta$2);
+		return inst;
+	});
+	inst.parse = (data, params) => parse$1(inst, data, params, { callee: inst.parse });
+	inst.safeParse = (data, params) => safeParse(inst, data, params);
+	inst.parseAsync = async (data, params) => parseAsync(inst, data, params, { callee: inst.parseAsync });
+	inst.safeParseAsync = async (data, params) => safeParseAsync(inst, data, params);
+	inst.spa = inst.safeParseAsync;
+	inst.encode = (data, params) => encode(inst, data, params);
+	inst.decode = (data, params) => decode(inst, data, params);
+	inst.encodeAsync = async (data, params) => encodeAsync(inst, data, params);
+	inst.decodeAsync = async (data, params) => decodeAsync(inst, data, params);
+	inst.safeEncode = (data, params) => safeEncode(inst, data, params);
+	inst.safeDecode = (data, params) => safeDecode(inst, data, params);
+	inst.safeEncodeAsync = async (data, params) => safeEncodeAsync(inst, data, params);
+	inst.safeDecodeAsync = async (data, params) => safeDecodeAsync(inst, data, params);
+	inst.refine = (check, params) => inst.check(refine(check, params));
+	inst.superRefine = (refinement) => inst.check(superRefine(refinement));
+	inst.overwrite = (fn) => inst.check(/* @__PURE__ */ _overwrite(fn));
+	inst.optional = () => optional(inst);
+	inst.exactOptional = () => exactOptional(inst);
+	inst.nullable = () => nullable(inst);
+	inst.nullish = () => optional(nullable(inst));
+	inst.nonoptional = (params) => nonoptional(inst, params);
+	inst.array = () => array(inst);
+	inst.or = (arg) => union([inst, arg]);
+	inst.and = (arg) => intersection(inst, arg);
+	inst.transform = (tx) => pipe(inst, transform(tx));
+	inst.default = (def$1) => _default(inst, def$1);
+	inst.prefault = (def$1) => prefault(inst, def$1);
+	inst.catch = (params) => _catch(inst, params);
+	inst.pipe = (target) => pipe(inst, target);
+	inst.readonly = () => readonly(inst);
+	inst.describe = (description) => {
+		const cl = inst.clone();
+		globalRegistry.add(cl, { description });
+		return cl;
+	};
+	Object.defineProperty(inst, "description", {
+		get() {
+			return globalRegistry.get(inst)?.description;
+		},
+		configurable: true
+	});
+	inst.meta = (...args) => {
+		if (args.length === 0) return globalRegistry.get(inst);
+		const cl = inst.clone();
+		globalRegistry.add(cl, args[0]);
+		return cl;
+	};
+	inst.isOptional = () => inst.safeParse(void 0).success;
+	inst.isNullable = () => inst.safeParse(null).success;
+	inst.apply = (fn) => fn(inst);
+	return inst;
+});
+const _ZodString = /* @__PURE__ */ $constructor("_ZodString", (inst, def) => {
+	$ZodString.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => stringProcessor(inst, ctx, json, params);
+	const bag = inst._zod.bag;
+	inst.format = bag.format ?? null;
+	inst.minLength = bag.minimum ?? null;
+	inst.maxLength = bag.maximum ?? null;
+	inst.regex = (...args) => inst.check(/* @__PURE__ */ _regex(...args));
+	inst.includes = (...args) => inst.check(/* @__PURE__ */ _includes(...args));
+	inst.startsWith = (...args) => inst.check(/* @__PURE__ */ _startsWith(...args));
+	inst.endsWith = (...args) => inst.check(/* @__PURE__ */ _endsWith(...args));
+	inst.min = (...args) => inst.check(/* @__PURE__ */ _minLength(...args));
+	inst.max = (...args) => inst.check(/* @__PURE__ */ _maxLength(...args));
+	inst.length = (...args) => inst.check(/* @__PURE__ */ _length(...args));
+	inst.nonempty = (...args) => inst.check(/* @__PURE__ */ _minLength(1, ...args));
+	inst.lowercase = (params) => inst.check(/* @__PURE__ */ _lowercase(params));
+	inst.uppercase = (params) => inst.check(/* @__PURE__ */ _uppercase(params));
+	inst.trim = () => inst.check(/* @__PURE__ */ _trim());
+	inst.normalize = (...args) => inst.check(/* @__PURE__ */ _normalize(...args));
+	inst.toLowerCase = () => inst.check(/* @__PURE__ */ _toLowerCase());
+	inst.toUpperCase = () => inst.check(/* @__PURE__ */ _toUpperCase());
+	inst.slugify = () => inst.check(/* @__PURE__ */ _slugify());
+});
+const ZodString = /* @__PURE__ */ $constructor("ZodString", (inst, def) => {
+	$ZodString.init(inst, def);
+	_ZodString.init(inst, def);
+	inst.email = (params) => inst.check(/* @__PURE__ */ _email(ZodEmail, params));
+	inst.url = (params) => inst.check(/* @__PURE__ */ _url(ZodURL, params));
+	inst.jwt = (params) => inst.check(/* @__PURE__ */ _jwt(ZodJWT, params));
+	inst.emoji = (params) => inst.check(/* @__PURE__ */ _emoji(ZodEmoji, params));
+	inst.guid = (params) => inst.check(/* @__PURE__ */ _guid(ZodGUID, params));
+	inst.uuid = (params) => inst.check(/* @__PURE__ */ _uuid(ZodUUID, params));
+	inst.uuidv4 = (params) => inst.check(/* @__PURE__ */ _uuidv4(ZodUUID, params));
+	inst.uuidv6 = (params) => inst.check(/* @__PURE__ */ _uuidv6(ZodUUID, params));
+	inst.uuidv7 = (params) => inst.check(/* @__PURE__ */ _uuidv7(ZodUUID, params));
+	inst.nanoid = (params) => inst.check(/* @__PURE__ */ _nanoid(ZodNanoID, params));
+	inst.guid = (params) => inst.check(/* @__PURE__ */ _guid(ZodGUID, params));
+	inst.cuid = (params) => inst.check(/* @__PURE__ */ _cuid(ZodCUID, params));
+	inst.cuid2 = (params) => inst.check(/* @__PURE__ */ _cuid2(ZodCUID2, params));
+	inst.ulid = (params) => inst.check(/* @__PURE__ */ _ulid(ZodULID, params));
+	inst.base64 = (params) => inst.check(/* @__PURE__ */ _base64(ZodBase64, params));
+	inst.base64url = (params) => inst.check(/* @__PURE__ */ _base64url(ZodBase64URL, params));
+	inst.xid = (params) => inst.check(/* @__PURE__ */ _xid(ZodXID, params));
+	inst.ksuid = (params) => inst.check(/* @__PURE__ */ _ksuid(ZodKSUID, params));
+	inst.ipv4 = (params) => inst.check(/* @__PURE__ */ _ipv4(ZodIPv4, params));
+	inst.ipv6 = (params) => inst.check(/* @__PURE__ */ _ipv6(ZodIPv6, params));
+	inst.cidrv4 = (params) => inst.check(/* @__PURE__ */ _cidrv4(ZodCIDRv4, params));
+	inst.cidrv6 = (params) => inst.check(/* @__PURE__ */ _cidrv6(ZodCIDRv6, params));
+	inst.e164 = (params) => inst.check(/* @__PURE__ */ _e164(ZodE164, params));
+	inst.datetime = (params) => inst.check(datetime(params));
+	inst.date = (params) => inst.check(date(params));
+	inst.time = (params) => inst.check(time(params));
+	inst.duration = (params) => inst.check(duration(params));
+});
+function string(params) {
+	return /* @__PURE__ */ _string(ZodString, params);
+}
+const ZodStringFormat = /* @__PURE__ */ $constructor("ZodStringFormat", (inst, def) => {
+	$ZodStringFormat.init(inst, def);
+	_ZodString.init(inst, def);
+});
+const ZodEmail = /* @__PURE__ */ $constructor("ZodEmail", (inst, def) => {
+	$ZodEmail.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodGUID = /* @__PURE__ */ $constructor("ZodGUID", (inst, def) => {
+	$ZodGUID.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodUUID = /* @__PURE__ */ $constructor("ZodUUID", (inst, def) => {
+	$ZodUUID.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodURL = /* @__PURE__ */ $constructor("ZodURL", (inst, def) => {
+	$ZodURL.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodEmoji = /* @__PURE__ */ $constructor("ZodEmoji", (inst, def) => {
+	$ZodEmoji.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodNanoID = /* @__PURE__ */ $constructor("ZodNanoID", (inst, def) => {
+	$ZodNanoID.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodCUID = /* @__PURE__ */ $constructor("ZodCUID", (inst, def) => {
+	$ZodCUID.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodCUID2 = /* @__PURE__ */ $constructor("ZodCUID2", (inst, def) => {
+	$ZodCUID2.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodULID = /* @__PURE__ */ $constructor("ZodULID", (inst, def) => {
+	$ZodULID.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodXID = /* @__PURE__ */ $constructor("ZodXID", (inst, def) => {
+	$ZodXID.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodKSUID = /* @__PURE__ */ $constructor("ZodKSUID", (inst, def) => {
+	$ZodKSUID.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodIPv4 = /* @__PURE__ */ $constructor("ZodIPv4", (inst, def) => {
+	$ZodIPv4.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodIPv6 = /* @__PURE__ */ $constructor("ZodIPv6", (inst, def) => {
+	$ZodIPv6.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodCIDRv4 = /* @__PURE__ */ $constructor("ZodCIDRv4", (inst, def) => {
+	$ZodCIDRv4.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodCIDRv6 = /* @__PURE__ */ $constructor("ZodCIDRv6", (inst, def) => {
+	$ZodCIDRv6.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodBase64 = /* @__PURE__ */ $constructor("ZodBase64", (inst, def) => {
+	$ZodBase64.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodBase64URL = /* @__PURE__ */ $constructor("ZodBase64URL", (inst, def) => {
+	$ZodBase64URL.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodE164 = /* @__PURE__ */ $constructor("ZodE164", (inst, def) => {
+	$ZodE164.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodJWT = /* @__PURE__ */ $constructor("ZodJWT", (inst, def) => {
+	$ZodJWT.init(inst, def);
+	ZodStringFormat.init(inst, def);
+});
+const ZodUnknown = /* @__PURE__ */ $constructor("ZodUnknown", (inst, def) => {
+	$ZodUnknown.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => unknownProcessor(inst, ctx, json, params);
+});
+function unknown() {
+	return /* @__PURE__ */ _unknown(ZodUnknown);
+}
+const ZodNever = /* @__PURE__ */ $constructor("ZodNever", (inst, def) => {
+	$ZodNever.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => neverProcessor(inst, ctx, json, params);
+});
+function never(params) {
+	return /* @__PURE__ */ _never(ZodNever, params);
+}
+const ZodArray = /* @__PURE__ */ $constructor("ZodArray", (inst, def) => {
+	$ZodArray.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => arrayProcessor(inst, ctx, json, params);
+	inst.element = def.element;
+	inst.min = (minLength, params) => inst.check(/* @__PURE__ */ _minLength(minLength, params));
+	inst.nonempty = (params) => inst.check(/* @__PURE__ */ _minLength(1, params));
+	inst.max = (maxLength, params) => inst.check(/* @__PURE__ */ _maxLength(maxLength, params));
+	inst.length = (len, params) => inst.check(/* @__PURE__ */ _length(len, params));
+	inst.unwrap = () => inst.element;
+});
+function array(element, params) {
+	return /* @__PURE__ */ _array(ZodArray, element, params);
+}
+const ZodObject = /* @__PURE__ */ $constructor("ZodObject", (inst, def) => {
+	$ZodObjectJIT.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => objectProcessor(inst, ctx, json, params);
+	defineLazy(inst, "shape", () => {
+		return def.shape;
+	});
+	inst.keyof = () => _enum(Object.keys(inst._zod.def.shape));
+	inst.catchall = (catchall) => inst.clone({
+		...inst._zod.def,
+		catchall
+	});
+	inst.passthrough = () => inst.clone({
+		...inst._zod.def,
+		catchall: unknown()
+	});
+	inst.loose = () => inst.clone({
+		...inst._zod.def,
+		catchall: unknown()
+	});
+	inst.strict = () => inst.clone({
+		...inst._zod.def,
+		catchall: never()
+	});
+	inst.strip = () => inst.clone({
+		...inst._zod.def,
+		catchall: void 0
+	});
+	inst.extend = (incoming) => {
+		return extend(inst, incoming);
+	};
+	inst.safeExtend = (incoming) => {
+		return safeExtend(inst, incoming);
+	};
+	inst.merge = (other) => merge(inst, other);
+	inst.pick = (mask) => pick(inst, mask);
+	inst.omit = (mask) => omit(inst, mask);
+	inst.partial = (...args) => partial(ZodOptional, inst, args[0]);
+	inst.required = (...args) => required(ZodNonOptional, inst, args[0]);
+});
+function object(shape, params) {
+	return new ZodObject({
+		type: "object",
+		shape: shape ?? {},
+		...normalizeParams(params)
+	});
+}
+const ZodUnion = /* @__PURE__ */ $constructor("ZodUnion", (inst, def) => {
+	$ZodUnion.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => unionProcessor(inst, ctx, json, params);
+	inst.options = def.options;
+});
+function union(options$1, params) {
+	return new ZodUnion({
+		type: "union",
+		options: options$1,
+		...normalizeParams(params)
+	});
+}
+const ZodIntersection = /* @__PURE__ */ $constructor("ZodIntersection", (inst, def) => {
+	$ZodIntersection.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => intersectionProcessor(inst, ctx, json, params);
+});
+function intersection(left, right) {
+	return new ZodIntersection({
+		type: "intersection",
+		left,
+		right
+	});
+}
+const ZodEnum = /* @__PURE__ */ $constructor("ZodEnum", (inst, def) => {
+	$ZodEnum.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => enumProcessor(inst, ctx, json, params);
+	inst.enum = def.entries;
+	inst.options = Object.values(def.entries);
+	const keys = new Set(Object.keys(def.entries));
+	inst.extract = (values, params) => {
+		const newEntries = {};
+		for (const value of values) if (keys.has(value)) newEntries[value] = def.entries[value];
+		else throw new Error(`Key ${value} not found in enum`);
+		return new ZodEnum({
+			...def,
+			checks: [],
+			...normalizeParams(params),
+			entries: newEntries
+		});
+	};
+	inst.exclude = (values, params) => {
+		const newEntries = { ...def.entries };
+		for (const value of values) if (keys.has(value)) delete newEntries[value];
+		else throw new Error(`Key ${value} not found in enum`);
+		return new ZodEnum({
+			...def,
+			checks: [],
+			...normalizeParams(params),
+			entries: newEntries
+		});
+	};
+});
+function _enum(values, params) {
+	return new ZodEnum({
+		type: "enum",
+		entries: Array.isArray(values) ? Object.fromEntries(values.map((v) => [v, v])) : values,
+		...normalizeParams(params)
+	});
+}
+const ZodTransform = /* @__PURE__ */ $constructor("ZodTransform", (inst, def) => {
+	$ZodTransform.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => transformProcessor(inst, ctx, json, params);
+	inst._zod.parse = (payload, _ctx) => {
+		if (_ctx.direction === "backward") throw new $ZodEncodeError(inst.constructor.name);
+		payload.addIssue = (issue$1) => {
+			if (typeof issue$1 === "string") payload.issues.push(issue(issue$1, payload.value, def));
+			else {
+				const _issue = issue$1;
+				if (_issue.fatal) _issue.continue = false;
+				_issue.code ?? (_issue.code = "custom");
+				_issue.input ?? (_issue.input = payload.value);
+				_issue.inst ?? (_issue.inst = inst);
+				payload.issues.push(issue(_issue));
+			}
+		};
+		const output = def.transform(payload.value, payload);
+		if (output instanceof Promise) return output.then((output$1) => {
+			payload.value = output$1;
+			return payload;
+		});
+		payload.value = output;
+		return payload;
+	};
+});
+function transform(fn) {
+	return new ZodTransform({
+		type: "transform",
+		transform: fn
+	});
+}
+const ZodOptional = /* @__PURE__ */ $constructor("ZodOptional", (inst, def) => {
+	$ZodOptional.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => optionalProcessor(inst, ctx, json, params);
+	inst.unwrap = () => inst._zod.def.innerType;
+});
+function optional(innerType) {
+	return new ZodOptional({
+		type: "optional",
+		innerType
+	});
+}
+const ZodExactOptional = /* @__PURE__ */ $constructor("ZodExactOptional", (inst, def) => {
+	$ZodExactOptional.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => optionalProcessor(inst, ctx, json, params);
+	inst.unwrap = () => inst._zod.def.innerType;
+});
+function exactOptional(innerType) {
+	return new ZodExactOptional({
+		type: "optional",
+		innerType
+	});
+}
+const ZodNullable = /* @__PURE__ */ $constructor("ZodNullable", (inst, def) => {
+	$ZodNullable.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => nullableProcessor(inst, ctx, json, params);
+	inst.unwrap = () => inst._zod.def.innerType;
+});
+function nullable(innerType) {
+	return new ZodNullable({
+		type: "nullable",
+		innerType
+	});
+}
+const ZodDefault = /* @__PURE__ */ $constructor("ZodDefault", (inst, def) => {
+	$ZodDefault.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => defaultProcessor(inst, ctx, json, params);
+	inst.unwrap = () => inst._zod.def.innerType;
+	inst.removeDefault = inst.unwrap;
+});
+function _default(innerType, defaultValue) {
+	return new ZodDefault({
+		type: "default",
+		innerType,
+		get defaultValue() {
+			return typeof defaultValue === "function" ? defaultValue() : shallowClone(defaultValue);
+		}
+	});
+}
+const ZodPrefault = /* @__PURE__ */ $constructor("ZodPrefault", (inst, def) => {
+	$ZodPrefault.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => prefaultProcessor(inst, ctx, json, params);
+	inst.unwrap = () => inst._zod.def.innerType;
+});
+function prefault(innerType, defaultValue) {
+	return new ZodPrefault({
+		type: "prefault",
+		innerType,
+		get defaultValue() {
+			return typeof defaultValue === "function" ? defaultValue() : shallowClone(defaultValue);
+		}
+	});
+}
+const ZodNonOptional = /* @__PURE__ */ $constructor("ZodNonOptional", (inst, def) => {
+	$ZodNonOptional.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => nonoptionalProcessor(inst, ctx, json, params);
+	inst.unwrap = () => inst._zod.def.innerType;
+});
+function nonoptional(innerType, params) {
+	return new ZodNonOptional({
+		type: "nonoptional",
+		innerType,
+		...normalizeParams(params)
+	});
+}
+const ZodCatch = /* @__PURE__ */ $constructor("ZodCatch", (inst, def) => {
+	$ZodCatch.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => catchProcessor(inst, ctx, json, params);
+	inst.unwrap = () => inst._zod.def.innerType;
+	inst.removeCatch = inst.unwrap;
+});
+function _catch(innerType, catchValue) {
+	return new ZodCatch({
+		type: "catch",
+		innerType,
+		catchValue: typeof catchValue === "function" ? catchValue : () => catchValue
+	});
+}
+const ZodPipe = /* @__PURE__ */ $constructor("ZodPipe", (inst, def) => {
+	$ZodPipe.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => pipeProcessor(inst, ctx, json, params);
+	inst.in = def.in;
+	inst.out = def.out;
+});
+function pipe(in_, out) {
+	return new ZodPipe({
+		type: "pipe",
+		in: in_,
+		out
+	});
+}
+const ZodReadonly = /* @__PURE__ */ $constructor("ZodReadonly", (inst, def) => {
+	$ZodReadonly.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => readonlyProcessor(inst, ctx, json, params);
+	inst.unwrap = () => inst._zod.def.innerType;
+});
+function readonly(innerType) {
+	return new ZodReadonly({
+		type: "readonly",
+		innerType
+	});
+}
+const ZodCustom = /* @__PURE__ */ $constructor("ZodCustom", (inst, def) => {
+	$ZodCustom.init(inst, def);
+	ZodType.init(inst, def);
+	inst._zod.processJSONSchema = (ctx, json, params) => customProcessor(inst, ctx, json, params);
+});
+function refine(fn, _params = {}) {
+	return /* @__PURE__ */ _refine(ZodCustom, fn, _params);
+}
+function superRefine(fn) {
+	return /* @__PURE__ */ _superRefine(fn);
+}
+var AUTOFOCUS_ON_MOUNT = "focusScope.autoFocusOnMount";
+var AUTOFOCUS_ON_UNMOUNT = "focusScope.autoFocusOnUnmount";
+var EVENT_OPTIONS = {
+	bubbles: false,
+	cancelable: true
+};
+var FOCUS_SCOPE_NAME = "FocusScope";
+var FocusScope = import_react.forwardRef((props, forwardedRef) => {
+	const { loop = false, trapped = false, onMountAutoFocus: onMountAutoFocusProp, onUnmountAutoFocus: onUnmountAutoFocusProp, ...scopeProps } = props;
+	const [container, setContainer] = import_react.useState(null);
+	const onMountAutoFocus = useCallbackRef$1(onMountAutoFocusProp);
+	const onUnmountAutoFocus = useCallbackRef$1(onUnmountAutoFocusProp);
+	const lastFocusedElementRef = import_react.useRef(null);
+	const composedRefs = useComposedRefs(forwardedRef, (node) => setContainer(node));
+	const focusScope = import_react.useRef({
+		paused: false,
+		pause() {
+			this.paused = true;
+		},
+		resume() {
+			this.paused = false;
+		}
+	}).current;
+	import_react.useEffect(() => {
+		if (trapped) {
+			let handleFocusIn2 = function(event) {
+				if (focusScope.paused || !container) return;
+				const target = event.target;
+				if (container.contains(target)) lastFocusedElementRef.current = target;
+				else focus(lastFocusedElementRef.current, { select: true });
+			}, handleFocusOut2 = function(event) {
+				if (focusScope.paused || !container) return;
+				const relatedTarget = event.relatedTarget;
+				if (relatedTarget === null) return;
+				if (!container.contains(relatedTarget)) focus(lastFocusedElementRef.current, { select: true });
+			}, handleMutations2 = function(mutations) {
+				if (document.activeElement !== document.body) return;
+				for (const mutation of mutations) if (mutation.removedNodes.length > 0) focus(container);
+			};
+			document.addEventListener("focusin", handleFocusIn2);
+			document.addEventListener("focusout", handleFocusOut2);
+			const mutationObserver = new MutationObserver(handleMutations2);
+			if (container) mutationObserver.observe(container, {
+				childList: true,
+				subtree: true
+			});
+			return () => {
+				document.removeEventListener("focusin", handleFocusIn2);
+				document.removeEventListener("focusout", handleFocusOut2);
+				mutationObserver.disconnect();
+			};
+		}
+	}, [
+		trapped,
+		container,
+		focusScope.paused
+	]);
+	import_react.useEffect(() => {
+		if (container) {
+			focusScopesStack.add(focusScope);
+			const previouslyFocusedElement = document.activeElement;
+			if (!container.contains(previouslyFocusedElement)) {
+				const mountEvent = new CustomEvent(AUTOFOCUS_ON_MOUNT, EVENT_OPTIONS);
+				container.addEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus);
+				container.dispatchEvent(mountEvent);
+				if (!mountEvent.defaultPrevented) {
+					focusFirst(removeLinks(getTabbableCandidates(container)), { select: true });
+					if (document.activeElement === previouslyFocusedElement) focus(container);
+				}
+			}
+			return () => {
+				container.removeEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus);
+				setTimeout(() => {
+					const unmountEvent = new CustomEvent(AUTOFOCUS_ON_UNMOUNT, EVENT_OPTIONS);
+					container.addEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus);
+					container.dispatchEvent(unmountEvent);
+					if (!unmountEvent.defaultPrevented) focus(previouslyFocusedElement ?? document.body, { select: true });
+					container.removeEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus);
+					focusScopesStack.remove(focusScope);
+				}, 0);
+			};
+		}
+	}, [
+		container,
+		onMountAutoFocus,
+		onUnmountAutoFocus,
+		focusScope
+	]);
+	const handleKeyDown = import_react.useCallback((event) => {
+		if (!loop && !trapped) return;
+		if (focusScope.paused) return;
+		const isTabKey = event.key === "Tab" && !event.altKey && !event.ctrlKey && !event.metaKey;
+		const focusedElement = document.activeElement;
+		if (isTabKey && focusedElement) {
+			const container2 = event.currentTarget;
+			const [first, last] = getTabbableEdges(container2);
+			if (!(first && last)) {
+				if (focusedElement === container2) event.preventDefault();
+			} else if (!event.shiftKey && focusedElement === last) {
+				event.preventDefault();
+				if (loop) focus(first, { select: true });
+			} else if (event.shiftKey && focusedElement === first) {
+				event.preventDefault();
+				if (loop) focus(last, { select: true });
+			}
+		}
+	}, [
+		loop,
+		trapped,
+		focusScope.paused
+	]);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
+		tabIndex: -1,
+		...scopeProps,
+		ref: composedRefs,
+		onKeyDown: handleKeyDown
+	});
+});
+FocusScope.displayName = FOCUS_SCOPE_NAME;
+function focusFirst(candidates, { select = false } = {}) {
+	const previouslyFocusedElement = document.activeElement;
+	for (const candidate of candidates) {
+		focus(candidate, { select });
+		if (document.activeElement !== previouslyFocusedElement) return;
+	}
+}
+function getTabbableEdges(container) {
+	const candidates = getTabbableCandidates(container);
+	return [findVisible(candidates, container), findVisible(candidates.reverse(), container)];
+}
+function getTabbableCandidates(container) {
+	const nodes = [];
+	const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, { acceptNode: (node) => {
+		const isHiddenInput = node.tagName === "INPUT" && node.type === "hidden";
+		if (node.disabled || node.hidden || isHiddenInput) return NodeFilter.FILTER_SKIP;
+		return node.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+	} });
+	while (walker.nextNode()) nodes.push(walker.currentNode);
+	return nodes;
+}
+function findVisible(elements, container) {
+	for (const element of elements) if (!isHidden(element, { upTo: container })) return element;
+}
+function isHidden(node, { upTo }) {
+	if (getComputedStyle(node).visibility === "hidden") return true;
+	while (node) {
+		if (upTo !== void 0 && node === upTo) return false;
+		if (getComputedStyle(node).display === "none") return true;
+		node = node.parentElement;
+	}
+	return false;
+}
+function isSelectableInput(element) {
+	return element instanceof HTMLInputElement && "select" in element;
+}
+function focus(element, { select = false } = {}) {
+	if (element && element.focus) {
+		const previouslyFocusedElement = document.activeElement;
+		element.focus({ preventScroll: true });
+		if (element !== previouslyFocusedElement && isSelectableInput(element) && select) element.select();
+	}
+}
+var focusScopesStack = createFocusScopesStack();
+function createFocusScopesStack() {
+	let stack = [];
+	return {
+		add(focusScope) {
+			const activeFocusScope = stack[0];
+			if (focusScope !== activeFocusScope) activeFocusScope?.pause();
+			stack = arrayRemove(stack, focusScope);
+			stack.unshift(focusScope);
+		},
+		remove(focusScope) {
+			stack = arrayRemove(stack, focusScope);
+			stack[0]?.resume();
+		}
+	};
+}
+function arrayRemove(array$1, item) {
+	const updatedArray = [...array$1];
+	const index$1 = updatedArray.indexOf(item);
+	if (index$1 !== -1) updatedArray.splice(index$1, 1);
+	return updatedArray;
+}
+function removeLinks(items) {
+	return items.filter((item) => item.tagName !== "A");
+}
+var count = 0;
+function useFocusGuards() {
+	import_react.useEffect(() => {
+		const edgeGuards = document.querySelectorAll("[data-radix-focus-guard]");
+		document.body.insertAdjacentElement("afterbegin", edgeGuards[0] ?? createFocusGuard());
+		document.body.insertAdjacentElement("beforeend", edgeGuards[1] ?? createFocusGuard());
+		count++;
+		return () => {
+			if (count === 1) document.querySelectorAll("[data-radix-focus-guard]").forEach((node) => node.remove());
+			count--;
+		};
+	}, []);
+}
+function createFocusGuard() {
+	const element = document.createElement("span");
+	element.setAttribute("data-radix-focus-guard", "");
+	element.tabIndex = 0;
+	element.style.outline = "none";
+	element.style.opacity = "0";
+	element.style.position = "fixed";
+	element.style.pointerEvents = "none";
+	return element;
+}
+var __assign = function() {
+	__assign = Object.assign || function __assign$1(t$1) {
+		for (var s$2, i$2 = 1, n$1 = arguments.length; i$2 < n$1; i$2++) {
+			s$2 = arguments[i$2];
+			for (var p in s$2) if (Object.prototype.hasOwnProperty.call(s$2, p)) t$1[p] = s$2[p];
+		}
+		return t$1;
+	};
+	return __assign.apply(this, arguments);
+};
+function __rest(s$2, e) {
+	var t$1 = {};
+	for (var p in s$2) if (Object.prototype.hasOwnProperty.call(s$2, p) && e.indexOf(p) < 0) t$1[p] = s$2[p];
+	if (s$2 != null && typeof Object.getOwnPropertySymbols === "function") {
+		for (var i$2 = 0, p = Object.getOwnPropertySymbols(s$2); i$2 < p.length; i$2++) if (e.indexOf(p[i$2]) < 0 && Object.prototype.propertyIsEnumerable.call(s$2, p[i$2])) t$1[p[i$2]] = s$2[p[i$2]];
+	}
+	return t$1;
+}
+function __spreadArray(to, from, pack) {
+	if (pack || arguments.length === 2) {
+		for (var i$2 = 0, l = from.length, ar; i$2 < l; i$2++) if (ar || !(i$2 in from)) {
+			if (!ar) ar = Array.prototype.slice.call(from, 0, i$2);
+			ar[i$2] = from[i$2];
+		}
+	}
+	return to.concat(ar || Array.prototype.slice.call(from));
+}
+var zeroRightClassName = "right-scroll-bar-position";
+var fullWidthClassName = "width-before-scroll-bar";
+var noScrollbarsClassName = "with-scroll-bars-hidden";
+var removedBarSizeVariable = "--removed-body-scroll-bar-size";
+function assignRef(ref, value) {
+	if (typeof ref === "function") ref(value);
+	else if (ref) ref.current = value;
+	return ref;
+}
+function useCallbackRef(initialValue, callback) {
+	var ref = (0, import_react.useState)(function() {
+		return {
+			value: initialValue,
+			callback,
+			facade: {
+				get current() {
+					return ref.value;
+				},
+				set current(value) {
+					var last = ref.value;
+					if (last !== value) {
+						ref.value = value;
+						ref.callback(value, last);
+					}
+				}
+			}
+		};
+	})[0];
+	ref.callback = callback;
+	return ref.facade;
+}
+var useIsomorphicLayoutEffect = typeof window !== "undefined" ? import_react.useLayoutEffect : import_react.useEffect;
+var currentValues = /* @__PURE__ */ new WeakMap();
+function useMergeRefs(refs, defaultValue) {
+	var callbackRef = useCallbackRef(defaultValue || null, function(newValue) {
+		return refs.forEach(function(ref) {
+			return assignRef(ref, newValue);
+		});
+	});
+	useIsomorphicLayoutEffect(function() {
+		var oldValue = currentValues.get(callbackRef);
+		if (oldValue) {
+			var prevRefs_1 = new Set(oldValue);
+			var nextRefs_1 = new Set(refs);
+			var current_1 = callbackRef.current;
+			prevRefs_1.forEach(function(ref) {
+				if (!nextRefs_1.has(ref)) assignRef(ref, null);
+			});
+			nextRefs_1.forEach(function(ref) {
+				if (!prevRefs_1.has(ref)) assignRef(ref, current_1);
+			});
+		}
+		currentValues.set(callbackRef, refs);
+	}, [refs]);
+	return callbackRef;
+}
+function ItoI(a$1) {
+	return a$1;
+}
+function innerCreateMedium(defaults, middleware) {
+	if (middleware === void 0) middleware = ItoI;
+	var buffer = [];
+	var assigned = false;
+	return {
+		read: function() {
+			if (assigned) throw new Error("Sidecar: could not `read` from an `assigned` medium. `read` could be used only with `useMedium`.");
+			if (buffer.length) return buffer[buffer.length - 1];
+			return defaults;
+		},
+		useMedium: function(data) {
+			var item = middleware(data, assigned);
+			buffer.push(item);
+			return function() {
+				buffer = buffer.filter(function(x$1) {
+					return x$1 !== item;
+				});
+			};
+		},
+		assignSyncMedium: function(cb) {
+			assigned = true;
+			while (buffer.length) {
+				var cbs = buffer;
+				buffer = [];
+				cbs.forEach(cb);
+			}
+			buffer = {
+				push: function(x$1) {
+					return cb(x$1);
+				},
+				filter: function() {
+					return buffer;
+				}
+			};
+		},
+		assignMedium: function(cb) {
+			assigned = true;
+			var pendingQueue = [];
+			if (buffer.length) {
+				var cbs = buffer;
+				buffer = [];
+				cbs.forEach(cb);
+				pendingQueue = buffer;
+			}
+			var executeQueue = function() {
+				var cbs$1 = pendingQueue;
+				pendingQueue = [];
+				cbs$1.forEach(cb);
+			};
+			var cycle = function() {
+				return Promise.resolve().then(executeQueue);
+			};
+			cycle();
+			buffer = {
+				push: function(x$1) {
+					pendingQueue.push(x$1);
+					cycle();
+				},
+				filter: function(filter) {
+					pendingQueue = pendingQueue.filter(filter);
+					return buffer;
+				}
+			};
+		}
+	};
+}
+function createSidecarMedium(options$1) {
+	if (options$1 === void 0) options$1 = {};
+	var medium = innerCreateMedium(null);
+	medium.options = __assign({
+		async: true,
+		ssr: false
+	}, options$1);
+	return medium;
+}
+var SideCar = function(_a$1) {
+	var sideCar = _a$1.sideCar, rest = __rest(_a$1, ["sideCar"]);
+	if (!sideCar) throw new Error("Sidecar: please provide `sideCar` property to import the right car");
+	var Target = sideCar.read();
+	if (!Target) throw new Error("Sidecar medium not found");
+	return import_react.createElement(Target, __assign({}, rest));
+};
+SideCar.isSideCarExport = true;
+function exportSidecar(medium, exported) {
+	medium.useMedium(exported);
+	return SideCar;
+}
+var effectCar = createSidecarMedium();
+var nothing = function() {};
+var RemoveScroll = import_react.forwardRef(function(props, parentRef) {
+	var ref = import_react.useRef(null);
+	var _a$1 = import_react.useState({
+		onScrollCapture: nothing,
+		onWheelCapture: nothing,
+		onTouchMoveCapture: nothing
+	}), callbacks = _a$1[0], setCallbacks = _a$1[1];
+	var forwardProps = props.forwardProps, children = props.children, className = props.className, removeScrollBar = props.removeScrollBar, enabled = props.enabled, shards = props.shards, sideCar = props.sideCar, noRelative = props.noRelative, noIsolation = props.noIsolation, inert = props.inert, allowPinchZoom = props.allowPinchZoom, _b = props.as, Container = _b === void 0 ? "div" : _b, gapMode = props.gapMode, rest = __rest(props, [
+		"forwardProps",
+		"children",
+		"className",
+		"removeScrollBar",
+		"enabled",
+		"shards",
+		"sideCar",
+		"noRelative",
+		"noIsolation",
+		"inert",
+		"allowPinchZoom",
+		"as",
+		"gapMode"
+	]);
+	var SideCar$1 = sideCar;
+	var containerRef = useMergeRefs([ref, parentRef]);
+	var containerProps = __assign(__assign({}, rest), callbacks);
+	return import_react.createElement(import_react.Fragment, null, enabled && import_react.createElement(SideCar$1, {
+		sideCar: effectCar,
+		removeScrollBar,
+		shards,
+		noRelative,
+		noIsolation,
+		inert,
+		setCallbacks,
+		allowPinchZoom: !!allowPinchZoom,
+		lockRef: ref,
+		gapMode
+	}), forwardProps ? import_react.cloneElement(import_react.Children.only(children), __assign(__assign({}, containerProps), { ref: containerRef })) : import_react.createElement(Container, __assign({}, containerProps, {
+		className,
+		ref: containerRef
+	}), children));
+});
+RemoveScroll.defaultProps = {
+	enabled: true,
+	removeScrollBar: true,
+	inert: false
+};
+RemoveScroll.classNames = {
+	fullWidth: fullWidthClassName,
+	zeroRight: zeroRightClassName
+};
+var currentNonce;
+var getNonce = function() {
+	if (currentNonce) return currentNonce;
+	if (typeof __webpack_nonce__ !== "undefined") return __webpack_nonce__;
+};
+function makeStyleTag() {
+	if (!document) return null;
+	var tag = document.createElement("style");
+	tag.type = "text/css";
+	var nonce = getNonce();
+	if (nonce) tag.setAttribute("nonce", nonce);
+	return tag;
+}
+function injectStyles(tag, css) {
+	if (tag.styleSheet) tag.styleSheet.cssText = css;
+	else tag.appendChild(document.createTextNode(css));
+}
+function insertStyleTag(tag) {
+	(document.head || document.getElementsByTagName("head")[0]).appendChild(tag);
+}
+var stylesheetSingleton = function() {
+	var counter = 0;
+	var stylesheet = null;
+	return {
+		add: function(style) {
+			if (counter == 0) {
+				if (stylesheet = makeStyleTag()) {
+					injectStyles(stylesheet, style);
+					insertStyleTag(stylesheet);
+				}
+			}
+			counter++;
+		},
+		remove: function() {
+			counter--;
+			if (!counter && stylesheet) {
+				stylesheet.parentNode && stylesheet.parentNode.removeChild(stylesheet);
+				stylesheet = null;
+			}
+		}
+	};
+};
+var styleHookSingleton = function() {
+	var sheet = stylesheetSingleton();
+	return function(styles, isDynamic) {
+		import_react.useEffect(function() {
+			sheet.add(styles);
+			return function() {
+				sheet.remove();
+			};
+		}, [styles && isDynamic]);
+	};
+};
+var styleSingleton = function() {
+	var useStyle = styleHookSingleton();
+	var Sheet = function(_a$1) {
+		var styles = _a$1.styles, dynamic = _a$1.dynamic;
+		useStyle(styles, dynamic);
+		return null;
+	};
+	return Sheet;
+};
+var zeroGap = {
+	left: 0,
+	top: 0,
+	right: 0,
+	gap: 0
+};
+var parse = function(x$1) {
+	return parseInt(x$1 || "", 10) || 0;
+};
+var getOffset = function(gapMode) {
+	var cs = window.getComputedStyle(document.body);
+	var left = cs[gapMode === "padding" ? "paddingLeft" : "marginLeft"];
+	var top = cs[gapMode === "padding" ? "paddingTop" : "marginTop"];
+	var right = cs[gapMode === "padding" ? "paddingRight" : "marginRight"];
+	return [
+		parse(left),
+		parse(top),
+		parse(right)
+	];
+};
+var getGapWidth = function(gapMode) {
+	if (gapMode === void 0) gapMode = "margin";
+	if (typeof window === "undefined") return zeroGap;
+	var offsets = getOffset(gapMode);
+	var documentWidth = document.documentElement.clientWidth;
+	var windowWidth = window.innerWidth;
+	return {
+		left: offsets[0],
+		top: offsets[1],
+		right: offsets[2],
+		gap: Math.max(0, windowWidth - documentWidth + offsets[2] - offsets[0])
+	};
+};
+var Style = styleSingleton();
+var lockAttribute = "data-scroll-locked";
+var getStyles = function(_a$1, allowRelative, gapMode, important) {
+	var left = _a$1.left, top = _a$1.top, right = _a$1.right, gap = _a$1.gap;
+	if (gapMode === void 0) gapMode = "margin";
+	return "\n  .".concat(noScrollbarsClassName, " {\n   overflow: hidden ").concat(important, ";\n   padding-right: ").concat(gap, "px ").concat(important, ";\n  }\n  body[").concat(lockAttribute, "] {\n    overflow: hidden ").concat(important, ";\n    overscroll-behavior: contain;\n    ").concat([
+		allowRelative && "position: relative ".concat(important, ";"),
+		gapMode === "margin" && "\n    padding-left: ".concat(left, "px;\n    padding-top: ").concat(top, "px;\n    padding-right: ").concat(right, "px;\n    margin-left:0;\n    margin-top:0;\n    margin-right: ").concat(gap, "px ").concat(important, ";\n    "),
+		gapMode === "padding" && "padding-right: ".concat(gap, "px ").concat(important, ";")
+	].filter(Boolean).join(""), "\n  }\n  \n  .").concat(zeroRightClassName, " {\n    right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(fullWidthClassName, " {\n    margin-right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(zeroRightClassName, " .").concat(zeroRightClassName, " {\n    right: 0 ").concat(important, ";\n  }\n  \n  .").concat(fullWidthClassName, " .").concat(fullWidthClassName, " {\n    margin-right: 0 ").concat(important, ";\n  }\n  \n  body[").concat(lockAttribute, "] {\n    ").concat(removedBarSizeVariable, ": ").concat(gap, "px;\n  }\n");
+};
+var getCurrentUseCounter = function() {
+	var counter = parseInt(document.body.getAttribute("data-scroll-locked") || "0", 10);
+	return isFinite(counter) ? counter : 0;
+};
+var useLockAttribute = function() {
+	import_react.useEffect(function() {
+		document.body.setAttribute(lockAttribute, (getCurrentUseCounter() + 1).toString());
+		return function() {
+			var newCounter = getCurrentUseCounter() - 1;
+			if (newCounter <= 0) document.body.removeAttribute(lockAttribute);
+			else document.body.setAttribute(lockAttribute, newCounter.toString());
+		};
+	}, []);
+};
+var RemoveScrollBar = function(_a$1) {
+	var noRelative = _a$1.noRelative, noImportant = _a$1.noImportant, _b = _a$1.gapMode, gapMode = _b === void 0 ? "margin" : _b;
+	useLockAttribute();
+	var gap = import_react.useMemo(function() {
+		return getGapWidth(gapMode);
+	}, [gapMode]);
+	return import_react.createElement(Style, { styles: getStyles(gap, !noRelative, gapMode, !noImportant ? "!important" : "") });
+};
+var passiveSupported = false;
+if (typeof window !== "undefined") try {
+	var options = Object.defineProperty({}, "passive", { get: function() {
+		passiveSupported = true;
+		return true;
+	} });
+	window.addEventListener("test", options, options);
+	window.removeEventListener("test", options, options);
+} catch (err) {
+	passiveSupported = false;
+}
+var nonPassive = passiveSupported ? { passive: false } : false;
+var alwaysContainsScroll = function(node) {
+	return node.tagName === "TEXTAREA";
+};
+var elementCanBeScrolled = function(node, overflow) {
+	if (!(node instanceof Element)) return false;
+	var styles = window.getComputedStyle(node);
+	return styles[overflow] !== "hidden" && !(styles.overflowY === styles.overflowX && !alwaysContainsScroll(node) && styles[overflow] === "visible");
+};
+var elementCouldBeVScrolled = function(node) {
+	return elementCanBeScrolled(node, "overflowY");
+};
+var elementCouldBeHScrolled = function(node) {
+	return elementCanBeScrolled(node, "overflowX");
+};
+var locationCouldBeScrolled = function(axis, node) {
+	var ownerDocument = node.ownerDocument;
+	var current = node;
+	do {
+		if (typeof ShadowRoot !== "undefined" && current instanceof ShadowRoot) current = current.host;
+		if (elementCouldBeScrolled(axis, current)) {
+			var _a$1 = getScrollVariables(axis, current);
+			if (_a$1[1] > _a$1[2]) return true;
+		}
+		current = current.parentNode;
+	} while (current && current !== ownerDocument.body);
+	return false;
+};
+var getVScrollVariables = function(_a$1) {
+	return [
+		_a$1.scrollTop,
+		_a$1.scrollHeight,
+		_a$1.clientHeight
+	];
+};
+var getHScrollVariables = function(_a$1) {
+	return [
+		_a$1.scrollLeft,
+		_a$1.scrollWidth,
+		_a$1.clientWidth
+	];
+};
+var elementCouldBeScrolled = function(axis, node) {
+	return axis === "v" ? elementCouldBeVScrolled(node) : elementCouldBeHScrolled(node);
+};
+var getScrollVariables = function(axis, node) {
+	return axis === "v" ? getVScrollVariables(node) : getHScrollVariables(node);
+};
+var getDirectionFactor = function(axis, direction) {
+	return axis === "h" && direction === "rtl" ? -1 : 1;
+};
+var handleScroll = function(axis, endTarget, event, sourceDelta, noOverscroll) {
+	var directionFactor = getDirectionFactor(axis, window.getComputedStyle(endTarget).direction);
+	var delta = directionFactor * sourceDelta;
+	var target = event.target;
+	var targetInLock = endTarget.contains(target);
+	var shouldCancelScroll = false;
+	var isDeltaPositive = delta > 0;
+	var availableScroll = 0;
+	var availableScrollTop = 0;
+	do {
+		if (!target) break;
+		var _a$1 = getScrollVariables(axis, target), position = _a$1[0];
+		var elementScroll = _a$1[1] - _a$1[2] - directionFactor * position;
+		if (position || elementScroll) {
+			if (elementCouldBeScrolled(axis, target)) {
+				availableScroll += elementScroll;
+				availableScrollTop += position;
+			}
+		}
+		var parent_1 = target.parentNode;
+		target = parent_1 && parent_1.nodeType === Node.DOCUMENT_FRAGMENT_NODE ? parent_1.host : parent_1;
+	} while (!targetInLock && target !== document.body || targetInLock && (endTarget.contains(target) || endTarget === target));
+	if (isDeltaPositive && (noOverscroll && Math.abs(availableScroll) < 1 || !noOverscroll && delta > availableScroll)) shouldCancelScroll = true;
+	else if (!isDeltaPositive && (noOverscroll && Math.abs(availableScrollTop) < 1 || !noOverscroll && -delta > availableScrollTop)) shouldCancelScroll = true;
+	return shouldCancelScroll;
+};
+var getTouchXY = function(event) {
+	return "changedTouches" in event ? [event.changedTouches[0].clientX, event.changedTouches[0].clientY] : [0, 0];
+};
+var getDeltaXY = function(event) {
+	return [event.deltaX, event.deltaY];
+};
+var extractRef = function(ref) {
+	return ref && "current" in ref ? ref.current : ref;
+};
+var deltaCompare = function(x$1, y) {
+	return x$1[0] === y[0] && x$1[1] === y[1];
+};
+var generateStyle = function(id) {
+	return "\n  .block-interactivity-".concat(id, " {pointer-events: none;}\n  .allow-interactivity-").concat(id, " {pointer-events: all;}\n");
+};
+var idCounter = 0;
+var lockStack = [];
+function RemoveScrollSideCar(props) {
+	var shouldPreventQueue = import_react.useRef([]);
+	var touchStartRef = import_react.useRef([0, 0]);
+	var activeAxis = import_react.useRef();
+	var id = import_react.useState(idCounter++)[0];
+	var Style$1 = import_react.useState(styleSingleton)[0];
+	var lastProps = import_react.useRef(props);
+	import_react.useEffect(function() {
+		lastProps.current = props;
+	}, [props]);
+	import_react.useEffect(function() {
+		if (props.inert) {
+			document.body.classList.add("block-interactivity-".concat(id));
+			var allow_1 = __spreadArray([props.lockRef.current], (props.shards || []).map(extractRef), true).filter(Boolean);
+			allow_1.forEach(function(el) {
+				return el.classList.add("allow-interactivity-".concat(id));
+			});
+			return function() {
+				document.body.classList.remove("block-interactivity-".concat(id));
+				allow_1.forEach(function(el) {
+					return el.classList.remove("allow-interactivity-".concat(id));
+				});
+			};
+		}
+	}, [
+		props.inert,
+		props.lockRef.current,
+		props.shards
+	]);
+	var shouldCancelEvent = import_react.useCallback(function(event, parent) {
+		if ("touches" in event && event.touches.length === 2 || event.type === "wheel" && event.ctrlKey) return !lastProps.current.allowPinchZoom;
+		var touch = getTouchXY(event);
+		var touchStart = touchStartRef.current;
+		var deltaX = "deltaX" in event ? event.deltaX : touchStart[0] - touch[0];
+		var deltaY = "deltaY" in event ? event.deltaY : touchStart[1] - touch[1];
+		var currentAxis;
+		var target = event.target;
+		var moveDirection = Math.abs(deltaX) > Math.abs(deltaY) ? "h" : "v";
+		if ("touches" in event && moveDirection === "h" && target.type === "range") return false;
+		var selection = window.getSelection();
+		var anchorNode = selection && selection.anchorNode;
+		if (anchorNode ? anchorNode === target || anchorNode.contains(target) : false) return false;
+		var canBeScrolledInMainDirection = locationCouldBeScrolled(moveDirection, target);
+		if (!canBeScrolledInMainDirection) return true;
+		if (canBeScrolledInMainDirection) currentAxis = moveDirection;
+		else {
+			currentAxis = moveDirection === "v" ? "h" : "v";
+			canBeScrolledInMainDirection = locationCouldBeScrolled(moveDirection, target);
+		}
+		if (!canBeScrolledInMainDirection) return false;
+		if (!activeAxis.current && "changedTouches" in event && (deltaX || deltaY)) activeAxis.current = currentAxis;
+		if (!currentAxis) return true;
+		var cancelingAxis = activeAxis.current || currentAxis;
+		return handleScroll(cancelingAxis, parent, event, cancelingAxis === "h" ? deltaX : deltaY, true);
+	}, []);
+	var shouldPrevent = import_react.useCallback(function(_event) {
+		var event = _event;
+		if (!lockStack.length || lockStack[lockStack.length - 1] !== Style$1) return;
+		var delta = "deltaY" in event ? getDeltaXY(event) : getTouchXY(event);
+		var sourceEvent = shouldPreventQueue.current.filter(function(e) {
+			return e.name === event.type && (e.target === event.target || event.target === e.shadowParent) && deltaCompare(e.delta, delta);
+		})[0];
+		if (sourceEvent && sourceEvent.should) {
+			if (event.cancelable) event.preventDefault();
+			return;
+		}
+		if (!sourceEvent) {
+			var shardNodes = (lastProps.current.shards || []).map(extractRef).filter(Boolean).filter(function(node) {
+				return node.contains(event.target);
+			});
+			if (shardNodes.length > 0 ? shouldCancelEvent(event, shardNodes[0]) : !lastProps.current.noIsolation) {
+				if (event.cancelable) event.preventDefault();
+			}
+		}
+	}, []);
+	var shouldCancel = import_react.useCallback(function(name, delta, target, should) {
+		var event = {
+			name,
+			delta,
+			target,
+			should,
+			shadowParent: getOutermostShadowParent(target)
+		};
+		shouldPreventQueue.current.push(event);
+		setTimeout(function() {
+			shouldPreventQueue.current = shouldPreventQueue.current.filter(function(e) {
+				return e !== event;
+			});
+		}, 1);
+	}, []);
+	var scrollTouchStart = import_react.useCallback(function(event) {
+		touchStartRef.current = getTouchXY(event);
+		activeAxis.current = void 0;
+	}, []);
+	var scrollWheel = import_react.useCallback(function(event) {
+		shouldCancel(event.type, getDeltaXY(event), event.target, shouldCancelEvent(event, props.lockRef.current));
+	}, []);
+	var scrollTouchMove = import_react.useCallback(function(event) {
+		shouldCancel(event.type, getTouchXY(event), event.target, shouldCancelEvent(event, props.lockRef.current));
+	}, []);
+	import_react.useEffect(function() {
+		lockStack.push(Style$1);
+		props.setCallbacks({
+			onScrollCapture: scrollWheel,
+			onWheelCapture: scrollWheel,
+			onTouchMoveCapture: scrollTouchMove
+		});
+		document.addEventListener("wheel", shouldPrevent, nonPassive);
+		document.addEventListener("touchmove", shouldPrevent, nonPassive);
+		document.addEventListener("touchstart", scrollTouchStart, nonPassive);
+		return function() {
+			lockStack = lockStack.filter(function(inst) {
+				return inst !== Style$1;
+			});
+			document.removeEventListener("wheel", shouldPrevent, nonPassive);
+			document.removeEventListener("touchmove", shouldPrevent, nonPassive);
+			document.removeEventListener("touchstart", scrollTouchStart, nonPassive);
+		};
+	}, []);
+	var removeScrollBar = props.removeScrollBar, inert = props.inert;
+	return import_react.createElement(import_react.Fragment, null, inert ? import_react.createElement(Style$1, { styles: generateStyle(id) }) : null, removeScrollBar ? import_react.createElement(RemoveScrollBar, {
+		noRelative: props.noRelative,
+		gapMode: props.gapMode
+	}) : null);
+}
+function getOutermostShadowParent(node) {
+	var shadowParent = null;
+	while (node !== null) {
+		if (node instanceof ShadowRoot) {
+			shadowParent = node.host;
+			node = node.host;
+		}
+		node = node.parentNode;
+	}
+	return shadowParent;
+}
+var sidecar_default = exportSidecar(effectCar, RemoveScrollSideCar);
+var ReactRemoveScroll = import_react.forwardRef(function(props, ref) {
+	return import_react.createElement(RemoveScroll, __assign({}, props, {
+		ref,
+		sideCar: sidecar_default
+	}));
+});
+ReactRemoveScroll.classNames = RemoveScroll.classNames;
+var Combination_default = ReactRemoveScroll;
+var getDefaultParent = function(originalTarget) {
+	if (typeof document === "undefined") return null;
+	return (Array.isArray(originalTarget) ? originalTarget[0] : originalTarget).ownerDocument.body;
+};
+var counterMap = /* @__PURE__ */ new WeakMap();
+var uncontrolledNodes = /* @__PURE__ */ new WeakMap();
+var markerMap = {};
+var lockCount = 0;
+var unwrapHost = function(node) {
+	return node && (node.host || unwrapHost(node.parentNode));
+};
+var correctTargets = function(parent, targets) {
+	return targets.map(function(target) {
+		if (parent.contains(target)) return target;
+		var correctedTarget = unwrapHost(target);
+		if (correctedTarget && parent.contains(correctedTarget)) return correctedTarget;
+		console.error("aria-hidden", target, "in not contained inside", parent, ". Doing nothing");
+		return null;
+	}).filter(function(x$1) {
+		return Boolean(x$1);
+	});
+};
+var applyAttributeToOthers = function(originalTarget, parentNode, markerName, controlAttribute) {
+	var targets = correctTargets(parentNode, Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
+	if (!markerMap[markerName]) markerMap[markerName] = /* @__PURE__ */ new WeakMap();
+	var markerCounter = markerMap[markerName];
+	var hiddenNodes = [];
+	var elementsToKeep = /* @__PURE__ */ new Set();
+	var elementsToStop = new Set(targets);
+	var keep = function(el) {
+		if (!el || elementsToKeep.has(el)) return;
+		elementsToKeep.add(el);
+		keep(el.parentNode);
+	};
+	targets.forEach(keep);
+	var deep = function(parent) {
+		if (!parent || elementsToStop.has(parent)) return;
+		Array.prototype.forEach.call(parent.children, function(node) {
+			if (elementsToKeep.has(node)) deep(node);
+			else try {
+				var attr = node.getAttribute(controlAttribute);
+				var alreadyHidden = attr !== null && attr !== "false";
+				var counterValue = (counterMap.get(node) || 0) + 1;
+				var markerValue = (markerCounter.get(node) || 0) + 1;
+				counterMap.set(node, counterValue);
+				markerCounter.set(node, markerValue);
+				hiddenNodes.push(node);
+				if (counterValue === 1 && alreadyHidden) uncontrolledNodes.set(node, true);
+				if (markerValue === 1) node.setAttribute(markerName, "true");
+				if (!alreadyHidden) node.setAttribute(controlAttribute, "true");
+			} catch (e) {
+				console.error("aria-hidden: cannot operate on ", node, e);
+			}
+		});
+	};
+	deep(parentNode);
+	elementsToKeep.clear();
+	lockCount++;
+	return function() {
+		hiddenNodes.forEach(function(node) {
+			var counterValue = counterMap.get(node) - 1;
+			var markerValue = markerCounter.get(node) - 1;
+			counterMap.set(node, counterValue);
+			markerCounter.set(node, markerValue);
+			if (!counterValue) {
+				if (!uncontrolledNodes.has(node)) node.removeAttribute(controlAttribute);
+				uncontrolledNodes.delete(node);
+			}
+			if (!markerValue) node.removeAttribute(markerName);
+		});
+		lockCount--;
+		if (!lockCount) {
+			counterMap = /* @__PURE__ */ new WeakMap();
+			counterMap = /* @__PURE__ */ new WeakMap();
+			uncontrolledNodes = /* @__PURE__ */ new WeakMap();
+			markerMap = {};
+		}
+	};
+};
+var hideOthers = function(originalTarget, parentNode, markerName) {
+	if (markerName === void 0) markerName = "data-aria-hidden";
+	var targets = Array.from(Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
+	var activeParentNode = parentNode || getDefaultParent(originalTarget);
+	if (!activeParentNode) return function() {
+		return null;
+	};
+	targets.push.apply(targets, Array.from(activeParentNode.querySelectorAll("[aria-live], script")));
+	return applyAttributeToOthers(targets, activeParentNode, markerName, "aria-hidden");
+};
+var DIALOG_NAME = "Dialog";
+var [createDialogContext, createDialogScope] = createContextScope(DIALOG_NAME);
+var [DialogProvider, useDialogContext] = createDialogContext(DIALOG_NAME);
+var Dialog$1 = (props) => {
+	const { __scopeDialog, children, open: openProp, defaultOpen, onOpenChange, modal = true } = props;
+	const triggerRef = import_react.useRef(null);
+	const contentRef = import_react.useRef(null);
+	const [open, setOpen] = useControllableState({
+		prop: openProp,
+		defaultProp: defaultOpen ?? false,
+		onChange: onOpenChange,
+		caller: DIALOG_NAME
+	});
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogProvider, {
+		scope: __scopeDialog,
+		triggerRef,
+		contentRef,
+		contentId: useId(),
+		titleId: useId(),
+		descriptionId: useId(),
+		open,
+		onOpenChange: setOpen,
+		onOpenToggle: import_react.useCallback(() => setOpen((prevOpen) => !prevOpen), [setOpen]),
+		modal,
+		children
+	});
+};
+Dialog$1.displayName = DIALOG_NAME;
+var TRIGGER_NAME = "DialogTrigger";
+var DialogTrigger$1 = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, ...triggerProps } = props;
+	const context = useDialogContext(TRIGGER_NAME, __scopeDialog);
+	const composedTriggerRef = useComposedRefs(forwardedRef, context.triggerRef);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.button, {
+		type: "button",
+		"aria-haspopup": "dialog",
+		"aria-expanded": context.open,
+		"aria-controls": context.contentId,
+		"data-state": getState(context.open),
+		...triggerProps,
+		ref: composedTriggerRef,
+		onClick: composeEventHandlers(props.onClick, context.onOpenToggle)
+	});
+});
+DialogTrigger$1.displayName = TRIGGER_NAME;
+var PORTAL_NAME = "DialogPortal";
+var [PortalProvider, usePortalContext] = createDialogContext(PORTAL_NAME, { forceMount: void 0 });
+var DialogPortal$1 = (props) => {
+	const { __scopeDialog, forceMount, children, container } = props;
+	const context = useDialogContext(PORTAL_NAME, __scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PortalProvider, {
+		scope: __scopeDialog,
+		forceMount,
+		children: import_react.Children.map(children, (child) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Presence, {
+			present: forceMount || context.open,
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Portal, {
+				asChild: true,
+				container,
+				children: child
+			})
+		}))
+	});
+};
+DialogPortal$1.displayName = PORTAL_NAME;
+var OVERLAY_NAME = "DialogOverlay";
+var DialogOverlay$1 = import_react.forwardRef((props, forwardedRef) => {
+	const portalContext = usePortalContext(OVERLAY_NAME, props.__scopeDialog);
+	const { forceMount = portalContext.forceMount, ...overlayProps } = props;
+	const context = useDialogContext(OVERLAY_NAME, props.__scopeDialog);
+	return context.modal ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Presence, {
+		present: forceMount || context.open,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogOverlayImpl, {
+			...overlayProps,
+			ref: forwardedRef
+		})
+	}) : null;
+});
+DialogOverlay$1.displayName = OVERLAY_NAME;
+var Slot$1 = /* @__PURE__ */ createSlot("DialogOverlay.RemoveScroll");
+var DialogOverlayImpl = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, ...overlayProps } = props;
+	const context = useDialogContext(OVERLAY_NAME, __scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Combination_default, {
+		as: Slot$1,
+		allowPinchZoom: true,
+		shards: [context.contentRef],
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.div, {
+			"data-state": getState(context.open),
+			...overlayProps,
+			ref: forwardedRef,
+			style: {
+				pointerEvents: "auto",
+				...overlayProps.style
+			}
+		})
+	});
+});
+var CONTENT_NAME = "DialogContent";
+var DialogContent$1 = import_react.forwardRef((props, forwardedRef) => {
+	const portalContext = usePortalContext(CONTENT_NAME, props.__scopeDialog);
+	const { forceMount = portalContext.forceMount, ...contentProps } = props;
+	const context = useDialogContext(CONTENT_NAME, props.__scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Presence, {
+		present: forceMount || context.open,
+		children: context.modal ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContentModal, {
+			...contentProps,
+			ref: forwardedRef
+		}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContentNonModal, {
+			...contentProps,
+			ref: forwardedRef
+		})
+	});
+});
+DialogContent$1.displayName = CONTENT_NAME;
+var DialogContentModal = import_react.forwardRef((props, forwardedRef) => {
+	const context = useDialogContext(CONTENT_NAME, props.__scopeDialog);
+	const contentRef = import_react.useRef(null);
+	const composedRefs = useComposedRefs(forwardedRef, context.contentRef, contentRef);
+	import_react.useEffect(() => {
+		const content = contentRef.current;
+		if (content) return hideOthers(content);
+	}, []);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContentImpl, {
+		...props,
+		ref: composedRefs,
+		trapFocus: context.open,
+		disableOutsidePointerEvents: true,
+		onCloseAutoFocus: composeEventHandlers(props.onCloseAutoFocus, (event) => {
+			event.preventDefault();
+			context.triggerRef.current?.focus();
+		}),
+		onPointerDownOutside: composeEventHandlers(props.onPointerDownOutside, (event) => {
+			const originalEvent = event.detail.originalEvent;
+			const ctrlLeftClick = originalEvent.button === 0 && originalEvent.ctrlKey === true;
+			if (originalEvent.button === 2 || ctrlLeftClick) event.preventDefault();
+		}),
+		onFocusOutside: composeEventHandlers(props.onFocusOutside, (event) => event.preventDefault())
+	});
+});
+var DialogContentNonModal = import_react.forwardRef((props, forwardedRef) => {
+	const context = useDialogContext(CONTENT_NAME, props.__scopeDialog);
+	const hasInteractedOutsideRef = import_react.useRef(false);
+	const hasPointerDownOutsideRef = import_react.useRef(false);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogContentImpl, {
+		...props,
+		ref: forwardedRef,
+		trapFocus: false,
+		disableOutsidePointerEvents: false,
+		onCloseAutoFocus: (event) => {
+			props.onCloseAutoFocus?.(event);
+			if (!event.defaultPrevented) {
+				if (!hasInteractedOutsideRef.current) context.triggerRef.current?.focus();
+				event.preventDefault();
+			}
+			hasInteractedOutsideRef.current = false;
+			hasPointerDownOutsideRef.current = false;
+		},
+		onInteractOutside: (event) => {
+			props.onInteractOutside?.(event);
+			if (!event.defaultPrevented) {
+				hasInteractedOutsideRef.current = true;
+				if (event.detail.originalEvent.type === "pointerdown") hasPointerDownOutsideRef.current = true;
+			}
+			const target = event.target;
+			if (context.triggerRef.current?.contains(target)) event.preventDefault();
+			if (event.detail.originalEvent.type === "focusin" && hasPointerDownOutsideRef.current) event.preventDefault();
+		}
+	});
+});
+var DialogContentImpl = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, trapFocus, onOpenAutoFocus, onCloseAutoFocus, ...contentProps } = props;
+	const context = useDialogContext(CONTENT_NAME, __scopeDialog);
+	const contentRef = import_react.useRef(null);
+	const composedRefs = useComposedRefs(forwardedRef, contentRef);
+	useFocusGuards();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FocusScope, {
+		asChild: true,
+		loop: true,
+		trapped: trapFocus,
+		onMountAutoFocus: onOpenAutoFocus,
+		onUnmountAutoFocus: onCloseAutoFocus,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DismissableLayer, {
+			role: "dialog",
+			id: context.contentId,
+			"aria-describedby": context.descriptionId,
+			"aria-labelledby": context.titleId,
+			"data-state": getState(context.open),
+			...contentProps,
+			ref: composedRefs,
+			onDismiss: () => context.onOpenChange(false)
+		})
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TitleWarning, { titleId: context.titleId }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DescriptionWarning, {
+		contentRef,
+		descriptionId: context.descriptionId
+	})] })] });
+});
+var TITLE_NAME = "DialogTitle";
+var DialogTitle$1 = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, ...titleProps } = props;
+	const context = useDialogContext(TITLE_NAME, __scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.h2, {
+		id: context.titleId,
+		...titleProps,
+		ref: forwardedRef
+	});
+});
+DialogTitle$1.displayName = TITLE_NAME;
+var DESCRIPTION_NAME = "DialogDescription";
+var DialogDescription$1 = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, ...descriptionProps } = props;
+	const context = useDialogContext(DESCRIPTION_NAME, __scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.p, {
+		id: context.descriptionId,
+		...descriptionProps,
+		ref: forwardedRef
+	});
+});
+DialogDescription$1.displayName = DESCRIPTION_NAME;
+var CLOSE_NAME = "DialogClose";
+var DialogClose$1 = import_react.forwardRef((props, forwardedRef) => {
+	const { __scopeDialog, ...closeProps } = props;
+	const context = useDialogContext(CLOSE_NAME, __scopeDialog);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive$1.button, {
+		type: "button",
+		...closeProps,
+		ref: forwardedRef,
+		onClick: composeEventHandlers(props.onClick, () => context.onOpenChange(false))
+	});
+});
+DialogClose$1.displayName = CLOSE_NAME;
+function getState(open) {
+	return open ? "open" : "closed";
+}
+var TITLE_WARNING_NAME = "DialogTitleWarning";
+var [WarningProvider, useWarningContext] = createContext2(TITLE_WARNING_NAME, {
+	contentName: CONTENT_NAME,
+	titleName: TITLE_NAME,
+	docsSlug: "dialog"
+});
+var TitleWarning = ({ titleId }) => {
+	const titleWarningContext = useWarningContext(TITLE_WARNING_NAME);
+	const MESSAGE = `\`${titleWarningContext.contentName}\` requires a \`${titleWarningContext.titleName}\` for the component to be accessible for screen reader users.
+
+If you want to hide the \`${titleWarningContext.titleName}\`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/${titleWarningContext.docsSlug}`;
+	import_react.useEffect(() => {
+		if (titleId) {
+			if (!document.getElementById(titleId)) console.error(MESSAGE);
+		}
+	}, [MESSAGE, titleId]);
+	return null;
+};
+var DESCRIPTION_WARNING_NAME = "DialogDescriptionWarning";
+var DescriptionWarning = ({ contentRef, descriptionId }) => {
+	const MESSAGE = `Warning: Missing \`Description\` or \`aria-describedby={undefined}\` for {${useWarningContext(DESCRIPTION_WARNING_NAME).contentName}}.`;
+	import_react.useEffect(() => {
+		const describedById = contentRef.current?.getAttribute("aria-describedby");
+		if (descriptionId && describedById) {
+			if (!document.getElementById(descriptionId)) console.warn(MESSAGE);
+		}
+	}, [
+		MESSAGE,
+		contentRef,
+		descriptionId
+	]);
+	return null;
+};
+var Root$1 = Dialog$1;
+var Trigger = DialogTrigger$1;
+var Portal$1 = DialogPortal$1;
+var Overlay = DialogOverlay$1;
+var Content = DialogContent$1;
+var Title = DialogTitle$1;
+var Description = DialogDescription$1;
+var Close = DialogClose$1;
+var Dialog = Root$1;
+var DialogTrigger = Trigger;
+var DialogPortal = Portal$1;
+var DialogOverlay = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Overlay, {
+	ref,
+	className: cn("fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0", className),
+	...props
+}));
+DialogOverlay.displayName = Overlay.displayName;
+var DialogContent = import_react.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogPortal, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogOverlay, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Content, {
+	ref,
+	className: cn("fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg overflow-y-auto max-h-screen", className),
+	...props,
+	children: [children, /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Close, {
+		className: "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "h-4 w-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			className: "sr-only",
+			children: "Close"
+		})]
+	})]
+})] }));
+DialogContent.displayName = Content.displayName;
+var DialogHeader = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: cn("flex flex-col space-y-1.5 text-center sm:text-left", className),
+	...props
+});
+DialogHeader.displayName = "DialogHeader";
+var DialogFooter = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+	className: cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className),
+	...props
+});
+DialogFooter.displayName = "DialogFooter";
+var DialogTitle = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Title, {
+	ref,
+	className: cn("text-lg font-semibold leading-none tracking-tight", className),
+	...props
+}));
+DialogTitle.displayName = Title.displayName;
+var DialogDescription = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Description, {
+	ref,
+	className: cn("text-sm text-muted-foreground", className),
+	...props
+}));
+DialogDescription.displayName = Description.displayName;
+var NAME = "Label";
+var Label$1 = import_react.forwardRef((props, forwardedRef) => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Primitive.label, {
+		...props,
+		ref: forwardedRef,
+		onMouseDown: (event) => {
+			if (event.target.closest("button, input, select, textarea")) return;
+			props.onMouseDown?.(event);
+			if (!event.defaultPrevented && event.detail > 1) event.preventDefault();
+		}
+	});
+});
+Label$1.displayName = NAME;
+var Root = Label$1;
+var labelVariants = cva("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70");
+var Label = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root, {
+	ref,
+	className: cn(labelVariants(), className),
+	...props
+}));
+Label.displayName = Root.displayName;
+var Form = FormProvider;
+var FormFieldContext = import_react.createContext({});
+var FormField = ({ ...props }) => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormFieldContext.Provider, {
+		value: { name: props.name },
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Controller, { ...props })
+	});
+};
+var useFormField = () => {
+	const fieldContext = import_react.useContext(FormFieldContext);
+	const itemContext = import_react.useContext(FormItemContext);
+	const { getFieldState, formState } = useFormContext();
+	const fieldState = getFieldState(fieldContext.name, formState);
+	if (!fieldContext) throw new Error("useFormField should be used within <FormField>");
+	const { id } = itemContext;
+	return {
+		id,
+		name: fieldContext.name,
+		formItemId: `${id}-form-item`,
+		formDescriptionId: `${id}-form-item-description`,
+		formMessageId: `${id}-form-item-message`,
+		...fieldState
+	};
+};
+var FormItemContext = import_react.createContext({});
+var FormItem = import_react.forwardRef(({ className, ...props }, ref) => {
+	const id = import_react.useId();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormItemContext.Provider, {
+		value: { id },
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			ref,
+			className: cn("space-y-2", className),
+			...props
+		})
+	});
+});
+FormItem.displayName = "FormItem";
+var FormLabel = import_react.forwardRef(({ className, ...props }, ref) => {
+	const { error, formItemId } = useFormField();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
+		ref,
+		className: cn(error && "text-destructive", className),
+		htmlFor: formItemId,
+		...props
+	});
+});
+FormLabel.displayName = "FormLabel";
+var FormControl = import_react.forwardRef(({ ...props }, ref) => {
+	const { error, formItemId, formDescriptionId, formMessageId } = useFormField();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Slot, {
+		ref,
+		id: formItemId,
+		"aria-describedby": !error ? `${formDescriptionId}` : `${formDescriptionId} ${formMessageId}`,
+		"aria-invalid": !!error,
+		...props
+	});
+});
+FormControl.displayName = "FormControl";
+var FormDescription = import_react.forwardRef(({ className, ...props }, ref) => {
+	const { formDescriptionId } = useFormField();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+		ref,
+		id: formDescriptionId,
+		className: cn("text-sm text-muted-foreground", className),
+		...props
+	});
+});
+FormDescription.displayName = "FormDescription";
+var FormMessage = import_react.forwardRef(({ className, children, ...props }, ref) => {
+	const { error, formMessageId } = useFormField();
+	const body = error ? String(error?.message ?? "") : children;
+	if (!body) return null;
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+		ref,
+		id: formMessageId,
+		className: cn("text-sm font-medium text-destructive", className),
+		...props,
+		children: body
+	});
+});
+FormMessage.displayName = "FormMessage";
+var Input = import_react.forwardRef(({ className, type, ...props }, ref) => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+		type,
+		className: cn("flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm", className),
+		ref,
+		...props
+	});
+});
+Input.displayName = "Input";
+var formSchema = object({
+	name: string().min(1, "Nome e Sobrenome é obrigatório"),
+	email: string().min(1, "E-mail é obrigatório").email("Formato de e-mail inválido"),
+	phone: string().min(1, "WhatsApp é obrigatório")
+});
+function LeadCaptureModal({ children }) {
+	const [isOpen, setIsOpen] = (0, import_react.useState)(false);
+	const [isLoading, setIsLoading] = (0, import_react.useState)(false);
+	const form = useForm({
+		resolver: a(formSchema),
+		defaultValues: {
+			name: "",
+			email: "",
+			phone: ""
+		}
+	});
+	async function onSubmit(values) {
+		setIsLoading(true);
+		try {
+			await fetch("https://hooks.adaptaops.org/rota/lead-skip-launch", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(values)
+			});
+		} catch (error) {
+			console.error("Falha ao enviar formulário", error);
+		} finally {
+			const params = new URLSearchParams({
+				name: values.name,
+				email: values.email,
+				phone: values.phone
+			});
+			window.location.href = `https://go.adapta.org/checkout/skip-basic?${params.toString()}`;
+		}
+	}
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Dialog, {
+		open: isOpen,
+		onOpenChange: setIsOpen,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogTrigger, {
+			asChild: true,
+			children
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogContent, {
+			className: "sm:max-w-[425px]",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(DialogHeader, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogTitle, {
+				className: "font-heading text-xl",
+				children: "Quase lá!"
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DialogDescription, {
+				className: "font-body text-skip-neutral-700",
+				children: "Preencha seus dados para prosseguir para o checkout."
+			})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Form, {
+				...form,
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
+					onSubmit: form.handleSubmit(onSubmit),
+					className: "space-y-4 mt-4",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
+							control: form.control,
+							name: "name",
+							render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, { children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, { children: "Nome e Sobrenome" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+									placeholder: "Seu nome completo",
+									...field
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {})
+							] })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
+							control: form.control,
+							name: "email",
+							render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, { children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, { children: "E-mail" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+									placeholder: "seu@email.com",
+									type: "email",
+									...field
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {})
+							] })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormField, {
+							control: form.control,
+							name: "phone",
+							render: ({ field }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FormItem, { children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormLabel, { children: "WhatsApp" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormControl, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+									placeholder: "(11) 99999-9999",
+									type: "tel",
+									...field
+								}) }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FormMessage, {})
+							] })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+							type: "submit",
+							className: "w-full mt-6 flex items-center gap-2 group",
+							disabled: isLoading,
+							children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "w-4 h-4 animate-spin" }), "Processando..."] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Ir para Checkout", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 transition-transform group-hover:translate-x-1" })] })
+						})
+					]
+				})
+			})]
+		})]
+	});
+}
 function OfferSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		className: "w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50",
@@ -27348,13 +33898,13 @@ function OfferSection() {
 									"Integração com Banco de Dados (Supabase)",
 									"Remover badge do Skip",
 									"Suporte por e-mail"
-								].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+								].map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									className: "flex items-start gap-3",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "font-body text-body-s text-skip-neutral-800",
 										children: item
 									})]
-								}, i))
+								}, i$2))
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -27364,13 +33914,13 @@ function OfferSection() {
 								children: "Bônus"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 								className: "flex flex-col gap-2",
-								children: [["4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM", "Templates front-end personalizados"].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+								children: [["4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM", "Templates front-end personalizados"].map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									className: "flex items-start gap-3",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "font-body text-body-s text-skip-neutral-800 font-medium",
 										children: item
 									})]
-								}, i)), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+								}, i$2)), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 									className: "flex items-start gap-3",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "flex flex-wrap items-center gap-2",
@@ -27389,14 +33939,10 @@ function OfferSection() {
 							className: "mt-auto flex flex-col items-center gap-3 w-full",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "relative group w-full",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-									asChild: true,
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LeadCaptureModal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 									className: "relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-										href: "https://go.adapta.org/checkout/skip-basic",
-										children: ["Quero o Skip Basic", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
-									})
-								})]
+									children: ["Quero o Skip Basic", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+								}) })]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center gap-3 text-skip-neutral-900 mt-1",
 								children: [
@@ -27750,4 +34296,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CA9sd282.js.map
+//# sourceMappingURL=index-BSSpllqM.js.map
