@@ -176,7 +176,7 @@ const TEMPLATES = [
 
 export function TemplatesSection() {
   return (
-    <section className="w-full py-24 md:py-32 px-5 bg-skip-neutral-300 relative z-10 overflow-hidden">
+    <section className="w-full py-12 md:py-32 px-5 bg-skip-neutral-300 relative z-10 overflow-hidden">
       <div className="max-w-[1100px] mx-auto flex flex-col items-center">
         {/* Badge */}
         <div className="flex items-center justify-center mb-8 animate-fade-in-up">
@@ -196,7 +196,7 @@ export function TemplatesSection() {
           className="max-w-[600px] mx-auto text-center mb-10 md:mb-16 animate-fade-in-up"
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
         >
-          <SectionTitle className="font-heading font-semibold text-white mb-4 tracking-tight">
+          <SectionTitle className="font-heading font-semibold text-white mb-4 tracking-[-0.02em]">
             Tenha sistemas internos prontos para implementar hoje
           </SectionTitle>
           <p className="font-body text-body-m text-skip-neutral-900 max-w-[480px] mx-auto">

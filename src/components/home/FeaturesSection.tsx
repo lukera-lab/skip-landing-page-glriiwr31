@@ -33,7 +33,7 @@ function BentoCard({
         {mockup}
       </div>
       <div className="mt-auto relative z-10">
-        <h3 className="font-heading text-body-l leading-[1.1] font-semibold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors">
+        <h3 className="font-heading text-body-l leading-[1.1] font-semibold text-skip-neutral-300 mb-3 tracking-[-0.02em] group-hover:text-blue-violet-700 transition-colors">
           {title}
         </h3>
         <p className="font-body text-skip-neutral-800 leading-[1.3] text-[15px]">{description}</p>
@@ -58,7 +58,7 @@ export function FeaturesSection() {
   }, [])
 
   return (
-    <section className="w-full py-16 md:py-32 px-5 relative z-10 bg-white">
+    <section className="w-full py-12 md:py-32 px-5 relative z-10 bg-white">
       <div ref={ref} className="max-w-[1100px] mx-auto flex flex-col items-center">
         {/* Header */}
         <div
@@ -70,7 +70,7 @@ export function FeaturesSection() {
           <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3">
             FUNCIONALIDADES
           </span>
-          <SectionTitle className="font-heading font-semibold text-skip-neutral-300 mb-4 max-w-3xl tracking-tight">
+          <SectionTitle className="font-heading font-semibold text-skip-neutral-300 mb-4 max-w-3xl tracking-[-0.02em]">
             Skip não apenas gera código
           </SectionTitle>
           <p className="font-body text-lg md:text-xl text-skip-neutral-800 max-w-[580px] mx-auto leading-[1.3]">

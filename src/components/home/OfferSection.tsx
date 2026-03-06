@@ -1,6 +1,5 @@
-import { Check, Gift, Shield, ArrowRight, Info, Lock } from 'lucide-react'
+import { Check, Gift, Shield, ArrowRight, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '@/components/ui/tooltip'
 import { Separator } from '@/components/ui/separator'
 import consultoriaImgUrl from '@/assets/consultoria-individual-skip-f7cfb.webp'
 import mockOfferUrl from '@/assets/mock-offer-bf844.webp'
@@ -10,7 +9,7 @@ export function OfferSection() {
   return (
     <section
       id="offer"
-      className="w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50"
+      className="w-full py-12 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50"
     >
       <div className="max-w-[1100px] mx-auto">
         {/* Section Header */}
@@ -18,7 +17,7 @@ export function OfferSection() {
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3 block">
             Lançamento
           </span>
-          <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1] font-semibold text-skip-neutral-100 tracking-tight">
+          <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1] font-semibold text-skip-neutral-100 tracking-[-0.02em]">
             Oferta Exclusiva
           </h2>
         </div>
@@ -50,22 +49,7 @@ export function OfferSection() {
 
             <ul className="flex flex-col gap-2 mb-5">
               <li className="font-body text-body-s text-skip-neutral-700">01 licença</li>
-              <li className="flex items-center gap-1.5 font-body text-body-s text-skip-neutral-700">
-                <span>800 créditos mensais</span>
-                <TooltipProvider delayDuration={100}>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Info className="w-4 h-4 text-skip-neutral-900 cursor-help transition-colors hover:text-blue-violet-600" />
-                    </TooltipTrigger>
-                    <TooltipContent className="bg-skip-neutral-300 text-white border-skip-neutral-400">
-                      <p className="font-body text-body-xs">
-                        10 créditos por build · 3 créditos por chat
-                      </p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </li>
-              <li className="font-body text-body-s text-skip-neutral-700">SLA 5 dias úteis</li>
+              <li className="font-body text-body-s text-skip-neutral-700">800 créditos mensais</li>
             </ul>
 
             <Separator className="bg-skip-neutral-1350 mb-5" />
@@ -137,14 +121,14 @@ export function OfferSection() {
               <div className="flex items-center gap-3 text-skip-neutral-900 mt-1">
                 <div className="flex items-center gap-1.5">
                   <Shield className="w-4 h-4" />
-                  <span className="font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide">
+                  <span className="font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide whitespace-nowrap">
                     30 dias de garantia
                   </span>
                 </div>
                 <div className="w-1 h-1 rounded-full bg-skip-neutral-1100" />
                 <div className="flex items-center gap-1.5">
                   <Lock className="w-4 h-4" />
-                  <span className="font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide">
+                  <span className="font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide whitespace-nowrap">
                     Compra segura
                   </span>
                 </div>

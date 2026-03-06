@@ -50,7 +50,7 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
         {/* Main Headline */}
         <h2
           className={cn(
-            'font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-tight animate-fade-in-up w-full sm:max-w-none mx-auto',
+            'font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-[-0.02em] animate-fade-in-up w-full sm:max-w-none mx-auto',
             isLive ? 'text-white' : 'text-skip-neutral-0',
           )}
           style={{ animationFillMode: 'both' }}

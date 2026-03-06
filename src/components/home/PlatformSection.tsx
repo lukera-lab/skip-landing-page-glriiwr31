@@ -71,7 +71,7 @@ function WorkflowStep({
         <span className="font-mono text-sm tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-2">
           {step}
         </span>
-        <h3 className="font-heading text-[20px] md:text-[28px] leading-[1.1] font-semibold text-skip-neutral-1200 mb-2 tracking-tight">
+        <h3 className="font-heading text-[20px] md:text-[28px] leading-[1.1] font-semibold text-skip-neutral-1200 mb-2 tracking-[-0.02em]">
           {title}
         </h3>
         <p className="font-body text-body-m text-skip-neutral-900 leading-[1.3]">{description}</p>
@@ -125,14 +125,14 @@ export function PlatformSection() {
   }, [])
 
   return (
-    <section className="w-full py-24 px-5 relative z-10 bg-skip-neutral-300 overflow-hidden">
+    <section className="w-full py-12 md:py-24 px-5 relative z-10 bg-skip-neutral-300 overflow-hidden">
       <div className="max-w-[1100px] mx-auto flex flex-col items-center">
         {/* Headline */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center animate-fade-in-up relative z-20 w-full">
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3">
             PLATAFORMA
           </span>
-          <SectionTitle className="font-display font-semibold text-white mb-4 max-w-[800px] mx-auto text-center tracking-tight">
+          <SectionTitle className="font-display font-semibold text-white mb-4 max-w-[800px] mx-auto text-center tracking-[-0.02em]">
             Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos
           </SectionTitle>
         </div>

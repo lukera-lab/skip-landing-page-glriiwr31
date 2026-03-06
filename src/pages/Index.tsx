@@ -48,12 +48,12 @@ export default function Index() {
       </section>
 
       {/* Demonstration Section */}
-      <section className="w-full py-16 md:py-24 px-5 relative z-10 bg-skip-neutral-1550">
+      <section className="w-full py-12 md:py-24 px-5 relative z-10 bg-skip-neutral-1550">
         <div className="max-w-[1100px] mx-auto flex flex-col items-center text-center">
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3">
             DEMONSTRAÇÃO
           </span>
-          <h2 className="font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-4 max-w-[42rem] tracking-tight">
+          <h2 className="font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-4 max-w-[42rem] tracking-[-0.02em]">
             Veja na prática como o Skip transforma seus processos
           </h2>
           <p className="font-body text-body-l text-skip-neutral-800 leading-[1.3]">

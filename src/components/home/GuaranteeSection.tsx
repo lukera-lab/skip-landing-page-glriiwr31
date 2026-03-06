@@ -2,7 +2,7 @@ import { ShieldCheck } from 'lucide-react'
 
 export function GuaranteeSection() {
   return (
-    <section className="w-full py-24 md:py-32 px-5 bg-skip-neutral-300 relative z-10 flex flex-col items-center justify-center text-center overflow-hidden">
+    <section className="w-full py-12 md:py-32 px-5 bg-skip-neutral-300 relative z-10 flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Background radial gradient for subtle depth */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.06)_0%,transparent_60%)] pointer-events-none" />
 
@@ -34,7 +34,7 @@ export function GuaranteeSection() {
         </span>
 
         {/* Main Title */}
-        <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1em] font-semibold text-white mb-4 tracking-tight">
+        <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1em] font-semibold text-white mb-4 tracking-[-0.02em]">
           Teste o Skip por 30 dias sem compromisso
         </h2>
 
