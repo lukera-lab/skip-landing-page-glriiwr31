@@ -39,7 +39,7 @@ export function GuaranteeSection() {
         </h2>
 
         {/* Subtitle */}
-        <p className="font-body text-sm md:text-base text-skip-neutral-800 leading-[1.3] max-w-[520px]">
+        <p className="font-body text-sm md:text-base text-skip-neutral-1000 leading-[1.3] max-w-[520px]">
           Se você não ficar satisfeito com o resultado, devolvemos 100% do valor investido — sem
           perguntas, sem burocracia.
         </p>

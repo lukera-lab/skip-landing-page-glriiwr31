@@ -193,11 +193,11 @@ export function TemplatesSection() {
 
         {/* Headline */}
         <div
-          className="max-w-[600px] mx-auto text-center mb-16 animate-fade-in-up"
+          className="max-w-[600px] mx-auto text-center mb-10 md:mb-16 animate-fade-in-up"
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
         >
-          <SectionTitle className="font-heading font-semibold text-white mb-6 tracking-tight">
-            Tenha sistemas internos prontos <br /> para implementar hoje
+          <SectionTitle className="font-heading font-semibold text-white mb-4 tracking-tight">
+            Tenha sistemas internos prontos para implementar hoje
           </SectionTitle>
           <p className="font-body text-body-m text-skip-neutral-900 max-w-[480px] mx-auto">
             Explore nossa biblioteca de templates e personalize o que mais fizer sentido para a sua

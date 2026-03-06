@@ -10,9 +10,19 @@ export function OfferSection() {
   return (
     <section className="w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50">
       <div className="max-w-[1100px] mx-auto">
+        {/* Section Header */}
+        <div className="mb-10 md:mb-12">
+          <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3 block">
+            Lançamento
+          </span>
+          <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1] font-semibold text-skip-neutral-100 tracking-tight">
+            Oferta Exclusiva
+          </h2>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-8 md:gap-12 items-center">
           {/* Offer Card */}
-          <div className="bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 flex flex-col transition-all duration-300 hover:shadow-lg">
+          <div className="bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-5 flex flex-col transition-all duration-300 hover:shadow-lg">
             {/* Header */}
             <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-5">
               <div className="relative flex h-2 w-2">
@@ -124,14 +134,14 @@ export function OfferSection() {
               <div className="flex items-center gap-3 text-skip-neutral-900 mt-1">
                 <div className="flex items-center gap-1.5">
                   <Shield className="w-4 h-4" />
-                  <span className="font-body text-body-xs font-medium uppercase tracking-wide">
+                  <span className="font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide">
                     30 dias de garantia
                   </span>
                 </div>
                 <div className="w-1 h-1 rounded-full bg-skip-neutral-1100" />
                 <div className="flex items-center gap-1.5">
                   <Lock className="w-4 h-4" />
-                  <span className="font-body text-body-xs font-medium uppercase tracking-wide">
+                  <span className="font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide">
                     Compra segura
                   </span>
                 </div>
@@ -139,8 +149,8 @@ export function OfferSection() {
             </div>
           </div>
 
-          {/* Mockup Container */}
-          <div className="flex items-center justify-center w-full group bg-skip-neutral-1500 rounded-[20px] p-6">
+          {/* Mockup */}
+          <div className="flex items-center justify-center w-full group order-first lg:order-none">
             <img
               src={mockOfferUrl}
               alt="Skip Offer Bundle"
@@ -152,7 +162,7 @@ export function OfferSection() {
         {/* Exclusivo da Live Banner */}
         <div className="mt-8 md:mt-12 bg-skip-neutral-300 border border-skip-neutral-1350 rounded-[20px] overflow-hidden flex flex-col md:flex-row items-stretch w-full shadow-md">
           {/* Left Content (60%) */}
-          <div className="w-full md:w-[60%] flex flex-col justify-center p-8 md:p-10 lg:p-12 relative z-20">
+          <div className="w-full md:w-[60%] flex flex-col justify-center p-5 md:p-10 lg:p-12 relative z-20">
             <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-6">
               <div className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
@@ -163,7 +173,7 @@ export function OfferSection() {
               </span>
             </div>
 
-            <h3 className="font-heading text-heading-s font-semibold text-white">
+            <h3 className="font-heading text-[22px] md:text-[28px] leading-[1.1] font-semibold text-white">
               2 Consultorias Individuais Gratuitas
             </h3>
 
