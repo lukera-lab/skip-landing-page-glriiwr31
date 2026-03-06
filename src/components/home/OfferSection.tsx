@@ -8,7 +8,10 @@ import { LeadCaptureModal } from './LeadCaptureModal'
 
 export function OfferSection() {
   return (
-    <section className="w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50">
+    <section
+      id="offer"
+      className="w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50"
+    >
       <div className="max-w-[1100px] mx-auto">
         {/* Section Header */}
         <div className="mb-10 md:mb-12 flex flex-col items-center text-center">

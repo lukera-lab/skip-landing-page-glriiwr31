@@ -24150,6 +24150,9 @@ var logo_skip_white_1b688_default = "/assets/logo-skip-white-1b688-D7aboadx.webp
 var bg_hero_skip_8319b_default = "/assets/bg-hero-skip-8319b-BMwiMWBh.webp";
 var image_3468c_default = "/assets/image-3468c-DKktFnLe.png";
 function HeroSection({ isLive = false }) {
+	const handleScrollToOffer = () => {
+		document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" });
+	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		className: cn("relative flex flex-col items-center py-32 w-full h-[600px] md:h-[800px]", isLive && "bg-skip-neutral-300 overflow-hidden"),
 		children: [
@@ -24218,8 +24221,9 @@ function HeroSection({ isLive = false }) {
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "relative group w-full sm:w-auto",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+								onClick: handleScrollToOffer,
 								className: "relative w-full sm:w-auto font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5",
-								children: ["Explorar Soluções", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+								children: [isLive ? "Aproveitar Condição Exclusiva" : "Explorar Soluções", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
 							})]
 						})
 					})
@@ -33895,6 +33899,7 @@ function LeadCaptureModal({ children }) {
 }
 function OfferSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		id: "offer",
 		className: "w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] mx-auto",
@@ -34374,4 +34379,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-xNBHV2sg.js.map
+//# sourceMappingURL=index-BCi83kJw.js.map

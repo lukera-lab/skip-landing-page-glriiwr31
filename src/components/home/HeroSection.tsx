@@ -7,6 +7,10 @@ import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import liveBgUrl from '@/assets/image-3468c.png'
 
 export function HeroSection({ isLive = false }: { isLive?: boolean }) {
+  const handleScrollToOffer = () => {
+    document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section
       className={cn(
@@ -93,8 +97,11 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
         >
           <div className="relative group w-full sm:w-auto">
             <div className="absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" />
-            <Button className="relative w-full sm:w-auto font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5">
-              Explorar Soluções
+            <Button
+              onClick={handleScrollToOffer}
+              className="relative w-full sm:w-auto font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5"
+            >
+              {isLive ? 'Aproveitar Condição Exclusiva' : 'Explorar Soluções'}
               <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
