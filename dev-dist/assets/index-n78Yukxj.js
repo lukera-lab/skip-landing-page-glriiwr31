@@ -27641,13 +27641,15 @@ function Index() {
 							className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6",
 							children: "DEMONSTRAÇÃO"
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-100 mb-8 max-w-4xl leading-tight tracking-tight",
-							children: "Veja na prática como o Skip transforma seus processos"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-body-m text-skip-neutral-800 max-w-2xl",
-							children: "Escolha um processo abaixo e compare como era antes e como fica com o Skip"
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col items-center gap-[16px] w-full",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								className: "font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-100 max-w-4xl leading-tight tracking-tight",
+								children: "Veja na prática como o Skip transforma seus processos"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-2xl",
+								children: "Escolha um processo abaixo e compare como era antes e como fica com o Skip"
+							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DemonstrationTabs, {})
 					]
@@ -27763,4 +27765,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B5uRXmZe.js.map
+//# sourceMappingURL=index-n78Yukxj.js.map

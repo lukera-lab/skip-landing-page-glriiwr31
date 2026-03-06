@@ -119,12 +119,14 @@ export default function Index() {
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
             DEMONSTRAÇÃO
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-100 mb-8 max-w-4xl leading-tight tracking-tight">
-            Veja na prática como o Skip transforma seus processos
-          </h2>
-          <p className="font-body text-body-m text-skip-neutral-800 max-w-2xl">
-            Escolha um processo abaixo e compare como era antes e como fica com o Skip
-          </p>
+          <div className="flex flex-col items-center gap-[16px] w-full">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-100 max-w-4xl leading-tight tracking-tight">
+              Veja na prática como o Skip transforma seus processos
+            </h2>
+            <p className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-2xl">
+              Escolha um processo abaixo e compare como era antes e como fica com o Skip
+            </p>
+          </div>
 
           <DemonstrationTabs />
         </div>
