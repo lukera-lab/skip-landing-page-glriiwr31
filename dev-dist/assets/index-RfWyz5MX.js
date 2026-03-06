@@ -34206,10 +34206,20 @@ function Index() {
 		]
 	});
 }
+function HelloBar() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: "w-full bg-red-600 text-white py-2.5 px-4 text-center relative z-50 shadow-[0_0_20px_rgba(220,38,38,0.8)] flex items-center justify-center border-b border-red-500/50",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+			className: "font-heading text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.2em] drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-pulse",
+			children: "Condição Exclusiva da live de lançamento"
+		})
+	});
+}
 function Live() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex flex-col min-h-screen",
 		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HelloBar, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeroSection, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OfferSection, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GuaranteeSection, {})
@@ -34321,4 +34331,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CqRl0WzG.js.map
+//# sourceMappingURL=index-RfWyz5MX.js.map
