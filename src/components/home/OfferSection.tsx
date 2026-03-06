@@ -164,7 +164,7 @@ export function OfferSection() {
               2 Consultorias Individuais Gratuitas
             </h3>
 
-            <div className="mt-3 md:mt-4 font-body text-body-s text-skip-neutral-900 flex flex-col gap-3">
+            <div className="mt-3 md:mt-4 font-body text-body-s text-skip-neutral-1300 flex flex-col gap-3">
               <p>
                 2 calls individuais com um consultor especializado em Skip que irá te ajudar a
                 construir os seus sistemas de forma relâmpago.

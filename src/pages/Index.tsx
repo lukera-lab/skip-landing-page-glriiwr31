@@ -1,5 +1,5 @@
-import { Sparkles } from 'lucide-react'
 import { HeroSection } from '@/components/home/HeroSection'
+import { HelloBar } from '@/components/home/HelloBar'
 import { DemonstrationTabs } from '@/components/home/DemonstrationTabs'
 import { PlatformSection } from '@/components/home/PlatformSection'
 import { FeaturesSection } from '@/components/home/FeaturesSection'
@@ -7,45 +7,23 @@ import { TemplatesSection } from '@/components/home/TemplatesSection'
 import { OfferSection } from '@/components/home/OfferSection'
 import { GuaranteeSection } from '@/components/home/GuaranteeSection'
 
-const LOGOS = [
-  { name: 'microsoft', width: 'w-24' },
-  { name: 'facebook', width: 'w-24' },
-  { name: 'ambev', width: 'w-20' },
-  { name: 'ifood', width: 'w-16' },
-  { name: 'brasil paralelo', width: 'w-32' },
-]
-
 export default function Index() {
   return (
     <div className="flex flex-col min-h-screen">
+      <HelloBar text="Condição exclusiva de lançamento" />
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Logo Showcase Section */}
-      <section className="w-full px-5 py-12 relative z-10">
-        <div
-          className="max-w-[1100px] mx-auto animate-fade-in"
-          style={{ animationDelay: '500ms', animationFillMode: 'both' }}
-        >
-          <div className="flex items-center justify-center gap-2 mb-8 text-center">
-            <Sparkles className="w-4 h-4 text-fuchsia-500 shrink-0" />
-            <p className="font-body text-xs sm:text-sm text-skip-neutral-800">
-              Skip é uma solução da Adapta, maior empresa de IA do Brasil, confiada por empresas
-              como:
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 opacity-40 hover:opacity-100 transition-opacity duration-500">
-            {LOGOS.map((logo) => (
-              <img
-                key={logo.name}
-                src={`https://img.usecurling.com/i?q=${encodeURIComponent(logo.name)}%20logo&color=solid-black`}
-                alt={`${logo.name} logo`}
-                className={`h-5 sm:h-6 md:h-8 object-contain transition-all duration-300 grayscale hover:grayscale-0 hover:scale-105 cursor-default ${logo.width}`}
-              />
-            ))}
-          </div>
+      {/* Adapta Divider */}
+      <div className="w-full px-5 py-6 relative z-10">
+        <div className="max-w-[1100px] mx-auto flex items-center gap-4">
+          <div className="flex-1 h-px bg-skip-neutral-1350" />
+          <p className="font-body text-xs text-skip-neutral-900 text-center shrink-0">
+            Skip é uma solução da Adapta, maior empresa de IA do Brasil
+          </p>
+          <div className="flex-1 h-px bg-skip-neutral-1350" />
         </div>
-      </section>
+      </div>
 
       {/* Demonstration Section */}
       <section className="w-full py-12 md:py-24 px-5 relative z-10 bg-skip-neutral-1550">
