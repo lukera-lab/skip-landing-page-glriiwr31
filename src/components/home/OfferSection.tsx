@@ -77,6 +77,7 @@ export function OfferSection({
                   'Integração com Banco de Dados (Supabase)',
                   'Remover badge do Skip',
                   'Suporte por e-mail',
+                  '4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-violet-600 shrink-0" />
@@ -91,28 +92,38 @@ export function OfferSection({
               <h3 className="font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-3">
                 Bônus
               </h3>
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col gap-3">
                 {[
-                  '4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM',
-                  'Templates front-end personalizados',
+                  { name: 'Templates Skip', price: 'R$800' },
+                  { name: 'PDF Ideias Universalmente Úteis', price: 'R$300' },
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Gift className="w-5 h-5 text-blue-violet-600 shrink-0" />
-                    <span className="font-body text-body-s text-skip-neutral-800 font-medium">
-                      {item}
+                  <li key={i} className="flex items-start justify-between gap-3 w-full">
+                    <div className="flex items-start gap-3">
+                      <Gift className="w-5 h-5 text-blue-violet-600 shrink-0 mt-0.5" />
+                      <span className="font-body text-body-s text-skip-neutral-800 font-medium text-left">
+                        {item.name}
+                      </span>
+                    </div>
+                    <span className="font-body text-body-s text-red-400 font-semibold line-through whitespace-nowrap mt-0.5">
+                      {item.price}
                     </span>
                   </li>
                 ))}
-                <li className="flex items-start gap-3">
-                  <Gift className="w-5 h-5 text-blue-violet-600 shrink-0" />
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="font-body text-body-s text-skip-neutral-800 font-medium">
-                      2 Consultorias individuais gratuitas
-                    </span>
-                    <span className="px-2 py-0.5 rounded-full bg-red-50 text-red-600 text-[10px] font-semibold uppercase tracking-wider border border-red-100">
-                      exclusivo da live
-                    </span>
+                <li className="flex items-start justify-between gap-3 w-full">
+                  <div className="flex items-start gap-3">
+                    <Gift className="w-5 h-5 text-blue-violet-600 shrink-0 mt-0.5" />
+                    <div className="flex flex-wrap items-center gap-2 text-left">
+                      <span className="font-body text-body-s text-skip-neutral-800 font-medium">
+                        2 Consultorias individuais
+                      </span>
+                      <span className="px-2 py-0.5 rounded-full bg-red-50 text-red-600 text-[10px] font-semibold uppercase tracking-wider border border-red-100">
+                        exclusivo da live
+                      </span>
+                    </div>
                   </div>
+                  <span className="font-body text-body-s text-red-400 font-semibold line-through whitespace-nowrap mt-0.5">
+                    R$5.000
+                  </span>
                 </li>
               </ul>
             </div>

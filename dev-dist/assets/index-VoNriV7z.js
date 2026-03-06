@@ -34059,7 +34059,8 @@ function OfferSection({ directCheckout = false, ctaText = "Aproveitar Oferta" })
 										"Gerenciar versões",
 										"Integração com Banco de Dados (Supabase)",
 										"Remover badge do Skip",
-										"Suporte por e-mail"
+										"Suporte por e-mail",
+										"4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM"
 									].map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 										className: "flex items-start gap-3",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -34075,24 +34076,42 @@ function OfferSection({ directCheckout = false, ctaText = "Aproveitar Oferta" })
 									className: "font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-3",
 									children: "Bônus"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-									className: "flex flex-col gap-2",
-									children: [["4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM", "Templates front-end personalizados"].map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										className: "flex items-start gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "font-body text-body-s text-skip-neutral-800 font-medium",
-											children: item
+									className: "flex flex-col gap-3",
+									children: [[{
+										name: "Templates Skip",
+										price: "R$800"
+									}, {
+										name: "PDF Ideias Universalmente Úteis",
+										price: "R$300"
+									}].map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										className: "flex items-start justify-between gap-3 w-full",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-start gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-body text-body-s text-skip-neutral-800 font-medium text-left",
+												children: item.name
+											})]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "font-body text-body-s text-red-400 font-semibold line-through whitespace-nowrap mt-0.5",
+											children: item.price
 										})]
 									}, i$2)), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										className: "flex items-start gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex flex-wrap items-center gap-2",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "font-body text-body-s text-skip-neutral-800 font-medium",
-												children: "2 Consultorias individuais gratuitas"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "px-2 py-0.5 rounded-full bg-red-50 text-red-600 text-[10px] font-semibold uppercase tracking-wider border border-red-100",
-												children: "exclusivo da live"
+										className: "flex items-start justify-between gap-3 w-full",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-start gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex flex-wrap items-center gap-2 text-left",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "font-body text-body-s text-skip-neutral-800 font-medium",
+													children: "2 Consultorias individuais"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "px-2 py-0.5 rounded-full bg-red-50 text-red-600 text-[10px] font-semibold uppercase tracking-wider border border-red-100",
+													children: "exclusivo da live"
+												})]
 											})]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "font-body text-body-s text-red-400 font-semibold line-through whitespace-nowrap mt-0.5",
+											children: "R$5.000"
 										})]
 									})]
 								})]
@@ -34408,4 +34427,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B1yO3NVr.js.map
+//# sourceMappingURL=index-VoNriV7z.js.map
