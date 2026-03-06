@@ -2,7 +2,7 @@ import { Check, Gift, Shield, ArrowRight, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import consultoriaImgUrl from '@/assets/consultoria-individual-skip-f7cfb.webp'
-import mockOfferUrl from '@/assets/mock-offer-bf844.webp'
+import offerSkipUrl from '@/assets/offer-skip-85e8a.webp'
 import { LeadCaptureModal } from './LeadCaptureModal'
 
 export function OfferSection() {
@@ -139,7 +139,7 @@ export function OfferSection() {
           {/* Mockup */}
           <div className="flex items-center justify-center w-full group order-first lg:order-none">
             <img
-              src={mockOfferUrl}
+              src={offerSkipUrl}
               alt="Skip Offer Bundle"
               className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
             />

@@ -27390,7 +27390,7 @@ var Separator = import_react.forwardRef(({ className, orientation = "horizontal"
 }));
 Separator.displayName = Root$2.displayName;
 var consultoria_individual_skip_f7cfb_default = "/assets/consultoria-individual-skip-f7cfb-eDphXJlU.webp";
-var mock_offer_bf844_default = "/assets/mock-offer-bf844-BdKIRsEO.webp";
+var offer_skip_85e8a_default = "/assets/offer-skip-85e8a-BbbWg4m5.webp";
 var isCheckBoxInput = (element) => element.type === "checkbox";
 var isDateObject = (value) => value instanceof Date;
 var isNullOrUndefined = (value) => value == null;
@@ -34067,7 +34067,7 @@ function OfferSection() {
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "flex items-center justify-center w-full group order-first lg:order-none",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							src: mock_offer_bf844_default,
+							src: offer_skip_85e8a_default,
 							alt: "Skip Offer Bundle",
 							className: "w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
 						})
@@ -34319,4 +34319,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-pyAw93cy.js.map
+//# sourceMappingURL=index-CqEWLneT.js.map
