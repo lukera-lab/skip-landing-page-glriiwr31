@@ -11,7 +11,7 @@ export function OfferSection() {
     <section className="w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50">
       <div className="max-w-[1100px] mx-auto">
         {/* Section Header */}
-        <div className="mb-10 md:mb-12">
+        <div className="mb-10 md:mb-12 flex flex-col items-center text-center">
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3 block">
             Lançamento
           </span>

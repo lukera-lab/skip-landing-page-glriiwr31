@@ -33819,7 +33819,7 @@ function OfferSection() {
 			className: "max-w-[1100px] mx-auto",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mb-10 md:mb-12",
+					className: "mb-10 md:mb-12 flex flex-col items-center text-center",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3 block",
 						children: "Lançamento"
@@ -34305,4 +34305,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DEn0NPvn.js.map
+//# sourceMappingURL=index-DG_Jgn23.js.map
