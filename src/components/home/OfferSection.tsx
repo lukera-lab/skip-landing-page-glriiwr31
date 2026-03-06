@@ -7,7 +7,7 @@ import { LeadCaptureModal } from './LeadCaptureModal'
 
 export function OfferSection({
   directCheckout = false,
-  ctaText = 'Quero o Skip Basic',
+  ctaText = 'Aproveitar Oferta',
 }: {
   directCheckout?: boolean
   ctaText?: string

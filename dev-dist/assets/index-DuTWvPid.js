@@ -33922,7 +33922,7 @@ function LeadCaptureModal({ children }) {
 		})]
 	});
 }
-function OfferSection({ directCheckout = false, ctaText = "Quero o Skip Basic" }) {
+function OfferSection({ directCheckout = false, ctaText = "Aproveitar Oferta" }) {
 	const handleDirectCheckout = () => {
 		window.location.href = "https://go.adapta.org/checkout/skip-basic";
 	};
@@ -34347,4 +34347,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-gjOBWb7h.js.map
+//# sourceMappingURL=index-DuTWvPid.js.map
