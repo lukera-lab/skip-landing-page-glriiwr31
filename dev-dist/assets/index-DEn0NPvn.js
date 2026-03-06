@@ -27204,18 +27204,14 @@ function TemplatesSection() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "max-w-[600px] mx-auto text-center mb-16 animate-fade-in-up",
+					className: "max-w-[600px] mx-auto text-center mb-10 md:mb-16 animate-fade-in-up",
 					style: {
 						animationDelay: "100ms",
 						animationFillMode: "both"
 					},
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SectionTitle, {
-						className: "font-heading font-semibold text-white mb-6 tracking-tight",
-						children: [
-							"Tenha sistemas internos prontos ",
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
-							" para implementar hoje"
-						]
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
+						className: "font-heading font-semibold text-white mb-4 tracking-tight",
+						children: "Tenha sistemas internos prontos para implementar hoje"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "font-body text-body-m text-skip-neutral-900 max-w-[480px] mx-auto",
 						children: "Explore nossa biblioteca de templates e personalize o que mais fizer sentido para a sua operação"
@@ -33821,191 +33817,204 @@ function OfferSection() {
 		className: "w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] mx-auto",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-8 md:gap-12 items-center",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-6 flex flex-col transition-all duration-300 hover:shadow-lg",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-5",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "relative flex h-2 w-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-red-500" })]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "font-mono text-mono-xs tracking-[0.2em] text-red-500 uppercase font-semibold",
-								children: "Oferta da Live"
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "font-heading text-h4 font-semibold text-skip-neutral-300 mb-1",
-							children: "Skip Basic"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-baseline gap-1.5 mb-1",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "font-heading text-[40px] leading-none font-bold text-skip-neutral-300",
-								children: "R$ 199"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "font-heading text-xl font-bold text-skip-neutral-300",
-								children: "/mês"
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-body-xs text-skip-neutral-800 mb-5",
-							children: "cobrado anualmente"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-							className: "flex flex-col gap-2 mb-5",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-									className: "font-body text-body-s text-skip-neutral-700",
-									children: "01 licença"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-									className: "flex items-center gap-1.5 font-body text-body-s text-skip-neutral-700",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "800 créditos mensais" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipProvider, {
-										delayDuration: 100,
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Tooltip, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipTrigger, {
-											asChild: true,
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, { className: "w-4 h-4 text-skip-neutral-900 cursor-help transition-colors hover:text-blue-violet-600" })
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipContent, {
-											className: "bg-skip-neutral-300 text-white border-skip-neutral-400",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-												className: "font-body text-body-xs",
-												children: "10 créditos por build · 3 créditos por chat"
-											})
-										})] })
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-									className: "font-body text-body-s text-skip-neutral-700",
-									children: "SLA 5 dias úteis"
-								})
-							]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Separator, { className: "bg-skip-neutral-1350 mb-5" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mb-5",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-3",
-								children: "Incluso"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-								className: "flex flex-col gap-2",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mb-10 md:mb-12",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3 block",
+						children: "Lançamento"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "font-heading text-[28px] md:text-[40px] leading-[1.1] font-semibold text-skip-neutral-100 tracking-tight",
+						children: "Oferta Exclusiva"
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-8 md:gap-12 items-center",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "bg-white rounded-[20px] border border-skip-neutral-1350 shadow-elevation p-5 flex flex-col transition-all duration-300 hover:shadow-lg",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative flex h-2 w-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-red-500" })]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "font-mono text-mono-xs tracking-[0.2em] text-red-500 uppercase font-semibold",
+									children: "Oferta da Live"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								className: "font-heading text-h4 font-semibold text-skip-neutral-300 mb-1",
+								children: "Skip Basic"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-baseline gap-1.5 mb-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "font-heading text-[40px] leading-none font-bold text-skip-neutral-300",
+									children: "R$ 199"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "font-heading text-xl font-bold text-skip-neutral-300",
+									children: "/mês"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "font-body text-body-xs text-skip-neutral-800 mb-5",
+								children: "cobrado anualmente"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+								className: "flex flex-col gap-2 mb-5",
 								children: [
-									"Projetos ilimitados",
-									"Baixar código-fonte",
-									"Gerenciar versões",
-									"Integração com Banco de Dados (Supabase)",
-									"Remover badge do Skip",
-									"Suporte por e-mail"
-								].map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-									className: "flex items-start gap-3",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "font-body text-body-s text-skip-neutral-800",
-										children: item
-									})]
-								}, i$2))
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mb-6",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-3",
-								children: "Bônus"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-								className: "flex flex-col gap-2",
-								children: [["4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM", "Templates front-end personalizados"].map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-									className: "flex items-start gap-3",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "font-body text-body-s text-skip-neutral-800 font-medium",
-										children: item
-									})]
-								}, i$2)), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-									className: "flex items-start gap-3",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex flex-wrap items-center gap-2",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+										className: "font-body text-body-s text-skip-neutral-700",
+										children: "01 licença"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										className: "flex items-center gap-1.5 font-body text-body-s text-skip-neutral-700",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "800 créditos mensais" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipProvider, {
+											delayDuration: 100,
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Tooltip, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipTrigger, {
+												asChild: true,
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, { className: "w-4 h-4 text-skip-neutral-900 cursor-help transition-colors hover:text-blue-violet-600" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipContent, {
+												className: "bg-skip-neutral-300 text-white border-skip-neutral-400",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+													className: "font-body text-body-xs",
+													children: "10 créditos por build · 3 créditos por chat"
+												})
+											})] })
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+										className: "font-body text-body-s text-skip-neutral-700",
+										children: "SLA 5 dias úteis"
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Separator, { className: "bg-skip-neutral-1350 mb-5" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "mb-5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-3",
+									children: "Incluso"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+									className: "flex flex-col gap-2",
+									children: [
+										"Projetos ilimitados",
+										"Baixar código-fonte",
+										"Gerenciar versões",
+										"Integração com Banco de Dados (Supabase)",
+										"Remover badge do Skip",
+										"Suporte por e-mail"
+									].map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										className: "flex items-start gap-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "font-body text-body-s text-skip-neutral-800",
+											children: item
+										})]
+									}, i$2))
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "mb-6",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "font-mono text-mono-xs tracking-[0.1em] text-blue-violet-600 uppercase font-semibold mb-3",
+									children: "Bônus"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+									className: "flex flex-col gap-2",
+									children: [["4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM", "Templates front-end personalizados"].map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										className: "flex items-start gap-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 											className: "font-body text-body-s text-skip-neutral-800 font-medium",
-											children: "2 Consultorias individuais gratuitas"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "px-2 py-0.5 rounded-full bg-red-50 text-red-600 text-[10px] font-semibold uppercase tracking-wider border border-red-100",
-											children: "exclusivo da live"
+											children: item
+										})]
+									}, i$2)), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										className: "flex items-start gap-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gift, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex flex-wrap items-center gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-body text-body-s text-skip-neutral-800 font-medium",
+												children: "2 Consultorias individuais gratuitas"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "px-2 py-0.5 rounded-full bg-red-50 text-red-600 text-[10px] font-semibold uppercase tracking-wider border border-red-100",
+												children: "exclusivo da live"
+											})]
 										})]
 									})]
 								})]
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mt-auto flex flex-col items-center gap-3 w-full",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "relative group w-full",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LeadCaptureModal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-									className: "relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto",
-									children: ["Quero o Skip Basic", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
-								}) })]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex items-center gap-3 text-skip-neutral-900 mt-1",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-1.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shield, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "font-body text-body-xs font-medium uppercase tracking-wide",
-											children: "30 dias de garantia"
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1 h-1 rounded-full bg-skip-neutral-1100" }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-1.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Lock, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "font-body text-body-xs font-medium uppercase tracking-wide",
-											children: "Compra segura"
-										})]
-									})
-								]
-							})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "mt-auto flex flex-col items-center gap-3 w-full",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative group w-full",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LeadCaptureModal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+										className: "relative w-full font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5 py-3 h-auto",
+										children: ["Quero o Skip Basic", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+									}) })]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-3 text-skip-neutral-900 mt-1",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center gap-1.5",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shield, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide",
+												children: "30 dias de garantia"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1 h-1 rounded-full bg-skip-neutral-1100" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center gap-1.5",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Lock, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide",
+												children: "Compra segura"
+											})]
+										})
+									]
+								})]
+							})
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex items-center justify-center w-full group order-first lg:order-none",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: mock_offer_bf844_default,
+							alt: "Skip Offer Bundle",
+							className: "w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
 						})
-					]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "flex items-center justify-center w-full group bg-skip-neutral-1500 rounded-[20px] p-6",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-						src: mock_offer_bf844_default,
-						alt: "Skip Offer Bundle",
-						className: "w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
-					})
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mt-8 md:mt-12 bg-skip-neutral-300 border border-skip-neutral-1350 rounded-[20px] overflow-hidden flex flex-col md:flex-row items-stretch w-full shadow-md",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "w-full md:w-[60%] flex flex-col justify-center p-8 md:p-10 lg:p-12 relative z-20",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-6",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "relative flex h-2 w-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-red-500" })]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "font-mono text-mono-xs tracking-[0.2em] text-red-500 uppercase font-semibold",
-								children: "Exclusivo da Live"
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-heading text-heading-s font-semibold text-white",
-							children: "2 Consultorias Individuais Gratuitas"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-2 font-body text-body-s text-skip-neutral-900",
-							children: "Sessões individuais com foco total no seu projeto — para sair com clareza, próximos passos definidos e resultados reais mais rápido."
-						})
-					]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "w-full md:w-[40%] relative min-h-[250px] md:min-h-0 bg-skip-neutral-1350 overflow-hidden",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-skip-neutral-300 to-transparent z-10" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-						src: consultoria_individual_skip_f7cfb_default,
-						alt: "Consultoria Individual na Prática",
-						className: "absolute inset-0 w-full h-full object-cover z-0"
 					})]
-				})]
-			})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mt-8 md:mt-12 bg-skip-neutral-300 border border-skip-neutral-1350 rounded-[20px] overflow-hidden flex flex-col md:flex-row items-stretch w-full shadow-md",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "w-full md:w-[60%] flex flex-col justify-center p-5 md:p-10 lg:p-12 relative z-20",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 w-fit mb-6",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative flex h-2 w-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-red-500" })]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "font-mono text-mono-xs tracking-[0.2em] text-red-500 uppercase font-semibold",
+									children: "Exclusivo da Live"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "font-heading text-[22px] md:text-[28px] leading-[1.1] font-semibold text-white",
+								children: "2 Consultorias Individuais Gratuitas"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-2 font-body text-body-s text-skip-neutral-900",
+								children: "Sessões individuais com foco total no seu projeto — para sair com clareza, próximos passos definidos e resultados reais mais rápido."
+							})
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "w-full md:w-[40%] relative min-h-[250px] md:min-h-0 bg-skip-neutral-1350 overflow-hidden",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-skip-neutral-300 to-transparent z-10" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: consultoria_individual_skip_f7cfb_default,
+							alt: "Consultoria Individual na Prática",
+							className: "absolute inset-0 w-full h-full object-cover z-0"
+						})]
+					})]
+				})
+			]
 		})
 	});
 }
@@ -34035,7 +34044,7 @@ function GuaranteeSection() {
 					children: "Teste o Skip por 30 dias sem compromisso"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "font-body text-sm md:text-base text-skip-neutral-800 leading-[1.3] max-w-[520px]",
+					className: "font-body text-sm md:text-base text-skip-neutral-1000 leading-[1.3] max-w-[520px]",
 					children: "Se você não ficar satisfeito com o resultado, devolvemos 100% do valor investido — sem perguntas, sem burocracia."
 				})
 			]
@@ -34175,7 +34184,7 @@ function Index() {
 							children: "DEMONSTRAÇÃO"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-4 max-w-[50rem] tracking-tight",
+							className: "font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-4 max-w-[42rem] tracking-tight",
 							children: "Veja na prática como o Skip transforma seus processos"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -34296,4 +34305,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BSSpllqM.js.map
+//# sourceMappingURL=index-DEn0NPvn.js.map
