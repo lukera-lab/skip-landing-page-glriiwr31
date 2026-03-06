@@ -34213,6 +34213,17 @@ function Live() {
 		]
 	});
 }
+function LiveB() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex flex-col min-h-screen",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HelloBar, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeroSection, { isLive: true }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OfferSection, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GuaranteeSection, {})
+		]
+	});
+}
 var NotFound = () => {
 	const location = useLocation();
 	(0, import_react.useEffect)(() => {
@@ -34303,13 +34314,20 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster$1, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Routes, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Route, {
 			element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layout, {}),
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
-				path: "/",
-				element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Index, {})
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
-				path: "/live",
-				element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Live, {})
-			})]
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+					path: "/",
+					element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Index, {})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+					path: "/live",
+					element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Live, {})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+					path: "/live-b",
+					element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LiveB, {})
+				})
+			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
 			path: "*",
 			element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(NotFound_default, {})
@@ -34319,4 +34337,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CqEWLneT.js.map
+//# sourceMappingURL=index-DqD0yy-W.js.map
