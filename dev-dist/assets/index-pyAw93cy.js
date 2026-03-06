@@ -24203,13 +24203,22 @@ function HeroSection({ isLive = false }) {
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 								onClick: handleScrollToOffer,
 								className: "relative w-full sm:w-auto font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5",
-								children: [isLive ? "Aproveitar Condição Exclusiva" : "Explorar Soluções", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+								children: ["Aproveitar Condição Exclusiva", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
 							})]
 						})
 					})
 				]
 			})
 		]
+	});
+}
+function HelloBar({ text = "Condição Exclusiva da live de lançamento" }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: "w-full bg-red-600 text-white py-2.5 px-4 text-center relative z-50 shadow-[0_0_20px_rgba(220,38,38,0.8)] flex items-center justify-center border-b border-red-500/50",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+			className: "font-heading text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.2em] drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-pulse",
+			children: text
+		})
 	});
 }
 var DirectionContext = import_react.createContext(void 0);
@@ -26588,6 +26597,17 @@ function PlatformSection() {
 							hasFrame: false
 						})
 					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "flex justify-center mt-12 md:mt-16",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative group",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+							onClick: () => document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" }),
+							className: "relative font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5",
+							children: ["Aproveitar Condição Exclusiva", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+						})]
+					})
 				})
 			]
 		})
@@ -26960,69 +26980,83 @@ function FeaturesSection() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			ref,
 			className: "max-w-[1100px] mx-auto flex flex-col items-center",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: cn("text-center mb-10 md:mb-16 flex flex-col items-center w-full transition-all duration-700", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3",
-						children: "FUNCIONALIDADES"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
-						className: "font-heading font-semibold text-skip-neutral-300 mb-4 max-w-3xl tracking-[-0.02em]",
-						children: "Skip não apenas gera código"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "font-body text-lg md:text-xl text-skip-neutral-800 max-w-[580px] mx-auto leading-[1.3]",
-						children: "Ele gerencia todo o ciclo de vida de uma aplicação robusta, desde o banco de dados até a interface"
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: cn("text-center mb-10 md:mb-16 flex flex-col items-center w-full transition-all duration-700", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3",
+							children: "FUNCIONALIDADES"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
+							className: "font-heading font-semibold text-skip-neutral-300 mb-4 max-w-3xl tracking-[-0.02em]",
+							children: "Skip não apenas gera código"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "font-body text-lg md:text-xl text-skip-neutral-800 max-w-[580px] mx-auto leading-[1.3]",
+							children: "Ele gerencia todo o ciclo de vida de uma aplicação robusta, desde o banco de dados até a interface"
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full auto-rows-[minmax(340px,auto)] transition-all duration-700 delay-200", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+							className: "md:col-span-2 lg:col-span-2 min-h-[380px]",
+							title: "Agentes de Desenvolvimento",
+							description: "Cada comando ativa uma equipe completa de IA: um PM desenha a interface, um Tech Lead define a arquitetura, um Dev escreve o código e um QA testa antes de entregar.",
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AgentsMockup, {})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+							className: "md:col-span-1 lg:col-span-1 min-h-[380px]",
+							title: "Banco de Dados Profissional",
+							description: "Seus sistemas rodam sobre o Supabase — a mesma infraestrutura usada por Mozilla, Johnson & Johnson e mais de 1.000 startups do Y Combinator. Enterprise desde o primeiro dia.",
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DatabaseMockup, {})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+							className: "col-span-1 min-h-[340px]",
+							title: "Autenticação Pronta para Uso",
+							description: "Email, Google e outros provedores configurados em minutos, com controle de permissões e segurança inclusos. Seu time acessa no mesmo dia.",
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuthMockup, {})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+							className: "col-span-1 min-h-[340px]",
+							title: "IA Conectada ao Seu Sistema",
+							description: "Integre os principais modelos de IA diretamente nos seus processos. O Skip gerencia as chaves de API com segurança — sem precisar de um desenvolvedor para fazer a conexão.",
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AIMockup, {})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+							className: "col-span-1 min-h-[340px]",
+							title: "Publicação com Um Clique",
+							description: "URL própria, SSL e hospedagem otimizada instantaneamente. Para mais controle, domínio personalizado e sincronização com GitHub inclusos.",
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DeployMockup, {})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+							className: "md:col-span-2 lg:col-span-2 min-h-[380px]",
+							title: "Código Limpo e Escalável",
+							description: "React, TypeScript e Tailwind CSS — o mesmo stack do Netflix, Airbnb e Spotify. Seu sistema nasce performático, seguro e nos padrões da indústria global.",
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CodeMockup, {})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
+							className: "md:col-span-1 lg:col-span-1 min-h-[380px]",
+							title: "Modo Consultor",
+							description: "Antes de construir, converse. Discuta arquitetura, valide ideias e peça sugestões — sem iniciar nada. Um consultor técnico disponível 24h.",
+							mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChatMockup, {})
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "flex justify-center mt-12 md:mt-16",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative group",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+							onClick: () => document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" }),
+							className: "relative font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5",
+							children: ["Aproveitar Condição Exclusiva", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+						})]
 					})
-				]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full auto-rows-[minmax(340px,auto)] transition-all duration-700 delay-200", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"),
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "md:col-span-2 lg:col-span-2 min-h-[380px]",
-						title: "Agentes de Desenvolvimento",
-						description: "Cada comando ativa uma equipe completa de IA: um PM desenha a interface, um Tech Lead define a arquitetura, um Dev escreve o código e um QA testa antes de entregar.",
-						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AgentsMockup, {})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "md:col-span-1 lg:col-span-1 min-h-[380px]",
-						title: "Banco de Dados Profissional",
-						description: "Seus sistemas rodam sobre o Supabase — a mesma infraestrutura usada por Mozilla, Johnson & Johnson e mais de 1.000 startups do Y Combinator. Enterprise desde o primeiro dia.",
-						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DatabaseMockup, {})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "col-span-1 min-h-[340px]",
-						title: "Autenticação Pronta para Uso",
-						description: "Email, Google e outros provedores configurados em minutos, com controle de permissões e segurança inclusos. Seu time acessa no mesmo dia.",
-						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuthMockup, {})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "col-span-1 min-h-[340px]",
-						title: "IA Conectada ao Seu Sistema",
-						description: "Integre os principais modelos de IA diretamente nos seus processos. O Skip gerencia as chaves de API com segurança — sem precisar de um desenvolvedor para fazer a conexão.",
-						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AIMockup, {})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "col-span-1 min-h-[340px]",
-						title: "Publicação com Um Clique",
-						description: "URL própria, SSL e hospedagem otimizada instantaneamente. Para mais controle, domínio personalizado e sincronização com GitHub inclusos.",
-						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DeployMockup, {})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "md:col-span-2 lg:col-span-2 min-h-[380px]",
-						title: "Código Limpo e Escalável",
-						description: "React, TypeScript e Tailwind CSS — o mesmo stack do Netflix, Airbnb e Spotify. Seu sistema nasce performático, seguro e nos padrões da indústria global.",
-						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CodeMockup, {})
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BentoCard, {
-						className: "md:col-span-1 lg:col-span-1 min-h-[380px]",
-						title: "Modo Consultor",
-						description: "Antes de construir, converse. Discuta arquitetura, valide ideias e peça sugestões — sem iniciar nada. Um consultor técnico disponível 24h.",
-						mockup: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChatMockup, {})
-					})
-				]
-			})]
+				})
+			]
 		})
 	});
 }
@@ -27308,6 +27342,17 @@ function TemplatesSection() {
 							})
 						]
 					}, template.label))
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "flex justify-center mt-12 md:mt-16",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative group",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+							onClick: () => document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" }),
+							className: "relative font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5",
+							children: ["Aproveitar Condição Exclusiva", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 text-white transition-transform group-hover:translate-x-1" })]
+						})]
+					})
 				})
 			]
 		})
@@ -34048,7 +34093,7 @@ function OfferSection() {
 								children: "2 Consultorias Individuais Gratuitas"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "mt-3 md:mt-4 font-body text-body-s text-skip-neutral-900 flex flex-col gap-3",
+								className: "mt-3 md:mt-4 font-body text-body-s text-skip-neutral-1300 flex flex-col gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "2 calls individuais com um consultor especializado em Skip que irá te ajudar a construir os seus sistemas de forma relâmpago." }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "mb-2",
 									children: "Nessas calls, você poderá:"
@@ -34108,55 +34153,24 @@ function GuaranteeSection() {
 		})]
 	});
 }
-var LOGOS = [
-	{
-		name: "microsoft",
-		width: "w-24"
-	},
-	{
-		name: "facebook",
-		width: "w-24"
-	},
-	{
-		name: "ambev",
-		width: "w-20"
-	},
-	{
-		name: "ifood",
-		width: "w-16"
-	},
-	{
-		name: "brasil paralelo",
-		width: "w-32"
-	}
-];
 function Index() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "flex flex-col min-h-screen",
 		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HelloBar, { text: "Condição exclusiva de lançamento" }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeroSection, {}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "w-full px-5 py-12 relative z-10",
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "w-full px-5 py-6 relative z-10",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "max-w-[1100px] mx-auto animate-fade-in",
-					style: {
-						animationDelay: "500ms",
-						animationFillMode: "both"
-					},
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center justify-center gap-2 mb-8 text-center",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-fuchsia-500 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-body text-xs sm:text-sm text-skip-neutral-800",
-							children: "Skip é uma solução da Adapta, maior empresa de IA do Brasil, confiada por empresas como:"
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 opacity-40 hover:opacity-100 transition-opacity duration-500",
-						children: LOGOS.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							src: `https://img.usecurling.com/i?q=${encodeURIComponent(logo.name)}%20logo&color=solid-black`,
-							alt: `${logo.name} logo`,
-							className: `h-5 sm:h-6 md:h-8 object-contain transition-all duration-300 grayscale hover:grayscale-0 hover:scale-105 cursor-default ${logo.width}`
-						}, logo.name))
-					})]
+					className: "max-w-[1100px] mx-auto flex items-center gap-4",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "flex-1 h-px bg-skip-neutral-1350" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "font-body text-xs text-skip-neutral-900 text-center shrink-0",
+							children: "Skip é uma solução da Adapta, maior empresa de IA do Brasil"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "flex-1 h-px bg-skip-neutral-1350" })
+					]
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
@@ -34186,15 +34200,6 @@ function Index() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OfferSection, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GuaranteeSection, {})
 		]
-	});
-}
-function HelloBar() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "w-full bg-red-600 text-white py-2.5 px-4 text-center relative z-50 shadow-[0_0_20px_rgba(220,38,38,0.8)] flex items-center justify-center border-b border-red-500/50",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-			className: "font-heading text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.2em] drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-pulse",
-			children: "Condição Exclusiva da live de lançamento"
-		})
 	});
 }
 function Live() {
@@ -34314,4 +34319,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DDPsoXu6.js.map
+//# sourceMappingURL=index-pyAw93cy.js.map
