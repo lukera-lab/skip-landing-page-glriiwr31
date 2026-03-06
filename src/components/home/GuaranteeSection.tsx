@@ -29,17 +29,17 @@ export function GuaranteeSection() {
         </div>
 
         {/* Label */}
-        <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-6">
+        <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-2 md:mb-3">
           Garantia
         </span>
 
         {/* Main Title */}
-        <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1em] font-semibold text-white mb-6 tracking-tight">
+        <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1em] font-semibold text-white mb-4 tracking-tight">
           Teste o Skip por 30 dias sem compromisso
         </h2>
 
         {/* Subtitle */}
-        <p className="font-body text-sm md:text-base text-skip-neutral-800 leading-relaxed max-w-[520px]">
+        <p className="font-body text-sm md:text-base text-skip-neutral-800 leading-[1.3] max-w-[520px]">
           Se você não ficar satisfeito com o resultado, devolvemos 100% do valor investido — sem
           perguntas, sem burocracia.
         </p>

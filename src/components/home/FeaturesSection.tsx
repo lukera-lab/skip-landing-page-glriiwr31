@@ -25,7 +25,7 @@ function BentoCard({
   return (
     <div
       className={cn(
-        'rounded-[20px] border border-skip-neutral-1350 p-4 md:p-7 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500',
+        'rounded-[20px] border border-skip-neutral-1350 p-4 md:p-5 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500',
         className,
       )}
     >
@@ -33,10 +33,10 @@ function BentoCard({
         {mockup}
       </div>
       <div className="mt-auto relative z-10">
-        <h3 className="font-heading text-body-l font-semibold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors">
+        <h3 className="font-heading text-body-l leading-[1.1] font-semibold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors">
           {title}
         </h3>
-        <p className="font-body text-skip-neutral-800 leading-relaxed text-[15px]">{description}</p>
+        <p className="font-body text-skip-neutral-800 leading-[1.3] text-[15px]">{description}</p>
       </div>
     </div>
   )
@@ -67,13 +67,13 @@ export function FeaturesSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
           )}
         >
-          <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-3 md:mb-6">
+          <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3">
             FUNCIONALIDADES
           </span>
-          <SectionTitle className="font-heading font-semibold text-skip-neutral-300 mb-6 max-w-3xl tracking-tight">
+          <SectionTitle className="font-heading font-semibold text-skip-neutral-300 mb-4 max-w-3xl tracking-tight">
             Skip não apenas gera código
           </SectionTitle>
-          <p className="font-body text-lg md:text-xl text-skip-neutral-800 max-w-2xl mx-auto">
+          <p className="font-body text-lg md:text-xl text-skip-neutral-800 max-w-[580px] mx-auto leading-[1.3]">
             Ele gerencia todo o ciclo de vida de uma aplicação robusta, desde o banco de dados até a
             interface
           </p>

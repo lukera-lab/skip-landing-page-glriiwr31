@@ -54,7 +54,7 @@ export default function Index() {
 
           {/* Subheadline */}
           <p
-            className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[560px] mx-auto animate-fade-in-up leading-relaxed mt-4"
+            className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4"
             style={{ animationDelay: '100ms', animationFillMode: 'both' }}
           >
             Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a
@@ -116,13 +116,13 @@ export default function Index() {
       {/* Demonstration Section */}
       <section className="w-full py-16 md:py-24 px-5 relative z-10 bg-skip-neutral-1550">
         <div className="max-w-[1100px] mx-auto flex flex-col items-center text-center">
-          <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-4 md:mb-6">
+          <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3">
             DEMONSTRAÇÃO
           </span>
-          <h2 className="font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-3 md:mb-5 max-w-4xl tracking-tight">
+          <h2 className="font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-4 max-w-[50rem] tracking-tight">
             Veja na prática como o Skip transforma seus processos
           </h2>
-          <p className="font-body text-body-l text-skip-neutral-800">
+          <p className="font-body text-body-l text-skip-neutral-800 leading-[1.3]">
             Escolha um processo abaixo e compare como era antes e como fica com o Skip
           </p>
 

@@ -71,10 +71,10 @@ function WorkflowStep({
         <span className="font-mono text-sm tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-2">
           {step}
         </span>
-        <h3 className="font-heading text-[20px] md:text-[28px] font-semibold text-skip-neutral-100 mb-2 tracking-tight">
+        <h3 className="font-heading text-[20px] md:text-[28px] leading-[1.1] font-semibold text-skip-neutral-1200 mb-2 tracking-tight">
           {title}
         </h3>
-        <p className="font-body text-body-m text-skip-neutral-900">{description}</p>
+        <p className="font-body text-body-m text-skip-neutral-900 leading-[1.3]">{description}</p>
       </div>
 
       {/* Mockup Container - Always second in DOM */}
@@ -128,18 +128,18 @@ export function PlatformSection() {
     <section className="w-full py-24 px-5 relative z-10 bg-skip-neutral-300 overflow-hidden">
       <div className="max-w-[1100px] mx-auto flex flex-col items-center">
         {/* Headline */}
-        <div className="text-center mb-12 flex flex-col items-center animate-fade-in-up relative z-20 w-full">
-          <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
+        <div className="text-center mb-8 md:mb-12 flex flex-col items-center animate-fade-in-up relative z-20 w-full">
+          <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3">
             PLATAFORMA
           </span>
-          <SectionTitle className="font-display font-semibold text-white mb-8 max-w-[800px] mx-auto text-center tracking-tight">
+          <SectionTitle className="font-display font-semibold text-white mb-4 max-w-[800px] mx-auto text-center tracking-tight">
             Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos
           </SectionTitle>
         </div>
 
         {/* Platform Mockup */}
         <div
-          className="w-full max-w-4xl relative animate-fade-in-up flex justify-center items-center z-10"
+          className="w-full max-w-4xl relative animate-fade-in-up flex justify-center items-center z-10 mb-8 md:mb-12"
           style={{ animationDelay: '200ms' }}
         >
           {/* Radial Glow */}
