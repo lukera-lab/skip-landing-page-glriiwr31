@@ -1693,6 +1693,9 @@ h6{
 .gap-8{
   gap: 2rem;
 }
+.gap-\[16px\]{
+  gap: 16px;
+}
 .-space-x-1\.5 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(-0.375rem * var(--tw-space-x-reverse));
