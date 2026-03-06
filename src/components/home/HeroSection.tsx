@@ -6,8 +6,12 @@ import logoWhiteUrl from '@/assets/logo-skip-white-1b688.webp'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import liveBgUrl from '@/assets/bg-dark-e697d.webp'
 import { VideoPlayer } from './VideoPlayer'
+import { useLocation } from 'react-router-dom'
 
 export function HeroSection({ isLive = false }: { isLive?: boolean }) {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
+
   const handleScrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -81,13 +85,19 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
           eficiência dos processos da sua empresa
         </p>
 
-        {/* Embedded Video Player Component */}
-        <div
-          className="w-full max-w-4xl mx-auto mb-10 animate-fade-in-up"
-          style={{ animationDelay: '200ms', animationFillMode: 'both' }}
-        >
-          <VideoPlayer videoId="Tu1EdYbs32Q" label="Assista a live de lançamento" isLive={isLive} />
-        </div>
+        {/* Embedded Video Player Component (Only on Home Page) */}
+        {isHomePage && (
+          <div
+            className="w-full max-w-4xl mx-auto mb-10 animate-fade-in-up"
+            style={{ animationDelay: '200ms', animationFillMode: 'both' }}
+          >
+            <VideoPlayer
+              videoId="Tu1EdYbs32Q"
+              label="Assista a live de lançamento"
+              isLive={isLive}
+            />
+          </div>
+        )}
 
         {/* Call to Actions */}
         <div

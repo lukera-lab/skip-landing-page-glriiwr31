@@ -24149,6 +24149,7 @@ function VideoPlayer({ videoId, label, isLive, className }) {
 	});
 }
 function HeroSection({ isLive = false }) {
+	const isHomePage = useLocation().pathname === "/";
 	const handleScrollToOffer = () => {
 		document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" });
 	};
@@ -24200,7 +24201,7 @@ function HeroSection({ isLive = false }) {
 						},
 						children: "Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a eficiência dos processos da sua empresa"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					isHomePage && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "w-full max-w-4xl mx-auto mb-10 animate-fade-in-up",
 						style: {
 							animationDelay: "200ms",
@@ -34459,4 +34460,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B32djW-B.js.map
+//# sourceMappingURL=index-BSknLkUN.js.map
