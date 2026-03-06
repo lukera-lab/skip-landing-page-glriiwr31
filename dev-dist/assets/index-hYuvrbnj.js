@@ -34290,12 +34290,15 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 	children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TooltipProvider, { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster$1, {}),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Routes, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Routes, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Route, {
 			element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layout, {}),
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
 				path: "/",
 				element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Index, {})
-			})
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
+				path: "/live",
+				element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Index, {})
+			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Route, {
 			path: "*",
 			element: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(NotFound_default, {})
@@ -34305,4 +34308,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-DG_Jgn23.js.map
+//# sourceMappingURL=index-hYuvrbnj.js.map
