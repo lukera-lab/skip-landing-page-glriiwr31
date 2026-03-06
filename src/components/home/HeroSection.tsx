@@ -14,7 +14,7 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
   return (
     <section
       className={cn(
-        'relative flex flex-col items-center py-32 w-full h-[600px] md:h-[800px]',
+        'relative flex flex-col items-center py-32 w-full min-h-[600px] md:min-h-[800px]',
         isLive && 'bg-skip-neutral-300 overflow-hidden',
       )}
     >
@@ -93,6 +93,33 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
           >
             [Sem o custo de contratar desenvolvedores]
           </span>
+        </div>
+
+        {/* Embedded Video Player */}
+        <div
+          className="w-full max-w-4xl mx-auto mb-10 animate-fade-in-up"
+          style={{ animationDelay: '250ms', animationFillMode: 'both' }}
+        >
+          <div className="flex flex-col items-center gap-4">
+            <span
+              className={cn(
+                'font-mono text-sm md:text-base tracking-[0.1em] uppercase font-semibold',
+                isLive ? 'text-white' : 'text-skip-neutral-300',
+              )}
+            >
+              Assista a live de lançamento
+            </span>
+            <div className="w-full rounded-[20px] overflow-hidden border border-skip-neutral-1350/50 shadow-2xl relative aspect-video bg-black/5 backdrop-blur-sm ring-1 ring-white/10">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/Tu1EdYbs32Q?autoplay=0"
+                title="Live de Lançamento"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
         </div>
 
         {/* Call to Actions */}

@@ -1132,9 +1132,6 @@ h6{
 .h-\[320px\]{
   height: 320px;
 }
-.h-\[600px\]{
-  height: 600px;
-}
 .h-\[var\(--radix-navigation-menu-viewport-height\)\]{
   height: var(--radix-navigation-menu-viewport-height);
 }
@@ -1194,6 +1191,9 @@ h6{
 }
 .min-h-\[400px\]{
   min-height: 400px;
+}
+.min-h-\[600px\]{
+  min-height: 600px;
 }
 .min-h-\[80px\]{
   min-height: 80px;
@@ -2083,6 +2083,9 @@ h6{
 }
 .bg-background{
   background-color: hsl(var(--background));
+}
+.bg-black\/5{
+  background-color: rgb(0 0 0 / 0.05);
 }
 .bg-black\/80{
   background-color: rgb(0 0 0 / 0.8);
@@ -3227,6 +3230,9 @@ h6{
 }
 .ring-skip-neutral-600\/40{
   --tw-ring-color: rgb(55 54 66 / 0.4);
+}
+.ring-white\/10{
+  --tw-ring-color: rgb(255 255 255 / 0.1);
 }
 .ring-offset-background{
   --tw-ring-offset-color: hsl(var(--background));
@@ -4843,11 +4849,11 @@ h6{
   .md\:h-5{
     height: 1.25rem;
   }
-  .md\:h-\[800px\]{
-    height: 800px;
-  }
   .md\:min-h-0{
     min-height: 0px;
+  }
+  .md\:min-h-\[800px\]{
+    min-height: 800px;
   }
   .md\:w-5{
     width: 1.25rem;

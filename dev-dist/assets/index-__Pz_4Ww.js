@@ -24134,7 +24134,7 @@ function HeroSection({ isLive = false }) {
 		document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" });
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		className: cn("relative flex flex-col items-center py-32 w-full h-[600px] md:h-[800px]", isLive && "bg-skip-neutral-300 overflow-hidden"),
+		className: cn("relative flex flex-col items-center py-32 w-full min-h-[600px] md:min-h-[800px]", isLive && "bg-skip-neutral-300 overflow-hidden"),
 		children: [
 			isLive && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.06)_0%,transparent_60%)] pointer-events-none" }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -24190,6 +24190,30 @@ function HeroSection({ isLive = false }) {
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: cn("font-mono text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold", isLive ? "text-blue-violet-500" : "text-blue-violet-600"),
 							children: "[Sem o custo de contratar desenvolvedores]"
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-full max-w-4xl mx-auto mb-10 animate-fade-in-up",
+						style: {
+							animationDelay: "250ms",
+							animationFillMode: "both"
+						},
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col items-center gap-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: cn("font-mono text-sm md:text-base tracking-[0.1em] uppercase font-semibold", isLive ? "text-white" : "text-skip-neutral-300"),
+								children: "Assista a live de lançamento"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-full rounded-[20px] overflow-hidden border border-skip-neutral-1350/50 shadow-2xl relative aspect-video bg-black/5 backdrop-blur-sm ring-1 ring-white/10",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
+									className: "absolute inset-0 w-full h-full",
+									src: "https://www.youtube.com/embed/Tu1EdYbs32Q?autoplay=0",
+									title: "Live de Lançamento",
+									frameBorder: "0",
+									allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+									allowFullScreen: true
+								})
+							})]
 						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -34428,4 +34452,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BU4Mh-0D.js.map
+//# sourceMappingURL=index-__Pz_4Ww.js.map
