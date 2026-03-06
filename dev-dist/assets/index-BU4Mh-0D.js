@@ -34060,7 +34060,8 @@ function OfferSection({ directCheckout = false, ctaText = "Aproveitar Oferta" })
 										"Integração com Banco de Dados (Supabase)",
 										"Remover badge do Skip",
 										"Suporte por e-mail",
-										"4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM"
+										"4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM",
+										"Sistemas Internos da Adapta"
 									].map((item, i$2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 										className: "flex items-start gap-3",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-5 h-5 text-blue-violet-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -34427,4 +34428,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-VoNriV7z.js.map
+//# sourceMappingURL=index-BU4Mh-0D.js.map

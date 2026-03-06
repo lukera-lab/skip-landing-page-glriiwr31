@@ -78,6 +78,7 @@ export function OfferSection({
                   'Remover badge do Skip',
                   'Suporte por e-mail',
                   '4 Cursos: Planilha em App, Sistema de RH, Plataforma de Cursos e CRM',
+                  'Sistemas Internos da Adapta',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-violet-600 shrink-0" />
