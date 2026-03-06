@@ -24140,8 +24140,10 @@ function VideoPlayer({ videoId, label, isLive, className }) {
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
 				className: "absolute inset-0 w-full h-full",
 				src: `https://www.youtube.com/embed/${videoId}?si=NDcTkUC6QI0MXniV`,
-				title: label || "Video Player",
-				allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+				title: "YouTube video player",
+				frameBorder: "0",
+				allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+				referrerPolicy: "strict-origin-when-cross-origin",
 				allowFullScreen: true
 			})
 		})]
@@ -34459,4 +34461,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-B8QEehe8.js.map
+//# sourceMappingURL=index-Bt67O1dK.js.map
