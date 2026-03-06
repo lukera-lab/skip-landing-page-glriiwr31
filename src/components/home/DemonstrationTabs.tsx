@@ -56,7 +56,7 @@ function ComparisonLayout({ tabId }: { tabId: string }) {
             Antes
           </Badge>
         </div>
-        <div className="rounded-2xl border border-skip-neutral-1350 bg-white p-6 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]">
+        <div className="rounded-2xl border border-skip-neutral-1350 bg-white p-[18px] md:p-6 flex flex-col flex-1 transition-all duration-500 shadow-sm hover:shadow-md overflow-hidden min-h-[400px]">
           {tabId === 'inventario' ? (
             <InventoryAntes />
           ) : tabId === 'vendas' ? (
@@ -77,7 +77,7 @@ function ComparisonLayout({ tabId }: { tabId: string }) {
           </Badge>
         </div>
         <div className="rounded-2xl p-[1px] bg-gradient-to-br from-blue-violet-400 to-fuchsia-400 shadow-lg shadow-blue-violet-500/20 flex flex-col flex-1 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-blue-violet-500/30 min-h-[400px]">
-          <div className="bg-white rounded-[15px] p-6 flex flex-col flex-1 w-full overflow-hidden">
+          <div className="bg-white rounded-[15px] p-[18px] md:p-6 flex flex-col flex-1 w-full overflow-hidden">
             {tabId === 'inventario' ? (
               <InventoryDepois />
             ) : tabId === 'vendas' ? (

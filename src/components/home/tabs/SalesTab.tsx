@@ -66,7 +66,7 @@ export function SalesAntes() {
           <span className="text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono">
             Processo Padrão
           </span>
-          <h3 className="text-xl font-heading font-semibold text-skip-neutral-100">
+          <h3 className="text-lg md:text-xl font-heading font-semibold text-skip-neutral-100">
             Treinamento de Vendas no Achômetro
           </h3>
         </div>
@@ -76,7 +76,7 @@ export function SalesAntes() {
               <div className="rounded-full bg-red-50 p-1 shrink-0 mt-0.5">
                 <X className="w-3 h-3 text-red-400" />
               </div>
-              <span className="text-sm text-skip-neutral-600 leading-tight">{item}</span>
+              <span className="text-sm text-skip-neutral-900 leading-tight">{item}</span>
             </li>
           ))}
         </ul>
@@ -198,7 +198,7 @@ export function SalesDepois() {
           <span className="text-mono-xs uppercase text-blue-violet-600 text-[10px] tracking-wider font-semibold font-mono">
             Sistema Skip
           </span>
-          <h3 className="text-xl font-heading font-semibold text-skip-neutral-100">
+          <h3 className="text-lg md:text-xl font-heading font-semibold text-skip-neutral-100">
             Sales Intelligence Platform
           </h3>
         </div>
@@ -208,7 +208,7 @@ export function SalesDepois() {
               <div className="rounded-full bg-blue-violet-50 p-1 shrink-0 mt-0.5">
                 <Check className="w-3 h-3 text-blue-violet-400" />
               </div>
-              <span className="text-sm text-skip-neutral-600 leading-tight">{item}</span>
+              <span className="text-sm text-skip-neutral-900 leading-tight">{item}</span>
             </li>
           ))}
         </ul>

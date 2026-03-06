@@ -34,7 +34,7 @@ export function GuaranteeSection() {
         </span>
 
         {/* Main Title */}
-        <h2 className="font-heading text-3xl md:text-4xl lg:text-[40px] leading-[1.2] font-semibold text-white mb-6 tracking-tight">
+        <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1em] font-semibold text-white mb-6 tracking-tight">
           Teste o Skip por 30 dias sem compromisso
         </h2>
 

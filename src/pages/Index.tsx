@@ -35,13 +35,13 @@ export default function Index() {
 
         <div className="max-w-[1100px] w-full flex flex-col items-center text-center mx-auto px-5 relative z-10">
           {/* Logo Icon */}
-          <div className="flex items-center justify-center mb-10 animate-fade-in-down">
+          <div className="flex items-center justify-center mb-6 animate-fade-in-down">
             <img src={logoUrl} alt="Skip Logo" className="h-10 sm:h-12 w-auto drop-shadow-sm" />
           </div>
 
           {/* Main Headline */}
           <h2
-            className="font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-bold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full sm:max-w-none mx-auto"
+            className="font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full sm:max-w-none mx-auto"
             style={{ animationFillMode: 'both' }}
           >
             O criador de Sistemas Internos <br className="hidden md:block" />
@@ -54,7 +54,7 @@ export default function Index() {
 
           {/* Subheadline */}
           <p
-            className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[560px] mx-auto animate-fade-in-up leading-relaxed mt-4 md:line-clamp-2"
+            className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[560px] mx-auto animate-fade-in-up leading-relaxed mt-4"
             style={{ animationDelay: '100ms', animationFillMode: 'both' }}
           >
             Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a
@@ -114,19 +114,17 @@ export default function Index() {
       </section>
 
       {/* Demonstration Section */}
-      <section className="w-full py-24 px-5 relative z-10 bg-skip-neutral-1550">
+      <section className="w-full py-16 md:py-24 px-5 relative z-10 bg-skip-neutral-1550">
         <div className="max-w-[1100px] mx-auto flex flex-col items-center text-center">
-          <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
+          <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-4 md:mb-6">
             DEMONSTRAÇÃO
           </span>
-          <div className="flex flex-col items-center gap-[16px] w-full">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-semibold text-skip-neutral-100 max-w-4xl leading-tight tracking-tight">
-              Veja na prática como o Skip transforma seus processos
-            </h2>
-            <p className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-2xl">
-              Escolha um processo abaixo e compare como era antes e como fica com o Skip
-            </p>
-          </div>
+          <h2 className="font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-3 md:mb-5 max-w-4xl tracking-tight">
+            Veja na prática como o Skip transforma seus processos
+          </h2>
+          <p className="font-body text-body-l text-skip-neutral-800">
+            Escolha um processo abaixo e compare como era antes e como fica com o Skip
+          </p>
 
           <DemonstrationTabs />
         </div>

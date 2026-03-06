@@ -25,7 +25,7 @@ function BentoCard({
   return (
     <div
       className={cn(
-        'rounded-[20px] border border-skip-neutral-1350 p-7 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500',
+        'rounded-[20px] border border-skip-neutral-1350 p-4 md:p-7 bg-white shadow-sm flex flex-col overflow-hidden relative group hover:shadow-md transition-all duration-500',
         className,
       )}
     >
@@ -33,7 +33,7 @@ function BentoCard({
         {mockup}
       </div>
       <div className="mt-auto relative z-10">
-        <h3 className="font-heading text-body-l font-bold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors">
+        <h3 className="font-heading text-body-l font-semibold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors">
           {title}
         </h3>
         <p className="font-body text-skip-neutral-800 leading-relaxed text-[15px]">{description}</p>
@@ -58,19 +58,19 @@ export function FeaturesSection() {
   }, [])
 
   return (
-    <section className="w-full py-24 md:py-32 px-5 relative z-10 bg-white">
+    <section className="w-full py-16 md:py-32 px-5 relative z-10 bg-white">
       <div ref={ref} className="max-w-[1100px] mx-auto flex flex-col items-center">
         {/* Header */}
         <div
           className={cn(
-            'text-center mb-16 flex flex-col items-center w-full transition-all duration-700',
+            'text-center mb-10 md:mb-16 flex flex-col items-center w-full transition-all duration-700',
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
           )}
         >
-          <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
+          <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-3 md:mb-6">
             FUNCIONALIDADES
           </span>
-          <SectionTitle className="font-heading font-bold text-skip-neutral-300 mb-6 max-w-3xl tracking-tight">
+          <SectionTitle className="font-heading font-semibold text-skip-neutral-300 mb-6 max-w-3xl tracking-tight">
             Skip não apenas gera código
           </SectionTitle>
           <p className="font-body text-lg md:text-xl text-skip-neutral-800 max-w-2xl mx-auto">

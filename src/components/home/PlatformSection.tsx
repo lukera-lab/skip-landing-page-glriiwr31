@@ -68,10 +68,10 @@ function WorkflowStep({
           isTextLeft ? 'md:col-start-1 md:pr-12 lg:pr-20' : 'md:col-start-2 md:pl-12 lg:pl-20',
         )}
       >
-        <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-4">
+        <span className="font-mono text-sm tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-2">
           {step}
         </span>
-        <h3 className="font-heading text-3xl md:text-[36px] font-semibold text-white mb-4 tracking-tight">
+        <h3 className="font-heading text-[20px] md:text-[28px] font-semibold text-skip-neutral-100 mb-2 tracking-tight">
           {title}
         </h3>
         <p className="font-body text-body-m text-skip-neutral-900">{description}</p>
@@ -80,7 +80,7 @@ function WorkflowStep({
       {/* Mockup Container - Always second in DOM */}
       <div
         className={cn(
-          'w-[calc(100%-24px)] ml-6 md:w-full md:ml-0 mt-8 md:mt-0 transition-all duration-1000 ease-out z-10 md:delay-150',
+          'w-[calc(100%-24px)] ml-6 md:w-full md:ml-0 mt-5 md:mt-0 transition-all duration-1000 ease-out z-10 md:delay-150',
           isVisible
             ? 'opacity-100 translate-x-0 translate-y-0'
             : cn(
@@ -132,9 +132,8 @@ export function PlatformSection() {
           <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-6">
             PLATAFORMA
           </span>
-          <SectionTitle className="font-display font-semibold text-white mb-8 max-w-[680px] mx-auto text-center tracking-tight">
-            Skip é a primeira plataforma de IA agêntica para criação de{' '}
-            <br className="hidden md:block" /> Sistemas Internos
+          <SectionTitle className="font-display font-semibold text-white mb-8 max-w-[800px] mx-auto text-center tracking-tight">
+            Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos
           </SectionTitle>
         </div>
 
@@ -155,20 +154,10 @@ export function PlatformSection() {
           </div>
         </div>
 
-        {/* How it works Title */}
-        <div
-          className="w-full mt-[80px] mb-20 flex justify-center animate-fade-in-up"
-          style={{ animationDelay: '300ms' }}
-        >
-          <SectionTitle className="font-heading font-semibold text-white text-center tracking-tight">
-            Como funciona?
-          </SectionTitle>
-        </div>
-
         {/* Workflow Steps with Timeline */}
         <div
           ref={containerRef}
-          className="w-full flex flex-col gap-24 md:gap-32 relative z-20 pt-4 pb-12"
+          className="w-full flex flex-col gap-16 md:gap-24 relative z-20 pt-4 pb-12"
         >
           {/* Background Timeline Line */}
           <div className="absolute left-0 md:left-1/2 top-4 bottom-0 w-1 bg-skip-neutral-600/50 md:-translate-x-1/2 rounded-full [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)]" />
