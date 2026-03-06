@@ -6,12 +6,8 @@ import logoWhiteUrl from '@/assets/logo-skip-white-1b688.webp'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import liveBgUrl from '@/assets/bg-dark-e697d.webp'
 import { VideoPlayer } from './VideoPlayer'
-import { useLocation } from 'react-router-dom'
 
-export function HeroSection({ isLive = false }: { isLive?: boolean }) {
-  const location = useLocation()
-  const isHomePage = location.pathname === '/'
-
+export function HeroSection({ isLive = false, showVideo = false }: { isLive?: boolean; showVideo?: boolean }) {
   const handleScrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -76,7 +72,7 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
         {/* Subheadline */}
         <p
           className={cn(
-            'font-body text-base sm:text-lg lg:text-xl max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4 mb-10',
+            'font-body text-base sm:text-lg lg:text-xl max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4 mb-2',
             isLive ? 'text-skip-neutral-1000' : 'text-skip-neutral-800',
           )}
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
@@ -85,8 +81,23 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
           eficiência dos processos da sua empresa
         </p>
 
-        {/* Embedded Video Player Component (Only on Home Page) */}
-        {isHomePage && (
+        {/* Disclaimer */}
+        <div
+          className="mb-10 animate-fade-in-up"
+          style={{ animationDelay: '150ms', animationFillMode: 'both' }}
+        >
+          <span
+            className={cn(
+              'font-mono text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold',
+              isLive ? 'text-blue-violet-500' : 'text-blue-violet-600',
+            )}
+          >
+            [Sem o custo de contratar desenvolvedores]
+          </span>
+        </div>
+
+        {/* Embedded Video Player Component */}
+        {showVideo && (
           <div
             className="w-full max-w-4xl mx-auto mb-10 animate-fade-in-up"
             style={{ animationDelay: '200ms', animationFillMode: 'both' }}
@@ -116,20 +127,6 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
           </div>
         </div>
 
-        {/* Disclaimer */}
-        <div
-          className="mt-6 animate-fade-in-up"
-          style={{ animationDelay: '400ms', animationFillMode: 'both' }}
-        >
-          <span
-            className={cn(
-              'font-mono text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold',
-              isLive ? 'text-blue-violet-500' : 'text-blue-violet-600',
-            )}
-          >
-            [Sem o custo de contratar desenvolvedores]
-          </span>
-        </div>
       </div>
     </section>
   )

@@ -13,7 +13,7 @@ export default function Index() {
     <div className="flex flex-col min-h-screen">
       <HelloBar text="Condição exclusiva de lançamento" />
       {/* Hero Section */}
-      <HeroSection />
+      <HeroSection showVideo />
 
       {/* Adapta Divider */}
       <div className="w-full px-5 py-6 relative z-10">
