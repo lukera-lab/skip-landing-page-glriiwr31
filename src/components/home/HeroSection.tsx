@@ -5,8 +5,6 @@ import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
 import logoWhiteUrl from '@/assets/logo-skip-white-1b688.webp'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import liveBgUrl from '@/assets/bg-dark-e697d.webp'
-import { VideoPlayer } from './VideoPlayer'
-
 export function HeroSection({ isLive = false, showVideo = false }: { isLive?: boolean; showVideo?: boolean }) {
   const handleScrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })
@@ -96,17 +94,29 @@ export function HeroSection({ isLive = false, showVideo = false }: { isLive?: bo
           </span>
         </div>
 
-        {/* Embedded Video Player Component */}
+        {/* Embedded Video */}
         {showVideo && (
           <div
             className="w-full max-w-4xl mx-auto mb-10 animate-fade-in-up"
             style={{ animationDelay: '200ms', animationFillMode: 'both' }}
           >
-            <VideoPlayer
-              videoId="Tu1EdYbs32Q"
-              label="Assista a live de lançamento"
-              isLive={isLive}
-            />
+            <span className={cn(
+              'block text-center font-mono text-sm md:text-base tracking-[0.1em] uppercase font-semibold mb-4',
+              isLive ? 'text-white' : 'text-skip-neutral-300',
+            )}>
+              Assista a live de lançamento
+            </span>
+            <div className="relative w-full rounded-[20px] overflow-hidden border border-skip-neutral-1350/50 shadow-2xl" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/Tu1EdYbs32Q?si=NDcTkUC6QI0MXniV"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         )}
 
