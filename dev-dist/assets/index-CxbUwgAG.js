@@ -24148,7 +24148,7 @@ Button.displayName = "Button";
 var logo_skip_black_85aeb_default = "/assets/logo-skip-black-85aeb-Cld7xQRZ.svg";
 var logo_skip_white_1b688_default = "/assets/logo-skip-white-1b688-D7aboadx.webp";
 var bg_hero_skip_8319b_default = "/assets/bg-hero-skip-8319b-BMwiMWBh.webp";
-var image_3468c_default = "/assets/image-3468c-DKktFnLe.png";
+var bg_dark_e697d_default = "/assets/bg-dark-e697d-DGeGyp3_.webp";
 function HeroSection({ isLive = false }) {
 	const handleScrollToOffer = () => {
 		document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" });
@@ -24160,7 +24160,7 @@ function HeroSection({ isLive = false }) {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-					src: isLive ? image_3468c_default : bg_hero_skip_8319b_default,
+					src: isLive ? bg_dark_e697d_default : bg_hero_skip_8319b_default,
 					alt: "Hero Background",
 					className: cn("absolute inset-0 w-full h-full object-cover object-top", isLive && "opacity-30"),
 					"aria-hidden": "true"
@@ -34379,4 +34379,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-BCi83kJw.js.map
+//# sourceMappingURL=index-CxbUwgAG.js.map

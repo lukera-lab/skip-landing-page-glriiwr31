@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
 import logoWhiteUrl from '@/assets/logo-skip-white-1b688.webp'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
-import liveBgUrl from '@/assets/image-3468c.png'
+import liveBgUrl from '@/assets/bg-dark-e697d.webp'
 
 export function HeroSection({ isLive = false }: { isLive?: boolean }) {
   const handleScrollToOffer = () => {
