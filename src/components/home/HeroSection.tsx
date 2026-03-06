@@ -1,16 +1,28 @@
+import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
+import liveBgUrl from '@/assets/image-3468c.png'
 
-export function HeroSection() {
+export function HeroSection({ isLive = false }: { isLive?: boolean }) {
   return (
-    <section className="relative flex flex-col items-center py-32 w-full h-[600px] md:h-[800px]">
+    <section
+      className={cn(
+        'relative flex flex-col items-center py-32 w-full h-[600px] md:h-[800px]',
+        isLive && 'bg-skip-neutral-300 overflow-hidden',
+      )}
+    >
+      {/* Background radial gradient for subtle depth - applied in Live version for consistency */}
+      {isLive && (
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.06)_0%,transparent_60%)] pointer-events-none" />
+      )}
+
       {/* Background wrapper with fade-out mask */}
       <div className="absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,white_80%,transparent_100%)] pointer-events-none overflow-hidden">
         {/* Hero Background Image */}
         <img
-          src={heroBgUrl}
+          src={isLive ? liveBgUrl : heroBgUrl}
           alt="Hero Background"
           className="absolute inset-0 w-full h-full object-cover object-top"
           aria-hidden="true"
@@ -20,12 +32,19 @@ export function HeroSection() {
       <div className="max-w-[1100px] w-full flex flex-col items-center text-center mx-auto px-5 relative z-10">
         {/* Logo Icon */}
         <div className="flex items-center justify-center mb-6 animate-fade-in-down">
-          <img src={logoUrl} alt="Skip Logo" className="h-10 sm:h-12 w-auto drop-shadow-sm" />
+          <img
+            src={logoUrl}
+            alt="Skip Logo"
+            className={cn('h-10 sm:h-12 w-auto drop-shadow-sm', isLive && 'brightness-0 invert')}
+          />
         </div>
 
         {/* Main Headline */}
         <h2
-          className="font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-tight text-skip-neutral-0 animate-fade-in-up w-full sm:max-w-none mx-auto"
+          className={cn(
+            'font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-tight animate-fade-in-up w-full sm:max-w-none mx-auto',
+            isLive ? 'text-white' : 'text-skip-neutral-0',
+          )}
           style={{ animationFillMode: 'both' }}
         >
           O criador de Sistemas Internos <br className="hidden md:block" />
@@ -38,7 +57,10 @@ export function HeroSection() {
 
         {/* Subheadline */}
         <p
-          className="font-body text-base sm:text-lg lg:text-xl text-skip-neutral-800 max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4"
+          className={cn(
+            'font-body text-base sm:text-lg lg:text-xl max-w-[640px] mx-auto animate-fade-in-up leading-[1.3] mt-4',
+            isLive ? 'text-skip-neutral-1000' : 'text-skip-neutral-800',
+          )}
           style={{ animationDelay: '100ms', animationFillMode: 'both' }}
         >
           Mande suas ideias para o Skip. Receba Sistemas Internos perfeitos para melhorar a
@@ -50,7 +72,12 @@ export function HeroSection() {
           className="mb-10 mt-0 animate-fade-in-up"
           style={{ animationDelay: '200ms', animationFillMode: 'both' }}
         >
-          <span className="font-mono text-[10px] sm:text-xs tracking-[0.15em] text-blue-violet-600 uppercase font-semibold">
+          <span
+            className={cn(
+              'font-mono text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold',
+              isLive ? 'text-blue-violet-500' : 'text-blue-violet-600',
+            )}
+          >
             [Sem o custo de contratar desenvolvedores]
           </span>
         </div>

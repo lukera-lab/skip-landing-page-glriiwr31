@@ -7,7 +7,7 @@ export default function Live() {
   return (
     <div className="flex flex-col min-h-screen">
       <HelloBar />
-      <HeroSection />
+      <HeroSection isLive />
       <OfferSection />
       <GuaranteeSection />
     </div>
