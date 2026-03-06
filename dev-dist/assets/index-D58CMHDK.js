@@ -19104,22 +19104,6 @@ var Gift = createLucideIcon("gift", [
 		key: "1hberx"
 	}]
 ]);
-var Info = createLucideIcon("info", [
-	["circle", {
-		cx: "12",
-		cy: "12",
-		r: "10",
-		key: "1mglay"
-	}],
-	["path", {
-		d: "M12 16v-4",
-		key: "1dtifu"
-	}],
-	["path", {
-		d: "M12 8h.01",
-		key: "e9boi3"
-	}]
-]);
 var LayoutDashboard = createLucideIcon("layout-dashboard", [
 	["rect", {
 		width: "7",
@@ -24006,12 +23990,8 @@ function getHullPresorted(points) {
 	else return upperHull.concat(lowerHull);
 }
 var Provider = TooltipProvider$1;
-var Root3 = Tooltip$1;
-var Trigger$2 = TooltipTrigger$1;
 var Content2 = TooltipContent$1;
 var TooltipProvider = Provider;
-var Tooltip = Root3;
-var TooltipTrigger = Trigger$2;
 var TooltipContent = import_react.forwardRef(({ className, sideOffset = 4, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Content2, {
 	ref,
 	sideOffset,
@@ -24178,7 +24158,7 @@ function HeroSection({ isLive = false }) {
 						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						className: cn("font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-tight animate-fade-in-up w-full sm:max-w-none mx-auto", isLive ? "text-white" : "text-skip-neutral-0"),
+						className: cn("font-display text-[28px] leading-[1.1em] sm:text-5xl lg:text-[64px] sm:leading-[1.1] font-semibold tracking-[-0.02em] animate-fade-in-up w-full sm:max-w-none mx-auto", isLive ? "text-white" : "text-skip-neutral-0"),
 						style: { animationFillMode: "both" },
 						children: [
 							"O criador de Sistemas Internos ",
@@ -26502,7 +26482,7 @@ function WorkflowStep({ step, title, description, layout, mockup, hasFrame = tru
 						children: step
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-						className: "font-heading text-[20px] md:text-[28px] leading-[1.1] font-semibold text-skip-neutral-1200 mb-2 tracking-tight",
+						className: "font-heading text-[20px] md:text-[28px] leading-[1.1] font-semibold text-skip-neutral-1200 mb-2 tracking-[-0.02em]",
 						children: title
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -26540,7 +26520,7 @@ function PlatformSection() {
 		return () => window.removeEventListener("scroll", handleScroll$1);
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "w-full py-24 px-5 relative z-10 bg-skip-neutral-300 overflow-hidden",
+		className: "w-full py-12 md:py-24 px-5 relative z-10 bg-skip-neutral-300 overflow-hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] mx-auto flex flex-col items-center",
 			children: [
@@ -26550,7 +26530,7 @@ function PlatformSection() {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3",
 						children: "PLATAFORMA"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
-						className: "font-display font-semibold text-white mb-4 max-w-[800px] mx-auto text-center tracking-tight",
+						className: "font-display font-semibold text-white mb-4 max-w-[800px] mx-auto text-center tracking-[-0.02em]",
 						children: "Skip é a primeira plataforma de IA agêntica para criação de Sistemas Internos"
 					})]
 				}),
@@ -26953,7 +26933,7 @@ function BentoCard({ className, title, description, mockup }) {
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mt-auto relative z-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-				className: "font-heading text-body-l leading-[1.1] font-semibold text-skip-neutral-300 mb-3 tracking-tight group-hover:text-blue-violet-700 transition-colors",
+				className: "font-heading text-body-l leading-[1.1] font-semibold text-skip-neutral-300 mb-3 tracking-[-0.02em] group-hover:text-blue-violet-700 transition-colors",
 				children: title
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "font-body text-skip-neutral-800 leading-[1.3] text-[15px]",
@@ -26976,7 +26956,7 @@ function FeaturesSection() {
 		return () => observer.disconnect();
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "w-full py-16 md:py-32 px-5 relative z-10 bg-white",
+		className: "w-full py-12 md:py-32 px-5 relative z-10 bg-white",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			ref,
 			className: "max-w-[1100px] mx-auto flex flex-col items-center",
@@ -26988,7 +26968,7 @@ function FeaturesSection() {
 						children: "FUNCIONALIDADES"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
-						className: "font-heading font-semibold text-skip-neutral-300 mb-4 max-w-3xl tracking-tight",
+						className: "font-heading font-semibold text-skip-neutral-300 mb-4 max-w-3xl tracking-[-0.02em]",
 						children: "Skip não apenas gera código"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -27271,7 +27251,7 @@ var TEMPLATES = [
 ];
 function TemplatesSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "w-full py-24 md:py-32 px-5 bg-skip-neutral-300 relative z-10 overflow-hidden",
+		className: "w-full py-12 md:py-32 px-5 bg-skip-neutral-300 relative z-10 overflow-hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] mx-auto flex flex-col items-center",
 			children: [
@@ -27295,7 +27275,7 @@ function TemplatesSection() {
 						animationFillMode: "both"
 					},
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionTitle, {
-						className: "font-heading font-semibold text-white mb-4 tracking-tight",
+						className: "font-heading font-semibold text-white mb-4 tracking-[-0.02em]",
 						children: "Tenha sistemas internos prontos para implementar hoje"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "font-body text-body-m text-skip-neutral-900 max-w-[480px] mx-auto",
@@ -33900,7 +33880,7 @@ function LeadCaptureModal({ children }) {
 function OfferSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "offer",
-		className: "w-full py-24 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50",
+		className: "w-full py-12 md:py-32 px-5 bg-white relative z-10 border-t border-skip-neutral-1350/50",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[1100px] mx-auto",
 			children: [
@@ -33910,7 +33890,7 @@ function OfferSection() {
 						className: "font-mono text-mono-xs tracking-[0.2em] text-blue-violet-600 uppercase font-semibold mb-2 md:mb-3 block",
 						children: "Lançamento"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-heading text-[28px] md:text-[40px] leading-[1.1] font-semibold text-skip-neutral-100 tracking-tight",
+						className: "font-heading text-[28px] md:text-[40px] leading-[1.1] font-semibold text-skip-neutral-100 tracking-[-0.02em]",
 						children: "Oferta Exclusiva"
 					})]
 				}),
@@ -33949,32 +33929,13 @@ function OfferSection() {
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 								className: "flex flex-col gap-2 mb-5",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-										className: "font-body text-body-s text-skip-neutral-700",
-										children: "01 licença"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										className: "flex items-center gap-1.5 font-body text-body-s text-skip-neutral-700",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "800 créditos mensais" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipProvider, {
-											delayDuration: 100,
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Tooltip, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipTrigger, {
-												asChild: true,
-												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, { className: "w-4 h-4 text-skip-neutral-900 cursor-help transition-colors hover:text-blue-violet-600" })
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TooltipContent, {
-												className: "bg-skip-neutral-300 text-white border-skip-neutral-400",
-												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-													className: "font-body text-body-xs",
-													children: "10 créditos por build · 3 créditos por chat"
-												})
-											})] })
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
-										className: "font-body text-body-s text-skip-neutral-700",
-										children: "SLA 5 dias úteis"
-									})
-								]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+									className: "font-body text-body-s text-skip-neutral-700",
+									children: "01 licença"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+									className: "font-body text-body-s text-skip-neutral-700",
+									children: "800 créditos mensais"
+								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Separator, { className: "bg-skip-neutral-1350 mb-5" }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -34042,7 +34003,7 @@ function OfferSection() {
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "flex items-center gap-1.5",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shield, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide",
+												className: "font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide whitespace-nowrap",
 												children: "30 dias de garantia"
 											})]
 										}),
@@ -34050,7 +34011,7 @@ function OfferSection() {
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "flex items-center gap-1.5",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Lock, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide",
+												className: "font-body text-[12px] md:text-body-xs font-medium uppercase tracking-wide whitespace-nowrap",
 												children: "Compra segura"
 											})]
 										})
@@ -34116,7 +34077,7 @@ function OfferSection() {
 }
 function GuaranteeSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		className: "w-full py-24 md:py-32 px-5 bg-skip-neutral-300 relative z-10 flex flex-col items-center justify-center text-center overflow-hidden",
+		className: "w-full py-12 md:py-32 px-5 bg-skip-neutral-300 relative z-10 flex flex-col items-center justify-center text-center overflow-hidden",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.06)_0%,transparent_60%)] pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-[600px] w-full flex flex-col items-center relative z-20 animate-fade-in-up",
 			style: { animationFillMode: "both" },
@@ -34136,7 +34097,7 @@ function GuaranteeSection() {
 					children: "Garantia"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					className: "font-heading text-[28px] md:text-[40px] leading-[1.1em] font-semibold text-white mb-4 tracking-tight",
+					className: "font-heading text-[28px] md:text-[40px] leading-[1.1em] font-semibold text-white mb-4 tracking-[-0.02em]",
 					children: "Teste o Skip por 30 dias sem compromisso"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -34199,7 +34160,7 @@ function Index() {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "w-full py-16 md:py-24 px-5 relative z-10 bg-skip-neutral-1550",
+				className: "w-full py-12 md:py-24 px-5 relative z-10 bg-skip-neutral-1550",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-[1100px] mx-auto flex flex-col items-center text-center",
 					children: [
@@ -34208,7 +34169,7 @@ function Index() {
 							children: "DEMONSTRAÇÃO"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-4 max-w-[42rem] tracking-tight",
+							className: "font-heading text-[28px] leading-[1.1] md:text-[40px] font-semibold text-skip-neutral-100 mb-4 max-w-[42rem] tracking-[-0.02em]",
 							children: "Veja na prática como o Skip transforma seus processos"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -34277,43 +34238,17 @@ var NotFound = () => {
 var NotFound_default = NotFound;
 function Footer() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
-		className: "border-t border-skip-neutral-1350 py-8 bg-skip-neutral-1500 mt-auto",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "flex items-center gap-2",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-					src: "https://img.usecurling.com/i?q=colorful%203d%20cube&shape=fill&color=gray",
-					alt: "Skip",
-					className: "h-5 w-5 grayscale opacity-50"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-					className: "font-body text-body-xs text-skip-neutral-900",
-					children: [
-						"© ",
-						(/* @__PURE__ */ new Date()).getFullYear(),
-						" Skip. Todos os direitos reservados."
-					]
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "flex items-center justify-center gap-6",
+		className: "border-t border-skip-neutral-500 py-8 bg-skip-neutral-300 mt-auto",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+				className: "font-body text-body-xs text-skip-neutral-1000",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-						to: "/",
-						className: "font-body text-body-xs text-skip-neutral-900 hover:text-skip-neutral-400 transition-colors",
-						children: "Termos"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-						to: "/",
-						className: "font-body text-body-xs text-skip-neutral-900 hover:text-skip-neutral-400 transition-colors",
-						children: "Privacidade"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-						to: "/",
-						className: "font-body text-body-xs text-skip-neutral-900 hover:text-skip-neutral-400 transition-colors",
-						children: "Contato"
-					})
+					"© ",
+					(/* @__PURE__ */ new Date()).getFullYear(),
+					" Skip. Todos os direitos reservados."
 				]
-			})]
+			})
 		})
 	});
 }
@@ -34379,4 +34314,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CxbUwgAG.js.map
+//# sourceMappingURL=index-D58CMHDK.js.map
