@@ -24146,6 +24146,7 @@ var Button = import_react.forwardRef(({ className, variant, size: size$3, asChil
 });
 Button.displayName = "Button";
 var logo_skip_black_85aeb_default = "/assets/logo-skip-black-85aeb-Cld7xQRZ.svg";
+var logo_skip_white_1b688_default = "/assets/logo-skip-white-1b688-D7aboadx.webp";
 var bg_hero_skip_8319b_default = "/assets/bg-hero-skip-8319b-BMwiMWBh.webp";
 var image_3468c_default = "/assets/image-3468c-DKktFnLe.png";
 function HeroSection({ isLive = false }) {
@@ -24158,7 +24159,7 @@ function HeroSection({ isLive = false }) {
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					src: isLive ? image_3468c_default : bg_hero_skip_8319b_default,
 					alt: "Hero Background",
-					className: "absolute inset-0 w-full h-full object-cover object-top",
+					className: cn("absolute inset-0 w-full h-full object-cover object-top", isLive && "opacity-30"),
 					"aria-hidden": "true"
 				})
 			}),
@@ -24168,9 +24169,9 @@ function HeroSection({ isLive = false }) {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "flex items-center justify-center mb-6 animate-fade-in-down",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							src: logo_skip_black_85aeb_default,
+							src: isLive ? logo_skip_white_1b688_default : logo_skip_black_85aeb_default,
 							alt: "Skip Logo",
-							className: cn("h-10 sm:h-12 w-auto drop-shadow-sm", isLive && "brightness-0 invert")
+							className: "h-10 sm:h-12 w-auto drop-shadow-sm"
 						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
@@ -34363,4 +34364,4 @@ var App = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrowserRouter, {
 var App_default = App;
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App_default, {}));
 
-//# sourceMappingURL=index-CfAT9pga.js.map
+//# sourceMappingURL=index-CFkzcz9t.js.map

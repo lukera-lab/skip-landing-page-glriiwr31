@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
+import logoWhiteUrl from '@/assets/logo-skip-white-1b688.webp'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import liveBgUrl from '@/assets/image-3468c.png'
 
@@ -24,7 +25,10 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
         <img
           src={isLive ? liveBgUrl : heroBgUrl}
           alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className={cn(
+            'absolute inset-0 w-full h-full object-cover object-top',
+            isLive && 'opacity-30',
+          )}
           aria-hidden="true"
         />
       </div>
@@ -33,9 +37,9 @@ export function HeroSection({ isLive = false }: { isLive?: boolean }) {
         {/* Logo Icon */}
         <div className="flex items-center justify-center mb-6 animate-fade-in-down">
           <img
-            src={logoUrl}
+            src={isLive ? logoWhiteUrl : logoUrl}
             alt="Skip Logo"
-            className={cn('h-10 sm:h-12 w-auto drop-shadow-sm', isLive && 'brightness-0 invert')}
+            className="h-10 sm:h-12 w-auto drop-shadow-sm"
           />
         </div>
 
