@@ -26,7 +26,11 @@ export function OfferSection() {
 
         {/* Headline */}
         <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1] font-semibold text-white tracking-[-0.02em] mb-4 max-w-[600px]">
-          Tudo que você vai ter acesso
+          Dê um{' '}
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-violet-600 to-fuchsia-600">
+            Skip
+          </span>{' '}
+          no trabalho chato
         </h2>
 
         {/* Subtitle */}
