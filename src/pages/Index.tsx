@@ -4,16 +4,14 @@ import { HowItWorksSection } from '@/components/home/HowItWorksSection'
 import { DemonstrationTabs } from '@/components/home/DemonstrationTabs'
 import { PlatformSection } from '@/components/home/PlatformSection'
 import { FeaturesSection } from '@/components/home/FeaturesSection'
-import { TemplatesSection } from '@/components/home/TemplatesSection'
 import { OfferSection } from '@/components/home/OfferSection'
-import { GuaranteeSection } from '@/components/home/GuaranteeSection'
 
 export default function Index() {
   return (
     <div className="flex flex-col min-h-screen">
-      <HelloBar text="Condição exclusiva de lançamento" />
+      <HelloBar text="Entre para a Waitlist do Lançamento Oficial do Skip" />
       {/* Hero Section */}
-      <HeroSection showVideo />
+      <HeroSection />
 
       {/* Adapta Divider */}
       <div className="w-full px-5 py-6 relative z-10">
@@ -52,14 +50,8 @@ export default function Index() {
       {/* Features Section */}
       <FeaturesSection />
 
-      {/* Templates Section */}
-      <TemplatesSection />
-
       {/* Offer Section */}
       <OfferSection />
-
-      {/* Guarantee Section */}
-      <GuaranteeSection />
     </div>
   )
 }

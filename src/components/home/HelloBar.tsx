@@ -1,9 +1,13 @@
-export function HelloBar({ text = 'Condição Exclusiva da live de lançamento' }: { text?: string }) {
+import { LeadCaptureModal } from './LeadCaptureModal'
+
+export function HelloBar({ text = 'Entre para a Waitlist do Lançamento Oficial do Skip' }: { text?: string }) {
   return (
-    <div className="w-full bg-red-600 text-white py-2.5 px-4 text-center relative z-50 shadow-[0_0_20px_rgba(220,38,38,0.8)] flex items-center justify-center border-b border-red-500/50">
-      <p className="font-heading text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.2em] drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-pulse">
-        {text}
-      </p>
-    </div>
+    <LeadCaptureModal>
+      <button className="w-full bg-blue-violet-600 text-white py-2.5 px-4 text-center relative z-50 flex items-center justify-center border-b border-blue-violet-700/50 cursor-pointer hover:bg-blue-violet-700 transition-colors duration-200 shadow-[0_0_20px_rgba(109,40,217,0.3)]">
+        <p className="font-heading text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.2em]">
+          {text} →
+        </p>
+      </button>
+    </LeadCaptureModal>
   )
 }
