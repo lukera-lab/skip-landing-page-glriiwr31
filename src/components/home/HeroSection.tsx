@@ -7,11 +7,7 @@ import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import liveBgUrl from '@/assets/bg-dark-e697d.webp'
 import { LeadCaptureModal } from './LeadCaptureModal'
 
-export function HeroSection({
-  isLive = false,
-}: {
-  isLive?: boolean
-}) {
+export function HeroSection({ isLive = false }: { isLive?: boolean }) {
   return (
     <section
       className={cn(
