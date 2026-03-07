@@ -7,22 +7,22 @@ export function OfferSection() {
   return (
     <section
       id="offer"
-      className="w-full py-16 md:py-24 px-5 bg-skip-neutral-300 relative z-10 border-t border-skip-neutral-600/50"
+      className="w-full py-12 md:py-24 px-5 bg-skip-neutral-300 relative z-10 border-t border-skip-neutral-600/50"
     >
       <div className="max-w-[1100px] mx-auto flex flex-col items-center text-center">
-        {/* Label */}
-        <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-6 block">
-          Em Breve
-        </span>
-
         {/* Mockup */}
-        <div className="w-full max-w-[540px] mx-auto mb-10">
+        <div className="w-full max-w-[540px] mx-auto mb-8">
           <img
             src={offerSkipUrl}
             alt="Skip — visão geral da plataforma"
             className="w-full h-auto object-contain drop-shadow-2xl"
           />
         </div>
+
+        {/* Label */}
+        <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-3 block">
+          Em Breve
+        </span>
 
         {/* Headline */}
         <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1] font-semibold text-white tracking-[-0.02em] mb-4 max-w-[600px]">
