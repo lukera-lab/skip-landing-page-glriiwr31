@@ -11,9 +11,18 @@ export function OfferSection() {
     >
       <div className="max-w-[1100px] mx-auto flex flex-col items-center text-center">
         {/* Label */}
-        <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-3 block">
+        <span className="font-mono text-mono-xs tracking-[0.2em] text-blue-violet-500 uppercase font-semibold mb-6 block">
           Em Breve
         </span>
+
+        {/* Mockup */}
+        <div className="w-full max-w-[540px] mx-auto mb-10">
+          <img
+            src={offerSkipUrl}
+            alt="Skip — visão geral da plataforma"
+            className="w-full h-auto object-contain drop-shadow-2xl"
+          />
+        </div>
 
         {/* Headline */}
         <h2 className="font-heading text-[28px] md:text-[40px] leading-[1.1] font-semibold text-white tracking-[-0.02em] mb-4 max-w-[600px]">
@@ -24,15 +33,6 @@ export function OfferSection() {
         <p className="font-body text-body-l text-skip-neutral-900 leading-[1.3] max-w-[520px] mb-10">
           O Skip está chegando com tudo. Entre na waitlist e seja o primeiro a saber quando lançar.
         </p>
-
-        {/* Mockup */}
-        <div className="w-full max-w-[820px] mx-auto mb-10">
-          <img
-            src={offerSkipUrl}
-            alt="Skip — visão geral da plataforma"
-            className="w-full h-auto object-contain drop-shadow-2xl"
-          />
-        </div>
 
         {/* CTA */}
         <div className="relative group">
