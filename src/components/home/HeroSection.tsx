@@ -5,19 +5,13 @@ import logoUrl from '@/assets/logo-skip-black-85aeb.svg'
 import logoWhiteUrl from '@/assets/logo-skip-white-1b688.webp'
 import heroBgUrl from '@/assets/bg-hero-skip-8319b.webp'
 import liveBgUrl from '@/assets/bg-dark-e697d.webp'
-import { VideoPlayer } from './VideoPlayer'
+import { LeadCaptureModal } from './LeadCaptureModal'
 
 export function HeroSection({
   isLive = false,
-  showVideo = false,
 }: {
   isLive?: boolean
-  showVideo?: boolean
 }) {
-  const handleScrollToOffer = () => {
-    document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
     <section
       className={cn(
@@ -102,37 +96,6 @@ export function HeroSection({
           </span>
         </div>
 
-        {/* Embedded Video */}
-        {showVideo && (
-          <div
-            className="w-full max-w-4xl mx-auto mb-10 animate-fade-in-up"
-            style={{ animationDelay: '200ms', animationFillMode: 'both' }}
-          >
-            <span
-              className={cn(
-                'block text-center font-mono text-sm md:text-base tracking-[0.1em] uppercase font-semibold mb-4',
-                isLive ? 'text-white' : 'text-skip-neutral-300',
-              )}
-            >
-              Assista a live de lançamento
-            </span>
-            <div
-              className="relative w-full rounded-[20px] overflow-hidden border border-skip-neutral-1350/50 shadow-2xl"
-              style={{ paddingBottom: '56.25%' }}
-            >
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/Tu1EdYbs32Q?si=NDcTkUC6QI0MXniV"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        )}
-
         {/* Call to Actions */}
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto animate-fade-in-up"
@@ -140,13 +103,12 @@ export function HeroSection({
         >
           <div className="relative group w-full sm:w-auto">
             <div className="absolute -inset-1 bg-gradient-brand rounded-[90px] blur opacity-25 group-hover:opacity-40 transition duration-500" />
-            <Button
-              onClick={handleScrollToOffer}
-              className="relative w-full sm:w-auto font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5"
-            >
-              Aproveitar Condição Exclusiva
-              <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
-            </Button>
+            <LeadCaptureModal>
+              <Button className="relative w-full sm:w-auto font-display font-medium text-sm sm:text-base text-white transition-all duration-300 group-hover:-translate-y-0.5">
+                Entrar para a Waitlist
+                <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
+              </Button>
+            </LeadCaptureModal>
           </div>
         </div>
       </div>
